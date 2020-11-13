@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://services.buildup.pucp.edu.pe/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="SupervisorWS" targetNamespace="http://services.buildup.pucp.edu.pe/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://52.207.108.70:8080/BuildUpServices/SupervisorWS?xsd=1" namespace="http://services.buildup.pucp.edu.pe/" />
+    </xsd:schema>
+  </types>
+  <message name="actualizarSupervisor">
+    <part name="parameters" element="tns:actualizarSupervisor" />
+  </message>
+  <message name="actualizarSupervisorResponse">
+    <part name="parameters" element="tns:actualizarSupervisorResponse" />
+  </message>
+  <message name="insertarSupervisor">
+    <part name="parameters" element="tns:insertarSupervisor" />
+  </message>
+  <message name="insertarSupervisorResponse">
+    <part name="parameters" element="tns:insertarSupervisorResponse" />
+  </message>
+  <message name="eliminarSupervisor">
+    <part name="parameters" element="tns:eliminarSupervisor" />
+  </message>
+  <message name="eliminarSupervisorResponse">
+    <part name="parameters" element="tns:eliminarSupervisorResponse" />
+  </message>
+  <message name="listarSupervisor">
+    <part name="parameters" element="tns:listarSupervisor" />
+  </message>
+  <message name="listarSupervisorResponse">
+    <part name="parameters" element="tns:listarSupervisorResponse" />
+  </message>
+  <portType name="SupervisorWS">
+    <operation name="actualizarSupervisor">
+      <input wsam:Action="http://services.buildup.pucp.edu.pe/SupervisorWS/actualizarSupervisorRequest" message="tns:actualizarSupervisor" />
+      <output wsam:Action="http://services.buildup.pucp.edu.pe/SupervisorWS/actualizarSupervisorResponse" message="tns:actualizarSupervisorResponse" />
+    </operation>
+    <operation name="insertarSupervisor">
+      <input wsam:Action="http://services.buildup.pucp.edu.pe/SupervisorWS/insertarSupervisorRequest" message="tns:insertarSupervisor" />
+      <output wsam:Action="http://services.buildup.pucp.edu.pe/SupervisorWS/insertarSupervisorResponse" message="tns:insertarSupervisorResponse" />
+    </operation>
+    <operation name="eliminarSupervisor">
+      <input wsam:Action="http://services.buildup.pucp.edu.pe/SupervisorWS/eliminarSupervisorRequest" message="tns:eliminarSupervisor" />
+      <output wsam:Action="http://services.buildup.pucp.edu.pe/SupervisorWS/eliminarSupervisorResponse" message="tns:eliminarSupervisorResponse" />
+    </operation>
+    <operation name="listarSupervisor">
+      <input wsam:Action="http://services.buildup.pucp.edu.pe/SupervisorWS/listarSupervisorRequest" message="tns:listarSupervisor" />
+      <output wsam:Action="http://services.buildup.pucp.edu.pe/SupervisorWS/listarSupervisorResponse" message="tns:listarSupervisorResponse" />
+    </operation>
+  </portType>
+  <binding name="SupervisorWSPortBinding" type="tns:SupervisorWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="actualizarSupervisor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarSupervisor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarSupervisor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarSupervisor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="SupervisorWS">
+    <port name="SupervisorWSPort" binding="tns:SupervisorWSPortBinding">
+      <soap:address location="http://52.207.108.70:8080/BuildUpServices/SupervisorWS" />
+    </port>
+  </service>
+</definitions>

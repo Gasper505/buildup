@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://services.buildup.pucp.edu.pe/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="ProblemaWS" targetNamespace="http://services.buildup.pucp.edu.pe/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://52.207.108.70:8080/BuildUpServices/ProblemaWS?xsd=1" namespace="http://services.buildup.pucp.edu.pe/" />
+    </xsd:schema>
+  </types>
+  <message name="actualizarProblema">
+    <part name="parameters" element="tns:actualizarProblema" />
+  </message>
+  <message name="actualizarProblemaResponse">
+    <part name="parameters" element="tns:actualizarProblemaResponse" />
+  </message>
+  <message name="listarProblema">
+    <part name="parameters" element="tns:listarProblema" />
+  </message>
+  <message name="listarProblemaResponse">
+    <part name="parameters" element="tns:listarProblemaResponse" />
+  </message>
+  <message name="eliminarProblema">
+    <part name="parameters" element="tns:eliminarProblema" />
+  </message>
+  <message name="eliminarProblemaResponse">
+    <part name="parameters" element="tns:eliminarProblemaResponse" />
+  </message>
+  <message name="insertarProblema">
+    <part name="parameters" element="tns:insertarProblema" />
+  </message>
+  <message name="insertarProblemaResponse">
+    <part name="parameters" element="tns:insertarProblemaResponse" />
+  </message>
+  <portType name="ProblemaWS">
+    <operation name="actualizarProblema">
+      <input wsam:Action="http://services.buildup.pucp.edu.pe/ProblemaWS/actualizarProblemaRequest" message="tns:actualizarProblema" />
+      <output wsam:Action="http://services.buildup.pucp.edu.pe/ProblemaWS/actualizarProblemaResponse" message="tns:actualizarProblemaResponse" />
+    </operation>
+    <operation name="listarProblema">
+      <input wsam:Action="http://services.buildup.pucp.edu.pe/ProblemaWS/listarProblemaRequest" message="tns:listarProblema" />
+      <output wsam:Action="http://services.buildup.pucp.edu.pe/ProblemaWS/listarProblemaResponse" message="tns:listarProblemaResponse" />
+    </operation>
+    <operation name="eliminarProblema">
+      <input wsam:Action="http://services.buildup.pucp.edu.pe/ProblemaWS/eliminarProblemaRequest" message="tns:eliminarProblema" />
+      <output wsam:Action="http://services.buildup.pucp.edu.pe/ProblemaWS/eliminarProblemaResponse" message="tns:eliminarProblemaResponse" />
+    </operation>
+    <operation name="insertarProblema">
+      <input wsam:Action="http://services.buildup.pucp.edu.pe/ProblemaWS/insertarProblemaRequest" message="tns:insertarProblema" />
+      <output wsam:Action="http://services.buildup.pucp.edu.pe/ProblemaWS/insertarProblemaResponse" message="tns:insertarProblemaResponse" />
+    </operation>
+  </portType>
+  <binding name="ProblemaWSPortBinding" type="tns:ProblemaWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="actualizarProblema">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarProblema">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarProblema">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarProblema">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="ProblemaWS">
+    <port name="ProblemaWSPort" binding="tns:ProblemaWSPortBinding">
+      <soap:address location="http://52.207.108.70:8080/BuildUpServices/ProblemaWS" />
+    </port>
+  </service>
+</definitions>

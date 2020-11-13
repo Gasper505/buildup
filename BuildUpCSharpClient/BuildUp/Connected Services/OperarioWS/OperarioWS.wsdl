@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://services.buildup.pucp.edu.pe/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="OperarioWS" targetNamespace="http://services.buildup.pucp.edu.pe/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://52.207.108.70:8080/BuildUpServices/OperarioWS?xsd=1" namespace="http://services.buildup.pucp.edu.pe/" />
+    </xsd:schema>
+  </types>
+  <message name="actualizarOperario">
+    <part name="parameters" element="tns:actualizarOperario" />
+  </message>
+  <message name="actualizarOperarioResponse">
+    <part name="parameters" element="tns:actualizarOperarioResponse" />
+  </message>
+  <message name="eliminarOperario">
+    <part name="parameters" element="tns:eliminarOperario" />
+  </message>
+  <message name="eliminarOperarioResponse">
+    <part name="parameters" element="tns:eliminarOperarioResponse" />
+  </message>
+  <message name="insertarOperario">
+    <part name="parameters" element="tns:insertarOperario" />
+  </message>
+  <message name="insertarOperarioResponse">
+    <part name="parameters" element="tns:insertarOperarioResponse" />
+  </message>
+  <message name="listarOperario">
+    <part name="parameters" element="tns:listarOperario" />
+  </message>
+  <message name="listarOperarioResponse">
+    <part name="parameters" element="tns:listarOperarioResponse" />
+  </message>
+  <portType name="OperarioWS">
+    <operation name="actualizarOperario">
+      <input wsam:Action="http://services.buildup.pucp.edu.pe/OperarioWS/actualizarOperarioRequest" message="tns:actualizarOperario" />
+      <output wsam:Action="http://services.buildup.pucp.edu.pe/OperarioWS/actualizarOperarioResponse" message="tns:actualizarOperarioResponse" />
+    </operation>
+    <operation name="eliminarOperario">
+      <input wsam:Action="http://services.buildup.pucp.edu.pe/OperarioWS/eliminarOperarioRequest" message="tns:eliminarOperario" />
+      <output wsam:Action="http://services.buildup.pucp.edu.pe/OperarioWS/eliminarOperarioResponse" message="tns:eliminarOperarioResponse" />
+    </operation>
+    <operation name="insertarOperario">
+      <input wsam:Action="http://services.buildup.pucp.edu.pe/OperarioWS/insertarOperarioRequest" message="tns:insertarOperario" />
+      <output wsam:Action="http://services.buildup.pucp.edu.pe/OperarioWS/insertarOperarioResponse" message="tns:insertarOperarioResponse" />
+    </operation>
+    <operation name="listarOperario">
+      <input wsam:Action="http://services.buildup.pucp.edu.pe/OperarioWS/listarOperarioRequest" message="tns:listarOperario" />
+      <output wsam:Action="http://services.buildup.pucp.edu.pe/OperarioWS/listarOperarioResponse" message="tns:listarOperarioResponse" />
+    </operation>
+  </portType>
+  <binding name="OperarioWSPortBinding" type="tns:OperarioWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="actualizarOperario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarOperario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarOperario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarOperario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="OperarioWS">
+    <port name="OperarioWSPort" binding="tns:OperarioWSPortBinding">
+      <soap:address location="http://52.207.108.70:8080/BuildUpServices/OperarioWS" />
+    </port>
+  </service>
+</definitions>

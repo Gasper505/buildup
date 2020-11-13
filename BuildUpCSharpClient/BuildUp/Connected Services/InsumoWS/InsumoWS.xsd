@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://services.buildup.pucp.edu.pe/" targetNamespace="http://services.buildup.pucp.edu.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="actualizarInsumo" type="tns:actualizarInsumo" />
+  <xs:element name="actualizarInsumoResponse" type="tns:actualizarInsumoResponse" />
+  <xs:element name="eliminarInsumo" type="tns:eliminarInsumo" />
+  <xs:element name="eliminarInsumoResponse" type="tns:eliminarInsumoResponse" />
+  <xs:element name="insertarInsumo" type="tns:insertarInsumo" />
+  <xs:element name="insertarInsumoResponse" type="tns:insertarInsumoResponse" />
+  <xs:element name="listarInsumo" type="tns:listarInsumo" />
+  <xs:element name="listarInsumoResponse" type="tns:listarInsumoResponse" />
+  <xs:complexType name="actualizarInsumo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="insumo" type="tns:insumo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insumo">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element name="idInsumo" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="unidadMedida" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarInsumoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarInsumo">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarInsumoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:insumo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarInsumo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="insumo" type="tns:insumo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarInsumoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarInsumo">
+    <xs:sequence>
+      <xs:element name="idInsumo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarInsumoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

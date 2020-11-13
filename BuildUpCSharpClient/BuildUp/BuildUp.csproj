@@ -1,0 +1,1052 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8465099F-B24B-4A3D-A5CD-695FE5ACAC40}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>BuildUp</RootNamespace>
+    <AssemblyName>BuildUp</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Connected Services\IncidenteMaquinariaWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\IngenieroWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\InsumoWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\JefeAreaWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\LineaProduccionWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\MaqWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\MermaWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\OperarioWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\OrdenInsumosWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\OSalidaWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\PersonaWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\ProblemaWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\ProveedorWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\RegistroMermaWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\RespuestaWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\SupervisorWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\TipoLadrilloWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\UsuarioWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Estado.cs" />
+    <Compile Include="frmBuscarIncidencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarIncidencia.Designer.cs">
+      <DependentUpon>frmBuscarIncidencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBuscarInsumo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarInsumo.Designer.cs">
+      <DependentUpon>frmBuscarInsumo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBuscarMaquinaria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarMaquinaria.Designer.cs">
+      <DependentUpon>frmBuscarMaquinaria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBuscarOrdenSalida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarOrdenSalida.Designer.cs">
+      <DependentUpon>frmBuscarOrdenSalida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBuscarProblema.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarProblema.Designer.cs">
+      <DependentUpon>frmBuscarProblema.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBuscarRespuesta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarRespuesta.Designer.cs">
+      <DependentUpon>frmBuscarRespuesta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBuscarTipoLadrillo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarTipoLadrillo.Designer.cs">
+      <DependentUpon>frmBuscarTipoLadrillo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBuscarOrdenInsumos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarOrdenInsumos.Designer.cs">
+      <DependentUpon>frmBuscarOrdenInsumos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBuscarPlanProduccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarPlanProduccion.Designer.cs">
+      <DependentUpon>frmBuscarPlanProduccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBuscarProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarProveedor.Designer.cs">
+      <DependentUpon>frmBuscarProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBuscarRegistroMerma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarRegistroMerma.Designer.cs">
+      <DependentUpon>frmBuscarRegistroMerma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBuscarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarUsuario.Designer.cs">
+      <DependentUpon>frmBuscarUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGestionarIncidencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGestionarIncidencia.Designer.cs">
+      <DependentUpon>frmGestionarIncidencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGestionarInsumo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGestionarInsumo.Designer.cs">
+      <DependentUpon>frmGestionarInsumo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGestionarMaquinaria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGestionarMaquinaria.Designer.cs">
+      <DependentUpon>frmGestionarMaquinaria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGestionarOrdenInsumos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGestionarOrdenInsumos.Designer.cs">
+      <DependentUpon>frmGestionarOrdenInsumos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGestionarOrdenSalida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGestionarOrdenSalida.Designer.cs">
+      <DependentUpon>frmGestionarOrdenSalida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGestionarPlanProduccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGestionarPlanProduccion.Designer.cs">
+      <DependentUpon>frmGestionarPlanProduccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGestionarProblema.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGestionarProblema.Designer.cs">
+      <DependentUpon>frmGestionarProblema.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGestionarProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGestionarProveedor.Designer.cs">
+      <DependentUpon>frmGestionarProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGestionarRespuesta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGestionarRespuesta.Designer.cs">
+      <DependentUpon>frmGestionarRespuesta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGestionarTipoLadrillo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGestionarTipoLadrillo.Designer.cs">
+      <DependentUpon>frmGestionarTipoLadrillo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGestionarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGestionarUsuario.Designer.cs">
+      <DependentUpon>frmGestionarUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogIn.Designer.cs">
+      <DependentUpon>frmLogIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRolAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRolAdmin.Designer.cs">
+      <DependentUpon>frmRolAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRolIngeniero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRolIngeniero.Designer.cs">
+      <DependentUpon>frmRolIngeniero.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRolJefeArea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRolJefeArea.Designer.cs">
+      <DependentUpon>frmRolJefeArea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRolOperario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRolOperario.Designer.cs">
+      <DependentUpon>frmRolOperario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRolSupervisor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRolSupervisor.Designer.cs">
+      <DependentUpon>frmRolSupervisor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGestionarRegistroMerma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGestionarRegistroMerma.Designer.cs">
+      <DependentUpon>frmGestionarRegistroMerma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="frmBuscarIncidencia.resx">
+      <DependentUpon>frmBuscarIncidencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscarInsumo.resx">
+      <DependentUpon>frmBuscarInsumo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscarMaquinaria.resx">
+      <DependentUpon>frmBuscarMaquinaria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscarOrdenInsumos.resx">
+      <DependentUpon>frmBuscarOrdenInsumos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscarOrdenSalida.resx">
+      <DependentUpon>frmBuscarOrdenSalida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscarPlanProduccion.resx">
+      <DependentUpon>frmBuscarPlanProduccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscarProblema.resx">
+      <DependentUpon>frmBuscarProblema.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscarProveedor.resx">
+      <DependentUpon>frmBuscarProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscarRegistroMerma.resx">
+      <DependentUpon>frmBuscarRegistroMerma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscarRespuesta.resx">
+      <DependentUpon>frmBuscarRespuesta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscarTipoLadrillo.resx">
+      <DependentUpon>frmBuscarTipoLadrillo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscarUsuario.resx">
+      <DependentUpon>frmBuscarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGestionarIncidencia.resx">
+      <DependentUpon>frmGestionarIncidencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGestionarInsumo.resx">
+      <DependentUpon>frmGestionarInsumo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGestionarMaquinaria.resx">
+      <DependentUpon>frmGestionarMaquinaria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGestionarOrdenInsumos.resx">
+      <DependentUpon>frmGestionarOrdenInsumos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGestionarOrdenSalida.resx">
+      <DependentUpon>frmGestionarOrdenSalida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGestionarPlanProduccion.resx">
+      <DependentUpon>frmGestionarPlanProduccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGestionarProblema.resx">
+      <DependentUpon>frmGestionarProblema.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGestionarProveedor.resx">
+      <DependentUpon>frmGestionarProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGestionarRespuesta.resx">
+      <DependentUpon>frmGestionarRespuesta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGestionarTipoLadrillo.resx">
+      <DependentUpon>frmGestionarTipoLadrillo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGestionarUsuario.resx">
+      <DependentUpon>frmGestionarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogIn.resx">
+      <DependentUpon>frmLogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGestionarRegistroMerma.resx">
+      <DependentUpon>frmGestionarRegistroMerma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRolAdmin.resx">
+      <DependentUpon>frmRolAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRolIngeniero.resx">
+      <DependentUpon>frmRolIngeniero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRolJefeArea.resx">
+      <DependentUpon>frmRolJefeArea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRolOperario.resx">
+      <DependentUpon>frmRolOperario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRolSupervisor.resx">
+      <DependentUpon>frmRolSupervisor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\IncidenteMaquinariaWS\BuildUp.IncidenteMaquinariaWS.actualizarIncidenteMaquinariaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\IncidenteMaquinariaWS\BuildUp.IncidenteMaquinariaWS.eliminarIncidenteMaquinariaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\IncidenteMaquinariaWS\BuildUp.IncidenteMaquinariaWS.incidenteMaquinaria.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\IncidenteMaquinariaWS\BuildUp.IncidenteMaquinariaWS.insertarIncidenteMaquinariaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\IncidenteMaquinariaWS\BuildUp.IncidenteMaquinariaWS.listarIncidenteMaquinariaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\IncidenteMaquinariaWS\IncidenteMaquinaria.wsdl" />
+    <None Include="Connected Services\IncidenteMaquinariaWS\IncidenteMaquinaria.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\IngenieroWS\BuildUp.IngenieroWS.actualizarIngenieroResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\IngenieroWS\BuildUp.IngenieroWS.eliminarIngenieroResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\IngenieroWS\BuildUp.IngenieroWS.ingeniero.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\IngenieroWS\BuildUp.IngenieroWS.insertarIngenieroResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\IngenieroWS\BuildUp.IngenieroWS.listarIngenieroResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\IngenieroWS\IngenieroWS.wsdl" />
+    <None Include="Connected Services\IngenieroWS\IngenieroWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\InsumoWS\BuildUp.InsumoWS.actualizarInsumoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\InsumoWS\BuildUp.InsumoWS.eliminarInsumoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\InsumoWS\BuildUp.InsumoWS.insertarInsumoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\InsumoWS\BuildUp.InsumoWS.insumo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\InsumoWS\BuildUp.InsumoWS.listarInsumoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\InsumoWS\InsumoWS.wsdl" />
+    <None Include="Connected Services\InsumoWS\InsumoWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\JefeAreaWS\BuildUp.JefeAreaWS.actualizarJefeAreaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\JefeAreaWS\BuildUp.JefeAreaWS.eliminarJefeAreaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\JefeAreaWS\BuildUp.JefeAreaWS.insertarJefeAreaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\JefeAreaWS\BuildUp.JefeAreaWS.jefeArea.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\JefeAreaWS\BuildUp.JefeAreaWS.listarJefeAreaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\JefeAreaWS\JefeArea.wsdl" />
+    <None Include="Connected Services\JefeAreaWS\JefeArea.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\LineaProduccionWS\BuildUp.LineaProduccionWS.actualizarLineaProduccionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LineaProduccionWS\BuildUp.LineaProduccionWS.eliminarLineaProduccionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LineaProduccionWS\BuildUp.LineaProduccionWS.insertarLineaProduccionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LineaProduccionWS\BuildUp.LineaProduccionWS.lineaProduccion.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LineaProduccionWS\BuildUp.LineaProduccionWS.listarLineaProduccionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LineaProduccionWS\LineaProduccionWS.wsdl" />
+    <None Include="Connected Services\LineaProduccionWS\LineaProduccionWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\MaqWS\BuildUp.MaqWS.actualizarMaquinariaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MaqWS\BuildUp.MaqWS.eliminarMaquinariaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MaqWS\BuildUp.MaqWS.insertarMaquinariaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MaqWS\BuildUp.MaqWS.listarMaquinariaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MaqWS\BuildUp.MaqWS.maquinaria.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MaqWS\MaquinariaWS.wsdl" />
+    <None Include="Connected Services\MaqWS\MaquinariaWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\MermaWS\BuildUp.MermaWS.actualizarMermaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MermaWS\BuildUp.MermaWS.eliminarMermaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MermaWS\BuildUp.MermaWS.insertarMermaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MermaWS\BuildUp.MermaWS.listarMermaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MermaWS\BuildUp.MermaWS.merma.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MermaWS\MermaWS.wsdl" />
+    <None Include="Connected Services\MermaWS\MermaWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\OperarioWS\BuildUp.OperarioWS.actualizarOperarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OperarioWS\BuildUp.OperarioWS.eliminarOperarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OperarioWS\BuildUp.OperarioWS.insertarOperarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OperarioWS\BuildUp.OperarioWS.listarOperarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OperarioWS\BuildUp.OperarioWS.operario.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OperarioWS\OperarioWS.wsdl" />
+    <None Include="Connected Services\OperarioWS\OperarioWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\OrdenInsumosWS\BuildUp.OrdenInsumosWS.actualizarOrdenInsumosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OrdenInsumosWS\BuildUp.OrdenInsumosWS.eliminarOrdenInsumosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OrdenInsumosWS\BuildUp.OrdenInsumosWS.insertarOrdenInsumosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OrdenInsumosWS\BuildUp.OrdenInsumosWS.listarOrdenInsumosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OrdenInsumosWS\BuildUp.OrdenInsumosWS.ordenInsumos.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OrdenInsumosWS\OrdenInsumosWS.wsdl" />
+    <None Include="Connected Services\OrdenInsumosWS\OrdenInsumosWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\OSalidaWS\BuildUp.OSalidaWS.actualizarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OSalidaWS\BuildUp.OSalidaWS.eliminarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OSalidaWS\BuildUp.OSalidaWS.insertarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OSalidaWS\BuildUp.OSalidaWS.listarOrdenesSalidaConParametrosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OSalidaWS\BuildUp.OSalidaWS.listarOrdenesSalidaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OSalidaWS\BuildUp.OSalidaWS.ordenSalida.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OSalidaWS\OrdenSalidaWS.wsdl" />
+    <None Include="Connected Services\OSalidaWS\OrdenSalidaWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\PersonaWS\BuildUp.PersonaWS.actualizarPersonaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PersonaWS\BuildUp.PersonaWS.eliminarPersonaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PersonaWS\BuildUp.PersonaWS.insertarPersonaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PersonaWS\BuildUp.PersonaWS.listarPersonaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PersonaWS\BuildUp.PersonaWS.persona.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PersonaWS\PersonaWS.wsdl" />
+    <None Include="Connected Services\PersonaWS\PersonaWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ProblemaWS\BuildUp.ProblemaWS.actualizarProblemaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ProblemaWS\BuildUp.ProblemaWS.eliminarProblemaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ProblemaWS\BuildUp.ProblemaWS.insertarProblemaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ProblemaWS\BuildUp.ProblemaWS.listarProblemaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ProblemaWS\BuildUp.ProblemaWS.problema.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ProblemaWS\ProblemaWS.wsdl" />
+    <None Include="Connected Services\ProblemaWS\ProblemaWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ProveedorWS\BuildUp.ProveedorWS.actualizarProveedorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ProveedorWS\BuildUp.ProveedorWS.eliminarProveedorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ProveedorWS\BuildUp.ProveedorWS.insertarProveedorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ProveedorWS\BuildUp.ProveedorWS.listarProveedorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ProveedorWS\BuildUp.ProveedorWS.proveedor.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ProveedorWS\ProveedorWS.wsdl" />
+    <None Include="Connected Services\ProveedorWS\ProveedorWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\RegistroMermaWS\BuildUp.RegistroMermaWS.actualizarRegistroMermaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RegistroMermaWS\BuildUp.RegistroMermaWS.eliminarRegistroMermaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RegistroMermaWS\BuildUp.RegistroMermaWS.insertarRegistroMermaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RegistroMermaWS\BuildUp.RegistroMermaWS.listarRegistroMermaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RegistroMermaWS\BuildUp.RegistroMermaWS.registroMerma.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RegistroMermaWS\RegistroMermaWS.wsdl" />
+    <None Include="Connected Services\RegistroMermaWS\RegistroMermaWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\RespuestaWS\BuildUp.RespuestaWS.actualizarRespuestaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RespuestaWS\BuildUp.RespuestaWS.eliminarRespuestaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RespuestaWS\BuildUp.RespuestaWS.insertarRespuestaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RespuestaWS\BuildUp.RespuestaWS.listarRespuestaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RespuestaWS\BuildUp.RespuestaWS.respuesta.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RespuestaWS\RespuestaWS.wsdl" />
+    <None Include="Connected Services\RespuestaWS\RespuestaWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SupervisorWS\BuildUp.SupervisorWS.actualizarSupervisorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SupervisorWS\BuildUp.SupervisorWS.eliminarSupervisorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SupervisorWS\BuildUp.SupervisorWS.insertarSupervisorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SupervisorWS\BuildUp.SupervisorWS.listarSupervisorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SupervisorWS\BuildUp.SupervisorWS.supervisor.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SupervisorWS\SupervisorWS.wsdl" />
+    <None Include="Connected Services\SupervisorWS\SupervisorWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TipoLadrilloWS\BuildUp.TipoLadrilloWS.insertarTipoLadrilloResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\TipoLadrilloWS\BuildUp.TipoLadrilloWS.listarTiposLadrilloResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\TipoLadrilloWS\BuildUp.TipoLadrilloWS.tipoLadrillo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\TipoLadrilloWS\TipoLadrilloWS.wsdl" />
+    <None Include="Connected Services\TipoLadrilloWS\TipoLadrilloWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\UsuarioWS\BuildUp.UsuarioWS.autenticarUsuarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UsuarioWS\BuildUp.UsuarioWS.buscarUsuarioPorUsernameResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UsuarioWS\BuildUp.UsuarioWS.usuario.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UsuarioWS\UsuarioWS.wsdl" />
+    <None Include="Connected Services\UsuarioWS\UsuarioWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Resources\boton-agregar-cruzar-circulo_318-9475.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\IncidenteMaquinariaWS\" />
+    <WCFMetadataStorage Include="Connected Services\IngenieroWS\" />
+    <WCFMetadataStorage Include="Connected Services\InsumoWS\" />
+    <WCFMetadataStorage Include="Connected Services\JefeAreaWS\" />
+    <WCFMetadataStorage Include="Connected Services\LineaProduccionWS\" />
+    <WCFMetadataStorage Include="Connected Services\MaqWS\" />
+    <WCFMetadataStorage Include="Connected Services\MermaWS\" />
+    <WCFMetadataStorage Include="Connected Services\OperarioWS\" />
+    <WCFMetadataStorage Include="Connected Services\OrdenInsumosWS\" />
+    <WCFMetadataStorage Include="Connected Services\OSalidaWS\" />
+    <WCFMetadataStorage Include="Connected Services\PersonaWS\" />
+    <WCFMetadataStorage Include="Connected Services\ProblemaWS\" />
+    <WCFMetadataStorage Include="Connected Services\ProveedorWS\" />
+    <WCFMetadataStorage Include="Connected Services\RegistroMermaWS\" />
+    <WCFMetadataStorage Include="Connected Services\RespuestaWS\" />
+    <WCFMetadataStorage Include="Connected Services\SupervisorWS\" />
+    <WCFMetadataStorage Include="Connected Services\TipoLadrilloWS\" />
+    <WCFMetadataStorage Include="Connected Services\UsuarioWS\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\TipoLadrilloWS\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\TipoLadrilloWS\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\TipoLadrilloWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\UsuarioWS\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\UsuarioWS\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\UsuarioWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\152533.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\e8adc01920d4aa1c-hazel-ice-king-size-bed.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vector-document-icon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3f4756f5a915c254517d7f0800910ad6-documento-verificado-icono-de-trazo-coloreado-by-vexels.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vector-document-icon1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\asa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maquinaria.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vector-business-plan-glyph-black-icon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gratis-png-proveedor-de-iconos-de-computadora-entrega.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icono_incidencia-1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\46316.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\46305.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icono-usuario_6091-78.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\InsumoWS\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\InsumoWS\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\InsumoWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\LineaProduccionWS\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\LineaProduccionWS\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\LineaProduccionWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\IncidenteMaquinariaWS\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\IncidenteMaquinariaWS\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\IncidenteMaquinariaWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\OperarioWS\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\OperarioWS\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\OperarioWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\OrdenInsumosWS\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\OrdenInsumosWS\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\OrdenInsumosWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\MaqWS\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\MaqWS\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\MaqWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\OSalidaWS\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\OSalidaWS\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\OSalidaWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\JefeAreaWS\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\JefeAreaWS\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\JefeAreaWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ProveedorWS\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ProveedorWS\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ProveedorWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\IngenieroWS\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\IngenieroWS\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\IngenieroWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ProblemaWS\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ProblemaWS\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ProblemaWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\MermaWS\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\MermaWS\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\MermaWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\PersonaWS\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\PersonaWS\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\PersonaWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\RespuestaWS\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\RespuestaWS\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\RespuestaWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SupervisorWS\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SupervisorWS\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SupervisorWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\RegistroMermaWS\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\RegistroMermaWS\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\RegistroMermaWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

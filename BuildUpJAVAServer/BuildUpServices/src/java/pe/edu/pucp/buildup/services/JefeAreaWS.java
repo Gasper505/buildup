@@ -1,0 +1,68 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package pe.edu.pucp.buildup.services;
+
+import java.util.ArrayList;
+import javax.jws.WebService;
+import javax.jws.WebMethod;
+import javax.jws.WebParam;
+import pe.edu.pucp.ta.dao.JefeAreaDAO;
+import pe.edu.pucp.ta.model.JefeArea;
+import pe.edu.pucp.ta.mysql.JefeAreaMySQL;
+
+/**
+ *
+ * @author Giohanny
+ */
+@WebService(serviceName = "JefeArea")
+public class JefeAreaWS {
+
+    private JefeAreaDAO daoJefeArea;
+    public JefeAreaWS(){
+        daoJefeArea = new JefeAreaMySQL();
+    }
+    @WebMethod(operationName = "listarJefeArea")
+    public ArrayList<JefeArea> listarJefeArea() {
+        ArrayList<JefeArea> jefeAreas = new ArrayList<>();
+        try{
+            jefeAreas =daoJefeArea.listar();
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return jefeAreas;
+    }
+    
+    @WebMethod(operationName = "insertarJefeArea")
+    public int insertarJefeArea(@WebParam(name="jefeArea") JefeArea jefeArea) {
+        int resultado =0;
+        try{
+            resultado = daoJefeArea.insertar(jefeArea);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return resultado;
+    }
+    @WebMethod(operationName = "actualizarJefeArea")
+    public int actualizarJefeArea(@WebParam(name = "idPersona") int idPersona,@WebParam(name = "nuevo") int nuevo) {
+        int resultado = 0;
+        try{
+            resultado = daoJefeArea.actualizar(idPersona,nuevo);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return resultado;
+    }
+    @WebMethod(operationName = "eliminarJefeArea")
+    public int eliminarJefeArea(@WebParam(name = "idJefeArea") int idJefeArea) {
+        int resultado = 0;
+        try{
+            resultado = daoJefeArea.eliminar(idJefeArea);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return resultado;
+    }
+}

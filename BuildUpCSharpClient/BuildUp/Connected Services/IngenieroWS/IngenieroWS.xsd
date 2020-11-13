@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://services.buildup.pucp.edu.pe/" targetNamespace="http://services.buildup.pucp.edu.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="actualizarIngeniero" type="tns:actualizarIngeniero" />
+  <xs:element name="actualizarIngenieroResponse" type="tns:actualizarIngenieroResponse" />
+  <xs:element name="eliminarIngeniero" type="tns:eliminarIngeniero" />
+  <xs:element name="eliminarIngenieroResponse" type="tns:eliminarIngenieroResponse" />
+  <xs:element name="insertarIngeniero" type="tns:insertarIngeniero" />
+  <xs:element name="insertarIngenieroResponse" type="tns:insertarIngenieroResponse" />
+  <xs:element name="listarIngeniero" type="tns:listarIngeniero" />
+  <xs:element name="listarIngenieroResponse" type="tns:listarIngenieroResponse" />
+  <xs:complexType name="listarIngeniero">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarIngenieroResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:ingeniero" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ingeniero">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:persona">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="especialidad" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="persona">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="apellidos" type="xs:string" />
+      <xs:element minOccurs="0" name="correo" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaFinContrato" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="foto" type="xs:base64Binary" />
+      <xs:element name="idPersona" type="xs:int" />
+      <xs:element minOccurs="0" name="nombres" type="xs:string" />
+      <xs:element minOccurs="0" name="rol" type="xs:string" />
+      <xs:element minOccurs="0" name="telefono" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarIngeniero">
+    <xs:sequence>
+      <xs:element name="idIngeniero" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarIngenieroResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarIngeniero">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ingeniero" type="tns:ingeniero" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarIngenieroResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarIngeniero">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ingeniero" type="tns:ingeniero" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarIngenieroResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

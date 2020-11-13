@@ -1,0 +1,396 @@
+D:\RepLP2\ProyectosNET\lab66\BuildUp\BuildUp\obj\Debug\BuildUp.csprojAssemblyReference.cache
+D:\RepLP2\ProyectosNET\lab66\BuildUp\BuildUp\obj\Debug\BuildUp.LogIn.resources
+D:\RepLP2\ProyectosNET\lab66\BuildUp\BuildUp\obj\Debug\BuildUp.Operario.resources
+D:\RepLP2\ProyectosNET\lab66\BuildUp\BuildUp\obj\Debug\BuildUp.Properties.Resources.resources
+D:\RepLP2\ProyectosNET\lab66\BuildUp\BuildUp\obj\Debug\BuildUp.csproj.GenerateResource.cache
+D:\RepLP2\ProyectosNET\lab66\BuildUp\BuildUp\obj\Debug\BuildUp.csproj.CoreCompileInputs.cache
+D:\RepLP2\ProyectosNET\lab666\BuildUp\BuildUp\obj\Debug\BuildUp.csprojAssemblyReference.cache
+D:\RepLP2\ProyectosNET\lab666\BuildUp\BuildUp\obj\Debug\BuildUp.Operario.resources
+D:\RepLP2\ProyectosNET\lab666\BuildUp\BuildUp\obj\Debug\BuildUp.Properties.Resources.resources
+D:\RepLP2\ProyectosNET\lab666\BuildUp\BuildUp\obj\Debug\BuildUp.csproj.GenerateResource.cache
+D:\RepLP2\ProyectosNET\lab666\BuildUp\BuildUp\obj\Debug\BuildUp.csproj.CoreCompileInputs.cache
+D:\RepLP2\ProyectosNET\lab666\BuildUp\BuildUp\obj\Debug\BuildUp.frmBuscarUsuario.resources
+D:\RepLP2\ProyectosNET\lab666\BuildUp\BuildUp\obj\Debug\BuildUp.frmGestionarUsuario.resources
+D:\RepLP2\ProyectosNET\lab666\BuildUp\BuildUp\bin\Debug\BuildUp.exe.config
+D:\RepLP2\ProyectosNET\lab666\BuildUp\BuildUp\bin\Debug\BuildUp.exe
+D:\RepLP2\ProyectosNET\lab666\BuildUp\BuildUp\bin\Debug\BuildUp.pdb
+D:\RepLP2\ProyectosNET\lab666\BuildUp\BuildUp\obj\Debug\BuildUp.exe
+D:\RepLP2\ProyectosNET\lab666\BuildUp\BuildUp\obj\Debug\BuildUp.pdb
+D:\RepLP2\ProyectosNET\lab666\BuildUp\BuildUp\obj\Debug\BuildUp.frmBuscarIncidencia.resources
+D:\RepLP2\ProyectosNET\lab666\BuildUp\BuildUp\obj\Debug\BuildUp.frmGestionarIncidencia.resources
+D:\RepLP2\ProyectosNET\lab666\BuildUp\BuildUp\obj\Debug\BuildUp.frmRegistrarIncidencia.resources
+D:\RepLP2\ProyectosNET\lab666\BuildUp\BuildUp\obj\Debug\BuildUp.frmBuscarIncidenciaSinRespuesta.resources
+D:\RepLP2\ProyectosNET\lab666\BuildUp\BuildUp\obj\Debug\BuildUp.frmResponderIncidencia.resources
+C:\Users\Giohanny\Source\Repos\talp2\BuildUp\BuildUp\bin\Debug\BuildUp.exe.config
+C:\Users\Giohanny\Source\Repos\talp2\BuildUp\BuildUp\bin\Debug\BuildUp.exe
+C:\Users\Giohanny\Source\Repos\talp2\BuildUp\BuildUp\bin\Debug\BuildUp.pdb
+C:\Users\Giohanny\Source\Repos\talp2\BuildUp\BuildUp\obj\Debug\BuildUp.csprojAssemblyReference.cache
+C:\Users\Giohanny\Source\Repos\talp2\BuildUp\BuildUp\obj\Debug\BuildUp.frmBuscarPlanProduccion.resources
+C:\Users\Giohanny\Source\Repos\talp2\BuildUp\BuildUp\obj\Debug\BuildUp.frmBuscarUsuario.resources
+C:\Users\Giohanny\Source\Repos\talp2\BuildUp\BuildUp\obj\Debug\BuildUp.frmGestionarPlanProduccion.resources
+C:\Users\Giohanny\Source\Repos\talp2\BuildUp\BuildUp\obj\Debug\BuildUp.frmGestionarUsuario.resources
+C:\Users\Giohanny\Source\Repos\talp2\BuildUp\BuildUp\obj\Debug\BuildUp.Operario.resources
+C:\Users\Giohanny\Source\Repos\talp2\BuildUp\BuildUp\obj\Debug\BuildUp.Properties.Resources.resources
+C:\Users\Giohanny\Source\Repos\talp2\BuildUp\BuildUp\obj\Debug\BuildUp.csproj.GenerateResource.cache
+C:\Users\Giohanny\Source\Repos\talp2\BuildUp\BuildUp\obj\Debug\BuildUp.csproj.CoreCompileInputs.cache
+C:\Users\Giohanny\Source\Repos\talp2\BuildUp\BuildUp\obj\Debug\BuildUp.exe
+C:\Users\Giohanny\Source\Repos\talp2\BuildUp\BuildUp\obj\Debug\BuildUp.pdb
+C:\Users\Giohanny\Source\Repos\talp2\BuildUp\BuildUp\obj\Debug\BuildUp.frmBuscarRegistroMerma.resources
+C:\Users\Giohanny\Source\Repos\talp2\BuildUp\BuildUp\obj\Debug\BuildUp.frmGestionarRegistroMerma.resources
+C:\Users\Giohanny\Source\Repos\talp2\BuildUp\BuildUp\obj\Debug\BuildUp.frmBuscarIncidencia.resources
+C:\Users\Giohanny\Source\Repos\talp2\BuildUp\BuildUp\obj\Debug\BuildUp.frmBuscarIncidenciaSinRespuesta.resources
+C:\Users\Giohanny\Source\Repos\talp2\BuildUp\BuildUp\obj\Debug\BuildUp.frmGestionarIncidencia.resources
+C:\Users\Giohanny\Source\Repos\talp2\BuildUp\BuildUp\obj\Debug\BuildUp.frmRegistrarIncidencia.resources
+C:\Users\Giohanny\Source\Repos\talp2\BuildUp\BuildUp\obj\Debug\BuildUp.frmResponderIncidencia.resources
+C:\Users\Giohanny\Source\Repos\talp2\BuildUp\BuildUp\obj\Debug\BuildUp.frmBuscarProveedor.resources
+C:\Users\Giohanny\Source\Repos\talp2\BuildUp\BuildUp\obj\Debug\BuildUp.frmGestionarProveedor.resources
+C:\GitHubRepos\talp2csharp\BuildUp\BuildUp\bin\Debug\BuildUp.exe.config
+C:\GitHubRepos\talp2csharp\BuildUp\BuildUp\bin\Debug\BuildUp.exe
+C:\GitHubRepos\talp2csharp\BuildUp\BuildUp\bin\Debug\BuildUp.pdb
+C:\GitHubRepos\talp2csharp\BuildUp\BuildUp\obj\Debug\BuildUp.csprojAssemblyReference.cache
+C:\GitHubRepos\talp2csharp\BuildUp\BuildUp\obj\Debug\BuildUp.frmBuscarIncidencia.resources
+C:\GitHubRepos\talp2csharp\BuildUp\BuildUp\obj\Debug\BuildUp.frmBuscarIncidenciaSinRespuesta.resources
+C:\GitHubRepos\talp2csharp\BuildUp\BuildUp\obj\Debug\BuildUp.frmBuscarPlanProduccion.resources
+C:\GitHubRepos\talp2csharp\BuildUp\BuildUp\obj\Debug\BuildUp.frmBuscarProveedor.resources
+C:\GitHubRepos\talp2csharp\BuildUp\BuildUp\obj\Debug\BuildUp.frmBuscarRegistroMerma.resources
+C:\GitHubRepos\talp2csharp\BuildUp\BuildUp\obj\Debug\BuildUp.frmBuscarUsuario.resources
+C:\GitHubRepos\talp2csharp\BuildUp\BuildUp\obj\Debug\BuildUp.frmGestionarIncidencia.resources
+C:\GitHubRepos\talp2csharp\BuildUp\BuildUp\obj\Debug\BuildUp.frmGestionarPlanProduccion.resources
+C:\GitHubRepos\talp2csharp\BuildUp\BuildUp\obj\Debug\BuildUp.frmGestionarProveedor.resources
+C:\GitHubRepos\talp2csharp\BuildUp\BuildUp\obj\Debug\BuildUp.frmGestionarUsuario.resources
+C:\GitHubRepos\talp2csharp\BuildUp\BuildUp\obj\Debug\BuildUp.frmRegistrarIncidencia.resources
+C:\GitHubRepos\talp2csharp\BuildUp\BuildUp\obj\Debug\BuildUp.frmResponderIncidencia.resources
+C:\GitHubRepos\talp2csharp\BuildUp\BuildUp\obj\Debug\BuildUp.frmGestionarRegistroMerma.resources
+C:\GitHubRepos\talp2csharp\BuildUp\BuildUp\obj\Debug\BuildUp.LogIn.resources
+C:\GitHubRepos\talp2csharp\BuildUp\BuildUp\obj\Debug\BuildUp.Operario.resources
+C:\GitHubRepos\talp2csharp\BuildUp\BuildUp\obj\Debug\BuildUp.Properties.Resources.resources
+C:\GitHubRepos\talp2csharp\BuildUp\BuildUp\obj\Debug\BuildUp.csproj.GenerateResource.cache
+C:\GitHubRepos\talp2csharp\BuildUp\BuildUp\obj\Debug\BuildUp.csproj.CoreCompileInputs.cache
+C:\GitHubRepos\talp2csharp\BuildUp\BuildUp\obj\Debug\BuildUp.exe
+C:\GitHubRepos\talp2csharp\BuildUp\BuildUp\obj\Debug\BuildUp.pdb
+C:\GitHubRepos\talp2csharp\BuildUp\BuildUp\obj\Debug\BuildUp.frmBuscarInsumo.resources
+C:\GitHubRepos\talp2csharp\BuildUp\BuildUp\obj\Debug\BuildUp.frmBuscarOrdenInsumos.resources
+C:\GitHubRepos\talp2csharp\BuildUp\BuildUp\obj\Debug\BuildUp.frmGestionarOrdenInsumos.resources
+C:\GitHubRepos\talp2csharp\BuildUp\BuildUp\obj\Debug\BuildUp.frmIngeniero.resources
+C:\GitHubRepos\talp2csharp\BuildUp\BuildUp\obj\Debug\BuildUp.frmJefeArea.resources
+C:\GitHubRepos\talp2csharp\BuildUp\BuildUp\obj\Debug\BuildUp.frmLogIn.resources
+C:\GitHubRepos\talp2csharp\BuildUp\BuildUp\obj\Debug\BuildUp.frmOperario.resources
+C:\GitHubRepos\talp2csharp\BuildUp\BuildUp\obj\Debug\BuildUp.frmSupervisor.resources
+C:\GitHubRepos\talp2csharp\BuildUp\BuildUp\obj\Debug\BuildUp.frmTempPickUsuarios.resources
+C:\GitHubRepos\talp2csharp\BuildUp\BuildUp\obj\Debug\BuildUp.frmGestionarMaquinaria.resources
+C:\Users\Giohanny\Source\Repos\talp2\BuildUp\BuildUp\obj\Debug\BuildUp.frmBuscarInsumo.resources
+C:\Users\Giohanny\Source\Repos\talp2\BuildUp\BuildUp\obj\Debug\BuildUp.frmBuscarOrdenInsumos.resources
+C:\Users\Giohanny\Source\Repos\talp2\BuildUp\BuildUp\obj\Debug\BuildUp.frmGestionarMaquinaria.resources
+C:\Users\Giohanny\Source\Repos\talp2\BuildUp\BuildUp\obj\Debug\BuildUp.frmGestionarOrdenInsumos.resources
+C:\Users\Giohanny\Source\Repos\talp2\BuildUp\BuildUp\obj\Debug\BuildUp.frmGestionarTipoLadrillo.resources
+C:\Users\Giohanny\Source\Repos\talp2\BuildUp\BuildUp\obj\Debug\BuildUp.frmIngeniero.resources
+C:\Users\Giohanny\Source\Repos\talp2\BuildUp\BuildUp\obj\Debug\BuildUp.frmJefeArea.resources
+C:\Users\Giohanny\Source\Repos\talp2\BuildUp\BuildUp\obj\Debug\BuildUp.frmLogIn.resources
+C:\Users\Giohanny\Source\Repos\talp2\BuildUp\BuildUp\obj\Debug\BuildUp.frmOperario.resources
+C:\Users\Giohanny\Source\Repos\talp2\BuildUp\BuildUp\obj\Debug\BuildUp.frmSupervisor.resources
+C:\Users\Giohanny\Source\Repos\talp2\BuildUp\BuildUp\obj\Debug\BuildUp.frmTempPickUsuarios.resources
+C:\Users\Giohanny\Source\Repos\talp2\BuildUp\BuildUp\obj\Debug\BuildUp.frmBuscarTipoLadrillo.resources
+C:\Users\Giohanny\Source\Repos\talp2\BuildUp\BuildUp\obj\Debug\BuildUp.frmRegistrarDetalleMerma.resources
+D:\RepLP2\ProyectosNET\lab666\BuildUp\BuildUp\obj\Debug\BuildUp.frmBuscarInsumo.resources
+D:\RepLP2\ProyectosNET\lab666\BuildUp\BuildUp\obj\Debug\BuildUp.frmBuscarOrdenInsumos.resources
+D:\RepLP2\ProyectosNET\lab666\BuildUp\BuildUp\obj\Debug\BuildUp.frmBuscarPlanProduccion.resources
+D:\RepLP2\ProyectosNET\lab666\BuildUp\BuildUp\obj\Debug\BuildUp.frmBuscarProveedor.resources
+D:\RepLP2\ProyectosNET\lab666\BuildUp\BuildUp\obj\Debug\BuildUp.frmBuscarRegistroMerma.resources
+D:\RepLP2\ProyectosNET\lab666\BuildUp\BuildUp\obj\Debug\BuildUp.frmBuscarTipoLadrillo.resources
+D:\RepLP2\ProyectosNET\lab666\BuildUp\BuildUp\obj\Debug\BuildUp.frmGestionarMaquinaria.resources
+D:\RepLP2\ProyectosNET\lab666\BuildUp\BuildUp\obj\Debug\BuildUp.frmGestionarOrdenInsumos.resources
+D:\RepLP2\ProyectosNET\lab666\BuildUp\BuildUp\obj\Debug\BuildUp.frmGestionarPlanProduccion.resources
+D:\RepLP2\ProyectosNET\lab666\BuildUp\BuildUp\obj\Debug\BuildUp.frmGestionarProveedor.resources
+D:\RepLP2\ProyectosNET\lab666\BuildUp\BuildUp\obj\Debug\BuildUp.frmGestionarTipoLadrillo.resources
+D:\RepLP2\ProyectosNET\lab666\BuildUp\BuildUp\obj\Debug\BuildUp.frmIngeniero.resources
+D:\RepLP2\ProyectosNET\lab666\BuildUp\BuildUp\obj\Debug\BuildUp.frmJefeArea.resources
+D:\RepLP2\ProyectosNET\lab666\BuildUp\BuildUp\obj\Debug\BuildUp.frmLogIn.resources
+D:\RepLP2\ProyectosNET\lab666\BuildUp\BuildUp\obj\Debug\BuildUp.frmOperario.resources
+D:\RepLP2\ProyectosNET\lab666\BuildUp\BuildUp\obj\Debug\BuildUp.frmRegistrarDetalleMerma.resources
+D:\RepLP2\ProyectosNET\lab666\BuildUp\BuildUp\obj\Debug\BuildUp.frmGestionarRegistroMerma.resources
+D:\RepLP2\ProyectosNET\lab666\BuildUp\BuildUp\obj\Debug\BuildUp.frmSupervisor.resources
+D:\RepLP2\ProyectosNET\lab666\BuildUp\BuildUp\obj\Debug\BuildUp.frmTempPickUsuarios.resources
+C:\Users\Giohanny\Source\Repos\talp2\BuildUp\BuildUp\obj\Debug\BuildUp.frmBuscarOrdenSalida.resources
+C:\Users\Giohanny\Source\Repos\talp2\BuildUp\BuildUp\obj\Debug\BuildUp.frmGestionarOrdenSalida.resources
+D:\RepLP2\ProyectosNET\lab6666\BuildUp\BuildUp\obj\Debug\BuildUp.csprojAssemblyReference.cache
+D:\RepLP2\ProyectosNET\lab6666\BuildUp\BuildUp\obj\Debug\BuildUp.frmBuscarIncidencia.resources
+D:\RepLP2\ProyectosNET\lab6666\BuildUp\BuildUp\obj\Debug\BuildUp.frmBuscarIncidenciaSinRespuesta.resources
+D:\RepLP2\ProyectosNET\lab6666\BuildUp\BuildUp\obj\Debug\BuildUp.frmBuscarInsumo.resources
+D:\RepLP2\ProyectosNET\lab6666\BuildUp\BuildUp\obj\Debug\BuildUp.frmBuscarOrdenInsumos.resources
+D:\RepLP2\ProyectosNET\lab6666\BuildUp\BuildUp\obj\Debug\BuildUp.frmBuscarOrdenSalida.resources
+D:\RepLP2\ProyectosNET\lab6666\BuildUp\BuildUp\obj\Debug\BuildUp.frmBuscarPlanProduccion.resources
+D:\RepLP2\ProyectosNET\lab6666\BuildUp\BuildUp\obj\Debug\BuildUp.frmBuscarProveedor.resources
+D:\RepLP2\ProyectosNET\lab6666\BuildUp\BuildUp\obj\Debug\BuildUp.frmBuscarRegistroMerma.resources
+D:\RepLP2\ProyectosNET\lab6666\BuildUp\BuildUp\obj\Debug\BuildUp.frmBuscarTipoLadrillo.resources
+D:\RepLP2\ProyectosNET\lab6666\BuildUp\BuildUp\obj\Debug\BuildUp.frmBuscarUsuario.resources
+D:\RepLP2\ProyectosNET\lab6666\BuildUp\BuildUp\obj\Debug\BuildUp.frmGestionarIncidencia.resources
+D:\RepLP2\ProyectosNET\lab6666\BuildUp\BuildUp\obj\Debug\BuildUp.frmGestionarMaquinaria.resources
+D:\RepLP2\ProyectosNET\lab6666\BuildUp\BuildUp\obj\Debug\BuildUp.frmGestionarOrdenInsumos.resources
+D:\RepLP2\ProyectosNET\lab6666\BuildUp\BuildUp\obj\Debug\BuildUp.frmGestionarOrdenSalida.resources
+D:\RepLP2\ProyectosNET\lab6666\BuildUp\BuildUp\obj\Debug\BuildUp.frmGestionarPlanProduccion.resources
+D:\RepLP2\ProyectosNET\lab6666\BuildUp\BuildUp\obj\Debug\BuildUp.frmGestionarProveedor.resources
+D:\RepLP2\ProyectosNET\lab6666\BuildUp\BuildUp\obj\Debug\BuildUp.frmGestionarTipoLadrillo.resources
+D:\RepLP2\ProyectosNET\lab6666\BuildUp\BuildUp\obj\Debug\BuildUp.frmGestionarUsuario.resources
+D:\RepLP2\ProyectosNET\lab6666\BuildUp\BuildUp\obj\Debug\BuildUp.frmIngeniero.resources
+D:\RepLP2\ProyectosNET\lab6666\BuildUp\BuildUp\obj\Debug\BuildUp.frmJefeArea.resources
+D:\RepLP2\ProyectosNET\lab6666\BuildUp\BuildUp\obj\Debug\BuildUp.frmLogIn.resources
+D:\RepLP2\ProyectosNET\lab6666\BuildUp\BuildUp\obj\Debug\BuildUp.frmOperario.resources
+D:\RepLP2\ProyectosNET\lab6666\BuildUp\BuildUp\obj\Debug\BuildUp.frmRegistrarDetalleMerma.resources
+D:\RepLP2\ProyectosNET\lab6666\BuildUp\BuildUp\obj\Debug\BuildUp.frmRegistrarIncidencia.resources
+D:\RepLP2\ProyectosNET\lab6666\BuildUp\BuildUp\obj\Debug\BuildUp.frmResponderIncidencia.resources
+D:\RepLP2\ProyectosNET\lab6666\BuildUp\BuildUp\obj\Debug\BuildUp.frmGestionarRegistroMerma.resources
+D:\RepLP2\ProyectosNET\lab6666\BuildUp\BuildUp\obj\Debug\BuildUp.frmSupervisor.resources
+D:\RepLP2\ProyectosNET\lab6666\BuildUp\BuildUp\obj\Debug\BuildUp.frmTempPickUsuarios.resources
+D:\RepLP2\ProyectosNET\lab6666\BuildUp\BuildUp\obj\Debug\BuildUp.Operario.resources
+D:\RepLP2\ProyectosNET\lab6666\BuildUp\BuildUp\obj\Debug\BuildUp.Properties.Resources.resources
+D:\RepLP2\ProyectosNET\lab6666\BuildUp\BuildUp\obj\Debug\BuildUp.csproj.GenerateResource.cache
+D:\RepLP2\ProyectosNET\lab6666\BuildUp\BuildUp\obj\Debug\BuildUp.csproj.CoreCompileInputs.cache
+D:\RepLP2\ProyectosNET\lab6666\BuildUp\BuildUp\obj\Debug\BuildUp.exe
+D:\RepLP2\ProyectosNET\lab6666\BuildUp\BuildUp\obj\Debug\BuildUp.pdb
+D:\RepLP2\ProyectosNET\lab6666\BuildUp\BuildUp\bin\Debug\BuildUp.exe.config
+D:\RepLP2\ProyectosNET\lab6666\BuildUp\BuildUp\bin\Debug\BuildUp.exe
+D:\RepLP2\ProyectosNET\lab6666\BuildUp\BuildUp\bin\Debug\BuildUp.pdb
+D:\RepLP2\ProyectosNET\lab6666\BuildUp\BuildUp\obj\Debug\BuildUp.frmRegistrarMerma.resources
+D:\RepLP2\ProyectosNET\lab6fin\BuildUp\BuildUp\bin\Debug\BuildUp.exe.config
+D:\RepLP2\ProyectosNET\lab6fin\BuildUp\BuildUp\bin\Debug\BuildUp.exe
+D:\RepLP2\ProyectosNET\lab6fin\BuildUp\BuildUp\bin\Debug\BuildUp.pdb
+D:\RepLP2\ProyectosNET\lab6fin\BuildUp\BuildUp\obj\Debug\BuildUp.csprojAssemblyReference.cache
+D:\RepLP2\ProyectosNET\lab6fin\BuildUp\BuildUp\obj\Debug\BuildUp.frmBuscarIncidencia.resources
+D:\RepLP2\ProyectosNET\lab6fin\BuildUp\BuildUp\obj\Debug\BuildUp.frmBuscarIncidenciaSinRespuesta.resources
+D:\RepLP2\ProyectosNET\lab6fin\BuildUp\BuildUp\obj\Debug\BuildUp.frmBuscarInsumo.resources
+D:\RepLP2\ProyectosNET\lab6fin\BuildUp\BuildUp\obj\Debug\BuildUp.frmBuscarOrdenInsumos.resources
+D:\RepLP2\ProyectosNET\lab6fin\BuildUp\BuildUp\obj\Debug\BuildUp.frmBuscarOrdenSalida.resources
+D:\RepLP2\ProyectosNET\lab6fin\BuildUp\BuildUp\obj\Debug\BuildUp.frmBuscarPlanProduccion.resources
+D:\RepLP2\ProyectosNET\lab6fin\BuildUp\BuildUp\obj\Debug\BuildUp.frmBuscarProveedor.resources
+D:\RepLP2\ProyectosNET\lab6fin\BuildUp\BuildUp\obj\Debug\BuildUp.frmBuscarRegistroMerma.resources
+D:\RepLP2\ProyectosNET\lab6fin\BuildUp\BuildUp\obj\Debug\BuildUp.frmBuscarTipoLadrillo.resources
+D:\RepLP2\ProyectosNET\lab6fin\BuildUp\BuildUp\obj\Debug\BuildUp.frmBuscarUsuario.resources
+D:\RepLP2\ProyectosNET\lab6fin\BuildUp\BuildUp\obj\Debug\BuildUp.frmGestionarIncidencia.resources
+D:\RepLP2\ProyectosNET\lab6fin\BuildUp\BuildUp\obj\Debug\BuildUp.frmGestionarMaquinaria.resources
+D:\RepLP2\ProyectosNET\lab6fin\BuildUp\BuildUp\obj\Debug\BuildUp.frmGestionarOrdenInsumos.resources
+D:\RepLP2\ProyectosNET\lab6fin\BuildUp\BuildUp\obj\Debug\BuildUp.frmGestionarOrdenSalida.resources
+D:\RepLP2\ProyectosNET\lab6fin\BuildUp\BuildUp\obj\Debug\BuildUp.frmGestionarPlanProduccion.resources
+D:\RepLP2\ProyectosNET\lab6fin\BuildUp\BuildUp\obj\Debug\BuildUp.frmGestionarProveedor.resources
+D:\RepLP2\ProyectosNET\lab6fin\BuildUp\BuildUp\obj\Debug\BuildUp.frmGestionarTipoLadrillo.resources
+D:\RepLP2\ProyectosNET\lab6fin\BuildUp\BuildUp\obj\Debug\BuildUp.frmGestionarUsuario.resources
+D:\RepLP2\ProyectosNET\lab6fin\BuildUp\BuildUp\obj\Debug\BuildUp.frmIngeniero.resources
+D:\RepLP2\ProyectosNET\lab6fin\BuildUp\BuildUp\obj\Debug\BuildUp.frmJefeArea.resources
+D:\RepLP2\ProyectosNET\lab6fin\BuildUp\BuildUp\obj\Debug\BuildUp.frmLogIn.resources
+D:\RepLP2\ProyectosNET\lab6fin\BuildUp\BuildUp\obj\Debug\BuildUp.frmOperario.resources
+D:\RepLP2\ProyectosNET\lab6fin\BuildUp\BuildUp\obj\Debug\BuildUp.frmRegistrarDetalleMerma.resources
+D:\RepLP2\ProyectosNET\lab6fin\BuildUp\BuildUp\obj\Debug\BuildUp.frmRegistrarIncidencia.resources
+D:\RepLP2\ProyectosNET\lab6fin\BuildUp\BuildUp\obj\Debug\BuildUp.frmRegistrarMerma.resources
+D:\RepLP2\ProyectosNET\lab6fin\BuildUp\BuildUp\obj\Debug\BuildUp.frmResponderIncidencia.resources
+D:\RepLP2\ProyectosNET\lab6fin\BuildUp\BuildUp\obj\Debug\BuildUp.frmGestionarRegistroMerma.resources
+D:\RepLP2\ProyectosNET\lab6fin\BuildUp\BuildUp\obj\Debug\BuildUp.frmRevisarProduccion.resources
+D:\RepLP2\ProyectosNET\lab6fin\BuildUp\BuildUp\obj\Debug\BuildUp.frmSupervisor.resources
+D:\RepLP2\ProyectosNET\lab6fin\BuildUp\BuildUp\obj\Debug\BuildUp.frmTempPickUsuarios.resources
+D:\RepLP2\ProyectosNET\lab6fin\BuildUp\BuildUp\obj\Debug\BuildUp.Operario.resources
+D:\RepLP2\ProyectosNET\lab6fin\BuildUp\BuildUp\obj\Debug\BuildUp.Properties.Resources.resources
+D:\RepLP2\ProyectosNET\lab6fin\BuildUp\BuildUp\obj\Debug\BuildUp.csproj.GenerateResource.cache
+D:\RepLP2\ProyectosNET\lab6fin\BuildUp\BuildUp\obj\Debug\BuildUp.csproj.CoreCompileInputs.cache
+D:\RepLP2\ProyectosNET\lab6fin\BuildUp\BuildUp\obj\Debug\BuildUp.exe
+D:\RepLP2\ProyectosNET\lab6fin\BuildUp\BuildUp\obj\Debug\BuildUp.pdb
+C:\GitHubRepos\BuildUp\BuildUp\BuildUp\bin\Debug\BuildUp.exe.config
+C:\GitHubRepos\BuildUp\BuildUp\BuildUp\bin\Debug\BuildUp.exe
+C:\GitHubRepos\BuildUp\BuildUp\BuildUp\bin\Debug\BuildUp.pdb
+C:\GitHubRepos\BuildUp\BuildUp\BuildUp\obj\Debug\BuildUp.csprojAssemblyReference.cache
+C:\GitHubRepos\BuildUp\BuildUp\BuildUp\obj\Debug\BuildUp.frmBuscarIncidencia.resources
+C:\GitHubRepos\BuildUp\BuildUp\BuildUp\obj\Debug\BuildUp.frmBuscarInsumo.resources
+C:\GitHubRepos\BuildUp\BuildUp\BuildUp\obj\Debug\BuildUp.frmBuscarOrdenInsumos.resources
+C:\GitHubRepos\BuildUp\BuildUp\BuildUp\obj\Debug\BuildUp.frmBuscarOrdenSalida.resources
+C:\GitHubRepos\BuildUp\BuildUp\BuildUp\obj\Debug\BuildUp.frmBuscarPlanProduccion.resources
+C:\GitHubRepos\BuildUp\BuildUp\BuildUp\obj\Debug\BuildUp.frmBuscarProveedor.resources
+C:\GitHubRepos\BuildUp\BuildUp\BuildUp\obj\Debug\BuildUp.frmBuscarRegistroMerma.resources
+C:\GitHubRepos\BuildUp\BuildUp\BuildUp\obj\Debug\BuildUp.frmBuscarTipoLadrillo.resources
+C:\GitHubRepos\BuildUp\BuildUp\BuildUp\obj\Debug\BuildUp.frmBuscarUsuario.resources
+C:\GitHubRepos\BuildUp\BuildUp\BuildUp\obj\Debug\BuildUp.frmGestionarIncidencia.resources
+C:\GitHubRepos\BuildUp\BuildUp\BuildUp\obj\Debug\BuildUp.frmGestionarMaquinaria.resources
+C:\GitHubRepos\BuildUp\BuildUp\BuildUp\obj\Debug\BuildUp.frmGestionarOrdenInsumos.resources
+C:\GitHubRepos\BuildUp\BuildUp\BuildUp\obj\Debug\BuildUp.frmGestionarOrdenSalida.resources
+C:\GitHubRepos\BuildUp\BuildUp\BuildUp\obj\Debug\BuildUp.frmGestionarPlanProduccion.resources
+C:\GitHubRepos\BuildUp\BuildUp\BuildUp\obj\Debug\BuildUp.frmGestionarProveedor.resources
+C:\GitHubRepos\BuildUp\BuildUp\BuildUp\obj\Debug\BuildUp.frmGestionarTipoLadrillo.resources
+C:\GitHubRepos\BuildUp\BuildUp\BuildUp\obj\Debug\BuildUp.frmGestionarUsuario.resources
+C:\GitHubRepos\BuildUp\BuildUp\BuildUp\obj\Debug\BuildUp.frmIngeniero.resources
+C:\GitHubRepos\BuildUp\BuildUp\BuildUp\obj\Debug\BuildUp.frmJefeArea.resources
+C:\GitHubRepos\BuildUp\BuildUp\BuildUp\obj\Debug\BuildUp.frmLogIn.resources
+C:\GitHubRepos\BuildUp\BuildUp\BuildUp\obj\Debug\BuildUp.frmOperario.resources
+C:\GitHubRepos\BuildUp\BuildUp\BuildUp\obj\Debug\BuildUp.frmRegistrarDetalleMerma.resources
+C:\GitHubRepos\BuildUp\BuildUp\BuildUp\obj\Debug\BuildUp.frmRegistrarIncidencia.resources
+C:\GitHubRepos\BuildUp\BuildUp\BuildUp\obj\Debug\BuildUp.frmRegistrarMerma.resources
+C:\GitHubRepos\BuildUp\BuildUp\BuildUp\obj\Debug\BuildUp.frmResponderIncidencia.resources
+C:\GitHubRepos\BuildUp\BuildUp\BuildUp\obj\Debug\BuildUp.frmGestionarRegistroMerma.resources
+C:\GitHubRepos\BuildUp\BuildUp\BuildUp\obj\Debug\BuildUp.frmRevisarProduccion.resources
+C:\GitHubRepos\BuildUp\BuildUp\BuildUp\obj\Debug\BuildUp.frmSupervisor.resources
+C:\GitHubRepos\BuildUp\BuildUp\BuildUp\obj\Debug\BuildUp.frmTempPickUsuarios.resources
+C:\GitHubRepos\BuildUp\BuildUp\BuildUp\obj\Debug\BuildUp.Properties.Resources.resources
+C:\GitHubRepos\BuildUp\BuildUp\BuildUp\obj\Debug\BuildUp.csproj.GenerateResource.cache
+C:\GitHubRepos\BuildUp\BuildUp\BuildUp\obj\Debug\BuildUp.csproj.CoreCompileInputs.cache
+C:\GitHubRepos\BuildUp\BuildUp\BuildUp\obj\Debug\BuildUp.exe
+C:\GitHubRepos\BuildUp\BuildUp\BuildUp\obj\Debug\BuildUp.pdb
+C:\GitHubRepos\BuildUp\BuildUp\BuildUp\obj\Debug\BuildUp.frmBuscarMaquinaria.resources
+C:\GitHubRepos\BuildUp\BuildUp\BuildUp\obj\Debug\BuildUp.frmGestionarInsumo.resources
+C:\GitHubRepos\BuildUp\BuildUpCSharpClient\BuildUp\bin\Debug\BuildUp.exe.config
+C:\GitHubRepos\BuildUp\BuildUpCSharpClient\BuildUp\bin\Debug\BuildUp.exe
+C:\GitHubRepos\BuildUp\BuildUpCSharpClient\BuildUp\bin\Debug\BuildUp.pdb
+C:\GitHubRepos\BuildUp\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.csprojAssemblyReference.cache
+C:\GitHubRepos\BuildUp\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmBuscarIncidencia.resources
+C:\GitHubRepos\BuildUp\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmBuscarInsumo.resources
+C:\GitHubRepos\BuildUp\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmBuscarMaquinaria.resources
+C:\GitHubRepos\BuildUp\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmBuscarOrdenInsumos.resources
+C:\GitHubRepos\BuildUp\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmBuscarOrdenSalida.resources
+C:\GitHubRepos\BuildUp\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmBuscarPlanProduccion.resources
+C:\GitHubRepos\BuildUp\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmBuscarProveedor.resources
+C:\GitHubRepos\BuildUp\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmBuscarRegistroMerma.resources
+C:\GitHubRepos\BuildUp\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmBuscarTipoLadrillo.resources
+C:\GitHubRepos\BuildUp\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmBuscarUsuario.resources
+C:\GitHubRepos\BuildUp\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmGestionarIncidencia.resources
+C:\GitHubRepos\BuildUp\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmGestionarInsumo.resources
+C:\GitHubRepos\BuildUp\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmGestionarMaquinaria.resources
+C:\GitHubRepos\BuildUp\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmGestionarOrdenInsumos.resources
+C:\GitHubRepos\BuildUp\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmGestionarOrdenSalida.resources
+C:\GitHubRepos\BuildUp\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmGestionarPlanProduccion.resources
+C:\GitHubRepos\BuildUp\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmGestionarProveedor.resources
+C:\GitHubRepos\BuildUp\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmGestionarTipoLadrillo.resources
+C:\GitHubRepos\BuildUp\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmGestionarUsuario.resources
+C:\GitHubRepos\BuildUp\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmLogIn.resources
+C:\GitHubRepos\BuildUp\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmGestionarRegistroMerma.resources
+C:\GitHubRepos\BuildUp\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.Properties.Resources.resources
+C:\GitHubRepos\BuildUp\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.csproj.GenerateResource.cache
+C:\GitHubRepos\BuildUp\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.csproj.CoreCompileInputs.cache
+C:\GitHubRepos\BuildUp\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.exe
+C:\GitHubRepos\BuildUp\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.pdb
+D:\RepLP2\ProyectosNET\lab7\BuildUpCSharpClient\BuildUp\bin\Debug\BuildUp.exe.config
+D:\RepLP2\ProyectosNET\lab7\BuildUpCSharpClient\BuildUp\bin\Debug\BuildUp.exe
+D:\RepLP2\ProyectosNET\lab7\BuildUpCSharpClient\BuildUp\bin\Debug\BuildUp.pdb
+D:\RepLP2\ProyectosNET\lab7\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.csprojAssemblyReference.cache
+D:\RepLP2\ProyectosNET\lab7\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmBuscarIncidencia.resources
+D:\RepLP2\ProyectosNET\lab7\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmBuscarInsumo.resources
+D:\RepLP2\ProyectosNET\lab7\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmBuscarMaquinaria.resources
+D:\RepLP2\ProyectosNET\lab7\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmBuscarOrdenInsumos.resources
+D:\RepLP2\ProyectosNET\lab7\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmBuscarOrdenSalida.resources
+D:\RepLP2\ProyectosNET\lab7\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmBuscarPlanProduccion.resources
+D:\RepLP2\ProyectosNET\lab7\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmBuscarProveedor.resources
+D:\RepLP2\ProyectosNET\lab7\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmBuscarRegistroMerma.resources
+D:\RepLP2\ProyectosNET\lab7\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmBuscarTipoLadrillo.resources
+D:\RepLP2\ProyectosNET\lab7\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmBuscarUsuario.resources
+D:\RepLP2\ProyectosNET\lab7\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmGestionarIncidencia.resources
+D:\RepLP2\ProyectosNET\lab7\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmGestionarInsumo.resources
+D:\RepLP2\ProyectosNET\lab7\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmGestionarMaquinaria.resources
+D:\RepLP2\ProyectosNET\lab7\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmGestionarOrdenInsumos.resources
+D:\RepLP2\ProyectosNET\lab7\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmGestionarOrdenSalida.resources
+D:\RepLP2\ProyectosNET\lab7\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmGestionarPlanProduccion.resources
+D:\RepLP2\ProyectosNET\lab7\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmGestionarProveedor.resources
+D:\RepLP2\ProyectosNET\lab7\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmGestionarTipoLadrillo.resources
+D:\RepLP2\ProyectosNET\lab7\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmGestionarUsuario.resources
+D:\RepLP2\ProyectosNET\lab7\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmIngeniero.resources
+D:\RepLP2\ProyectosNET\lab7\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmJefeArea.resources
+D:\RepLP2\ProyectosNET\lab7\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmLogIn.resources
+D:\RepLP2\ProyectosNET\lab7\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmOperario.resources
+D:\RepLP2\ProyectosNET\lab7\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmRegistrarDetalleMerma.resources
+D:\RepLP2\ProyectosNET\lab7\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmRegistrarIncidencia.resources
+D:\RepLP2\ProyectosNET\lab7\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmRegistrarMerma.resources
+D:\RepLP2\ProyectosNET\lab7\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmResponderIncidencia.resources
+D:\RepLP2\ProyectosNET\lab7\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmGestionarRegistroMerma.resources
+D:\RepLP2\ProyectosNET\lab7\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmRevisarProduccion.resources
+D:\RepLP2\ProyectosNET\lab7\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmSupervisor.resources
+D:\RepLP2\ProyectosNET\lab7\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmSysAdmin.resources
+D:\RepLP2\ProyectosNET\lab7\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmTempPickUsuarios.resources
+D:\RepLP2\ProyectosNET\lab7\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.Properties.Resources.resources
+D:\RepLP2\ProyectosNET\lab7\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.csproj.GenerateResource.cache
+D:\RepLP2\ProyectosNET\lab7\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.csproj.CoreCompileInputs.cache
+D:\RepLP2\ProyectosNET\lab7\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.exe
+D:\RepLP2\ProyectosNET\lab7\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.pdb
+D:\RepLP2\ProyectosNET\lab7\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmRolOperario.resources
+D:\RepLP2\ProyectosNET\lab7\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmRolIngeniero.resources
+D:\RepLP2\ProyectosNET\lab7\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmRolJefeArea.resources
+D:\RepLP2\ProyectosNET\lab7\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmRolSupervisor.resources
+D:\RepLP2\ProyectosNET\lab7\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmRolAdmin.resources
+C:\GitHubRepos\BuildUp\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmRolAdmin.resources
+C:\GitHubRepos\BuildUp\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmRolIngeniero.resources
+C:\GitHubRepos\BuildUp\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmRolJefeArea.resources
+C:\GitHubRepos\BuildUp\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmRolOperario.resources
+C:\GitHubRepos\BuildUp\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmRolSupervisor.resources
+C:\Users\jherson\Documents\Ciclo 2020-II\LP2\Laboratorio 7\FrontENDCSharp\BuildUpCSharpClient\BuildUp\bin\Debug\BuildUp.exe.config
+C:\Users\jherson\Documents\Ciclo 2020-II\LP2\Laboratorio 7\FrontENDCSharp\BuildUpCSharpClient\BuildUp\bin\Debug\BuildUp.exe
+C:\Users\jherson\Documents\Ciclo 2020-II\LP2\Laboratorio 7\FrontENDCSharp\BuildUpCSharpClient\BuildUp\bin\Debug\BuildUp.pdb
+C:\Users\jherson\Documents\Ciclo 2020-II\LP2\Laboratorio 7\FrontENDCSharp\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.csprojAssemblyReference.cache
+C:\Users\jherson\Documents\Ciclo 2020-II\LP2\Laboratorio 7\FrontENDCSharp\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmBuscarIncidencia.resources
+C:\Users\jherson\Documents\Ciclo 2020-II\LP2\Laboratorio 7\FrontENDCSharp\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmBuscarInsumo.resources
+C:\Users\jherson\Documents\Ciclo 2020-II\LP2\Laboratorio 7\FrontENDCSharp\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmBuscarMaquinaria.resources
+C:\Users\jherson\Documents\Ciclo 2020-II\LP2\Laboratorio 7\FrontENDCSharp\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmBuscarOrdenInsumos.resources
+C:\Users\jherson\Documents\Ciclo 2020-II\LP2\Laboratorio 7\FrontENDCSharp\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmBuscarOrdenSalida.resources
+C:\Users\jherson\Documents\Ciclo 2020-II\LP2\Laboratorio 7\FrontENDCSharp\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmBuscarPlanProduccion.resources
+C:\Users\jherson\Documents\Ciclo 2020-II\LP2\Laboratorio 7\FrontENDCSharp\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmBuscarProveedor.resources
+C:\Users\jherson\Documents\Ciclo 2020-II\LP2\Laboratorio 7\FrontENDCSharp\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmBuscarRegistroMerma.resources
+C:\Users\jherson\Documents\Ciclo 2020-II\LP2\Laboratorio 7\FrontENDCSharp\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmBuscarTipoLadrillo.resources
+C:\Users\jherson\Documents\Ciclo 2020-II\LP2\Laboratorio 7\FrontENDCSharp\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmBuscarUsuario.resources
+C:\Users\jherson\Documents\Ciclo 2020-II\LP2\Laboratorio 7\FrontENDCSharp\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmGestionarIncidencia.resources
+C:\Users\jherson\Documents\Ciclo 2020-II\LP2\Laboratorio 7\FrontENDCSharp\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmGestionarInsumo.resources
+C:\Users\jherson\Documents\Ciclo 2020-II\LP2\Laboratorio 7\FrontENDCSharp\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmGestionarMaquinaria.resources
+C:\Users\jherson\Documents\Ciclo 2020-II\LP2\Laboratorio 7\FrontENDCSharp\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmGestionarOrdenInsumos.resources
+C:\Users\jherson\Documents\Ciclo 2020-II\LP2\Laboratorio 7\FrontENDCSharp\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmGestionarOrdenSalida.resources
+C:\Users\jherson\Documents\Ciclo 2020-II\LP2\Laboratorio 7\FrontENDCSharp\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmGestionarPlanProduccion.resources
+C:\Users\jherson\Documents\Ciclo 2020-II\LP2\Laboratorio 7\FrontENDCSharp\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmGestionarProblema.resources
+C:\Users\jherson\Documents\Ciclo 2020-II\LP2\Laboratorio 7\FrontENDCSharp\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmGestionarProveedor.resources
+C:\Users\jherson\Documents\Ciclo 2020-II\LP2\Laboratorio 7\FrontENDCSharp\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmGestionarRespuesta.resources
+C:\Users\jherson\Documents\Ciclo 2020-II\LP2\Laboratorio 7\FrontENDCSharp\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmGestionarTipoLadrillo.resources
+C:\Users\jherson\Documents\Ciclo 2020-II\LP2\Laboratorio 7\FrontENDCSharp\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmGestionarUsuario.resources
+C:\Users\jherson\Documents\Ciclo 2020-II\LP2\Laboratorio 7\FrontENDCSharp\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmLogIn.resources
+C:\Users\jherson\Documents\Ciclo 2020-II\LP2\Laboratorio 7\FrontENDCSharp\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmGestionarRegistroMerma.resources
+C:\Users\jherson\Documents\Ciclo 2020-II\LP2\Laboratorio 7\FrontENDCSharp\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmRolAdmin.resources
+C:\Users\jherson\Documents\Ciclo 2020-II\LP2\Laboratorio 7\FrontENDCSharp\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmRolIngeniero.resources
+C:\Users\jherson\Documents\Ciclo 2020-II\LP2\Laboratorio 7\FrontENDCSharp\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmRolJefeArea.resources
+C:\Users\jherson\Documents\Ciclo 2020-II\LP2\Laboratorio 7\FrontENDCSharp\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmRolOperario.resources
+C:\Users\jherson\Documents\Ciclo 2020-II\LP2\Laboratorio 7\FrontENDCSharp\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmRolSupervisor.resources
+C:\Users\jherson\Documents\Ciclo 2020-II\LP2\Laboratorio 7\FrontENDCSharp\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.Properties.Resources.resources
+C:\Users\jherson\Documents\Ciclo 2020-II\LP2\Laboratorio 7\FrontENDCSharp\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.csproj.GenerateResource.cache
+C:\Users\jherson\Documents\Ciclo 2020-II\LP2\Laboratorio 7\FrontENDCSharp\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.csproj.CoreCompileInputs.cache
+C:\Users\jherson\Documents\Ciclo 2020-II\LP2\Laboratorio 7\FrontENDCSharp\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.exe
+C:\Users\jherson\Documents\Ciclo 2020-II\LP2\Laboratorio 7\FrontENDCSharp\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.pdb
+C:\Users\jherson\Documents\Ciclo 2020-II\LP2\Laboratorio 7\FrontENDCSharp\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmBuscarProblema.resources
+C:\Users\jherson\Documents\Ciclo 2020-II\LP2\Laboratorio 7\FrontENDCSharp\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmBuscarRespuesta.resources
+D:\Repositorios\lab77\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.csprojAssemblyReference.cache
+D:\Repositorios\lab77\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmBuscarIncidencia.resources
+D:\Repositorios\lab77\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmBuscarInsumo.resources
+D:\Repositorios\lab77\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmBuscarMaquinaria.resources
+D:\Repositorios\lab77\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmBuscarOrdenInsumos.resources
+D:\Repositorios\lab77\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmBuscarOrdenSalida.resources
+D:\Repositorios\lab77\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmBuscarPlanProduccion.resources
+D:\Repositorios\lab77\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmBuscarProblema.resources
+D:\Repositorios\lab77\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmBuscarProveedor.resources
+D:\Repositorios\lab77\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmBuscarRegistroMerma.resources
+D:\Repositorios\lab77\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmBuscarRespuesta.resources
+D:\Repositorios\lab77\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmBuscarTipoLadrillo.resources
+D:\Repositorios\lab77\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmBuscarUsuario.resources
+D:\Repositorios\lab77\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmGestionarIncidencia.resources
+D:\Repositorios\lab77\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmGestionarInsumo.resources
+D:\Repositorios\lab77\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmGestionarMaquinaria.resources
+D:\Repositorios\lab77\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmGestionarOrdenInsumos.resources
+D:\Repositorios\lab77\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmGestionarOrdenSalida.resources
+D:\Repositorios\lab77\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmGestionarPlanProduccion.resources
+D:\Repositorios\lab77\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmGestionarProblema.resources
+D:\Repositorios\lab77\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmGestionarProveedor.resources
+D:\Repositorios\lab77\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmGestionarRespuesta.resources
+D:\Repositorios\lab77\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmGestionarTipoLadrillo.resources
+D:\Repositorios\lab77\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmGestionarUsuario.resources
+D:\Repositorios\lab77\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmLogIn.resources
+D:\Repositorios\lab77\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmGestionarRegistroMerma.resources
+D:\Repositorios\lab77\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmRolAdmin.resources
+D:\Repositorios\lab77\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmRolIngeniero.resources
+D:\Repositorios\lab77\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmRolJefeArea.resources
+D:\Repositorios\lab77\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmRolOperario.resources
+D:\Repositorios\lab77\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmRolSupervisor.resources
+D:\Repositorios\lab77\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.Properties.Resources.resources
+D:\Repositorios\lab77\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.csproj.GenerateResource.cache
+D:\Repositorios\lab77\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.csproj.CoreCompileInputs.cache
+D:\Repositorios\lab77\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.exe
+D:\Repositorios\lab77\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.pdb
+D:\Repositorios\lab77\BuildUpCSharpClient\BuildUp\bin\Debug\BuildUp.exe.config
+D:\Repositorios\lab77\BuildUpCSharpClient\BuildUp\bin\Debug\BuildUp.exe
+D:\Repositorios\lab77\BuildUpCSharpClient\BuildUp\bin\Debug\BuildUp.pdb
+C:\GitHubRepos\buildup\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmBuscarProblema.resources
+C:\GitHubRepos\buildup\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmBuscarRespuesta.resources
+C:\GitHubRepos\buildup\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmGestionarProblema.resources
+C:\GitHubRepos\buildup\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmGestionarRespuesta.resources

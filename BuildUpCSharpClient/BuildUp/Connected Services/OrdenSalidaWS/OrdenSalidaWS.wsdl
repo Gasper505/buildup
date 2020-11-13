@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://services.buildup.pucp.edu.pe/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="OrdenSalidaWS" targetNamespace="http://services.buildup.pucp.edu.pe/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://52.207.108.70:8080/BuildUpServices/OrdenSalidaWS?xsd=1" namespace="http://services.buildup.pucp.edu.pe/" />
+    </xsd:schema>
+  </types>
+  <message name="insertar">
+    <part name="parameters" element="tns:insertar" />
+  </message>
+  <message name="insertarResponse">
+    <part name="parameters" element="tns:insertarResponse" />
+  </message>
+  <message name="actualizar">
+    <part name="parameters" element="tns:actualizar" />
+  </message>
+  <message name="actualizarResponse">
+    <part name="parameters" element="tns:actualizarResponse" />
+  </message>
+  <message name="eliminar">
+    <part name="parameters" element="tns:eliminar" />
+  </message>
+  <message name="eliminarResponse">
+    <part name="parameters" element="tns:eliminarResponse" />
+  </message>
+  <message name="listarOrdenesSalida">
+    <part name="parameters" element="tns:listarOrdenesSalida" />
+  </message>
+  <message name="listarOrdenesSalidaResponse">
+    <part name="parameters" element="tns:listarOrdenesSalidaResponse" />
+  </message>
+  <message name="listarOrdenesSalidaConParametros">
+    <part name="parameters" element="tns:listarOrdenesSalidaConParametros" />
+  </message>
+  <message name="listarOrdenesSalidaConParametrosResponse">
+    <part name="parameters" element="tns:listarOrdenesSalidaConParametrosResponse" />
+  </message>
+  <portType name="OrdenSalidaWS">
+    <operation name="insertar">
+      <input wsam:Action="http://services.buildup.pucp.edu.pe/OrdenSalidaWS/insertarRequest" message="tns:insertar" />
+      <output wsam:Action="http://services.buildup.pucp.edu.pe/OrdenSalidaWS/insertarResponse" message="tns:insertarResponse" />
+    </operation>
+    <operation name="actualizar">
+      <input wsam:Action="http://services.buildup.pucp.edu.pe/OrdenSalidaWS/actualizarRequest" message="tns:actualizar" />
+      <output wsam:Action="http://services.buildup.pucp.edu.pe/OrdenSalidaWS/actualizarResponse" message="tns:actualizarResponse" />
+    </operation>
+    <operation name="eliminar">
+      <input wsam:Action="http://services.buildup.pucp.edu.pe/OrdenSalidaWS/eliminarRequest" message="tns:eliminar" />
+      <output wsam:Action="http://services.buildup.pucp.edu.pe/OrdenSalidaWS/eliminarResponse" message="tns:eliminarResponse" />
+    </operation>
+    <operation name="listarOrdenesSalida">
+      <input wsam:Action="http://services.buildup.pucp.edu.pe/OrdenSalidaWS/listarOrdenesSalidaRequest" message="tns:listarOrdenesSalida" />
+      <output wsam:Action="http://services.buildup.pucp.edu.pe/OrdenSalidaWS/listarOrdenesSalidaResponse" message="tns:listarOrdenesSalidaResponse" />
+    </operation>
+    <operation name="listarOrdenesSalidaConParametros">
+      <input wsam:Action="http://services.buildup.pucp.edu.pe/OrdenSalidaWS/listarOrdenesSalidaConParametrosRequest" message="tns:listarOrdenesSalidaConParametros" />
+      <output wsam:Action="http://services.buildup.pucp.edu.pe/OrdenSalidaWS/listarOrdenesSalidaConParametrosResponse" message="tns:listarOrdenesSalidaConParametrosResponse" />
+    </operation>
+  </portType>
+  <binding name="OrdenSalidaWSPortBinding" type="tns:OrdenSalidaWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="insertar">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="actualizar">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminar">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarOrdenesSalida">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarOrdenesSalidaConParametros">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="OrdenSalidaWS">
+    <port name="OrdenSalidaWSPort" binding="tns:OrdenSalidaWSPortBinding">
+      <soap:address location="http://52.207.108.70:8080/BuildUpServices/OrdenSalidaWS" />
+    </port>
+  </service>
+</definitions>

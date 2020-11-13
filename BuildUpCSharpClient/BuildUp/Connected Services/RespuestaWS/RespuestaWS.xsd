@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://services.buildup.pucp.edu.pe/" targetNamespace="http://services.buildup.pucp.edu.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="actualizarRespuesta" type="tns:actualizarRespuesta" />
+  <xs:element name="actualizarRespuestaResponse" type="tns:actualizarRespuestaResponse" />
+  <xs:element name="eliminarRespuesta" type="tns:eliminarRespuesta" />
+  <xs:element name="eliminarRespuestaResponse" type="tns:eliminarRespuestaResponse" />
+  <xs:element name="insertarRespuesta" type="tns:insertarRespuesta" />
+  <xs:element name="insertarRespuestaResponse" type="tns:insertarRespuestaResponse" />
+  <xs:element name="listarRespuesta" type="tns:listarRespuesta" />
+  <xs:element name="listarRespuestaResponse" type="tns:listarRespuestaResponse" />
+  <xs:complexType name="listarRespuesta">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarRespuestaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:respuesta" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="respuesta">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element name="idRespuesta" type="xs:int" />
+      <xs:element minOccurs="0" name="tipo" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarRespuesta">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="respuesta" type="tns:respuesta" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarRespuestaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarRespuesta">
+    <xs:sequence>
+      <xs:element name="idRespuesta" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarRespuestaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarRespuesta">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="respuesta" type="tns:respuesta" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarRespuestaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

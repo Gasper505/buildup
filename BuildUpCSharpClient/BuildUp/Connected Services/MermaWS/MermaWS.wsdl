@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://services.buildup.pucp.edu.pe/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="MermaWS" targetNamespace="http://services.buildup.pucp.edu.pe/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://52.207.108.70:8080/BuildUpServices/MermaWS?xsd=1" namespace="http://services.buildup.pucp.edu.pe/" />
+    </xsd:schema>
+  </types>
+  <message name="insertarMerma">
+    <part name="parameters" element="tns:insertarMerma" />
+  </message>
+  <message name="insertarMermaResponse">
+    <part name="parameters" element="tns:insertarMermaResponse" />
+  </message>
+  <message name="listarMerma">
+    <part name="parameters" element="tns:listarMerma" />
+  </message>
+  <message name="listarMermaResponse">
+    <part name="parameters" element="tns:listarMermaResponse" />
+  </message>
+  <message name="actualizarMerma">
+    <part name="parameters" element="tns:actualizarMerma" />
+  </message>
+  <message name="actualizarMermaResponse">
+    <part name="parameters" element="tns:actualizarMermaResponse" />
+  </message>
+  <message name="eliminarMerma">
+    <part name="parameters" element="tns:eliminarMerma" />
+  </message>
+  <message name="eliminarMermaResponse">
+    <part name="parameters" element="tns:eliminarMermaResponse" />
+  </message>
+  <portType name="MermaWS">
+    <operation name="insertarMerma">
+      <input wsam:Action="http://services.buildup.pucp.edu.pe/MermaWS/insertarMermaRequest" message="tns:insertarMerma" />
+      <output wsam:Action="http://services.buildup.pucp.edu.pe/MermaWS/insertarMermaResponse" message="tns:insertarMermaResponse" />
+    </operation>
+    <operation name="listarMerma">
+      <input wsam:Action="http://services.buildup.pucp.edu.pe/MermaWS/listarMermaRequest" message="tns:listarMerma" />
+      <output wsam:Action="http://services.buildup.pucp.edu.pe/MermaWS/listarMermaResponse" message="tns:listarMermaResponse" />
+    </operation>
+    <operation name="actualizarMerma">
+      <input wsam:Action="http://services.buildup.pucp.edu.pe/MermaWS/actualizarMermaRequest" message="tns:actualizarMerma" />
+      <output wsam:Action="http://services.buildup.pucp.edu.pe/MermaWS/actualizarMermaResponse" message="tns:actualizarMermaResponse" />
+    </operation>
+    <operation name="eliminarMerma">
+      <input wsam:Action="http://services.buildup.pucp.edu.pe/MermaWS/eliminarMermaRequest" message="tns:eliminarMerma" />
+      <output wsam:Action="http://services.buildup.pucp.edu.pe/MermaWS/eliminarMermaResponse" message="tns:eliminarMermaResponse" />
+    </operation>
+  </portType>
+  <binding name="MermaWSPortBinding" type="tns:MermaWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="insertarMerma">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarMerma">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="actualizarMerma">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarMerma">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="MermaWS">
+    <port name="MermaWSPort" binding="tns:MermaWSPortBinding">
+      <soap:address location="http://52.207.108.70:8080/BuildUpServices/MermaWS" />
+    </port>
+  </service>
+</definitions>

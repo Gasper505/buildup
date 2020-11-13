@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://services.buildup.pucp.edu.pe/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="IngenieroWS" targetNamespace="http://services.buildup.pucp.edu.pe/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://52.207.108.70:8080/BuildUpServices/IngenieroWS?xsd=1" namespace="http://services.buildup.pucp.edu.pe/" />
+    </xsd:schema>
+  </types>
+  <message name="eliminarIngeniero">
+    <part name="parameters" element="tns:eliminarIngeniero" />
+  </message>
+  <message name="eliminarIngenieroResponse">
+    <part name="parameters" element="tns:eliminarIngenieroResponse" />
+  </message>
+  <message name="actualizarIngeniero">
+    <part name="parameters" element="tns:actualizarIngeniero" />
+  </message>
+  <message name="actualizarIngenieroResponse">
+    <part name="parameters" element="tns:actualizarIngenieroResponse" />
+  </message>
+  <message name="insertarIngeniero">
+    <part name="parameters" element="tns:insertarIngeniero" />
+  </message>
+  <message name="insertarIngenieroResponse">
+    <part name="parameters" element="tns:insertarIngenieroResponse" />
+  </message>
+  <message name="listarIngeniero">
+    <part name="parameters" element="tns:listarIngeniero" />
+  </message>
+  <message name="listarIngenieroResponse">
+    <part name="parameters" element="tns:listarIngenieroResponse" />
+  </message>
+  <portType name="IngenieroWS">
+    <operation name="eliminarIngeniero">
+      <input wsam:Action="http://services.buildup.pucp.edu.pe/IngenieroWS/eliminarIngenieroRequest" message="tns:eliminarIngeniero" />
+      <output wsam:Action="http://services.buildup.pucp.edu.pe/IngenieroWS/eliminarIngenieroResponse" message="tns:eliminarIngenieroResponse" />
+    </operation>
+    <operation name="actualizarIngeniero">
+      <input wsam:Action="http://services.buildup.pucp.edu.pe/IngenieroWS/actualizarIngenieroRequest" message="tns:actualizarIngeniero" />
+      <output wsam:Action="http://services.buildup.pucp.edu.pe/IngenieroWS/actualizarIngenieroResponse" message="tns:actualizarIngenieroResponse" />
+    </operation>
+    <operation name="insertarIngeniero">
+      <input wsam:Action="http://services.buildup.pucp.edu.pe/IngenieroWS/insertarIngenieroRequest" message="tns:insertarIngeniero" />
+      <output wsam:Action="http://services.buildup.pucp.edu.pe/IngenieroWS/insertarIngenieroResponse" message="tns:insertarIngenieroResponse" />
+    </operation>
+    <operation name="listarIngeniero">
+      <input wsam:Action="http://services.buildup.pucp.edu.pe/IngenieroWS/listarIngenieroRequest" message="tns:listarIngeniero" />
+      <output wsam:Action="http://services.buildup.pucp.edu.pe/IngenieroWS/listarIngenieroResponse" message="tns:listarIngenieroResponse" />
+    </operation>
+  </portType>
+  <binding name="IngenieroWSPortBinding" type="tns:IngenieroWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="eliminarIngeniero">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="actualizarIngeniero">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarIngeniero">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarIngeniero">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="IngenieroWS">
+    <port name="IngenieroWSPort" binding="tns:IngenieroWSPortBinding">
+      <soap:address location="http://52.207.108.70:8080/BuildUpServices/IngenieroWS" />
+    </port>
+  </service>
+</definitions>

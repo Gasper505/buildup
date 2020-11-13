@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jax-ws xmlns="http://www.netbeans.org/ns/jax-ws/1">
+  <services>
+    <service name="TestingWS">
+      <implementation-class>pe.edu.pucp.buildup.services.TestingWS</implementation-class>
+    </service>
+    <service name="TipoLadrilloWS">
+      <implementation-class>pe.edu.pucp.buildup.services.TipoLadrilloWS</implementation-class>
+    </service>
+    <service name="UsuarioWS">
+      <implementation-class>pe.edu.pucp.buildup.services.UsuarioWS</implementation-class>
+    </service>
+    <service name="OrdenSalidaWS">
+      <implementation-class>pe.edu.pucp.buildup.services.OrdenSalidaWS</implementation-class>
+    </service>
+    <service name="MaquinariaWS">
+      <implementation-class>pe.edu.pucp.buildup.services.MaquinariaWS</implementation-class>
+    </service>
+  </services>
+  <clients/>
+</jax-ws>

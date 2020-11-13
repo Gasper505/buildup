@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://services.buildup.pucp.edu.pe/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="RespuestaWS" targetNamespace="http://services.buildup.pucp.edu.pe/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://52.207.108.70:8080/BuildUpServices/RespuestaWS?xsd=1" namespace="http://services.buildup.pucp.edu.pe/" />
+    </xsd:schema>
+  </types>
+  <message name="eliminarRespuesta">
+    <part name="parameters" element="tns:eliminarRespuesta" />
+  </message>
+  <message name="eliminarRespuestaResponse">
+    <part name="parameters" element="tns:eliminarRespuestaResponse" />
+  </message>
+  <message name="actualizarRespuesta">
+    <part name="parameters" element="tns:actualizarRespuesta" />
+  </message>
+  <message name="actualizarRespuestaResponse">
+    <part name="parameters" element="tns:actualizarRespuestaResponse" />
+  </message>
+  <message name="insertarRespuesta">
+    <part name="parameters" element="tns:insertarRespuesta" />
+  </message>
+  <message name="insertarRespuestaResponse">
+    <part name="parameters" element="tns:insertarRespuestaResponse" />
+  </message>
+  <message name="listarRespuesta">
+    <part name="parameters" element="tns:listarRespuesta" />
+  </message>
+  <message name="listarRespuestaResponse">
+    <part name="parameters" element="tns:listarRespuestaResponse" />
+  </message>
+  <portType name="RespuestaWS">
+    <operation name="eliminarRespuesta">
+      <input wsam:Action="http://services.buildup.pucp.edu.pe/RespuestaWS/eliminarRespuestaRequest" message="tns:eliminarRespuesta" />
+      <output wsam:Action="http://services.buildup.pucp.edu.pe/RespuestaWS/eliminarRespuestaResponse" message="tns:eliminarRespuestaResponse" />
+    </operation>
+    <operation name="actualizarRespuesta">
+      <input wsam:Action="http://services.buildup.pucp.edu.pe/RespuestaWS/actualizarRespuestaRequest" message="tns:actualizarRespuesta" />
+      <output wsam:Action="http://services.buildup.pucp.edu.pe/RespuestaWS/actualizarRespuestaResponse" message="tns:actualizarRespuestaResponse" />
+    </operation>
+    <operation name="insertarRespuesta">
+      <input wsam:Action="http://services.buildup.pucp.edu.pe/RespuestaWS/insertarRespuestaRequest" message="tns:insertarRespuesta" />
+      <output wsam:Action="http://services.buildup.pucp.edu.pe/RespuestaWS/insertarRespuestaResponse" message="tns:insertarRespuestaResponse" />
+    </operation>
+    <operation name="listarRespuesta">
+      <input wsam:Action="http://services.buildup.pucp.edu.pe/RespuestaWS/listarRespuestaRequest" message="tns:listarRespuesta" />
+      <output wsam:Action="http://services.buildup.pucp.edu.pe/RespuestaWS/listarRespuestaResponse" message="tns:listarRespuestaResponse" />
+    </operation>
+  </portType>
+  <binding name="RespuestaWSPortBinding" type="tns:RespuestaWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="eliminarRespuesta">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="actualizarRespuesta">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarRespuesta">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarRespuesta">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="RespuestaWS">
+    <port name="RespuestaWSPort" binding="tns:RespuestaWSPortBinding">
+      <soap:address location="http://52.207.108.70:8080/BuildUpServices/RespuestaWS" />
+    </port>
+  </service>
+</definitions>

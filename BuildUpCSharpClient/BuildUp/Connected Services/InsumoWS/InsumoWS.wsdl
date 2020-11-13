@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://services.buildup.pucp.edu.pe/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="InsumoWS" targetNamespace="http://services.buildup.pucp.edu.pe/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://52.207.108.70:8080/BuildUpServices/InsumoWS?xsd=1" namespace="http://services.buildup.pucp.edu.pe/" />
+    </xsd:schema>
+  </types>
+  <message name="insertarInsumo">
+    <part name="parameters" element="tns:insertarInsumo" />
+  </message>
+  <message name="insertarInsumoResponse">
+    <part name="parameters" element="tns:insertarInsumoResponse" />
+  </message>
+  <message name="eliminarInsumo">
+    <part name="parameters" element="tns:eliminarInsumo" />
+  </message>
+  <message name="eliminarInsumoResponse">
+    <part name="parameters" element="tns:eliminarInsumoResponse" />
+  </message>
+  <message name="actualizarInsumo">
+    <part name="parameters" element="tns:actualizarInsumo" />
+  </message>
+  <message name="actualizarInsumoResponse">
+    <part name="parameters" element="tns:actualizarInsumoResponse" />
+  </message>
+  <message name="listarInsumo">
+    <part name="parameters" element="tns:listarInsumo" />
+  </message>
+  <message name="listarInsumoResponse">
+    <part name="parameters" element="tns:listarInsumoResponse" />
+  </message>
+  <portType name="InsumoWS">
+    <operation name="insertarInsumo">
+      <input wsam:Action="http://services.buildup.pucp.edu.pe/InsumoWS/insertarInsumoRequest" message="tns:insertarInsumo" />
+      <output wsam:Action="http://services.buildup.pucp.edu.pe/InsumoWS/insertarInsumoResponse" message="tns:insertarInsumoResponse" />
+    </operation>
+    <operation name="eliminarInsumo">
+      <input wsam:Action="http://services.buildup.pucp.edu.pe/InsumoWS/eliminarInsumoRequest" message="tns:eliminarInsumo" />
+      <output wsam:Action="http://services.buildup.pucp.edu.pe/InsumoWS/eliminarInsumoResponse" message="tns:eliminarInsumoResponse" />
+    </operation>
+    <operation name="actualizarInsumo">
+      <input wsam:Action="http://services.buildup.pucp.edu.pe/InsumoWS/actualizarInsumoRequest" message="tns:actualizarInsumo" />
+      <output wsam:Action="http://services.buildup.pucp.edu.pe/InsumoWS/actualizarInsumoResponse" message="tns:actualizarInsumoResponse" />
+    </operation>
+    <operation name="listarInsumo">
+      <input wsam:Action="http://services.buildup.pucp.edu.pe/InsumoWS/listarInsumoRequest" message="tns:listarInsumo" />
+      <output wsam:Action="http://services.buildup.pucp.edu.pe/InsumoWS/listarInsumoResponse" message="tns:listarInsumoResponse" />
+    </operation>
+  </portType>
+  <binding name="InsumoWSPortBinding" type="tns:InsumoWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="insertarInsumo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarInsumo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="actualizarInsumo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarInsumo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="InsumoWS">
+    <port name="InsumoWSPort" binding="tns:InsumoWSPortBinding">
+      <soap:address location="http://52.207.108.70:8080/BuildUpServices/InsumoWS" />
+    </port>
+  </service>
+</definitions>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://services.buildup.pucp.edu.pe/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="UsuarioWS" targetNamespace="http://services.buildup.pucp.edu.pe/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://52.207.108.70:8080/BuildUpServices/UsuarioWS?xsd=1" namespace="http://services.buildup.pucp.edu.pe/" />
+    </xsd:schema>
+  </types>
+  <message name="autenticarUsuario">
+    <part name="parameters" element="tns:autenticarUsuario" />
+  </message>
+  <message name="autenticarUsuarioResponse">
+    <part name="parameters" element="tns:autenticarUsuarioResponse" />
+  </message>
+  <message name="buscarUsuarioPorUsername">
+    <part name="parameters" element="tns:buscarUsuarioPorUsername" />
+  </message>
+  <message name="buscarUsuarioPorUsernameResponse">
+    <part name="parameters" element="tns:buscarUsuarioPorUsernameResponse" />
+  </message>
+  <portType name="UsuarioWS">
+    <operation name="autenticarUsuario">
+      <input wsam:Action="http://services.buildup.pucp.edu.pe/UsuarioWS/autenticarUsuarioRequest" message="tns:autenticarUsuario" />
+      <output wsam:Action="http://services.buildup.pucp.edu.pe/UsuarioWS/autenticarUsuarioResponse" message="tns:autenticarUsuarioResponse" />
+    </operation>
+    <operation name="buscarUsuarioPorUsername">
+      <input wsam:Action="http://services.buildup.pucp.edu.pe/UsuarioWS/buscarUsuarioPorUsernameRequest" message="tns:buscarUsuarioPorUsername" />
+      <output wsam:Action="http://services.buildup.pucp.edu.pe/UsuarioWS/buscarUsuarioPorUsernameResponse" message="tns:buscarUsuarioPorUsernameResponse" />
+    </operation>
+  </portType>
+  <binding name="UsuarioWSPortBinding" type="tns:UsuarioWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="autenticarUsuario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="buscarUsuarioPorUsername">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="UsuarioWS">
+    <port name="UsuarioWSPort" binding="tns:UsuarioWSPortBinding">
+      <soap:address location="http://52.207.108.70:8080/BuildUpServices/UsuarioWS" />
+    </port>
+  </service>
+</definitions>

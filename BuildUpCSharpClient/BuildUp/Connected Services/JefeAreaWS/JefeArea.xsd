@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://services.buildup.pucp.edu.pe/" targetNamespace="http://services.buildup.pucp.edu.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="actualizarJefeArea" type="tns:actualizarJefeArea" />
+  <xs:element name="actualizarJefeAreaResponse" type="tns:actualizarJefeAreaResponse" />
+  <xs:element name="eliminarJefeArea" type="tns:eliminarJefeArea" />
+  <xs:element name="eliminarJefeAreaResponse" type="tns:eliminarJefeAreaResponse" />
+  <xs:element name="insertarJefeArea" type="tns:insertarJefeArea" />
+  <xs:element name="insertarJefeAreaResponse" type="tns:insertarJefeAreaResponse" />
+  <xs:element name="listarJefeArea" type="tns:listarJefeArea" />
+  <xs:element name="listarJefeAreaResponse" type="tns:listarJefeAreaResponse" />
+  <xs:complexType name="listarJefeArea">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarJefeAreaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:jefeArea" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="jefeArea">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:persona">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="archivoFirmaDigital" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="persona">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="apellidos" type="xs:string" />
+      <xs:element minOccurs="0" name="correo" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaFinContrato" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="foto" type="xs:base64Binary" />
+      <xs:element name="idPersona" type="xs:int" />
+      <xs:element minOccurs="0" name="nombres" type="xs:string" />
+      <xs:element minOccurs="0" name="rol" type="xs:string" />
+      <xs:element minOccurs="0" name="telefono" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarJefeArea">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="jefeArea" type="tns:jefeArea" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarJefeAreaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarJefeArea">
+    <xs:sequence>
+      <xs:element name="idJefeArea" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarJefeAreaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarJefeArea">
+    <xs:sequence>
+      <xs:element name="idPersona" type="xs:int" />
+      <xs:element name="nuevo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarJefeAreaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
