@@ -16,6 +16,48 @@
     <service name="MaquinariaWS">
       <implementation-class>pe.edu.pucp.buildup.services.MaquinariaWS</implementation-class>
     </service>
+    <service name="IncidenteMaquinariaWS">
+      <implementation-class>pe.edu.pucp.buildup.services.IncidenteMaquinariaWS</implementation-class>
+    </service>
+    <service name="JefeAreaWS">
+      <implementation-class>pe.edu.pucp.buildup.services.JefeAreaWS</implementation-class>
+    </service>
+    <service name="RegistroMermaWS">
+      <implementation-class>pe.edu.pucp.buildup.services.RegistroMermaWS</implementation-class>
+    </service>
+    <service name="RespuestaWS">
+      <implementation-class>pe.edu.pucp.buildup.services.RespuestaWS</implementation-class>
+    </service>
+    <service name="LineaProduccionWS">
+      <implementation-class>pe.edu.pucp.buildup.services.LineaProduccionWS</implementation-class>
+    </service>
+    <service name="OperarioWS">
+      <implementation-class>pe.edu.pucp.buildup.services.OperarioWS</implementation-class>
+    </service>
+    <service name="MermaWS">
+      <implementation-class>pe.edu.pucp.buildup.services.MermaWS</implementation-class>
+    </service>
+    <service name="OrdenInsumosWS">
+      <implementation-class>pe.edu.pucp.buildup.services.OrdenInsumosWS</implementation-class>
+    </service>
+    <service name="ProblemaWS">
+      <implementation-class>pe.edu.pucp.buildup.services.ProblemaWS</implementation-class>
+    </service>
+    <service name="SupervisorWS">
+      <implementation-class>pe.edu.pucp.buildup.services.SupervisorWS</implementation-class>
+    </service>
+    <service name="PersonaWS">
+      <implementation-class>pe.edu.pucp.buildup.services.PersonaWS</implementation-class>
+    </service>
+    <service name="ProveedorWS">
+      <implementation-class>pe.edu.pucp.buildup.services.ProveedorWS</implementation-class>
+    </service>
+    <service name="InsumoWS">
+      <implementation-class>pe.edu.pucp.buildup.services.InsumoWS</implementation-class>
+    </service>
+    <service name="IngenieroWS">
+      <implementation-class>pe.edu.pucp.buildup.services.IngenieroWS</implementation-class>
+    </service>
   </services>
   <clients/>
 </jax-ws>
