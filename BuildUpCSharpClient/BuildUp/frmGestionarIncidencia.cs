@@ -30,6 +30,17 @@ namespace BuildUp
                     btnBuscar.Enabled = true;
                     btnEliminar.Enabled = false;
                     btnActualizar.Enabled = false;
+                    txtID.Enabled = false;
+                    txtIDMaq.Enabled = false;
+                    txtNombreMaq.Enabled = false;
+                    txtProveedor.Enabled = false;
+                    txtIDIng.Text = frmLogIn.Usuario.idPersona.ToString();
+                    txtNombreIng.Text= frmLogIn.Usuario.nombres + ' ' + frmLogIn.Usuario.apellidos;
+                    txtIDIng.Enabled = false;
+                    txtNombreIng.Enabled = false;
+                    txtIDSup.Enabled = false;
+                    txtNombreSup.Enabled = false;
+
                     break;
                 case Estado.Nuevo:
                     btnNuevo.Enabled = false;

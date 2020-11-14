@@ -17,7 +17,7 @@ import pe.edu.pucp.ta.mysql.JefeAreaMySQL;
  *
  * @author Giohanny
  */
-@WebService(serviceName = "JefeArea")
+@WebService(serviceName = "JefeAreaWS")
 public class JefeAreaWS {
 
     private JefeAreaDAO daoJefeArea;

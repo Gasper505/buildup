@@ -18,8 +18,8 @@ public class MaquinariaWS {
         daoMaquinaria = new MaquinariaMySQL();
     }
 
-    @WebMethod(operationName = "insertar")
-    public int insertar(@WebParam(name = "maquinaria") Maquinaria maq) {
+    @WebMethod(operationName = "insertarMaquinaria")
+    public int insertarMaquinaria(@WebParam(name = "maquinaria") Maquinaria maq) {
         int result = 0;
         try{
             result = daoMaquinaria.insertar(maq);
@@ -29,8 +29,8 @@ public class MaquinariaWS {
         return result;
     }
     
-    @WebMethod(operationName = "eliminar")
-    public int eliminar(@WebParam(name = "idMaquinaria") int idMaq) {
+    @WebMethod(operationName = "eliminarMaquinaria")
+    public int eliminarMaquinaria(@WebParam(name = "idMaquinaria") int idMaq) {
         int result = 0;
         try{
             result = daoMaquinaria.eliminar(idMaq);

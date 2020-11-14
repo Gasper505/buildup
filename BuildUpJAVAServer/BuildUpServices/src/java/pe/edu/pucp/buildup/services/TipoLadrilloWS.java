@@ -40,8 +40,8 @@ public class TipoLadrilloWS {
         return resultado;
     }
     
-    @WebMethod(operationName = "eliminar")
-    public int eliminar(@WebParam(name = "idTipoLadrillo") int idTipoLadrillo) {
+    @WebMethod(operationName = "eliminarTipoLadrillo")
+    public int eliminarTipoLadrillo(@WebParam(name = "idTipoLadrillo") int idTipoLadrillo) {
         int resultado = 0;
         try{
             resultado = daoTipoLadrillo.eliminar(idTipoLadrillo);

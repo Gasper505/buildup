@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="aQWlQyqQXJsghCT+oLBjhTjE7WRAkXH3pcEWV8+Ii28=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="UtZ/DQx4yrpZDZxiy6OcKj+NQ8SgF4Xdd4LL4MTGE78=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="MaquinariaWSPortBinding1">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="MaquinariaWSPort1" contract="MaqWS.MaquinariaWS" bindingType="basicHttpBinding" address="http://52.207.108.70:8080/BuildUpServices/MaquinariaWS" bindingConfiguration="MaquinariaWSPortBinding1">
+    <endpoint name="MaquinariaWSPort1" contract="MaqWS.MaquinariaWS" bindingType="basicHttpBinding" address="http://localhost:8080/BuildUpServices/MaquinariaWS" bindingConfiguration="MaquinariaWSPortBinding1">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://52.207.108.70:8080/BuildUpServices/MaquinariaWS</serializedValue>
+          <serializedValue>http://localhost:8080/BuildUpServices/MaquinariaWS</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

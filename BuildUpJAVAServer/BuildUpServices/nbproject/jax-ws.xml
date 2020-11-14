@@ -1,26 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jax-ws xmlns="http://www.netbeans.org/ns/jax-ws/1">
   <services>
-    <service name="TestingWS">
-      <implementation-class>pe.edu.pucp.buildup.services.TestingWS</implementation-class>
-    </service>
-    <service name="TipoLadrilloWS">
-      <implementation-class>pe.edu.pucp.buildup.services.TipoLadrilloWS</implementation-class>
-    </service>
-    <service name="UsuarioWS">
-      <implementation-class>pe.edu.pucp.buildup.services.UsuarioWS</implementation-class>
-    </service>
-    <service name="OrdenSalidaWS">
-      <implementation-class>pe.edu.pucp.buildup.services.OrdenSalidaWS</implementation-class>
-    </service>
-    <service name="MaquinariaWS">
-      <implementation-class>pe.edu.pucp.buildup.services.MaquinariaWS</implementation-class>
-    </service>
     <service name="IncidenteMaquinariaWS">
       <implementation-class>pe.edu.pucp.buildup.services.IncidenteMaquinariaWS</implementation-class>
     </service>
     <service name="JefeAreaWS">
       <implementation-class>pe.edu.pucp.buildup.services.JefeAreaWS</implementation-class>
+    </service>
+    <service name="OrdenSalidaWS">
+      <implementation-class>pe.edu.pucp.buildup.services.OrdenSalidaWS</implementation-class>
     </service>
     <service name="RegistroMermaWS">
       <implementation-class>pe.edu.pucp.buildup.services.RegistroMermaWS</implementation-class>
@@ -40,11 +28,23 @@
     <service name="OrdenInsumosWS">
       <implementation-class>pe.edu.pucp.buildup.services.OrdenInsumosWS</implementation-class>
     </service>
+    <service name="MaquinariaWS">
+      <implementation-class>pe.edu.pucp.buildup.services.MaquinariaWS</implementation-class>
+    </service>
     <service name="ProblemaWS">
       <implementation-class>pe.edu.pucp.buildup.services.ProblemaWS</implementation-class>
     </service>
+    <service name="TestingWS">
+      <implementation-class>pe.edu.pucp.buildup.services.TestingWS</implementation-class>
+    </service>
+    <service name="TipoLadrilloWS">
+      <implementation-class>pe.edu.pucp.buildup.services.TipoLadrilloWS</implementation-class>
+    </service>
     <service name="SupervisorWS">
       <implementation-class>pe.edu.pucp.buildup.services.SupervisorWS</implementation-class>
+    </service>
+    <service name="UsuarioWS">
+      <implementation-class>pe.edu.pucp.buildup.services.UsuarioWS</implementation-class>
     </service>
     <service name="PersonaWS">
       <implementation-class>pe.edu.pucp.buildup.services.PersonaWS</implementation-class>
@@ -52,11 +52,11 @@
     <service name="ProveedorWS">
       <implementation-class>pe.edu.pucp.buildup.services.ProveedorWS</implementation-class>
     </service>
-    <service name="InsumoWS">
-      <implementation-class>pe.edu.pucp.buildup.services.InsumoWS</implementation-class>
-    </service>
     <service name="IngenieroWS">
       <implementation-class>pe.edu.pucp.buildup.services.IngenieroWS</implementation-class>
+    </service>
+    <service name="InsumoWS">
+      <implementation-class>pe.edu.pucp.buildup.services.InsumoWS</implementation-class>
     </service>
   </services>
   <clients/>

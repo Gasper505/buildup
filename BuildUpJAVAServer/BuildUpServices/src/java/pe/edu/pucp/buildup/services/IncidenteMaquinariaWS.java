@@ -17,7 +17,7 @@ import pe.edu.pucp.ta.mysql.IncidenteMaquinariaMySQL;
  *
  * @author Giohanny
  */
-@WebService(serviceName = "IncidenteMaquinaria")
+@WebService(serviceName = "IncidenteMaquinariaWS")
 public class IncidenteMaquinariaWS {
 
     private IncidenteMaquinariaDAO daoIncidenteMaquinaria;

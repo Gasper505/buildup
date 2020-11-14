@@ -53,12 +53,10 @@
             this.lblNombreSup = new System.Windows.Forms.Label();
             this.lblIDSup = new System.Windows.Forms.Label();
             this.lblFechaReg = new System.Windows.Forms.Label();
-            this.lblEstado = new System.Windows.Forms.Label();
-            this.tbSupervisor = new System.Windows.Forms.TextBox();
-            this.txtEstado = new System.Windows.Forms.TextBox();
+            this.txtNombreSup = new System.Windows.Forms.TextBox();
             this.dtpFechaRegistro = new System.Windows.Forms.DateTimePicker();
             this.txtNombreMaq = new System.Windows.Forms.TextBox();
-            this.tbProblema = new System.Windows.Forms.TextBox();
+            this.txtIDSup = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtProveedor = new System.Windows.Forms.TextBox();
@@ -89,7 +87,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(233, 32);
+            this.label1.Location = new System.Drawing.Point(233, 35);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(19, 15);
             this.label1.TabIndex = 0;
@@ -127,7 +125,7 @@
             // txtID
             // 
             this.txtID.BackColor = System.Drawing.SystemColors.Window;
-            this.txtID.Location = new System.Drawing.Point(258, 31);
+            this.txtID.Location = new System.Drawing.Point(258, 34);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(81, 20);
             this.txtID.TabIndex = 10;
@@ -300,41 +298,23 @@
             // 
             this.lblFechaReg.AutoSize = true;
             this.lblFechaReg.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaReg.Location = new System.Drawing.Point(145, 64);
+            this.lblFechaReg.Location = new System.Drawing.Point(145, 67);
             this.lblFechaReg.Name = "lblFechaReg";
             this.lblFechaReg.Size = new System.Drawing.Size(107, 15);
             this.lblFechaReg.TabIndex = 7;
             this.lblFechaReg.Text = "Fecha de Registro";
             // 
-            // lblEstado
+            // txtNombreSup
             // 
-            this.lblEstado.AutoSize = true;
-            this.lblEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstado.Location = new System.Drawing.Point(207, 99);
-            this.lblEstado.Name = "lblEstado";
-            this.lblEstado.Size = new System.Drawing.Size(45, 15);
-            this.lblEstado.TabIndex = 9;
-            this.lblEstado.Text = "Estado";
-            // 
-            // tbSupervisor
-            // 
-            this.tbSupervisor.BackColor = System.Drawing.SystemColors.Window;
-            this.tbSupervisor.Location = new System.Drawing.Point(148, 79);
-            this.tbSupervisor.Name = "tbSupervisor";
-            this.tbSupervisor.Size = new System.Drawing.Size(180, 20);
-            this.tbSupervisor.TabIndex = 11;
-            // 
-            // txtEstado
-            // 
-            this.txtEstado.BackColor = System.Drawing.SystemColors.Window;
-            this.txtEstado.Location = new System.Drawing.Point(258, 98);
-            this.txtEstado.Name = "txtEstado";
-            this.txtEstado.Size = new System.Drawing.Size(64, 20);
-            this.txtEstado.TabIndex = 18;
+            this.txtNombreSup.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNombreSup.Location = new System.Drawing.Point(148, 79);
+            this.txtNombreSup.Name = "txtNombreSup";
+            this.txtNombreSup.Size = new System.Drawing.Size(180, 20);
+            this.txtNombreSup.TabIndex = 11;
             // 
             // dtpFechaRegistro
             // 
-            this.dtpFechaRegistro.Location = new System.Drawing.Point(258, 64);
+            this.dtpFechaRegistro.Location = new System.Drawing.Point(258, 67);
             this.dtpFechaRegistro.Name = "dtpFechaRegistro";
             this.dtpFechaRegistro.Size = new System.Drawing.Size(231, 20);
             this.dtpFechaRegistro.TabIndex = 19;
@@ -347,13 +327,13 @@
             this.txtNombreMaq.Size = new System.Drawing.Size(281, 20);
             this.txtNombreMaq.TabIndex = 20;
             // 
-            // tbProblema
+            // txtIDSup
             // 
-            this.tbProblema.BackColor = System.Drawing.SystemColors.Window;
-            this.tbProblema.Location = new System.Drawing.Point(148, 40);
-            this.tbProblema.Name = "tbProblema";
-            this.tbProblema.Size = new System.Drawing.Size(88, 20);
-            this.tbProblema.TabIndex = 21;
+            this.txtIDSup.BackColor = System.Drawing.SystemColors.Window;
+            this.txtIDSup.Location = new System.Drawing.Point(148, 40);
+            this.txtIDSup.Name = "txtIDSup";
+            this.txtIDSup.Size = new System.Drawing.Size(88, 20);
+            this.txtIDSup.TabIndex = 21;
             // 
             // groupBox1
             // 
@@ -361,11 +341,9 @@
             this.groupBox1.Controls.Add(this.txtID);
             this.groupBox1.Controls.Add(this.lblFechaReg);
             this.groupBox1.Controls.Add(this.dtpFechaRegistro);
-            this.groupBox1.Controls.Add(this.lblEstado);
-            this.groupBox1.Controls.Add(this.txtEstado);
-            this.groupBox1.Location = new System.Drawing.Point(97, 49);
+            this.groupBox1.Location = new System.Drawing.Point(97, 53);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(688, 142);
+            this.groupBox1.Size = new System.Drawing.Size(688, 115);
             this.groupBox1.TabIndex = 26;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Generales";
@@ -379,7 +357,7 @@
             this.groupBox2.Controls.Add(this.btnBuscarMaquinaria);
             this.groupBox2.Controls.Add(this.lblNombreMaq);
             this.groupBox2.Controls.Add(this.txtNombreMaq);
-            this.groupBox2.Location = new System.Drawing.Point(97, 209);
+            this.groupBox2.Location = new System.Drawing.Point(97, 201);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(688, 153);
             this.groupBox2.TabIndex = 27;
@@ -435,9 +413,9 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.lblNombreSup);
-            this.groupBox3.Controls.Add(this.tbSupervisor);
+            this.groupBox3.Controls.Add(this.txtNombreSup);
             this.groupBox3.Controls.Add(this.lblIDSup);
-            this.groupBox3.Controls.Add(this.tbProblema);
+            this.groupBox3.Controls.Add(this.txtIDSup);
             this.groupBox3.Location = new System.Drawing.Point(97, 384);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(339, 148);
@@ -605,12 +583,10 @@
         private System.Windows.Forms.Label lblNombreSup;
         private System.Windows.Forms.Label lblIDSup;
         private System.Windows.Forms.Label lblFechaReg;
-        private System.Windows.Forms.Label lblEstado;
-        private System.Windows.Forms.TextBox tbSupervisor;
-        private System.Windows.Forms.TextBox txtEstado;
+        private System.Windows.Forms.TextBox txtNombreSup;
         private System.Windows.Forms.DateTimePicker dtpFechaRegistro;
         private System.Windows.Forms.TextBox txtNombreMaq;
-        private System.Windows.Forms.TextBox tbProblema;
+        private System.Windows.Forms.TextBox txtIDSup;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnBuscarMaquinaria;

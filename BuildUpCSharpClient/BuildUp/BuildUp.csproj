@@ -524,23 +524,20 @@
     <None Include="Connected Services\LineaProduccionWS\LineaProduccionWS.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\MaqWS\BuildUp.MaqWS.actualizarMaquinariaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
     <None Include="Connected Services\MaqWS\BuildUp.MaqWS.eliminarMaquinariaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\MaqWS\BuildUp.MaqWS.insertarMaquinariaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\MaqWS\BuildUp.MaqWS.listarMaquinariaResponse.datasource">
+    <None Include="Connected Services\MaqWS\BuildUp.MaqWS.listarMaquinariasConParametrosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\MaqWS\BuildUp.MaqWS.maquinaria.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\MaqWS\MaquinariaWS.wsdl" />
-    <None Include="Connected Services\MaqWS\MaquinariaWS.xsd">
+    <None Include="Connected Services\MaqWS\MaquinariaWS1.wsdl" />
+    <None Include="Connected Services\MaqWS\MaquinariaWS1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\MermaWS\BuildUp.MermaWS.actualizarMermaResponse.datasource">

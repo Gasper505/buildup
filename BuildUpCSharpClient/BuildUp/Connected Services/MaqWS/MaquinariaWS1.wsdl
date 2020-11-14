@@ -2,62 +2,43 @@
 <definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://services.buildup.pucp.edu.pe/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="MaquinariaWS" targetNamespace="http://services.buildup.pucp.edu.pe/" xmlns="http://schemas.xmlsoap.org/wsdl/">
   <types>
     <xsd:schema>
-      <xsd:import schemaLocation="http://52.207.108.70:8080/BuildUpServices/MaquinariaWS?xsd=1" namespace="http://services.buildup.pucp.edu.pe/" />
+      <xsd:import schemaLocation="http://localhost:8080/BuildUpServices/MaquinariaWS?xsd=1" namespace="http://services.buildup.pucp.edu.pe/" />
     </xsd:schema>
   </types>
-  <message name="insertarMaquinaria">
-    <part name="parameters" element="tns:insertarMaquinaria" />
-  </message>
-  <message name="insertarMaquinariaResponse">
-    <part name="parameters" element="tns:insertarMaquinariaResponse" />
-  </message>
   <message name="eliminarMaquinaria">
     <part name="parameters" element="tns:eliminarMaquinaria" />
   </message>
   <message name="eliminarMaquinariaResponse">
     <part name="parameters" element="tns:eliminarMaquinariaResponse" />
   </message>
-  <message name="actualizarMaquinaria">
-    <part name="parameters" element="tns:actualizarMaquinaria" />
+  <message name="insertarMaquinaria">
+    <part name="parameters" element="tns:insertarMaquinaria" />
   </message>
-  <message name="actualizarMaquinariaResponse">
-    <part name="parameters" element="tns:actualizarMaquinariaResponse" />
+  <message name="insertarMaquinariaResponse">
+    <part name="parameters" element="tns:insertarMaquinariaResponse" />
   </message>
-  <message name="listarMaquinaria">
-    <part name="parameters" element="tns:listarMaquinaria" />
+  <message name="listarMaquinariasConParametros">
+    <part name="parameters" element="tns:listarMaquinariasConParametros" />
   </message>
-  <message name="listarMaquinariaResponse">
-    <part name="parameters" element="tns:listarMaquinariaResponse" />
+  <message name="listarMaquinariasConParametrosResponse">
+    <part name="parameters" element="tns:listarMaquinariasConParametrosResponse" />
   </message>
   <portType name="MaquinariaWS">
-    <operation name="insertarMaquinaria">
-      <input wsam:Action="http://services.buildup.pucp.edu.pe/MaquinariaWS/insertarMaquinariaRequest" message="tns:insertarMaquinaria" />
-      <output wsam:Action="http://services.buildup.pucp.edu.pe/MaquinariaWS/insertarMaquinariaResponse" message="tns:insertarMaquinariaResponse" />
-    </operation>
     <operation name="eliminarMaquinaria">
       <input wsam:Action="http://services.buildup.pucp.edu.pe/MaquinariaWS/eliminarMaquinariaRequest" message="tns:eliminarMaquinaria" />
       <output wsam:Action="http://services.buildup.pucp.edu.pe/MaquinariaWS/eliminarMaquinariaResponse" message="tns:eliminarMaquinariaResponse" />
     </operation>
-    <operation name="actualizarMaquinaria">
-      <input wsam:Action="http://services.buildup.pucp.edu.pe/MaquinariaWS/actualizarMaquinariaRequest" message="tns:actualizarMaquinaria" />
-      <output wsam:Action="http://services.buildup.pucp.edu.pe/MaquinariaWS/actualizarMaquinariaResponse" message="tns:actualizarMaquinariaResponse" />
+    <operation name="insertarMaquinaria">
+      <input wsam:Action="http://services.buildup.pucp.edu.pe/MaquinariaWS/insertarMaquinariaRequest" message="tns:insertarMaquinaria" />
+      <output wsam:Action="http://services.buildup.pucp.edu.pe/MaquinariaWS/insertarMaquinariaResponse" message="tns:insertarMaquinariaResponse" />
     </operation>
-    <operation name="listarMaquinaria">
-      <input wsam:Action="http://services.buildup.pucp.edu.pe/MaquinariaWS/listarMaquinariaRequest" message="tns:listarMaquinaria" />
-      <output wsam:Action="http://services.buildup.pucp.edu.pe/MaquinariaWS/listarMaquinariaResponse" message="tns:listarMaquinariaResponse" />
+    <operation name="listarMaquinariasConParametros">
+      <input wsam:Action="http://services.buildup.pucp.edu.pe/MaquinariaWS/listarMaquinariasConParametrosRequest" message="tns:listarMaquinariasConParametros" />
+      <output wsam:Action="http://services.buildup.pucp.edu.pe/MaquinariaWS/listarMaquinariasConParametrosResponse" message="tns:listarMaquinariasConParametrosResponse" />
     </operation>
   </portType>
   <binding name="MaquinariaWSPortBinding" type="tns:MaquinariaWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="insertarMaquinaria">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
     <operation name="eliminarMaquinaria">
       <soap:operation soapAction="" />
       <input>
@@ -67,7 +48,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="actualizarMaquinaria">
+    <operation name="insertarMaquinaria">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -76,7 +57,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarMaquinaria">
+    <operation name="listarMaquinariasConParametros">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -88,7 +69,7 @@
   </binding>
   <service name="MaquinariaWS">
     <port name="MaquinariaWSPort" binding="tns:MaquinariaWSPortBinding">
-      <soap:address location="http://52.207.108.70:8080/BuildUpServices/MaquinariaWS" />
+      <soap:address location="http://localhost:8080/BuildUpServices/MaquinariaWS" />
     </port>
   </service>
 </definitions>
