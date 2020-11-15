@@ -61,7 +61,8 @@
             this.dataGridView1.Location = new System.Drawing.Point(52, 216);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(644, 252);
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(644, 241);
             this.dataGridView1.TabIndex = 0;
             // 
             // Column1
@@ -100,16 +101,16 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(23, 39);
+            this.label1.Location = new System.Drawing.Point(6, 43);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(133, 15);
+            this.label1.Size = new System.Drawing.Size(196, 15);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Nombre del Supervisor";
+            this.label1.Text = "Nombre del Supervisor Encargado";
             // 
             // btnSeleccionar
             // 
             this.btnSeleccionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSeleccionar.Location = new System.Drawing.Point(264, 496);
+            this.btnSeleccionar.Location = new System.Drawing.Point(261, 489);
             this.btnSeleccionar.Name = "btnSeleccionar";
             this.btnSeleccionar.Size = new System.Drawing.Size(225, 36);
             this.btnSeleccionar.TabIndex = 12;
@@ -120,7 +121,7 @@
             // btnBuscar
             // 
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(479, 58);
+            this.btnBuscar.Location = new System.Drawing.Point(481, 69);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(116, 36);
             this.btnBuscar.TabIndex = 13;
@@ -138,30 +139,30 @@
             this.gbBusqueda.Controls.Add(this.label1);
             this.gbBusqueda.Location = new System.Drawing.Point(53, 29);
             this.gbBusqueda.Name = "gbBusqueda";
-            this.gbBusqueda.Size = new System.Drawing.Size(643, 156);
+            this.gbBusqueda.Size = new System.Drawing.Size(643, 159);
             this.gbBusqueda.TabIndex = 14;
             this.gbBusqueda.TabStop = false;
             this.gbBusqueda.Text = "Parámetros de Búsqueda";
             // 
             // txtNombreSup
             // 
-            this.txtNombreSup.Location = new System.Drawing.Point(162, 38);
+            this.txtNombreSup.Location = new System.Drawing.Point(208, 42);
             this.txtNombreSup.Name = "txtNombreSup";
-            this.txtNombreSup.Size = new System.Drawing.Size(239, 20);
+            this.txtNombreSup.Size = new System.Drawing.Size(238, 20);
             this.txtNombreSup.TabIndex = 18;
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(162, 98);
+            this.dateTimePicker2.Location = new System.Drawing.Point(208, 110);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(254, 20);
+            this.dateTimePicker2.Size = new System.Drawing.Size(238, 20);
             this.dateTimePicker2.TabIndex = 17;
             // 
             // lblHasta
             // 
             this.lblHasta.AutoSize = true;
             this.lblHasta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHasta.Location = new System.Drawing.Point(117, 102);
+            this.lblHasta.Location = new System.Drawing.Point(163, 110);
             this.lblHasta.Name = "lblHasta";
             this.lblHasta.Size = new System.Drawing.Size(39, 15);
             this.lblHasta.TabIndex = 16;
@@ -171,7 +172,7 @@
             // 
             this.lblDesde.AutoSize = true;
             this.lblDesde.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDesde.Location = new System.Drawing.Point(113, 72);
+            this.lblDesde.Location = new System.Drawing.Point(159, 75);
             this.lblDesde.Name = "lblDesde";
             this.lblDesde.Size = new System.Drawing.Size(43, 15);
             this.lblDesde.TabIndex = 15;
@@ -179,9 +180,9 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(162, 68);
+            this.dateTimePicker1.Location = new System.Drawing.Point(208, 75);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(254, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(238, 20);
             this.dateTimePicker1.TabIndex = 14;
             // 
             // frmBuscarRegistroMerma

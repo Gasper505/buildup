@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblBusqFechaRegOrden = new System.Windows.Forms.Label();
-            this.lblBusqIdOrden = new System.Windows.Forms.Label();
-            this.dtpBusqFechaRegOrden = new System.Windows.Forms.DateTimePicker();
             this.gbParametrosBusqueda = new System.Windows.Forms.GroupBox();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.lblHasta = new System.Windows.Forms.Label();
+            this.lblDesde = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.txtBusqIdOrdenInsumos = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.IDOrdenInsumos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FechaReg = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,38 +47,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // lblBusqFechaRegOrden
-            // 
-            this.lblBusqFechaRegOrden.AutoSize = true;
-            this.lblBusqFechaRegOrden.Location = new System.Drawing.Point(95, 69);
-            this.lblBusqFechaRegOrden.Name = "lblBusqFechaRegOrden";
-            this.lblBusqFechaRegOrden.Size = new System.Drawing.Size(94, 13);
-            this.lblBusqFechaRegOrden.TabIndex = 0;
-            this.lblBusqFechaRegOrden.Text = "Fecha de Registro";
-            // 
-            // lblBusqIdOrden
-            // 
-            this.lblBusqIdOrden.AutoSize = true;
-            this.lblBusqIdOrden.Location = new System.Drawing.Point(171, 34);
-            this.lblBusqIdOrden.Name = "lblBusqIdOrden";
-            this.lblBusqIdOrden.Size = new System.Drawing.Size(18, 13);
-            this.lblBusqIdOrden.TabIndex = 1;
-            this.lblBusqIdOrden.Text = "ID";
-            // 
-            // dtpBusqFechaRegOrden
-            // 
-            this.dtpBusqFechaRegOrden.Location = new System.Drawing.Point(195, 69);
-            this.dtpBusqFechaRegOrden.Name = "dtpBusqFechaRegOrden";
-            this.dtpBusqFechaRegOrden.Size = new System.Drawing.Size(240, 20);
-            this.dtpBusqFechaRegOrden.TabIndex = 2;
-            // 
             // gbParametrosBusqueda
             // 
+            this.gbParametrosBusqueda.Controls.Add(this.dateTimePicker2);
+            this.gbParametrosBusqueda.Controls.Add(this.lblHasta);
+            this.gbParametrosBusqueda.Controls.Add(this.lblDesde);
+            this.gbParametrosBusqueda.Controls.Add(this.dateTimePicker1);
             this.gbParametrosBusqueda.Controls.Add(this.btnBuscar);
-            this.gbParametrosBusqueda.Controls.Add(this.txtBusqIdOrdenInsumos);
-            this.gbParametrosBusqueda.Controls.Add(this.dtpBusqFechaRegOrden);
-            this.gbParametrosBusqueda.Controls.Add(this.lblBusqIdOrden);
-            this.gbParametrosBusqueda.Controls.Add(this.lblBusqFechaRegOrden);
             this.gbParametrosBusqueda.Location = new System.Drawing.Point(42, 28);
             this.gbParametrosBusqueda.Name = "gbParametrosBusqueda";
             this.gbParametrosBusqueda.Size = new System.Drawing.Size(700, 108);
@@ -86,22 +61,49 @@
             this.gbParametrosBusqueda.TabStop = false;
             this.gbParametrosBusqueda.Text = "Parámetros de Búsqueda";
             // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Location = new System.Drawing.Point(160, 67);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(254, 20);
+            this.dateTimePicker2.TabIndex = 21;
+            // 
+            // lblHasta
+            // 
+            this.lblHasta.AutoSize = true;
+            this.lblHasta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHasta.Location = new System.Drawing.Point(115, 71);
+            this.lblHasta.Name = "lblHasta";
+            this.lblHasta.Size = new System.Drawing.Size(39, 15);
+            this.lblHasta.TabIndex = 20;
+            this.lblHasta.Text = "Hasta";
+            // 
+            // lblDesde
+            // 
+            this.lblDesde.AutoSize = true;
+            this.lblDesde.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDesde.Location = new System.Drawing.Point(111, 41);
+            this.lblDesde.Name = "lblDesde";
+            this.lblDesde.Size = new System.Drawing.Size(43, 15);
+            this.lblDesde.TabIndex = 19;
+            this.lblDesde.Text = "Desde";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(160, 37);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(254, 20);
+            this.dateTimePicker1.TabIndex = 18;
+            // 
             // btnBuscar
             // 
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(506, 34);
+            this.btnBuscar.Location = new System.Drawing.Point(487, 37);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(120, 36);
             this.btnBuscar.TabIndex = 6;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
-            // 
-            // txtBusqIdOrdenInsumos
-            // 
-            this.txtBusqIdOrdenInsumos.Location = new System.Drawing.Point(195, 31);
-            this.txtBusqIdOrdenInsumos.Name = "txtBusqIdOrdenInsumos";
-            this.txtBusqIdOrdenInsumos.Size = new System.Drawing.Size(84, 20);
-            this.txtBusqIdOrdenInsumos.TabIndex = 3;
             // 
             // dataGridView1
             // 
@@ -119,6 +121,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(42, 153);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(700, 264);
             this.dataGridView1.TabIndex = 4;
             // 
@@ -194,12 +197,7 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblBusqFechaRegOrden;
-        private System.Windows.Forms.Label lblBusqIdOrden;
-        private System.Windows.Forms.DateTimePicker dtpBusqFechaRegOrden;
         private System.Windows.Forms.GroupBox gbParametrosBusqueda;
-        private System.Windows.Forms.TextBox txtBusqIdOrdenInsumos;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn IDOrdenInsumos;
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaReg;
@@ -210,5 +208,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.Button btnSeleccionar;
         private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.Label lblHasta;
+        private System.Windows.Forms.Label lblDesde;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

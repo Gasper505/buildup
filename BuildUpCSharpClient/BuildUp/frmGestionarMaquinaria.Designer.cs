@@ -54,13 +54,13 @@
             this.txtIdProveedor = new System.Windows.Forms.TextBox();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.btnNuevo = new System.Windows.Forms.ToolStripButton();
             this.btnGuardar = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.btnBuscar = new System.Windows.Forms.ToolStripButton();
             this.btnActualizar = new System.Windows.Forms.ToolStripButton();
             this.btnEliminar = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.btnCancelar = new System.Windows.Forms.ToolStripButton();
             this.btnRegresar = new System.Windows.Forms.ToolStripButton();
             this.gbDatosMaquinaria.SuspendLayout();
@@ -77,7 +77,7 @@
             this.gbDatosMaquinaria.Controls.Add(this.dtpFechaGarantia);
             this.gbDatosMaquinaria.Controls.Add(this.lblNombreMaquinaria);
             this.gbDatosMaquinaria.Controls.Add(this.lblIdMaquinaria);
-            this.gbDatosMaquinaria.Location = new System.Drawing.Point(101, 57);
+            this.gbDatosMaquinaria.Location = new System.Drawing.Point(87, 61);
             this.gbDatosMaquinaria.Name = "gbDatosMaquinaria";
             this.gbDatosMaquinaria.Size = new System.Drawing.Size(502, 143);
             this.gbDatosMaquinaria.TabIndex = 13;
@@ -142,7 +142,7 @@
             this.gbDatosLinea.Controls.Add(this.txtIdLinea);
             this.gbDatosLinea.Controls.Add(this.lblNombreInsumo);
             this.gbDatosLinea.Controls.Add(this.lblIdInsumo);
-            this.gbDatosLinea.Location = new System.Drawing.Point(101, 405);
+            this.gbDatosLinea.Location = new System.Drawing.Point(87, 409);
             this.gbDatosLinea.Name = "gbDatosLinea";
             this.gbDatosLinea.Size = new System.Drawing.Size(502, 105);
             this.gbDatosLinea.TabIndex = 12;
@@ -158,6 +158,7 @@
             this.btnBuscarLinea.TabIndex = 10;
             this.btnBuscarLinea.Text = "Buscar Línea...";
             this.btnBuscarLinea.UseVisualStyleBackColor = true;
+            this.btnBuscarLinea.Click += new System.EventHandler(this.btnBuscarLinea_Click);
             // 
             // txtNombreLinea
             // 
@@ -204,7 +205,7 @@
             this.gbDatosProveedor.Controls.Add(this.lblRazonSocial);
             this.gbDatosProveedor.Controls.Add(this.lblIdProveedor);
             this.gbDatosProveedor.Controls.Add(this.txtIdProveedor);
-            this.gbDatosProveedor.Location = new System.Drawing.Point(101, 216);
+            this.gbDatosProveedor.Location = new System.Drawing.Point(87, 220);
             this.gbDatosProveedor.Name = "gbDatosProveedor";
             this.gbDatosProveedor.Size = new System.Drawing.Size(502, 171);
             this.gbDatosProveedor.TabIndex = 11;
@@ -307,7 +308,7 @@
             this.btnRegresar});
             this.toolStrip2.Location = new System.Drawing.Point(0, 0);
             this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(718, 25);
+            this.toolStrip2.Size = new System.Drawing.Size(672, 25);
             this.toolStrip2.TabIndex = 26;
             this.toolStrip2.Text = "toolStrip2";
             // 
@@ -315,16 +316,6 @@
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
-            // 
-            // toolStripSeparator4
-            // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 25);
             // 
             // btnNuevo
             // 
@@ -343,6 +334,11 @@
             this.btnGuardar.Size = new System.Drawing.Size(76, 22);
             this.btnGuardar.Text = "&Guardar";
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardarMaquinaria_Click);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
             // 
             // btnBuscar
             // 
@@ -371,6 +367,11 @@
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 25);
+            // 
             // btnCancelar
             // 
             this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
@@ -394,7 +395,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(718, 572);
+            this.ClientSize = new System.Drawing.Size(672, 562);
             this.ControlBox = false;
             this.Controls.Add(this.toolStrip2);
             this.Controls.Add(this.gbDatosMaquinaria);

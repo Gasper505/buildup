@@ -62,11 +62,19 @@
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.btnCancelar = new System.Windows.Forms.ToolStripButton();
             this.btnRegresar = new System.Windows.Forms.ToolStripButton();
+            this.pnlAceptacionOrden = new System.Windows.Forms.Panel();
+            this.picCheck = new System.Windows.Forms.PictureBox();
+            this.btnRechazarOrden = new System.Windows.Forms.Button();
+            this.btnAceptarOrden = new System.Windows.Forms.Button();
+            this.picEquis = new System.Windows.Forms.PictureBox();
             this.gbDatosOrdenInsumos.SuspendLayout();
             this.gbDatosInsumo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.gbDatosOperario.SuspendLayout();
             this.toolStrip2.SuspendLayout();
+            this.pnlAceptacionOrden.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picCheck)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picEquis)).BeginInit();
             this.SuspendLayout();
             // 
             // dtpFechaActual
@@ -109,7 +117,7 @@
             this.gbDatosOrdenInsumos.Controls.Add(this.lblIdOrdenInsumos);
             this.gbDatosOrdenInsumos.Controls.Add(this.txtIdOrdenInsumos);
             this.gbDatosOrdenInsumos.Controls.Add(this.dtpFechaActual);
-            this.gbDatosOrdenInsumos.Location = new System.Drawing.Point(93, 206);
+            this.gbDatosOrdenInsumos.Location = new System.Drawing.Point(90, 206);
             this.gbDatosOrdenInsumos.Name = "gbDatosOrdenInsumos";
             this.gbDatosOrdenInsumos.Size = new System.Drawing.Size(502, 106);
             this.gbDatosOrdenInsumos.TabIndex = 5;
@@ -127,7 +135,7 @@
             this.gbDatosInsumo.Controls.Add(this.txtIdInsumo);
             this.gbDatosInsumo.Controls.Add(this.lblNombreInsumo);
             this.gbDatosInsumo.Controls.Add(this.lblIdInsumo);
-            this.gbDatosInsumo.Location = new System.Drawing.Point(93, 333);
+            this.gbDatosInsumo.Location = new System.Drawing.Point(90, 331);
             this.gbDatosInsumo.Name = "gbDatosInsumo";
             this.gbDatosInsumo.Size = new System.Drawing.Size(502, 172);
             this.gbDatosInsumo.TabIndex = 6;
@@ -221,7 +229,7 @@
             this.gbDatosOperario.Controls.Add(this.txtIdOperario);
             this.gbDatosOperario.Controls.Add(this.lblNombresOperario);
             this.gbDatosOperario.Controls.Add(this.lblIdOperario);
-            this.gbDatosOperario.Location = new System.Drawing.Point(93, 53);
+            this.gbDatosOperario.Location = new System.Drawing.Point(90, 53);
             this.gbDatosOperario.Name = "gbDatosOperario";
             this.gbDatosOperario.Size = new System.Drawing.Size(502, 132);
             this.gbDatosOperario.TabIndex = 10;
@@ -296,76 +304,82 @@
             this.btnRegresar});
             this.toolStrip2.Location = new System.Drawing.Point(0, 0);
             this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(694, 25);
+            this.toolStrip2.Size = new System.Drawing.Size(682, 27);
             this.toolStrip2.TabIndex = 27;
             this.toolStrip2.Text = "toolStrip2";
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
             // btnNuevo
             // 
+            this.btnNuevo.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevo.Image = global::BuildUp.Properties.Resources.new_file_icon_4;
             this.btnNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(66, 22);
+            this.btnNuevo.Size = new System.Drawing.Size(72, 24);
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevaOrdenInsumos_Click);
             // 
             // btnGuardar
             // 
+            this.btnGuardar.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
             this.btnGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(76, 22);
+            this.btnGuardar.Size = new System.Drawing.Size(82, 24);
             this.btnGuardar.Text = "&Guardar";
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardarOrdenInsumos_Click);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 27);
             // 
             // btnBuscar
             // 
+            this.btnBuscar.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
             this.btnBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(66, 22);
+            this.btnBuscar.Size = new System.Drawing.Size(72, 24);
             this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscarInsumo_Click);
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscarOrdenInsumos_Click);
             // 
             // btnActualizar
             // 
+            this.btnActualizar.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActualizar.Image = ((System.Drawing.Image)(resources.GetObject("btnActualizar.Image")));
             this.btnActualizar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(84, 22);
+            this.btnActualizar.Size = new System.Drawing.Size(95, 24);
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // btnEliminar
             // 
+            this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
             this.btnEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(74, 22);
+            this.btnEliminar.Size = new System.Drawing.Size(83, 24);
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 25);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 27);
             // 
             // btnCancelar
             // 
+            this.btnCancelar.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
             this.btnCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(135, 22);
+            this.btnCancelar.Size = new System.Drawing.Size(151, 24);
             this.btnCancelar.Text = "Limpiar y Cancelar";
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
@@ -375,17 +389,81 @@
             this.btnRegresar.Image = ((System.Drawing.Image)(resources.GetObject("btnRegresar.Image")));
             this.btnRegresar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Size = new System.Drawing.Size(81, 22);
+            this.btnRegresar.Size = new System.Drawing.Size(81, 24);
             this.btnRegresar.Text = "Regresar";
             this.btnRegresar.Click += new System.EventHandler(this.btnVolver_Click);
+            // 
+            // pnlAceptacionOrden
+            // 
+            this.pnlAceptacionOrden.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.pnlAceptacionOrden.Controls.Add(this.picCheck);
+            this.pnlAceptacionOrden.Controls.Add(this.btnRechazarOrden);
+            this.pnlAceptacionOrden.Controls.Add(this.btnAceptarOrden);
+            this.pnlAceptacionOrden.Controls.Add(this.picEquis);
+            this.pnlAceptacionOrden.Location = new System.Drawing.Point(160, 522);
+            this.pnlAceptacionOrden.Name = "pnlAceptacionOrden";
+            this.pnlAceptacionOrden.Size = new System.Drawing.Size(360, 75);
+            this.pnlAceptacionOrden.TabIndex = 41;
+            this.pnlAceptacionOrden.Visible = false;
+            // 
+            // picCheck
+            // 
+            this.picCheck.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picCheck.BackgroundImage")));
+            this.picCheck.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.picCheck.Location = new System.Drawing.Point(300, 19);
+            this.picCheck.Name = "picCheck";
+            this.picCheck.Size = new System.Drawing.Size(37, 36);
+            this.picCheck.TabIndex = 43;
+            this.picCheck.TabStop = false;
+            // 
+            // btnRechazarOrden
+            // 
+            this.btnRechazarOrden.BackColor = System.Drawing.SystemColors.Menu;
+            this.btnRechazarOrden.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnRechazarOrden.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRechazarOrden.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRechazarOrden.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRechazarOrden.Location = new System.Drawing.Point(26, 19);
+            this.btnRechazarOrden.Name = "btnRechazarOrden";
+            this.btnRechazarOrden.Size = new System.Drawing.Size(82, 36);
+            this.btnRechazarOrden.TabIndex = 0;
+            this.btnRechazarOrden.Text = "Rechazar";
+            this.btnRechazarOrden.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.btnRechazarOrden.UseVisualStyleBackColor = false;
+            this.btnRechazarOrden.Click += new System.EventHandler(this.btnRechazarOrden_Click);
+            // 
+            // btnAceptarOrden
+            // 
+            this.btnAceptarOrden.BackColor = System.Drawing.SystemColors.Menu;
+            this.btnAceptarOrden.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnAceptarOrden.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAceptarOrden.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAceptarOrden.Location = new System.Drawing.Point(213, 19);
+            this.btnAceptarOrden.Name = "btnAceptarOrden";
+            this.btnAceptarOrden.Size = new System.Drawing.Size(82, 36);
+            this.btnAceptarOrden.TabIndex = 1;
+            this.btnAceptarOrden.Text = "Aceptar";
+            this.btnAceptarOrden.UseVisualStyleBackColor = false;
+            this.btnAceptarOrden.Click += new System.EventHandler(this.btnAceptarOrden_Click);
+            // 
+            // picEquis
+            // 
+            this.picEquis.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picEquis.BackgroundImage")));
+            this.picEquis.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.picEquis.Location = new System.Drawing.Point(114, 19);
+            this.picEquis.Name = "picEquis";
+            this.picEquis.Size = new System.Drawing.Size(37, 36);
+            this.picEquis.TabIndex = 42;
+            this.picEquis.TabStop = false;
             // 
             // frmGestionarOrdenInsumos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(694, 545);
+            this.ClientSize = new System.Drawing.Size(682, 619);
             this.ControlBox = false;
+            this.Controls.Add(this.pnlAceptacionOrden);
             this.Controls.Add(this.toolStrip2);
             this.Controls.Add(this.gbDatosOperario);
             this.Controls.Add(this.gbDatosInsumo);
@@ -402,6 +480,9 @@
             this.gbDatosOperario.PerformLayout();
             this.toolStrip2.ResumeLayout(false);
             this.toolStrip2.PerformLayout();
+            this.pnlAceptacionOrden.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picCheck)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picEquis)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -437,9 +518,14 @@
         private System.Windows.Forms.ToolStripButton btnActualizar;
         private System.Windows.Forms.ToolStripButton btnEliminar;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
-        private System.Windows.Forms.ToolStripButton btnCancelar;
         private System.Windows.Forms.ToolStripButton btnRegresar;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Label lblCantidad;
+        private System.Windows.Forms.Panel pnlAceptacionOrden;
+        private System.Windows.Forms.PictureBox picEquis;
+        private System.Windows.Forms.Button btnAceptarOrden;
+        private System.Windows.Forms.Button btnRechazarOrden;
+        private System.Windows.Forms.PictureBox picCheck;
+        private System.Windows.Forms.ToolStripButton btnCancelar;
     }
 }

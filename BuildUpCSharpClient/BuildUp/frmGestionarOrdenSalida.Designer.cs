@@ -50,6 +50,9 @@
             this.btnRemover = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.dgvLotes = new System.Windows.Forms.DataGridView();
+            this.NumeroLote = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NombreTipoLadrillo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CantidadEnElLote = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.btnNuevo = new System.Windows.Forms.ToolStripButton();
@@ -61,9 +64,6 @@
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.btnCancelar = new System.Windows.Forms.ToolStripButton();
             this.btnRegresar = new System.Windows.Forms.ToolStripButton();
-            this.NumeroLote = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreTipoLadrillo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CantidadEnElLote = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.numNroAproxLadrillos)).BeginInit();
             this.gbDatosOrden.SuspendLayout();
             this.gbDatosOperario.SuspendLayout();
@@ -123,7 +123,7 @@
             // 
             this.dtpFechaRegistro.Location = new System.Drawing.Point(273, 51);
             this.dtpFechaRegistro.Name = "dtpFechaRegistro";
-            this.dtpFechaRegistro.Size = new System.Drawing.Size(182, 20);
+            this.dtpFechaRegistro.Size = new System.Drawing.Size(205, 20);
             this.dtpFechaRegistro.TabIndex = 28;
             // 
             // numNroAproxLadrillos
@@ -157,7 +157,7 @@
             this.gbDatosOrden.Controls.Add(this.lblIDOrden);
             this.gbDatosOrden.Controls.Add(this.lblFechaRegistro);
             this.gbDatosOrden.Controls.Add(this.dtpFechaRegistro);
-            this.gbDatosOrden.Location = new System.Drawing.Point(66, 46);
+            this.gbDatosOrden.Location = new System.Drawing.Point(68, 63);
             this.gbDatosOrden.Name = "gbDatosOrden";
             this.gbDatosOrden.Size = new System.Drawing.Size(653, 92);
             this.gbDatosOrden.TabIndex = 35;
@@ -172,7 +172,7 @@
             this.gbDatosOperario.Controls.Add(this.label1);
             this.gbDatosOperario.Controls.Add(this.txtNombres);
             this.gbDatosOperario.Controls.Add(this.lblNombreOperario);
-            this.gbDatosOperario.Location = new System.Drawing.Point(66, 153);
+            this.gbDatosOperario.Location = new System.Drawing.Point(68, 170);
             this.gbDatosOperario.Name = "gbDatosOperario";
             this.gbDatosOperario.Size = new System.Drawing.Size(653, 123);
             this.gbDatosOperario.TabIndex = 36;
@@ -229,7 +229,7 @@
             this.gbLotesSalientes.Controls.Add(this.lblNombreTipoLadrillo);
             this.gbLotesSalientes.Controls.Add(this.numNroAproxLadrillos);
             this.gbLotesSalientes.Controls.Add(this.lblNroLotes);
-            this.gbLotesSalientes.Location = new System.Drawing.Point(66, 294);
+            this.gbLotesSalientes.Location = new System.Drawing.Point(68, 311);
             this.gbLotesSalientes.Name = "gbLotesSalientes";
             this.gbLotesSalientes.Size = new System.Drawing.Size(653, 302);
             this.gbLotesSalientes.TabIndex = 38;
@@ -273,6 +273,28 @@
             this.dgvLotes.TabIndex = 34;
             this.dgvLotes.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvLotes_CellFormatting);
             // 
+            // NumeroLote
+            // 
+            this.NumeroLote.DataPropertyName = "IdLineaOrdenSalida";
+            this.NumeroLote.HeaderText = "Nro. Lote";
+            this.NumeroLote.Name = "NumeroLote";
+            this.NumeroLote.ReadOnly = true;
+            // 
+            // NombreTipoLadrillo
+            // 
+            this.NombreTipoLadrillo.HeaderText = "Nombre Tipo Ladrillo";
+            this.NombreTipoLadrillo.Name = "NombreTipoLadrillo";
+            this.NombreTipoLadrillo.ReadOnly = true;
+            this.NombreTipoLadrillo.Width = 300;
+            // 
+            // CantidadEnElLote
+            // 
+            this.CantidadEnElLote.DataPropertyName = "Cantidad";
+            this.CantidadEnElLote.HeaderText = "Cantidad en el Lote";
+            this.CantidadEnElLote.Name = "CantidadEnElLote";
+            this.CantidadEnElLote.ReadOnly = true;
+            this.CantidadEnElLote.Width = 150;
+            // 
             // toolStrip2
             // 
             this.toolStrip2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -290,7 +312,7 @@
             this.btnRegresar});
             this.toolStrip2.Location = new System.Drawing.Point(0, 0);
             this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(784, 25);
+            this.toolStrip2.Size = new System.Drawing.Size(789, 25);
             this.toolStrip2.TabIndex = 39;
             this.toolStrip2.Text = "toolStrip2";
             // 
@@ -373,33 +395,11 @@
             this.btnRegresar.Text = "Regresar";
             this.btnRegresar.Click += new System.EventHandler(this.btnVolver_Click);
             // 
-            // NumeroLote
-            // 
-            this.NumeroLote.DataPropertyName = "IdLineaOrdenSalida";
-            this.NumeroLote.HeaderText = "Nro. Lote";
-            this.NumeroLote.Name = "NumeroLote";
-            this.NumeroLote.ReadOnly = true;
-            // 
-            // NombreTipoLadrillo
-            // 
-            this.NombreTipoLadrillo.HeaderText = "Nombre Tipo Ladrillo";
-            this.NombreTipoLadrillo.Name = "NombreTipoLadrillo";
-            this.NombreTipoLadrillo.ReadOnly = true;
-            this.NombreTipoLadrillo.Width = 300;
-            // 
-            // CantidadEnElLote
-            // 
-            this.CantidadEnElLote.DataPropertyName = "Cantidad";
-            this.CantidadEnElLote.HeaderText = "Cantidad en el Lote";
-            this.CantidadEnElLote.Name = "CantidadEnElLote";
-            this.CantidadEnElLote.ReadOnly = true;
-            this.CantidadEnElLote.Width = 150;
-            // 
             // frmGestionarOrdenSalida
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 622);
+            this.ClientSize = new System.Drawing.Size(789, 641);
             this.ControlBox = false;
             this.Controls.Add(this.toolStrip2);
             this.Controls.Add(this.gbLotesSalientes);

@@ -30,10 +30,13 @@ namespace BuildUp
                     btnBuscar.Enabled = true;
                     btnEliminar.Enabled = false;
                     btnActualizar.Enabled = false;
+                    btnAgregar.Enabled = false;
+                    btnRemover.Enabled = false;
                     txtIDPlan.Enabled = false;
-                    txtCantidad.Enabled = false;
-                    cboTipoLadrillo.Enabled = false;
-                    dtpFecha.Enabled = false;
+                    txtAnho.Enabled = false;
+                    cboNombreTipoLadrillo.Enabled = false;
+                    dgvAsignacion.Enabled = false;
+                    numNroAproxLadrillos.Enabled = false;
                     break;
                 case Estado.Nuevo:
                     btnNuevo.Enabled = false;
@@ -42,10 +45,13 @@ namespace BuildUp
                     btnBuscar.Enabled = false;
                     btnEliminar.Enabled = false;
                     btnActualizar.Enabled = false;
+                    btnAgregar.Enabled = true;
+                    btnRemover.Enabled = true;
                     txtIDPlan.Enabled = false;
-                    txtCantidad.Enabled = true;
-                    cboTipoLadrillo.Enabled = true;
-                    dtpFecha.Enabled = true;
+                    txtAnho.Enabled = true;
+                    cboNombreTipoLadrillo.Enabled = true;
+                    dgvAsignacion.Enabled = true;
+                    numNroAproxLadrillos.Enabled = true;
                     break;
                 case Estado.Modificacion:
                     btnNuevo.Enabled = false;
@@ -54,10 +60,13 @@ namespace BuildUp
                     btnBuscar.Enabled = true;
                     btnEliminar.Enabled = true;
                     btnActualizar.Enabled = true;
+                    btnAgregar.Enabled = true;
+                    btnRemover.Enabled = true;
                     txtIDPlan.Enabled = false;
-                    txtCantidad.Enabled = true;
-                    cboTipoLadrillo.Enabled = true;
-                    dtpFecha.Enabled = true;
+                    txtAnho.Enabled = true;
+                    cboNombreTipoLadrillo.Enabled = true;
+                    dgvAsignacion.Enabled = true;
+                    numNroAproxLadrillos.Enabled = true;
                     break;
             }
         }
@@ -75,8 +84,12 @@ namespace BuildUp
 
         private void btnHistorial_Click(object sender, EventArgs e)
         {
-            frmBuscarPlanProduccion formBuscarPlan = new frmBuscarPlanProduccion();
-            formBuscarPlan.ShowDialog();
+            frmBuscarPlanProduccion formBuscarPlanProduccion = new frmBuscarPlanProduccion();
+            if (formBuscarPlanProduccion.ShowDialog() == DialogResult.OK)
+            {
+                //...
+            }
+            EstablecerEstadoComponentes(Estado.Modificacion);
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
@@ -96,6 +109,10 @@ namespace BuildUp
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
+            txtIDPlan.Text = "";
+            txtAnho.Text = "";
+            cboNombreTipoLadrillo.Text = "";
+            numNroAproxLadrillos.Text = "";
             EstablecerEstadoComponentes(Estado.Inicial);
         }
     }

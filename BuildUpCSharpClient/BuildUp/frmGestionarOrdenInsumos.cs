@@ -12,10 +12,33 @@ namespace BuildUp
 {
     public partial class frmGestionarOrdenInsumos : Form
     {
+
+        OrdenInsumosWS.OrdenInsumosWSClient daoOrdenInsumos;
+        OrdenInsumosWS.ordenInsumos ordenInsumos;
+
+
         public frmGestionarOrdenInsumos()
         {
             InitializeComponent();
             EstablecerEstadoComponentes(Estado.Inicial);
+
+            daoOrdenInsumos = new OrdenInsumosWS.OrdenInsumosWSClient();
+            ordenInsumos = new OrdenInsumosWS.ordenInsumos();
+
+            if (frmLogIn.Usuario.rol == "Jefe"
+                || frmLogIn.Usuario.rol == "JEFE"
+                || frmLogIn.Usuario.rol == "Jefe de Área"
+                || frmLogIn.Usuario.rol == "Jefe de Area"
+                || frmLogIn.Usuario.rol == "JEFE DE AREA"
+                || frmLogIn.Usuario.rol == "JEFE DE ÁREA")
+            {
+                btnActualizar.Visible = false;
+                btnNuevo.Visible = false;
+                btnGuardar.Visible = false;
+                btnEliminar.Visible = false;
+                btnCancelar.Visible = false;
+                pnlAceptacionOrden.Visible = true;
+            }
         }
 
         private void EstablecerEstadoComponentes(Estado estado)
@@ -38,6 +61,9 @@ namespace BuildUp
                     txtUnidadMedida.Enabled = false;
                     dtpFechaActual.Enabled = false;
                     btnBuscarInsumo.Enabled = false;
+                    numericUpDown1.Enabled = false;
+                    btnAceptarOrden.Enabled = false;
+                    btnRechazarOrden.Enabled = false;
                     break;
                 case Estado.Nuevo:
                     btnNuevo.Enabled = false;
@@ -55,23 +81,58 @@ namespace BuildUp
                     txtUnidadMedida.Enabled = false;
                     dtpFechaActual.Enabled = true;
                     btnBuscarInsumo.Enabled = true;
+                    numericUpDown1.Enabled = true;
+                    btnAceptarOrden.Enabled = true;
+                    btnRechazarOrden.Enabled = true;
                     break;
                 case Estado.Modificacion:
-                    btnNuevo.Enabled = false;
-                    btnGuardar.Enabled = false;
-                    btnCancelar.Enabled = true;
-                    btnBuscar.Enabled = true;
-                    btnEliminar.Enabled = true;
-                    btnActualizar.Enabled = true;
-                    txtApellidosOperario.Enabled = true;
-                    txtIdOperario.Enabled = false;
-                    txtIdInsumo.Enabled = false;
-                    txtIdOrdenInsumos.Enabled = false;
-                    txtNombresOperario.Enabled = true;
-                    txtNombreInsumo.Enabled = true;
-                    txtUnidadMedida.Enabled = false;
-                    dtpFechaActual.Enabled = true;
-                    btnBuscarInsumo.Enabled = true;
+                    if (frmLogIn.Usuario.rol == "Jefe"
+                || frmLogIn.Usuario.rol == "JEFE"
+                || frmLogIn.Usuario.rol == "Jefe de Área"
+                || frmLogIn.Usuario.rol == "Jefe de Area"
+                || frmLogIn.Usuario.rol == "JEFE DE AREA"
+                || frmLogIn.Usuario.rol == "JEFE DE ÁREA")
+                    {
+                        btnNuevo.Enabled = true;
+                        btnGuardar.Enabled = false;
+                        btnCancelar.Enabled = false;
+                        btnBuscar.Enabled = true;
+                        btnEliminar.Enabled = false;
+                        btnActualizar.Enabled = false;
+                        txtApellidosOperario.Enabled = false;
+                        txtIdOperario.Enabled = false;
+                        txtIdInsumo.Enabled = false;
+                        txtIdOrdenInsumos.Enabled = false;
+                        txtNombresOperario.Enabled = false;
+                        txtNombreInsumo.Enabled = false;
+                        txtUnidadMedida.Enabled = false;
+                        dtpFechaActual.Enabled = false;
+                        btnBuscarInsumo.Enabled = false;
+                        numericUpDown1.Enabled = false;
+                        btnAceptarOrden.Enabled = true;
+                        btnRechazarOrden.Enabled = true;
+                    }
+                    else
+                    {
+                        btnNuevo.Enabled = false;
+                        btnGuardar.Enabled = false;
+                        btnCancelar.Enabled = true;
+                        btnBuscar.Enabled = true;
+                        btnEliminar.Enabled = true;
+                        btnActualizar.Enabled = true;
+                        txtApellidosOperario.Enabled = true;
+                        txtIdOperario.Enabled = false;
+                        txtIdInsumo.Enabled = false;
+                        txtIdOrdenInsumos.Enabled = false;
+                        txtNombresOperario.Enabled = true;
+                        txtNombreInsumo.Enabled = true;
+                        txtUnidadMedida.Enabled = false;
+                        dtpFechaActual.Enabled = true;
+                        btnBuscarInsumo.Enabled = true;
+                        numericUpDown1.Enabled = true;
+                        btnAceptarOrden.Enabled = true;
+                        btnRechazarOrden.Enabled = true;
+                    }
                     break;
 
             }
@@ -132,6 +193,30 @@ namespace BuildUp
         private void btnEliminar_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnRechazarOrden_Click(object sender, EventArgs e)
+        {
+            if(!(txtIdOrdenInsumos.Text == ""))
+            {
+
+            }
+            else
+            {
+                MessageBox.Show("No se ha seleccionado una Orden de Insumos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnAceptarOrden_Click(object sender, EventArgs e)
+        {
+            if (!(txtIdOrdenInsumos.Text == ""))
+            {
+
+            }
+            else
+            {
+                MessageBox.Show("No se ha seleccionado una Orden de Insumos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

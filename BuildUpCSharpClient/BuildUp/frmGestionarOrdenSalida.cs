@@ -14,17 +14,31 @@ namespace BuildUp
     {
 
         OSalidaWS.OrdenSalidaWSClient daoOrdenSalida;
-        OSalidaWS.ordenSalida orden;
+        OSalidaWS.ordenSalida ordenSalida;
 
         public frmGestionarOrdenSalida()
         {
             InitializeComponent();
             EstablecerEstadoComponentes(Estado.Inicial);
             daoOrdenSalida = new OSalidaWS.OrdenSalidaWSClient();
-            orden = new OSalidaWS.ordenSalida();
+            ordenSalida = new OSalidaWS.ordenSalida();
             dgvLotes.AutoGenerateColumns = false;
-            dgvLotes.DataSource = orden.lineasOrdenSalida;
+            dgvLotes.DataSource = ordenSalida.lineasOrdenSalida;
 
+            if (frmLogIn.Usuario.rol == "Jefe"
+                || frmLogIn.Usuario.rol == "JEFE"
+                || frmLogIn.Usuario.rol == "Jefe de Área"
+                || frmLogIn.Usuario.rol == "Jefe de Area"
+                || frmLogIn.Usuario.rol == "JEFE DE AREA"
+                || frmLogIn.Usuario.rol == "JEFE DE ÁREA")
+            {
+                btnActualizar.Visible = false;
+                btnNuevo.Visible = false;
+                btnGuardar.Visible = false;
+                btnEliminar.Visible = false;
+                btnCancelar.Visible = false;
+                
+            }
         }
 
         public void EstablecerEstadoComponentes(Estado estado)
@@ -111,15 +125,15 @@ namespace BuildUp
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            orden = new OSalidaWS.ordenSalida();
-            orden.fecha = dtpFechaRegistro.Value;
-            orden.idOrdenSalida = Int32.Parse(txtIDOrden.Text);
-            orden.operario.apellidos = txtApellidos.Text;
-            orden.operario.nombres = txtNombres.Text;
-            orden.operario.idPersona = Int32.Parse(txtIDOperario.Text);
+            ordenSalida = new OSalidaWS.ordenSalida();
+            ordenSalida.fecha = dtpFechaRegistro.Value;
+            ordenSalida.idOrdenSalida = Int32.Parse(txtIDOrden.Text);
+            ordenSalida.operario.apellidos = txtApellidos.Text;
+            ordenSalida.operario.nombres = txtNombres.Text;
+            ordenSalida.operario.idPersona = Int32.Parse(txtIDOperario.Text);
 
 
-            daoOrdenSalida.insertar(orden);
+            daoOrdenSalida.insertar(ordenSalida);
             MessageBox.Show("Orden de Salida registrada con éxito", "Mensaje Informativo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             EstablecerEstadoComponentes(Estado.Inicial);
             
@@ -130,15 +144,15 @@ namespace BuildUp
             frmBuscarOrdenSalida formBuscarOrdenSalida = new frmBuscarOrdenSalida();
             if (formBuscarOrdenSalida.ShowDialog() == DialogResult.OK)
             {
-                orden = new OSalidaWS.ordenSalida();
-                orden = formBuscarOrdenSalida.OrdenSeleccionada;
-                txtIDOrden.Text = orden.idOrdenSalida.ToString();
-                dtpFechaRegistro.Value = orden.fecha;
-                txtIDOperario.Text = orden.operario.idPersona.ToString();
-                txtNombres.Text = orden.operario.nombres;
-                txtApellidos.Text = orden.operario.apellidos;
+                ordenSalida = new OSalidaWS.ordenSalida();
+                ordenSalida = formBuscarOrdenSalida.OrdenSeleccionada;
+                txtIDOrden.Text = ordenSalida.idOrdenSalida.ToString();
+                dtpFechaRegistro.Value = ordenSalida.fecha;
+                txtIDOperario.Text = ordenSalida.operario.idPersona.ToString();
+                txtNombres.Text = ordenSalida.operario.nombres;
+                txtApellidos.Text = ordenSalida.operario.apellidos;
 
-                dgvLotes.DataSource = orden.lineasOrdenSalida;
+                dgvLotes.DataSource = ordenSalida.lineasOrdenSalida;
                 
                 EstablecerEstadoComponentes(Estado.Modificacion);
             }

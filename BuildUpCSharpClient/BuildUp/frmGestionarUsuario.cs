@@ -17,11 +17,11 @@ namespace BuildUp
         public frmGestionarUsuario()
         {
             InitializeComponent();
-            establecerEstadoComponentes(Estado.Inicial);
+            EstablecerEstadoComponentes(Estado.Inicial);
 
         }
 
-        public void establecerEstadoComponentes(Estado estado)
+        public void EstablecerEstadoComponentes(Estado estado)
         {
             switch (estado)
             {
@@ -85,7 +85,7 @@ namespace BuildUp
 
         private void btAnadir_Click(object sender, EventArgs e)
         {
-            establecerEstadoComponentes(Estado.Nuevo);
+            EstablecerEstadoComponentes(Estado.Nuevo);
         }
 
         private void btGuardar_Click(object sender, EventArgs e)
@@ -99,7 +99,7 @@ namespace BuildUp
             txtCorreo.Text = "";
             cbRol.Text = "";
             pbFoto.Text = "";
-            establecerEstadoComponentes(Estado.Inicial);
+            EstablecerEstadoComponentes(Estado.Inicial);
 
 
         }
@@ -111,7 +111,7 @@ namespace BuildUp
             {
                 //PASO DE INFORMACION
             }
-            establecerEstadoComponentes(Estado.Modificacion);
+            EstablecerEstadoComponentes(Estado.Modificacion);
         }
 
         private void btActualizar_Click(object sender, EventArgs e)
@@ -135,7 +135,7 @@ namespace BuildUp
             txtCorreo.Text = "";
             cbRol.Text = "";
             pbFoto.Image = null;
-            establecerEstadoComponentes(Estado.Inicial);
+            EstablecerEstadoComponentes(Estado.Inicial);
         }
 
         private void btAgregarFoto_Click(object sender, EventArgs e)

@@ -13,8 +13,6 @@ namespace BuildUp
     public partial class frmGestionarMaquinaria : Form
     {
 
-        
-
         public frmGestionarMaquinaria()
         {
             InitializeComponent();
@@ -141,6 +139,16 @@ namespace BuildUp
         private void btnActualizar_Click(object sender, EventArgs e)
         {
             //Modificacion en BD.
+        }
+
+        private void btnBuscarLinea_Click(object sender, EventArgs e)
+        {
+            frmBuscarLineaProduccion formBuscarLineaProduccion = new frmBuscarLineaProduccion();
+            if (formBuscarLineaProduccion.ShowDialog() == DialogResult.OK)
+            {
+                //Recibir linea seleccionada de frmBuscarLineaProduccion
+            }
+            EstablecerEstadoComponentes(Estado.Modificacion);
         }
     }
 }

@@ -433,3 +433,7 @@ C:\Users\Giohanny\source\repos\buildup\BuildUpCSharpClient\BuildUp\obj\Debug\Bui
 C:\Users\Giohanny\source\repos\buildup\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.csproj.CoreCompileInputs.cache
 C:\Users\Giohanny\source\repos\buildup\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.exe
 C:\Users\Giohanny\source\repos\buildup\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.pdb
+C:\GitHubRepos\buildup\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmBuscarMerma.resources
+C:\GitHubRepos\buildup\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmGestionarMerma.resources
+C:\GitHubRepos\buildup\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmBuscarLineaProduccion.resources
+C:\GitHubRepos\buildup\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmGestionarLineaProduccion.resources

@@ -57,6 +57,7 @@
             this.dgvTiposLadrillo.Location = new System.Drawing.Point(48, 152);
             this.dgvTiposLadrillo.Name = "dgvTiposLadrillo";
             this.dgvTiposLadrillo.ReadOnly = true;
+            this.dgvTiposLadrillo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvTiposLadrillo.Size = new System.Drawing.Size(601, 233);
             this.dgvTiposLadrillo.TabIndex = 0;
             // 

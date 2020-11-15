@@ -38,6 +38,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
@@ -153,11 +154,23 @@
     <Compile Include="frmBuscarInsumo.Designer.cs">
       <DependentUpon>frmBuscarInsumo.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmBuscarLineaProduccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarLineaProduccion.Designer.cs">
+      <DependentUpon>frmBuscarLineaProduccion.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmBuscarMaquinaria.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmBuscarMaquinaria.Designer.cs">
       <DependentUpon>frmBuscarMaquinaria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBuscarMerma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarMerma.Designer.cs">
+      <DependentUpon>frmBuscarMerma.cs</DependentUpon>
     </Compile>
     <Compile Include="frmBuscarOrdenSalida.cs">
       <SubType>Form</SubType>
@@ -225,11 +238,23 @@
     <Compile Include="frmGestionarInsumo.Designer.cs">
       <DependentUpon>frmGestionarInsumo.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmGestionarLineaProduccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGestionarLineaProduccion.Designer.cs">
+      <DependentUpon>frmGestionarLineaProduccion.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmGestionarMaquinaria.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmGestionarMaquinaria.Designer.cs">
       <DependentUpon>frmGestionarMaquinaria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGestionarMerma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGestionarMerma.Designer.cs">
+      <DependentUpon>frmGestionarMerma.cs</DependentUpon>
     </Compile>
     <Compile Include="frmGestionarOrdenInsumos.cs">
       <SubType>Form</SubType>
@@ -339,8 +364,14 @@
     <EmbeddedResource Include="frmBuscarInsumo.resx">
       <DependentUpon>frmBuscarInsumo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscarLineaProduccion.resx">
+      <DependentUpon>frmBuscarLineaProduccion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmBuscarMaquinaria.resx">
       <DependentUpon>frmBuscarMaquinaria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscarMerma.resx">
+      <DependentUpon>frmBuscarMerma.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmBuscarOrdenInsumos.resx">
       <DependentUpon>frmBuscarOrdenInsumos.cs</DependentUpon>
@@ -375,8 +406,14 @@
     <EmbeddedResource Include="frmGestionarInsumo.resx">
       <DependentUpon>frmGestionarInsumo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmGestionarLineaProduccion.resx">
+      <DependentUpon>frmGestionarLineaProduccion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmGestionarMaquinaria.resx">
       <DependentUpon>frmGestionarMaquinaria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGestionarMerma.resx">
+      <DependentUpon>frmGestionarMerma.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGestionarOrdenInsumos.resx">
       <DependentUpon>frmGestionarOrdenInsumos.cs</DependentUpon>

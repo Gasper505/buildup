@@ -26,5 +26,10 @@ namespace BuildUp
         {
 
         }
+
+        private void btnSeleccionar_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
+        }
     }
 }

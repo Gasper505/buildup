@@ -12,10 +12,31 @@ namespace BuildUp
 {
     public partial class frmGestionarIncidencia : Form
     {
+
+        IncidenteMaquinariaWS.IncidenteMaquinariaWSClient daoIncidenteMaq;
+        IncidenteMaquinariaWS.incidenteMaquinaria incidenteMaq;
+
         public frmGestionarIncidencia()
         {
             InitializeComponent();
             EstablecerEstadoComponentes(Estado.Inicial);
+
+            daoIncidenteMaq = new IncidenteMaquinariaWS.IncidenteMaquinariaWSClient();
+            incidenteMaq = new IncidenteMaquinariaWS.incidenteMaquinaria();
+
+            if (frmLogIn.Usuario.rol == "Jefe"
+                || frmLogIn.Usuario.rol == "JEFE"
+                || frmLogIn.Usuario.rol == "Jefe de Área"
+                || frmLogIn.Usuario.rol == "Jefe de Area"
+                || frmLogIn.Usuario.rol == "JEFE DE AREA"
+                || frmLogIn.Usuario.rol == "JEFE DE ÁREA")
+            {
+                btnActualizar.Visible = false;
+                btnNuevo.Visible = false;
+                btnGuardar.Visible = false;
+                btnEliminar.Visible = false;
+                btnCancelar.Visible = false;
+            }
         }
 
 
@@ -113,3 +134,4 @@ namespace BuildUp
         }
     }
 }
+

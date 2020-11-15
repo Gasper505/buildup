@@ -380,7 +380,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(715, 556);
+            this.ClientSize = new System.Drawing.Size(715, 546);
             this.ControlBox = false;
             this.Controls.Add(this.gbUsuario);
             this.Controls.Add(this.toolStrip2);

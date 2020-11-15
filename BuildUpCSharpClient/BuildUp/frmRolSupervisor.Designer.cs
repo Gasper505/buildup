@@ -30,31 +30,31 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblNombres = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnMerma = new System.Windows.Forms.Button();
+            this.btnIncidencia = new System.Windows.Forms.Button();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnLogout = new System.Windows.Forms.Button();
             this.pbFoto = new System.Windows.Forms.PictureBox();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Window;
             this.panel1.Controls.Add(this.lblNombres);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.btnMerma);
+            this.panel1.Controls.Add(this.btnIncidencia);
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnLogout);
             this.panel1.Controls.Add(this.pbFoto);
             this.panel1.Controls.Add(this.lblTitulo);
             this.panel1.Controls.Add(this.panel3);
@@ -73,15 +73,37 @@
             this.lblNombres.TabIndex = 28;
             this.lblNombres.Text = "MissingName";
             // 
-            // button2
+            // btnMerma
             // 
-            this.button2.Location = new System.Drawing.Point(92, 305);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(113, 39);
-            this.button2.TabIndex = 24;
-            this.button2.Text = "Incidencia";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnMerma.Location = new System.Drawing.Point(314, 305);
+            this.btnMerma.Name = "btnMerma";
+            this.btnMerma.Size = new System.Drawing.Size(113, 39);
+            this.btnMerma.TabIndex = 26;
+            this.btnMerma.Text = "Merma";
+            this.btnMerma.UseVisualStyleBackColor = true;
+            this.btnMerma.Click += new System.EventHandler(this.btnMerma_Click);
+            // 
+            // btnIncidencia
+            // 
+            this.btnIncidencia.Location = new System.Drawing.Point(92, 305);
+            this.btnIncidencia.Name = "btnIncidencia";
+            this.btnIncidencia.Size = new System.Drawing.Size(113, 39);
+            this.btnIncidencia.TabIndex = 24;
+            this.btnIncidencia.Text = "Incidencia";
+            this.btnIncidencia.UseVisualStyleBackColor = true;
+            this.btnIncidencia.Click += new System.EventHandler(this.btnIncidencia_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox3.Image = global::BuildUp.Properties.Resources.vector_document_icon1;
+            this.pictureBox3.Location = new System.Drawing.Point(315, 164);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(112, 122);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 23;
+            this.pictureBox3.TabStop = false;
             // 
             // pictureBox2
             // 
@@ -95,16 +117,16 @@
             this.pictureBox2.TabIndex = 21;
             this.pictureBox2.TabStop = false;
             // 
-            // button1
+            // btnLogout
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(694, 403);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(119, 27);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Cerrar sesión ";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.Location = new System.Drawing.Point(694, 403);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(119, 27);
+            this.btnLogout.TabIndex = 11;
+            this.btnLogout.Text = "Cerrar sesión ";
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // pbFoto
             // 
@@ -149,28 +171,6 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "Rol: Supervisor";
             // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(314, 305);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(113, 39);
-            this.button4.TabIndex = 26;
-            this.button4.Text = "Merma";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Image = global::BuildUp.Properties.Resources.vector_document_icon1;
-            this.pictureBox3.Location = new System.Drawing.Point(315, 164);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(112, 122);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 23;
-            this.pictureBox3.TabStop = false;
-            // 
             // frmRolSupervisor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -184,11 +184,11 @@
             this.Text = "frmRolSupervisor";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -196,15 +196,15 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnIncidencia;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.PictureBox pbFoto;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblNombres;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnMerma;
         private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

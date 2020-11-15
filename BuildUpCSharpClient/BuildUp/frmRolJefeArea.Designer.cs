@@ -28,30 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRolJefeArea));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.lblNombres = new System.Windows.Forms.Label();
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.button5 = new System.Windows.Forms.Button();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.button3 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button4 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnCerrarSesión = new System.Windows.Forms.Button();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.lblNombres = new System.Windows.Forms.Label();
+            this.btnLineaProduccion = new System.Windows.Forms.Button();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -61,12 +66,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Window;
+            this.panel1.Controls.Add(this.btnLineaProduccion);
+            this.panel1.Controls.Add(this.pictureBox10);
             this.panel1.Controls.Add(this.lblNombres);
             this.panel1.Controls.Add(this.pictureBox9);
             this.panel1.Controls.Add(this.button9);
@@ -90,34 +96,34 @@
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Location = new System.Drawing.Point(0, 33);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(806, 626);
+            this.panel1.Size = new System.Drawing.Size(922, 643);
             this.panel1.TabIndex = 1;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // pictureBox9
+            // lblNombres
             // 
-            this.pictureBox9.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox9.Location = new System.Drawing.Point(652, 21);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(136, 140);
-            this.pictureBox9.TabIndex = 39;
-            this.pictureBox9.TabStop = false;
+            this.lblNombres.AutoSize = true;
+            this.lblNombres.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombres.Location = new System.Drawing.Point(192, 23);
+            this.lblNombres.Name = "lblNombres";
+            this.lblNombres.Size = new System.Drawing.Size(130, 27);
+            this.lblNombres.TabIndex = 40;
+            this.lblNombres.Text = "MissingName";
             // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(552, 537);
+            this.button9.Location = new System.Drawing.Point(553, 533);
             this.button9.Name = "button9";
             this.button9.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.button9.Size = new System.Drawing.Size(113, 39);
             this.button9.TabIndex = 38;
-            this.button9.Text = "Ladrillo";
+            this.button9.Text = "Tipos de Ladrillo";
             this.button9.UseVisualStyleBackColor = true;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(379, 537);
+            this.button8.Location = new System.Drawing.Point(380, 533);
             this.button8.Name = "button8";
             this.button8.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.button8.Size = new System.Drawing.Size(113, 39);
@@ -128,7 +134,7 @@
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(208, 537);
+            this.button7.Location = new System.Drawing.Point(209, 533);
             this.button7.Name = "button7";
             this.button7.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.button7.Size = new System.Drawing.Size(113, 39);
@@ -139,7 +145,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(41, 537);
+            this.button6.Location = new System.Drawing.Point(42, 533);
             this.button6.Name = "button6";
             this.button6.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.button6.Size = new System.Drawing.Size(113, 39);
@@ -148,21 +154,9 @@
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
-            // pictureBox8
-            // 
-            this.pictureBox8.BackColor = System.Drawing.SystemColors.Window;
-            this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox8.Image = global::BuildUp.Properties.Resources._46305;
-            this.pictureBox8.Location = new System.Drawing.Point(552, 399);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(112, 122);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox8.TabIndex = 34;
-            this.pictureBox8.TabStop = false;
-            // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(552, 319);
+            this.button5.Location = new System.Drawing.Point(553, 315);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(113, 39);
             this.button5.TabIndex = 33;
@@ -170,57 +164,9 @@
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
-            // pictureBox7
-            // 
-            this.pictureBox7.BackColor = System.Drawing.SystemColors.Window;
-            this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox7.Image = global::BuildUp.Properties.Resources.maquinaria;
-            this.pictureBox7.Location = new System.Drawing.Point(552, 178);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(112, 122);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 32;
-            this.pictureBox7.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackColor = System.Drawing.SystemColors.Window;
-            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox6.Image = global::BuildUp.Properties.Resources._46316;
-            this.pictureBox6.Location = new System.Drawing.Point(380, 399);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(112, 122);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 31;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackColor = System.Drawing.SystemColors.Window;
-            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox5.Image = global::BuildUp.Properties.Resources.gratis_png_proveedor_de_iconos_de_computadora_entrega;
-            this.pictureBox5.Location = new System.Drawing.Point(41, 399);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(112, 122);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 30;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox4.Image = global::BuildUp.Properties.Resources.icono_incidencia_1;
-            this.pictureBox4.Location = new System.Drawing.Point(210, 399);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(112, 122);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 29;
-            this.pictureBox4.TabStop = false;
-            // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(379, 319);
+            this.button3.Location = new System.Drawing.Point(380, 315);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(113, 39);
             this.button3.TabIndex = 28;
@@ -228,21 +174,9 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Image = global::BuildUp.Properties.Resources.vector_document_icon1;
-            this.pictureBox1.Location = new System.Drawing.Point(380, 178);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(112, 122);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 27;
-            this.pictureBox1.TabStop = false;
-            // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(209, 319);
+            this.button4.Location = new System.Drawing.Point(210, 315);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(113, 39);
             this.button4.TabIndex = 26;
@@ -252,7 +186,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(41, 319);
+            this.button2.Location = new System.Drawing.Point(42, 315);
             this.button2.Name = "button2";
             this.button2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.button2.Size = new System.Drawing.Size(113, 39);
@@ -261,34 +195,10 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Image = global::BuildUp.Properties.Resources.vector_document_icon1;
-            this.pictureBox3.Location = new System.Drawing.Point(209, 178);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(112, 122);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 23;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Image = global::BuildUp.Properties.Resources.vector_business_plan_glyph_black_icon;
-            this.pictureBox2.Location = new System.Drawing.Point(41, 178);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(112, 122);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 21;
-            this.pictureBox2.TabStop = false;
-            // 
             // btnCerrarSesión
             // 
             this.btnCerrarSesión.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrarSesión.Location = new System.Drawing.Point(688, 587);
+            this.btnCerrarSesión.Location = new System.Drawing.Point(811, 603);
             this.btnCerrarSesión.Name = "btnCerrarSesión";
             this.btnCerrarSesión.Size = new System.Drawing.Size(100, 27);
             this.btnCerrarSesión.TabIndex = 11;
@@ -329,22 +239,141 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "Rol:  Jefe/a  Área de Producción";
             // 
-            // lblNombres
+            // btnLineaProduccion
             // 
-            this.lblNombres.AutoSize = true;
-            this.lblNombres.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombres.Location = new System.Drawing.Point(192, 23);
-            this.lblNombres.Name = "lblNombres";
-            this.lblNombres.Size = new System.Drawing.Size(130, 27);
-            this.lblNombres.TabIndex = 40;
-            this.lblNombres.Text = "MissingName";
+            this.btnLineaProduccion.Location = new System.Drawing.Point(726, 533);
+            this.btnLineaProduccion.Name = "btnLineaProduccion";
+            this.btnLineaProduccion.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnLineaProduccion.Size = new System.Drawing.Size(113, 39);
+            this.btnLineaProduccion.TabIndex = 42;
+            this.btnLineaProduccion.Text = "Líneas de Producción";
+            this.btnLineaProduccion.UseVisualStyleBackColor = true;
+            this.btnLineaProduccion.Click += new System.EventHandler(this.btnLineaProduccion_Click);
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.BackColor = System.Drawing.SystemColors.Window;
+            this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
+            this.pictureBox10.Location = new System.Drawing.Point(726, 395);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(113, 122);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox10.TabIndex = 41;
+            this.pictureBox10.TabStop = false;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox9.Location = new System.Drawing.Point(775, 21);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(136, 140);
+            this.pictureBox9.TabIndex = 39;
+            this.pictureBox9.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.BackColor = System.Drawing.SystemColors.Window;
+            this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox8.Image = global::BuildUp.Properties.Resources._46305;
+            this.pictureBox8.Location = new System.Drawing.Point(553, 395);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(112, 122);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 34;
+            this.pictureBox8.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackColor = System.Drawing.SystemColors.Window;
+            this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox7.Image = global::BuildUp.Properties.Resources.maquinaria;
+            this.pictureBox7.Location = new System.Drawing.Point(553, 174);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(112, 122);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 32;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.SystemColors.Window;
+            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox6.Image = global::BuildUp.Properties.Resources._46316;
+            this.pictureBox6.Location = new System.Drawing.Point(381, 395);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(112, 122);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 31;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.SystemColors.Window;
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox5.Image = global::BuildUp.Properties.Resources.gratis_png_proveedor_de_iconos_de_computadora_entrega;
+            this.pictureBox5.Location = new System.Drawing.Point(42, 395);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(112, 122);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 30;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox4.Image = global::BuildUp.Properties.Resources.icono_incidencia_1;
+            this.pictureBox4.Location = new System.Drawing.Point(211, 395);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(112, 122);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 29;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Image = global::BuildUp.Properties.Resources.vector_document_icon1;
+            this.pictureBox1.Location = new System.Drawing.Point(381, 174);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(112, 122);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 27;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox3.Image = global::BuildUp.Properties.Resources.vector_document_icon1;
+            this.pictureBox3.Location = new System.Drawing.Point(210, 174);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(112, 122);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 23;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Image = global::BuildUp.Properties.Resources.vector_business_plan_glyph_black_icon;
+            this.pictureBox2.Location = new System.Drawing.Point(42, 174);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(112, 122);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 21;
+            this.pictureBox2.TabStop = false;
             // 
             // frmRolJefeArea
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
-            this.ClientSize = new System.Drawing.Size(806, 694);
+            this.ClientSize = new System.Drawing.Size(923, 707);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmRolJefeArea";
@@ -352,6 +381,9 @@
             this.Text = "frmRolJefeArea";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
@@ -361,8 +393,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -392,5 +422,7 @@
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.Label lblNombres;
+        private System.Windows.Forms.Button btnLineaProduccion;
+        private System.Windows.Forms.PictureBox pictureBox10;
     }
 }

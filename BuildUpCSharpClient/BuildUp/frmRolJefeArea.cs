@@ -77,5 +77,11 @@ namespace BuildUp
             frmGestionarTipoLadrillo f = new frmGestionarTipoLadrillo();
             f.Show(this);
         }
+
+        private void btnLineaProduccion_Click(object sender, EventArgs e)
+        {
+            frmGestionarLineaProduccion f = new frmGestionarLineaProduccion();
+            f.Show(this);
+        }
     }
 }

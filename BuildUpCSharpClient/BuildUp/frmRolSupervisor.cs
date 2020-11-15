@@ -18,22 +18,24 @@ namespace BuildUp
             lblNombres.Text = frmLogIn.Usuario.nombres + ' ' + frmLogIn.Usuario.apellidos;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnIncidencia_Click(object sender, EventArgs e)
+        {
+            frmGestionarIncidencia formGestionarIncidencia = new frmGestionarIncidencia();
+            formGestionarIncidencia.Show(this);
+        }
+
+        private void btnMerma_Click(object sender, EventArgs e)
+        {
+            frmGestionarMerma formGestionarMerma = new frmGestionarMerma();
+            formGestionarMerma.Show(this);
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
         {
             frmLogIn frmLog = new frmLogIn();
             this.Hide();
             frmLog.ShowDialog();
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            frmGestionarIncidencia f = new frmGestionarIncidencia();
-            f.Show(this);
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
