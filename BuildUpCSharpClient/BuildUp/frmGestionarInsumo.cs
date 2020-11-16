@@ -31,7 +31,7 @@ namespace BuildUp
                     btnActualizar.Enabled = false;
                     txtIdInsumo.Enabled = false;
                     txtNombreInsumo.Enabled = false;
-                    txtUnidadMedida.Enabled = false;
+                    cboUnidadMedida.Enabled = false;
                     break;
                 case Estado.Nuevo:
                     btnNuevo.Enabled = false;
@@ -42,7 +42,7 @@ namespace BuildUp
                     btnActualizar.Enabled = false;
                     txtIdInsumo.Enabled = false;
                     txtNombreInsumo.Enabled = true;
-                    txtUnidadMedida.Enabled = true;
+                    cboUnidadMedida.Enabled = true;
                     break;
                 case Estado.Modificacion:
                     btnNuevo.Enabled = false;
@@ -53,7 +53,7 @@ namespace BuildUp
                     btnActualizar.Enabled = true;
                     txtIdInsumo.Enabled = false;
                     txtNombreInsumo.Enabled = true;
-                    txtUnidadMedida.Enabled = true;
+                    cboUnidadMedida.Enabled = true;
                     break;
 
             }
@@ -73,7 +73,7 @@ namespace BuildUp
         {
             txtIdInsumo.Text = "";
             txtNombreInsumo.Text = "";
-            txtUnidadMedida.Text = "";
+            cboUnidadMedida.Text = "";
             EstablecerEstadoComponentes(Estado.Inicial);
         }
 

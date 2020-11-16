@@ -32,7 +32,6 @@ namespace BuildUp
                     txtIdProblema.Enabled = false;
                     txtTipo.Enabled = false;
                     txtNivelImportancia.Enabled = false;
-                    txtActivo.Enabled = false;
                     break;
                 case Estado.Nuevo:
                     btnNuevo.Enabled = false;
@@ -44,7 +43,6 @@ namespace BuildUp
                     txtIdProblema.Enabled = false;
                     txtTipo.Enabled = true;
                     txtNivelImportancia.Enabled = true;
-                    txtActivo.Enabled = false;
                     break;
                 case Estado.Modificacion:
                     btnNuevo.Enabled = false;
@@ -56,7 +54,6 @@ namespace BuildUp
                     txtIdProblema.Enabled = false;
                     txtTipo.Enabled = true;
                     txtNivelImportancia.Enabled = true;
-                    txtActivo.Enabled = true;
                     break;
 
             }
@@ -65,7 +62,6 @@ namespace BuildUp
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             establecerEstadoComponentes(Estado.Nuevo);
-            txtActivo.Text = "1";
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -77,7 +73,6 @@ namespace BuildUp
             txtIdProblema.Text = "";
             txtTipo.Text = "";
             txtNivelImportancia.Text = "";
-            txtActivo.Text = "";
             establecerEstadoComponentes(Estado.Inicial);
         }
 
@@ -101,8 +96,7 @@ namespace BuildUp
         {
             txtIdProblema.Text = "";
             txtTipo.Text = "";
-            txtNivelImportancia.Text = "";        
-            txtActivo.Text = "";
+            txtNivelImportancia.Text = "";       
             establecerEstadoComponentes(Estado.Inicial);
         }
 
@@ -117,8 +111,9 @@ namespace BuildUp
             if (formBuscarProblema.ShowDialog() == DialogResult.OK)
             {
                 //PASO DE INFORMACION
+                establecerEstadoComponentes(Estado.Modificacion);
             }
-            establecerEstadoComponentes(Estado.Modificacion);
+            
         }
     }
 }

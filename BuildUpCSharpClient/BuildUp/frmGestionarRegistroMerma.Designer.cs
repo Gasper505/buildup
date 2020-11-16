@@ -117,47 +117,53 @@
             // 
             // txtIDmerma
             // 
+            this.txtIDmerma.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIDmerma.Location = new System.Drawing.Point(314, 73);
             this.txtIDmerma.Name = "txtIDmerma";
-            this.txtIDmerma.Size = new System.Drawing.Size(100, 20);
+            this.txtIDmerma.Size = new System.Drawing.Size(100, 21);
             this.txtIDmerma.TabIndex = 7;
             // 
             // cboTipoMerma
             // 
+            this.cboTipoMerma.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboTipoMerma.FormattingEnabled = true;
             this.cboTipoMerma.Location = new System.Drawing.Point(314, 106);
             this.cboTipoMerma.Name = "cboTipoMerma";
-            this.cboTipoMerma.Size = new System.Drawing.Size(133, 21);
+            this.cboTipoMerma.Size = new System.Drawing.Size(133, 23);
             this.cboTipoMerma.TabIndex = 8;
             // 
             // txtCantidad
             // 
+            this.txtCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCantidad.Location = new System.Drawing.Point(314, 143);
             this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(100, 20);
+            this.txtCantidad.Size = new System.Drawing.Size(100, 21);
             this.txtCantidad.TabIndex = 9;
             // 
             // cboSupervisor
             // 
+            this.cboSupervisor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboSupervisor.FormattingEnabled = true;
             this.cboSupervisor.Location = new System.Drawing.Point(314, 178);
             this.cboSupervisor.Name = "cboSupervisor";
-            this.cboSupervisor.Size = new System.Drawing.Size(255, 21);
+            this.cboSupervisor.Size = new System.Drawing.Size(255, 23);
             this.cboSupervisor.TabIndex = 10;
             // 
             // cboLineaProduccion
             // 
+            this.cboLineaProduccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboLineaProduccion.FormattingEnabled = true;
             this.cboLineaProduccion.Location = new System.Drawing.Point(314, 214);
             this.cboLineaProduccion.Name = "cboLineaProduccion";
-            this.cboLineaProduccion.Size = new System.Drawing.Size(255, 21);
+            this.cboLineaProduccion.Size = new System.Drawing.Size(255, 23);
             this.cboLineaProduccion.TabIndex = 11;
             // 
             // dtpFechaMerma
             // 
+            this.dtpFechaMerma.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaMerma.Location = new System.Drawing.Point(314, 250);
             this.dtpFechaMerma.Name = "dtpFechaMerma";
-            this.dtpFechaMerma.Size = new System.Drawing.Size(200, 20);
+            this.dtpFechaMerma.Size = new System.Drawing.Size(200, 21);
             this.dtpFechaMerma.TabIndex = 12;
             // 
             // toolStrip2

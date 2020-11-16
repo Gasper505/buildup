@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BuildUp.RespuestaWS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,18 +13,26 @@ namespace BuildUp
 {
     public partial class frmBuscarRespuesta : Form
     {
+
+        RespuestaWS.RespuestaWSClient daoRespuesta;
+        RespuestaWS.respuesta respuestaSeleccionada;
+
+        public respuesta RespuestaSeleccionada { get => respuestaSeleccionada; set => respuestaSeleccionada = value; }
+
         public frmBuscarRespuesta()
         {
             InitializeComponent();
-        }
+            daoRespuesta = new RespuestaWS.RespuestaWSClient();
+            respuestaSeleccionada = new RespuestaWS.respuesta();
+            dgvRespuestas.AutoGenerateColumns = false;
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
+            BindingList<RespuestaWS.respuesta> resp = new BindingList<RespuestaWS.respuesta>(daoRespuesta.listarRespuesta().ToArray());
+            dgvRespuestas.DataSource = resp;
         }
 
         private void btnSeleccionar_Click(object sender, EventArgs e)
         {
+            respuestaSeleccionada = (RespuestaWS.respuesta)dgvRespuestas.CurrentRow.DataBoundItem;
             this.DialogResult = DialogResult.OK;
         }
     }

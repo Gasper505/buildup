@@ -4,7 +4,10 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/GitHubRepos/buildup/BuildUpJAVAServer/BuildUpModel/src/pe/edu/pucp/ta/model/OrdenSalida.java</file>
+            <file>file:/C:/GitHubRepos/buildup/BuildUpJAVAServer/BuildUpModel/src/pe/edu/pucp/ta/model/Persona.java</file>
             <file>file:/C:/GitHubRepos/buildup/BuildUpJAVAServer/BuildUpModel/src/pe/edu/pucp/ta/model/Operario.java</file>
+            <file>file:/C:/GitHubRepos/buildup/BuildUpJAVAServer/BuildUpModel/src/pe/edu/pucp/ta/model/Usuario.java</file>
+            <file>file:/C:/GitHubRepos/buildup/BuildUpJAVAServer/BuildUpModel/src/pe/edu/pucp/ta/model/Proveedor.java</file>
             <file>file:/C:/GitHubRepos/buildup/BuildUpJAVAServer/BuildUpModel/src/pe/edu/pucp/ta/model/LineaProduccion.java</file>
         </group>
     </open-files>

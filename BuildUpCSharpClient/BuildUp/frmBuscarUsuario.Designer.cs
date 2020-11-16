@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvUsuarios = new System.Windows.Forms.DataGridView();
             this.IDUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Username = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,27 +47,27 @@
             this.lblID = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
             this.btnSeleccionar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
             this.gbParametrosBusqueda.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvUsuarios
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvUsuarios.AllowUserToAddRows = false;
+            this.dgvUsuarios.AllowUserToDeleteRows = false;
+            this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvUsuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IDUsuario,
             this.Username,
             this.Nombre,
             this.ApPat,
             this.Cargo});
-            this.dataGridView1.Location = new System.Drawing.Point(45, 271);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(654, 253);
-            this.dataGridView1.TabIndex = 9;
+            this.dgvUsuarios.Location = new System.Drawing.Point(45, 271);
+            this.dgvUsuarios.Name = "dgvUsuarios";
+            this.dgvUsuarios.ReadOnly = true;
+            this.dgvUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvUsuarios.Size = new System.Drawing.Size(654, 253);
+            this.dgvUsuarios.TabIndex = 9;
             // 
             // IDUsuario
             // 
@@ -123,9 +123,14 @@
             // cboCargo
             // 
             this.cboCargo.FormattingEnabled = true;
+            this.cboCargo.Items.AddRange(new object[] {
+            "Jefe de Área",
+            "Supervisor",
+            "Ingeniero",
+            "Operario"});
             this.cboCargo.Location = new System.Drawing.Point(142, 148);
             this.cboCargo.Name = "cboCargo";
-            this.cboCargo.Size = new System.Drawing.Size(221, 21);
+            this.cboCargo.Size = new System.Drawing.Size(147, 21);
             this.cboCargo.TabIndex = 15;
             // 
             // lblCargo
@@ -154,6 +159,7 @@
             this.btnBuscar.TabIndex = 11;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // lblApellidos
             // 
@@ -176,11 +182,11 @@
             // 
             this.lblNombres.AutoSize = true;
             this.lblNombres.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombres.Location = new System.Drawing.Point(81, 92);
+            this.lblNombres.Location = new System.Drawing.Point(73, 92);
             this.lblNombres.Name = "lblNombres";
-            this.lblNombres.Size = new System.Drawing.Size(58, 15);
+            this.lblNombres.Size = new System.Drawing.Size(66, 15);
             this.lblNombres.TabIndex = 5;
-            this.lblNombres.Text = "Nombres";
+            this.lblNombres.Text = "Nombre(s)";
             // 
             // txtBusqNombreInsumo
             // 
@@ -235,11 +241,11 @@
             this.ClientSize = new System.Drawing.Size(746, 611);
             this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.gbParametrosBusqueda);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvUsuarios);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "frmBuscarUsuario";
             this.Text = "Búsqueda de Usuarios";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).EndInit();
             this.gbParametrosBusqueda.ResumeLayout(false);
             this.gbParametrosBusqueda.PerformLayout();
             this.ResumeLayout(false);
@@ -247,7 +253,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvUsuarios;
         private System.Windows.Forms.GroupBox gbParametrosBusqueda;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.TextBox txtBusqLineaProduccion;

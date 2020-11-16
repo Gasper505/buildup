@@ -37,6 +37,12 @@ namespace BuildUp
                 btnEliminar.Visible = false;
                 btnCancelar.Visible = false;
             }
+
+            else if(frmLogIn.Usuario.rol == "Ingeniero")
+            {
+                btnNuevo.Visible = false;
+                btnEliminar.Visible = false;
+            }
         }
 
 
@@ -51,18 +57,32 @@ namespace BuildUp
                     btnBuscar.Enabled = true;
                     btnEliminar.Enabled = false;
                     btnActualizar.Enabled = false;
+
                     txtID.Enabled = false;
+                    dtpFechaRegistro.Enabled = false;
+
+                    
                     txtIDMaq.Enabled = false;
                     txtNombreMaq.Enabled = false;
                     txtProveedor.Enabled = false;
-                    txtIDIng.Text = frmLogIn.Usuario.idPersona.ToString();
-                    txtNombreIng.Text= frmLogIn.Usuario.nombres + ' ' + frmLogIn.Usuario.apellidos;
-                    txtIDIng.Enabled = false;
-                    txtNombreIng.Enabled = false;
+                    btnBuscarMaquinaria.Enabled = false;
+
                     txtIDSup.Enabled = false;
                     txtNombreSup.Enabled = false;
 
+                    txtIDIng.Enabled = false;
+                    txtNombreIng.Enabled = false;
+
+                    txtProblema.Enabled = false;
+                    btnBuscarProblema.Enabled = false;
+
+                    btnBuscarRespuesta.Enabled = false;
+                    txtRespuesta.Enabled = false;
+                    tbDescripcionRespuesta.Enabled = false;
+                    dateTimePicker1.Enabled = false;
+
                     break;
+
                 case Estado.Nuevo:
                     btnNuevo.Enabled = false;
                     btnGuardar.Enabled = true;
@@ -70,7 +90,35 @@ namespace BuildUp
                     btnBuscar.Enabled = false;
                     btnEliminar.Enabled = false;
                     btnActualizar.Enabled = false;
+
+                    txtID.Enabled = false;
+                    dtpFechaRegistro.Enabled = false;
+
+                    if (frmLogIn.Usuario.rol == "Supervisor")
+                    {
+                        btnBuscarMaquinaria.Enabled = true;
+
+                        txtIDSup.Text = frmLogIn.Usuario.idPersona.ToString();
+                        txtNombreSup.Text = frmLogIn.Usuario.nombres + " " + frmLogIn.Usuario.apellidos;
+
+                        txtProblema.Enabled = true;
+                        btnBuscarProblema.Enabled = true;
+                    }
+                    
+
+                    if(frmLogIn.Usuario.rol == "Ingeniero")
+                    {
+                        txtIDIng.Text = frmLogIn.Usuario.idPersona.ToString();
+                        txtNombreIng.Text = frmLogIn.Usuario.nombres + " " + frmLogIn.Usuario.apellidos;
+
+                        btnBuscarRespuesta.Enabled = true;
+                        txtRespuesta.Enabled = true;
+                        tbDescripcionRespuesta.Enabled = true;
+                        dateTimePicker1.Enabled = true;
+                    }
+
                     break;
+
                 case Estado.Modificacion:
                     btnNuevo.Enabled = false;
                     btnGuardar.Enabled = false;
@@ -78,6 +126,32 @@ namespace BuildUp
                     btnBuscar.Enabled = true;
                     btnEliminar.Enabled = true;
                     btnActualizar.Enabled = true;
+
+                    txtID.Enabled = false;
+                    dtpFechaRegistro.Enabled = false;
+
+                    if (frmLogIn.Usuario.rol == "Supervisor")
+                    {
+                        btnBuscarMaquinaria.Enabled = true;
+
+                        txtIDSup.Text = frmLogIn.Usuario.idPersona.ToString();
+                        txtNombreSup.Text = frmLogIn.Usuario.nombres + " " + frmLogIn.Usuario.apellidos;
+
+                        txtProblema.Enabled = true;
+                        btnBuscarProblema.Enabled = true;
+                    }
+
+
+                    if (frmLogIn.Usuario.rol == "Ingeniero")
+                    {
+                        txtIDIng.Text = frmLogIn.Usuario.idPersona.ToString();
+                        txtNombreIng.Text = frmLogIn.Usuario.nombres + " " + frmLogIn.Usuario.apellidos;
+
+                        btnBuscarRespuesta.Enabled = true;
+                        txtRespuesta.Enabled = true;
+                        tbDescripcionRespuesta.Enabled = true;
+                        dateTimePicker1.Enabled = true;
+                    }
                     break;
 
             }
@@ -120,7 +194,27 @@ namespace BuildUp
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            //limpiar campos (no implementado)
+            txtID.Text = "";
+            dtpFechaRegistro.Text = "";
+
+
+            txtIDMaq.Text = "";
+            txtNombreMaq.Text = "";
+            txtProveedor.Text = "";
+            btnBuscarMaquinaria.Text = "";
+
+            txtIDSup.Text = "";
+            txtNombreSup.Text = "";
+
+            txtIDIng.Text = "";
+            txtNombreIng.Text = "";
+
+            txtProblema.Text = "";
+            btnBuscarProblema.Text = "";
+
+            txtRespuesta.Text = "";
+            tbDescripcionRespuesta.Text = "";
+            dateTimePicker1.Text = "";
             EstablecerEstadoComponentes(Estado.Inicial);
         }
 
@@ -128,6 +222,24 @@ namespace BuildUp
         {
             frmBuscarMaquinaria formBuscarMaquinaria = new frmBuscarMaquinaria();
             if (formBuscarMaquinaria.ShowDialog() == DialogResult.OK)
+            {
+                //Paso de información
+            }
+        }
+
+        private void btnBuscarProblema_Click(object sender, EventArgs e)
+        {
+            frmBuscarProblema formBuscarProblema = new frmBuscarProblema();
+            if (formBuscarProblema.ShowDialog() == DialogResult.OK)
+            {
+                //Paso de información
+            }
+        }
+
+        private void btnBuscarRespuesta_Click(object sender, EventArgs e)
+        {
+            frmBuscarRespuesta formBuscarRespuesta = new frmBuscarRespuesta();
+            if (formBuscarRespuesta.ShowDialog() == DialogResult.OK)
             {
                 //Paso de información
             }

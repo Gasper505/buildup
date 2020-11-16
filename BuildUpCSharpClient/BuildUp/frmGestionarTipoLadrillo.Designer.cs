@@ -65,9 +65,10 @@
             // 
             // txtNombre
             // 
+            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.Location = new System.Drawing.Point(230, 82);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(171, 20);
+            this.txtNombre.Size = new System.Drawing.Size(171, 21);
             this.txtNombre.TabIndex = 15;
             // 
             // lblNombre
@@ -82,9 +83,10 @@
             // 
             // txtIDTipo
             // 
+            this.txtIDTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIDTipo.Location = new System.Drawing.Point(230, 48);
             this.txtIDTipo.Name = "txtIDTipo";
-            this.txtIDTipo.Size = new System.Drawing.Size(100, 20);
+            this.txtIDTipo.Size = new System.Drawing.Size(100, 21);
             this.txtIDTipo.TabIndex = 11;
             // 
             // lblIdTipo
@@ -166,7 +168,7 @@
             this.gbDatos.Controls.Add(this.lblIdTipo);
             this.gbDatos.Location = new System.Drawing.Point(101, 47);
             this.gbDatos.Name = "gbDatos";
-            this.gbDatos.Size = new System.Drawing.Size(451, 332);
+            this.gbDatos.Size = new System.Drawing.Size(451, 328);
             this.gbDatos.TabIndex = 25;
             this.gbDatos.TabStop = false;
             this.gbDatos.Text = "Datos del Tipo de Ladrillo";
@@ -191,23 +193,26 @@
             // 
             // numAncho
             // 
+            this.numAncho.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numAncho.Location = new System.Drawing.Point(136, 69);
             this.numAncho.Name = "numAncho";
-            this.numAncho.Size = new System.Drawing.Size(86, 20);
+            this.numAncho.Size = new System.Drawing.Size(86, 21);
             this.numAncho.TabIndex = 27;
             // 
             // numAltura
             // 
+            this.numAltura.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numAltura.Location = new System.Drawing.Point(136, 99);
             this.numAltura.Name = "numAltura";
-            this.numAltura.Size = new System.Drawing.Size(86, 20);
+            this.numAltura.Size = new System.Drawing.Size(86, 21);
             this.numAltura.TabIndex = 26;
             // 
             // numLargo
             // 
+            this.numLargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numLargo.Location = new System.Drawing.Point(136, 39);
             this.numLargo.Name = "numLargo";
-            this.numLargo.Size = new System.Drawing.Size(86, 20);
+            this.numLargo.Size = new System.Drawing.Size(86, 21);
             this.numLargo.TabIndex = 25;
             // 
             // toolStrip2
@@ -241,7 +246,7 @@
             this.btnNuevo.Image = global::BuildUp.Properties.Resources.new_file_icon_4;
             this.btnNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(62, 22);
+            this.btnNuevo.Size = new System.Drawing.Size(66, 22);
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
@@ -264,7 +269,7 @@
             this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
             this.btnBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(62, 22);
+            this.btnBuscar.Size = new System.Drawing.Size(66, 22);
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
@@ -273,7 +278,7 @@
             this.btnActualizar.Image = ((System.Drawing.Image)(resources.GetObject("btnActualizar.Image")));
             this.btnActualizar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(79, 22);
+            this.btnActualizar.Size = new System.Drawing.Size(84, 22);
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
@@ -282,7 +287,7 @@
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
             this.btnEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(70, 22);
+            this.btnEliminar.Size = new System.Drawing.Size(74, 22);
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
@@ -296,7 +301,7 @@
             this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
             this.btnCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(125, 22);
+            this.btnCancelar.Size = new System.Drawing.Size(135, 22);
             this.btnCancelar.Text = "Limpiar y Cancelar";
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
@@ -306,7 +311,7 @@
             this.btnRegresar.Image = ((System.Drawing.Image)(resources.GetObject("btnRegresar.Image")));
             this.btnRegresar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Size = new System.Drawing.Size(72, 22);
+            this.btnRegresar.Size = new System.Drawing.Size(81, 22);
             this.btnRegresar.Text = "Regresar";
             this.btnRegresar.Click += new System.EventHandler(this.btnVolver_Click);
             // 

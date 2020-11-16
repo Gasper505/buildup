@@ -96,23 +96,26 @@
             // 
             // txtNombre
             // 
+            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.Location = new System.Drawing.Point(189, 59);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(241, 20);
+            this.txtNombre.Size = new System.Drawing.Size(241, 21);
             this.txtNombre.TabIndex = 7;
             // 
             // txtIdMaquinaria
             // 
+            this.txtIdMaquinaria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIdMaquinaria.Location = new System.Drawing.Point(189, 27);
             this.txtIdMaquinaria.Name = "txtIdMaquinaria";
-            this.txtIdMaquinaria.Size = new System.Drawing.Size(100, 20);
+            this.txtIdMaquinaria.Size = new System.Drawing.Size(100, 21);
             this.txtIdMaquinaria.TabIndex = 5;
             // 
             // dtpFechaGarantia
             // 
+            this.dtpFechaGarantia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaGarantia.Location = new System.Drawing.Point(189, 94);
             this.dtpFechaGarantia.Name = "dtpFechaGarantia";
-            this.dtpFechaGarantia.Size = new System.Drawing.Size(241, 20);
+            this.dtpFechaGarantia.Size = new System.Drawing.Size(241, 21);
             this.dtpFechaGarantia.TabIndex = 1;
             // 
             // lblNombreMaquinaria
@@ -162,16 +165,18 @@
             // 
             // txtNombreLinea
             // 
+            this.txtNombreLinea.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombreLinea.Location = new System.Drawing.Point(189, 59);
             this.txtNombreLinea.Name = "txtNombreLinea";
-            this.txtNombreLinea.Size = new System.Drawing.Size(241, 20);
+            this.txtNombreLinea.Size = new System.Drawing.Size(241, 21);
             this.txtNombreLinea.TabIndex = 7;
             // 
             // txtIdLinea
             // 
+            this.txtIdLinea.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIdLinea.Location = new System.Drawing.Point(189, 27);
             this.txtIdLinea.Name = "txtIdLinea";
-            this.txtIdLinea.Size = new System.Drawing.Size(100, 20);
+            this.txtIdLinea.Size = new System.Drawing.Size(100, 21);
             this.txtIdLinea.TabIndex = 5;
             // 
             // lblNombreInsumo
@@ -225,9 +230,10 @@
             // 
             // txtCorreoRep
             // 
+            this.txtCorreoRep.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCorreoRep.Location = new System.Drawing.Point(190, 125);
             this.txtCorreoRep.Name = "txtCorreoRep";
-            this.txtCorreoRep.Size = new System.Drawing.Size(241, 20);
+            this.txtCorreoRep.Size = new System.Drawing.Size(241, 21);
             this.txtCorreoRep.TabIndex = 9;
             // 
             // lblCorreoRep
@@ -242,9 +248,10 @@
             // 
             // txtRepresentante
             // 
+            this.txtRepresentante.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRepresentante.Location = new System.Drawing.Point(190, 93);
             this.txtRepresentante.Name = "txtRepresentante";
-            this.txtRepresentante.Size = new System.Drawing.Size(241, 20);
+            this.txtRepresentante.Size = new System.Drawing.Size(241, 21);
             this.txtRepresentante.TabIndex = 7;
             // 
             // lblRepresentante
@@ -259,9 +266,10 @@
             // 
             // txtRazonSocial
             // 
+            this.txtRazonSocial.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRazonSocial.Location = new System.Drawing.Point(189, 62);
             this.txtRazonSocial.Name = "txtRazonSocial";
-            this.txtRazonSocial.Size = new System.Drawing.Size(242, 20);
+            this.txtRazonSocial.Size = new System.Drawing.Size(242, 21);
             this.txtRazonSocial.TabIndex = 5;
             // 
             // lblRazonSocial
@@ -286,9 +294,10 @@
             // 
             // txtIdProveedor
             // 
+            this.txtIdProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIdProveedor.Location = new System.Drawing.Point(189, 28);
             this.txtIdProveedor.Name = "txtIdProveedor";
-            this.txtIdProveedor.Size = new System.Drawing.Size(100, 20);
+            this.txtIdProveedor.Size = new System.Drawing.Size(100, 21);
             this.txtIdProveedor.TabIndex = 2;
             // 
             // toolStrip2

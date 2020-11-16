@@ -68,7 +68,7 @@
             this.btnRegresar});
             this.toolStrip2.Location = new System.Drawing.Point(0, 0);
             this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(637, 25);
+            this.toolStrip2.Size = new System.Drawing.Size(648, 25);
             this.toolStrip2.TabIndex = 45;
             this.toolStrip2.Text = "toolStrip2";
             // 
@@ -168,10 +168,11 @@
             // 
             // cboTipoLadrillo
             // 
+            this.cboTipoLadrillo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboTipoLadrillo.FormattingEnabled = true;
             this.cboTipoLadrillo.Location = new System.Drawing.Point(220, 112);
             this.cboTipoLadrillo.Name = "cboTipoLadrillo";
-            this.cboTipoLadrillo.Size = new System.Drawing.Size(160, 21);
+            this.cboTipoLadrillo.Size = new System.Drawing.Size(195, 23);
             this.cboTipoLadrillo.TabIndex = 9;
             // 
             // lblTipo
@@ -186,16 +187,18 @@
             // 
             // txtNombre
             // 
+            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.Location = new System.Drawing.Point(219, 81);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(196, 20);
+            this.txtNombre.Size = new System.Drawing.Size(196, 21);
             this.txtNombre.TabIndex = 7;
             // 
             // txtIDLinea
             // 
+            this.txtIDLinea.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIDLinea.Location = new System.Drawing.Point(219, 49);
             this.txtIDLinea.Name = "txtIDLinea";
-            this.txtIDLinea.Size = new System.Drawing.Size(86, 20);
+            this.txtIDLinea.Size = new System.Drawing.Size(82, 21);
             this.txtIDLinea.TabIndex = 5;
             // 
             // lblNombre
@@ -212,17 +215,17 @@
             // 
             this.lblIDLinea.AutoSize = true;
             this.lblIDLinea.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIDLinea.Location = new System.Drawing.Point(48, 50);
+            this.lblIDLinea.Location = new System.Drawing.Point(194, 49);
             this.lblIDLinea.Name = "lblIDLinea";
-            this.lblIDLinea.Size = new System.Drawing.Size(165, 15);
+            this.lblIDLinea.Size = new System.Drawing.Size(19, 15);
             this.lblIDLinea.TabIndex = 5;
-            this.lblIDLinea.Text = "ID de la Línea de Producción";
+            this.lblIDLinea.Text = "ID";
             // 
             // frmGestionarLineaProduccion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(637, 278);
+            this.ClientSize = new System.Drawing.Size(648, 278);
             this.ControlBox = false;
             this.Controls.Add(this.gbDatosMaquinaria);
             this.Controls.Add(this.toolStrip2);

@@ -55,7 +55,7 @@
             this.NombreInsumo,
             this.Nivel,
             this.Column1});
-            this.dataGridView1.Location = new System.Drawing.Point(72, 194);
+            this.dataGridView1.Location = new System.Drawing.Point(70, 57);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -99,7 +99,7 @@
             this.gbParametrosBusqueda.Controls.Add(this.btnBuscar);
             this.gbParametrosBusqueda.Controls.Add(this.txtBusqNombreInsumo);
             this.gbParametrosBusqueda.Controls.Add(this.lblBusqNombreInsumo);
-            this.gbParametrosBusqueda.Location = new System.Drawing.Point(72, 41);
+            this.gbParametrosBusqueda.Location = new System.Drawing.Point(70, 100);
             this.gbParametrosBusqueda.Name = "gbParametrosBusqueda";
             this.gbParametrosBusqueda.Size = new System.Drawing.Size(571, 126);
             this.gbParametrosBusqueda.TabIndex = 6;
@@ -153,7 +153,7 @@
             // btnSeleccionar
             // 
             this.btnSeleccionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSeleccionar.Location = new System.Drawing.Point(233, 464);
+            this.btnSeleccionar.Location = new System.Drawing.Point(231, 329);
             this.btnSeleccionar.Name = "btnSeleccionar";
             this.btnSeleccionar.Size = new System.Drawing.Size(249, 42);
             this.btnSeleccionar.TabIndex = 8;
@@ -165,7 +165,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(713, 539);
+            this.ClientSize = new System.Drawing.Size(713, 400);
             this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.gbParametrosBusqueda);

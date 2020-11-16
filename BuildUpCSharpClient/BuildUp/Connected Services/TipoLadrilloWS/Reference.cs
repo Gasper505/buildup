@@ -42,8 +42,6 @@ namespace BuildUp.TipoLadrilloWS {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.buildup.pucp.edu.pe/")]
     public partial class tipoLadrillo : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private bool activoField;
-        
         private double alturaField;
         
         private double anchoField;
@@ -56,18 +54,6 @@ namespace BuildUp.TipoLadrilloWS {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public bool activo {
-            get {
-                return this.activoField;
-            }
-            set {
-                this.activoField = value;
-                this.RaisePropertyChanged("activo");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
         public double altura {
             get {
                 return this.alturaField;
@@ -79,7 +65,7 @@ namespace BuildUp.TipoLadrilloWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
         public double ancho {
             get {
                 return this.anchoField;
@@ -91,7 +77,7 @@ namespace BuildUp.TipoLadrilloWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
         public int idTipoLadrillo {
             get {
                 return this.idTipoLadrilloField;
@@ -103,7 +89,7 @@ namespace BuildUp.TipoLadrilloWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
         public double largo {
             get {
                 return this.largoField;
@@ -115,7 +101,7 @@ namespace BuildUp.TipoLadrilloWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
         public string nombre {
             get {
                 return this.nombreField;

@@ -75,6 +75,7 @@
             // 
             // btnMerma
             // 
+            this.btnMerma.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMerma.Location = new System.Drawing.Point(314, 305);
             this.btnMerma.Name = "btnMerma";
             this.btnMerma.Size = new System.Drawing.Size(113, 39);
@@ -85,11 +86,12 @@
             // 
             // btnIncidencia
             // 
+            this.btnIncidencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIncidencia.Location = new System.Drawing.Point(92, 305);
             this.btnIncidencia.Name = "btnIncidencia";
             this.btnIncidencia.Size = new System.Drawing.Size(113, 39);
             this.btnIncidencia.TabIndex = 24;
-            this.btnIncidencia.Text = "Incidencia";
+            this.btnIncidencia.Text = "Registro de Incidencias";
             this.btnIncidencia.UseVisualStyleBackColor = true;
             this.btnIncidencia.Click += new System.EventHandler(this.btnIncidencia_Click);
             // 
@@ -124,7 +126,7 @@
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(119, 27);
             this.btnLogout.TabIndex = 11;
-            this.btnLogout.Text = "Cerrar sesión ";
+            this.btnLogout.Text = "Cerrar Sesión ";
             this.btnLogout.UseVisualStyleBackColor = true;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 

@@ -62,7 +62,7 @@
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Location = new System.Drawing.Point(0, 29);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(774, 385);
+            this.panel1.Size = new System.Drawing.Size(774, 396);
             this.panel1.TabIndex = 0;
             // 
             // lblNombres
@@ -77,9 +77,10 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(312, 319);
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(297, 311);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(113, 39);
+            this.button4.Size = new System.Drawing.Size(120, 39);
             this.button4.TabIndex = 26;
             this.button4.Text = "Orden de salida";
             this.button4.UseVisualStyleBackColor = true;
@@ -87,9 +88,10 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(90, 319);
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(113, 311);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(113, 39);
+            this.button2.Size = new System.Drawing.Size(120, 39);
             this.button2.TabIndex = 24;
             this.button2.Text = "Orden de insumos";
             this.button2.UseVisualStyleBackColor = true;
@@ -100,9 +102,9 @@
             this.pictureBox3.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox3.Image = global::BuildUp.Properties.Resources.vector_document_icon1;
-            this.pictureBox3.Location = new System.Drawing.Point(313, 178);
+            this.pictureBox3.Location = new System.Drawing.Point(297, 170);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(112, 122);
+            this.pictureBox3.Size = new System.Drawing.Size(120, 122);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 23;
             this.pictureBox3.TabStop = false;
@@ -112,20 +114,21 @@
             this.pictureBox2.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.Image = global::BuildUp.Properties.Resources.vector_document_icon1;
-            this.pictureBox2.Location = new System.Drawing.Point(90, 178);
+            this.pictureBox2.Location = new System.Drawing.Point(113, 170);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(112, 122);
+            this.pictureBox2.Size = new System.Drawing.Size(120, 122);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 21;
             this.pictureBox2.TabStop = false;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(667, 346);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(640, 352);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(87, 27);
+            this.button1.Size = new System.Drawing.Size(114, 27);
             this.button1.TabIndex = 11;
-            this.button1.Text = "Cerrar sesión ";
+            this.button1.Text = "Cerrar Sesión ";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -189,7 +192,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
-            this.ClientSize = new System.Drawing.Size(775, 450);
+            this.ClientSize = new System.Drawing.Size(775, 459);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmRolOperario";

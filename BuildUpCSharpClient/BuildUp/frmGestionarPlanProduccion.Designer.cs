@@ -44,6 +44,9 @@
             this.btnRemover = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.dgvAsignacion = new System.Windows.Forms.DataGridView();
+            this.Numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NombreTipoLadrillo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cboNombreTipoLadrillo = new System.Windows.Forms.ComboBox();
             this.lblNombreTipoLadrillo = new System.Windows.Forms.Label();
             this.numNroAproxLadrillos = new System.Windows.Forms.NumericUpDown();
@@ -53,9 +56,6 @@
             this.lblIDPlan = new System.Windows.Forms.Label();
             this.txtAnho = new System.Windows.Forms.TextBox();
             this.lblAnho = new System.Windows.Forms.Label();
-            this.Numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreTipoLadrillo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip2.SuspendLayout();
             this.gbLotesSalientes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAsignacion)).BeginInit();
@@ -80,7 +80,7 @@
             this.btnRegresar});
             this.toolStrip2.Location = new System.Drawing.Point(0, 0);
             this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(790, 25);
+            this.toolStrip2.Size = new System.Drawing.Size(793, 25);
             this.toolStrip2.TabIndex = 40;
             this.toolStrip2.Text = "toolStrip2";
             // 
@@ -215,12 +215,33 @@
             this.dgvAsignacion.Size = new System.Drawing.Size(594, 202);
             this.dgvAsignacion.TabIndex = 34;
             // 
+            // Numero
+            // 
+            this.Numero.HeaderText = "N°";
+            this.Numero.Name = "Numero";
+            this.Numero.ReadOnly = true;
+            // 
+            // NombreTipoLadrillo
+            // 
+            this.NombreTipoLadrillo.HeaderText = "Nombre Tipo de Ladrillo";
+            this.NombreTipoLadrillo.Name = "NombreTipoLadrillo";
+            this.NombreTipoLadrillo.ReadOnly = true;
+            this.NombreTipoLadrillo.Width = 300;
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.Name = "Cantidad";
+            this.Cantidad.ReadOnly = true;
+            this.Cantidad.Width = 150;
+            // 
             // cboNombreTipoLadrillo
             // 
+            this.cboNombreTipoLadrillo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboNombreTipoLadrillo.FormattingEnabled = true;
             this.cboNombreTipoLadrillo.Location = new System.Drawing.Point(251, 48);
             this.cboNombreTipoLadrillo.Name = "cboNombreTipoLadrillo";
-            this.cboNombreTipoLadrillo.Size = new System.Drawing.Size(189, 21);
+            this.cboNombreTipoLadrillo.Size = new System.Drawing.Size(189, 23);
             this.cboNombreTipoLadrillo.TabIndex = 33;
             // 
             // lblNombreTipoLadrillo
@@ -266,9 +287,10 @@
             // 
             // txtIDPlan
             // 
+            this.txtIDPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIDPlan.Location = new System.Drawing.Point(270, 32);
             this.txtIDPlan.Name = "txtIDPlan";
-            this.txtIDPlan.Size = new System.Drawing.Size(93, 20);
+            this.txtIDPlan.Size = new System.Drawing.Size(93, 21);
             this.txtIDPlan.TabIndex = 24;
             // 
             // lblIDPlan
@@ -283,9 +305,10 @@
             // 
             // txtAnho
             // 
+            this.txtAnho.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAnho.Location = new System.Drawing.Point(270, 58);
             this.txtAnho.Name = "txtAnho";
-            this.txtAnho.Size = new System.Drawing.Size(132, 20);
+            this.txtAnho.Size = new System.Drawing.Size(132, 21);
             this.txtAnho.TabIndex = 22;
             // 
             // lblAnho
@@ -298,31 +321,11 @@
             this.lblAnho.TabIndex = 21;
             this.lblAnho.Text = "Año";
             // 
-            // Numero
-            // 
-            this.Numero.HeaderText = "N°";
-            this.Numero.Name = "Numero";
-            this.Numero.ReadOnly = true;
-            // 
-            // NombreTipoLadrillo
-            // 
-            this.NombreTipoLadrillo.HeaderText = "Nombre Tipo de Ladrillo";
-            this.NombreTipoLadrillo.Name = "NombreTipoLadrillo";
-            this.NombreTipoLadrillo.ReadOnly = true;
-            this.NombreTipoLadrillo.Width = 300;
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.HeaderText = "Cantidad";
-            this.Cantidad.Name = "Cantidad";
-            this.Cantidad.ReadOnly = true;
-            this.Cantidad.Width = 150;
-            // 
             // frmGestionarPlanProduccion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(790, 602);
+            this.ClientSize = new System.Drawing.Size(793, 602);
             this.ControlBox = false;
             this.Controls.Add(this.gbLotesSalientes);
             this.Controls.Add(this.gbDatosOperario);

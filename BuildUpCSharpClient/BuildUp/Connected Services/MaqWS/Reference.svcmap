@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:8080/BuildUpServices/MaquinariaWS?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://52.207.108.70:8080/BuildUpServices/MaquinariaWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="MaquinariaWS1.wsdl" MetadataType="Wsdl" ID="dfd0efc0-beb7-4601-9f5b-7c97dfb0853e" SourceId="1" SourceUrl="http://localhost:8080/BuildUpServices/MaquinariaWS?WSDL" />
-    <MetadataFile FileName="MaquinariaWS1.xsd" MetadataType="Schema" ID="f427a1da-cfed-4d4f-86c0-404a4703b173" SourceId="1" SourceUrl="http://localhost:8080/BuildUpServices/MaquinariaWS?xsd=1" />
+    <MetadataFile FileName="MaquinariaWS.wsdl" MetadataType="Wsdl" ID="ca6ccb7b-2957-44b1-bb87-e4e14ec8ca92" SourceId="1" SourceUrl="http://52.207.108.70:8080/BuildUpServices/MaquinariaWS?WSDL" />
+    <MetadataFile FileName="MaquinariaWS.xsd" MetadataType="Schema" ID="892d68e6-c0c1-4a5e-8420-9b677b11916b" SourceId="1" SourceUrl="http://52.207.108.70:8080/BuildUpServices/MaquinariaWS?xsd=1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

@@ -31,25 +31,23 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGestionarProblema));
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnNuevo = new System.Windows.Forms.ToolStripButton();
+            this.btnGuardar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnBuscar = new System.Windows.Forms.ToolStripButton();
+            this.btnActualizar = new System.Windows.Forms.ToolStripButton();
+            this.btnEliminar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnCancelar = new System.Windows.Forms.ToolStripButton();
+            this.btnRegresar = new System.Windows.Forms.ToolStripButton();
             this.label1 = new System.Windows.Forms.Label();
             this.gbDatosMaquinaria = new System.Windows.Forms.GroupBox();
+            this.txtNivelImportancia = new System.Windows.Forms.TextBox();
             this.lblNivelImportancia = new System.Windows.Forms.Label();
             this.txtTipo = new System.Windows.Forms.TextBox();
             this.txtIdProblema = new System.Windows.Forms.TextBox();
             this.lblTipo = new System.Windows.Forms.Label();
             this.lblIdProblema = new System.Windows.Forms.Label();
-            this.txtNivelImportancia = new System.Windows.Forms.TextBox();
-            this.txtActivo = new System.Windows.Forms.TextBox();
-            this.lblActivo = new System.Windows.Forms.Label();
-            this.btnNuevo = new System.Windows.Forms.ToolStripButton();
-            this.btnGuardar = new System.Windows.Forms.ToolStripButton();
-            this.btnBuscar = new System.Windows.Forms.ToolStripButton();
-            this.btnActualizar = new System.Windows.Forms.ToolStripButton();
-            this.btnEliminar = new System.Windows.Forms.ToolStripButton();
-            this.btnCancelar = new System.Windows.Forms.ToolStripButton();
-            this.btnRegresar = new System.Windows.Forms.ToolStripButton();
             this.toolStrip2.SuspendLayout();
             this.gbDatosMaquinaria.SuspendLayout();
             this.SuspendLayout();
@@ -71,7 +69,7 @@
             this.btnRegresar});
             this.toolStrip2.Location = new System.Drawing.Point(0, 0);
             this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(682, 25);
+            this.toolStrip2.Size = new System.Drawing.Size(616, 25);
             this.toolStrip2.TabIndex = 45;
             this.toolStrip2.Text = "toolStrip2";
             // 
@@ -79,108 +77,6 @@
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
-            // 
-            // toolStripSeparator4
-            // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 25);
-            // 
-            // label1
-            // 
-            this.label1.Location = new System.Drawing.Point(0, 213);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 23);
-            this.label1.TabIndex = 44;
-            // 
-            // gbDatosMaquinaria
-            // 
-            this.gbDatosMaquinaria.Controls.Add(this.txtActivo);
-            this.gbDatosMaquinaria.Controls.Add(this.lblActivo);
-            this.gbDatosMaquinaria.Controls.Add(this.txtNivelImportancia);
-            this.gbDatosMaquinaria.Controls.Add(this.lblNivelImportancia);
-            this.gbDatosMaquinaria.Controls.Add(this.txtTipo);
-            this.gbDatosMaquinaria.Controls.Add(this.txtIdProblema);
-            this.gbDatosMaquinaria.Controls.Add(this.lblTipo);
-            this.gbDatosMaquinaria.Controls.Add(this.lblIdProblema);
-            this.gbDatosMaquinaria.Location = new System.Drawing.Point(53, 67);
-            this.gbDatosMaquinaria.Name = "gbDatosMaquinaria";
-            this.gbDatosMaquinaria.Size = new System.Drawing.Size(509, 169);
-            this.gbDatosMaquinaria.TabIndex = 46;
-            this.gbDatosMaquinaria.TabStop = false;
-            this.gbDatosMaquinaria.Text = "Datos del Problema";
-            // 
-            // lblNivelImportancia
-            // 
-            this.lblNivelImportancia.AutoSize = true;
-            this.lblNivelImportancia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNivelImportancia.Location = new System.Drawing.Point(68, 95);
-            this.lblNivelImportancia.Name = "lblNivelImportancia";
-            this.lblNivelImportancia.Size = new System.Drawing.Size(119, 15);
-            this.lblNivelImportancia.TabIndex = 8;
-            this.lblNivelImportancia.Text = "Nivel de Importancia";
-            // 
-            // txtTipo
-            // 
-            this.txtTipo.Location = new System.Drawing.Point(189, 59);
-            this.txtTipo.Name = "txtTipo";
-            this.txtTipo.Size = new System.Drawing.Size(241, 20);
-            this.txtTipo.TabIndex = 7;
-            // 
-            // txtIdProblema
-            // 
-            this.txtIdProblema.Location = new System.Drawing.Point(189, 27);
-            this.txtIdProblema.Name = "txtIdProblema";
-            this.txtIdProblema.Size = new System.Drawing.Size(100, 20);
-            this.txtIdProblema.TabIndex = 5;
-            // 
-            // lblTipo
-            // 
-            this.lblTipo.AutoSize = true;
-            this.lblTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTipo.Location = new System.Drawing.Point(152, 60);
-            this.lblTipo.Name = "lblTipo";
-            this.lblTipo.Size = new System.Drawing.Size(31, 15);
-            this.lblTipo.TabIndex = 6;
-            this.lblTipo.Text = "Tipo";
-            // 
-            // lblIdProblema
-            // 
-            this.lblIdProblema.AutoSize = true;
-            this.lblIdProblema.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIdProblema.Location = new System.Drawing.Point(87, 28);
-            this.lblIdProblema.Name = "lblIdProblema";
-            this.lblIdProblema.Size = new System.Drawing.Size(96, 15);
-            this.lblIdProblema.TabIndex = 5;
-            this.lblIdProblema.Text = "ID del Problema";
-            // 
-            // txtNivelImportancia
-            // 
-            this.txtNivelImportancia.Location = new System.Drawing.Point(189, 94);
-            this.txtNivelImportancia.Name = "txtNivelImportancia";
-            this.txtNivelImportancia.Size = new System.Drawing.Size(241, 20);
-            this.txtNivelImportancia.TabIndex = 9;
-            // 
-            // txtActivo
-            // 
-            this.txtActivo.Location = new System.Drawing.Point(189, 131);
-            this.txtActivo.Name = "txtActivo";
-            this.txtActivo.Size = new System.Drawing.Size(27, 20);
-            this.txtActivo.TabIndex = 11;
-            // 
-            // lblActivo
-            // 
-            this.lblActivo.AutoSize = true;
-            this.lblActivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblActivo.Location = new System.Drawing.Point(145, 132);
-            this.lblActivo.Name = "lblActivo";
-            this.lblActivo.Size = new System.Drawing.Size(38, 15);
-            this.lblActivo.TabIndex = 10;
-            this.lblActivo.Text = "Activo";
             // 
             // btnNuevo
             // 
@@ -199,6 +95,11 @@
             this.btnGuardar.Size = new System.Drawing.Size(81, 22);
             this.btnGuardar.Text = "&Registrar";
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
             // 
             // btnBuscar
             // 
@@ -227,6 +128,11 @@
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 25);
+            // 
             // btnCancelar
             // 
             this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
@@ -246,11 +152,87 @@
             this.btnRegresar.Text = "Regresar";
             this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
             // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(0, 213);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(100, 23);
+            this.label1.TabIndex = 44;
+            // 
+            // gbDatosMaquinaria
+            // 
+            this.gbDatosMaquinaria.Controls.Add(this.txtNivelImportancia);
+            this.gbDatosMaquinaria.Controls.Add(this.lblNivelImportancia);
+            this.gbDatosMaquinaria.Controls.Add(this.txtTipo);
+            this.gbDatosMaquinaria.Controls.Add(this.txtIdProblema);
+            this.gbDatosMaquinaria.Controls.Add(this.lblTipo);
+            this.gbDatosMaquinaria.Controls.Add(this.lblIdProblema);
+            this.gbDatosMaquinaria.Location = new System.Drawing.Point(53, 67);
+            this.gbDatosMaquinaria.Name = "gbDatosMaquinaria";
+            this.gbDatosMaquinaria.Size = new System.Drawing.Size(509, 143);
+            this.gbDatosMaquinaria.TabIndex = 46;
+            this.gbDatosMaquinaria.TabStop = false;
+            this.gbDatosMaquinaria.Text = "Datos del Problema";
+            // 
+            // txtNivelImportancia
+            // 
+            this.txtNivelImportancia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNivelImportancia.Location = new System.Drawing.Point(189, 94);
+            this.txtNivelImportancia.Name = "txtNivelImportancia";
+            this.txtNivelImportancia.Size = new System.Drawing.Size(241, 21);
+            this.txtNivelImportancia.TabIndex = 9;
+            // 
+            // lblNivelImportancia
+            // 
+            this.lblNivelImportancia.AutoSize = true;
+            this.lblNivelImportancia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNivelImportancia.Location = new System.Drawing.Point(68, 95);
+            this.lblNivelImportancia.Name = "lblNivelImportancia";
+            this.lblNivelImportancia.Size = new System.Drawing.Size(119, 15);
+            this.lblNivelImportancia.TabIndex = 8;
+            this.lblNivelImportancia.Text = "Nivel de Importancia";
+            // 
+            // txtTipo
+            // 
+            this.txtTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTipo.Location = new System.Drawing.Point(189, 59);
+            this.txtTipo.Name = "txtTipo";
+            this.txtTipo.Size = new System.Drawing.Size(241, 21);
+            this.txtTipo.TabIndex = 7;
+            // 
+            // txtIdProblema
+            // 
+            this.txtIdProblema.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdProblema.Location = new System.Drawing.Point(189, 27);
+            this.txtIdProblema.Name = "txtIdProblema";
+            this.txtIdProblema.Size = new System.Drawing.Size(100, 21);
+            this.txtIdProblema.TabIndex = 5;
+            // 
+            // lblTipo
+            // 
+            this.lblTipo.AutoSize = true;
+            this.lblTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTipo.Location = new System.Drawing.Point(152, 60);
+            this.lblTipo.Name = "lblTipo";
+            this.lblTipo.Size = new System.Drawing.Size(31, 15);
+            this.lblTipo.TabIndex = 6;
+            this.lblTipo.Text = "Tipo";
+            // 
+            // lblIdProblema
+            // 
+            this.lblIdProblema.AutoSize = true;
+            this.lblIdProblema.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIdProblema.Location = new System.Drawing.Point(87, 28);
+            this.lblIdProblema.Name = "lblIdProblema";
+            this.lblIdProblema.Size = new System.Drawing.Size(96, 15);
+            this.lblIdProblema.TabIndex = 5;
+            this.lblIdProblema.Text = "ID del Problema";
+            // 
             // frmGestionarProblema
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(682, 357);
+            this.ClientSize = new System.Drawing.Size(616, 269);
             this.Controls.Add(this.gbDatosMaquinaria);
             this.Controls.Add(this.toolStrip2);
             this.Controls.Add(this.label1);
@@ -287,7 +269,5 @@
         private System.Windows.Forms.Label lblTipo;
         private System.Windows.Forms.Label lblIdProblema;
         private System.Windows.Forms.TextBox txtNivelImportancia;
-        private System.Windows.Forms.TextBox txtActivo;
-        private System.Windows.Forms.Label lblActivo;
     }
 }

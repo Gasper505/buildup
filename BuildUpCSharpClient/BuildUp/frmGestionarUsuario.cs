@@ -14,10 +14,33 @@ namespace BuildUp
     public partial class frmGestionarUsuario : Form
     {
         String ruta;
+        UsuarioWS.UsuarioWSClient daoUsuario;
+        JefeAreaWS.JefeAreaWSClient daoJefeArea;
+        SupervisorWS.SupervisorWSClient daoSupervisor;
+        OperarioWS.OperarioWSClient daoOperario;
+        IngenieroWS.IngenieroWSClient daoIngeniero;
+
+        JefeAreaWS.jefeArea jefeArea;
+        SupervisorWS.supervisor supervisor;
+        OperarioWS.operario operario;
+        IngenieroWS.ingeniero ingeniero;
+
+        UsuarioWS.usuario usuario;
+
         public frmGestionarUsuario()
         {
             InitializeComponent();
             EstablecerEstadoComponentes(Estado.Inicial);
+            daoUsuario = new UsuarioWS.UsuarioWSClient();
+            daoJefeArea = new JefeAreaWS.JefeAreaWSClient();
+            daoSupervisor = new SupervisorWS.SupervisorWSClient();
+            daoOperario = new OperarioWS.OperarioWSClient();
+            daoIngeniero = new IngenieroWS.IngenieroWSClient();
+
+            jefeArea = new JefeAreaWS.jefeArea();
+            supervisor = new SupervisorWS.supervisor();
+            operario = new OperarioWS.operario();
+            ingeniero = new IngenieroWS.ingeniero();
 
         }
 
@@ -90,6 +113,17 @@ namespace BuildUp
 
         private void btGuardar_Click(object sender, EventArgs e)
         {
+
+            usuario.nombres = txtNombre.Text;
+            usuario.apellidos = txtApellidos.Text;
+            usuario.telefono = txtNumero.Text;
+            usuario.correo = txtCorreo.Text;
+            usuario.fechaFinContrato = dtpFinContrato.Value;
+            usuario.rol = cbRol.Text;
+            
+
+            //daoUsuario.insertar(usuario);
+
             txtID.Text = "";
             txtNombre.Text = "";
             txtApellidos.Text = "";
@@ -109,14 +143,44 @@ namespace BuildUp
             frmBuscarUsuario formBuscarUsuario = new frmBuscarUsuario();
             if (formBuscarUsuario.ShowDialog() == DialogResult.OK)
             {
-                //PASO DE INFORMACION
+                MemoryStream ms = new MemoryStream(usuario.foto);
+                pbFoto.Image = new Bitmap(ms);
+
+                usuario = formBuscarUsuario.UsuarioSeleccionado;
+                txtNombre.Text = usuario.nombres;
+                txtApellidos.Text = usuario.apellidos;
+                txtNumero.Text = usuario.telefono;
+                txtCorreo.Text = usuario.correo;
+                dtpFinContrato.Value = usuario.fechaFinContrato;
+                cbRol.Text = usuario.rol;
+
+                //asignar campo exclusivo de rol
+                EstablecerEstadoComponentes(Estado.Modificacion);
             }
-            EstablecerEstadoComponentes(Estado.Modificacion);
+            
         }
 
         private void btActualizar_Click(object sender, EventArgs e)
         {
+            usuario.nombres = txtNombre.Text;
+            usuario.apellidos = txtApellidos.Text;
+            usuario.telefono = txtNumero.Text;
+            usuario.correo = txtCorreo.Text;
+            usuario.fechaFinContrato = dtpFinContrato.Value;
+            usuario.rol = cbRol.Text;
 
+            //daoUsuario.actualizar(usuario);
+
+            txtID.Text = "";
+            txtNombre.Text = "";
+            txtApellidos.Text = "";
+            dtpNacimiento.Text = "";
+            dtpFinContrato.Text = "";
+            txtNumero.Text = "";
+            txtCorreo.Text = "";
+            cbRol.Text = "";
+            pbFoto.Text = "";
+            EstablecerEstadoComponentes(Estado.Inicial);
         }
 
         private void btEliminar_Click(object sender, EventArgs e)
@@ -144,8 +208,13 @@ namespace BuildUp
             {
                 if (ofFoto.ShowDialog() == DialogResult.OK)
                 {
-                    ruta = ofFoto.FileName;
-                    pbFoto.Image = Image.FromFile(ruta);
+                    //ruta = ofFoto.FileName;
+                    //pbFoto.Image = Image.FromFile(ruta);
+
+                    FileStream fs = new FileStream(ruta, FileMode.Open, FileAccess.Read);
+                    BinaryReader br = new BinaryReader(fs);
+                    usuario.foto = br.ReadBytes((int)fs.Length);
+                    fs.Close();
                 }
             }
             catch (Exception ex)
@@ -159,10 +228,6 @@ namespace BuildUp
             this.Hide();
         }
 
-        private void frmGestionarUsuario_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 
 }

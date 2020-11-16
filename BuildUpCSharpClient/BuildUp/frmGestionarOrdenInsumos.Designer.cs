@@ -38,7 +38,6 @@
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.lblCantidad = new System.Windows.Forms.Label();
             this.btnBuscarInsumo = new System.Windows.Forms.Button();
-            this.txtUnidadMedida = new System.Windows.Forms.TextBox();
             this.lblUnidadMedida = new System.Windows.Forms.Label();
             this.txtNombreInsumo = new System.Windows.Forms.TextBox();
             this.txtIdInsumo = new System.Windows.Forms.TextBox();
@@ -67,6 +66,7 @@
             this.btnRechazarOrden = new System.Windows.Forms.Button();
             this.btnAceptarOrden = new System.Windows.Forms.Button();
             this.picEquis = new System.Windows.Forms.PictureBox();
+            this.cboUnidadMedida = new System.Windows.Forms.ComboBox();
             this.gbDatosOrdenInsumos.SuspendLayout();
             this.gbDatosInsumo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -79,16 +79,18 @@
             // 
             // dtpFechaActual
             // 
+            this.dtpFechaActual.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaActual.Location = new System.Drawing.Point(189, 62);
             this.dtpFechaActual.Name = "dtpFechaActual";
-            this.dtpFechaActual.Size = new System.Drawing.Size(241, 20);
+            this.dtpFechaActual.Size = new System.Drawing.Size(241, 21);
             this.dtpFechaActual.TabIndex = 1;
             // 
             // txtIdOrdenInsumos
             // 
+            this.txtIdOrdenInsumos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIdOrdenInsumos.Location = new System.Drawing.Point(189, 28);
             this.txtIdOrdenInsumos.Name = "txtIdOrdenInsumos";
-            this.txtIdOrdenInsumos.Size = new System.Drawing.Size(100, 20);
+            this.txtIdOrdenInsumos.Size = new System.Drawing.Size(100, 21);
             this.txtIdOrdenInsumos.TabIndex = 2;
             // 
             // lblIdOrdenInsumos
@@ -126,10 +128,10 @@
             // 
             // gbDatosInsumo
             // 
+            this.gbDatosInsumo.Controls.Add(this.cboUnidadMedida);
             this.gbDatosInsumo.Controls.Add(this.numericUpDown1);
             this.gbDatosInsumo.Controls.Add(this.lblCantidad);
             this.gbDatosInsumo.Controls.Add(this.btnBuscarInsumo);
-            this.gbDatosInsumo.Controls.Add(this.txtUnidadMedida);
             this.gbDatosInsumo.Controls.Add(this.lblUnidadMedida);
             this.gbDatosInsumo.Controls.Add(this.txtNombreInsumo);
             this.gbDatosInsumo.Controls.Add(this.txtIdInsumo);
@@ -144,9 +146,10 @@
             // 
             // numericUpDown1
             // 
+            this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown1.Location = new System.Drawing.Point(189, 94);
             this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(100, 20);
+            this.numericUpDown1.Size = new System.Drawing.Size(100, 21);
             this.numericUpDown1.TabIndex = 12;
             // 
             // lblCantidad
@@ -170,13 +173,6 @@
             this.btnBuscarInsumo.UseVisualStyleBackColor = true;
             this.btnBuscarInsumo.Click += new System.EventHandler(this.btnBuscarInsumo_Click);
             // 
-            // txtUnidadMedida
-            // 
-            this.txtUnidadMedida.Location = new System.Drawing.Point(189, 127);
-            this.txtUnidadMedida.Name = "txtUnidadMedida";
-            this.txtUnidadMedida.Size = new System.Drawing.Size(100, 20);
-            this.txtUnidadMedida.TabIndex = 9;
-            // 
             // lblUnidadMedida
             // 
             this.lblUnidadMedida.AutoSize = true;
@@ -189,16 +185,18 @@
             // 
             // txtNombreInsumo
             // 
+            this.txtNombreInsumo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombreInsumo.Location = new System.Drawing.Point(189, 59);
             this.txtNombreInsumo.Name = "txtNombreInsumo";
-            this.txtNombreInsumo.Size = new System.Drawing.Size(241, 20);
+            this.txtNombreInsumo.Size = new System.Drawing.Size(241, 21);
             this.txtNombreInsumo.TabIndex = 7;
             // 
             // txtIdInsumo
             // 
+            this.txtIdInsumo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIdInsumo.Location = new System.Drawing.Point(189, 27);
             this.txtIdInsumo.Name = "txtIdInsumo";
-            this.txtIdInsumo.Size = new System.Drawing.Size(100, 20);
+            this.txtIdInsumo.Size = new System.Drawing.Size(100, 21);
             this.txtIdInsumo.TabIndex = 5;
             // 
             // lblNombreInsumo
@@ -238,9 +236,10 @@
             // 
             // txtApellidosOperario
             // 
+            this.txtApellidosOperario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApellidosOperario.Location = new System.Drawing.Point(189, 91);
             this.txtApellidosOperario.Name = "txtApellidosOperario";
-            this.txtApellidosOperario.Size = new System.Drawing.Size(100, 20);
+            this.txtApellidosOperario.Size = new System.Drawing.Size(100, 21);
             this.txtApellidosOperario.TabIndex = 9;
             // 
             // lblApellidosOperario
@@ -255,16 +254,18 @@
             // 
             // txtNombresOperario
             // 
+            this.txtNombresOperario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombresOperario.Location = new System.Drawing.Point(189, 59);
             this.txtNombresOperario.Name = "txtNombresOperario";
-            this.txtNombresOperario.Size = new System.Drawing.Size(241, 20);
+            this.txtNombresOperario.Size = new System.Drawing.Size(241, 21);
             this.txtNombresOperario.TabIndex = 7;
             // 
             // txtIdOperario
             // 
+            this.txtIdOperario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIdOperario.Location = new System.Drawing.Point(189, 27);
             this.txtIdOperario.Name = "txtIdOperario";
-            this.txtIdOperario.Size = new System.Drawing.Size(100, 20);
+            this.txtIdOperario.Size = new System.Drawing.Size(100, 21);
             this.txtIdOperario.TabIndex = 5;
             // 
             // lblNombresOperario
@@ -456,6 +457,21 @@
             this.picEquis.TabIndex = 42;
             this.picEquis.TabStop = false;
             // 
+            // cboUnidadMedida
+            // 
+            this.cboUnidadMedida.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboUnidadMedida.FormattingEnabled = true;
+            this.cboUnidadMedida.Items.AddRange(new object[] {
+            "Kilogramos",
+            "Toneladas",
+            "Litros",
+            "Onzas",
+            "Libras"});
+            this.cboUnidadMedida.Location = new System.Drawing.Point(189, 128);
+            this.cboUnidadMedida.Name = "cboUnidadMedida";
+            this.cboUnidadMedida.Size = new System.Drawing.Size(121, 23);
+            this.cboUnidadMedida.TabIndex = 47;
+            // 
             // frmGestionarOrdenInsumos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -506,7 +522,6 @@
         private System.Windows.Forms.Label lblNombresOperario;
         private System.Windows.Forms.Label lblIdOperario;
         private System.Windows.Forms.Button btnBuscarInsumo;
-        private System.Windows.Forms.TextBox txtUnidadMedida;
         private System.Windows.Forms.Label lblUnidadMedida;
         private System.Windows.Forms.TextBox txtApellidosOperario;
         private System.Windows.Forms.ToolStrip toolStrip2;
@@ -527,5 +542,6 @@
         private System.Windows.Forms.Button btnRechazarOrden;
         private System.Windows.Forms.PictureBox picCheck;
         private System.Windows.Forms.ToolStripButton btnCancelar;
+        private System.Windows.Forms.ComboBox cboUnidadMedida;
     }
 }

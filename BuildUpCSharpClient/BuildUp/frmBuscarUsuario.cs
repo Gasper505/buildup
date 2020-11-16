@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BuildUp.UsuarioWS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,14 +13,31 @@ namespace BuildUp
 {
     public partial class frmBuscarUsuario : Form
     {
+
+        UsuarioWS.UsuarioWSClient daoUsuario;
+        UsuarioWS.usuario usuarioSeleccionado;
+
+        public usuario UsuarioSeleccionado { get => usuarioSeleccionado; set => usuarioSeleccionado = value; }
+
         public frmBuscarUsuario()
         {
+            daoUsuario = new UsuarioWS.UsuarioWSClient();
+            usuarioSeleccionado = new UsuarioWS.usuario();
             InitializeComponent();
+            dgvUsuarios.AutoGenerateColumns = false;
         }
 
         private void btnSeleccionar_Click(object sender, EventArgs e)
         {
+            usuarioSeleccionado = (UsuarioWS.usuario)dgvUsuarios.CurrentRow.DataBoundItem;
             this.DialogResult = DialogResult.OK;
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            //BindingList<UsuarioWS.usuario> us = new BindingList<UsuarioWS.usuario>(daoUsuario.listar().ToArray());
+
+            //dgvUsuarios.DataSource = us;
         }
     }
 }

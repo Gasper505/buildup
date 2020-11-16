@@ -88,8 +88,9 @@ namespace BuildUp
             if (formBuscarPlanProduccion.ShowDialog() == DialogResult.OK)
             {
                 //...
+                EstablecerEstadoComponentes(Estado.Modificacion);
             }
-            EstablecerEstadoComponentes(Estado.Modificacion);
+            
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)

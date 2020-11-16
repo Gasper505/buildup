@@ -17,6 +17,17 @@ namespace BuildUp
         {
             InitializeComponent();
             EstablecerEstadoComponentes(Estado.Inicial);
+            if (frmLogIn.Usuario.rol == "Ingeniero"
+                || frmLogIn.Usuario.rol == "ingeniero"
+                || frmLogIn.Usuario.rol == "INGENIERO")
+            {
+                btnActualizar.Visible = false;
+                btnNuevo.Visible = false;
+                btnGuardar.Visible = false;
+                btnEliminar.Visible = false;
+                btnCancelar.Visible = false;
+
+            }
         }
 
         private void EstablecerEstadoComponentes(Estado estado)
@@ -147,8 +158,9 @@ namespace BuildUp
             if (formBuscarLineaProduccion.ShowDialog() == DialogResult.OK)
             {
                 //Recibir linea seleccionada de frmBuscarLineaProduccion
+                EstablecerEstadoComponentes(Estado.Modificacion);
             }
-            EstablecerEstadoComponentes(Estado.Modificacion);
+            
         }
     }
 }

@@ -12,11 +12,18 @@ namespace BuildUp
 {
     public partial class frmGestionarRespuesta : Form
     {
+
+        RespuestaWS.RespuestaWSClient daoRespuesta;
+        RespuestaWS.respuesta respuesta;
+
         public frmGestionarRespuesta()
         {
             InitializeComponent();
             establecerEstadoComponentes(Estado.Inicial);
+            daoRespuesta = new RespuestaWS.RespuestaWSClient();
+            respuesta = new RespuestaWS.respuesta();
         }
+
         public void establecerEstadoComponentes(Estado estado)
         {
             switch (estado)
@@ -30,7 +37,6 @@ namespace BuildUp
                     btnCancelar.Enabled = false;
                     txtIdRespuesta.Enabled = false;
                     txtTipo.Enabled = false;
-                    txtActivo.Enabled = false;
                     break;
                 case Estado.Nuevo:
                     btnNuevo.Enabled = false;
@@ -41,7 +47,6 @@ namespace BuildUp
                     btnCancelar.Enabled = true;
                     txtIdRespuesta.Enabled = false;
                     txtTipo.Enabled = true;
-                    txtActivo.Enabled = false;
                     break;
                 case Estado.Modificacion:
                     btnNuevo.Enabled = false;
@@ -52,32 +57,35 @@ namespace BuildUp
                     btnCancelar.Enabled = true;
                     txtIdRespuesta.Enabled = false;
                     txtTipo.Enabled = true;
-                    txtActivo.Enabled = true;
                     break;
 
             }
-        }
-        private void gbDatosMaquinaria_Enter(object sender, EventArgs e)
-        {
-
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             establecerEstadoComponentes(Estado.Nuevo);
-            txtActivo.Text = "1";
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            //CODIGO QUE REGISTRARA LA INFORMACION EN LA BD
+            DialogResult dr = MessageBox.Show("¿Esta seguro que desea registrar esta Respuesta?", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (dr == DialogResult.Yes)
+            {
+                respuesta.tipo = txtTipo.Text;
+                if (daoRespuesta.insertarRespuesta(respuesta) == 1)
+                {
+                    MessageBox.Show("La Respuesta se ha registrado con éxito", "Mensaje de Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtIdRespuesta.Text = "";
+                    txtTipo.Text = "";
+                    establecerEstadoComponentes(Estado.Inicial);
+                }
+                else
+                {
+                    MessageBox.Show("Error en el proceso", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
 
-
-            //FIN
-            txtIdRespuesta.Text = "";
-            txtTipo.Text = "";
-            txtActivo.Text = "";
-            establecerEstadoComponentes(Estado.Inicial);
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -85,24 +93,43 @@ namespace BuildUp
 
             txtIdRespuesta.Text = "";
             txtTipo.Text = "";
-            txtActivo.Text = "";
             establecerEstadoComponentes(Estado.Inicial);
             
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-
+            DialogResult dr = MessageBox.Show("¿Esta seguro que desea actualizar esta Respuesta?", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (dr == DialogResult.Yes)
+            {
+                respuesta.idRespuesta = Int32.Parse(txtIdRespuesta.Text);
+                respuesta.tipo = txtTipo.Text;
+                if(daoRespuesta.actualizarRespuesta(respuesta) == 1)
+                {
+                    MessageBox.Show("La Respuesta se ha actualizado con éxito", "Mensaje de Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtIdRespuesta.Text = "";
+                    txtTipo.Text = "";
+                    establecerEstadoComponentes(Estado.Inicial);
+                }
+                else
+                {
+                    MessageBox.Show("Error en el proceso", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                
+            }
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("¿Está seguro de eliminar la Respuesta?", "Confirmación", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information);
-        }
-
-        private void frmGestionarRespuesta_Load(object sender, EventArgs e)
-        {
-
+            DialogResult dr = MessageBox.Show("¿Esta seguro que desea eliminar esta Respuesta?", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (dr == DialogResult.Yes)
+            {
+                daoRespuesta.eliminarRespuesta(Int32.Parse(txtIdRespuesta.Text));
+                txtIdRespuesta.Text = "";
+                txtTipo.Text = "";
+                establecerEstadoComponentes(Estado.Inicial);
+            }
+            
         }
 
         private void btnRegresar_Click(object sender, EventArgs e)
@@ -115,9 +142,12 @@ namespace BuildUp
             frmBuscarRespuesta formBuscarRespuesta = new frmBuscarRespuesta();
             if (formBuscarRespuesta.ShowDialog() == DialogResult.OK)
             {
-                //PASO DE INFORMACION
+                respuesta = formBuscarRespuesta.RespuestaSeleccionada;
+                txtIdRespuesta.Text = respuesta.idRespuesta.ToString();
+                txtTipo.Text = respuesta.tipo;
+                establecerEstadoComponentes(Estado.Modificacion);
             }
-            establecerEstadoComponentes(Estado.Modificacion);
+            
         }
     }
 }

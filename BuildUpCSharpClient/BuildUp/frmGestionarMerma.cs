@@ -36,7 +36,7 @@ namespace BuildUp
                     txtDescripcion.Enabled = false;
                     txtIDMerma.Enabled = false;
                     txtTipo.Enabled = false;
-                    txtUnidad.Enabled = false;
+                    cboUnidadMedida.Enabled = false;
                     break;
                 case Estado.Nuevo:
                     btnNuevo.Enabled = false;
@@ -48,7 +48,7 @@ namespace BuildUp
                     txtDescripcion.Enabled = true;
                     txtIDMerma.Enabled = false;
                     txtTipo.Enabled = true;
-                    txtUnidad.Enabled = true;
+                    cboUnidadMedida.Enabled = true;
                     break;
                 case Estado.Modificacion:
                     btnNuevo.Enabled = false;
@@ -60,7 +60,7 @@ namespace BuildUp
                     txtDescripcion.Enabled = true;
                     txtIDMerma.Enabled = false;
                     txtTipo.Enabled = true;
-                    txtUnidad.Enabled = true;
+                    cboUnidadMedida.Enabled = true;
                     break;
 
             }
@@ -82,8 +82,9 @@ namespace BuildUp
             if (formBuscarMerma.ShowDialog() == DialogResult.OK)
             {
                 //...
+                EstablecerEstadoComponentes(Estado.Modificacion);
             }
-            EstablecerEstadoComponentes(Estado.Modificacion);
+            
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
@@ -101,7 +102,7 @@ namespace BuildUp
             txtDescripcion.Text = "";
             txtIDMerma.Text = "";
             txtTipo.Text = "";
-            txtUnidad.Text = "";
+            cboUnidadMedida.Text = "";
             EstablecerEstadoComponentes(Estado.Inicial);
         }
 

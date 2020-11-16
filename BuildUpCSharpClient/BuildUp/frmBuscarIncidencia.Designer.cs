@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.gbBusqueda = new System.Windows.Forms.GroupBox();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dtpHasta = new System.Windows.Forms.DateTimePicker();
             this.lblHasta = new System.Windows.Forms.Label();
             this.lblDesde = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpDesde = new System.Windows.Forms.DateTimePicker();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnSeleccionar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -47,10 +47,10 @@
             // 
             // gbBusqueda
             // 
-            this.gbBusqueda.Controls.Add(this.dateTimePicker2);
+            this.gbBusqueda.Controls.Add(this.dtpHasta);
             this.gbBusqueda.Controls.Add(this.lblHasta);
             this.gbBusqueda.Controls.Add(this.lblDesde);
-            this.gbBusqueda.Controls.Add(this.dateTimePicker1);
+            this.gbBusqueda.Controls.Add(this.dtpDesde);
             this.gbBusqueda.Controls.Add(this.btnBuscar);
             this.gbBusqueda.Location = new System.Drawing.Point(74, 43);
             this.gbBusqueda.Name = "gbBusqueda";
@@ -59,12 +59,12 @@
             this.gbBusqueda.TabStop = false;
             this.gbBusqueda.Text = "Parámetros de Búsqueda";
             // 
-            // dateTimePicker2
+            // dtpHasta
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(151, 71);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(254, 20);
-            this.dateTimePicker2.TabIndex = 17;
+            this.dtpHasta.Location = new System.Drawing.Point(151, 71);
+            this.dtpHasta.Name = "dtpHasta";
+            this.dtpHasta.Size = new System.Drawing.Size(254, 20);
+            this.dtpHasta.TabIndex = 17;
             // 
             // lblHasta
             // 
@@ -86,12 +86,12 @@
             this.lblDesde.TabIndex = 15;
             this.lblDesde.Text = "Desde";
             // 
-            // dateTimePicker1
+            // dtpDesde
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(151, 41);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(254, 20);
-            this.dateTimePicker1.TabIndex = 14;
+            this.dtpDesde.Location = new System.Drawing.Point(151, 41);
+            this.dtpDesde.Name = "dtpDesde";
+            this.dtpDesde.Size = new System.Drawing.Size(254, 20);
+            this.dtpDesde.TabIndex = 14;
             // 
             // btnBuscar
             // 
@@ -112,6 +112,7 @@
             this.btnSeleccionar.TabIndex = 16;
             this.btnSeleccionar.Text = "Seleccionar";
             this.btnSeleccionar.UseVisualStyleBackColor = true;
+            this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
             // 
             // dataGridView1
             // 
@@ -184,10 +185,10 @@
         #endregion
 
         private System.Windows.Forms.GroupBox gbBusqueda;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dtpHasta;
         private System.Windows.Forms.Label lblHasta;
         private System.Windows.Forms.Label lblDesde;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpDesde;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button btnSeleccionar;
         private System.Windows.Forms.DataGridView dataGridView1;

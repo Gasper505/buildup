@@ -107,8 +107,9 @@ namespace BuildUp
             if (formBuscarProveedor.ShowDialog() == DialogResult.OK)
             {
                 //...
+                EstablecerEstadoComponentes(Estado.Modificacion);
             }
-            EstablecerEstadoComponentes(Estado.Modificacion);
+            
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)

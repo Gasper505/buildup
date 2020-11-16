@@ -45,7 +45,7 @@ namespace BuildUp
 
             if (resultado == 1)
             {
-                
+                //test every possibility
                 switch (usuario.rol)
                 {
                     case "Jefe":

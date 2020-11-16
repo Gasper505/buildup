@@ -15,27 +15,26 @@ namespace BuildUp
     public partial class frmBuscarProveedor : Form
     {
         ProveedorWS.ProveedorWSClient daoProveedor;
+        ProveedorWS.proveedor proveedorSeleccionado;
+
         public frmBuscarProveedor()
         {
             InitializeComponent();
             daoProveedor = new ProveedorWS.ProveedorWSClient();
+            proveedorSeleccionado = new ProveedorWS.proveedor();
+            dgvProveedores.AutoGenerateColumns = false;
         }
 
         private void btnSeleccionar_Click(object sender, EventArgs e)
         {
+            proveedorSeleccionado = (ProveedorWS.proveedor)dgvProveedores.CurrentRow.DataBoundItem;
             this.DialogResult = DialogResult.OK;
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            txtRazonSocial.Text = "";
             BindingList<ProveedorWS.proveedor> provs = new BindingList<ProveedorWS.proveedor>(daoProveedor.listarProveedor().ToArray());
-           
-
-
-
-
-            dataGridView1.DataSource = provs;
+            dgvProveedores.DataSource = provs;
         }
     }
 }

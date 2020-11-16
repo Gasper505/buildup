@@ -98,7 +98,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(227, 96);
+            this.label5.Location = new System.Drawing.Point(263, 96);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(57, 15);
             this.label5.TabIndex = 4;
@@ -128,7 +128,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(39, 376);
+            this.label8.Location = new System.Drawing.Point(39, 371);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(70, 15);
             this.label8.TabIndex = 7;
@@ -138,7 +138,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(410, 260);
+            this.label9.Location = new System.Drawing.Point(410, 254);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(31, 15);
             this.label9.TabIndex = 8;
@@ -148,7 +148,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(39, 324);
+            this.label10.Location = new System.Drawing.Point(39, 319);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(138, 15);
             this.label10.TabIndex = 9;
@@ -156,52 +156,64 @@
             // 
             // txtNombre
             // 
+            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.Location = new System.Drawing.Point(42, 114);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(179, 20);
+            this.txtNombre.Size = new System.Drawing.Size(215, 21);
             this.txtNombre.TabIndex = 10;
             // 
             // txtApellidos
             // 
-            this.txtApellidos.Location = new System.Drawing.Point(227, 114);
+            this.txtApellidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtApellidos.Location = new System.Drawing.Point(266, 114);
             this.txtApellidos.Name = "txtApellidos";
-            this.txtApellidos.Size = new System.Drawing.Size(188, 20);
+            this.txtApellidos.Size = new System.Drawing.Size(223, 21);
             this.txtApellidos.TabIndex = 11;
             // 
             // txtNumero
             // 
+            this.txtNumero.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNumero.Location = new System.Drawing.Point(42, 225);
             this.txtNumero.Name = "txtNumero";
-            this.txtNumero.Size = new System.Drawing.Size(114, 20);
+            this.txtNumero.Size = new System.Drawing.Size(114, 21);
             this.txtNumero.TabIndex = 13;
             // 
             // txtCorreo
             // 
+            this.txtCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCorreo.Location = new System.Drawing.Point(42, 275);
             this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(236, 20);
+            this.txtCorreo.Size = new System.Drawing.Size(236, 21);
             this.txtCorreo.TabIndex = 14;
             // 
             // dtpNacimiento
             // 
+            this.dtpNacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpNacimiento.Location = new System.Drawing.Point(42, 160);
             this.dtpNacimiento.Name = "dtpNacimiento";
-            this.dtpNacimiento.Size = new System.Drawing.Size(226, 20);
+            this.dtpNacimiento.Size = new System.Drawing.Size(226, 21);
             this.dtpNacimiento.TabIndex = 15;
             // 
             // dtpFinContrato
             // 
-            this.dtpFinContrato.Location = new System.Drawing.Point(42, 342);
+            this.dtpFinContrato.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFinContrato.Location = new System.Drawing.Point(42, 337);
             this.dtpFinContrato.Name = "dtpFinContrato";
-            this.dtpFinContrato.Size = new System.Drawing.Size(226, 20);
+            this.dtpFinContrato.Size = new System.Drawing.Size(226, 21);
             this.dtpFinContrato.TabIndex = 16;
             // 
             // cbRol
             // 
+            this.cbRol.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbRol.FormattingEnabled = true;
-            this.cbRol.Location = new System.Drawing.Point(42, 394);
+            this.cbRol.Items.AddRange(new object[] {
+            "Jefe de Área",
+            "Supervisor",
+            "Ingeniero",
+            "Operario"});
+            this.cbRol.Location = new System.Drawing.Point(42, 389);
             this.cbRol.Name = "cbRol";
-            this.cbRol.Size = new System.Drawing.Size(121, 21);
+            this.cbRol.Size = new System.Drawing.Size(135, 23);
             this.cbRol.TabIndex = 17;
             // 
             // lblID
@@ -216,9 +228,10 @@
             // 
             // txtID
             // 
+            this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtID.Location = new System.Drawing.Point(42, 64);
             this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(114, 20);
+            this.txtID.Size = new System.Drawing.Size(105, 21);
             this.txtID.TabIndex = 23;
             // 
             // btAgregarFoto
@@ -237,7 +250,7 @@
             // 
             this.pbFoto.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.pbFoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbFoto.Location = new System.Drawing.Point(413, 278);
+            this.pbFoto.Location = new System.Drawing.Point(413, 272);
             this.pbFoto.Name = "pbFoto";
             this.pbFoto.Size = new System.Drawing.Size(136, 140);
             this.pbFoto.TabIndex = 18;
@@ -355,7 +368,6 @@
             this.gbUsuario.Controls.Add(this.pbFoto);
             this.gbUsuario.Controls.Add(this.cbRol);
             this.gbUsuario.Controls.Add(this.dtpFinContrato);
-            this.gbUsuario.Controls.Add(this.dtpNacimiento);
             this.gbUsuario.Controls.Add(this.txtCorreo);
             this.gbUsuario.Controls.Add(this.txtNumero);
             this.gbUsuario.Controls.Add(this.txtApellidos);
@@ -366,11 +378,12 @@
             this.gbUsuario.Controls.Add(this.label7);
             this.gbUsuario.Controls.Add(this.label6);
             this.gbUsuario.Controls.Add(this.label5);
-            this.gbUsuario.Controls.Add(this.label4);
             this.gbUsuario.Controls.Add(this.label2);
+            this.gbUsuario.Controls.Add(this.dtpNacimiento);
+            this.gbUsuario.Controls.Add(this.label4);
             this.gbUsuario.Location = new System.Drawing.Point(65, 52);
             this.gbUsuario.Name = "gbUsuario";
-            this.gbUsuario.Size = new System.Drawing.Size(585, 448);
+            this.gbUsuario.Size = new System.Drawing.Size(585, 531);
             this.gbUsuario.TabIndex = 44;
             this.gbUsuario.TabStop = false;
             this.gbUsuario.Text = "Datos del Usuario";
@@ -380,7 +393,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(715, 546);
+            this.ClientSize = new System.Drawing.Size(715, 615);
             this.ControlBox = false;
             this.Controls.Add(this.gbUsuario);
             this.Controls.Add(this.toolStrip2);
@@ -389,7 +402,6 @@
             this.Name = "frmGestionarUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestión de Usuarios";
-            this.Load += new System.EventHandler(this.frmGestionarUsuario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).EndInit();
             this.toolStrip2.ResumeLayout(false);
             this.toolStrip2.PerformLayout();

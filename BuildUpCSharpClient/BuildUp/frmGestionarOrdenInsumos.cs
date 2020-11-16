@@ -58,7 +58,7 @@ namespace BuildUp
                     txtIdOrdenInsumos.Enabled = false;
                     txtNombresOperario.Enabled = false;
                     txtNombreInsumo.Enabled = false;
-                    txtUnidadMedida.Enabled = false;
+                    cboUnidadMedida.Enabled = false;
                     dtpFechaActual.Enabled = false;
                     btnBuscarInsumo.Enabled = false;
                     numericUpDown1.Enabled = false;
@@ -78,7 +78,7 @@ namespace BuildUp
                     txtIdOrdenInsumos.Enabled = false;
                     txtNombresOperario.Enabled = true;
                     txtNombreInsumo.Enabled = true;
-                    txtUnidadMedida.Enabled = false;
+                    cboUnidadMedida.Enabled = true;
                     dtpFechaActual.Enabled = true;
                     btnBuscarInsumo.Enabled = true;
                     numericUpDown1.Enabled = true;
@@ -105,7 +105,6 @@ namespace BuildUp
                         txtIdOrdenInsumos.Enabled = false;
                         txtNombresOperario.Enabled = false;
                         txtNombreInsumo.Enabled = false;
-                        txtUnidadMedida.Enabled = false;
                         dtpFechaActual.Enabled = false;
                         btnBuscarInsumo.Enabled = false;
                         numericUpDown1.Enabled = false;
@@ -126,7 +125,7 @@ namespace BuildUp
                         txtIdOrdenInsumos.Enabled = false;
                         txtNombresOperario.Enabled = true;
                         txtNombreInsumo.Enabled = true;
-                        txtUnidadMedida.Enabled = false;
+                        cboUnidadMedida.Enabled = true;
                         dtpFechaActual.Enabled = true;
                         btnBuscarInsumo.Enabled = true;
                         numericUpDown1.Enabled = true;
@@ -164,8 +163,9 @@ namespace BuildUp
             if (formBuscarOrdenInsumos.ShowDialog() == DialogResult.OK)
             {
                 //...
+                EstablecerEstadoComponentes(Estado.Modificacion);
             }
-            EstablecerEstadoComponentes(Estado.Modificacion);
+            
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -176,7 +176,6 @@ namespace BuildUp
             txtIdOrdenInsumos.Text = "";
             txtNombresOperario.Text = "";
             txtNombreInsumo.Text = "";
-            txtUnidadMedida.Text = "";
             EstablecerEstadoComponentes(Estado.Inicial);
         }
 

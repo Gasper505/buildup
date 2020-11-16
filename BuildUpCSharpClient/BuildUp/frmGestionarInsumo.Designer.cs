@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGestionarInsumo));
             this.gbDatosInsumo = new System.Windows.Forms.GroupBox();
-            this.txtUnidadMedida = new System.Windows.Forms.TextBox();
+            this.cboUnidadMedida = new System.Windows.Forms.ComboBox();
             this.lblUnidadMedida = new System.Windows.Forms.Label();
             this.txtNombreInsumo = new System.Windows.Forms.TextBox();
             this.txtIdInsumo = new System.Windows.Forms.TextBox();
@@ -53,25 +53,33 @@
             // 
             // gbDatosInsumo
             // 
-            this.gbDatosInsumo.Controls.Add(this.txtUnidadMedida);
+            this.gbDatosInsumo.Controls.Add(this.cboUnidadMedida);
             this.gbDatosInsumo.Controls.Add(this.lblUnidadMedida);
             this.gbDatosInsumo.Controls.Add(this.txtNombreInsumo);
             this.gbDatosInsumo.Controls.Add(this.txtIdInsumo);
             this.gbDatosInsumo.Controls.Add(this.lblNombreInsumo);
             this.gbDatosInsumo.Controls.Add(this.lblIdInsumo);
-            this.gbDatosInsumo.Location = new System.Drawing.Point(88, 57);
+            this.gbDatosInsumo.Location = new System.Drawing.Point(79, 59);
             this.gbDatosInsumo.Name = "gbDatosInsumo";
-            this.gbDatosInsumo.Size = new System.Drawing.Size(472, 183);
+            this.gbDatosInsumo.Size = new System.Drawing.Size(500, 183);
             this.gbDatosInsumo.TabIndex = 13;
             this.gbDatosInsumo.TabStop = false;
             this.gbDatosInsumo.Text = "Datos del Insumo";
             // 
-            // txtUnidadMedida
+            // cboUnidadMedida
             // 
-            this.txtUnidadMedida.Location = new System.Drawing.Point(186, 118);
-            this.txtUnidadMedida.Name = "txtUnidadMedida";
-            this.txtUnidadMedida.Size = new System.Drawing.Size(136, 20);
-            this.txtUnidadMedida.TabIndex = 9;
+            this.cboUnidadMedida.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboUnidadMedida.FormattingEnabled = true;
+            this.cboUnidadMedida.Items.AddRange(new object[] {
+            "Kilogramos",
+            "Toneladas",
+            "Litros",
+            "Onzas",
+            "Libras"});
+            this.cboUnidadMedida.Location = new System.Drawing.Point(186, 116);
+            this.cboUnidadMedida.Name = "cboUnidadMedida";
+            this.cboUnidadMedida.Size = new System.Drawing.Size(134, 23);
+            this.cboUnidadMedida.TabIndex = 47;
             // 
             // lblUnidadMedida
             // 
@@ -134,21 +142,21 @@
             this.btnRegresar});
             this.toolStrip2.Location = new System.Drawing.Point(0, 0);
             this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(655, 25);
+            this.toolStrip2.Size = new System.Drawing.Size(662, 25);
             this.toolStrip2.TabIndex = 26;
             this.toolStrip2.Text = "toolStrip2";
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
             // btnNuevo
             // 
             this.btnNuevo.Image = global::BuildUp.Properties.Resources.new_file_icon_4;
             this.btnNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(66, 22);
+            this.btnNuevo.Size = new System.Drawing.Size(72, 24);
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
@@ -164,14 +172,14 @@
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 27);
             // 
             // btnBuscar
             // 
             this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
             this.btnBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(66, 22);
+            this.btnBuscar.Size = new System.Drawing.Size(72, 24);
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
@@ -180,7 +188,7 @@
             this.btnActualizar.Image = ((System.Drawing.Image)(resources.GetObject("btnActualizar.Image")));
             this.btnActualizar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(84, 22);
+            this.btnActualizar.Size = new System.Drawing.Size(95, 24);
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
@@ -189,21 +197,21 @@
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
             this.btnEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(74, 22);
+            this.btnEliminar.Size = new System.Drawing.Size(83, 24);
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 25);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 27);
             // 
             // btnCancelar
             // 
             this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
             this.btnCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(135, 22);
+            this.btnCancelar.Size = new System.Drawing.Size(151, 24);
             this.btnCancelar.Text = "Limpiar y Cancelar";
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
@@ -213,7 +221,7 @@
             this.btnRegresar.Image = ((System.Drawing.Image)(resources.GetObject("btnRegresar.Image")));
             this.btnRegresar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Size = new System.Drawing.Size(81, 22);
+            this.btnRegresar.Size = new System.Drawing.Size(87, 24);
             this.btnRegresar.Text = "Regresar";
             this.btnRegresar.Click += new System.EventHandler(this.btnVolver_Click);
             // 
@@ -221,7 +229,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(655, 292);
+            this.ClientSize = new System.Drawing.Size(662, 284);
             this.ControlBox = false;
             this.Controls.Add(this.toolStrip2);
             this.Controls.Add(this.gbDatosInsumo);
@@ -239,7 +247,6 @@
 
         #endregion
         private System.Windows.Forms.GroupBox gbDatosInsumo;
-        private System.Windows.Forms.TextBox txtUnidadMedida;
         private System.Windows.Forms.Label lblUnidadMedida;
         private System.Windows.Forms.TextBox txtNombreInsumo;
         private System.Windows.Forms.TextBox txtIdInsumo;
@@ -256,5 +263,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripButton btnCancelar;
         private System.Windows.Forms.ToolStripButton btnRegresar;
+        private System.Windows.Forms.ComboBox cboUnidadMedida;
     }
 }

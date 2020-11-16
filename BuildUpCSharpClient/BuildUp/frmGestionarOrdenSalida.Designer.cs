@@ -94,9 +94,10 @@
             // 
             // txtIDOrden
             // 
+            this.txtIDOrden.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIDOrden.Location = new System.Drawing.Point(273, 19);
             this.txtIDOrden.Name = "txtIDOrden";
-            this.txtIDOrden.Size = new System.Drawing.Size(107, 20);
+            this.txtIDOrden.Size = new System.Drawing.Size(107, 21);
             this.txtIDOrden.TabIndex = 20;
             // 
             // lblIDOrden
@@ -121,16 +122,18 @@
             // 
             // dtpFechaRegistro
             // 
+            this.dtpFechaRegistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaRegistro.Location = new System.Drawing.Point(273, 51);
             this.dtpFechaRegistro.Name = "dtpFechaRegistro";
-            this.dtpFechaRegistro.Size = new System.Drawing.Size(205, 20);
+            this.dtpFechaRegistro.Size = new System.Drawing.Size(205, 21);
             this.dtpFechaRegistro.TabIndex = 28;
             // 
             // numNroAproxLadrillos
             // 
+            this.numNroAproxLadrillos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numNroAproxLadrillos.Location = new System.Drawing.Point(212, 69);
             this.numNroAproxLadrillos.Name = "numNroAproxLadrillos";
-            this.numNroAproxLadrillos.Size = new System.Drawing.Size(86, 20);
+            this.numNroAproxLadrillos.Size = new System.Drawing.Size(86, 21);
             this.numNroAproxLadrillos.TabIndex = 31;
             // 
             // lblNombreTipoLadrillo
@@ -145,10 +148,11 @@
             // 
             // cboNombreTipoLadrillo
             // 
+            this.cboNombreTipoLadrillo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboNombreTipoLadrillo.FormattingEnabled = true;
             this.cboNombreTipoLadrillo.Location = new System.Drawing.Point(212, 33);
             this.cboNombreTipoLadrillo.Name = "cboNombreTipoLadrillo";
-            this.cboNombreTipoLadrillo.Size = new System.Drawing.Size(182, 21);
+            this.cboNombreTipoLadrillo.Size = new System.Drawing.Size(182, 23);
             this.cboNombreTipoLadrillo.TabIndex = 33;
             // 
             // gbDatosOrden
@@ -181,9 +185,10 @@
             // 
             // txtApellidos
             // 
+            this.txtApellidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApellidos.Location = new System.Drawing.Point(273, 81);
             this.txtApellidos.Name = "txtApellidos";
-            this.txtApellidos.Size = new System.Drawing.Size(259, 20);
+            this.txtApellidos.Size = new System.Drawing.Size(259, 21);
             this.txtApellidos.TabIndex = 28;
             // 
             // label3
@@ -198,9 +203,10 @@
             // 
             // txtIDOperario
             // 
+            this.txtIDOperario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIDOperario.Location = new System.Drawing.Point(273, 29);
             this.txtIDOperario.Name = "txtIDOperario";
-            this.txtIDOperario.Size = new System.Drawing.Size(107, 20);
+            this.txtIDOperario.Size = new System.Drawing.Size(107, 21);
             this.txtIDOperario.TabIndex = 24;
             // 
             // label1
@@ -215,9 +221,10 @@
             // 
             // txtNombres
             // 
+            this.txtNombres.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombres.Location = new System.Drawing.Point(273, 55);
             this.txtNombres.Name = "txtNombres";
-            this.txtNombres.Size = new System.Drawing.Size(259, 20);
+            this.txtNombres.Size = new System.Drawing.Size(259, 21);
             this.txtNombres.TabIndex = 22;
             // 
             // gbLotesSalientes
@@ -312,7 +319,7 @@
             this.btnRegresar});
             this.toolStrip2.Location = new System.Drawing.Point(0, 0);
             this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(789, 25);
+            this.toolStrip2.Size = new System.Drawing.Size(794, 25);
             this.toolStrip2.TabIndex = 39;
             this.toolStrip2.Text = "toolStrip2";
             // 
@@ -399,7 +406,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(789, 641);
+            this.ClientSize = new System.Drawing.Size(794, 641);
             this.ControlBox = false;
             this.Controls.Add(this.toolStrip2);
             this.Controls.Add(this.gbLotesSalientes);

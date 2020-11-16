@@ -14,7 +14,6 @@
   </xs:complexType>
   <xs:complexType name="tipoLadrillo">
     <xs:sequence>
-      <xs:element name="activo" type="xs:boolean" />
       <xs:element name="altura" type="xs:double" />
       <xs:element name="ancho" type="xs:double" />
       <xs:element name="idTipoLadrillo" type="xs:int" />

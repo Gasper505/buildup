@@ -31,23 +31,21 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGestionarRespuesta));
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.label1 = new System.Windows.Forms.Label();
             this.btnNuevo = new System.Windows.Forms.ToolStripButton();
             this.btnGuardar = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.btnBuscar = new System.Windows.Forms.ToolStripButton();
             this.btnActualizar = new System.Windows.Forms.ToolStripButton();
             this.btnEliminar = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.btnCancelar = new System.Windows.Forms.ToolStripButton();
             this.btnRegresar = new System.Windows.Forms.ToolStripButton();
+            this.label1 = new System.Windows.Forms.Label();
             this.gbDatosMaquinaria = new System.Windows.Forms.GroupBox();
-            this.lblFinGarantia = new System.Windows.Forms.Label();
             this.txtTipo = new System.Windows.Forms.TextBox();
             this.txtIdRespuesta = new System.Windows.Forms.TextBox();
             this.lblNombreMaquinaria = new System.Windows.Forms.Label();
             this.lblIdMaquinaria = new System.Windows.Forms.Label();
-            this.txtActivo = new System.Windows.Forms.TextBox();
             this.toolStrip2.SuspendLayout();
             this.gbDatosMaquinaria.SuspendLayout();
             this.SuspendLayout();
@@ -78,23 +76,6 @@
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
-            // 
-            // toolStripSeparator4
-            // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 25);
-            // 
-            // label1
-            // 
-            this.label1.Location = new System.Drawing.Point(0, 213);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 23);
-            this.label1.TabIndex = 44;
-            // 
             // btnNuevo
             // 
             this.btnNuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevo.Image")));
@@ -112,6 +93,11 @@
             this.btnGuardar.Size = new System.Drawing.Size(81, 22);
             this.btnGuardar.Text = "&Registrar";
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
             // 
             // btnBuscar
             // 
@@ -140,6 +126,11 @@
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 25);
+            // 
             // btnCancelar
             // 
             this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
@@ -159,31 +150,25 @@
             this.btnRegresar.Text = "Regresar";
             this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
             // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(0, 213);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(100, 23);
+            this.label1.TabIndex = 44;
+            // 
             // gbDatosMaquinaria
             // 
-            this.gbDatosMaquinaria.Controls.Add(this.txtActivo);
-            this.gbDatosMaquinaria.Controls.Add(this.lblFinGarantia);
             this.gbDatosMaquinaria.Controls.Add(this.txtTipo);
             this.gbDatosMaquinaria.Controls.Add(this.txtIdRespuesta);
             this.gbDatosMaquinaria.Controls.Add(this.lblNombreMaquinaria);
             this.gbDatosMaquinaria.Controls.Add(this.lblIdMaquinaria);
-            this.gbDatosMaquinaria.Location = new System.Drawing.Point(74, 63);
+            this.gbDatosMaquinaria.Location = new System.Drawing.Point(60, 62);
             this.gbDatosMaquinaria.Name = "gbDatosMaquinaria";
-            this.gbDatosMaquinaria.Size = new System.Drawing.Size(542, 187);
+            this.gbDatosMaquinaria.Size = new System.Drawing.Size(542, 111);
             this.gbDatosMaquinaria.TabIndex = 46;
             this.gbDatosMaquinaria.TabStop = false;
             this.gbDatosMaquinaria.Text = "Datos de la Respuesta";
-            this.gbDatosMaquinaria.Enter += new System.EventHandler(this.gbDatosMaquinaria_Enter);
-            // 
-            // lblFinGarantia
-            // 
-            this.lblFinGarantia.AutoSize = true;
-            this.lblFinGarantia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFinGarantia.Location = new System.Drawing.Point(124, 95);
-            this.lblFinGarantia.Name = "lblFinGarantia";
-            this.lblFinGarantia.Size = new System.Drawing.Size(38, 15);
-            this.lblFinGarantia.TabIndex = 8;
-            this.lblFinGarantia.Text = "Activo";
             // 
             // txtTipo
             // 
@@ -219,24 +204,16 @@
             this.lblIdMaquinaria.TabIndex = 5;
             this.lblIdMaquinaria.Text = "ID de la Respuesta";
             // 
-            // txtActivo
-            // 
-            this.txtActivo.Location = new System.Drawing.Point(189, 94);
-            this.txtActivo.Name = "txtActivo";
-            this.txtActivo.Size = new System.Drawing.Size(31, 20);
-            this.txtActivo.TabIndex = 9;
-            // 
             // frmGestionarRespuesta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(669, 302);
+            this.ClientSize = new System.Drawing.Size(669, 213);
             this.Controls.Add(this.gbDatosMaquinaria);
             this.Controls.Add(this.toolStrip2);
             this.Controls.Add(this.label1);
             this.Name = "frmGestionarRespuesta";
             this.Text = "frmGestionarRespuesta";
-            this.Load += new System.EventHandler(this.frmGestionarRespuesta_Load);
             this.toolStrip2.ResumeLayout(false);
             this.toolStrip2.PerformLayout();
             this.gbDatosMaquinaria.ResumeLayout(false);
@@ -261,11 +238,9 @@
         private System.Windows.Forms.ToolStripButton btnRegresar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox gbDatosMaquinaria;
-        private System.Windows.Forms.Label lblFinGarantia;
         private System.Windows.Forms.TextBox txtTipo;
         private System.Windows.Forms.TextBox txtIdRespuesta;
         private System.Windows.Forms.Label lblNombreMaquinaria;
         private System.Windows.Forms.Label lblIdMaquinaria;
-        private System.Windows.Forms.TextBox txtActivo;
     }
 }

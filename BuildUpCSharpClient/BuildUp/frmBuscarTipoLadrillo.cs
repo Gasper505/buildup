@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BuildUp.TipoLadrilloWS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,15 +15,21 @@ namespace BuildUp
     {
 
         TipoLadrilloWS.TipoLadrilloWSClient daoTipoLadrillo;
+        TipoLadrilloWS.tipoLadrillo tipoLadrilloSeleccionado;
+
+        public tipoLadrillo TipoLadrilloSeleccionado { get => tipoLadrilloSeleccionado; set => tipoLadrilloSeleccionado = value; }
 
         public frmBuscarTipoLadrillo()
         {
             InitializeComponent();
             daoTipoLadrillo = new TipoLadrilloWS.TipoLadrilloWSClient();
+            tipoLadrilloSeleccionado = new TipoLadrilloWS.tipoLadrillo();
+            dgvTiposLadrillo.AutoGenerateColumns = false;
         }
 
         private void btnSeleccionar_Click(object sender, EventArgs e)
         {
+            tipoLadrilloSeleccionado = (TipoLadrilloWS.tipoLadrillo)dgvTiposLadrillo.CurrentRow.DataBoundItem;
             this.DialogResult = DialogResult.OK;
         }
 

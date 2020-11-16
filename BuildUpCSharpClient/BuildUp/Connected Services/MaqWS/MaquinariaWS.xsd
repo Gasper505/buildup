@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://services.buildup.pucp.edu.pe/" targetNamespace="http://services.buildup.pucp.edu.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="actualizarMaquinaria" type="tns:actualizarMaquinaria" />
+  <xs:element name="actualizarMaquinariaResponse" type="tns:actualizarMaquinariaResponse" />
   <xs:element name="eliminarMaquinaria" type="tns:eliminarMaquinaria" />
   <xs:element name="eliminarMaquinariaResponse" type="tns:eliminarMaquinariaResponse" />
   <xs:element name="insertarMaquinaria" type="tns:insertarMaquinaria" />
   <xs:element name="insertarMaquinariaResponse" type="tns:insertarMaquinariaResponse" />
-  <xs:element name="listarMaquinariasConParametros" type="tns:listarMaquinariasConParametros" />
-  <xs:element name="listarMaquinariasConParametrosResponse" type="tns:listarMaquinariasConParametrosResponse" />
-  <xs:complexType name="listarMaquinariasConParametros">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="nombreMaquinaria" type="xs:string" />
-      <xs:element minOccurs="0" name="nombreLineaProduccion" type="xs:string" />
-    </xs:sequence>
+  <xs:element name="listarMaquinaria" type="tns:listarMaquinaria" />
+  <xs:element name="listarMaquinariaResponse" type="tns:listarMaquinariaResponse" />
+  <xs:complexType name="listarMaquinaria">
+    <xs:sequence />
   </xs:complexType>
-  <xs:complexType name="listarMaquinariasConParametrosResponse">
+  <xs:complexType name="listarMaquinariaResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:maquinaria" />
     </xs:sequence>
@@ -92,6 +91,17 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="eliminarMaquinariaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarMaquinaria">
+    <xs:sequence>
+      <xs:element name="maquinaria" type="xs:int" />
+      <xs:element name="state" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarMaquinariaResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>

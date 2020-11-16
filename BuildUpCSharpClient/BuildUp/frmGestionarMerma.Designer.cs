@@ -41,7 +41,7 @@
             this.btnCancelar = new System.Windows.Forms.ToolStripButton();
             this.btnRegresar = new System.Windows.Forms.ToolStripButton();
             this.gbDatosMaquinaria = new System.Windows.Forms.GroupBox();
-            this.txtUnidad = new System.Windows.Forms.TextBox();
+            this.cboUnidadMedida = new System.Windows.Forms.ComboBox();
             this.lblUnidad = new System.Windows.Forms.Label();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.lblDescripcion = new System.Windows.Forms.Label();
@@ -70,7 +70,7 @@
             this.btnRegresar});
             this.toolStrip2.Location = new System.Drawing.Point(0, 0);
             this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(611, 25);
+            this.toolStrip2.Size = new System.Drawing.Size(614, 25);
             this.toolStrip2.TabIndex = 44;
             this.toolStrip2.Text = "toolStrip2";
             // 
@@ -155,7 +155,7 @@
             // 
             // gbDatosMaquinaria
             // 
-            this.gbDatosMaquinaria.Controls.Add(this.txtUnidad);
+            this.gbDatosMaquinaria.Controls.Add(this.cboUnidadMedida);
             this.gbDatosMaquinaria.Controls.Add(this.lblUnidad);
             this.gbDatosMaquinaria.Controls.Add(this.txtDescripcion);
             this.gbDatosMaquinaria.Controls.Add(this.lblDescripcion);
@@ -170,18 +170,26 @@
             this.gbDatosMaquinaria.TabStop = false;
             this.gbDatosMaquinaria.Text = "Datos de la Merma";
             // 
-            // txtUnidad
+            // cboUnidadMedida
             // 
-            this.txtUnidad.Location = new System.Drawing.Point(199, 202);
-            this.txtUnidad.Name = "txtUnidad";
-            this.txtUnidad.Size = new System.Drawing.Size(161, 20);
-            this.txtUnidad.TabIndex = 11;
+            this.cboUnidadMedida.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboUnidadMedida.FormattingEnabled = true;
+            this.cboUnidadMedida.Items.AddRange(new object[] {
+            "Kilogramos",
+            "Toneladas",
+            "Litros",
+            "Onzas",
+            "Libras"});
+            this.cboUnidadMedida.Location = new System.Drawing.Point(199, 203);
+            this.cboUnidadMedida.Name = "cboUnidadMedida";
+            this.cboUnidadMedida.Size = new System.Drawing.Size(121, 23);
+            this.cboUnidadMedida.TabIndex = 46;
             // 
             // lblUnidad
             // 
             this.lblUnidad.AutoSize = true;
             this.lblUnidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUnidad.Location = new System.Drawing.Point(84, 203);
+            this.lblUnidad.Location = new System.Drawing.Point(84, 206);
             this.lblUnidad.Name = "lblUnidad";
             this.lblUnidad.Size = new System.Drawing.Size(109, 15);
             this.lblUnidad.TabIndex = 10;
@@ -189,6 +197,7 @@
             // 
             // txtDescripcion
             // 
+            this.txtDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescripcion.Location = new System.Drawing.Point(199, 103);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
@@ -207,16 +216,18 @@
             // 
             // txtTipo
             // 
+            this.txtTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTipo.Location = new System.Drawing.Point(199, 73);
             this.txtTipo.Name = "txtTipo";
-            this.txtTipo.Size = new System.Drawing.Size(161, 20);
+            this.txtTipo.Size = new System.Drawing.Size(161, 21);
             this.txtTipo.TabIndex = 7;
             // 
             // txtIDMerma
             // 
+            this.txtIDMerma.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIDMerma.Location = new System.Drawing.Point(199, 41);
             this.txtIDMerma.Name = "txtIDMerma";
-            this.txtIDMerma.Size = new System.Drawing.Size(86, 20);
+            this.txtIDMerma.Size = new System.Drawing.Size(86, 21);
             this.txtIDMerma.TabIndex = 5;
             // 
             // lblTipo
@@ -243,7 +254,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(611, 366);
+            this.ClientSize = new System.Drawing.Size(614, 366);
             this.ControlBox = false;
             this.Controls.Add(this.gbDatosMaquinaria);
             this.Controls.Add(this.toolStrip2);
@@ -273,7 +284,6 @@
         private System.Windows.Forms.ToolStripButton btnCancelar;
         private System.Windows.Forms.ToolStripButton btnRegresar;
         private System.Windows.Forms.GroupBox gbDatosMaquinaria;
-        private System.Windows.Forms.TextBox txtUnidad;
         private System.Windows.Forms.Label lblUnidad;
         private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.Label lblDescripcion;
@@ -281,5 +291,6 @@
         private System.Windows.Forms.TextBox txtIDMerma;
         private System.Windows.Forms.Label lblTipo;
         private System.Windows.Forms.Label lblIDMerma;
+        private System.Windows.Forms.ComboBox cboUnidadMedida;
     }
 }

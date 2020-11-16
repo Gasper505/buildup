@@ -55,9 +55,10 @@
             // 
             // txtCorreo
             // 
+            this.txtCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCorreo.Location = new System.Drawing.Point(188, 118);
             this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(226, 20);
+            this.txtCorreo.Size = new System.Drawing.Size(226, 21);
             this.txtCorreo.TabIndex = 15;
             // 
             // label4
@@ -92,9 +93,10 @@
             // 
             // txtIDProveedor
             // 
+            this.txtIDProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIDProveedor.Location = new System.Drawing.Point(188, 41);
             this.txtIDProveedor.Name = "txtIDProveedor";
-            this.txtIDProveedor.Size = new System.Drawing.Size(100, 20);
+            this.txtIDProveedor.Size = new System.Drawing.Size(100, 21);
             this.txtIDProveedor.TabIndex = 11;
             // 
             // lblID
@@ -109,16 +111,18 @@
             // 
             // txtRazonSocial
             // 
+            this.txtRazonSocial.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRazonSocial.Location = new System.Drawing.Point(188, 78);
             this.txtRazonSocial.Name = "txtRazonSocial";
-            this.txtRazonSocial.Size = new System.Drawing.Size(226, 20);
+            this.txtRazonSocial.Size = new System.Drawing.Size(226, 21);
             this.txtRazonSocial.TabIndex = 16;
             // 
             // txtRepresentante
             // 
+            this.txtRepresentante.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRepresentante.Location = new System.Drawing.Point(188, 157);
             this.txtRepresentante.Name = "txtRepresentante";
-            this.txtRepresentante.Size = new System.Drawing.Size(226, 20);
+            this.txtRepresentante.Size = new System.Drawing.Size(226, 21);
             this.txtRepresentante.TabIndex = 17;
             // 
             // gbDatosProveedor
