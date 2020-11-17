@@ -25,18 +25,21 @@ public class IngenieroMySQL implements IngenieroDAO{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.urlMySQL, 
                     DBManager.user, DBManager.password);
-            String sql = "{call INSERTAR_INGENIERO(?,?,?,?,?,?,?,?)}";
+            String sql = "{call INSERTAR_INGENIERO(?,?,?,?,?,?,?,?,?,?)}";
             cs = con.prepareCall(sql);
             cs.registerOutParameter("_ID_INGENIERO", java.sql.Types.INTEGER);
             cs.setString("_NOMBRES", ing.getNombres());
             cs.setString("_APELLIDOS", ing.getApellidos());
+            cs.setDate("_FECHA_NACIMIENTO",new java.sql.Date(ing.getFechaNacimiento().getTime()));
             cs.setString("_TELEFONO", ing.getTelefono());
+            cs.setString("_CORREO",ing.getCorreo());
             cs.setString("_ROL",ing.getRol());
             cs.setDate("_FECHA_FIN_CONTRATO",new java.sql.Date(ing.getFechaFinContrato().getTime()));
+            cs.setBytes("_PHOTO", ing.getFoto());
             cs.setString("_ESPECIALIDAD", ing.getEspecialidad());
             cs.executeUpdate();
             ing.setIdPersona(cs.getInt("_ID_INGENIERO"));
-            resultado=1;       
+            resultado=cs.getInt("_ID_INGENIERO");  ;       
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }finally{
