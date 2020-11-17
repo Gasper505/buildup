@@ -12,5 +12,6 @@ public interface IngenieroDAO {
     int modificar(Ingeniero ing);
     int eliminar(int idIng);
     ArrayList<Ingeniero> listar();
+    String obtener_especialidad(int idIng);
     
 }

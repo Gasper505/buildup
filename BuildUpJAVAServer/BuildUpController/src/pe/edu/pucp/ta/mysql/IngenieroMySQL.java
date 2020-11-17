@@ -148,5 +148,26 @@ public class IngenieroMySQL implements IngenieroDAO{
         return ingenieros;
     }
     
+    @Override
+    public String obtener_especialidad(int idIng){
+        String especialidad = "";
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection(DBManager.urlMySQL, 
+                    DBManager.user, DBManager.password);
+            String sql = "{call OBTENER_INGENIERO_ESPECIALIDAD(?)}";
+            cs = con.prepareCall(sql);
+            cs.setInt("_ID_PERSONA",idIng);
+            rs=cs.executeQuery();     
+            while(rs.next()){
+                especialidad = rs.getString("ESPECIALIDAD");
+            }
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }finally{
+            try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());}
+        }
+        return especialidad;
+    }
     
 }

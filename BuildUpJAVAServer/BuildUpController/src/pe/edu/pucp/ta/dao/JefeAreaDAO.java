@@ -12,5 +12,6 @@ public interface JefeAreaDAO {
     int modificar(JefeArea jefeArea);
     int eliminar(int idJefe);
     ArrayList<JefeArea> listar();
+    byte[] obtener_foto_firma(int idJefeArea);
     
 }

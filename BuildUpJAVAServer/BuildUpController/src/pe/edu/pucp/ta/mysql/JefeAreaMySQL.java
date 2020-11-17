@@ -101,7 +101,7 @@ public class JefeAreaMySQL implements JefeAreaDAO{
             String sql = "{call ELIMINAR_JEFE_AREA(?)}";
             cs = con.prepareCall(sql);
             cs.setInt("_ID_JEFE_AREA", idJefe);
-            resultado=cs.executeUpdate();;
+            resultado=cs.executeUpdate();
         
         }catch(Exception ex){
             System.out.println(ex.getMessage());
@@ -141,5 +141,25 @@ public class JefeAreaMySQL implements JefeAreaDAO{
         }
         return jefes;
     }
-    
+    @Override
+    public byte[] obtener_foto_firma(int idJefeArea){
+        byte[] foto_firma = {};
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection(DBManager.urlMySQL, 
+                    DBManager.user, DBManager.password);
+            String sql = "{call OBTENER_JEFE_AREA_FOTO(?)}";
+            cs = con.prepareCall(sql);
+            cs.setInt("_ID_PERSONA",idJefeArea);
+            rs=cs.executeQuery();     
+            while(rs.next()){
+                foto_firma = rs.getBytes("PHOTO_FIRMA");
+            }
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }finally{
+            try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());}
+        }
+        return foto_firma;
+    }
 }

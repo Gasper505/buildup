@@ -9,6 +9,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import pe.edu.pucp.ta.config.DBManager;
 import pe.edu.pucp.ta.dao.OperarioDAO;
+import pe.edu.pucp.ta.model.LineaProduccion;
 import pe.edu.pucp.ta.model.Operario;
 
 
@@ -151,6 +152,28 @@ public class OperarioMySQL implements OperarioDAO{
             try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());}
         }
         return operarios;
+    }
+
+    @Override
+    public String obtener_linea_produccion(int idOp) {
+        String lineaProd = "";
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection(DBManager.urlMySQL, 
+                    DBManager.user, DBManager.password);
+            String sql = "{call OBTENER_OPERARIO_LINEA_PRODUCCION(?)}";
+            cs = con.prepareCall(sql);
+            cs.setInt("_ID_PERSONA",idOp);
+            rs=cs.executeQuery();     
+            while(rs.next()){
+                lineaProd = rs.getString("NOMBRE_LINEA_PRODUCCION");
+            }
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }finally{
+            try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());}
+        }
+        return lineaProd;
     }
 
 }

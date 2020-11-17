@@ -11,6 +11,7 @@ public interface OperarioDAO {
     int actualizar_estado(int idOp,boolean activo);
     int modificar(Operario op);
     int eliminar(int idOp);
+    String obtener_linea_produccion(int idOp);
     ArrayList<Operario> listar();
     
 }
