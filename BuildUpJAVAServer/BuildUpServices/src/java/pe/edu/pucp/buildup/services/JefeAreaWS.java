@@ -75,4 +75,15 @@ public class JefeAreaWS {
         }
         return resultado;
     }
+    
+    @WebMethod(operationName = "obtenerFotoFirmaJefeArea")
+    public byte[] obtenerFotoFirmaJefeArea(@WebParam(name = "idJefeArea") int idJefeArea ) {
+        byte[] foto_firma={};
+        try{
+            foto_firma = daoJefeArea.obtener_foto_firma(idJefeArea);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return foto_firma;
+    }
 }

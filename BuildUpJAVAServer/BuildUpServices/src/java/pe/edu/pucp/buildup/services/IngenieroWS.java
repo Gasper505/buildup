@@ -75,4 +75,14 @@ private IngenieroDAO daoIngeniero;
         }
         return resultado;
     }
+    @WebMethod(operationName = "obtenerEspecialidadIngeniero")
+    public String obtenerEspecialidadIngeniero(@WebParam(name = "idIngeniero") int idIngeniero ) {
+        String especialidad="";
+        try{
+            especialidad = daoIngeniero.obtener_especialidad(idIngeniero);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return especialidad;
+    }
 }

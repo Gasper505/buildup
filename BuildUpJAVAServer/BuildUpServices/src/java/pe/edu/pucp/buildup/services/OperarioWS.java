@@ -75,4 +75,14 @@ public class OperarioWS {
         }
         return resultado;
     }
+    @WebMethod(operationName = "obtenerLineaProduccionOperario")
+    public String obtenerLineaProduccionOperario(@WebParam(name = "idOperario") int idOperario ) {
+        String lineaProd="";
+        try{
+            lineaProd = daoOperario.obtener_linea_produccion(idOperario);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return lineaProd;
+    }
 }
