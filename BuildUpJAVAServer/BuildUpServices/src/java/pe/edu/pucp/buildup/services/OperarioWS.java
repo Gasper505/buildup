@@ -45,11 +45,11 @@ public class OperarioWS {
         }
         return resultado;
     }
-    @WebMethod(operationName = "actualizarOperario")
-    public int actualizarOperario(@WebParam(name = "operario") Operario operario) {
+    @WebMethod(operationName = "actualizarEstadoOperario")
+    public int actualizarEstadoOperario(@WebParam(name = "idOp") int idOp,@WebParam(name = "activo")boolean activo ) {
         int resultado = 0;
         try{
-            resultado = daoOperario.actualizar(operario);
+            resultado = daoOperario.actualizar_estado(idOp, activo);
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }
@@ -60,6 +60,16 @@ public class OperarioWS {
         int resultado = 0;
         try{
             resultado = daoOperario.eliminar(idOperario);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return resultado;
+    }
+    @WebMethod(operationName = "modificarOperario")
+    public int modificarOperario(@WebParam(name = "operario") Operario op ) {
+        int resultado = 0;
+        try{
+            resultado = daoOperario.modificar(op);
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }
