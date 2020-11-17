@@ -51,19 +51,16 @@ public class OperarioMySQL implements OperarioDAO{
     }
 
     @Override
-    public int actualizar(Operario op) {
+    public int actualizar_estado(int idOp, boolean activo) {
    int resultado = 0;
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user,DBManager.password);
             String sql =  "{call ACTUALIZAR_ESTADO_OPERARIO(?,?}";
             cs = con.prepareCall(sql);
-            cs.setInt("_ID_OPERARIO", op.getIdPersona());
-            cs.setBoolean("_ACTIVO", op.isActivo());
-            cs.executeUpdate();
-            op.setIdPersona(cs.getInt("_ID_OPERARIO"));
-            resultado = 1;
-        
+            cs.setInt("_ID_OPERARIO", idOp);
+            cs.setBoolean("_ACTIVO", activo);
+            resultado = cs.executeUpdate();
         } catch(Exception ex){ 
             System.out.println(ex.getMessage());
         }finally{
@@ -87,8 +84,7 @@ public class OperarioMySQL implements OperarioDAO{
             String sql = "{call ELIMINAR_OPERARIO(?)}";
             cs = con.prepareCall(sql);
             cs.setInt("_ID_OPERARIO",idOp);
-            cs.executeUpdate();
-            resultado=1;       
+            resultado=cs.executeUpdate();       
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }finally{
@@ -125,5 +121,35 @@ public class OperarioMySQL implements OperarioDAO{
         }
         return operarios;
     }
-    
+
+    @Override
+    public int modificar(Operario op) {
+        int resultado = 0;
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user,DBManager.password);
+            String sql =  "{call ACTUALIZAR_ESTADO_OPERARIO(?,?,?,?,?,?,?,?,?,?}";
+            cs = con.prepareCall(sql);
+            cs.setInt("_ID_PERSONA", op.getIdPersona());
+            cs.setInt("_ID_LINEA_PRODUCCION", op.getLineaProduccion().getIdLineaProduccion());
+            cs.setString("_NOMBRES", op.getNombres());
+            cs.setString("_APELLIDOS", op.getApellidos());
+            cs.setDate("_FECHA_NACIMIENTO",new java.sql.Date(op.getFechaNacimiento().getTime()));
+            cs.setString("_TELEFONO",op.getTelefono());
+            cs.setString("_CORREO",op.getCorreo());
+            cs.setString("_ROL",op.getRol());
+            cs.setDate("_FECHA_FIN_CONTRATO",new java.sql.Date(op.getFechaFinContrato().getTime()));
+            cs.setBytes("_PHOTO", op.getFoto());
+            resultado = cs.executeUpdate();
+        } catch(Exception ex){ 
+            System.out.println(ex.getMessage());
+        }finally{
+            try{
+                con.close();
+            } catch (Exception ex){
+                System.out.println(ex.getMessage());
+            }
+        }
+        return resultado; 
+    }
 }
