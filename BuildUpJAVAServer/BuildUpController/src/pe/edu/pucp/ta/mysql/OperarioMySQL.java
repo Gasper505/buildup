@@ -75,6 +75,37 @@ public class OperarioMySQL implements OperarioDAO{
     }
 
     @Override
+    public int modificar(Operario op) {
+        int resultado = 0;
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user,DBManager.password);
+            String sql =  "{call MODIFICAR_OPERARIO(?,?,?,?,?,?,?,?,?,?}";
+            cs = con.prepareCall(sql);
+            cs.setInt("_ID_PERSONA", op.getIdPersona());
+            cs.setInt("_ID_LINEA_PRODUCCION", op.getLineaProduccion().getIdLineaProduccion());
+            cs.setString("_NOMBRES", op.getNombres());
+            cs.setString("_APELLIDOS", op.getApellidos());
+            cs.setDate("_FECHA_NACIMIENTO",new java.sql.Date(op.getFechaNacimiento().getTime()));
+            cs.setString("_TELEFONO",op.getTelefono());
+            cs.setString("_CORREO",op.getCorreo());
+            cs.setString("_ROL",op.getRol());
+            cs.setDate("_FECHA_FIN_CONTRATO",new java.sql.Date(op.getFechaFinContrato().getTime()));
+            cs.setBytes("_PHOTO", op.getFoto());
+            resultado = cs.executeUpdate();
+        } catch(Exception ex){ 
+            System.out.println(ex.getMessage());
+        }finally{
+            try{
+                con.close();
+            } catch (Exception ex){
+                System.out.println(ex.getMessage());
+            }
+        }
+        return resultado; 
+    }
+    
+    @Override
     public int eliminar(int idOp) {
         int resultado=0;
         try{
@@ -122,34 +153,4 @@ public class OperarioMySQL implements OperarioDAO{
         return operarios;
     }
 
-    @Override
-    public int modificar(Operario op) {
-        int resultado = 0;
-        try{
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user,DBManager.password);
-            String sql =  "{call ACTUALIZAR_ESTADO_OPERARIO(?,?,?,?,?,?,?,?,?,?}";
-            cs = con.prepareCall(sql);
-            cs.setInt("_ID_PERSONA", op.getIdPersona());
-            cs.setInt("_ID_LINEA_PRODUCCION", op.getLineaProduccion().getIdLineaProduccion());
-            cs.setString("_NOMBRES", op.getNombres());
-            cs.setString("_APELLIDOS", op.getApellidos());
-            cs.setDate("_FECHA_NACIMIENTO",new java.sql.Date(op.getFechaNacimiento().getTime()));
-            cs.setString("_TELEFONO",op.getTelefono());
-            cs.setString("_CORREO",op.getCorreo());
-            cs.setString("_ROL",op.getRol());
-            cs.setDate("_FECHA_FIN_CONTRATO",new java.sql.Date(op.getFechaFinContrato().getTime()));
-            cs.setBytes("_PHOTO", op.getFoto());
-            resultado = cs.executeUpdate();
-        } catch(Exception ex){ 
-            System.out.println(ex.getMessage());
-        }finally{
-            try{
-                con.close();
-            } catch (Exception ex){
-                System.out.println(ex.getMessage());
-            }
-        }
-        return resultado; 
-    }
 }

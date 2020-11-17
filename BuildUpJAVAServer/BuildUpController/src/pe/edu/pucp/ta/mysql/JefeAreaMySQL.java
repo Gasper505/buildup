@@ -26,7 +26,6 @@ public class JefeAreaMySQL implements JefeAreaDAO{
             con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.password);
             String sql = "{call INSERTAR_JEFE_AREA(?,?,?,?,?,?,?,?,?,?)}";
             cs = con.prepareCall(sql);
-            
             cs.registerOutParameter("_ID_JEFE_AREA", java.sql.Types.INTEGER);
             cs.setString("_NOMBRES", jefe.getNombres());
             cs.setString("_APELLIDOS", jefe.getApellidos());
@@ -49,20 +48,16 @@ public class JefeAreaMySQL implements JefeAreaDAO{
     }
 
     @Override
-    public int actualizar(int idPersona, int nuevo) {
+    public int actualizar_estado(int idPersona, boolean activo) {
         int resultado=0;
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.password);
             String sql = "{call ACTUALIZAR_ESTADO_JEFE_AREA(?,?)}";
             cs = con.prepareCall(sql);
-            
             cs.setInt("_ID_JEFE_AREA", idPersona);
-            cs.setInt("_ACTIVO", nuevo);
-            
-            cs.executeUpdate();
-            resultado=1;
-        
+            cs.setBoolean("_ACTIVO", activo);
+            resultado=cs.executeUpdate();;
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }finally{
@@ -72,6 +67,32 @@ public class JefeAreaMySQL implements JefeAreaDAO{
     }
 
     @Override
+    public int modificar(JefeArea jefe) {
+        int resultado=0;
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.password);
+            String sql = "{call MODIFICAR_JEFE_AREA(?,?,?,?,?,?,?,?,?,?)}";
+            cs = con.prepareCall(sql);
+            cs.setInt("_ID_PERSONA", jefe.getIdPersona());
+            cs.setString("_NOMBRES", jefe.getNombres());
+            cs.setString("_APELLIDOS", jefe.getApellidos());
+            cs.setDate("_FECHA_NACIMIENTO",new java.sql.Date(jefe.getFechaNacimiento().getTime()));
+            cs.setString("_TELEFONO", jefe.getTelefono());
+            cs.setString("_CORREO", jefe.getCorreo());
+            cs.setString("_ROL", jefe.getRol());
+            cs.setDate("_FECHA_FIN_CONTRATO", new java.sql.Date(jefe.getFechaFinContrato().getTime()));
+            cs.setBytes("_PHOTO", jefe.getFoto());
+            cs.setBytes("_PHOTO_FIRMA", jefe.getFoto_firma());
+            resultado=cs.executeUpdate();;
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }finally{
+            try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());}
+        }
+        return resultado;
+    }
+    @Override
     public int eliminar(int idJefe) {
         int resultado=0;
         try{
@@ -79,11 +100,8 @@ public class JefeAreaMySQL implements JefeAreaDAO{
             con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.password);
             String sql = "{call ELIMINAR_JEFE_AREA(?)}";
             cs = con.prepareCall(sql);
-            
             cs.setInt("_ID_JEFE_AREA", idJefe);
-            
-            cs.executeUpdate();
-            resultado=1;
+            resultado=cs.executeUpdate();;
         
         }catch(Exception ex){
             System.out.println(ex.getMessage());

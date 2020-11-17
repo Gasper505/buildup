@@ -8,7 +8,8 @@ import pe.edu.pucp.ta.model.Ingeniero;
 public interface IngenieroDAO {
     
     int insertar(Ingeniero ing);
-    int actualizar(Ingeniero ing);
+    int actualizar_estado(int idIng, boolean activo);
+    int modificar(Ingeniero ing);
     int eliminar(int idIng);
     ArrayList<Ingeniero> listar();
     
