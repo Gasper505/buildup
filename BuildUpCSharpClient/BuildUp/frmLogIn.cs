@@ -41,14 +41,14 @@ namespace BuildUp
             int resultado = daoUsuario.autenticarUsuario(usuario);
 
             lblInfoLogueo.Text = "Cargando datos del usuario...";
+            
             usuario = daoUsuario.buscarUsuarioPorUsername(usuario.username);
-
             if (resultado == 1)
             {
                 //test every possibility
                 switch (usuario.rol)
                 {
-                    case "Jefe":
+                    case "Jefe de Área":
                         frmRolJefeArea formJefeArea = new frmRolJefeArea();
                         this.Hide();
                         formJefeArea.ShowDialog();
@@ -68,7 +68,7 @@ namespace BuildUp
                         this.Hide();
                         formSupervisor.ShowDialog();
                         break;
-                    case "admin":
+                    case "Administrador":
                         frmRolAdmin form = new frmRolAdmin();
                         this.Hide();
                         form.ShowDialog();

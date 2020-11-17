@@ -29,7 +29,7 @@ namespace BuildUp
 
         private void btnSeleccionar_Click(object sender, EventArgs e)
         {
-            usuarioSeleccionado = (UsuarioWS.usuario)dgvUsuarios.CurrentRow.DataBoundItem;
+            //usuarioSeleccionado = (UsuarioWS.usuario)dgvUsuarios.CurrentRow.DataBoundItem;
             this.DialogResult = DialogResult.OK;
         }
 

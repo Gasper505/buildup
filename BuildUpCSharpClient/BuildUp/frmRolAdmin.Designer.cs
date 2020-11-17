@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panelAdmin = new System.Windows.Forms.Panel();
+            this.lblNombres = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
@@ -36,7 +37,6 @@
             this.lblTitulo = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.lblNombres = new System.Windows.Forms.Label();
             this.panelAdmin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
@@ -57,6 +57,16 @@
             this.panelAdmin.Name = "panelAdmin";
             this.panelAdmin.Size = new System.Drawing.Size(774, 385);
             this.panelAdmin.TabIndex = 1;
+            // 
+            // lblNombres
+            // 
+            this.lblNombres.AutoSize = true;
+            this.lblNombres.Font = new System.Drawing.Font("Trebuchet MS", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombres.Location = new System.Drawing.Point(199, 26);
+            this.lblNombres.Name = "lblNombres";
+            this.lblNombres.Size = new System.Drawing.Size(150, 29);
+            this.lblNombres.TabIndex = 28;
+            this.lblNombres.Text = "MissingName";
             // 
             // button2
             // 
@@ -120,7 +130,7 @@
             this.panel3.Controls.Add(this.label1);
             this.panel3.Location = new System.Drawing.Point(23, 87);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(234, 40);
+            this.panel3.Size = new System.Drawing.Size(254, 40);
             this.panel3.TabIndex = 10;
             // 
             // label1
@@ -131,19 +141,9 @@
             this.label1.Location = new System.Drawing.Point(14, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(200, 22);
+            this.label1.Size = new System.Drawing.Size(227, 22);
             this.label1.TabIndex = 8;
-            this.label1.Text = "Rol: Administrador Sistema";
-            // 
-            // lblNombres
-            // 
-            this.lblNombres.AutoSize = true;
-            this.lblNombres.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombres.Location = new System.Drawing.Point(209, 28);
-            this.lblNombres.Name = "lblNombres";
-            this.lblNombres.Size = new System.Drawing.Size(130, 27);
-            this.lblNombres.TabIndex = 28;
-            this.lblNombres.Text = "MissingName";
+            this.label1.Text = "Rol: Administrador del Sistema";
             // 
             // frmRolAdmin
             // 
