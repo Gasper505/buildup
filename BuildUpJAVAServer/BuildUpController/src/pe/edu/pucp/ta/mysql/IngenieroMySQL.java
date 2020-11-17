@@ -39,7 +39,7 @@ public class IngenieroMySQL implements IngenieroDAO{
             cs.setString("_ESPECIALIDAD", ing.getEspecialidad());
             cs.executeUpdate();
             ing.setIdPersona(cs.getInt("_ID_INGENIERO"));
-            resultado=cs.getInt("_ID_INGENIERO");  ;       
+            resultado=cs.getInt("_ID_INGENIERO");         
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }finally{

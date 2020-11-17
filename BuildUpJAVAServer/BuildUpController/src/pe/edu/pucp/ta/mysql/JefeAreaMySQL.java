@@ -24,23 +24,22 @@ public class JefeAreaMySQL implements JefeAreaDAO{
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.password);
-            String sql = "{call INSERTAR_JEFE_AREA(?,?,?,?,?,?,?,?)}";
+            String sql = "{call INSERTAR_JEFE_AREA(?,?,?,?,?,?,?,?,?,?)}";
             cs = con.prepareCall(sql);
             
             cs.registerOutParameter("_ID_JEFE_AREA", java.sql.Types.INTEGER);
             cs.setString("_NOMBRES", jefe.getNombres());
             cs.setString("_APELLIDOS", jefe.getApellidos());
+            cs.setDate("_FECHA_NACIMIENTO",new java.sql.Date(jefe.getFechaNacimiento().getTime()));
             cs.setString("_TELEFONO", jefe.getTelefono());
             cs.setString("_CORREO", jefe.getCorreo());
             cs.setString("_ROL", jefe.getRol());
             cs.setDate("_FECHA_FIN_CONTRATO", new java.sql.Date(jefe.getFechaFinContrato().getTime()));
-            cs.setString("_ARCHIVO_FIRMA", jefe.getArchivoFirmaDigital());
-            
+            cs.setBytes("_PHOTO", jefe.getFoto());
+            cs.setBytes("_PHOTO_FIRMA", jefe.getFoto_firma());
             cs.executeUpdate();
             jefe.setIdPersona(cs.getInt("_ID_JEFE_AREA"));
-            
-            resultado=1;
-        
+            resultado=cs.getInt("_ID_JEFE_AREA");
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }finally{
