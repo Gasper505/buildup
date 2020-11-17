@@ -25,19 +25,21 @@ public class OperarioMySQL implements OperarioDAO{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.urlMySQL, 
                     DBManager.user, DBManager.password);
-            String sql = "{call INSERTAR_OPERARIO(?,?,?,?,?,?,?,?)}";
+            String sql = "{call INSERTAR_OPERARIO(?,?,?,?,?,?,?,?,?,?)}";
             cs = con.prepareCall(sql);
             cs.registerOutParameter("_ID_OPERARIO", java.sql.Types.INTEGER);
             cs.setString("_NOMBRES", op.getNombres());
             cs.setString("_APELLIDOS", op.getApellidos());
+            cs.setDate("_FECHA_NACIMIENTO",new java.sql.Date(op.getFechaNacimiento().getTime()));
             cs.setString("_TELEFONO",op.getTelefono());
             cs.setString("_CORREO",op.getCorreo());
             cs.setString("_ROL",op.getRol());
             cs.setDate("_FECHA_FIN_CONTRATO",new java.sql.Date(op.getFechaFinContrato().getTime()));
             cs.setInt("_ID_LINEA_PRODUCCION", op.getLineaProduccion().getIdLineaProduccion());
+            cs.setBytes("_PHOTO", op.getFoto());
             cs.executeUpdate();
-            op.setIdPersona(cs.getInt("_ID_INGENIERO"));
-            resultado=1;       
+            op.setIdPersona(cs.getInt("_ID_OPERARIO"));
+            resultado=cs.getInt("_ID_OPERARIO");       
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }finally{
