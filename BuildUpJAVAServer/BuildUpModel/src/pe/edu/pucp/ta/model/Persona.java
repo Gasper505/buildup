@@ -9,6 +9,7 @@ public class Persona {
     private int idPersona;
     private String nombres;
     private String apellidos;
+    private Date fechaNacimiento;
     private String telefono;
     private String correo;
     private String rol;
@@ -53,7 +54,13 @@ public class Persona {
     public void setApellidos(String apellidos) {
         this.apellidos = apellidos;
     }
+    public Date getFechaNacimiento() {
+        return fechaNacimiento;
+    }
 
+    public void setFechaNacimiento(Date fechaNacimiento) {
+        this.fechaNacimiento = fechaNacimiento;
+    }
     public String getTelefono() {
         return telefono;
     }
