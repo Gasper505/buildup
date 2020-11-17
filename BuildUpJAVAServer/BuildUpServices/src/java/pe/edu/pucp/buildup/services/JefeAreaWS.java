@@ -45,11 +45,21 @@ public class JefeAreaWS {
         }
         return resultado;
     }
-    @WebMethod(operationName = "actualizarJefeArea")
-    public int actualizarJefeArea(@WebParam(name = "idPersona") int idPersona,@WebParam(name = "nuevo") int nuevo) {
+    @WebMethod(operationName = "actualizarEstadoJefeArea")
+    public int actualizarEstadoJefeArea(@WebParam(name = "idPersona") int idPersona,@WebParam(name = "activo") boolean activo) {
         int resultado = 0;
         try{
-            resultado = daoJefeArea.actualizar(idPersona,nuevo);
+            resultado = daoJefeArea.actualizar_estado(idPersona, activo);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return resultado;
+    }
+    @WebMethod(operationName = "modificarJefeArea")
+    public int modificarJefeArea(@WebParam(name = "jefeArea") JefeArea jefeArea) {
+        int resultado = 0;
+        try{
+            resultado = daoJefeArea.modificar(jefeArea);
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }
