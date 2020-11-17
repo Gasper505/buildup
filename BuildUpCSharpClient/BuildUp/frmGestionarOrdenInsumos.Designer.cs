@@ -35,6 +35,7 @@
             this.lblFechaActual = new System.Windows.Forms.Label();
             this.gbDatosOrdenInsumos = new System.Windows.Forms.GroupBox();
             this.gbDatosInsumo = new System.Windows.Forms.GroupBox();
+            this.cboUnidadMedida = new System.Windows.Forms.ComboBox();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.lblCantidad = new System.Windows.Forms.Label();
             this.btnBuscarInsumo = new System.Windows.Forms.Button();
@@ -66,7 +67,6 @@
             this.btnRechazarOrden = new System.Windows.Forms.Button();
             this.btnAceptarOrden = new System.Windows.Forms.Button();
             this.picEquis = new System.Windows.Forms.PictureBox();
-            this.cboUnidadMedida = new System.Windows.Forms.ComboBox();
             this.gbDatosOrdenInsumos.SuspendLayout();
             this.gbDatosInsumo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -143,6 +143,21 @@
             this.gbDatosInsumo.TabIndex = 6;
             this.gbDatosInsumo.TabStop = false;
             this.gbDatosInsumo.Text = "Datos del Insumo";
+            // 
+            // cboUnidadMedida
+            // 
+            this.cboUnidadMedida.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboUnidadMedida.FormattingEnabled = true;
+            this.cboUnidadMedida.Items.AddRange(new object[] {
+            "Kilogramos",
+            "Toneladas",
+            "Litros",
+            "Onzas",
+            "Libras"});
+            this.cboUnidadMedida.Location = new System.Drawing.Point(189, 128);
+            this.cboUnidadMedida.Name = "cboUnidadMedida";
+            this.cboUnidadMedida.Size = new System.Drawing.Size(121, 23);
+            this.cboUnidadMedida.TabIndex = 47;
             // 
             // numericUpDown1
             // 
@@ -457,21 +472,6 @@
             this.picEquis.TabIndex = 42;
             this.picEquis.TabStop = false;
             // 
-            // cboUnidadMedida
-            // 
-            this.cboUnidadMedida.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboUnidadMedida.FormattingEnabled = true;
-            this.cboUnidadMedida.Items.AddRange(new object[] {
-            "Kilogramos",
-            "Toneladas",
-            "Litros",
-            "Onzas",
-            "Libras"});
-            this.cboUnidadMedida.Location = new System.Drawing.Point(189, 128);
-            this.cboUnidadMedida.Name = "cboUnidadMedida";
-            this.cboUnidadMedida.Size = new System.Drawing.Size(121, 23);
-            this.cboUnidadMedida.TabIndex = 47;
-            // 
             // frmGestionarOrdenInsumos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -486,6 +486,7 @@
             this.Controls.Add(this.gbDatosOrdenInsumos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmGestionarOrdenInsumos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestión de Órdenes de Insumo";
             this.gbDatosOrdenInsumos.ResumeLayout(false);
             this.gbDatosOrdenInsumos.PerformLayout();

@@ -13,6 +13,11 @@ namespace BuildUp
     public partial class frmGestionarMaquinaria : Form
     {
 
+        MaqWS.MaquinariaWSClient daoMaquinaria;
+        MaqWS.maquinaria maquinaria;
+        LineaProduccionWS.lineaProduccion lineaProduccion;
+        ProveedorWS.proveedor proveedor;
+
         public frmGestionarMaquinaria()
         {
             InitializeComponent();
@@ -28,6 +33,10 @@ namespace BuildUp
                 btnCancelar.Visible = false;
 
             }
+            daoMaquinaria = new MaqWS.MaquinariaWSClient();
+            maquinaria = new MaqWS.maquinaria();
+            lineaProduccion = new LineaProduccionWS.lineaProduccion();
+            proveedor = new ProveedorWS.proveedor();
         }
 
         private void EstablecerEstadoComponentes(Estado estado)
@@ -62,13 +71,13 @@ namespace BuildUp
                     btnActualizar.Enabled = false;
                     btnEliminar.Enabled = false;
                     txtIdMaquinaria.Enabled = false;
-                    txtIdLinea.Enabled = true;
+                    txtIdLinea.Enabled = false;
                     txtIdProveedor.Enabled = false;
                     txtNombre.Enabled = true;
-                    txtNombreLinea.Enabled = true;
-                    txtRepresentante.Enabled = true;
-                    txtRazonSocial.Enabled = true;
-                    txtCorreoRep.Enabled = true;
+                    txtNombreLinea.Enabled = false;
+                    txtRepresentante.Enabled = false;
+                    txtRazonSocial.Enabled = false;
+                    txtCorreoRep.Enabled = false;
                     btnBuscarLinea.Enabled = true;
                     dtpFechaGarantia.Enabled = true;
                     break;
@@ -80,14 +89,15 @@ namespace BuildUp
                     btnCancelar.Enabled = true;
                     btnActualizar.Enabled = true;
                     btnEliminar.Enabled = true;
+
                     txtIdMaquinaria.Enabled = false;
-                    txtIdLinea.Enabled = true;
+                    txtIdLinea.Enabled = false;
                     txtIdProveedor.Enabled = false;
                     txtNombre.Enabled = true;
-                    txtNombreLinea.Enabled = true;
-                    txtRepresentante.Enabled = true;
-                    txtRazonSocial.Enabled = true;
-                    txtCorreoRep.Enabled = true;
+                    txtNombreLinea.Enabled = false;
+                    txtRepresentante.Enabled = false;
+                    txtRazonSocial.Enabled = false;
+                    txtCorreoRep.Enabled = false;
                     btnBuscarLinea.Enabled = true;
                     dtpFechaGarantia.Enabled = true;
                     break;
@@ -95,23 +105,42 @@ namespace BuildUp
             }
         }
 
-        private void btnBuscarProveedor_Click(object sender, EventArgs e)
-        {
-            frmBuscarProveedor formBuscarProveedor = new frmBuscarProveedor();
-            if (formBuscarProveedor.ShowDialog() == DialogResult.OK)
-            {
-                //Recibir proveedor seleccionado de frmBuscarMaquinaria
-            }
-        }
-
-        private void btnNuevaMaquinaria_Click(object sender, EventArgs e)
-        {
-            EstablecerEstadoComponentes(Estado.Nuevo);
-        }
+        //-----------------------------------------------------------------
 
         private void btnGuardarMaquinaria_Click(object sender, EventArgs e)
         {
-            //Insercion en BD.
+            DialogResult dr = MessageBox.Show("¿Está seguro que desea registrar esta Maquinaria?", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (dr == DialogResult.Yes)
+            {
+                maquinaria.nombre = txtNombre.Text;
+                maquinaria.proveedor.idProveedor = Int32.Parse(txtIdProveedor.Text);
+                maquinaria.proveedor.razonSocial = txtRazonSocial.Text;
+                maquinaria.proveedor.representante = txtRepresentante.Text;
+                maquinaria.proveedor.correo = txtCorreoRep.Text;
+                maquinaria.lineaProduccion.idLineaProduccion = Int32.Parse(txtIdLinea.Text);
+                maquinaria.lineaProduccion.nombre = txtNombreLinea.Text;
+                maquinaria.garantiaFin = dtpFechaGarantia.Value;
+                
+
+                int result = daoMaquinaria.insertarMaquinaria(maquinaria);
+                if (result != 0)
+                {
+                    MessageBox.Show("El registro ha sido exitoso", "Mensaje de Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtIdMaquinaria.Text = "";
+                    txtIdLinea.Text = "";
+                    txtIdProveedor.Text = "";
+                    txtNombre.Text = "";
+                    txtNombreLinea.Text = "";
+                    txtRepresentante.Text = "";
+                    txtRazonSocial.Text = "";
+                    txtCorreoRep.Text = "";
+                    EstablecerEstadoComponentes(Estado.Inicial);
+                }
+                else
+                {
+                    MessageBox.Show("Error en el proceso", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
         private void btnBuscarMaquinaria_Click(object sender, EventArgs e)
@@ -119,9 +148,109 @@ namespace BuildUp
             frmBuscarMaquinaria formBuscarMaquinaria = new frmBuscarMaquinaria();
             if (formBuscarMaquinaria.ShowDialog() == DialogResult.OK)
             {
-                //Recibir maquinaria seleccionada de frmBuscarMaquinaria
+                maquinaria = formBuscarMaquinaria.MaquinariaSeleccionada;
+                txtIdMaquinaria.Text = maquinaria.idMaquinaria.ToString();
+                txtIdLinea.Text = maquinaria.lineaProduccion.idLineaProduccion.ToString();
+                txtIdProveedor.Text = maquinaria.proveedor.idProveedor.ToString();
+                txtNombre.Text = maquinaria.nombre;
+                txtNombreLinea.Text = maquinaria.lineaProduccion.nombre;
+                txtRepresentante.Text = maquinaria.proveedor.representante;
+                txtRazonSocial.Text = maquinaria.proveedor.razonSocial;
+                txtCorreoRep.Text = maquinaria.proveedor.correo;
+                EstablecerEstadoComponentes(Estado.Modificacion);
             }
-            EstablecerEstadoComponentes(Estado.Modificacion);
+            
+        }
+
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            DialogResult dr = MessageBox.Show("¿Está seguro que desea eliminar esta Maquinaria del registro?", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (dr == DialogResult.Yes)
+            {
+                daoMaquinaria.eliminarMaquinaria(Int32.Parse(txtIdMaquinaria.Text));
+                txtIdMaquinaria.Text = "";
+                txtIdLinea.Text = "";
+                txtIdProveedor.Text = "";
+                txtNombre.Text = "";
+                txtNombreLinea.Text = "";
+                txtRepresentante.Text = "";
+                txtRazonSocial.Text = "";
+                txtCorreoRep.Text = "";
+                EstablecerEstadoComponentes(Estado.Inicial);
+            }
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            DialogResult dr = MessageBox.Show("¿Esta seguro que desea actualizar esta Maquinaria?", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (dr == DialogResult.Yes)
+            {
+                maquinaria.idMaquinaria = Int32.Parse(txtIdMaquinaria.Text);
+                maquinaria.nombre = txtNombre.Text;
+                maquinaria.proveedor.idProveedor = Int32.Parse(txtIdProveedor.Text);
+                maquinaria.proveedor.razonSocial = txtRazonSocial.Text;
+                maquinaria.proveedor.representante = txtRepresentante.Text;
+                maquinaria.proveedor.correo = txtCorreoRep.Text;
+                maquinaria.lineaProduccion.idLineaProduccion = Int32.Parse(txtIdLinea.Text);
+                maquinaria.lineaProduccion.nombre = txtNombreLinea.Text;
+                maquinaria.garantiaFin = dtpFechaGarantia.Value;
+
+                int result = 0;
+                //result = daoMaquinaria.actualizarMaquinaria(maquinaria);
+                if (result != 0)
+                {
+                    MessageBox.Show("La actualización ha sido exitosa", "Mensaje de Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtIdMaquinaria.Text = "";
+                    txtIdLinea.Text = "";
+                    txtIdProveedor.Text = "";
+                    txtNombre.Text = "";
+                    txtNombreLinea.Text = "";
+                    txtRepresentante.Text = "";
+                    txtRazonSocial.Text = "";
+                    txtCorreoRep.Text = "";
+                    EstablecerEstadoComponentes(Estado.Inicial);
+                }
+                else
+                {
+                    MessageBox.Show("Error en el proceso", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
+        }
+
+        //-----------------------------------------------------------------
+
+        private void btnBuscarProveedor_Click(object sender, EventArgs e)
+        {
+            frmBuscarProveedor formBuscarProveedor = new frmBuscarProveedor();
+            if (formBuscarProveedor.ShowDialog() == DialogResult.OK)
+            {
+                proveedor = formBuscarProveedor.ProveedorSeleccionado;
+                txtIdProveedor.Text = proveedor.idProveedor.ToString();
+                txtRepresentante.Text = proveedor.representante;
+                txtRazonSocial.Text = proveedor.razonSocial;
+                txtCorreoRep.Text = proveedor.correo;
+            }
+        }
+
+        private void btnBuscarLinea_Click(object sender, EventArgs e)
+        {
+            frmBuscarLineaProduccion formBuscarLineaProduccion = new frmBuscarLineaProduccion();
+            if (formBuscarLineaProduccion.ShowDialog() == DialogResult.OK)
+            {
+                //lineaProduccion = formBuscarLineaProduccion.LineaProduccionSeleccionada;
+                txtIdLinea.Text = lineaProduccion.idLineaProduccion.ToString();
+                txtNombreLinea.Text = lineaProduccion.nombre;
+            }
+            
+        }
+
+        //-----------------------------------------------------------------
+
+        private void btnNuevaMaquinaria_Click(object sender, EventArgs e)
+        {
+            EstablecerEstadoComponentes(Estado.Nuevo);
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -140,27 +269,6 @@ namespace BuildUp
         private void tsbVolver_Click(object sender, EventArgs e)
         {
             this.Hide();
-        }
-
-        private void btnEliminar_Click(object sender, EventArgs e)
-        {
-            //Eliminacion logica de BD.
-        }
-
-        private void btnActualizar_Click(object sender, EventArgs e)
-        {
-            //Modificacion en BD.
-        }
-
-        private void btnBuscarLinea_Click(object sender, EventArgs e)
-        {
-            frmBuscarLineaProduccion formBuscarLineaProduccion = new frmBuscarLineaProduccion();
-            if (formBuscarLineaProduccion.ShowDialog() == DialogResult.OK)
-            {
-                //Recibir linea seleccionada de frmBuscarLineaProduccion
-                EstablecerEstadoComponentes(Estado.Modificacion);
-            }
-            
         }
     }
 }

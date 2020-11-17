@@ -14,14 +14,14 @@ namespace BuildUp
     public partial class frmGestionarTipoLadrillo : Form
     {
         TipoLadrilloWS.TipoLadrilloWSClient daoTipoLadrillo;
-        TipoLadrilloWS.tipoLadrillo tipoLad;
+        TipoLadrilloWS.tipoLadrillo tipoLadrillo;
 
         public frmGestionarTipoLadrillo()
         {
             InitializeComponent();
             EstablecerEstadoComponentes(Estado.Inicial);
             daoTipoLadrillo = new TipoLadrilloWS.TipoLadrilloWSClient();
-
+            tipoLadrillo = new TipoLadrilloWS.tipoLadrillo();
         }
         public void EstablecerEstadoComponentes(Estado estado)
         {
@@ -73,23 +73,36 @@ namespace BuildUp
             EstablecerEstadoComponentes(Estado.Nuevo);
         }
 
+
+        //-----------------------------------------------------------------
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            tipoLad = new TipoLadrilloWS.tipoLadrillo();
-            tipoLad.nombre = txtNombre.Text;
-            tipoLad.altura = (int)numAltura.Value;
-            tipoLad.ancho = (int)numAncho.Value;
-            tipoLad.largo = (int)numLargo.Value;
-            daoTipoLadrillo.insertarTipoLadrillo(tipoLad);
-            MessageBox.Show("Se ha registrado correctamente el Tipo de Ladrillo", "Mensaje Informativo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-           
-            EstablecerEstadoComponentes(Estado.Inicial);
-            txtIDTipo.Text = "";
-            txtNombre.Text = "";
-            numAltura.Value = 0;
-            numAncho.Value = 0;
-            numLargo.Value = 0;
-            EstablecerEstadoComponentes(Estado.Inicial);
+
+            DialogResult dr = MessageBox.Show("¿Está seguro que desea registrar este Tipo de Ladrillo?", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (dr == DialogResult.Yes)
+            {
+                tipoLadrillo = new TipoLadrilloWS.tipoLadrillo();
+                tipoLadrillo.nombre = txtNombre.Text;
+                tipoLadrillo.altura = (int)numAltura.Value;
+                tipoLadrillo.ancho = (int)numAncho.Value;
+                tipoLadrillo.largo = (int)numLargo.Value;
+
+                int result = daoTipoLadrillo.insertarTipoLadrillo(tipoLadrillo);
+                if (result != 0)
+                {
+                    MessageBox.Show("El registro ha sido exitoso", "Mensaje de Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtIDTipo.Text = "";
+                    txtNombre.Text = "";
+                    numAltura.Value = 0;
+                    numAncho.Value = 0;
+                    numLargo.Value = 0;
+                    EstablecerEstadoComponentes(Estado.Inicial);
+                }
+                else
+                {
+                    MessageBox.Show("Error en el proceso", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -97,7 +110,12 @@ namespace BuildUp
             frmBuscarTipoLadrillo formBuscarTipoLad = new frmBuscarTipoLadrillo();
             if (formBuscarTipoLad.ShowDialog() == DialogResult.OK)
             {
-                //...
+                tipoLadrillo = formBuscarTipoLad.TipoLadrilloSeleccionado;
+                txtIDTipo.Text = tipoLadrillo.idTipoLadrillo.ToString();
+                txtNombre.Text = tipoLadrillo.nombre;
+                numAltura.Value = (decimal)tipoLadrillo.altura;
+                numAncho.Value = (decimal)tipoLadrillo.ancho;
+                numLargo.Value = (decimal)tipoLadrillo.largo;
                 EstablecerEstadoComponentes(Estado.Modificacion);
             }
             
@@ -105,7 +123,54 @@ namespace BuildUp
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            //...
+            DialogResult dr = MessageBox.Show("¿Esta seguro que desea actualizar este Tipo de Ladrillo?", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (dr == DialogResult.Yes)
+            {
+                tipoLadrillo.idTipoLadrillo = Int32.Parse(txtIDTipo.Text);
+                tipoLadrillo.nombre = txtNombre.Text;
+                tipoLadrillo.altura = (int)numAltura.Value;
+                tipoLadrillo.ancho = (int)numAncho.Value;
+                tipoLadrillo.largo = (int)numLargo.Value;
+                int result = 0;
+                //result = daoTipoLadrillo.actualizarTipoLadrillo(tipoLadrillo);
+                if (result != 0)
+                {
+                    MessageBox.Show("La actualización ha sido exitosa", "Mensaje de Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtIDTipo.Text = "";
+                    txtNombre.Text = "";
+                    numAltura.Value = 0;
+                    numAncho.Value = 0;
+                    numLargo.Value = 0;
+                    EstablecerEstadoComponentes(Estado.Inicial);
+                }
+                else
+                {
+                    MessageBox.Show("Error en el proceso", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            DialogResult dr = MessageBox.Show("¿Está seguro que desea eliminar este Tipo de Ladrillo del registro?", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (dr == DialogResult.Yes)
+            {
+                //daoTipoLadrillo.eliminarTipoLadrillo(Int32.Parse(txtIDTipo.Text));
+                txtIDTipo.Text = "";
+                txtNombre.Text = "";
+                numAltura.Value = 0;
+                numAncho.Value = 0;
+                numLargo.Value = 0;
+                EstablecerEstadoComponentes(Estado.Inicial);
+            }
+        }
+
+        //-----------------------------------------------------------------
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -118,14 +183,5 @@ namespace BuildUp
             EstablecerEstadoComponentes(Estado.Inicial);
         }
 
-        private void btnVolver_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-        }
-
-        private void btnEliminar_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

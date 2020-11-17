@@ -23,19 +23,19 @@ namespace BuildUp
             InitializeComponent();
             dgvMaquinarias.AutoGenerateColumns = false;
             daoMaquinaria = new MaqWS.MaquinariaWSClient();
-            //dgvMaquinarias.DataSource = 
-            //    new BindingList<MaqWS.maquinaria> (daoMaquinaria.listarMaquinariasConParametros(txtBusqNombreMaq.Text, txtBusqLineaProduccion.Text).ToArray());
+            maquinariaSeleccionada = new MaqWS.maquinaria();
         }
 
         private void btnSeleccionar_Click(object sender, EventArgs e)
         {
-            //maquinariaSeleccionada = new MaqWS.maquinaria();
-            //maquinariaSeleccionada = (MaqWS.maquinaria)dgvMaquinarias.CurrentRow.DataBoundItem;
+            maquinariaSeleccionada = (MaqWS.maquinaria)dgvMaquinarias.CurrentRow.DataBoundItem;
             this.DialogResult = DialogResult.OK;
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
+            dgvMaquinarias.DataSource = new BindingList<MaqWS.maquinaria>(daoMaquinaria.listarMaquinaria().ToArray());
+
             //dgvMaquinarias.DataSource =
             //    new BindingList<MaqWS.maquinaria>(daoMaquinaria.listarMaquinariasConParametros(txtBusqNombreMaq.Text, txtBusqLineaProduccion.Text).ToArray());
         }

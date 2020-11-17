@@ -414,6 +414,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmGestionarMaquinaria";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestión de Maquinarias";
             this.gbDatosMaquinaria.ResumeLayout(false);
             this.gbDatosMaquinaria.PerformLayout();

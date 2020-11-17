@@ -17,6 +17,8 @@ namespace BuildUp
         ProveedorWS.ProveedorWSClient daoProveedor;
         ProveedorWS.proveedor proveedorSeleccionado;
 
+        public proveedor ProveedorSeleccionado { get => proveedorSeleccionado; set => proveedorSeleccionado = value; }
+
         public frmBuscarProveedor()
         {
             InitializeComponent();

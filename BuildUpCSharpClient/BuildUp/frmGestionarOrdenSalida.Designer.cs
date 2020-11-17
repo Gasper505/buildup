@@ -414,6 +414,7 @@
             this.Controls.Add(this.gbDatosOrden);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmGestionarOrdenSalida";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestión de Órdenes de Salida";
             ((System.ComponentModel.ISupportInitialize)(this.numNroAproxLadrillos)).EndInit();
             this.gbDatosOrden.ResumeLayout(false);

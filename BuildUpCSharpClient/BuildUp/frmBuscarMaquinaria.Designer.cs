@@ -31,15 +31,15 @@
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnSeleccionar = new System.Windows.Forms.Button();
             this.dgvMaquinarias = new System.Windows.Forms.DataGridView();
-            this.IDMaquinaria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreMaquinaria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreLineaProduccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Proveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbParametrosBusqueda = new System.Windows.Forms.GroupBox();
             this.txtBusqLineaProduccion = new System.Windows.Forms.TextBox();
             this.lblBusqLineaProduccion = new System.Windows.Forms.Label();
             this.txtBusqNombreMaq = new System.Windows.Forms.TextBox();
             this.lblBusqNombreMaq = new System.Windows.Forms.Label();
+            this.IDMaquinaria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NombreMaquinaria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NombreLineaProduccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Proveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMaquinarias)).BeginInit();
             this.gbParametrosBusqueda.SuspendLayout();
             this.SuspendLayout();
@@ -47,7 +47,7 @@
             // btnBuscar
             // 
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(539, 55);
+            this.btnBuscar.Location = new System.Drawing.Point(553, 55);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(102, 36);
             this.btnBuscar.TabIndex = 11;
@@ -58,7 +58,7 @@
             // btnSeleccionar
             // 
             this.btnSeleccionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSeleccionar.Location = new System.Drawing.Point(289, 450);
+            this.btnSeleccionar.Location = new System.Drawing.Point(295, 465);
             this.btnSeleccionar.Name = "btnSeleccionar";
             this.btnSeleccionar.Size = new System.Drawing.Size(225, 36);
             this.btnSeleccionar.TabIndex = 10;
@@ -77,24 +77,73 @@
             this.NombreMaquinaria,
             this.NombreLineaProduccion,
             this.Proveedor});
-            this.dgvMaquinarias.Location = new System.Drawing.Point(65, 178);
+            this.dgvMaquinarias.Location = new System.Drawing.Point(52, 193);
+            this.dgvMaquinarias.MultiSelect = false;
             this.dgvMaquinarias.Name = "dgvMaquinarias";
             this.dgvMaquinarias.ReadOnly = true;
             this.dgvMaquinarias.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMaquinarias.Size = new System.Drawing.Size(700, 250);
+            this.dgvMaquinarias.Size = new System.Drawing.Size(703, 250);
             this.dgvMaquinarias.TabIndex = 9;
             this.dgvMaquinarias.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvMaquinarias_CellFormatting);
             // 
+            // gbParametrosBusqueda
+            // 
+            this.gbParametrosBusqueda.Controls.Add(this.btnBuscar);
+            this.gbParametrosBusqueda.Controls.Add(this.txtBusqLineaProduccion);
+            this.gbParametrosBusqueda.Controls.Add(this.lblBusqLineaProduccion);
+            this.gbParametrosBusqueda.Controls.Add(this.txtBusqNombreMaq);
+            this.gbParametrosBusqueda.Controls.Add(this.lblBusqNombreMaq);
+            this.gbParametrosBusqueda.Location = new System.Drawing.Point(52, 40);
+            this.gbParametrosBusqueda.Name = "gbParametrosBusqueda";
+            this.gbParametrosBusqueda.Size = new System.Drawing.Size(703, 132);
+            this.gbParametrosBusqueda.TabIndex = 8;
+            this.gbParametrosBusqueda.TabStop = false;
+            this.gbParametrosBusqueda.Text = "Parámetros de Búsqueda";
+            // 
+            // txtBusqLineaProduccion
+            // 
+            this.txtBusqLineaProduccion.Location = new System.Drawing.Point(243, 76);
+            this.txtBusqLineaProduccion.Name = "txtBusqLineaProduccion";
+            this.txtBusqLineaProduccion.Size = new System.Drawing.Size(263, 20);
+            this.txtBusqLineaProduccion.TabIndex = 6;
+            // 
+            // lblBusqLineaProduccion
+            // 
+            this.lblBusqLineaProduccion.AutoSize = true;
+            this.lblBusqLineaProduccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBusqLineaProduccion.Location = new System.Drawing.Point(39, 76);
+            this.lblBusqLineaProduccion.Name = "lblBusqLineaProduccion";
+            this.lblBusqLineaProduccion.Size = new System.Drawing.Size(198, 15);
+            this.lblBusqLineaProduccion.TabIndex = 5;
+            this.lblBusqLineaProduccion.Text = "Nombre de la Linea de Produccion";
+            // 
+            // txtBusqNombreMaq
+            // 
+            this.txtBusqNombreMaq.Location = new System.Drawing.Point(243, 46);
+            this.txtBusqNombreMaq.Name = "txtBusqNombreMaq";
+            this.txtBusqNombreMaq.Size = new System.Drawing.Size(263, 20);
+            this.txtBusqNombreMaq.TabIndex = 4;
+            // 
+            // lblBusqNombreMaq
+            // 
+            this.lblBusqNombreMaq.AutoSize = true;
+            this.lblBusqNombreMaq.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBusqNombreMaq.Location = new System.Drawing.Point(89, 46);
+            this.lblBusqNombreMaq.Name = "lblBusqNombreMaq";
+            this.lblBusqNombreMaq.Size = new System.Drawing.Size(148, 15);
+            this.lblBusqNombreMaq.TabIndex = 0;
+            this.lblBusqNombreMaq.Text = "Nombre de la Maquinaria";
+            // 
             // IDMaquinaria
             // 
-            this.IDMaquinaria.DataPropertyName = "IdMaquinaria";
+            this.IDMaquinaria.DataPropertyName = "idMaquinaria";
             this.IDMaquinaria.HeaderText = "ID Maquinaria";
             this.IDMaquinaria.Name = "IDMaquinaria";
             this.IDMaquinaria.ReadOnly = true;
             // 
             // NombreMaquinaria
             // 
-            this.NombreMaquinaria.DataPropertyName = "Nombre";
+            this.NombreMaquinaria.DataPropertyName = "nombre";
             this.NombreMaquinaria.HeaderText = "Nombre Maquinaria";
             this.NombreMaquinaria.Name = "NombreMaquinaria";
             this.NombreMaquinaria.ReadOnly = true;
@@ -114,59 +163,11 @@
             this.Proveedor.ReadOnly = true;
             this.Proveedor.Width = 170;
             // 
-            // gbParametrosBusqueda
-            // 
-            this.gbParametrosBusqueda.Controls.Add(this.btnBuscar);
-            this.gbParametrosBusqueda.Controls.Add(this.txtBusqLineaProduccion);
-            this.gbParametrosBusqueda.Controls.Add(this.lblBusqLineaProduccion);
-            this.gbParametrosBusqueda.Controls.Add(this.txtBusqNombreMaq);
-            this.gbParametrosBusqueda.Controls.Add(this.lblBusqNombreMaq);
-            this.gbParametrosBusqueda.Location = new System.Drawing.Point(65, 25);
-            this.gbParametrosBusqueda.Name = "gbParametrosBusqueda";
-            this.gbParametrosBusqueda.Size = new System.Drawing.Size(700, 132);
-            this.gbParametrosBusqueda.TabIndex = 8;
-            this.gbParametrosBusqueda.TabStop = false;
-            this.gbParametrosBusqueda.Text = "Parámetros de Búsqueda";
-            // 
-            // txtBusqLineaProduccion
-            // 
-            this.txtBusqLineaProduccion.Location = new System.Drawing.Point(217, 76);
-            this.txtBusqLineaProduccion.Name = "txtBusqLineaProduccion";
-            this.txtBusqLineaProduccion.Size = new System.Drawing.Size(263, 20);
-            this.txtBusqLineaProduccion.TabIndex = 6;
-            // 
-            // lblBusqLineaProduccion
-            // 
-            this.lblBusqLineaProduccion.AutoSize = true;
-            this.lblBusqLineaProduccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBusqLineaProduccion.Location = new System.Drawing.Point(13, 76);
-            this.lblBusqLineaProduccion.Name = "lblBusqLineaProduccion";
-            this.lblBusqLineaProduccion.Size = new System.Drawing.Size(198, 15);
-            this.lblBusqLineaProduccion.TabIndex = 5;
-            this.lblBusqLineaProduccion.Text = "Nombre de la Linea de Produccion";
-            // 
-            // txtBusqNombreMaq
-            // 
-            this.txtBusqNombreMaq.Location = new System.Drawing.Point(217, 46);
-            this.txtBusqNombreMaq.Name = "txtBusqNombreMaq";
-            this.txtBusqNombreMaq.Size = new System.Drawing.Size(263, 20);
-            this.txtBusqNombreMaq.TabIndex = 4;
-            // 
-            // lblBusqNombreMaq
-            // 
-            this.lblBusqNombreMaq.AutoSize = true;
-            this.lblBusqNombreMaq.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBusqNombreMaq.Location = new System.Drawing.Point(63, 46);
-            this.lblBusqNombreMaq.Name = "lblBusqNombreMaq";
-            this.lblBusqNombreMaq.Size = new System.Drawing.Size(148, 15);
-            this.lblBusqNombreMaq.TabIndex = 0;
-            this.lblBusqNombreMaq.Text = "Nombre de la Maquinaria";
-            // 
             // frmBuscarMaquinaria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(815, 508);
+            this.ClientSize = new System.Drawing.Size(815, 524);
             this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.dgvMaquinarias);
             this.Controls.Add(this.gbParametrosBusqueda);

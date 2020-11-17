@@ -35,7 +35,7 @@ namespace BuildUp
                 case Estado.Nuevo:
                     btnNuevo.Enabled = false;
                     btnGuardar.Enabled = true;
-                    btnBuscar.Enabled = true;
+                    btnBuscar.Enabled = false;
                     txtIDmerma.Enabled = false;
                     cboTipoMerma.Enabled = true;
                     txtCantidad.Enabled = true;

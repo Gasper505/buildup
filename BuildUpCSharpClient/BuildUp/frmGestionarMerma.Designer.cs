@@ -260,6 +260,7 @@
             this.Controls.Add(this.toolStrip2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmGestionarMerma";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestión de Mermas";
             this.toolStrip2.ResumeLayout(false);
             this.toolStrip2.PerformLayout();

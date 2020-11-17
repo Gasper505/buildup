@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.dgvProveedores = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbBusqueda = new System.Windows.Forms.GroupBox();
             this.txtRazonSocial = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSeleccionar = new System.Windows.Forms.Button();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProveedores)).BeginInit();
             this.gbBusqueda.SuspendLayout();
             this.SuspendLayout();
@@ -53,11 +53,43 @@
             this.Column3,
             this.Column4});
             this.dgvProveedores.Location = new System.Drawing.Point(48, 163);
+            this.dgvProveedores.MultiSelect = false;
             this.dgvProveedores.Name = "dgvProveedores";
             this.dgvProveedores.ReadOnly = true;
             this.dgvProveedores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvProveedores.Size = new System.Drawing.Size(609, 271);
             this.dgvProveedores.TabIndex = 4;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "idProveedor";
+            this.Column1.HeaderText = "ID Proveedor";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "razonSocial";
+            this.Column2.HeaderText = "Razon Social";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 150;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "correo";
+            this.Column3.HeaderText = "Correo electrónico";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 150;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "representante";
+            this.Column4.HeaderText = "Representante Legal";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 150;
             // 
             // gbBusqueda
             // 
@@ -109,37 +141,6 @@
             this.btnSeleccionar.Text = "Seleccionar";
             this.btnSeleccionar.UseVisualStyleBackColor = true;
             this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "idProveedor";
-            this.Column1.HeaderText = "ID Proveedor";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "razonSocial";
-            this.Column2.HeaderText = "Razon Social";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 150;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "correo";
-            this.Column3.HeaderText = "Correo electrónico";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 150;
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "representante";
-            this.Column4.HeaderText = "Representante Legal";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 150;
             // 
             // frmBuscarProveedor
             // 

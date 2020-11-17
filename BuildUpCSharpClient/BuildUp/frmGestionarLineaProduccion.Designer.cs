@@ -231,6 +231,7 @@
             this.Controls.Add(this.toolStrip2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmGestionarLineaProduccion";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestión de Líneas de Producción";
             this.toolStrip2.ResumeLayout(false);
             this.toolStrip2.PerformLayout();

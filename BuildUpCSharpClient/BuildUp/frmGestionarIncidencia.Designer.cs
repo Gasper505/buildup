@@ -70,16 +70,16 @@
             this.lblIDIng = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabProblema = new System.Windows.Forms.TabPage();
+            this.label4 = new System.Windows.Forms.Label();
             this.btnBuscarProblema = new System.Windows.Forms.Button();
             this.txtProblema = new System.Windows.Forms.TextBox();
             this.lblProblema = new System.Windows.Forms.Label();
             this.tabRespuesta = new System.Windows.Forms.TabPage();
+            this.btnBuscarRespuesta = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             this.txtRespuesta = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.btnBuscarRespuesta = new System.Windows.Forms.Button();
             this.toolStrip2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -502,10 +502,19 @@
             this.tabProblema.Controls.Add(this.lblProblema);
             this.tabProblema.Location = new System.Drawing.Point(4, 27);
             this.tabProblema.Name = "tabProblema";
-            this.tabProblema.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabProblema.Padding = new System.Windows.Forms.Padding(3);
             this.tabProblema.Size = new System.Drawing.Size(800, 275);
             this.tabProblema.TabIndex = 0;
             this.tabProblema.Text = "Problema";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(24, 23);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(412, 15);
+            this.label4.TabIndex = 26;
+            this.label4.Text = "A ser completado por el Supervisor encargado del registro de la Incidencia";
             // 
             // btnBuscarProblema
             // 
@@ -549,10 +558,29 @@
             this.tabRespuesta.Controls.Add(this.tbDescripcionRespuesta);
             this.tabRespuesta.Location = new System.Drawing.Point(4, 27);
             this.tabRespuesta.Name = "tabRespuesta";
-            this.tabRespuesta.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabRespuesta.Padding = new System.Windows.Forms.Padding(3);
             this.tabRespuesta.Size = new System.Drawing.Size(800, 275);
             this.tabRespuesta.TabIndex = 1;
             this.tabRespuesta.Text = "Respuesta";
+            // 
+            // btnBuscarRespuesta
+            // 
+            this.btnBuscarRespuesta.Location = new System.Drawing.Point(557, 56);
+            this.btnBuscarRespuesta.Name = "btnBuscarRespuesta";
+            this.btnBuscarRespuesta.Size = new System.Drawing.Size(127, 31);
+            this.btnBuscarRespuesta.TabIndex = 28;
+            this.btnBuscarRespuesta.Text = "Buscar Respuesta...";
+            this.btnBuscarRespuesta.UseVisualStyleBackColor = true;
+            this.btnBuscarRespuesta.Click += new System.EventHandler(this.btnBuscarRespuesta_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(25, 20);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(422, 15);
+            this.label5.TabIndex = 27;
+            this.label5.Text = "A ser completado por el Ingeniero encargado de la atención de la Incidencia";
             // 
             // txtRespuesta
             // 
@@ -579,34 +607,6 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(221, 21);
             this.dateTimePicker1.TabIndex = 21;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(24, 23);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(412, 15);
-            this.label4.TabIndex = 26;
-            this.label4.Text = "A ser completado por el Supervisor encargado del registro de la Incidencia";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(25, 20);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(422, 15);
-            this.label5.TabIndex = 27;
-            this.label5.Text = "A ser completado por el Ingeniero encargado de la atención de la Incidencia";
-            // 
-            // btnBuscarRespuesta
-            // 
-            this.btnBuscarRespuesta.Location = new System.Drawing.Point(557, 56);
-            this.btnBuscarRespuesta.Name = "btnBuscarRespuesta";
-            this.btnBuscarRespuesta.Size = new System.Drawing.Size(127, 31);
-            this.btnBuscarRespuesta.TabIndex = 28;
-            this.btnBuscarRespuesta.Text = "Buscar Respuesta...";
-            this.btnBuscarRespuesta.UseVisualStyleBackColor = true;
-            this.btnBuscarRespuesta.Click += new System.EventHandler(this.btnBuscarRespuesta_Click);
-            // 
             // frmGestionarIncidencia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -627,6 +627,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmGestionarIncidencia";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestión de Incidencias";
             this.toolStrip2.ResumeLayout(false);
             this.toolStrip2.PerformLayout();

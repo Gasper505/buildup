@@ -52,9 +52,9 @@
             this.numNroAproxLadrillos = new System.Windows.Forms.NumericUpDown();
             this.lblNro = new System.Windows.Forms.Label();
             this.gbDatosOperario = new System.Windows.Forms.GroupBox();
+            this.txtAnho = new System.Windows.Forms.ComboBox();
             this.txtIDPlan = new System.Windows.Forms.TextBox();
             this.lblIDPlan = new System.Windows.Forms.Label();
-            this.txtAnho = new System.Windows.Forms.TextBox();
             this.lblAnho = new System.Windows.Forms.Label();
             this.toolStrip2.SuspendLayout();
             this.gbLotesSalientes.SuspendLayout();
@@ -274,9 +274,9 @@
             // 
             // gbDatosOperario
             // 
+            this.gbDatosOperario.Controls.Add(this.txtAnho);
             this.gbDatosOperario.Controls.Add(this.txtIDPlan);
             this.gbDatosOperario.Controls.Add(this.lblIDPlan);
-            this.gbDatosOperario.Controls.Add(this.txtAnho);
             this.gbDatosOperario.Controls.Add(this.lblAnho);
             this.gbDatosOperario.Location = new System.Drawing.Point(69, 73);
             this.gbDatosOperario.Name = "gbDatosOperario";
@@ -285,12 +285,33 @@
             this.gbDatosOperario.TabStop = false;
             this.gbDatosOperario.Text = "Datos del Plan de Producción";
             // 
+            // txtAnho
+            // 
+            this.txtAnho.FormattingEnabled = true;
+            this.txtAnho.Items.AddRange(new object[] {
+            "2021",
+            "2020",
+            "2019",
+            "2018",
+            "2017",
+            "2016",
+            "2015",
+            "2014",
+            "2013",
+            "2012",
+            "2011",
+            "2010"});
+            this.txtAnho.Location = new System.Drawing.Point(270, 60);
+            this.txtAnho.Name = "txtAnho";
+            this.txtAnho.Size = new System.Drawing.Size(116, 21);
+            this.txtAnho.TabIndex = 25;
+            // 
             // txtIDPlan
             // 
             this.txtIDPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIDPlan.Location = new System.Drawing.Point(270, 32);
             this.txtIDPlan.Name = "txtIDPlan";
-            this.txtIDPlan.Size = new System.Drawing.Size(93, 21);
+            this.txtIDPlan.Size = new System.Drawing.Size(84, 21);
             this.txtIDPlan.TabIndex = 24;
             // 
             // lblIDPlan
@@ -302,14 +323,6 @@
             this.lblIDPlan.Size = new System.Drawing.Size(19, 15);
             this.lblIDPlan.TabIndex = 23;
             this.lblIDPlan.Text = "ID";
-            // 
-            // txtAnho
-            // 
-            this.txtAnho.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAnho.Location = new System.Drawing.Point(270, 58);
-            this.txtAnho.Name = "txtAnho";
-            this.txtAnho.Size = new System.Drawing.Size(132, 21);
-            this.txtAnho.TabIndex = 22;
             // 
             // lblAnho
             // 
@@ -332,6 +345,7 @@
             this.Controls.Add(this.toolStrip2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmGestionarPlanProduccion";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestión de Planes de Producción";
             this.toolStrip2.ResumeLayout(false);
             this.toolStrip2.PerformLayout();
@@ -372,7 +386,7 @@
         private System.Windows.Forms.GroupBox gbDatosOperario;
         private System.Windows.Forms.TextBox txtIDPlan;
         private System.Windows.Forms.Label lblIDPlan;
-        private System.Windows.Forms.TextBox txtAnho;
         private System.Windows.Forms.Label lblAnho;
+        private System.Windows.Forms.ComboBox txtAnho;
     }
 }

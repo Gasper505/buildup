@@ -327,6 +327,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmGestionarTipoLadrillo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestión de Tipos de Ladrillo";
             this.gbDatos.ResumeLayout(false);
             this.gbDatos.PerformLayout();

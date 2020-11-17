@@ -41,7 +41,7 @@ namespace BuildUp
                 case Estado.Nuevo:
                     btnNuevo.Enabled = false;
                     btnGuardar.Enabled = true;
-                    btnBuscar.Enabled = true;
+                    btnBuscar.Enabled = false;
                     btnEliminar.Enabled = false;
                     btnActualizar.Enabled = false;
                     btnCancelar.Enabled = true;
@@ -62,20 +62,19 @@ namespace BuildUp
             }
         }
 
-        private void btnNuevo_Click(object sender, EventArgs e)
-        {
-            establecerEstadoComponentes(Estado.Nuevo);
-        }
 
+        //-----------------------------------------------------------------
+        
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            DialogResult dr = MessageBox.Show("¿Esta seguro que desea registrar esta Respuesta?", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            DialogResult dr = MessageBox.Show("¿Está seguro que desea registrar esta Respuesta?", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (dr == DialogResult.Yes)
             {
                 respuesta.tipo = txtTipo.Text;
-                if (daoRespuesta.insertarRespuesta(respuesta) == 1)
+                int result = daoRespuesta.insertarRespuesta(respuesta);
+                if (result != 0)
                 {
-                    MessageBox.Show("La Respuesta se ha registrado con éxito", "Mensaje de Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("El registro ha sido exitoso", "Mensaje de Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     txtIdRespuesta.Text = "";
                     txtTipo.Text = "";
                     establecerEstadoComponentes(Estado.Inicial);
@@ -88,15 +87,6 @@ namespace BuildUp
 
         }
 
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-
-            txtIdRespuesta.Text = "";
-            txtTipo.Text = "";
-            establecerEstadoComponentes(Estado.Inicial);
-            
-        }
-
         private void btnActualizar_Click(object sender, EventArgs e)
         {
             DialogResult dr = MessageBox.Show("¿Esta seguro que desea actualizar esta Respuesta?", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
@@ -104,9 +94,10 @@ namespace BuildUp
             {
                 respuesta.idRespuesta = Int32.Parse(txtIdRespuesta.Text);
                 respuesta.tipo = txtTipo.Text;
-                if(daoRespuesta.actualizarRespuesta(respuesta) == 1)
+                int result = daoRespuesta.actualizarRespuesta(respuesta);
+                if(result != 0)
                 {
-                    MessageBox.Show("La Respuesta se ha actualizado con éxito", "Mensaje de Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("La actualización ha sido exitosa", "Mensaje de Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     txtIdRespuesta.Text = "";
                     txtTipo.Text = "";
                     establecerEstadoComponentes(Estado.Inicial);
@@ -121,7 +112,7 @@ namespace BuildUp
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            DialogResult dr = MessageBox.Show("¿Esta seguro que desea eliminar esta Respuesta?", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            DialogResult dr = MessageBox.Show("¿Esta seguro que desea eliminar esta Respuesta del registro?", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (dr == DialogResult.Yes)
             {
                 daoRespuesta.eliminarRespuesta(Int32.Parse(txtIdRespuesta.Text));
@@ -130,11 +121,6 @@ namespace BuildUp
                 establecerEstadoComponentes(Estado.Inicial);
             }
             
-        }
-
-        private void btnRegresar_Click(object sender, EventArgs e)
-        {
-            this.Hide();
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -147,7 +133,29 @@ namespace BuildUp
                 txtTipo.Text = respuesta.tipo;
                 establecerEstadoComponentes(Estado.Modificacion);
             }
-            
+
         }
+
+        //-----------------------------------------------------------------
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            establecerEstadoComponentes(Estado.Nuevo);
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+
+            txtIdRespuesta.Text = "";
+            txtTipo.Text = "";
+            establecerEstadoComponentes(Estado.Inicial);
+
+        }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
     }
 }

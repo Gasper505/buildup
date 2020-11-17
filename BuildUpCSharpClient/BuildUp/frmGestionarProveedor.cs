@@ -14,13 +14,14 @@ namespace BuildUp
     public partial class frmGestionarProveedor : Form
     {
         ProveedorWS.ProveedorWSClient daoProveedor;
-        ProveedorWS.proveedor prov;
+        ProveedorWS.proveedor proveedor;
 
         public frmGestionarProveedor()
         {
             InitializeComponent();
             EstablecerEstadoComponentes(Estado.Inicial);
             daoProveedor = new ProveedorWS.ProveedorWSClient();
+            proveedor = new ProveedorWS.proveedor();
         }
         public void EstablecerEstadoComponentes(Estado estado)
         {
@@ -67,6 +68,92 @@ namespace BuildUp
             }
         }
 
+        //-----------------------------------------------------------------
+        private void btnGuardar_Click_1(object sender, EventArgs e)
+        {
+            DialogResult dr = MessageBox.Show("¿Está seguro que desea registrar este Proveedor?", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (dr == DialogResult.Yes)
+            {
+                proveedor.razonSocial = txtRazonSocial.Text;
+                proveedor.representante = txtRepresentante.Text;
+                proveedor.correo = txtCorreo.Text;
+
+                int result = daoProveedor.insertarProveedor(proveedor);
+                if (result != 0)
+                {
+                    MessageBox.Show("El registro ha sido exitoso", "Mensaje de Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtIDProveedor.Text = "";
+                    txtRazonSocial.Text = "";
+                    txtCorreo.Text = "";
+                    txtRepresentante.Text = "";
+                    EstablecerEstadoComponentes(Estado.Inicial);
+                }
+                else
+                {
+                    MessageBox.Show("Error en el proceso", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void btnBuscar_Click_1(object sender, EventArgs e)
+        {
+            frmBuscarProveedor formBuscarProveedor = new frmBuscarProveedor();
+            if (formBuscarProveedor.ShowDialog() == DialogResult.OK)
+            {
+                proveedor = formBuscarProveedor.ProveedorSeleccionado;
+                txtIDProveedor.Text = proveedor.idProveedor.ToString();
+                txtRazonSocial.Text = proveedor.razonSocial;
+                txtCorreo.Text = proveedor.correo;
+                txtRepresentante.Text = proveedor.representante;
+                EstablecerEstadoComponentes(Estado.Modificacion);
+            }
+            
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            DialogResult dr = MessageBox.Show("¿Esta seguro que desea actualizar este Proveedor?", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (dr == DialogResult.Yes)
+            {
+                proveedor.idProveedor = Int32.Parse(txtIDProveedor.Text);
+                proveedor.razonSocial = txtRazonSocial.Text;
+                proveedor.representante = txtRepresentante.Text;
+                proveedor.correo = txtCorreo.Text;
+
+                int result = daoProveedor.actualizarProveedor(proveedor);
+                if (result != 0)
+                {
+                    MessageBox.Show("La actualización ha sido exitosa", "Mensaje de Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtIDProveedor.Text = "";
+                    txtRazonSocial.Text = "";
+                    txtCorreo.Text = "";
+                    txtRepresentante.Text = "";
+                    EstablecerEstadoComponentes(Estado.Inicial);
+                }
+                else
+                {
+                    MessageBox.Show("Error en el proceso", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            DialogResult dr = MessageBox.Show("¿Está seguro que desea eliminar este Tipo de Ladrillo del registro?", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (dr == DialogResult.Yes)
+            {
+                daoProveedor.eliminarProveedor(Int32.Parse(txtIDProveedor.Text));
+                txtIDProveedor.Text = "";
+                txtRazonSocial.Text = "";
+                txtCorreo.Text = "";
+                txtRepresentante.Text = "";
+                EstablecerEstadoComponentes(Estado.Inicial);
+            }
+        }
+
+        //-----------------------------------------------------------------
+
         private void btnVolver_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -84,42 +171,6 @@ namespace BuildUp
             txtCorreo.Text = "";
             txtRepresentante.Text = "";
             EstablecerEstadoComponentes(Estado.Inicial);
-        }
-
-        private void btnGuardar_Click_1(object sender, EventArgs e)
-        {
-            prov = new ProveedorWS.proveedor();
-            prov.razonSocial = txtRazonSocial.Text;
-            prov.correo = txtCorreo.Text;
-            prov.representante = txtRepresentante.Text;
-            daoProveedor.insertarProveedor(prov);
-            MessageBox.Show("Se ha registrado correctamente el proveedor", "Mensaje Informativo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            txtIDProveedor.Text = "";
-            txtRazonSocial.Text = "";
-            txtCorreo.Text = "";
-            txtRepresentante.Text = "";
-            EstablecerEstadoComponentes(Estado.Inicial);
-        }
-
-        private void btnBuscar_Click_1(object sender, EventArgs e)
-        {
-            frmBuscarProveedor formBuscarProveedor = new frmBuscarProveedor();
-            if (formBuscarProveedor.ShowDialog() == DialogResult.OK)
-            {
-                //...
-                EstablecerEstadoComponentes(Estado.Modificacion);
-            }
-            
-        }
-
-        private void btnActualizar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnEliminar_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

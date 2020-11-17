@@ -67,7 +67,7 @@
             this.btnRegresar});
             this.toolStrip2.Location = new System.Drawing.Point(0, 0);
             this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(669, 25);
+            this.toolStrip2.Size = new System.Drawing.Size(651, 25);
             this.toolStrip2.TabIndex = 45;
             this.toolStrip2.Text = "toolStrip2";
             // 
@@ -163,7 +163,7 @@
             this.gbDatosMaquinaria.Controls.Add(this.txtIdRespuesta);
             this.gbDatosMaquinaria.Controls.Add(this.lblNombreMaquinaria);
             this.gbDatosMaquinaria.Controls.Add(this.lblIdMaquinaria);
-            this.gbDatosMaquinaria.Location = new System.Drawing.Point(60, 62);
+            this.gbDatosMaquinaria.Location = new System.Drawing.Point(54, 61);
             this.gbDatosMaquinaria.Name = "gbDatosMaquinaria";
             this.gbDatosMaquinaria.Size = new System.Drawing.Size(542, 111);
             this.gbDatosMaquinaria.TabIndex = 46;
@@ -208,12 +208,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(669, 213);
+            this.ClientSize = new System.Drawing.Size(651, 213);
             this.Controls.Add(this.gbDatosMaquinaria);
             this.Controls.Add(this.toolStrip2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmGestionarRespuesta";
-            this.Text = "frmGestionarRespuesta";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Gestión de Respuestas a Problemas de Maquinarias";
             this.toolStrip2.ResumeLayout(false);
             this.toolStrip2.PerformLayout();
             this.gbDatosMaquinaria.ResumeLayout(false);

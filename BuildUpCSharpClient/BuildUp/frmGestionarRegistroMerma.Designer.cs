@@ -52,73 +52,75 @@
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.btnCancelar = new System.Windows.Forms.ToolStripButton();
             this.btnRegresar = new System.Windows.Forms.ToolStripButton();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.toolStrip2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(192, 75);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(127, 34);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(116, 13);
+            this.label1.Size = new System.Drawing.Size(114, 15);
             this.label1.TabIndex = 1;
             this.label1.Text = "ID Registro Merma:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(237, 181);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(172, 140);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 13);
+            this.label2.Size = new System.Drawing.Size(68, 15);
             this.label2.TabIndex = 2;
             this.label2.Text = "Supervisor:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(180, 217);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(115, 176);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(128, 13);
+            this.label3.Size = new System.Drawing.Size(123, 15);
             this.label3.TabIndex = 3;
             this.label3.Text = "Linea de Produccion:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(231, 110);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(166, 69);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(77, 13);
+            this.label4.Size = new System.Drawing.Size(77, 15);
             this.label4.TabIndex = 4;
             this.label4.Text = "Tipo Merma:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(204, 144);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(139, 103);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(104, 13);
+            this.label5.Size = new System.Drawing.Size(100, 15);
             this.label5.TabIndex = 5;
             this.label5.Text = "Cantidad (Lotes):";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(262, 250);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(197, 209);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(46, 13);
+            this.label6.Size = new System.Drawing.Size(44, 15);
             this.label6.TabIndex = 6;
             this.label6.Text = "Fecha:";
             // 
             // txtIDmerma
             // 
             this.txtIDmerma.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIDmerma.Location = new System.Drawing.Point(314, 73);
+            this.txtIDmerma.Location = new System.Drawing.Point(249, 32);
             this.txtIDmerma.Name = "txtIDmerma";
             this.txtIDmerma.Size = new System.Drawing.Size(100, 21);
             this.txtIDmerma.TabIndex = 7;
@@ -127,7 +129,7 @@
             // 
             this.cboTipoMerma.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboTipoMerma.FormattingEnabled = true;
-            this.cboTipoMerma.Location = new System.Drawing.Point(314, 106);
+            this.cboTipoMerma.Location = new System.Drawing.Point(249, 65);
             this.cboTipoMerma.Name = "cboTipoMerma";
             this.cboTipoMerma.Size = new System.Drawing.Size(133, 23);
             this.cboTipoMerma.TabIndex = 8;
@@ -135,7 +137,7 @@
             // txtCantidad
             // 
             this.txtCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCantidad.Location = new System.Drawing.Point(314, 143);
+            this.txtCantidad.Location = new System.Drawing.Point(249, 102);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(100, 21);
             this.txtCantidad.TabIndex = 9;
@@ -144,7 +146,7 @@
             // 
             this.cboSupervisor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboSupervisor.FormattingEnabled = true;
-            this.cboSupervisor.Location = new System.Drawing.Point(314, 178);
+            this.cboSupervisor.Location = new System.Drawing.Point(249, 137);
             this.cboSupervisor.Name = "cboSupervisor";
             this.cboSupervisor.Size = new System.Drawing.Size(255, 23);
             this.cboSupervisor.TabIndex = 10;
@@ -153,7 +155,7 @@
             // 
             this.cboLineaProduccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboLineaProduccion.FormattingEnabled = true;
-            this.cboLineaProduccion.Location = new System.Drawing.Point(314, 214);
+            this.cboLineaProduccion.Location = new System.Drawing.Point(249, 173);
             this.cboLineaProduccion.Name = "cboLineaProduccion";
             this.cboLineaProduccion.Size = new System.Drawing.Size(255, 23);
             this.cboLineaProduccion.TabIndex = 11;
@@ -161,7 +163,7 @@
             // dtpFechaMerma
             // 
             this.dtpFechaMerma.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFechaMerma.Location = new System.Drawing.Point(314, 250);
+            this.dtpFechaMerma.Location = new System.Drawing.Point(249, 209);
             this.dtpFechaMerma.Name = "dtpFechaMerma";
             this.dtpFechaMerma.Size = new System.Drawing.Size(200, 21);
             this.dtpFechaMerma.TabIndex = 12;
@@ -266,30 +268,43 @@
             this.btnRegresar.Text = "Regresar";
             this.btnRegresar.Click += new System.EventHandler(this.tsbVolver_Click);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.dtpFechaMerma);
+            this.groupBox1.Controls.Add(this.cboLineaProduccion);
+            this.groupBox1.Controls.Add(this.cboSupervisor);
+            this.groupBox1.Controls.Add(this.txtCantidad);
+            this.groupBox1.Controls.Add(this.cboTipoMerma);
+            this.groupBox1.Controls.Add(this.txtIDmerma);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Location = new System.Drawing.Point(58, 56);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(575, 258);
+            this.groupBox1.TabIndex = 42;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Datos del Acontecimiento de Merma";
+            // 
             // frmGestionarRegistroMerma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(699, 346);
+            this.ClientSize = new System.Drawing.Size(699, 361);
             this.ControlBox = false;
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.toolStrip2);
-            this.Controls.Add(this.dtpFechaMerma);
-            this.Controls.Add(this.cboLineaProduccion);
-            this.Controls.Add(this.cboSupervisor);
-            this.Controls.Add(this.txtCantidad);
-            this.Controls.Add(this.cboTipoMerma);
-            this.Controls.Add(this.txtIDmerma);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmGestionarRegistroMerma";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestión de Registros de Merma";
             this.toolStrip2.ResumeLayout(false);
             this.toolStrip2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -319,5 +334,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripButton btnCancelar;
         private System.Windows.Forms.ToolStripButton btnRegresar;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

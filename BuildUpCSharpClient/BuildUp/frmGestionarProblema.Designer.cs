@@ -42,7 +42,7 @@
             this.btnRegresar = new System.Windows.Forms.ToolStripButton();
             this.label1 = new System.Windows.Forms.Label();
             this.gbDatosMaquinaria = new System.Windows.Forms.GroupBox();
-            this.txtNivelImportancia = new System.Windows.Forms.TextBox();
+            this.txtNivelImportancia = new System.Windows.Forms.ComboBox();
             this.lblNivelImportancia = new System.Windows.Forms.Label();
             this.txtTipo = new System.Windows.Forms.TextBox();
             this.txtIdProblema = new System.Windows.Forms.TextBox();
@@ -176,10 +176,17 @@
             // 
             // txtNivelImportancia
             // 
-            this.txtNivelImportancia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNivelImportancia.FormattingEnabled = true;
+            this.txtNivelImportancia.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"});
             this.txtNivelImportancia.Location = new System.Drawing.Point(189, 94);
             this.txtNivelImportancia.Name = "txtNivelImportancia";
-            this.txtNivelImportancia.Size = new System.Drawing.Size(241, 21);
+            this.txtNivelImportancia.Size = new System.Drawing.Size(76, 21);
             this.txtNivelImportancia.TabIndex = 9;
             // 
             // lblNivelImportancia
@@ -236,9 +243,10 @@
             this.Controls.Add(this.gbDatosMaquinaria);
             this.Controls.Add(this.toolStrip2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmGestionarProblema";
-            this.Text = "frmGestionarProblema";
-            this.Load += new System.EventHandler(this.frmGestionarProblema_Load);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Gestión de Problemas de Maquinarias";
             this.toolStrip2.ResumeLayout(false);
             this.toolStrip2.PerformLayout();
             this.gbDatosMaquinaria.ResumeLayout(false);
@@ -268,6 +276,6 @@
         private System.Windows.Forms.TextBox txtIdProblema;
         private System.Windows.Forms.Label lblTipo;
         private System.Windows.Forms.Label lblIdProblema;
-        private System.Windows.Forms.TextBox txtNivelImportancia;
+        private System.Windows.Forms.ComboBox txtNivelImportancia;
     }
 }

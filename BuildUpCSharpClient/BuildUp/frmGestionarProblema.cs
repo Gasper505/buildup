@@ -12,10 +12,16 @@ namespace BuildUp
 {
     public partial class frmGestionarProblema : Form
     {
+
+        ProblemaWS.ProblemaWSClient daoProblema;
+        ProblemaWS.problema problema;
+
         public frmGestionarProblema()
         {
             InitializeComponent();
             establecerEstadoComponentes(Estado.Inicial);
+            daoProblema = new ProblemaWS.ProblemaWSClient();
+            problema = new ProblemaWS.problema();
 
         }
         public void establecerEstadoComponentes(Estado estado)
@@ -36,7 +42,7 @@ namespace BuildUp
                 case Estado.Nuevo:
                     btnNuevo.Enabled = false;
                     btnGuardar.Enabled = true;
-                    btnBuscar.Enabled = true;
+                    btnBuscar.Enabled = false;
                     btnEliminar.Enabled = false;
                     btnActualizar.Enabled = false;
                     btnCancelar.Enabled = true;
@@ -64,45 +70,69 @@ namespace BuildUp
             establecerEstadoComponentes(Estado.Nuevo);
         }
 
+        //-----------------------------------------------------------------
+
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            //CODIGO QUE REGISTRARA LA INFORMACION EN LA BD
+            DialogResult dr = MessageBox.Show("¿Está seguro que desea registrar este Problema?", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (dr == DialogResult.Yes)
+            {
+                problema.tipo = txtTipo.Text;
+                problema.nivelImportancia = Int32.Parse(txtNivelImportancia.Text);
 
-
-            //FIN
-            txtIdProblema.Text = "";
-            txtTipo.Text = "";
-            txtNivelImportancia.Text = "";
-            establecerEstadoComponentes(Estado.Inicial);
+                int result = daoProblema.insertarProblema(problema);
+                if (result != 0)
+                {
+                    MessageBox.Show("El registro ha sido exitoso", "Mensaje de Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtIdProblema.Text = "";
+                    txtTipo.Text = "";
+                    txtNivelImportancia.Text = "";
+                    establecerEstadoComponentes(Estado.Inicial);
+                }
+                else
+                {
+                    MessageBox.Show("Error en el proceso", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
+            DialogResult dr = MessageBox.Show("¿Esta seguro que desea actualizar este Problema?", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (dr == DialogResult.Yes)
+            {
+                problema.idProblema = Int32.Parse(txtIdProblema.Text);
+                problema.tipo = txtTipo.Text;
+                problema.nivelImportancia = Int32.Parse(txtNivelImportancia.Text);
 
-        }
+                int result = daoProblema.actualizarProblema(problema);
+                if (result != 0)
+                {
+                    MessageBox.Show("La actualización ha sido exitosa", "Mensaje de Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtIdProblema.Text = "";
+                    txtTipo.Text = "";
+                    txtNivelImportancia.Text = "";
+                    establecerEstadoComponentes(Estado.Inicial);
+                }
+                else
+                {
+                    MessageBox.Show("Error en el proceso", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
 
-        private void btnRegresar_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            
+            }
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("¿Está seguro de eliminar el Problema?", "Confirmación", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information);
-        }
-
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            txtIdProblema.Text = "";
-            txtTipo.Text = "";
-            txtNivelImportancia.Text = "";       
-            establecerEstadoComponentes(Estado.Inicial);
-        }
-
-        private void frmGestionarProblema_Load(object sender, EventArgs e)
-        {
-
+            DialogResult dr = MessageBox.Show("¿Está seguro que desea eliminar este Problema del registro?", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (dr == DialogResult.Yes)
+            {
+                daoProblema.eliminarProblema(Int32.Parse(txtIdProblema.Text));
+                txtIdProblema.Text = "";
+                txtTipo.Text = "";
+                txtNivelImportancia.Text = "";
+                establecerEstadoComponentes(Estado.Inicial);
+            }
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -110,10 +140,27 @@ namespace BuildUp
             frmBuscarProblema formBuscarProblema = new frmBuscarProblema();
             if (formBuscarProblema.ShowDialog() == DialogResult.OK)
             {
-                //PASO DE INFORMACION
+                this.problema = formBuscarProblema.ProblemaSeleccionado;
+                txtIdProblema.Text = problema.idProblema.ToString();
+                txtTipo.Text = problema.tipo;
+                txtNivelImportancia.Text = problema.nivelImportancia.ToString();
                 establecerEstadoComponentes(Estado.Modificacion);
             }
             
+        }
+        //-----------------------------------------------------------------
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            txtIdProblema.Text = "";
+            txtTipo.Text = "";
+            txtNivelImportancia.Text = "";
+            establecerEstadoComponentes(Estado.Inicial);
+        }
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
         }
     }
 }

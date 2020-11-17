@@ -252,6 +252,7 @@
             this.Controls.Add(this.gbDatosProveedor);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmGestionarProveedor";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestión de Proveedores";
             this.gbDatosProveedor.ResumeLayout(false);
             this.gbDatosProveedor.PerformLayout();
