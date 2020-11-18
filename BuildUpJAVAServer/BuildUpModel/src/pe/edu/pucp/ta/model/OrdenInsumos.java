@@ -11,7 +11,8 @@ public class OrdenInsumos {
     private double cantidad;
     private String unidadMedida;
     private Date fecha;
-    
+    private boolean activo;
+    private boolean estado;
 
     public OrdenInsumos(Operario operario, Insumo insumo, double cantidad, String unidadMedida, Date fecha) {
         this.operario = operario;
@@ -82,12 +83,26 @@ public class OrdenInsumos {
         this.unidadMedida = unidadMedida;
     }
 
-    //
     public void setIdOperario(int aInt) {
         this.operario.setIdPersona(aInt);
     }
 
     public void setIdInsumo(int aInt) {
         this.insumo.setIdInsumo(aInt);
+    }
+        public boolean isActivo() {
+        return activo;
+    }
+
+    public void setActivo(boolean activo) {
+        this.activo = activo;
+    }
+
+    public boolean isEstado() {
+        return estado;
+    }
+
+    public void setEstado(boolean estado) {
+        this.estado = estado;
     }
 }
