@@ -140,6 +140,24 @@ public class OrdenInsumosMySQL implements OrdenInsumosDAO{
         }
         return ordenes;
     }
+
+    @Override
+    public int aceptar(int idOrdenInsumos) {
+        int resultado=0;
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.password);
+            String sql = "{call ACEPTAR_ORDEN_INSUMOS(?)}";
+            cs = con.prepareCall(sql);
+            cs.setInt("_ID_ORDEN_INSUMOS",idOrdenInsumos);
+            resultado=cs.executeUpdate();   
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }finally{
+            try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());}
+        }
+        return resultado; 
+    }
     
     
 }
