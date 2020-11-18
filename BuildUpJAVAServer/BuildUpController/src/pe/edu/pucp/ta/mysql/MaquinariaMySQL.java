@@ -126,12 +126,12 @@ public class MaquinariaMySQL implements MaquinariaDAO{
     }
 
     @Override
-    public ArrayList<Maquinaria> listarMaquinariasConParametros(String nombreMaq, String nombreLineaProd) {
+    public ArrayList<Maquinaria> listarMaquinariaPorNombreMaqNombreLinea(String nombreMaq, String nombreLineaProd) {
         ArrayList<Maquinaria> maquinas = new ArrayList<>();
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.password);
-            cs = con.prepareCall("{call LISTAR_MAQUINARIA_POR_ID_NOMBREMAQ_NOMBRELINEA(?,?)}");
+            cs = con.prepareCall("{call LISTAR_MAQUINARIA_POR_NOMBREMAQ_NOMBRELINEA(?,?)}");
             cs.setString("_NOMBRE_MAQUINARIA", nombreMaq);
             cs.setString("_NOMBRE_LINEA_PRODUCCION", nombreLineaProd);
             rs = cs.executeQuery();
@@ -139,8 +139,13 @@ public class MaquinariaMySQL implements MaquinariaDAO{
                 Maquinaria maq = new Maquinaria();
                 maq.setIdMaquinaria(rs.getInt("ID_MAQUINARIA")); 
                 maq.setNombre(rs.getString("NOMBRE_MAQUINARIA"));
+                maq.setGarantiaFin(rs.getDate("FECHA_FIN_GARANTIA"));
+                maq.getLineaProduccion().setIdLineaProduccion(rs.getInt("LINEA_PRODUCCION"));
                 maq.getLineaProduccion().setNombre(rs.getString("NOMBRE_LINEA_PRODUCCION"));
+                maq.getProveedor().setIdProveedor(rs.getInt("ID_PROVEEDOR"));
                 maq.getProveedor().setRazonSocial(rs.getString("NOMBRE_PROVEEDOR"));
+                maq.getProveedor().setRepresentante(rs.getString("REPRESENTANTE_PROVEEDOR"));
+                maq.getProveedor().setCorreo(rs.getString("CORREO_PROVEEDOR"));
                 maquinas.add(maq);
             }
         }catch(Exception ex){

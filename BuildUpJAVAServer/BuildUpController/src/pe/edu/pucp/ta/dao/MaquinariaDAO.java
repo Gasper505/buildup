@@ -10,5 +10,5 @@ public interface MaquinariaDAO {
     int actualizar(int idMaquinaria, boolean nuevo);
     int eliminar(int idMaquinaria);
     ArrayList<Maquinaria> listar();
-    ArrayList<Maquinaria> listarMaquinariasConParametros(String nombreMaq, String nombreLineaProd);
+    ArrayList<Maquinaria> listarMaquinariaPorNombreMaqNombreLinea(String nombreMaq, String nombreLineaProd);
 }
