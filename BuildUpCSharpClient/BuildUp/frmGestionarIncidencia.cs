@@ -41,6 +41,7 @@ namespace BuildUp
             else if(frmLogIn.Usuario.rol == "Ingeniero")
             {
                 btnNuevo.Visible = false;
+                btnGuardar.Visible = false;
                 btnEliminar.Visible = false;
             }
         }
