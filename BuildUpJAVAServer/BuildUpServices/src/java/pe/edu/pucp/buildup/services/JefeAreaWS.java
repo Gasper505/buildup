@@ -45,11 +45,21 @@ public class JefeAreaWS {
         }
         return resultado;
     }
-    @WebMethod(operationName = "actualizarJefeArea")
-    public int actualizarJefeArea(@WebParam(name = "idPersona") int idPersona,@WebParam(name = "nuevo") int nuevo) {
+    @WebMethod(operationName = "actualizarEstadoJefeArea")
+    public int actualizarEstadoJefeArea(@WebParam(name = "idPersona") int idPersona,@WebParam(name = "activo") boolean activo) {
         int resultado = 0;
         try{
-            resultado = daoJefeArea.actualizar(idPersona,nuevo);
+            resultado = daoJefeArea.actualizar_estado(idPersona, activo);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return resultado;
+    }
+    @WebMethod(operationName = "modificarJefeArea")
+    public int modificarJefeArea(@WebParam(name = "jefeArea") JefeArea jefeArea) {
+        int resultado = 0;
+        try{
+            resultado = daoJefeArea.modificar(jefeArea);
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }
@@ -64,5 +74,16 @@ public class JefeAreaWS {
             System.out.println(ex.getMessage());
         }
         return resultado;
+    }
+    
+    @WebMethod(operationName = "obtenerFotoFirmaJefeArea")
+    public byte[] obtenerFotoFirmaJefeArea(@WebParam(name = "idJefeArea") int idJefeArea ) {
+        byte[] foto_firma={};
+        try{
+            foto_firma = daoJefeArea.obtener_foto_firma(idJefeArea);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return foto_firma;
     }
 }

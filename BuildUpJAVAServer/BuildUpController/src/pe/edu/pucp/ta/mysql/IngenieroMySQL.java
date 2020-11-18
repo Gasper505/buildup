@@ -25,18 +25,21 @@ public class IngenieroMySQL implements IngenieroDAO{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.urlMySQL, 
                     DBManager.user, DBManager.password);
-            String sql = "{call INSERTAR_INGENIERO(?,?,?,?,?,?,?,?)}";
+            String sql = "{call INSERTAR_INGENIERO(?,?,?,?,?,?,?,?,?,?)}";
             cs = con.prepareCall(sql);
             cs.registerOutParameter("_ID_INGENIERO", java.sql.Types.INTEGER);
             cs.setString("_NOMBRES", ing.getNombres());
             cs.setString("_APELLIDOS", ing.getApellidos());
+            cs.setDate("_FECHA_NACIMIENTO",new java.sql.Date(ing.getFechaNacimiento().getTime()));
             cs.setString("_TELEFONO", ing.getTelefono());
+            cs.setString("_CORREO",ing.getCorreo());
             cs.setString("_ROL",ing.getRol());
             cs.setDate("_FECHA_FIN_CONTRATO",new java.sql.Date(ing.getFechaFinContrato().getTime()));
+            cs.setBytes("_PHOTO", ing.getFoto());
             cs.setString("_ESPECIALIDAD", ing.getEspecialidad());
             cs.executeUpdate();
             ing.setIdPersona(cs.getInt("_ID_INGENIERO"));
-            resultado=1;       
+            resultado=cs.getInt("_ID_INGENIERO");         
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }finally{
@@ -47,7 +50,7 @@ public class IngenieroMySQL implements IngenieroDAO{
     }
 
     @Override
-    public int actualizar(Ingeniero ing) {
+    public int actualizar_estado(int idIng, boolean activo) {
         int resultado=0;
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -55,10 +58,9 @@ public class IngenieroMySQL implements IngenieroDAO{
                     DBManager.user, DBManager.password);
             String sql = "{call ACTUALIZAR_ESTADO_INGENIERO(?,?)}";
             cs = con.prepareCall(sql);
-            cs.setInt("_ID_INGENIERO",ing.getIdPersona());
-            cs.setBoolean("_ACTIVO",ing.isActivo());
-            cs.executeUpdate();
-            resultado=1;
+            cs.setInt("_ID_INGENIERO",idIng);
+            cs.setBoolean("_ACTIVO",activo);
+            resultado=cs.executeUpdate();;
         
         }catch(Exception ex){
             System.out.println(ex.getMessage());
@@ -70,8 +72,51 @@ public class IngenieroMySQL implements IngenieroDAO{
     }
 
     @Override
+    public int modificar(Ingeniero ing) {
+        int resultado=0;
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection(DBManager.urlMySQL, 
+                    DBManager.user, DBManager.password);
+            String sql = "{call MODIFICAR_INGENIERO(?,?,?,?,?,?,?,?,?,?)}";
+            cs = con.prepareCall(sql);
+            cs.setInt("_ID_PERSONA",ing.getIdPersona());
+            cs.setString("_ESPECIALIDAD", ing.getEspecialidad());
+            cs.setString("_NOMBRES", ing.getNombres());
+            cs.setString("_APELLIDOS", ing.getApellidos());
+            cs.setDate("_FECHA_NACIMIENTO",new java.sql.Date(ing.getFechaNacimiento().getTime()));
+            cs.setString("_TELEFONO", ing.getTelefono());
+            cs.setString("_CORREO",ing.getCorreo());
+            cs.setString("_ROL",ing.getRol());
+            cs.setDate("_FECHA_FIN_CONTRATO",new java.sql.Date(ing.getFechaFinContrato().getTime()));
+            cs.setBytes("_PHOTO", ing.getFoto());
+            resultado=cs.executeUpdate();;
+        
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+            
+        }finally{
+            try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());}
+        }
+        return resultado;
+    }
+    @Override
     public int eliminar(int idIng) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        int resultado=0;
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection(DBManager.urlMySQL, 
+                    DBManager.user, DBManager.password);
+            String sql = "{call ELIMINAR_INGENIERO(?)}";
+            cs = con.prepareCall(sql);
+            cs.setInt("_ID_INGENIERO",idIng);
+            resultado=cs.executeUpdate();       
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }finally{
+            try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());}
+        }
+        return resultado;
     }
 
     @Override
@@ -103,5 +148,26 @@ public class IngenieroMySQL implements IngenieroDAO{
         return ingenieros;
     }
     
+    @Override
+    public String obtener_especialidad(int idIng){
+        String especialidad = "";
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection(DBManager.urlMySQL, 
+                    DBManager.user, DBManager.password);
+            String sql = "{call OBTENER_INGENIERO_ESPECIALIDAD(?)}";
+            cs = con.prepareCall(sql);
+            cs.setInt("_ID_PERSONA",idIng);
+            rs=cs.executeQuery();     
+            while(rs.next()){
+                especialidad = rs.getString("ESPECIALIDAD");
+            }
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }finally{
+            try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());}
+        }
+        return especialidad;
+    }
     
 }

@@ -44,11 +44,22 @@ private IngenieroDAO daoIngeniero;
         }
         return resultado;
     }
-    @WebMethod(operationName = "actualizarIngeniero")
-    public int actualizarIngeniero(@WebParam(name = "ingeniero") Ingeniero ingeniero) {
+    @WebMethod(operationName = "actualizarEstadoIngeniero")
+    public int actualizarEstadoIngeniero(@WebParam(name = "idIng") int idIng,@WebParam(name = "activo") boolean activo) {
         int resultado = 0;
         try{
-            resultado = daoIngeniero.actualizar(ingeniero);
+            resultado = daoIngeniero.actualizar_estado(idIng, activo);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return resultado;
+    }
+    
+    @WebMethod(operationName = "modificarIngeniero")
+    public int modificarIngeniero(@WebParam(name = "ingeniero") Ingeniero ingeniero) {
+        int resultado = 0;
+        try{
+            resultado = daoIngeniero.modificar(ingeniero);
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }
@@ -63,5 +74,15 @@ private IngenieroDAO daoIngeniero;
             System.out.println(ex.getMessage());
         }
         return resultado;
+    }
+    @WebMethod(operationName = "obtenerEspecialidadIngeniero")
+    public String obtenerEspecialidadIngeniero(@WebParam(name = "idIngeniero") int idIngeniero ) {
+        String especialidad="";
+        try{
+            especialidad = daoIngeniero.obtener_especialidad(idIngeniero);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return especialidad;
     }
 }

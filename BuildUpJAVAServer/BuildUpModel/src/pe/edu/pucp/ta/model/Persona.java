@@ -16,10 +16,11 @@ public class Persona {
     private Date fechaFinContrato;
     private byte[] foto;
     private boolean activo;
-    
-    public Persona(String nombres, String apellidos, String telefono, String correo, String rol, Date fechaFinContrato, byte[] foto, boolean activo) {
+
+    public Persona(String nombres, String apellidos, Date fechaNacimiento, String telefono, String correo, String rol, Date fechaFinContrato, byte[] foto, boolean activo) {
         this.nombres = nombres;
         this.apellidos = apellidos;
+        this.fechaNacimiento = fechaNacimiento;
         this.telefono = telefono;
         this.correo = correo;
         this.rol = rol;
