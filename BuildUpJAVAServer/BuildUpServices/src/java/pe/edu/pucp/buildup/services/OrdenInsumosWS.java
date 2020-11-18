@@ -59,11 +59,11 @@ public class OrdenInsumosWS {
         }
         return resultado;
     }
-    @WebMethod(operationName = "actualizarOrdenInsumos")
-    public int actualizarOrdenInsumos(@WebParam(name = "ordenInsumo") OrdenInsumos ordenInsumo) {
+    @WebMethod(operationName = "modificarOrdenInsumos")
+    public int modificarOrdenInsumos(@WebParam(name = "ordenInsumo") OrdenInsumos ordenInsumo) {
         int resultado = 0;
         try{
-            resultado = daoOrdenInsumos.actualizar(ordenInsumo);
+            resultado = daoOrdenInsumos.modificar(ordenInsumo);
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }
