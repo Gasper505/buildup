@@ -6,6 +6,7 @@
 package pe.edu.pucp.buildup.services;
 
 import java.util.ArrayList;
+import java.util.Date;
 import javax.jws.WebService;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
@@ -32,6 +33,16 @@ public class OrdenInsumosWS {
         ArrayList<OrdenInsumos> ordenInsumos = new ArrayList<>();
         try{
             ordenInsumos =daoOrdenInsumos.listar();
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return ordenInsumos;
+    }
+    @WebMethod(operationName = "listarOrdenInsumosPorRangoFecha")
+    public ArrayList<OrdenInsumos> listarOrdenInsumosPorRangoFecha(@WebParam(name="fechaInicio") Date fechaInicio,@WebParam(name="fechaFin") Date fechaFin) {
+        ArrayList<OrdenInsumos> ordenInsumos = new ArrayList<>();
+        try{
+            ordenInsumos =daoOrdenInsumos.listar_por_fecha(fechaFin, fechaFin);
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }
