@@ -43,8 +43,24 @@ public class OrdenInsumosMySQL implements OrdenInsumosDAO{
     }
 
     @Override
-    public int actualizar(OrdenInsumos ordenInsumos) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public int modificar(OrdenInsumos ordenInsumos) {
+        int resultado=0;
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.password);
+            String sql = "{call MODIFICAR_ORDEN_INSUMOS(?,?,?,?)}";
+            cs = con.prepareCall(sql);
+            cs.setInt("_ID_ORDEN_INSUMOS",ordenInsumos.getIdOrdenInsumos());
+            cs.setInt("_ID_INSUMO",ordenInsumos.getInsumo().getIdInsumo());
+            cs.setInt("_ID_OPERARIO",ordenInsumos.getIdOrdenInsumos());
+            cs.setInt("_CANTIDAD",ordenInsumos.getCantidad());
+            resultado=cs.executeUpdate();       
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }finally{
+            try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());}
+        }
+        return resultado;  
     }
 
     @Override
@@ -56,8 +72,7 @@ public class OrdenInsumosMySQL implements OrdenInsumosDAO{
             String sql = "{call ELIMINAR_ORDEN_INSUMOS(?)}";
             cs = con.prepareCall(sql);
             cs.setInt("_ID_ORDEN_INSUMOS",idOrdenInsumos);
-            cs.executeUpdate();
-            resultado=1;       
+            resultado=cs.executeUpdate();       
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }finally{
@@ -82,7 +97,7 @@ public class OrdenInsumosMySQL implements OrdenInsumosDAO{
                 orden.getOperario().setNombres(rs.getString("NOMBRE_OPERARIO"));
                 orden.setIdInsumo(rs.getInt("ID_INSUMO"));    
                 orden.getInsumo().setNombre(rs.getString("NOMBRE_INSUMO"));
-                orden.setCantidad(rs.getDouble("CANTIDAD"));
+                orden.setCantidad(rs.getInt("CANTIDAD"));
                 orden.setEstado(rs.getBoolean("ESTADO_ORDEN"));
                 ordenes.add(orden);
             }
@@ -113,7 +128,7 @@ public class OrdenInsumosMySQL implements OrdenInsumosDAO{
                 orden.getOperario().setNombres(rs.getString("NOMBRE_OPERARIO"));
                 orden.setIdInsumo(rs.getInt("ID_INSUMO"));    
                 orden.getInsumo().setNombre(rs.getString("NOMBRE_INSUMO"));
-                orden.setCantidad(rs.getDouble("CANTIDAD"));
+                orden.setCantidad(rs.getInt("CANTIDAD"));
                 orden.setEstado(rs.getBoolean("ESTADO_ORDEN"));
                 ordenes.add(orden);
             }

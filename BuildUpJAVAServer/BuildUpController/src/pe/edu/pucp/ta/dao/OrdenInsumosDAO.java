@@ -9,7 +9,7 @@ import pe.edu.pucp.ta.model.OrdenInsumos;
 public interface OrdenInsumosDAO {
     
     int insertar(OrdenInsumos ordenInsumos);
-    int actualizar(OrdenInsumos ordenInsumos);
+    int modificar(OrdenInsumos ordenInsumos);
     int eliminar(int idOrdenInsumos);
     ArrayList<OrdenInsumos> listar();
     ArrayList<OrdenInsumos> listar_por_fecha(Date fechaIni, Date fechaFin);
