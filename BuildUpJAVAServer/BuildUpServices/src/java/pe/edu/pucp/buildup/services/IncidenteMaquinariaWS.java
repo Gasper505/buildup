@@ -77,11 +77,21 @@ public class IncidenteMaquinariaWS {
         }
         return resultado;
     }
-    @WebMethod(operationName = "actualizarIncidenteMaquinaria")
-    public int actualizarIncidenteMaquinaria(@WebParam(name = "incidenteMaquinaria") IncidenteMaquinaria incidenteMaquinaria) {
+    @WebMethod(operationName = "modificarPorIngenieroIncidenteMaquinaria")
+    public int modificarPorIngenieroIncidenteMaquinaria(@WebParam(name = "incidenteMaquinaria") IncidenteMaquinaria incidenteMaquinaria) {
         int resultado = 0;
         try{
-            resultado = daoIncidenteMaquinaria.actualizar(incidenteMaquinaria);
+            resultado = daoIncidenteMaquinaria.modificarPorIngeniero(incidenteMaquinaria);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return resultado;
+    }
+    @WebMethod(operationName = "modificarPorSupervisorIncidenteMaquinaria")
+    public int modificarPorSupervisorIncidenteMaquinaria(@WebParam(name = "incidenteMaquinaria") IncidenteMaquinaria incidenteMaquinaria) {
+        int resultado = 0;
+        try{
+            resultado = daoIncidenteMaquinaria.modificarPorSupervisor(incidenteMaquinaria);
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }
