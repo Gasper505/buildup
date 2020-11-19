@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRolIngeniero));
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblNombres = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
@@ -91,12 +92,12 @@
             // button6
             // 
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(430, 316);
+            this.button6.Location = new System.Drawing.Point(247, 529);
             this.button6.Name = "button6";
             this.button6.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button6.Size = new System.Drawing.Size(113, 39);
+            this.button6.Size = new System.Drawing.Size(124, 39);
             this.button6.TabIndex = 37;
-            this.button6.Text = "Proveedor";
+            this.button6.Text = "Proveedores";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
@@ -105,9 +106,9 @@
             this.pictureBox5.BackColor = System.Drawing.SystemColors.Window;
             this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox5.Image = global::BuildUp.Properties.Resources.gratis_png_proveedor_de_iconos_de_computadora_entrega;
-            this.pictureBox5.Location = new System.Drawing.Point(430, 178);
+            this.pictureBox5.Location = new System.Drawing.Point(247, 391);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(112, 122);
+            this.pictureBox5.Size = new System.Drawing.Size(124, 122);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 36;
             this.pictureBox5.TabStop = false;
@@ -115,11 +116,11 @@
             // button5
             // 
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(262, 318);
+            this.button5.Location = new System.Drawing.Point(79, 531);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(113, 39);
+            this.button5.Size = new System.Drawing.Size(124, 39);
             this.button5.TabIndex = 30;
-            this.button5.Text = "Maquinaria";
+            this.button5.Text = "Maquinarias";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
@@ -128,9 +129,9 @@
             this.pictureBox4.BackColor = System.Drawing.SystemColors.Window;
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox4.Image = global::BuildUp.Properties.Resources.maquinaria;
-            this.pictureBox4.Location = new System.Drawing.Point(262, 178);
+            this.pictureBox4.Location = new System.Drawing.Point(79, 391);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(112, 122);
+            this.pictureBox4.Size = new System.Drawing.Size(124, 122);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 29;
             this.pictureBox4.TabStop = false;
@@ -138,9 +139,9 @@
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(262, 523);
+            this.button4.Location = new System.Drawing.Point(420, 315);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(113, 39);
+            this.button4.Size = new System.Drawing.Size(124, 39);
             this.button4.TabIndex = 28;
             this.button4.Text = "Respuestas";
             this.button4.UseVisualStyleBackColor = true;
@@ -149,9 +150,9 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(89, 523);
+            this.button3.Location = new System.Drawing.Point(247, 315);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(113, 39);
+            this.button3.Size = new System.Drawing.Size(124, 39);
             this.button3.TabIndex = 27;
             this.button3.Text = "Problemas";
             this.button3.UseVisualStyleBackColor = true;
@@ -162,9 +163,9 @@
             this.pictureBox3.BackColor = System.Drawing.SystemColors.Window;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox3.Image = global::BuildUp.Properties.Resources.icon_14;
-            this.pictureBox3.Location = new System.Drawing.Point(90, 382);
+            this.pictureBox3.Location = new System.Drawing.Point(248, 174);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(112, 122);
+            this.pictureBox3.Size = new System.Drawing.Size(124, 122);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 26;
             this.pictureBox3.TabStop = false;
@@ -174,9 +175,9 @@
             this.pictureBox1.BackColor = System.Drawing.SystemColors.Window;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Image = global::BuildUp.Properties.Resources.asa;
-            this.pictureBox1.Location = new System.Drawing.Point(262, 382);
+            this.pictureBox1.Location = new System.Drawing.Point(420, 174);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(112, 122);
+            this.pictureBox1.Size = new System.Drawing.Size(124, 122);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 25;
             this.pictureBox1.TabStop = false;
@@ -184,11 +185,11 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(90, 319);
+            this.button2.Location = new System.Drawing.Point(78, 315);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(113, 39);
+            this.button2.Size = new System.Drawing.Size(124, 39);
             this.button2.TabIndex = 24;
-            this.button2.Text = "Responder Incidencias";
+            this.button2.Text = "Incidentes de Maquinarias";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -196,10 +197,10 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Image = global::BuildUp.Properties.Resources.vector_document_icon1;
-            this.pictureBox2.Location = new System.Drawing.Point(90, 178);
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(78, 174);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(112, 122);
+            this.pictureBox2.Size = new System.Drawing.Size(124, 122);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 21;
             this.pictureBox2.TabStop = false;
@@ -263,7 +264,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
-            this.ClientSize = new System.Drawing.Size(775, 675);
+            this.ClientSize = new System.Drawing.Size(775, 680);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmRolIngeniero";

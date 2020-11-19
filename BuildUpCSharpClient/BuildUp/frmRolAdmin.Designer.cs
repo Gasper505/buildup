@@ -53,9 +53,9 @@
             this.panelAdmin.Controls.Add(this.pbFoto);
             this.panelAdmin.Controls.Add(this.lblTitulo);
             this.panelAdmin.Controls.Add(this.panel3);
-            this.panelAdmin.Location = new System.Drawing.Point(2, 32);
+            this.panelAdmin.Location = new System.Drawing.Point(2, 31);
             this.panelAdmin.Name = "panelAdmin";
-            this.panelAdmin.Size = new System.Drawing.Size(774, 385);
+            this.panelAdmin.Size = new System.Drawing.Size(774, 395);
             this.panelAdmin.TabIndex = 1;
             // 
             // lblNombres
@@ -71,7 +71,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(297, 298);
+            this.button2.Location = new System.Drawing.Point(322, 309);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(113, 39);
             this.button2.TabIndex = 24;
@@ -84,7 +84,7 @@
             this.pictureBox2.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.Image = global::BuildUp.Properties.Resources.icono_usuario_6091_78;
-            this.pictureBox2.Location = new System.Drawing.Point(297, 157);
+            this.pictureBox2.Location = new System.Drawing.Point(322, 168);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(112, 122);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -150,7 +150,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
-            this.ClientSize = new System.Drawing.Size(777, 450);
+            this.ClientSize = new System.Drawing.Size(777, 459);
             this.Controls.Add(this.panelAdmin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmRolAdmin";

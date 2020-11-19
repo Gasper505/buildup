@@ -12,13 +12,14 @@ namespace BuildUp
 {
     public partial class frmGestionarMerma : Form
     {
-
+        MermaWS.MermaWSClient daoMerma;
         MermaWS.merma merma;
 
         public frmGestionarMerma()
         {
             InitializeComponent();
             EstablecerEstadoComponentes(Estado.Inicial);
+            daoMerma = new MermaWS.MermaWSClient();
             merma = new MermaWS.merma();
         }
 
@@ -66,14 +67,32 @@ namespace BuildUp
             }
         }
 
-        private void btnNuevo_Click(object sender, EventArgs e)
-        {
-            EstablecerEstadoComponentes(Estado.Nuevo);
-        }
+        //-----------------------------------------------------------------
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            DialogResult dr = MessageBox.Show("¿Está seguro que desea registrar esta Merma?", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (dr == DialogResult.Yes)
+            {
+                merma.tipo = txtTipo.Text;
+                merma.descripcion = txtDescripcion.Text;
+                merma.unidad = cboUnidadMedida.Text;
 
+                int result = daoMerma.insertarMerma(merma);
+                if (result != 0)
+                {
+                    MessageBox.Show("El registro ha sido exitoso", "Mensaje de Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtIDMerma.Text = "";
+                    txtTipo.Text = "";
+                    txtDescripcion.Text = "";
+                    cboUnidadMedida.Text = "";
+                    EstablecerEstadoComponentes(Estado.Inicial);
+                }
+                else
+                {
+                    MessageBox.Show("Error en el proceso", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -81,7 +100,11 @@ namespace BuildUp
             frmBuscarMerma formBuscarMerma = new frmBuscarMerma();
             if (formBuscarMerma.ShowDialog() == DialogResult.OK)
             {
-                //...
+                this.merma = formBuscarMerma.MermaSeleccionada;
+                txtIDMerma.Text = merma.idMerma.ToString();
+                txtTipo.Text = merma.tipo;
+                txtDescripcion.Text = merma.descripcion;
+                cboUnidadMedida.Text = merma.unidad;
                 EstablecerEstadoComponentes(Estado.Modificacion);
             }
             
@@ -89,21 +112,60 @@ namespace BuildUp
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
+            DialogResult dr = MessageBox.Show("¿Esta seguro que desea actualizar esta Merma?", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (dr == DialogResult.Yes)
+            {
+                merma.idMerma = Int32.Parse(txtIDMerma.Text);
+                merma.tipo = txtTipo.Text;
+                merma.descripcion = txtDescripcion.Text;
+                merma.unidad = cboUnidadMedida.Text;
 
+                int result = daoMerma.actualizarMerma(merma);
+                if (result != 0)
+                {
+                    MessageBox.Show("La actualización ha sido exitosa", "Mensaje de Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtIDMerma.Text = "";
+                    txtTipo.Text = "";
+                    txtDescripcion.Text = "";
+                    cboUnidadMedida.Text = "";
+                    EstablecerEstadoComponentes(Estado.Inicial);
+                }
+                else
+                {
+                    MessageBox.Show("Error en el proceso", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-
+            DialogResult dr = MessageBox.Show("¿Está seguro que desea eliminar esta Merma del registro?", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (dr == DialogResult.Yes)
+            {
+                daoMerma.eliminarMerma(Int32.Parse(txtIDMerma.Text));
+                txtIDMerma.Text = "";
+                txtTipo.Text = "";
+                txtDescripcion.Text = "";
+                cboUnidadMedida.Text = "";
+                EstablecerEstadoComponentes(Estado.Inicial);
+            }
         }
+
+        //-----------------------------------------------------------------
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            txtDescripcion.Text = "";
             txtIDMerma.Text = "";
             txtTipo.Text = "";
+            txtDescripcion.Text = "";
             cboUnidadMedida.Text = "";
             EstablecerEstadoComponentes(Estado.Inicial);
+        }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            EstablecerEstadoComponentes(Estado.Nuevo);
         }
 
         private void btnRegresar_Click(object sender, EventArgs e)

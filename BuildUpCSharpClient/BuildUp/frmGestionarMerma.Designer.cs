@@ -45,10 +45,10 @@
             this.lblUnidad = new System.Windows.Forms.Label();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.lblDescripcion = new System.Windows.Forms.Label();
-            this.txtTipo = new System.Windows.Forms.TextBox();
             this.txtIDMerma = new System.Windows.Forms.TextBox();
             this.lblTipo = new System.Windows.Forms.Label();
             this.lblIDMerma = new System.Windows.Forms.Label();
+            this.txtTipo = new System.Windows.Forms.ComboBox();
             this.toolStrip2.SuspendLayout();
             this.gbDatosMaquinaria.SuspendLayout();
             this.SuspendLayout();
@@ -155,17 +155,17 @@
             // 
             // gbDatosMaquinaria
             // 
+            this.gbDatosMaquinaria.Controls.Add(this.txtTipo);
             this.gbDatosMaquinaria.Controls.Add(this.cboUnidadMedida);
             this.gbDatosMaquinaria.Controls.Add(this.lblUnidad);
             this.gbDatosMaquinaria.Controls.Add(this.txtDescripcion);
             this.gbDatosMaquinaria.Controls.Add(this.lblDescripcion);
-            this.gbDatosMaquinaria.Controls.Add(this.txtTipo);
             this.gbDatosMaquinaria.Controls.Add(this.txtIDMerma);
             this.gbDatosMaquinaria.Controls.Add(this.lblTipo);
             this.gbDatosMaquinaria.Controls.Add(this.lblIDMerma);
             this.gbDatosMaquinaria.Location = new System.Drawing.Point(55, 57);
             this.gbDatosMaquinaria.Name = "gbDatosMaquinaria";
-            this.gbDatosMaquinaria.Size = new System.Drawing.Size(502, 261);
+            this.gbDatosMaquinaria.Size = new System.Drawing.Size(502, 263);
             this.gbDatosMaquinaria.TabIndex = 45;
             this.gbDatosMaquinaria.TabStop = false;
             this.gbDatosMaquinaria.Text = "Datos de la Merma";
@@ -180,16 +180,16 @@
             "Litros",
             "Onzas",
             "Libras"});
-            this.cboUnidadMedida.Location = new System.Drawing.Point(199, 203);
+            this.cboUnidadMedida.Location = new System.Drawing.Point(199, 208);
             this.cboUnidadMedida.Name = "cboUnidadMedida";
-            this.cboUnidadMedida.Size = new System.Drawing.Size(121, 23);
+            this.cboUnidadMedida.Size = new System.Drawing.Size(133, 23);
             this.cboUnidadMedida.TabIndex = 46;
             // 
             // lblUnidad
             // 
             this.lblUnidad.AutoSize = true;
             this.lblUnidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUnidad.Location = new System.Drawing.Point(84, 206);
+            this.lblUnidad.Location = new System.Drawing.Point(84, 211);
             this.lblUnidad.Name = "lblUnidad";
             this.lblUnidad.Size = new System.Drawing.Size(109, 15);
             this.lblUnidad.TabIndex = 10;
@@ -198,7 +198,7 @@
             // txtDescripcion
             // 
             this.txtDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescripcion.Location = new System.Drawing.Point(199, 103);
+            this.txtDescripcion.Location = new System.Drawing.Point(199, 114);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(241, 80);
@@ -208,19 +208,11 @@
             // 
             this.lblDescripcion.AutoSize = true;
             this.lblDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescripcion.Location = new System.Drawing.Point(121, 104);
+            this.lblDescripcion.Location = new System.Drawing.Point(121, 114);
             this.lblDescripcion.Name = "lblDescripcion";
             this.lblDescripcion.Size = new System.Drawing.Size(72, 15);
             this.lblDescripcion.TabIndex = 8;
             this.lblDescripcion.Text = "Descripción";
-            // 
-            // txtTipo
-            // 
-            this.txtTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTipo.Location = new System.Drawing.Point(199, 73);
-            this.txtTipo.Name = "txtTipo";
-            this.txtTipo.Size = new System.Drawing.Size(161, 21);
-            this.txtTipo.TabIndex = 7;
             // 
             // txtIDMerma
             // 
@@ -234,7 +226,7 @@
             // 
             this.lblTipo.AutoSize = true;
             this.lblTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTipo.Location = new System.Drawing.Point(162, 74);
+            this.lblTipo.Location = new System.Drawing.Point(162, 78);
             this.lblTipo.Name = "lblTipo";
             this.lblTipo.Size = new System.Drawing.Size(31, 15);
             this.lblTipo.TabIndex = 6;
@@ -249,6 +241,17 @@
             this.lblIDMerma.Size = new System.Drawing.Size(92, 15);
             this.lblIDMerma.TabIndex = 5;
             this.lblIDMerma.Text = "ID de la Merma";
+            // 
+            // txtTipo
+            // 
+            this.txtTipo.FormattingEnabled = true;
+            this.txtTipo.Items.AddRange(new object[] {
+            "<tipo1>",
+            "<tipo2>"});
+            this.txtTipo.Location = new System.Drawing.Point(199, 77);
+            this.txtTipo.Name = "txtTipo";
+            this.txtTipo.Size = new System.Drawing.Size(133, 21);
+            this.txtTipo.TabIndex = 47;
             // 
             // frmGestionarMerma
             // 
@@ -288,10 +291,10 @@
         private System.Windows.Forms.Label lblUnidad;
         private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.Label lblDescripcion;
-        private System.Windows.Forms.TextBox txtTipo;
         private System.Windows.Forms.TextBox txtIDMerma;
         private System.Windows.Forms.Label lblTipo;
         private System.Windows.Forms.Label lblIDMerma;
         private System.Windows.Forms.ComboBox cboUnidadMedida;
+        private System.Windows.Forms.ComboBox txtTipo;
     }
 }

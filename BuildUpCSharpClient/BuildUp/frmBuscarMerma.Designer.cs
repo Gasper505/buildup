@@ -33,12 +33,12 @@
             this.txtTipoMerma = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSeleccionar = new System.Windows.Forms.Button();
-            this.dgvTiposLadrillo = new System.Windows.Forms.DataGridView();
+            this.dgvMermas = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TipoMerma = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UnidadMedida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTiposLadrillo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMermas)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -90,22 +90,24 @@
             this.btnSeleccionar.TabIndex = 15;
             this.btnSeleccionar.Text = "Seleccionar";
             this.btnSeleccionar.UseVisualStyleBackColor = true;
+            this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
             // 
-            // dgvTiposLadrillo
+            // dgvMermas
             // 
-            this.dgvTiposLadrillo.AllowUserToAddRows = false;
-            this.dgvTiposLadrillo.AllowUserToDeleteRows = false;
-            this.dgvTiposLadrillo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTiposLadrillo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvMermas.AllowUserToAddRows = false;
+            this.dgvMermas.AllowUserToDeleteRows = false;
+            this.dgvMermas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMermas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
-            this.Nombre,
+            this.TipoMerma,
             this.UnidadMedida});
-            this.dgvTiposLadrillo.Location = new System.Drawing.Point(52, 190);
-            this.dgvTiposLadrillo.Name = "dgvTiposLadrillo";
-            this.dgvTiposLadrillo.ReadOnly = true;
-            this.dgvTiposLadrillo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvTiposLadrillo.Size = new System.Drawing.Size(420, 214);
-            this.dgvTiposLadrillo.TabIndex = 14;
+            this.dgvMermas.Location = new System.Drawing.Point(52, 190);
+            this.dgvMermas.MultiSelect = false;
+            this.dgvMermas.Name = "dgvMermas";
+            this.dgvMermas.ReadOnly = true;
+            this.dgvMermas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvMermas.Size = new System.Drawing.Size(420, 214);
+            this.dgvMermas.TabIndex = 14;
             // 
             // ID
             // 
@@ -115,13 +117,12 @@
             this.ID.ReadOnly = true;
             this.ID.Width = 50;
             // 
-            // Nombre
+            // TipoMerma
             // 
-            this.Nombre.DataPropertyName = "nombre";
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            this.Nombre.Width = 175;
+            this.TipoMerma.HeaderText = "Tipo de Merma";
+            this.TipoMerma.Name = "TipoMerma";
+            this.TipoMerma.ReadOnly = true;
+            this.TipoMerma.Width = 175;
             // 
             // UnidadMedida
             // 
@@ -135,16 +136,15 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(523, 483);
-            this.ControlBox = false;
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnSeleccionar);
-            this.Controls.Add(this.dgvTiposLadrillo);
+            this.Controls.Add(this.dgvMermas);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmBuscarMerma";
             this.Text = "Búsqueda de Mermas";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTiposLadrillo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMermas)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -156,9 +156,9 @@
         private System.Windows.Forms.TextBox txtTipoMerma;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSeleccionar;
-        private System.Windows.Forms.DataGridView dgvTiposLadrillo;
+        private System.Windows.Forms.DataGridView dgvMermas;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TipoMerma;
         private System.Windows.Forms.DataGridViewTextBoxColumn UnidadMedida;
     }
 }

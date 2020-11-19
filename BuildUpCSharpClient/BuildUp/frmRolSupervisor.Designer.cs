@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRolSupervisor));
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblNombres = new System.Windows.Forms.Label();
             this.btnMerma = new System.Windows.Forms.Button();
@@ -80,7 +81,7 @@
             this.btnMerma.Name = "btnMerma";
             this.btnMerma.Size = new System.Drawing.Size(113, 39);
             this.btnMerma.TabIndex = 26;
-            this.btnMerma.Text = "Merma";
+            this.btnMerma.Text = "Mermas";
             this.btnMerma.UseVisualStyleBackColor = true;
             this.btnMerma.Click += new System.EventHandler(this.btnMerma_Click);
             // 
@@ -91,7 +92,7 @@
             this.btnIncidencia.Name = "btnIncidencia";
             this.btnIncidencia.Size = new System.Drawing.Size(113, 39);
             this.btnIncidencia.TabIndex = 24;
-            this.btnIncidencia.Text = "Registro de Incidencias";
+            this.btnIncidencia.Text = "Incidencias de Maquinarias";
             this.btnIncidencia.UseVisualStyleBackColor = true;
             this.btnIncidencia.Click += new System.EventHandler(this.btnIncidencia_Click);
             // 
@@ -111,7 +112,7 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Image = global::BuildUp.Properties.Resources.vector_document_icon1;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(92, 164);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(112, 122);

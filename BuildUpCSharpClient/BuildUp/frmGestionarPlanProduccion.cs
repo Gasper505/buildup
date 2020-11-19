@@ -17,6 +17,7 @@ namespace BuildUp
         {
             InitializeComponent();
             EstablecerEstadoComponentes(Estado.Inicial);
+            dgvAsignacion.AutoGenerateColumns = false;
         }
 
         public void EstablecerEstadoComponentes(Estado estado)

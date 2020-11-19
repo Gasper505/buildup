@@ -30,20 +30,21 @@
         {
             this.gbParametrosBusqueda = new System.Windows.Forms.GroupBox();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.txtBusqNombreInsumo = new System.Windows.Forms.TextBox();
+            this.txtNombreInsumo = new System.Windows.Forms.TextBox();
             this.lblBusqNombreInsumo = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvInsumos = new System.Windows.Forms.DataGridView();
+            this.btnSeleccionar = new System.Windows.Forms.Button();
             this.IDInsumo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreInsumo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnSeleccionar = new System.Windows.Forms.Button();
+            this.UnidadMedida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbParametrosBusqueda.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvInsumos)).BeginInit();
             this.SuspendLayout();
             // 
             // gbParametrosBusqueda
             // 
             this.gbParametrosBusqueda.Controls.Add(this.btnBuscar);
-            this.gbParametrosBusqueda.Controls.Add(this.txtBusqNombreInsumo);
+            this.gbParametrosBusqueda.Controls.Add(this.txtNombreInsumo);
             this.gbParametrosBusqueda.Controls.Add(this.lblBusqNombreInsumo);
             this.gbParametrosBusqueda.Location = new System.Drawing.Point(55, 28);
             this.gbParametrosBusqueda.Name = "gbParametrosBusqueda";
@@ -61,13 +62,14 @@
             this.btnBuscar.TabIndex = 7;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
-            // txtBusqNombreInsumo
+            // txtNombreInsumo
             // 
-            this.txtBusqNombreInsumo.Location = new System.Drawing.Point(158, 41);
-            this.txtBusqNombreInsumo.Name = "txtBusqNombreInsumo";
-            this.txtBusqNombreInsumo.Size = new System.Drawing.Size(225, 20);
-            this.txtBusqNombreInsumo.TabIndex = 4;
+            this.txtNombreInsumo.Location = new System.Drawing.Point(158, 41);
+            this.txtNombreInsumo.Name = "txtNombreInsumo";
+            this.txtNombreInsumo.Size = new System.Drawing.Size(225, 20);
+            this.txtNombreInsumo.TabIndex = 4;
             // 
             // lblBusqNombreInsumo
             // 
@@ -79,34 +81,23 @@
             this.lblBusqNombreInsumo.TabIndex = 0;
             this.lblBusqNombreInsumo.Text = "Nombre del Insumo";
             // 
-            // dataGridView1
+            // dgvInsumos
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ScrollBar;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvInsumos.AllowUserToAddRows = false;
+            this.dgvInsumos.AllowUserToDeleteRows = false;
+            this.dgvInsumos.BackgroundColor = System.Drawing.SystemColors.ScrollBar;
+            this.dgvInsumos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvInsumos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IDInsumo,
-            this.NombreInsumo});
-            this.dataGridView1.Location = new System.Drawing.Point(55, 146);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(571, 267);
-            this.dataGridView1.TabIndex = 5;
-            // 
-            // IDInsumo
-            // 
-            this.IDInsumo.HeaderText = "ID Insumo";
-            this.IDInsumo.Name = "IDInsumo";
-            this.IDInsumo.ReadOnly = true;
-            // 
-            // NombreInsumo
-            // 
-            this.NombreInsumo.HeaderText = "Nombre Insumo";
-            this.NombreInsumo.Name = "NombreInsumo";
-            this.NombreInsumo.ReadOnly = true;
-            this.NombreInsumo.Width = 350;
+            this.NombreInsumo,
+            this.UnidadMedida});
+            this.dgvInsumos.Location = new System.Drawing.Point(55, 146);
+            this.dgvInsumos.MultiSelect = false;
+            this.dgvInsumos.Name = "dgvInsumos";
+            this.dgvInsumos.ReadOnly = true;
+            this.dgvInsumos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvInsumos.Size = new System.Drawing.Size(571, 267);
+            this.dgvInsumos.TabIndex = 5;
             // 
             // btnSeleccionar
             // 
@@ -119,13 +110,36 @@
             this.btnSeleccionar.UseVisualStyleBackColor = true;
             this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
             // 
+            // IDInsumo
+            // 
+            this.IDInsumo.DataPropertyName = "idInsumo";
+            this.IDInsumo.HeaderText = "ID Insumo";
+            this.IDInsumo.Name = "IDInsumo";
+            this.IDInsumo.ReadOnly = true;
+            // 
+            // NombreInsumo
+            // 
+            this.NombreInsumo.DataPropertyName = "nombre";
+            this.NombreInsumo.HeaderText = "Nombre Insumo";
+            this.NombreInsumo.Name = "NombreInsumo";
+            this.NombreInsumo.ReadOnly = true;
+            this.NombreInsumo.Width = 225;
+            // 
+            // UnidadMedida
+            // 
+            this.UnidadMedida.DataPropertyName = "unidadMedida";
+            this.UnidadMedida.HeaderText = "Unidad de Medida";
+            this.UnidadMedida.Name = "UnidadMedida";
+            this.UnidadMedida.ReadOnly = true;
+            this.UnidadMedida.Width = 200;
+            // 
             // frmBuscarInsumo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(681, 493);
             this.Controls.Add(this.btnSeleccionar);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvInsumos);
             this.Controls.Add(this.gbParametrosBusqueda);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "frmBuscarInsumo";
@@ -133,7 +147,7 @@
             this.Text = "Búsqueda de Insumos";
             this.gbParametrosBusqueda.ResumeLayout(false);
             this.gbParametrosBusqueda.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvInsumos)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -142,11 +156,12 @@
 
         private System.Windows.Forms.GroupBox gbParametrosBusqueda;
         private System.Windows.Forms.Label lblBusqNombreInsumo;
-        private System.Windows.Forms.TextBox txtBusqNombreInsumo;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IDInsumo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NombreInsumo;
+        private System.Windows.Forms.TextBox txtNombreInsumo;
+        private System.Windows.Forms.DataGridView dgvInsumos;
         private System.Windows.Forms.Button btnSeleccionar;
         private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IDInsumo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NombreInsumo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UnidadMedida;
     }
 }

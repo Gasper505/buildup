@@ -59,7 +59,7 @@
             this.gbDatosInsumo.Controls.Add(this.txtIdInsumo);
             this.gbDatosInsumo.Controls.Add(this.lblNombreInsumo);
             this.gbDatosInsumo.Controls.Add(this.lblIdInsumo);
-            this.gbDatosInsumo.Location = new System.Drawing.Point(79, 59);
+            this.gbDatosInsumo.Location = new System.Drawing.Point(68, 59);
             this.gbDatosInsumo.Name = "gbDatosInsumo";
             this.gbDatosInsumo.Size = new System.Drawing.Size(500, 183);
             this.gbDatosInsumo.TabIndex = 13;
@@ -76,7 +76,7 @@
             "Litros",
             "Onzas",
             "Libras"});
-            this.cboUnidadMedida.Location = new System.Drawing.Point(186, 116);
+            this.cboUnidadMedida.Location = new System.Drawing.Point(186, 123);
             this.cboUnidadMedida.Name = "cboUnidadMedida";
             this.cboUnidadMedida.Size = new System.Drawing.Size(134, 23);
             this.cboUnidadMedida.TabIndex = 47;
@@ -85,7 +85,7 @@
             // 
             this.lblUnidadMedida.AutoSize = true;
             this.lblUnidadMedida.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUnidadMedida.Location = new System.Drawing.Point(71, 119);
+            this.lblUnidadMedida.Location = new System.Drawing.Point(71, 126);
             this.lblUnidadMedida.Name = "lblUnidadMedida";
             this.lblUnidadMedida.Size = new System.Drawing.Size(109, 15);
             this.lblUnidadMedida.TabIndex = 8;
@@ -142,7 +142,7 @@
             this.btnRegresar});
             this.toolStrip2.Location = new System.Drawing.Point(0, 0);
             this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(662, 25);
+            this.toolStrip2.Size = new System.Drawing.Size(637, 25);
             this.toolStrip2.TabIndex = 26;
             this.toolStrip2.Text = "toolStrip2";
             // 
@@ -229,7 +229,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(662, 284);
+            this.ClientSize = new System.Drawing.Size(637, 284);
             this.ControlBox = false;
             this.Controls.Add(this.toolStrip2);
             this.Controls.Add(this.gbDatosInsumo);

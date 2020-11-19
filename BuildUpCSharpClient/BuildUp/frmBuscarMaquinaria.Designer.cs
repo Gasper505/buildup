@@ -31,15 +31,15 @@
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnSeleccionar = new System.Windows.Forms.Button();
             this.dgvMaquinarias = new System.Windows.Forms.DataGridView();
+            this.IDMaquinaria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NombreMaquinaria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NombreLineaProduccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Proveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbParametrosBusqueda = new System.Windows.Forms.GroupBox();
             this.txtBusqLineaProduccion = new System.Windows.Forms.TextBox();
             this.lblBusqLineaProduccion = new System.Windows.Forms.Label();
             this.txtBusqNombreMaq = new System.Windows.Forms.TextBox();
             this.lblBusqNombreMaq = new System.Windows.Forms.Label();
-            this.IDMaquinaria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreMaquinaria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreLineaProduccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Proveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMaquinarias)).BeginInit();
             this.gbParametrosBusqueda.SuspendLayout();
             this.SuspendLayout();
@@ -86,6 +86,35 @@
             this.dgvMaquinarias.TabIndex = 9;
             this.dgvMaquinarias.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvMaquinarias_CellFormatting);
             // 
+            // IDMaquinaria
+            // 
+            this.IDMaquinaria.DataPropertyName = "idMaquinaria";
+            this.IDMaquinaria.HeaderText = "ID Maquinaria";
+            this.IDMaquinaria.Name = "IDMaquinaria";
+            this.IDMaquinaria.ReadOnly = true;
+            // 
+            // NombreMaquinaria
+            // 
+            this.NombreMaquinaria.DataPropertyName = "nombre";
+            this.NombreMaquinaria.HeaderText = "Nombre Maquinaria";
+            this.NombreMaquinaria.Name = "NombreMaquinaria";
+            this.NombreMaquinaria.ReadOnly = true;
+            this.NombreMaquinaria.Width = 240;
+            // 
+            // NombreLineaProduccion
+            // 
+            this.NombreLineaProduccion.HeaderText = "Linea de Produccion";
+            this.NombreLineaProduccion.Name = "NombreLineaProduccion";
+            this.NombreLineaProduccion.ReadOnly = true;
+            this.NombreLineaProduccion.Width = 150;
+            // 
+            // Proveedor
+            // 
+            this.Proveedor.HeaderText = "Proveedor";
+            this.Proveedor.Name = "Proveedor";
+            this.Proveedor.ReadOnly = true;
+            this.Proveedor.Width = 170;
+            // 
             // gbParametrosBusqueda
             // 
             this.gbParametrosBusqueda.Controls.Add(this.btnBuscar);
@@ -115,7 +144,7 @@
             this.lblBusqLineaProduccion.Name = "lblBusqLineaProduccion";
             this.lblBusqLineaProduccion.Size = new System.Drawing.Size(198, 15);
             this.lblBusqLineaProduccion.TabIndex = 5;
-            this.lblBusqLineaProduccion.Text = "Nombre de la Linea de Produccion";
+            this.lblBusqLineaProduccion.Text = "Nombre de la Línea de Producción";
             // 
             // txtBusqNombreMaq
             // 
@@ -133,35 +162,6 @@
             this.lblBusqNombreMaq.Size = new System.Drawing.Size(148, 15);
             this.lblBusqNombreMaq.TabIndex = 0;
             this.lblBusqNombreMaq.Text = "Nombre de la Maquinaria";
-            // 
-            // IDMaquinaria
-            // 
-            this.IDMaquinaria.DataPropertyName = "idMaquinaria";
-            this.IDMaquinaria.HeaderText = "ID Maquinaria";
-            this.IDMaquinaria.Name = "IDMaquinaria";
-            this.IDMaquinaria.ReadOnly = true;
-            // 
-            // NombreMaquinaria
-            // 
-            this.NombreMaquinaria.DataPropertyName = "nombre";
-            this.NombreMaquinaria.HeaderText = "Nombre Maquinaria";
-            this.NombreMaquinaria.Name = "NombreMaquinaria";
-            this.NombreMaquinaria.ReadOnly = true;
-            this.NombreMaquinaria.Width = 240;
-            // 
-            // NombreLineaProduccion
-            // 
-            this.NombreLineaProduccion.HeaderText = "Linea de Produccion";
-            this.NombreLineaProduccion.Name = "NombreLineaProduccion";
-            this.NombreLineaProduccion.ReadOnly = true;
-            this.NombreLineaProduccion.Width = 150;
-            // 
-            // Proveedor
-            // 
-            this.Proveedor.HeaderText = "Proveedor";
-            this.Proveedor.Name = "Proveedor";
-            this.Proveedor.ReadOnly = true;
-            this.Proveedor.Width = 170;
             // 
             // frmBuscarMaquinaria
             // 

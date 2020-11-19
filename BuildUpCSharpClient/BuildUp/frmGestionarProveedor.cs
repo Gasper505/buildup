@@ -22,6 +22,16 @@ namespace BuildUp
             EstablecerEstadoComponentes(Estado.Inicial);
             daoProveedor = new ProveedorWS.ProveedorWSClient();
             proveedor = new ProveedorWS.proveedor();
+
+            if (frmLogIn.Usuario.rol == "Ingeniero")
+            {
+                btnActualizar.Visible = false;
+                btnNuevo.Visible = false;
+                btnGuardar.Visible = false;
+                btnEliminar.Visible = false;
+                btnCancelar.Visible = false;
+
+            }
         }
         public void EstablecerEstadoComponentes(Estado estado)
         {

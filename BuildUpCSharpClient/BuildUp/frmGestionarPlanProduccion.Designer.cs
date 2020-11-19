@@ -209,6 +209,7 @@
             this.NombreTipoLadrillo,
             this.Cantidad});
             this.dgvAsignacion.Location = new System.Drawing.Point(30, 132);
+            this.dgvAsignacion.MultiSelect = false;
             this.dgvAsignacion.Name = "dgvAsignacion";
             this.dgvAsignacion.ReadOnly = true;
             this.dgvAsignacion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -280,7 +281,7 @@
             this.gbDatosOperario.Controls.Add(this.lblAnho);
             this.gbDatosOperario.Location = new System.Drawing.Point(69, 73);
             this.gbDatosOperario.Name = "gbDatosOperario";
-            this.gbDatosOperario.Size = new System.Drawing.Size(653, 98);
+            this.gbDatosOperario.Size = new System.Drawing.Size(653, 106);
             this.gbDatosOperario.TabIndex = 41;
             this.gbDatosOperario.TabStop = false;
             this.gbDatosOperario.Text = "Datos del Plan de Producción";
