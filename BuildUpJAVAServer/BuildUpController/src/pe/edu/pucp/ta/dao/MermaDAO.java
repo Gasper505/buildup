@@ -11,4 +11,5 @@ public interface MermaDAO {
     int actualizar(Merma merma);
     int eliminar(int idMerma);
     ArrayList<Merma> listar();
+    ArrayList<Merma> listarPorTipo(String tipo);
 }

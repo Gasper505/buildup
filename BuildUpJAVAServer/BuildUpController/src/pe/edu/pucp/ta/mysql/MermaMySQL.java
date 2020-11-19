@@ -31,12 +31,9 @@ public class MermaMySQL implements MermaDAO{
             cs.setString("_TIPO", merma.getTipo());
             cs.setString("_DESCRIPCION", merma.getDescripcion());
             cs.setString("_UNIDAD_MEDIDA", merma.getUnidad());
-            
             cs.executeUpdate();
             merma.setIdMerma(cs.getInt("_ID_MERMA"));
-       
-            resultado=1;
-        
+            resultado=merma.getIdMerma();
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }finally{
@@ -59,20 +56,13 @@ public class MermaMySQL implements MermaDAO{
             cs.setString("_DESCRIPCION", merma.getDescripcion());
             cs.setString("_UNIDAD_MEDIDA", merma.getUnidad());
             cs.setBoolean("_ACTIVO", merma.getActivo());
-            
-            
-            cs.executeUpdate();
-            merma.setIdMerma(cs.getInt("_ID_MERMA"));
-       
-            resultado=1;
-        
+            resultado=cs.executeUpdate();
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }finally{
             try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());}
         }
         return resultado;
-    
     }
 
     @Override
@@ -83,10 +73,8 @@ public class MermaMySQL implements MermaDAO{
             con =DriverManager.getConnection(DBManager.urlMySQL, DBManager.user,DBManager.password);
             String sql = "{call ELIMINAR_MERMA(?)}";
             cs = con.prepareCall(sql);
-            cs.setInt("_ID_MERMA", idMerma);
-            cs.executeUpdate();       
-            resultado=1;
-        
+            cs.setInt("_ID_MERMA", idMerma);      
+            resultado=cs.executeUpdate(); 
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }finally{
@@ -123,5 +111,30 @@ public class MermaMySQL implements MermaDAO{
         }
         return mermas;
     }
-    
+
+    @Override
+    public ArrayList<Merma> listarPorTipo(String tipo) {
+        ArrayList<Merma> mermas = new ArrayList<>();
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.password);
+            cs = con.prepareCall("{call LISTAR_MERMAS_POR_TIPO_MERMA(?)}");
+            cs.setString("_TIPO_MERMA", tipo);
+            rs = cs.executeQuery();
+            while(rs.next()){
+                Merma mer = new Merma();
+                mer.setIdMerma(rs.getInt("ID_MERMA"));
+                mer.setTipo(rs.getString("TIPO"));
+                mer.setDescripcion(rs.getString("DESCRIPCION"));
+                mer.setUnidad(rs.getString("UNIDAD_MEDIDA|"));
+                mer.setActivo(rs.getBoolean("ACTIVO"));
+                mermas.add(mer);
+            }
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }finally{
+            try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());}
+        }
+        return mermas;
+    }
 }
