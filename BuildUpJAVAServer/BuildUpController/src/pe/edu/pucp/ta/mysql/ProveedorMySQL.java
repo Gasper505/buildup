@@ -51,13 +51,13 @@ public class ProveedorMySQL implements ProveedorDAO{
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con =DriverManager.getConnection(DBManager.urlMySQL, DBManager.user,DBManager.password);
-            String sql = "{call ACTUALIZAR_PROVEEDOR(?,?,?,?,?)}";
+            String sql = "{call ACTUALIZAR_PROVEEDOR(?,?,?,?)}";
             cs = con.prepareCall(sql);
             cs.setInt("_ID_PROVEEDOR", proveedor.getIdProveedor());
             cs.setString("_RAZON_SOCIAL", proveedor.getRazonSocial());
             cs.setString("_CORREO",proveedor.getCorreo());
             cs.setString("_REPRESENTANTE", proveedor.getRepresentante());
-            cs.setBoolean("_ACTIVO", proveedor.getActivo());
+            //cs.setBoolean("_ACTIVO", proveedor.getActivo());
            
             cs.executeUpdate();
             proveedor.setIdProveedor(cs.getInt("_ID_PROVEEDOR"));       
@@ -93,14 +93,13 @@ public class ProveedorMySQL implements ProveedorDAO{
 
     @Override
     public ArrayList<Proveedor> listar() {
-         ArrayList<Proveedor> proveedores=new ArrayList<>();
+        ArrayList<Proveedor> proveedores=new ArrayList<>();
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.urlMySQL, 
                     DBManager.user, DBManager.password);
-            st=con.createStatement();
-            String sql = "SELECT * FROM PROVEEDOR WHERE ACTIVO=1";
-            rs = st.executeQuery(sql);  
+            cs = con.prepareCall("{call LISTAR_PROVEEDORES()}");
+            rs = cs.executeQuery();
             while(rs.next()){
                 Proveedor proveedor = new Proveedor();
                 proveedor.setIdProveedor(rs.getInt("ID_PROVEEDOR"));
@@ -118,5 +117,31 @@ public class ProveedorMySQL implements ProveedorDAO{
         }
         return proveedores;
     }
-    
+    @Override
+    public ArrayList<Proveedor> listarProveedorPorRazonSocial(String razon){
+        ArrayList<Proveedor> proveedores=new ArrayList<>();
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection(DBManager.urlMySQL, 
+                    DBManager.user, DBManager.password);
+            cs = con.prepareCall("{call LISTAR_PROVEEDOR_POR_RAZON_SOCIAL(?)}");
+            cs.setString("_RAZON_SOCIAL", razon);
+            rs = cs.executeQuery();
+            while(rs.next()){
+                Proveedor proveedor = new Proveedor();
+                proveedor.setIdProveedor(rs.getInt("ID_PROVEEDOR"));
+                proveedor.setRazonSocial(rs.getString("RAZON_SOCIAL"));
+                proveedor.setCorreo(rs.getString("CORREO"));
+                proveedor.setRepresentante(rs.getString("REPRESENTANTE"));
+                proveedor.setActivo(rs.getBoolean("ACTIVO"));
+                proveedores.add(proveedor);
+            }
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+            
+        }finally{
+            try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());}
+        }
+        return proveedores;
+    }
 }

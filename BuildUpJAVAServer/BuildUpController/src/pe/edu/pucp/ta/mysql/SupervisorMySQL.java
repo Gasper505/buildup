@@ -24,17 +24,19 @@ public class SupervisorMySQL implements SupervisorDAO{
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.password);
-            String sql = "{call INSERTAR_SUPERVISOR(?,?,?,?,?,?,?,?)}";
+            String sql = "{call INSERTAR_SUPERVISOR(?,?,?,?,?,?,?,?,?,?)}";
             cs = con.prepareCall(sql);
             
             cs.registerOutParameter("_ID_SUPERVISOR", java.sql.Types.INTEGER);
             cs.setString("_NOMBRES", sup.getNombres());
             cs.setString("_APELLIDOS", sup.getApellidos());
+            cs.setDate("_FECHA_NACIMIENTO", new java.sql.Date(sup.getFechaNacimiento().getTime()));
             cs.setString("_TELEFONO", sup.getTelefono());
             cs.setString("_CORREO", sup.getCorreo());
             cs.setString("_ROL", sup.getRol());
             cs.setDate("_FECHA_FIN_CONTRATO", new java.sql.Date(sup.getFechaFinContrato().getTime()));
             cs.setInt("_ID_LINEA_PRODUCCION", sup.getLineaProduccion().getIdLineaProduccion());
+            cs.setBytes("_PHOTO", sup.getFoto());
             
             cs.executeUpdate();
             sup.setIdPersona(cs.getInt("_ID_SUPERVISOR"));
@@ -50,16 +52,24 @@ public class SupervisorMySQL implements SupervisorDAO{
     }
 
     @Override
-    public int actualizar(int idPersona, boolean nuevo) {
+    public int actualizar(Supervisor sup) {
         int resultado=0;
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.password);
-            String sql = "{call ACTUALIZAR_ESTADO_SUPERVISOR(?,?)}";
+            String sql = "{call MODIFICAR_SUPERVISOR(?,?,?,?,?,?,?,?,?,?)}";
             cs = con.prepareCall(sql);
             
-            cs.setInt("_ID_SUPERVISOR", idPersona);
-            cs.setBoolean("_ACTIVO", nuevo);
+            cs.setInt("_ID_PERSONA", sup.getIdPersona());
+            cs.setInt("_ID_LINEA_PRODUCCION", sup.getLineaProduccion().getIdLineaProduccion());
+            cs.setString("_NOMBRES", sup.getNombres());
+            cs.setString("_APELLIDOS", sup.getApellidos());
+            cs.setDate("_FECHA_NACIMIENTO", new java.sql.Date(sup.getFechaNacimiento().getTime()));
+            cs.setString("_TELEFONO", sup.getTelefono());
+            cs.setString("_CORREO", sup.getCorreo());
+            cs.setString("_ROL", sup.getRol());
+            cs.setDate("_FECHA_FIN_CONTRATO", new java.sql.Date(sup.getFechaFinContrato().getTime()));
+            cs.setBytes("_PHOTO", sup.getFoto());
             
             cs.executeUpdate();
             resultado=1;
@@ -99,8 +109,8 @@ public class SupervisorMySQL implements SupervisorDAO{
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.password);
-            st = con.createStatement();
-            String sql = "SELECT * FROM PERSONA WHERE ACTIVO = 1 AND ROL = 'SUPERVISOR'";
+            String sql = "{call LISTAR_SUPERVISORES()}";
+            cs = con.prepareCall(sql);
             rs = st.executeQuery(sql);
             
             while(rs.next()){

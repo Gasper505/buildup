@@ -69,7 +69,50 @@ public class OrdenSalidaMySQL implements OrdenSalidaDAO{
 
     @Override
     public int actualizar(OrdenSalida ordenSalida) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        int resultado = 0;
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.password);
+            con.setAutoCommit(false);
+            String sql = "{call MODIFICAR_ORDEN_SALIDA(?,?)}";
+            cs = con.prepareCall(sql);
+            cs.setInt("_ID_ORDEN_SALIDA", ordenSalida.getIdOrdenSalida());
+            cs.setInt("_ID_OPERARIO", ordenSalida.getOperario().getIdPersona());
+            cs.executeUpdate();
+            //eliminar lineas anteriores
+            sql = "call {ELIMINAR_LINEA_ORDEN_SALIDA(?)}";
+            cs = con.prepareCall(sql);
+            cs.setInt("_ID_ORDEN_SALIDA", ordenSalida.getIdOrdenSalida());
+            cs.executeUpdate();
+            //insertar nuevas lineas
+            for(LineaOrdenSalida lov : ordenSalida.getLineasOrdenSalida()){
+                sql = "{call INSERTAR_LINEA_ORDEN_SALIDA(?,?,?,?)}";
+                cs = con.prepareCall(sql);
+                cs.setInt("_FID_ORDEN_SALIDA", ordenSalida.getIdOrdenSalida());
+                cs.setInt("_FID_TIPO_LADRILLO", lov.getTipoLadrillo().getIdTipoLadrillo());
+                cs.setInt("_CANTIDAD",lov.getCantidad());
+                cs.registerOutParameter("_ID_LINEA_ORDEN_SALIDA", java.sql.Types.INTEGER);
+                cs.executeUpdate();
+                lov.setIdLineaOrdenSalida(cs.getInt("_ID_LINEA_ORDEN_SALIDA"));
+            }
+            con.commit();
+            resultado = 1;
+        }catch(Exception ex){
+            try{
+                con.rollback();
+            }catch(Exception exR){
+                System.out.println(exR.getMessage());
+            }
+            System.out.println(ex.getMessage());
+        }finally{
+            try{
+                con.setAutoCommit(true);
+                con.close();
+            }catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
+        }
+        return resultado;
     }
 
     @Override

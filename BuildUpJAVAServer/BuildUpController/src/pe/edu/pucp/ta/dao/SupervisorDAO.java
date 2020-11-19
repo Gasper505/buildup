@@ -8,7 +8,7 @@ import pe.edu.pucp.ta.model.Supervisor;
 public interface SupervisorDAO {
     
     int insertar(Supervisor sup);
-    int actualizar(int idSup, boolean nuevo);
+    int actualizar(Supervisor sup);
     int eliminar(int idSup);
     ArrayList<Supervisor> listar();
     

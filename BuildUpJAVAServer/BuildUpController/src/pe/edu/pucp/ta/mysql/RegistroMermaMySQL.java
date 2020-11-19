@@ -3,6 +3,7 @@ package pe.edu.pucp.ta.mysql;
 
 import java.sql.CallableStatement;
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
@@ -23,7 +24,7 @@ public class RegistroMermaMySQL implements RegistroMermaDAO {
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.password);
-            String sql = "{call INSERTAR_REGISTRO_MERMA(?,?,?,?,?,?)}";
+            String sql = "{call INSERTAR_REGISTRO_MERMA(?,?,?,?,?)}";
             cs = con.prepareCall(sql);
             
             cs.registerOutParameter("_ID_REGISTRO_MERMA", java.sql.Types.INTEGER);
@@ -31,7 +32,7 @@ public class RegistroMermaMySQL implements RegistroMermaDAO {
             cs.setInt("_ID_LINEA_PRODUCCION", regMerma.getLineaProduccion().getIdLineaProduccion());
             cs.setInt("_ID_MERMA", regMerma.getMerma().getIdMerma());
             cs.setInt("_CANTIDAD", regMerma.getCantidad());
-            cs.setDate("_FECHA", new java.sql.Date(regMerma.getFecha().getTime()));
+            //cs.setDate("_FECHA", new java.sql.Date(regMerma.getFecha().getTime()));
             
             cs.executeUpdate();
             regMerma.setIdRegistroMerma(cs.getInt("_ID_REGISTRO_MERMA"));
@@ -52,15 +53,14 @@ public class RegistroMermaMySQL implements RegistroMermaDAO {
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.password);
-            String sql = "{call ACTUALIZAR_REGISTRO_MERMA(?,?,?,?,?,?)}";
+            String sql = "{call ACTUALIZAR_REGISTRO_MERMA(?,?,?,?,?)}";
             cs = con.prepareCall(sql);
             
             cs.setInt("_ID_REGISTRO_MERMA", regMerma.getIdRegistroMerma());
+            cs.setInt("_ID_SUPERVISOR", regMerma.getSupervisor().getIdPersona());
             cs.setInt("_ID_LINEA_PRODUCCION", regMerma.getLineaProduccion().getIdLineaProduccion());
             cs.setInt("_ID_MERMA", regMerma.getMerma().getIdMerma());
             cs.setInt("_CANTIDAD", regMerma.getCantidad());
-            cs.setDate("_FECHA", new java.sql.Date(regMerma.getFecha().getTime()));
-            cs.setBoolean("_ACTIVO", regMerma.getActivo());
             
             cs.executeUpdate();
             regMerma.setIdRegistroMerma(cs.getInt("_ID_REGISTRO_MERMA"));
@@ -124,5 +124,38 @@ public class RegistroMermaMySQL implements RegistroMermaDAO {
         return registrosMermas;
     
     }
+    @Override
+    public ArrayList<RegistroMerma> listarRegistrosMermasPorSupervisorYRangoFechas(String nombreSup, Date fechaInicial, Date fechaFin){
+        ArrayList<RegistroMerma> registrosMermas=new ArrayList<>();
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection(DBManager.urlMySQL, 
+                    DBManager.user, DBManager.password);
+            cs = con.prepareCall("{call LISTAR_REGISTROS_MERMAS_POR_NOMBRE_SUPERVISOR_RANGO_FECHAS(?,?,?)}");
+            cs.setString("_NOMBRE_SUPERVISOR", nombreSup);
+            cs.setDate("_FECHA_INICIO", fechaInicial);
+            cs.setDate("_FECHA_FIN", fechaFin);
+            rs = cs.executeQuery();  
+            while(rs.next()){
+                RegistroMerma regMerma = new RegistroMerma();
+                regMerma.setIdRegistroMerma(rs.getInt("ID_REGISTRO_MERMA"));
+                regMerma.getLineaProduccion().setIdLineaProduccion(rs.getInt("ID_LINEA_PRODUCCION"));   //
+                regMerma.getMerma().setIdMerma(rs.getInt("ID_MERMA"));                                  //
+                regMerma.setCantidad(rs.getInt("CANTIDAD"));
+                regMerma.setFecha(rs.getDate("FECHA"));
+                regMerma.setActivo(rs.getBoolean("ACTIVO"));                
+                registrosMermas.add(regMerma);
+            }
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+            
+        }finally{
+            try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());}
+        }
+        
+        return registrosMermas;
+    }
+       
+                                                                                   
     
 }

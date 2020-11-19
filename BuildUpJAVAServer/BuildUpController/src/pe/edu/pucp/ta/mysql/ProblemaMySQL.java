@@ -24,12 +24,12 @@ public class ProblemaMySQL implements ProblemaDAO {
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con =DriverManager.getConnection(DBManager.urlMySQL, DBManager.user,DBManager.password);
-            String sql = "{call INSERTAR_PROBLEMA(?,?,?,?)}";
+            String sql = "{call INSERTAR_PROBLEMA(?,?,?)}";
             cs = con.prepareCall(sql);
             cs.registerOutParameter("_ID_PROBLEMA", java.sql.Types.INTEGER);
             cs.setString("_TIPO", prob.getTipo());
             cs.setInt("_NIVEL_IMPORTANCIA", prob.getNivelImportancia());
-            cs.setBoolean("_ACTIVO", prob.getActivo());
+            //cs.setBoolean("_ACTIVO", prob.getActivo());
             cs.executeUpdate();
             prob.setIdProblema(cs.getInt("_ID_PROBLEMA"));
             resultado=1;
@@ -49,14 +49,14 @@ public class ProblemaMySQL implements ProblemaDAO {
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con =DriverManager.getConnection(DBManager.urlMySQL, DBManager.user,DBManager.password);
-            String sql = "{call ACTUALIZAR_PROBLEMA(?,?,?,?)}";
+            String sql = "{call ACTUALIZAR_PROBLEMA(?,?,?)}";
             cs = con.prepareCall(sql);
             cs.setInt("_ID_PROBLEMA", prob.getIdProblema());
             cs.setString("_TIPO", prob.getTipo());
             cs.setInt("_NIVEL_IMPORTANCIA", prob.getNivelImportancia());
-            cs.setBoolean("_ACTIVO", prob.getActivo());
+            //cs.setBoolean("_ACTIVO", prob.getActivo());
             cs.executeUpdate();
-            prob.setIdProblema(cs.getInt("_ID_PROBLEMA"));
+            prob.setIdProblema(cs.getInt("_ID_PROBLEMA")); 
        
             resultado=1;
         
@@ -95,9 +95,8 @@ public class ProblemaMySQL implements ProblemaDAO {
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.urlMySQL, 
                     DBManager.user, DBManager.password);
-            st=con.createStatement();
-            String sql = "SELECT * FROM PROBLEMA WHERE ACTIVO=1";
-            rs = st.executeQuery(sql);  
+            cs = con.prepareCall("{call LISTAR_PROBLEMAS()}");
+            rs = cs.executeQuery(); 
             while(rs.next()){
                 Problema problema = new Problema();
                 problema.setIdProblema(rs.getInt("ID_PROBLEMA"));

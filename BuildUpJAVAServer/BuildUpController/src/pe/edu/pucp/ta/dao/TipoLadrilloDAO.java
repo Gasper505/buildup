@@ -10,5 +10,6 @@ public interface TipoLadrilloDAO {
     int actualizar(TipoLadrillo tipoLadrillo);
     int eliminar(int idTipoLadrillo);
     ArrayList<TipoLadrillo> listar();
+    ArrayList<TipoLadrillo> listarTipoLadrilloPorNombre(String nombre);
     
 }

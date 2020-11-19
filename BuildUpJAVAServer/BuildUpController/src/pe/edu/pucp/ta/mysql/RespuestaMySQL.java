@@ -25,11 +25,11 @@ public class RespuestaMySQL implements RespuestaDAO{
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con =DriverManager.getConnection(DBManager.urlMySQL, DBManager.user,DBManager.password);
-            String sql = "{call INSERTAR_RESPUESTA(?,?,?)}";
+            String sql = "{call INSERTAR_RESPUESTA(?,?)}";
             cs = con.prepareCall(sql);
             cs.registerOutParameter("_ID_RESPUESTA", java.sql.Types.INTEGER);
             cs.setString("_TIPO", resp.getTipo());
-            cs.setBoolean("_ACTIVO", resp.getActivo());
+            //cs.setBoolean("_ACTIVO", resp.getActivo());
             cs.executeUpdate();
             resp.setIdRespuesta(cs.getInt("_ID_RESPUESTA"));
        
@@ -50,11 +50,11 @@ public class RespuestaMySQL implements RespuestaDAO{
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con =DriverManager.getConnection(DBManager.urlMySQL, DBManager.user,DBManager.password);
-            String sql = "{call ACTUALIZAR_RESPUESTA(?,?,?)}";
+            String sql = "{call ACTUALIZAR_RESPUESTA(?,?)}";
             cs = con.prepareCall(sql);
             cs.setInt("_ID_RESPUESTA", resp.getIdRespuesta());
             cs.setString("_TIPO", resp.getTipo());
-            cs.setBoolean("_ACTIVO", resp.getActivo());
+            //cs.setBoolean("_ACTIVO", resp.getActivo());
             cs.executeUpdate();
             resp.setIdRespuesta(cs.getInt("_ID_RESPUESTA"));
        
@@ -96,9 +96,8 @@ public class RespuestaMySQL implements RespuestaDAO{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.urlMySQL, 
                     DBManager.user, DBManager.password);
-            st=con.createStatement();
-            String sql = "SELECT * FROM RESPUESTA WHERE ACTIVO=1";
-            rs = st.executeQuery(sql);  
+            cs = con.prepareCall("{call LISTAR_RESPUESTAS()}");
+            rs = cs.executeQuery();
             while(rs.next()){
                 Respuesta respuesta = new Respuesta();
                 respuesta.setIdRespuesta(rs.getInt("ID_RESPUESTA"));
