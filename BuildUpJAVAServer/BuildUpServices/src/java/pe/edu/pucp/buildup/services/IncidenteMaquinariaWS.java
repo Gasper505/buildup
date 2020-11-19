@@ -12,6 +12,7 @@ import javax.jws.WebMethod;
 import javax.jws.WebParam;
 import pe.edu.pucp.ta.dao.IncidenteMaquinariaDAO;
 import pe.edu.pucp.ta.model.IncidenteMaquinaria;
+import pe.edu.pucp.ta.model.Ingeniero;
 import pe.edu.pucp.ta.mysql.IncidenteMaquinariaMySQL;
 
 /**
@@ -95,5 +96,25 @@ public class IncidenteMaquinariaWS {
             System.out.println(ex.getMessage());
         }
         return resultado;
+    }
+    @WebMethod(operationName = "obtenerIngenieroIncidenteMaquinaria")
+    public Ingeniero obtenerIngenieroIncidenteMaquinaria(@WebParam(name = "idIncidenteMaquinaria") int idIncidenteMaquinaria) {
+        Ingeniero ingeniero = new Ingeniero();
+        try{
+            ingeniero = daoIncidenteMaquinaria.obtenerIngeniero(idIncidenteMaquinaria);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return ingeniero;
+    }
+    @WebMethod(operationName = "obtenerRespuestaIncidenteMaquinaria")
+    public ArrayList<Object> obtenerRespuestaIncidenteMaquinaria(@WebParam(name = "idIncidenteMaquinaria") int idIncidenteMaquinaria) {
+        ArrayList<Object> respuesta = new ArrayList <>();
+        try{
+            respuesta = daoIncidenteMaquinaria.obtenerRespuesta(idIncidenteMaquinaria);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return respuesta;
     }
 }
