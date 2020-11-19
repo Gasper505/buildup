@@ -6,6 +6,7 @@
 package pe.edu.pucp.buildup.services;
 
 import java.util.ArrayList;
+import java.util.Date;
 import javax.jws.WebService;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
@@ -29,6 +30,16 @@ public class IncidenteMaquinariaWS {
         ArrayList<IncidenteMaquinaria> incidenteMaquinarias = new ArrayList<>();
         try{
             incidenteMaquinarias =daoIncidenteMaquinaria.listar();
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return incidenteMaquinarias;
+    }
+    @WebMethod(operationName = "listarPorRangoFechaIncidenteMaquinaria")
+    public ArrayList<IncidenteMaquinaria> listarPorRangoFechaIncidenteMaquinaria(@WebParam(name="fechaIncio") Date fechaInicio,@WebParam(name="fechaFin") Date fechaFin ) {
+        ArrayList<IncidenteMaquinaria> incidenteMaquinarias = new ArrayList<>();
+        try{
+            incidenteMaquinarias =daoIncidenteMaquinaria.listarPorRangoFecha(fechaFin, fechaFin);
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }
