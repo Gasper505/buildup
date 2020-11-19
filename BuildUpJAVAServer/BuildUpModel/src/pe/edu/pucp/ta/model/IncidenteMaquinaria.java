@@ -15,6 +15,7 @@ public class IncidenteMaquinaria {
     private String detalle; //descripcion/detalle de la respuesta al incidente
     private Date fechaIncidente;
     private Date fechaAtencion;
+    private boolean estado;
     private boolean activo;
     
     public IncidenteMaquinaria() {
@@ -123,5 +124,11 @@ public class IncidenteMaquinaria {
     public void setActivo(boolean activo) {
         this.activo = activo;
     }
-    
+    public boolean isEstado() {
+        return estado;
+    }
+
+    public void setEstado(boolean estado) {
+        this.estado = estado;
+    }
 }
