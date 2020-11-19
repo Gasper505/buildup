@@ -11,7 +11,7 @@ import java.util.Date;
 import pe.edu.pucp.ta.config.DBManager;
 import pe.edu.pucp.ta.dao.IncidenteMaquinariaDAO;
 import pe.edu.pucp.ta.model.IncidenteMaquinaria;
-
+import pe.edu.pucp.ta.model.Ingeniero;
 
 public class IncidenteMaquinariaMySQL implements IncidenteMaquinariaDAO{
     
@@ -200,5 +200,50 @@ public class IncidenteMaquinariaMySQL implements IncidenteMaquinariaDAO{
             try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());}
         }
         return incidentes;
+    }
+
+    @Override
+    public Ingeniero obtenerIngeniero(int idIncidenteMaquinaria) {
+        Ingeniero ingeniero =new Ingeniero();
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection(DBManager.urlMySQL, 
+                    DBManager.user, DBManager.password);
+            cs=con.prepareCall("{call OBTENER_INGENIERO_POR_ID_INCIDENTE(?)}");
+            cs.setInt("_ID_INCIDENTE", idIncidenteMaquinaria);
+            rs = cs.executeQuery();  
+            while(rs.next()){
+                ingeniero.setIdPersona(rs.getInt("ID_INGENIERO"));
+                ingeniero.setNombres(rs.getString("NOMBRE_INGENIERO"));
+            }
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }finally{
+            try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());}
+        }
+        return ingeniero;
+    }
+
+    @Override
+    public  ArrayList<Object> obtenerRespuesta(int idIncidenteMaquinaria) {
+        ArrayList<Object> respuesta = new ArrayList <>();
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection(DBManager.urlMySQL, 
+                    DBManager.user, DBManager.password);
+            cs=con.prepareCall("{call OBTENER_RESPUESTA_POR_ID_INCIDENTE(?)}");
+            cs.setInt("_ID_INCIDENTE", idIncidenteMaquinaria);
+            rs = cs.executeQuery();  
+            while(rs.next()){
+                respuesta.add(rs.getString("TIPO_RESPUESTA"));
+                respuesta.add(rs.getString("DESCRIPCION_RESPUESTA"));
+                respuesta.add(rs.getDate("FECHA_RESPUESTA"));
+            }
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }finally{
+            try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());}
+        }
+        return respuesta;
     }
 }
