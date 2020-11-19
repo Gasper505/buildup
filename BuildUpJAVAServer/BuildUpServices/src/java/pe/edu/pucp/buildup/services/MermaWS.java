@@ -33,6 +33,16 @@ public class MermaWS {
         }
         return mermas;
     }
+    @WebMethod(operationName = "listarPorTipoMerma")
+    public ArrayList<Merma> listarPorTipoMerma(@WebParam(name="tipo") String tipo) {
+        ArrayList<Merma> mermas = new ArrayList<>();
+        try{
+            mermas =daoMerma.listarPorTipo(tipo);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return mermas;
+    }
     
     @WebMethod(operationName = "insertarMerma")
     public int insertarMerma(@WebParam(name="merma") Merma merma) {
