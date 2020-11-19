@@ -92,30 +92,26 @@ public class LineaProduccionMySQL implements LineaProduccionDAO{
     }
 
     @Override
-    public ArrayList<LineaProduccion> listar() {
+    public ArrayList<LineaProduccion> listarPorNombre(String nombre) {
         ArrayList<LineaProduccion> lineas = new ArrayList<>();
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.password);
-            st = con.createStatement();
-            String sql = "SELECT * FROM LINEA_PRODUCCION WHERE ACTIVO = 1";
-            rs = st.executeQuery(sql);
-            
+            cs = con.prepareCall("{call LISTAR_LINEA_PRODUCCION_POR_NOMBRE(?)}");
+            cs.setString("_NOMBRE_LINEA_PRODUCCION", nombre);
+            rs = cs.executeQuery();
             while(rs.next()){
-                LineaProduccion linea = new LineaProduccion();
-                linea.setIdLineaProduccion(rs.getInt("ID_LINEA_PRODUCCION"));
-                linea.setNombre(rs.getString("NOMBRE"));
-                linea.getTipoLadrillo().setIdTipoLadrillo(rs.getInt("ID_TIPO_LADRILLO"));               //
-            
-                lineas.add(linea);
+                LineaProduccion linProd = new LineaProduccion();
+                linProd.setIdLineaProduccion(rs.getInt("ID_LINEA_PRODUCCION"));
+                linProd.setNombre(rs.getString("NOMBRE_LINEA_PRODUCCION"));
+                linProd.getTipoLadrillo().setNombre(rs.getString("NOMBRE_LADRILLO"));
+                lineas.add(linProd);
             }
-            
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }finally{
-            try{rs.close();con.close();}catch(Exception ex){System.out.println(ex.getMessage());}
+            try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());}
         }
         return lineas;
     }
-    
 }
