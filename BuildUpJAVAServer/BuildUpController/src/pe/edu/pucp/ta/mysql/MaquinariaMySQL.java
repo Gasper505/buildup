@@ -55,14 +55,9 @@ public class MaquinariaMySQL implements MaquinariaDAO{
             con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.password);
             String sql = "{call ACTUALIZAR_ESTADO_MAQUINARIA(?,?)}";
             cs = con.prepareCall(sql);
-            
             cs.setInt("_ID_MAQUINARIA", idMaquinaria);
             cs.setBoolean("_ACTIVO", nuevo);
-             
-            cs.executeUpdate();
-            
-            resultado=1;
-        
+            resultado=cs.executeUpdate();
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }finally{
@@ -79,13 +74,8 @@ public class MaquinariaMySQL implements MaquinariaDAO{
             con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.password);
             String sql = "{call ELIMINAR_MAQUINARIA(?)}";
             cs = con.prepareCall(sql);
-            
             cs.setInt("_ID_MAQUINARIA", idMaquinaria);
-             
-            cs.executeUpdate();
-            
-            resultado=1;
-        
+            resultado=cs.executeUpdate();
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }finally{
@@ -155,6 +145,28 @@ public class MaquinariaMySQL implements MaquinariaDAO{
             try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());}
         }
         return maquinas;
+    }
+
+    @Override
+    public int modificar(Maquinaria maquinaria) {
+        int resultado=0;
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.password);
+            String sql = "{call MODIFICAR_MAQUINARIA(?,?,?,?,?)}";
+            cs = con.prepareCall(sql);
+            cs.setInt("_ID_MAQUINARIA", maquinaria.getIdMaquinaria());
+            cs.setInt("_ID_LINEA_PRODUCCION", maquinaria.getLineaProduccion().getIdLineaProduccion());
+            cs.setInt("_ID_PROVEEDOR", maquinaria.getProveedor().getIdProveedor());
+            cs.setString("_NOMBRE", maquinaria.getNombre());
+            cs.setDate("_GARANTIA_FIN", new java.sql.Date(maquinaria.getGarantiaFin().getTime()));
+            resultado=cs.executeUpdate();
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }finally{
+            try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());}
+        }
+        return resultado;
     }
     
 }
