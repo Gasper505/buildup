@@ -7,6 +7,7 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.Date;
 import pe.edu.pucp.ta.config.DBManager;
 import pe.edu.pucp.ta.dao.IncidenteMaquinariaDAO;
 import pe.edu.pucp.ta.model.IncidenteMaquinaria;
@@ -74,7 +75,20 @@ public class IncidenteMaquinariaMySQL implements IncidenteMaquinariaDAO{
 
     @Override
     public int eliminar(int idIncidenteMaquinaria) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        int resultado=0;
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.password);
+            String sql = "{call ELIMINAR_INCIDENTE(?)}";
+            cs = con.prepareCall(sql);
+            cs.setInt("_ID_INCIDENTE", idIncidenteMaquinaria);
+            resultado=cs.executeUpdate();
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }finally{
+            try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());}
+        }
+        return resultado;
     }
 
     @Override
@@ -152,5 +166,39 @@ public class IncidenteMaquinariaMySQL implements IncidenteMaquinariaDAO{
             try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());}
         }
         return resultado;
+    }
+
+    @Override
+    public ArrayList<IncidenteMaquinaria> listarPorRangoFecha(Date fechaIni, Date fechaFin) {
+         ArrayList<IncidenteMaquinaria> incidentes=new ArrayList<>();
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection(DBManager.urlMySQL, 
+                    DBManager.user, DBManager.password);
+            cs=con.prepareCall("{call LISTAR_INCIDENTE_POR_RANGO_FECHAS(?,?)}");
+            cs.setDate("_FECHA_INICIO", (java.sql.Date) fechaIni);
+            cs.setDate("_FECHA_FIN", (java.sql.Date) fechaFin);
+            rs = cs.executeQuery();  
+            while(rs.next()){
+                IncidenteMaquinaria incidente = new IncidenteMaquinaria();
+                incidente.setIdIncidente(rs.getInt("ID_INCIDENTE"));           
+                incidente.getSupervisor().setIdPersona(rs.getInt("ID_SUPERVISOR"));   
+                incidente.getSupervisor().setNombres(rs.getString("NOMBRE_SUPERVISOR"));
+                incidente.setFechaIncidente(rs.getDate("FECHA_INCIDENTE"));
+                incidente.setEstado(rs.getBoolean("ESTADO_INCIDENTE"));
+                incidente.getProblema().setIdProblema(rs.getInt("ID_PROBLEMA")); 
+                incidente.getProblema().setTipo(rs.getString("NOMBRE_PROBLEMA"));
+                incidente.getMaquinaria().setIdMaquinaria(rs.getInt("ID_MAQUINARIA")); 
+                incidente.getMaquinaria().setNombre(rs.getString("NOMBRE_MAQUINARIA"));
+                incidente.getMaquinaria().getProveedor().setRazonSocial(rs.getString("NOMBRE_PROVEEDOR"));
+                incidentes.add(incidente);
+            }
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+            
+        }finally{
+            try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());}
+        }
+        return incidentes;
     }
 }
