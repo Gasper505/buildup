@@ -33,7 +33,16 @@ private InsumoDAO daoInsumo;
         }
         return insumos;
     }
-    
+    @WebMethod(operationName = "listarPorNombreInsumo")
+    public ArrayList<Insumo> listarPorNombreInsumo(String nombre) {
+        ArrayList<Insumo> insumos = new ArrayList<>();
+        try{
+            insumos =daoInsumo.listarPorNombre(nombre);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return insumos;
+    }
     @WebMethod(operationName = "insertarInsumo")
     public int insertarInsumo(@WebParam(name="insumo") Insumo insumo) {
         int resultado =0;
@@ -44,11 +53,11 @@ private InsumoDAO daoInsumo;
         }
         return resultado;
     }
-    @WebMethod(operationName = "actualizarInsumo")
-    public int actualizarInsumo(@WebParam(name = "insumo") Insumo insumo) {
+    @WebMethod(operationName = "modificarInsumo")
+    public int modificarInsumo(@WebParam(name = "insumo") Insumo insumo) {
         int resultado = 0;
         try{
-            resultado = daoInsumo.actualizar(insumo);
+            resultado = daoInsumo.modificar(insumo);
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }
