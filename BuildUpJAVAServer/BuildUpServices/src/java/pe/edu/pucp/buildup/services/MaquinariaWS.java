@@ -18,6 +18,26 @@ public class MaquinariaWS {
         daoMaquinaria = new MaquinariaMySQL();
     }
 
+    @WebMethod(operationName = "actualizarMaquinaria")
+    public int actualizarMaquinaria(@WebParam(name = "idMaquinaria") int idMaquinaria,@WebParam(name = "nuevo") boolean nuevo ) {
+        int result = 0;
+        try{
+            result = daoMaquinaria.actualizar(idMaquinaria, nuevo);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return result;
+    }
+    @WebMethod(operationName = "modificarMaquinaria")
+    public int modificarMaquinaria(@WebParam(name = "maquinaria") Maquinaria maquinaria) {
+        int result = 0;
+        try{
+            result = daoMaquinaria.modificar(maquinaria);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return result;
+    }
     @WebMethod(operationName = "insertarMaquinaria")
     public int insertarMaquinaria(@WebParam(name = "maquinaria") Maquinaria maq) {
         int result = 0;
