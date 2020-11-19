@@ -46,10 +46,10 @@ public class SupervisorWS {
         return resultado;
     }
     @WebMethod(operationName = "actualizarSupervisor")
-    public int actualizarSupervisor(@WebParam(name = "idPersona") int idPersona,@WebParam(name = "nuevo") boolean nuevo) {
+    public int actualizarSupervisor(@WebParam(name = "supervisor") Supervisor supervisor) {
         int resultado = 0;
         try{
-            resultado = daoSupervisor.actualizar(idPersona,nuevo);
+            resultado = daoSupervisor.actualizar(supervisor);
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }
