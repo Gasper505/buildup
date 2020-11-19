@@ -26,15 +26,12 @@ public class LineaProduccionMySQL implements LineaProduccionDAO{
             con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.password);
             String sql = "{call INSERTAR_LINEA_PRODUCCION(?,?,?)}";
             cs = con.prepareCall(sql);
-            
             cs.registerOutParameter("_ID_LINEA_PRODUCCION", java.sql.Types.INTEGER);
             cs.setString("_NOMBRE", lineaProduccion.getNombre());
             cs.setInt("_ID_TIPO_LADRILLO", lineaProduccion.getTipoLadrillo().getIdTipoLadrillo());
-            
             cs.executeUpdate();
             lineaProduccion.setIdLineaProduccion(cs.getInt("_ID_LINEA_PRODUCCION"));
-            
-            resultado=1;
+            resultado=lineaProduccion.getIdLineaProduccion();
         
         }catch(Exception ex){
             System.out.println(ex.getMessage());
@@ -52,14 +49,9 @@ public class LineaProduccionMySQL implements LineaProduccionDAO{
             con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.password);
             String sql = "{call ACTUALIZAR_TIPO_LADRILLO_LINEA_PRODUCCION(?,?)}";
             cs = con.prepareCall(sql);
-            
             cs.setInt("_ID_LINEA_PRODUCCION", idLineaProduccion);
             cs.setInt("_ID_TIPO_LADRILLO", idTipoLadrillo);
-            
-            cs.executeUpdate();
-            
-            resultado=1;
-        
+            resultado=cs.executeUpdate();
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }finally{
@@ -76,13 +68,8 @@ public class LineaProduccionMySQL implements LineaProduccionDAO{
             con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.password);
             String sql = "{call ELIMINAR_LINEA_PRODUCCION(?)}";
             cs = con.prepareCall(sql);
-            
             cs.setInt("_ID_LINEA_PRODUCCION", idLineaProduccion);
-            
-            cs.executeUpdate();
-            
-            resultado=1;
-        
+            resultado=cs.executeUpdate();
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }finally{
@@ -113,5 +100,25 @@ public class LineaProduccionMySQL implements LineaProduccionDAO{
             try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());}
         }
         return lineas;
+    }
+
+    @Override
+    public int modificar(LineaProduccion lineaProduccion) {
+        int resultado=0;
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.password);
+            String sql = "{call MODIFICAR_LINEA_PRODUCCION(?,?,?)}";
+            cs = con.prepareCall(sql);
+            cs.setInt("_ID_LINEA_PRODUCCION", lineaProduccion.getIdLineaProduccion());
+            cs.setString("_NOMBRE", lineaProduccion.getNombre());
+            cs.setInt("_ID_TIPO_LADRILLO", lineaProduccion.getTipoLadrillo().getIdTipoLadrillo());
+            resultado=cs.executeUpdate();
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }finally{
+            try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());}
+        }
+        return resultado;
     }
 }

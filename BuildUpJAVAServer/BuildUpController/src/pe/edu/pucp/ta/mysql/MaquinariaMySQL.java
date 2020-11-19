@@ -33,11 +33,9 @@ public class MaquinariaMySQL implements MaquinariaDAO{
             cs.setInt("_ID_PROVEEDOR", maquinaria.getProveedor().getIdProveedor());
             cs.setString("_NOMBRE", maquinaria.getNombre());
             cs.setDate("_GARANTIA_FIN", new java.sql.Date(maquinaria.getGarantiaFin().getTime()));
-            
             cs.executeUpdate();
             maquinaria.setIdMaquinaria(cs.getInt("_ID_MAQUINARIA"));
-            
-            resultado=1;
+            resultado=maquinaria.getIdMaquinaria();
         
         }catch(Exception ex){
             System.out.println(ex.getMessage());

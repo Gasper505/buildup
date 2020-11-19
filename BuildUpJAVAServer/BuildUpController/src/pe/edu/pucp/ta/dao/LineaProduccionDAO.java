@@ -9,6 +9,7 @@ public interface LineaProduccionDAO {
     
     int insertar(LineaProduccion lineaProduccion);
     int actualizar(int idLineaProduccion, int idLadrillo);
+    int modificar(LineaProduccion lineaProduccion);
     int eliminar(int idLineaProduccion);
     ArrayList<LineaProduccion> listarPorNombre(String nombre);
     
