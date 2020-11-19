@@ -26,15 +26,12 @@ public class InsumoMySQL implements InsumoDAO{
             con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.password);
             String sql = "{call INSERTAR_INSUMO(?,?,?)}";
             cs = con.prepareCall(sql);
-            
             cs.registerOutParameter("_ID_INSUMO", java.sql.Types.INTEGER);
             cs.setString("_NOMBRE", insumo.getNombre());
             cs.setString("_UNIDAD_MEDIDA", insumo.getUnidadMedida());
-            
             cs.executeUpdate();
             insumo.setIdInsumo(cs.getInt("_ID_INSUMO"));
-            
-            resultado=1;
+            resultado=insumo.getIdInsumo();
         
         }catch(Exception ex){
             System.out.println(ex.getMessage());

@@ -8,12 +8,13 @@ public class OrdenInsumos {
     private int idOrdenInsumos;
     private Operario operario;
     private Insumo insumo;
-    private double cantidad;
+    private int cantidad;
     private String unidadMedida;
     private Date fecha;
-    
+    private boolean activo;
+    private boolean estado;
 
-    public OrdenInsumos(Operario operario, Insumo insumo, double cantidad, String unidadMedida, Date fecha) {
+    public OrdenInsumos(Operario operario, Insumo insumo, int cantidad, String unidadMedida, Date fecha) {
         this.operario = operario;
         this.insumo = insumo;
         this.cantidad = cantidad;
@@ -28,7 +29,7 @@ public class OrdenInsumos {
         
     }
 
-    public OrdenInsumos(int idOrdenInsumos, double cantidad, Date fecha) {
+    public OrdenInsumos(int idOrdenInsumos, int cantidad, Date fecha) {
         this.idOrdenInsumos = idOrdenInsumos;
         this.cantidad = cantidad;
         this.fecha = fecha;
@@ -42,11 +43,11 @@ public class OrdenInsumos {
         this.idOrdenInsumos = idOrdenInsumos;
     }
 
-    public double getCantidad() {
+    public int getCantidad() {
         return cantidad;
     }
 
-    public void setCantidad(double cantidad) {
+    public void setCantidad(int cantidad) {
         this.cantidad = cantidad;
     }
 
@@ -82,12 +83,26 @@ public class OrdenInsumos {
         this.unidadMedida = unidadMedida;
     }
 
-    //
     public void setIdOperario(int aInt) {
         this.operario.setIdPersona(aInt);
     }
 
     public void setIdInsumo(int aInt) {
         this.insumo.setIdInsumo(aInt);
+    }
+        public boolean isActivo() {
+        return activo;
+    }
+
+    public void setActivo(boolean activo) {
+        this.activo = activo;
+    }
+
+    public boolean isEstado() {
+        return estado;
+    }
+
+    public void setEstado(boolean estado) {
+        this.estado = estado;
     }
 }

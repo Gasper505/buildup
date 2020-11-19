@@ -11,5 +11,6 @@ public interface IncidenteMaquinariaDAO {
     int actualizar(IncidenteMaquinaria incidenteMaquinaria);
     int eliminar(int idIncidenteMaquinaria);
     ArrayList<IncidenteMaquinaria> listar();
-    
+    int insertarProblema(IncidenteMaquinaria incidenteMaquinaria);
+    int insertarRespuesta(IncidenteMaquinaria incidenteMaquinaria);
 }

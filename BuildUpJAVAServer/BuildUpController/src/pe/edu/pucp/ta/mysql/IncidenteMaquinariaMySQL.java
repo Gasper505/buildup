@@ -109,4 +109,48 @@ public class IncidenteMaquinariaMySQL implements IncidenteMaquinariaDAO{
         }
         return incidentes;
     }
+
+    @Override
+    public int insertarProblema(IncidenteMaquinaria incidenteMaquinaria) {
+        int resultado=0;
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection(DBManager.urlMySQL, 
+                    DBManager.user, DBManager.password);
+            String sql = "{call INSERTAR_INCIDENTE_MAQUINARIA_PROBLEMA(?,?,?,?)}";
+            cs = con.prepareCall(sql);
+            cs.registerOutParameter("_ID_INCIDENTE", java.sql.Types.INTEGER);
+            cs.setInt("_ID_MAQUINARIA",incidenteMaquinaria.getMaquinaria().getIdMaquinaria());
+            cs.setInt("_ID_SUPERVISOR",incidenteMaquinaria.getSupervisor().getIdPersona());
+            cs.setInt("_ID_PROBLEMA",incidenteMaquinaria.getProblema().getIdProblema());
+            incidenteMaquinaria.setIdIncidente(cs.getInt("_ID_INCIDENTE"));
+            resultado=cs.executeUpdate();
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }finally{
+            try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());}
+        }
+        return resultado;
+    }
+    @Override
+    public int insertarRespuesta(IncidenteMaquinaria incidenteMaquinaria) {
+        int resultado=0;
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection(DBManager.urlMySQL, 
+                    DBManager.user, DBManager.password);
+            String sql = "{call INSERTAR_INCIDENTE_MAQUINARIA_RESPUESTA(?,?,?,?)}";
+            cs = con.prepareCall(sql);
+            cs.setInt("_ID_INCIDENTE",incidenteMaquinaria.getIdIncidente());
+            cs.setInt("_ID_INGENIERO",incidenteMaquinaria.getIngeniero().getIdPersona());
+            cs.setInt("_ID_RESPUESTA",incidenteMaquinaria.getRespuesta().getIdRespuesta());
+            cs.setString("_DESCRIPCION_RESPUESTA",incidenteMaquinaria.getDetalle());
+            resultado=cs.executeUpdate();
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }finally{
+            try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());}
+        }
+        return resultado;
+    }
 }

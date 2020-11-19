@@ -6,6 +6,7 @@
 package pe.edu.pucp.buildup.services;
 
 import java.util.ArrayList;
+import java.util.Date;
 import javax.jws.WebService;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
@@ -37,6 +38,16 @@ public class OrdenInsumosWS {
         }
         return ordenInsumos;
     }
+    @WebMethod(operationName = "listarOrdenInsumosPorRangoFecha")
+    public ArrayList<OrdenInsumos> listarOrdenInsumosPorRangoFecha(@WebParam(name="fechaInicio") Date fechaInicio,@WebParam(name="fechaFin") Date fechaFin) {
+        ArrayList<OrdenInsumos> ordenInsumos = new ArrayList<>();
+        try{
+            ordenInsumos =daoOrdenInsumos.listar_por_fecha(fechaFin, fechaFin);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return ordenInsumos;
+    }
     
     @WebMethod(operationName = "insertarOrdenInsumos")
     public int insertarOrdenInsumos(@WebParam(name="ordenInsumo") OrdenInsumos ordenInsumo) {
@@ -48,11 +59,11 @@ public class OrdenInsumosWS {
         }
         return resultado;
     }
-    @WebMethod(operationName = "actualizarOrdenInsumos")
-    public int actualizarOrdenInsumos(@WebParam(name = "ordenInsumo") OrdenInsumos ordenInsumo) {
+    @WebMethod(operationName = "modificarOrdenInsumos")
+    public int modificarOrdenInsumos(@WebParam(name = "ordenInsumo") OrdenInsumos ordenInsumo) {
         int resultado = 0;
         try{
-            resultado = daoOrdenInsumos.actualizar(ordenInsumo);
+            resultado = daoOrdenInsumos.modificar(ordenInsumo);
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }
@@ -63,6 +74,16 @@ public class OrdenInsumosWS {
         int resultado = 0;
         try{
             resultado = daoOrdenInsumos.eliminar(idOrdenInsumos);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return resultado;
+    }
+    @WebMethod(operationName = "aceptarOrdenInsumos")
+    public int aceptarOrdenInsumos(@WebParam(name = "idOrdenInsumos") int idOrdenInsumos) {
+        int resultado = 0;
+        try{
+            resultado = daoOrdenInsumos.aceptar(idOrdenInsumos);
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }

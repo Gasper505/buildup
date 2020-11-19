@@ -41,10 +41,10 @@ public class MaquinariaWS {
     }
     
     @WebMethod(operationName = "listarMaquinariasConParametros")
-    public ArrayList<Maquinaria> listarMaquinariasConParametros(@WebParam(name = "nombreMaquinaria") String nomMaq, @WebParam(name = "nombreLineaProduccion") String nomLineaProd) {
+    public ArrayList<Maquinaria> listarMaquinariaPorNombreMaqNombreLinea(@WebParam(name = "nombreMaquinaria") String nomMaq, @WebParam(name = "nombreLineaProduccion") String nomLineaProd) {
         ArrayList<Maquinaria> maqs = new ArrayList<>();
         try{
-            maqs = daoMaquinaria.listarMaquinariasConParametros(nomMaq, nomLineaProd);
+            maqs = daoMaquinaria.listarMaquinariaPorNombreMaqNombreLinea(nomMaq, nomLineaProd);
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }
