@@ -24,11 +24,11 @@ public class LineaProduccionWS {
     public LineaProduccionWS(){
         daoLineaProduccion = new LineaProduccionMySQL();
     }
-    @WebMethod(operationName = "listarLineaProduccion")
-    public ArrayList<LineaProduccion> listarLineaProduccion() {
+    @WebMethod(operationName = "listarPorNombreLineaProduccion")
+    public ArrayList<LineaProduccion> listarPorNombreLineaProduccion(@WebParam(name="nombre") String nombre){
         ArrayList<LineaProduccion> lineaProducciones = new ArrayList<>();
         try{
-            lineaProducciones =daoLineaProduccion.listar();
+            lineaProducciones =daoLineaProduccion.listarPorNombre(nombre);
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }
