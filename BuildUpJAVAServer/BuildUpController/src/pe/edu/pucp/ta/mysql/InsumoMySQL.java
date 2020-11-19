@@ -42,8 +42,23 @@ public class InsumoMySQL implements InsumoDAO{
     }
 
     @Override
-    public int actualizar(Insumo insumo) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public int modificar(Insumo insumo) {
+        int resultado=0;
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.password);
+            String sql = "{call MODIFICAR_INSUMO(?,?,?)}";
+            cs = con.prepareCall(sql);
+            cs.setInt("_ID_INSUMO", insumo.getIdInsumo());
+            cs.setString("_NOMBRE", insumo.getNombre());
+            cs.setString("_UNIDAD_MEDIDA", insumo.getUnidadMedida());
+            resultado=cs.executeUpdate();
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }finally{
+            try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());}
+        }
+        return resultado;
     }
 
     @Override
@@ -52,14 +67,10 @@ public class InsumoMySQL implements InsumoDAO{
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.password);
-            
             String sql = "{call ELIMINAR_INSUMO(?)}";
             cs = con.prepareCall(sql);
             cs.setInt("_ID_INSUMO", idInsumo);
-            
-            cs.executeUpdate();
-            resultado=1;
-        
+            resultado=cs.executeUpdate();
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }finally{
@@ -84,11 +95,34 @@ public class InsumoMySQL implements InsumoDAO{
                 insumo.setUnidadMedida(rs.getString("UNIDAD_MEDIDA"));
                 insumos.add(insumo);
             }
-            
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }finally{
             try{rs.close();con.close();}catch(Exception ex){System.out.println(ex.getMessage());}
+        }
+        return insumos;
+    }
+
+    @Override
+    public ArrayList<Insumo> listarPorNombre(String nombre) {
+        ArrayList<Insumo> insumos = new ArrayList<>();
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.password);
+            cs = con.prepareCall("{call LISTAR_INSUMO_POR_NOMBRE(?)}");
+            cs.setString("_NOMBRE", nombre);
+            rs = cs.executeQuery();
+            while(rs.next()){
+                Insumo ins = new Insumo();
+                ins.setIdInsumo(rs.getInt("ID_INSUMO"));
+                ins.setNombre(rs.getString("NOMBRE_INSUMO"));
+                ins.setUnidadMedida(rs.getString("UNIDAD_MEDIDA"));
+                insumos.add(ins);
+            }
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }finally{
+            try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());}
         }
         return insumos;
     }
