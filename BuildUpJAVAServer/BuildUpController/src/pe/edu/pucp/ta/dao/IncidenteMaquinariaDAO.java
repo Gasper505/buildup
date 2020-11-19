@@ -10,7 +10,8 @@ import pe.edu.pucp.ta.model.Ingeniero;
 public interface IncidenteMaquinariaDAO {
     
     int insertar(IncidenteMaquinaria incidenteMaquinaria);
-    int actualizar(IncidenteMaquinaria incidenteMaquinaria);
+    int modificarPorIngeniero(IncidenteMaquinaria incidenteMaquinaria);
+    int modificarPorSupervisor(IncidenteMaquinaria incidenteMaquinaria);
     int eliminar(int idIncidenteMaquinaria);
     ArrayList<IncidenteMaquinaria> listar();
     ArrayList<IncidenteMaquinaria> listarPorRangoFecha(Date fechaIni, Date fechaFin);
