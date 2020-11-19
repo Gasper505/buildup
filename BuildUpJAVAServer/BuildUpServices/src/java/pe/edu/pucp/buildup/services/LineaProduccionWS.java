@@ -46,10 +46,20 @@ public class LineaProduccionWS {
         return resultado;
     }
     @WebMethod(operationName = "actualizarLineaProduccion")
-    public int actualizarLineaProduccion(@WebParam(name = "idlineaProduccion") int idlineaProduccion,int idTipoLadrillo) {
+    public int actualizarLineaProduccion(@WebParam(name = "idlineaProduccion") int idlineaProduccion,@WebParam(name = "idTipoLadrillo")int idTipoLadrillo) {
         int resultado = 0;
         try{
             resultado = daoLineaProduccion.actualizar(idlineaProduccion,idTipoLadrillo);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return resultado;
+    }
+    @WebMethod(operationName = "modificarLineaProduccion")
+    public int modificarLineaProduccion(@WebParam(name = "lineaProduccion") LineaProduccion idlineaProduccion) {
+        int resultado = 0;
+        try{
+            resultado = daoLineaProduccion.modificar(idlineaProduccion);
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }

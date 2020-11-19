@@ -16,9 +16,6 @@
     <service name="RespuestaWS">
       <implementation-class>pe.edu.pucp.buildup.services.RespuestaWS</implementation-class>
     </service>
-    <service name="LineaProduccionWS">
-      <implementation-class>pe.edu.pucp.buildup.services.LineaProduccionWS</implementation-class>
-    </service>
     <service name="OperarioWS">
       <implementation-class>pe.edu.pucp.buildup.services.OperarioWS</implementation-class>
     </service>
@@ -57,6 +54,9 @@
     </service>
     <service name="InsumoWS">
       <implementation-class>pe.edu.pucp.buildup.services.InsumoWS</implementation-class>
+    </service>
+    <service name="LineaProduccionWS">
+      <implementation-class>pe.edu.pucp.buildup.services.LineaProduccionWS</implementation-class>
     </service>
   </services>
   <clients/>
