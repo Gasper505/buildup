@@ -1145,5 +1145,10 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\1437213.png" />
+    <Content Include="Resources\delete+deny+no+out+sign+out+x+icon-1320196067039321214.png" />
+    <Content Include="Resources\icono-proveedor-png-7.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
