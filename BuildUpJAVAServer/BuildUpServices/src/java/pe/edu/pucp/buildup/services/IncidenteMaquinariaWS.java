@@ -57,8 +57,8 @@ public class IncidenteMaquinariaWS {
         }
         return resultado;
     }
-    @WebMethod(operationName = "insertarProblema")
-    public int insertarProblema(@WebParam(name="incidenteMaquinaria") IncidenteMaquinaria incidenteMaquinaria) {
+    @WebMethod(operationName = "insertarProblemaIncidenteMaquinaria")
+    public int insertarProblemaIncidenteMaquinaria(@WebParam(name="incidenteMaquinaria") IncidenteMaquinaria incidenteMaquinaria) {
         int resultado =0;
         try{
             resultado = daoIncidenteMaquinaria.insertarProblema(incidenteMaquinaria);
@@ -67,8 +67,8 @@ public class IncidenteMaquinariaWS {
         }
         return resultado;
     }
-    @WebMethod(operationName = "insertarRespuesta")
-    public int insertarRespuesta(@WebParam(name="incidenteMaquinaria") IncidenteMaquinaria incidenteMaquinaria) {
+    @WebMethod(operationName = "insertarRespuestaIncidenteMaquinaria")
+    public int insertarRespuestaIncidenteMaquinaria(@WebParam(name="incidenteMaquinaria") IncidenteMaquinaria incidenteMaquinaria) {
         int resultado =0;
         try{
             resultado = daoIncidenteMaquinaria.insertarRespuesta(incidenteMaquinaria);

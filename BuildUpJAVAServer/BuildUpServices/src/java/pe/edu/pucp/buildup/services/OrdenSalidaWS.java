@@ -19,8 +19,8 @@ public class OrdenSalidaWS {
         daoOrdenSalida = new OrdenSalidaMySQL();
     }
     
-    @WebMethod(operationName = "insertar")
-    public int insertar(@WebParam(name = "ordenSalida") OrdenSalida ordenSalida) {
+    @WebMethod(operationName = "insertarOrdenSalida")
+    public int insertarOrdenSalida(@WebParam(name = "ordenSalida") OrdenSalida ordenSalida) {
         int resultado = 0;
         try{
             resultado = daoOrdenSalida.insertar(ordenSalida);
@@ -30,8 +30,8 @@ public class OrdenSalidaWS {
         return resultado;
     }
     
-    @WebMethod(operationName = "actualizar")
-    public int actualizar(@WebParam(name = "ordenSalida") OrdenSalida ordenSalida) {
+    @WebMethod(operationName = "actualizarOrdenSalida")
+    public int actualizarOrdenSalida(@WebParam(name = "ordenSalida") OrdenSalida ordenSalida) {
         int resultado = 0;
         try{
             resultado = daoOrdenSalida.actualizar(ordenSalida);
@@ -41,8 +41,8 @@ public class OrdenSalidaWS {
         return resultado;
     }
     
-    @WebMethod(operationName = "eliminar")
-    public int eliminar(@WebParam(name = "idOrdenSalida") int idOrdenSalida) {
+    @WebMethod(operationName = "eliminarOrdenSalida")
+    public int eliminarOrdenSalida(@WebParam(name = "idOrdenSalida") int idOrdenSalida) {
         int resultado = 0;
         try{
             resultado = daoOrdenSalida.eliminar(idOrdenSalida);
