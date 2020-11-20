@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BuildUp.LineaProduccionWS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,15 +13,31 @@ namespace BuildUp
 {
     public partial class frmBuscarLineaProduccion : Form
     {
+
+        LineaProduccionWS.lineaProduccion lineaProduccionSeleccionada;
+        LineaProduccionWS.LineaProduccionWSClient daoLineaProduccion;
+
         public frmBuscarLineaProduccion()
         {
             InitializeComponent();
+            lineaProduccionSeleccionada = new LineaProduccionWS.lineaProduccion();
+            daoLineaProduccion = new LineaProduccionWS.LineaProduccionWSClient();
+
+            dgvLineasProduccion.AutoGenerateColumns = false;
         }
+
+        public lineaProduccion LineaProduccionSeleccionada { get => lineaProduccionSeleccionada; set => lineaProduccionSeleccionada = value; }
 
         private void btnSeleccionar_Click(object sender, EventArgs e)
         {
+            lineaProduccionSeleccionada = (LineaProduccionWS.lineaProduccion)dgvLineasProduccion.CurrentRow.DataBoundItem;
             this.DialogResult = DialogResult.OK;
         }
 
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            dgvLineasProduccion.DataSource = 
+                new BindingList<LineaProduccionWS.lineaProduccion>(daoLineaProduccion.listarPorNombreLineaProduccion(txtNombre.Text).ToList());
+        }
     }
 }

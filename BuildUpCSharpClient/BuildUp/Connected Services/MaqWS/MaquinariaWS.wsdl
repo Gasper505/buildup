@@ -23,11 +23,17 @@
   <message name="actualizarMaquinariaResponse">
     <part name="parameters" element="tns:actualizarMaquinariaResponse" />
   </message>
-  <message name="listarMaquinaria">
-    <part name="parameters" element="tns:listarMaquinaria" />
+  <message name="modificarMaquinaria">
+    <part name="parameters" element="tns:modificarMaquinaria" />
   </message>
-  <message name="listarMaquinariaResponse">
-    <part name="parameters" element="tns:listarMaquinariaResponse" />
+  <message name="modificarMaquinariaResponse">
+    <part name="parameters" element="tns:modificarMaquinariaResponse" />
+  </message>
+  <message name="listarMaquinariasConParametros">
+    <part name="parameters" element="tns:listarMaquinariasConParametros" />
+  </message>
+  <message name="listarMaquinariasConParametrosResponse">
+    <part name="parameters" element="tns:listarMaquinariasConParametrosResponse" />
   </message>
   <portType name="MaquinariaWS">
     <operation name="insertarMaquinaria">
@@ -42,9 +48,13 @@
       <input wsam:Action="http://services.buildup.pucp.edu.pe/MaquinariaWS/actualizarMaquinariaRequest" message="tns:actualizarMaquinaria" />
       <output wsam:Action="http://services.buildup.pucp.edu.pe/MaquinariaWS/actualizarMaquinariaResponse" message="tns:actualizarMaquinariaResponse" />
     </operation>
-    <operation name="listarMaquinaria">
-      <input wsam:Action="http://services.buildup.pucp.edu.pe/MaquinariaWS/listarMaquinariaRequest" message="tns:listarMaquinaria" />
-      <output wsam:Action="http://services.buildup.pucp.edu.pe/MaquinariaWS/listarMaquinariaResponse" message="tns:listarMaquinariaResponse" />
+    <operation name="modificarMaquinaria">
+      <input wsam:Action="http://services.buildup.pucp.edu.pe/MaquinariaWS/modificarMaquinariaRequest" message="tns:modificarMaquinaria" />
+      <output wsam:Action="http://services.buildup.pucp.edu.pe/MaquinariaWS/modificarMaquinariaResponse" message="tns:modificarMaquinariaResponse" />
+    </operation>
+    <operation name="listarMaquinariasConParametros">
+      <input wsam:Action="http://services.buildup.pucp.edu.pe/MaquinariaWS/listarMaquinariasConParametrosRequest" message="tns:listarMaquinariasConParametros" />
+      <output wsam:Action="http://services.buildup.pucp.edu.pe/MaquinariaWS/listarMaquinariasConParametrosResponse" message="tns:listarMaquinariasConParametrosResponse" />
     </operation>
   </portType>
   <binding name="MaquinariaWSPortBinding" type="tns:MaquinariaWS">
@@ -76,7 +86,16 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarMaquinaria">
+    <operation name="modificarMaquinaria">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarMaquinariasConParametros">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

@@ -16,38 +16,58 @@ namespace BuildUp.IncidenteMaquinariaWS {
     public interface IncidenteMaquinariaWS {
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/IncidenteMaquinariaWS/actualizarIncidenteMaqu" +
-            "inariaRequest", ReplyAction="http://services.buildup.pucp.edu.pe/IncidenteMaquinariaWS/actualizarIncidenteMaqu" +
-            "inariaResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        BuildUp.IncidenteMaquinariaWS.actualizarIncidenteMaquinariaResponse actualizarIncidenteMaquinaria(BuildUp.IncidenteMaquinariaWS.actualizarIncidenteMaquinariaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/IncidenteMaquinariaWS/actualizarIncidenteMaqu" +
-            "inariaRequest", ReplyAction="http://services.buildup.pucp.edu.pe/IncidenteMaquinariaWS/actualizarIncidenteMaqu" +
-            "inariaResponse")]
-        System.Threading.Tasks.Task<BuildUp.IncidenteMaquinariaWS.actualizarIncidenteMaquinariaResponse> actualizarIncidenteMaquinariaAsync(BuildUp.IncidenteMaquinariaWS.actualizarIncidenteMaquinariaRequest request);
-        
-        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/IncidenteMaquinariaWS/insertarIncidenteMaquin" +
             "ariaRequest", ReplyAction="http://services.buildup.pucp.edu.pe/IncidenteMaquinariaWS/insertarIncidenteMaquin" +
             "ariaResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPorIngenieroIncidenteMaquinariaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPorIngenieroIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarRespuestaIncidenteMaquinariaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarRespuestaIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerRespuestaIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPorSupervisorIncidenteMaquinariaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPorSupervisorIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerIngenieroIncidenteMaquinariaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerIngenieroIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarIncidenteMaquinariaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarProblemaIncidenteMaquinariaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarProblemaIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarPorRangoFechaIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarIncidenteMaquinariaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarIncidenteMaquinaria))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        BuildUp.IncidenteMaquinariaWS.insertarIncidenteMaquinariaResponse insertarIncidenteMaquinaria(BuildUp.IncidenteMaquinariaWS.insertarIncidenteMaquinariaRequest request);
+        BuildUp.IncidenteMaquinariaWS.insertarIncidenteMaquinariaResponse1 insertarIncidenteMaquinaria(BuildUp.IncidenteMaquinariaWS.insertarIncidenteMaquinariaRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/IncidenteMaquinariaWS/insertarIncidenteMaquin" +
             "ariaRequest", ReplyAction="http://services.buildup.pucp.edu.pe/IncidenteMaquinariaWS/insertarIncidenteMaquin" +
             "ariaResponse")]
-        System.Threading.Tasks.Task<BuildUp.IncidenteMaquinariaWS.insertarIncidenteMaquinariaResponse> insertarIncidenteMaquinariaAsync(BuildUp.IncidenteMaquinariaWS.insertarIncidenteMaquinariaRequest request);
+        System.Threading.Tasks.Task<BuildUp.IncidenteMaquinariaWS.insertarIncidenteMaquinariaResponse1> insertarIncidenteMaquinariaAsync(BuildUp.IncidenteMaquinariaWS.insertarIncidenteMaquinariaRequest request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/IncidenteMaquinariaWS/listarIncidenteMaquinar" +
             "iaRequest", ReplyAction="http://services.buildup.pucp.edu.pe/IncidenteMaquinariaWS/listarIncidenteMaquinar" +
             "iaResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPorIngenieroIncidenteMaquinariaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPorIngenieroIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarRespuestaIncidenteMaquinariaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarRespuestaIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerRespuestaIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPorSupervisorIncidenteMaquinariaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPorSupervisorIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerIngenieroIncidenteMaquinariaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerIngenieroIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarIncidenteMaquinariaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarProblemaIncidenteMaquinariaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarProblemaIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarPorRangoFechaIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarIncidenteMaquinariaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarIncidenteMaquinaria))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
         BuildUp.IncidenteMaquinariaWS.listarIncidenteMaquinariaResponse listarIncidenteMaquinaria(BuildUp.IncidenteMaquinariaWS.listarIncidenteMaquinariaRequest request);
@@ -62,14 +82,248 @@ namespace BuildUp.IncidenteMaquinariaWS {
             "ariaRequest", ReplyAction="http://services.buildup.pucp.edu.pe/IncidenteMaquinariaWS/eliminarIncidenteMaquin" +
             "ariaResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPorIngenieroIncidenteMaquinariaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPorIngenieroIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarRespuestaIncidenteMaquinariaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarRespuestaIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerRespuestaIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPorSupervisorIncidenteMaquinariaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPorSupervisorIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerIngenieroIncidenteMaquinariaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerIngenieroIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarIncidenteMaquinariaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarProblemaIncidenteMaquinariaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarProblemaIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarPorRangoFechaIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarIncidenteMaquinariaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarIncidenteMaquinaria))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        BuildUp.IncidenteMaquinariaWS.eliminarIncidenteMaquinariaResponse eliminarIncidenteMaquinaria(BuildUp.IncidenteMaquinariaWS.eliminarIncidenteMaquinariaRequest request);
+        BuildUp.IncidenteMaquinariaWS.eliminarIncidenteMaquinariaResponse1 eliminarIncidenteMaquinaria(BuildUp.IncidenteMaquinariaWS.eliminarIncidenteMaquinariaRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/IncidenteMaquinariaWS/eliminarIncidenteMaquin" +
             "ariaRequest", ReplyAction="http://services.buildup.pucp.edu.pe/IncidenteMaquinariaWS/eliminarIncidenteMaquin" +
             "ariaResponse")]
-        System.Threading.Tasks.Task<BuildUp.IncidenteMaquinariaWS.eliminarIncidenteMaquinariaResponse> eliminarIncidenteMaquinariaAsync(BuildUp.IncidenteMaquinariaWS.eliminarIncidenteMaquinariaRequest request);
+        System.Threading.Tasks.Task<BuildUp.IncidenteMaquinariaWS.eliminarIncidenteMaquinariaResponse1> eliminarIncidenteMaquinariaAsync(BuildUp.IncidenteMaquinariaWS.eliminarIncidenteMaquinariaRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/IncidenteMaquinariaWS/modificarPorSupervisorI" +
+            "ncidenteMaquinariaRequest", ReplyAction="http://services.buildup.pucp.edu.pe/IncidenteMaquinariaWS/modificarPorSupervisorI" +
+            "ncidenteMaquinariaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPorIngenieroIncidenteMaquinariaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPorIngenieroIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarRespuestaIncidenteMaquinariaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarRespuestaIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerRespuestaIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPorSupervisorIncidenteMaquinariaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPorSupervisorIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerIngenieroIncidenteMaquinariaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerIngenieroIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarIncidenteMaquinariaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarProblemaIncidenteMaquinariaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarProblemaIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarPorRangoFechaIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarIncidenteMaquinariaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        BuildUp.IncidenteMaquinariaWS.modificarPorSupervisorIncidenteMaquinariaResponse1 modificarPorSupervisorIncidenteMaquinaria(BuildUp.IncidenteMaquinariaWS.modificarPorSupervisorIncidenteMaquinariaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/IncidenteMaquinariaWS/modificarPorSupervisorI" +
+            "ncidenteMaquinariaRequest", ReplyAction="http://services.buildup.pucp.edu.pe/IncidenteMaquinariaWS/modificarPorSupervisorI" +
+            "ncidenteMaquinariaResponse")]
+        System.Threading.Tasks.Task<BuildUp.IncidenteMaquinariaWS.modificarPorSupervisorIncidenteMaquinariaResponse1> modificarPorSupervisorIncidenteMaquinariaAsync(BuildUp.IncidenteMaquinariaWS.modificarPorSupervisorIncidenteMaquinariaRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/IncidenteMaquinariaWS/insertarRespuestaIncide" +
+            "nteMaquinariaRequest", ReplyAction="http://services.buildup.pucp.edu.pe/IncidenteMaquinariaWS/insertarRespuestaIncide" +
+            "nteMaquinariaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPorIngenieroIncidenteMaquinariaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPorIngenieroIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarRespuestaIncidenteMaquinariaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarRespuestaIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerRespuestaIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPorSupervisorIncidenteMaquinariaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPorSupervisorIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerIngenieroIncidenteMaquinariaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerIngenieroIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarIncidenteMaquinariaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarProblemaIncidenteMaquinariaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarProblemaIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarPorRangoFechaIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarIncidenteMaquinariaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        BuildUp.IncidenteMaquinariaWS.insertarRespuestaIncidenteMaquinariaResponse1 insertarRespuestaIncidenteMaquinaria(BuildUp.IncidenteMaquinariaWS.insertarRespuestaIncidenteMaquinariaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/IncidenteMaquinariaWS/insertarRespuestaIncide" +
+            "nteMaquinariaRequest", ReplyAction="http://services.buildup.pucp.edu.pe/IncidenteMaquinariaWS/insertarRespuestaIncide" +
+            "nteMaquinariaResponse")]
+        System.Threading.Tasks.Task<BuildUp.IncidenteMaquinariaWS.insertarRespuestaIncidenteMaquinariaResponse1> insertarRespuestaIncidenteMaquinariaAsync(BuildUp.IncidenteMaquinariaWS.insertarRespuestaIncidenteMaquinariaRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/IncidenteMaquinariaWS/obtenerIngenieroInciden" +
+            "teMaquinariaRequest", ReplyAction="http://services.buildup.pucp.edu.pe/IncidenteMaquinariaWS/obtenerIngenieroInciden" +
+            "teMaquinariaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPorIngenieroIncidenteMaquinariaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPorIngenieroIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarRespuestaIncidenteMaquinariaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarRespuestaIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerRespuestaIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPorSupervisorIncidenteMaquinariaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPorSupervisorIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerIngenieroIncidenteMaquinariaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerIngenieroIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarIncidenteMaquinariaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarProblemaIncidenteMaquinariaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarProblemaIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarPorRangoFechaIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarIncidenteMaquinariaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        BuildUp.IncidenteMaquinariaWS.obtenerIngenieroIncidenteMaquinariaResponse1 obtenerIngenieroIncidenteMaquinaria(BuildUp.IncidenteMaquinariaWS.obtenerIngenieroIncidenteMaquinariaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/IncidenteMaquinariaWS/obtenerIngenieroInciden" +
+            "teMaquinariaRequest", ReplyAction="http://services.buildup.pucp.edu.pe/IncidenteMaquinariaWS/obtenerIngenieroInciden" +
+            "teMaquinariaResponse")]
+        System.Threading.Tasks.Task<BuildUp.IncidenteMaquinariaWS.obtenerIngenieroIncidenteMaquinariaResponse1> obtenerIngenieroIncidenteMaquinariaAsync(BuildUp.IncidenteMaquinariaWS.obtenerIngenieroIncidenteMaquinariaRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/IncidenteMaquinariaWS/modificarPorIngenieroIn" +
+            "cidenteMaquinariaRequest", ReplyAction="http://services.buildup.pucp.edu.pe/IncidenteMaquinariaWS/modificarPorIngenieroIn" +
+            "cidenteMaquinariaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPorIngenieroIncidenteMaquinariaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPorIngenieroIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarRespuestaIncidenteMaquinariaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarRespuestaIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerRespuestaIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPorSupervisorIncidenteMaquinariaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPorSupervisorIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerIngenieroIncidenteMaquinariaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerIngenieroIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarIncidenteMaquinariaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarProblemaIncidenteMaquinariaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarProblemaIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarPorRangoFechaIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarIncidenteMaquinariaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        BuildUp.IncidenteMaquinariaWS.modificarPorIngenieroIncidenteMaquinariaResponse1 modificarPorIngenieroIncidenteMaquinaria(BuildUp.IncidenteMaquinariaWS.modificarPorIngenieroIncidenteMaquinariaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/IncidenteMaquinariaWS/modificarPorIngenieroIn" +
+            "cidenteMaquinariaRequest", ReplyAction="http://services.buildup.pucp.edu.pe/IncidenteMaquinariaWS/modificarPorIngenieroIn" +
+            "cidenteMaquinariaResponse")]
+        System.Threading.Tasks.Task<BuildUp.IncidenteMaquinariaWS.modificarPorIngenieroIncidenteMaquinariaResponse1> modificarPorIngenieroIncidenteMaquinariaAsync(BuildUp.IncidenteMaquinariaWS.modificarPorIngenieroIncidenteMaquinariaRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/IncidenteMaquinariaWS/listarPorRangoFechaInci" +
+            "denteMaquinariaRequest", ReplyAction="http://services.buildup.pucp.edu.pe/IncidenteMaquinariaWS/listarPorRangoFechaInci" +
+            "denteMaquinariaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPorIngenieroIncidenteMaquinariaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPorIngenieroIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarRespuestaIncidenteMaquinariaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarRespuestaIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerRespuestaIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPorSupervisorIncidenteMaquinariaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPorSupervisorIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerIngenieroIncidenteMaquinariaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerIngenieroIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarIncidenteMaquinariaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarProblemaIncidenteMaquinariaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarProblemaIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarPorRangoFechaIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarIncidenteMaquinariaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        BuildUp.IncidenteMaquinariaWS.listarPorRangoFechaIncidenteMaquinariaResponse listarPorRangoFechaIncidenteMaquinaria(BuildUp.IncidenteMaquinariaWS.listarPorRangoFechaIncidenteMaquinariaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/IncidenteMaquinariaWS/listarPorRangoFechaInci" +
+            "denteMaquinariaRequest", ReplyAction="http://services.buildup.pucp.edu.pe/IncidenteMaquinariaWS/listarPorRangoFechaInci" +
+            "denteMaquinariaResponse")]
+        System.Threading.Tasks.Task<BuildUp.IncidenteMaquinariaWS.listarPorRangoFechaIncidenteMaquinariaResponse> listarPorRangoFechaIncidenteMaquinariaAsync(BuildUp.IncidenteMaquinariaWS.listarPorRangoFechaIncidenteMaquinariaRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/IncidenteMaquinariaWS/insertarProblemaInciden" +
+            "teMaquinariaRequest", ReplyAction="http://services.buildup.pucp.edu.pe/IncidenteMaquinariaWS/insertarProblemaInciden" +
+            "teMaquinariaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPorIngenieroIncidenteMaquinariaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPorIngenieroIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarRespuestaIncidenteMaquinariaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarRespuestaIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerRespuestaIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPorSupervisorIncidenteMaquinariaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPorSupervisorIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerIngenieroIncidenteMaquinariaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerIngenieroIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarIncidenteMaquinariaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarProblemaIncidenteMaquinariaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarProblemaIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarPorRangoFechaIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarIncidenteMaquinariaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        BuildUp.IncidenteMaquinariaWS.insertarProblemaIncidenteMaquinariaResponse1 insertarProblemaIncidenteMaquinaria(BuildUp.IncidenteMaquinariaWS.insertarProblemaIncidenteMaquinariaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/IncidenteMaquinariaWS/insertarProblemaInciden" +
+            "teMaquinariaRequest", ReplyAction="http://services.buildup.pucp.edu.pe/IncidenteMaquinariaWS/insertarProblemaInciden" +
+            "teMaquinariaResponse")]
+        System.Threading.Tasks.Task<BuildUp.IncidenteMaquinariaWS.insertarProblemaIncidenteMaquinariaResponse1> insertarProblemaIncidenteMaquinariaAsync(BuildUp.IncidenteMaquinariaWS.insertarProblemaIncidenteMaquinariaRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/IncidenteMaquinariaWS/obtenerRespuestaInciden" +
+            "teMaquinariaRequest", ReplyAction="http://services.buildup.pucp.edu.pe/IncidenteMaquinariaWS/obtenerRespuestaInciden" +
+            "teMaquinariaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPorIngenieroIncidenteMaquinariaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPorIngenieroIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarRespuestaIncidenteMaquinariaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarRespuestaIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerRespuestaIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPorSupervisorIncidenteMaquinariaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPorSupervisorIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerIngenieroIncidenteMaquinariaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerIngenieroIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarIncidenteMaquinariaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarProblemaIncidenteMaquinariaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarProblemaIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarPorRangoFechaIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarIncidenteMaquinariaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarIncidenteMaquinaria))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        BuildUp.IncidenteMaquinariaWS.obtenerRespuestaIncidenteMaquinariaResponse obtenerRespuestaIncidenteMaquinaria(BuildUp.IncidenteMaquinariaWS.obtenerRespuestaIncidenteMaquinariaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/IncidenteMaquinariaWS/obtenerRespuestaInciden" +
+            "teMaquinariaRequest", ReplyAction="http://services.buildup.pucp.edu.pe/IncidenteMaquinariaWS/obtenerRespuestaInciden" +
+            "teMaquinariaResponse")]
+        System.Threading.Tasks.Task<BuildUp.IncidenteMaquinariaWS.obtenerRespuestaIncidenteMaquinariaResponse> obtenerRespuestaIncidenteMaquinariaAsync(BuildUp.IncidenteMaquinariaWS.obtenerRespuestaIncidenteMaquinariaRequest request);
     }
     
     /// <remarks/>
@@ -83,6 +337,8 @@ namespace BuildUp.IncidenteMaquinariaWS {
         private bool activoField;
         
         private string detalleField;
+        
+        private bool estadoField;
         
         private System.DateTime fechaAtencionField;
         
@@ -130,6 +386,18 @@ namespace BuildUp.IncidenteMaquinariaWS {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public bool estado {
+            get {
+                return this.estadoField;
+            }
+            set {
+                this.estadoField = value;
+                this.RaisePropertyChanged("estado");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
         public System.DateTime fechaAtencion {
             get {
                 return this.fechaAtencionField;
@@ -153,7 +421,7 @@ namespace BuildUp.IncidenteMaquinariaWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
         public System.DateTime fechaIncidente {
             get {
                 return this.fechaIncidenteField;
@@ -177,7 +445,7 @@ namespace BuildUp.IncidenteMaquinariaWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
         public int idIncidente {
             get {
                 return this.idIncidenteField;
@@ -189,7 +457,7 @@ namespace BuildUp.IncidenteMaquinariaWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
         public ingeniero ingeniero {
             get {
                 return this.ingenieroField;
@@ -201,7 +469,7 @@ namespace BuildUp.IncidenteMaquinariaWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
         public maquinaria maquinaria {
             get {
                 return this.maquinariaField;
@@ -213,7 +481,7 @@ namespace BuildUp.IncidenteMaquinariaWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
         public problema problema {
             get {
                 return this.problemaField;
@@ -225,7 +493,7 @@ namespace BuildUp.IncidenteMaquinariaWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
         public respuesta respuesta {
             get {
                 return this.respuestaField;
@@ -237,7 +505,7 @@ namespace BuildUp.IncidenteMaquinariaWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
         public supervisor supervisor {
             get {
                 return this.supervisorField;
@@ -301,6 +569,10 @@ namespace BuildUp.IncidenteMaquinariaWS {
         private System.DateTime fechaFinContratoField;
         
         private bool fechaFinContratoFieldSpecified;
+        
+        private System.DateTime fechaNacimientoField;
+        
+        private bool fechaNacimientoFieldSpecified;
         
         private byte[] fotoField;
         
@@ -373,7 +645,31 @@ namespace BuildUp.IncidenteMaquinariaWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public System.DateTime fechaNacimiento {
+            get {
+                return this.fechaNacimientoField;
+            }
+            set {
+                this.fechaNacimientoField = value;
+                this.RaisePropertyChanged("fechaNacimiento");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool fechaNacimientoSpecified {
+            get {
+                return this.fechaNacimientoFieldSpecified;
+            }
+            set {
+                this.fechaNacimientoFieldSpecified = value;
+                this.RaisePropertyChanged("fechaNacimientoSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", Order=5)]
         public byte[] foto {
             get {
                 return this.fotoField;
@@ -385,7 +681,7 @@ namespace BuildUp.IncidenteMaquinariaWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
         public int idPersona {
             get {
                 return this.idPersonaField;
@@ -397,7 +693,7 @@ namespace BuildUp.IncidenteMaquinariaWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
         public string nombres {
             get {
                 return this.nombresField;
@@ -409,7 +705,7 @@ namespace BuildUp.IncidenteMaquinariaWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
         public string rol {
             get {
                 return this.rolField;
@@ -421,7 +717,7 @@ namespace BuildUp.IncidenteMaquinariaWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
         public string telefono {
             get {
                 return this.telefonoField;
@@ -429,6 +725,578 @@ namespace BuildUp.IncidenteMaquinariaWS {
             set {
                 this.telefonoField = value;
                 this.RaisePropertyChanged("telefono");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.buildup.pucp.edu.pe/")]
+    public partial class modificarPorIngenieroIncidenteMaquinariaResponse : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private int returnField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public int @return {
+            get {
+                return this.returnField;
+            }
+            set {
+                this.returnField = value;
+                this.RaisePropertyChanged("return");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.buildup.pucp.edu.pe/")]
+    public partial class modificarPorIngenieroIncidenteMaquinaria : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private incidenteMaquinaria incidenteMaquinariaField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public incidenteMaquinaria incidenteMaquinaria {
+            get {
+                return this.incidenteMaquinariaField;
+            }
+            set {
+                this.incidenteMaquinariaField = value;
+                this.RaisePropertyChanged("incidenteMaquinaria");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.buildup.pucp.edu.pe/")]
+    public partial class insertarRespuestaIncidenteMaquinariaResponse : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private int returnField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public int @return {
+            get {
+                return this.returnField;
+            }
+            set {
+                this.returnField = value;
+                this.RaisePropertyChanged("return");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.buildup.pucp.edu.pe/")]
+    public partial class insertarRespuestaIncidenteMaquinaria : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private incidenteMaquinaria incidenteMaquinariaField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public incidenteMaquinaria incidenteMaquinaria {
+            get {
+                return this.incidenteMaquinariaField;
+            }
+            set {
+                this.incidenteMaquinariaField = value;
+                this.RaisePropertyChanged("incidenteMaquinaria");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.buildup.pucp.edu.pe/")]
+    public partial class obtenerRespuestaIncidenteMaquinaria : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private int idIncidenteMaquinariaField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public int idIncidenteMaquinaria {
+            get {
+                return this.idIncidenteMaquinariaField;
+            }
+            set {
+                this.idIncidenteMaquinariaField = value;
+                this.RaisePropertyChanged("idIncidenteMaquinaria");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.buildup.pucp.edu.pe/")]
+    public partial class modificarPorSupervisorIncidenteMaquinariaResponse : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private int returnField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public int @return {
+            get {
+                return this.returnField;
+            }
+            set {
+                this.returnField = value;
+                this.RaisePropertyChanged("return");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.buildup.pucp.edu.pe/")]
+    public partial class modificarPorSupervisorIncidenteMaquinaria : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private incidenteMaquinaria incidenteMaquinariaField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public incidenteMaquinaria incidenteMaquinaria {
+            get {
+                return this.incidenteMaquinariaField;
+            }
+            set {
+                this.incidenteMaquinariaField = value;
+                this.RaisePropertyChanged("incidenteMaquinaria");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.buildup.pucp.edu.pe/")]
+    public partial class obtenerIngenieroIncidenteMaquinariaResponse : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private ingeniero returnField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public ingeniero @return {
+            get {
+                return this.returnField;
+            }
+            set {
+                this.returnField = value;
+                this.RaisePropertyChanged("return");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.buildup.pucp.edu.pe/")]
+    public partial class obtenerIngenieroIncidenteMaquinaria : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private int idIncidenteMaquinariaField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public int idIncidenteMaquinaria {
+            get {
+                return this.idIncidenteMaquinariaField;
+            }
+            set {
+                this.idIncidenteMaquinariaField = value;
+                this.RaisePropertyChanged("idIncidenteMaquinaria");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.buildup.pucp.edu.pe/")]
+    public partial class insertarIncidenteMaquinariaResponse : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private int returnField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public int @return {
+            get {
+                return this.returnField;
+            }
+            set {
+                this.returnField = value;
+                this.RaisePropertyChanged("return");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.buildup.pucp.edu.pe/")]
+    public partial class insertarIncidenteMaquinaria : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private incidenteMaquinaria incidenteMaquinariaField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public incidenteMaquinaria incidenteMaquinaria {
+            get {
+                return this.incidenteMaquinariaField;
+            }
+            set {
+                this.incidenteMaquinariaField = value;
+                this.RaisePropertyChanged("incidenteMaquinaria");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.buildup.pucp.edu.pe/")]
+    public partial class insertarProblemaIncidenteMaquinariaResponse : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private int returnField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public int @return {
+            get {
+                return this.returnField;
+            }
+            set {
+                this.returnField = value;
+                this.RaisePropertyChanged("return");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.buildup.pucp.edu.pe/")]
+    public partial class insertarProblemaIncidenteMaquinaria : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private incidenteMaquinaria incidenteMaquinariaField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public incidenteMaquinaria incidenteMaquinaria {
+            get {
+                return this.incidenteMaquinariaField;
+            }
+            set {
+                this.incidenteMaquinariaField = value;
+                this.RaisePropertyChanged("incidenteMaquinaria");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.buildup.pucp.edu.pe/")]
+    public partial class listarIncidenteMaquinaria : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.buildup.pucp.edu.pe/")]
+    public partial class listarPorRangoFechaIncidenteMaquinaria : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private System.DateTime fechaIncioField;
+        
+        private bool fechaIncioFieldSpecified;
+        
+        private System.DateTime fechaFinField;
+        
+        private bool fechaFinFieldSpecified;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public System.DateTime fechaIncio {
+            get {
+                return this.fechaIncioField;
+            }
+            set {
+                this.fechaIncioField = value;
+                this.RaisePropertyChanged("fechaIncio");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool fechaIncioSpecified {
+            get {
+                return this.fechaIncioFieldSpecified;
+            }
+            set {
+                this.fechaIncioFieldSpecified = value;
+                this.RaisePropertyChanged("fechaIncioSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public System.DateTime fechaFin {
+            get {
+                return this.fechaFinField;
+            }
+            set {
+                this.fechaFinField = value;
+                this.RaisePropertyChanged("fechaFin");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool fechaFinSpecified {
+            get {
+                return this.fechaFinFieldSpecified;
+            }
+            set {
+                this.fechaFinFieldSpecified = value;
+                this.RaisePropertyChanged("fechaFinSpecified");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.buildup.pucp.edu.pe/")]
+    public partial class eliminarIncidenteMaquinariaResponse : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private int returnField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public int @return {
+            get {
+                return this.returnField;
+            }
+            set {
+                this.returnField = value;
+                this.RaisePropertyChanged("return");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.buildup.pucp.edu.pe/")]
+    public partial class eliminarIncidenteMaquinaria : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private int idIncidenteMaquinariaField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public int idIncidenteMaquinaria {
+            get {
+                return this.idIncidenteMaquinariaField;
+            }
+            set {
+                this.idIncidenteMaquinariaField = value;
+                this.RaisePropertyChanged("idIncidenteMaquinaria");
             }
         }
         
@@ -1019,42 +1887,6 @@ namespace BuildUp.IncidenteMaquinariaWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarIncidenteMaquinaria", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
-    public partial class actualizarIncidenteMaquinariaRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public BuildUp.IncidenteMaquinariaWS.incidenteMaquinaria incidenteMaquinaria;
-        
-        public actualizarIncidenteMaquinariaRequest() {
-        }
-        
-        public actualizarIncidenteMaquinariaRequest(BuildUp.IncidenteMaquinariaWS.incidenteMaquinaria incidenteMaquinaria) {
-            this.incidenteMaquinaria = incidenteMaquinaria;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarIncidenteMaquinariaResponse", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
-    public partial class actualizarIncidenteMaquinariaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public actualizarIncidenteMaquinariaResponse() {
-        }
-        
-        public actualizarIncidenteMaquinariaResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="insertarIncidenteMaquinaria", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
     public partial class insertarIncidenteMaquinariaRequest {
         
@@ -1074,16 +1906,16 @@ namespace BuildUp.IncidenteMaquinariaWS {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="insertarIncidenteMaquinariaResponse", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertarIncidenteMaquinariaResponse {
+    public partial class insertarIncidenteMaquinariaResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public insertarIncidenteMaquinariaResponse() {
+        public insertarIncidenteMaquinariaResponse1() {
         }
         
-        public insertarIncidenteMaquinariaResponse(int @return) {
+        public insertarIncidenteMaquinariaResponse1(int @return) {
             this.@return = @return;
         }
     }
@@ -1138,16 +1970,273 @@ namespace BuildUp.IncidenteMaquinariaWS {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarIncidenteMaquinariaResponse", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
-    public partial class eliminarIncidenteMaquinariaResponse {
+    public partial class eliminarIncidenteMaquinariaResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public eliminarIncidenteMaquinariaResponse() {
+        public eliminarIncidenteMaquinariaResponse1() {
         }
         
-        public eliminarIncidenteMaquinariaResponse(int @return) {
+        public eliminarIncidenteMaquinariaResponse1(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarPorSupervisorIncidenteMaquinaria", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
+    public partial class modificarPorSupervisorIncidenteMaquinariaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public BuildUp.IncidenteMaquinariaWS.incidenteMaquinaria incidenteMaquinaria;
+        
+        public modificarPorSupervisorIncidenteMaquinariaRequest() {
+        }
+        
+        public modificarPorSupervisorIncidenteMaquinariaRequest(BuildUp.IncidenteMaquinariaWS.incidenteMaquinaria incidenteMaquinaria) {
+            this.incidenteMaquinaria = incidenteMaquinaria;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarPorSupervisorIncidenteMaquinariaResponse", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
+    public partial class modificarPorSupervisorIncidenteMaquinariaResponse1 {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public modificarPorSupervisorIncidenteMaquinariaResponse1() {
+        }
+        
+        public modificarPorSupervisorIncidenteMaquinariaResponse1(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarRespuestaIncidenteMaquinaria", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertarRespuestaIncidenteMaquinariaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public BuildUp.IncidenteMaquinariaWS.incidenteMaquinaria incidenteMaquinaria;
+        
+        public insertarRespuestaIncidenteMaquinariaRequest() {
+        }
+        
+        public insertarRespuestaIncidenteMaquinariaRequest(BuildUp.IncidenteMaquinariaWS.incidenteMaquinaria incidenteMaquinaria) {
+            this.incidenteMaquinaria = incidenteMaquinaria;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarRespuestaIncidenteMaquinariaResponse", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertarRespuestaIncidenteMaquinariaResponse1 {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public insertarRespuestaIncidenteMaquinariaResponse1() {
+        }
+        
+        public insertarRespuestaIncidenteMaquinariaResponse1(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerIngenieroIncidenteMaquinaria", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
+    public partial class obtenerIngenieroIncidenteMaquinariaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idIncidenteMaquinaria;
+        
+        public obtenerIngenieroIncidenteMaquinariaRequest() {
+        }
+        
+        public obtenerIngenieroIncidenteMaquinariaRequest(int idIncidenteMaquinaria) {
+            this.idIncidenteMaquinaria = idIncidenteMaquinaria;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerIngenieroIncidenteMaquinariaResponse", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
+    public partial class obtenerIngenieroIncidenteMaquinariaResponse1 {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public BuildUp.IncidenteMaquinariaWS.ingeniero @return;
+        
+        public obtenerIngenieroIncidenteMaquinariaResponse1() {
+        }
+        
+        public obtenerIngenieroIncidenteMaquinariaResponse1(BuildUp.IncidenteMaquinariaWS.ingeniero @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarPorIngenieroIncidenteMaquinaria", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
+    public partial class modificarPorIngenieroIncidenteMaquinariaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public BuildUp.IncidenteMaquinariaWS.incidenteMaquinaria incidenteMaquinaria;
+        
+        public modificarPorIngenieroIncidenteMaquinariaRequest() {
+        }
+        
+        public modificarPorIngenieroIncidenteMaquinariaRequest(BuildUp.IncidenteMaquinariaWS.incidenteMaquinaria incidenteMaquinaria) {
+            this.incidenteMaquinaria = incidenteMaquinaria;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarPorIngenieroIncidenteMaquinariaResponse", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
+    public partial class modificarPorIngenieroIncidenteMaquinariaResponse1 {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public modificarPorIngenieroIncidenteMaquinariaResponse1() {
+        }
+        
+        public modificarPorIngenieroIncidenteMaquinariaResponse1(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPorRangoFechaIncidenteMaquinaria", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarPorRangoFechaIncidenteMaquinariaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public System.DateTime fechaIncio;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public System.DateTime fechaFin;
+        
+        public listarPorRangoFechaIncidenteMaquinariaRequest() {
+        }
+        
+        public listarPorRangoFechaIncidenteMaquinariaRequest(System.DateTime fechaIncio, System.DateTime fechaFin) {
+            this.fechaIncio = fechaIncio;
+            this.fechaFin = fechaFin;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPorRangoFechaIncidenteMaquinariaResponse", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarPorRangoFechaIncidenteMaquinariaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public BuildUp.IncidenteMaquinariaWS.incidenteMaquinaria[] @return;
+        
+        public listarPorRangoFechaIncidenteMaquinariaResponse() {
+        }
+        
+        public listarPorRangoFechaIncidenteMaquinariaResponse(BuildUp.IncidenteMaquinariaWS.incidenteMaquinaria[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarProblemaIncidenteMaquinaria", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertarProblemaIncidenteMaquinariaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public BuildUp.IncidenteMaquinariaWS.incidenteMaquinaria incidenteMaquinaria;
+        
+        public insertarProblemaIncidenteMaquinariaRequest() {
+        }
+        
+        public insertarProblemaIncidenteMaquinariaRequest(BuildUp.IncidenteMaquinariaWS.incidenteMaquinaria incidenteMaquinaria) {
+            this.incidenteMaquinaria = incidenteMaquinaria;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarProblemaIncidenteMaquinariaResponse", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertarProblemaIncidenteMaquinariaResponse1 {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public insertarProblemaIncidenteMaquinariaResponse1() {
+        }
+        
+        public insertarProblemaIncidenteMaquinariaResponse1(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerRespuestaIncidenteMaquinaria", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
+    public partial class obtenerRespuestaIncidenteMaquinariaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idIncidenteMaquinaria;
+        
+        public obtenerRespuestaIncidenteMaquinariaRequest() {
+        }
+        
+        public obtenerRespuestaIncidenteMaquinariaRequest(int idIncidenteMaquinaria) {
+            this.idIncidenteMaquinaria = idIncidenteMaquinaria;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerRespuestaIncidenteMaquinariaResponse", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
+    public partial class obtenerRespuestaIncidenteMaquinariaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public object[] @return;
+        
+        public obtenerRespuestaIncidenteMaquinariaResponse() {
+        }
+        
+        public obtenerRespuestaIncidenteMaquinariaResponse(object[] @return) {
             this.@return = @return;
         }
     }
@@ -1180,46 +2269,23 @@ namespace BuildUp.IncidenteMaquinariaWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        BuildUp.IncidenteMaquinariaWS.actualizarIncidenteMaquinariaResponse BuildUp.IncidenteMaquinariaWS.IncidenteMaquinariaWS.actualizarIncidenteMaquinaria(BuildUp.IncidenteMaquinariaWS.actualizarIncidenteMaquinariaRequest request) {
-            return base.Channel.actualizarIncidenteMaquinaria(request);
-        }
-        
-        public int actualizarIncidenteMaquinaria(BuildUp.IncidenteMaquinariaWS.incidenteMaquinaria incidenteMaquinaria) {
-            BuildUp.IncidenteMaquinariaWS.actualizarIncidenteMaquinariaRequest inValue = new BuildUp.IncidenteMaquinariaWS.actualizarIncidenteMaquinariaRequest();
-            inValue.incidenteMaquinaria = incidenteMaquinaria;
-            BuildUp.IncidenteMaquinariaWS.actualizarIncidenteMaquinariaResponse retVal = ((BuildUp.IncidenteMaquinariaWS.IncidenteMaquinariaWS)(this)).actualizarIncidenteMaquinaria(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<BuildUp.IncidenteMaquinariaWS.actualizarIncidenteMaquinariaResponse> BuildUp.IncidenteMaquinariaWS.IncidenteMaquinariaWS.actualizarIncidenteMaquinariaAsync(BuildUp.IncidenteMaquinariaWS.actualizarIncidenteMaquinariaRequest request) {
-            return base.Channel.actualizarIncidenteMaquinariaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<BuildUp.IncidenteMaquinariaWS.actualizarIncidenteMaquinariaResponse> actualizarIncidenteMaquinariaAsync(BuildUp.IncidenteMaquinariaWS.incidenteMaquinaria incidenteMaquinaria) {
-            BuildUp.IncidenteMaquinariaWS.actualizarIncidenteMaquinariaRequest inValue = new BuildUp.IncidenteMaquinariaWS.actualizarIncidenteMaquinariaRequest();
-            inValue.incidenteMaquinaria = incidenteMaquinaria;
-            return ((BuildUp.IncidenteMaquinariaWS.IncidenteMaquinariaWS)(this)).actualizarIncidenteMaquinariaAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        BuildUp.IncidenteMaquinariaWS.insertarIncidenteMaquinariaResponse BuildUp.IncidenteMaquinariaWS.IncidenteMaquinariaWS.insertarIncidenteMaquinaria(BuildUp.IncidenteMaquinariaWS.insertarIncidenteMaquinariaRequest request) {
+        BuildUp.IncidenteMaquinariaWS.insertarIncidenteMaquinariaResponse1 BuildUp.IncidenteMaquinariaWS.IncidenteMaquinariaWS.insertarIncidenteMaquinaria(BuildUp.IncidenteMaquinariaWS.insertarIncidenteMaquinariaRequest request) {
             return base.Channel.insertarIncidenteMaquinaria(request);
         }
         
         public int insertarIncidenteMaquinaria(BuildUp.IncidenteMaquinariaWS.incidenteMaquinaria incidenteMaquinaria) {
             BuildUp.IncidenteMaquinariaWS.insertarIncidenteMaquinariaRequest inValue = new BuildUp.IncidenteMaquinariaWS.insertarIncidenteMaquinariaRequest();
             inValue.incidenteMaquinaria = incidenteMaquinaria;
-            BuildUp.IncidenteMaquinariaWS.insertarIncidenteMaquinariaResponse retVal = ((BuildUp.IncidenteMaquinariaWS.IncidenteMaquinariaWS)(this)).insertarIncidenteMaquinaria(inValue);
+            BuildUp.IncidenteMaquinariaWS.insertarIncidenteMaquinariaResponse1 retVal = ((BuildUp.IncidenteMaquinariaWS.IncidenteMaquinariaWS)(this)).insertarIncidenteMaquinaria(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<BuildUp.IncidenteMaquinariaWS.insertarIncidenteMaquinariaResponse> BuildUp.IncidenteMaquinariaWS.IncidenteMaquinariaWS.insertarIncidenteMaquinariaAsync(BuildUp.IncidenteMaquinariaWS.insertarIncidenteMaquinariaRequest request) {
+        System.Threading.Tasks.Task<BuildUp.IncidenteMaquinariaWS.insertarIncidenteMaquinariaResponse1> BuildUp.IncidenteMaquinariaWS.IncidenteMaquinariaWS.insertarIncidenteMaquinariaAsync(BuildUp.IncidenteMaquinariaWS.insertarIncidenteMaquinariaRequest request) {
             return base.Channel.insertarIncidenteMaquinariaAsync(request);
         }
         
-        public System.Threading.Tasks.Task<BuildUp.IncidenteMaquinariaWS.insertarIncidenteMaquinariaResponse> insertarIncidenteMaquinariaAsync(BuildUp.IncidenteMaquinariaWS.incidenteMaquinaria incidenteMaquinaria) {
+        public System.Threading.Tasks.Task<BuildUp.IncidenteMaquinariaWS.insertarIncidenteMaquinariaResponse1> insertarIncidenteMaquinariaAsync(BuildUp.IncidenteMaquinariaWS.incidenteMaquinaria incidenteMaquinaria) {
             BuildUp.IncidenteMaquinariaWS.insertarIncidenteMaquinariaRequest inValue = new BuildUp.IncidenteMaquinariaWS.insertarIncidenteMaquinariaRequest();
             inValue.incidenteMaquinaria = incidenteMaquinaria;
             return ((BuildUp.IncidenteMaquinariaWS.IncidenteMaquinariaWS)(this)).insertarIncidenteMaquinariaAsync(inValue);
@@ -1247,26 +2313,189 @@ namespace BuildUp.IncidenteMaquinariaWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        BuildUp.IncidenteMaquinariaWS.eliminarIncidenteMaquinariaResponse BuildUp.IncidenteMaquinariaWS.IncidenteMaquinariaWS.eliminarIncidenteMaquinaria(BuildUp.IncidenteMaquinariaWS.eliminarIncidenteMaquinariaRequest request) {
+        BuildUp.IncidenteMaquinariaWS.eliminarIncidenteMaquinariaResponse1 BuildUp.IncidenteMaquinariaWS.IncidenteMaquinariaWS.eliminarIncidenteMaquinaria(BuildUp.IncidenteMaquinariaWS.eliminarIncidenteMaquinariaRequest request) {
             return base.Channel.eliminarIncidenteMaquinaria(request);
         }
         
         public int eliminarIncidenteMaquinaria(int idIncidenteMaquinaria) {
             BuildUp.IncidenteMaquinariaWS.eliminarIncidenteMaquinariaRequest inValue = new BuildUp.IncidenteMaquinariaWS.eliminarIncidenteMaquinariaRequest();
             inValue.idIncidenteMaquinaria = idIncidenteMaquinaria;
-            BuildUp.IncidenteMaquinariaWS.eliminarIncidenteMaquinariaResponse retVal = ((BuildUp.IncidenteMaquinariaWS.IncidenteMaquinariaWS)(this)).eliminarIncidenteMaquinaria(inValue);
+            BuildUp.IncidenteMaquinariaWS.eliminarIncidenteMaquinariaResponse1 retVal = ((BuildUp.IncidenteMaquinariaWS.IncidenteMaquinariaWS)(this)).eliminarIncidenteMaquinaria(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<BuildUp.IncidenteMaquinariaWS.eliminarIncidenteMaquinariaResponse> BuildUp.IncidenteMaquinariaWS.IncidenteMaquinariaWS.eliminarIncidenteMaquinariaAsync(BuildUp.IncidenteMaquinariaWS.eliminarIncidenteMaquinariaRequest request) {
+        System.Threading.Tasks.Task<BuildUp.IncidenteMaquinariaWS.eliminarIncidenteMaquinariaResponse1> BuildUp.IncidenteMaquinariaWS.IncidenteMaquinariaWS.eliminarIncidenteMaquinariaAsync(BuildUp.IncidenteMaquinariaWS.eliminarIncidenteMaquinariaRequest request) {
             return base.Channel.eliminarIncidenteMaquinariaAsync(request);
         }
         
-        public System.Threading.Tasks.Task<BuildUp.IncidenteMaquinariaWS.eliminarIncidenteMaquinariaResponse> eliminarIncidenteMaquinariaAsync(int idIncidenteMaquinaria) {
+        public System.Threading.Tasks.Task<BuildUp.IncidenteMaquinariaWS.eliminarIncidenteMaquinariaResponse1> eliminarIncidenteMaquinariaAsync(int idIncidenteMaquinaria) {
             BuildUp.IncidenteMaquinariaWS.eliminarIncidenteMaquinariaRequest inValue = new BuildUp.IncidenteMaquinariaWS.eliminarIncidenteMaquinariaRequest();
             inValue.idIncidenteMaquinaria = idIncidenteMaquinaria;
             return ((BuildUp.IncidenteMaquinariaWS.IncidenteMaquinariaWS)(this)).eliminarIncidenteMaquinariaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        BuildUp.IncidenteMaquinariaWS.modificarPorSupervisorIncidenteMaquinariaResponse1 BuildUp.IncidenteMaquinariaWS.IncidenteMaquinariaWS.modificarPorSupervisorIncidenteMaquinaria(BuildUp.IncidenteMaquinariaWS.modificarPorSupervisorIncidenteMaquinariaRequest request) {
+            return base.Channel.modificarPorSupervisorIncidenteMaquinaria(request);
+        }
+        
+        public int modificarPorSupervisorIncidenteMaquinaria(BuildUp.IncidenteMaquinariaWS.incidenteMaquinaria incidenteMaquinaria) {
+            BuildUp.IncidenteMaquinariaWS.modificarPorSupervisorIncidenteMaquinariaRequest inValue = new BuildUp.IncidenteMaquinariaWS.modificarPorSupervisorIncidenteMaquinariaRequest();
+            inValue.incidenteMaquinaria = incidenteMaquinaria;
+            BuildUp.IncidenteMaquinariaWS.modificarPorSupervisorIncidenteMaquinariaResponse1 retVal = ((BuildUp.IncidenteMaquinariaWS.IncidenteMaquinariaWS)(this)).modificarPorSupervisorIncidenteMaquinaria(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<BuildUp.IncidenteMaquinariaWS.modificarPorSupervisorIncidenteMaquinariaResponse1> BuildUp.IncidenteMaquinariaWS.IncidenteMaquinariaWS.modificarPorSupervisorIncidenteMaquinariaAsync(BuildUp.IncidenteMaquinariaWS.modificarPorSupervisorIncidenteMaquinariaRequest request) {
+            return base.Channel.modificarPorSupervisorIncidenteMaquinariaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<BuildUp.IncidenteMaquinariaWS.modificarPorSupervisorIncidenteMaquinariaResponse1> modificarPorSupervisorIncidenteMaquinariaAsync(BuildUp.IncidenteMaquinariaWS.incidenteMaquinaria incidenteMaquinaria) {
+            BuildUp.IncidenteMaquinariaWS.modificarPorSupervisorIncidenteMaquinariaRequest inValue = new BuildUp.IncidenteMaquinariaWS.modificarPorSupervisorIncidenteMaquinariaRequest();
+            inValue.incidenteMaquinaria = incidenteMaquinaria;
+            return ((BuildUp.IncidenteMaquinariaWS.IncidenteMaquinariaWS)(this)).modificarPorSupervisorIncidenteMaquinariaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        BuildUp.IncidenteMaquinariaWS.insertarRespuestaIncidenteMaquinariaResponse1 BuildUp.IncidenteMaquinariaWS.IncidenteMaquinariaWS.insertarRespuestaIncidenteMaquinaria(BuildUp.IncidenteMaquinariaWS.insertarRespuestaIncidenteMaquinariaRequest request) {
+            return base.Channel.insertarRespuestaIncidenteMaquinaria(request);
+        }
+        
+        public int insertarRespuestaIncidenteMaquinaria(BuildUp.IncidenteMaquinariaWS.incidenteMaquinaria incidenteMaquinaria) {
+            BuildUp.IncidenteMaquinariaWS.insertarRespuestaIncidenteMaquinariaRequest inValue = new BuildUp.IncidenteMaquinariaWS.insertarRespuestaIncidenteMaquinariaRequest();
+            inValue.incidenteMaquinaria = incidenteMaquinaria;
+            BuildUp.IncidenteMaquinariaWS.insertarRespuestaIncidenteMaquinariaResponse1 retVal = ((BuildUp.IncidenteMaquinariaWS.IncidenteMaquinariaWS)(this)).insertarRespuestaIncidenteMaquinaria(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<BuildUp.IncidenteMaquinariaWS.insertarRespuestaIncidenteMaquinariaResponse1> BuildUp.IncidenteMaquinariaWS.IncidenteMaquinariaWS.insertarRespuestaIncidenteMaquinariaAsync(BuildUp.IncidenteMaquinariaWS.insertarRespuestaIncidenteMaquinariaRequest request) {
+            return base.Channel.insertarRespuestaIncidenteMaquinariaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<BuildUp.IncidenteMaquinariaWS.insertarRespuestaIncidenteMaquinariaResponse1> insertarRespuestaIncidenteMaquinariaAsync(BuildUp.IncidenteMaquinariaWS.incidenteMaquinaria incidenteMaquinaria) {
+            BuildUp.IncidenteMaquinariaWS.insertarRespuestaIncidenteMaquinariaRequest inValue = new BuildUp.IncidenteMaquinariaWS.insertarRespuestaIncidenteMaquinariaRequest();
+            inValue.incidenteMaquinaria = incidenteMaquinaria;
+            return ((BuildUp.IncidenteMaquinariaWS.IncidenteMaquinariaWS)(this)).insertarRespuestaIncidenteMaquinariaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        BuildUp.IncidenteMaquinariaWS.obtenerIngenieroIncidenteMaquinariaResponse1 BuildUp.IncidenteMaquinariaWS.IncidenteMaquinariaWS.obtenerIngenieroIncidenteMaquinaria(BuildUp.IncidenteMaquinariaWS.obtenerIngenieroIncidenteMaquinariaRequest request) {
+            return base.Channel.obtenerIngenieroIncidenteMaquinaria(request);
+        }
+        
+        public BuildUp.IncidenteMaquinariaWS.ingeniero obtenerIngenieroIncidenteMaquinaria(int idIncidenteMaquinaria) {
+            BuildUp.IncidenteMaquinariaWS.obtenerIngenieroIncidenteMaquinariaRequest inValue = new BuildUp.IncidenteMaquinariaWS.obtenerIngenieroIncidenteMaquinariaRequest();
+            inValue.idIncidenteMaquinaria = idIncidenteMaquinaria;
+            BuildUp.IncidenteMaquinariaWS.obtenerIngenieroIncidenteMaquinariaResponse1 retVal = ((BuildUp.IncidenteMaquinariaWS.IncidenteMaquinariaWS)(this)).obtenerIngenieroIncidenteMaquinaria(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<BuildUp.IncidenteMaquinariaWS.obtenerIngenieroIncidenteMaquinariaResponse1> BuildUp.IncidenteMaquinariaWS.IncidenteMaquinariaWS.obtenerIngenieroIncidenteMaquinariaAsync(BuildUp.IncidenteMaquinariaWS.obtenerIngenieroIncidenteMaquinariaRequest request) {
+            return base.Channel.obtenerIngenieroIncidenteMaquinariaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<BuildUp.IncidenteMaquinariaWS.obtenerIngenieroIncidenteMaquinariaResponse1> obtenerIngenieroIncidenteMaquinariaAsync(int idIncidenteMaquinaria) {
+            BuildUp.IncidenteMaquinariaWS.obtenerIngenieroIncidenteMaquinariaRequest inValue = new BuildUp.IncidenteMaquinariaWS.obtenerIngenieroIncidenteMaquinariaRequest();
+            inValue.idIncidenteMaquinaria = idIncidenteMaquinaria;
+            return ((BuildUp.IncidenteMaquinariaWS.IncidenteMaquinariaWS)(this)).obtenerIngenieroIncidenteMaquinariaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        BuildUp.IncidenteMaquinariaWS.modificarPorIngenieroIncidenteMaquinariaResponse1 BuildUp.IncidenteMaquinariaWS.IncidenteMaquinariaWS.modificarPorIngenieroIncidenteMaquinaria(BuildUp.IncidenteMaquinariaWS.modificarPorIngenieroIncidenteMaquinariaRequest request) {
+            return base.Channel.modificarPorIngenieroIncidenteMaquinaria(request);
+        }
+        
+        public int modificarPorIngenieroIncidenteMaquinaria(BuildUp.IncidenteMaquinariaWS.incidenteMaquinaria incidenteMaquinaria) {
+            BuildUp.IncidenteMaquinariaWS.modificarPorIngenieroIncidenteMaquinariaRequest inValue = new BuildUp.IncidenteMaquinariaWS.modificarPorIngenieroIncidenteMaquinariaRequest();
+            inValue.incidenteMaquinaria = incidenteMaquinaria;
+            BuildUp.IncidenteMaquinariaWS.modificarPorIngenieroIncidenteMaquinariaResponse1 retVal = ((BuildUp.IncidenteMaquinariaWS.IncidenteMaquinariaWS)(this)).modificarPorIngenieroIncidenteMaquinaria(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<BuildUp.IncidenteMaquinariaWS.modificarPorIngenieroIncidenteMaquinariaResponse1> BuildUp.IncidenteMaquinariaWS.IncidenteMaquinariaWS.modificarPorIngenieroIncidenteMaquinariaAsync(BuildUp.IncidenteMaquinariaWS.modificarPorIngenieroIncidenteMaquinariaRequest request) {
+            return base.Channel.modificarPorIngenieroIncidenteMaquinariaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<BuildUp.IncidenteMaquinariaWS.modificarPorIngenieroIncidenteMaquinariaResponse1> modificarPorIngenieroIncidenteMaquinariaAsync(BuildUp.IncidenteMaquinariaWS.incidenteMaquinaria incidenteMaquinaria) {
+            BuildUp.IncidenteMaquinariaWS.modificarPorIngenieroIncidenteMaquinariaRequest inValue = new BuildUp.IncidenteMaquinariaWS.modificarPorIngenieroIncidenteMaquinariaRequest();
+            inValue.incidenteMaquinaria = incidenteMaquinaria;
+            return ((BuildUp.IncidenteMaquinariaWS.IncidenteMaquinariaWS)(this)).modificarPorIngenieroIncidenteMaquinariaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        BuildUp.IncidenteMaquinariaWS.listarPorRangoFechaIncidenteMaquinariaResponse BuildUp.IncidenteMaquinariaWS.IncidenteMaquinariaWS.listarPorRangoFechaIncidenteMaquinaria(BuildUp.IncidenteMaquinariaWS.listarPorRangoFechaIncidenteMaquinariaRequest request) {
+            return base.Channel.listarPorRangoFechaIncidenteMaquinaria(request);
+        }
+        
+        public BuildUp.IncidenteMaquinariaWS.incidenteMaquinaria[] listarPorRangoFechaIncidenteMaquinaria(System.DateTime fechaIncio, System.DateTime fechaFin) {
+            BuildUp.IncidenteMaquinariaWS.listarPorRangoFechaIncidenteMaquinariaRequest inValue = new BuildUp.IncidenteMaquinariaWS.listarPorRangoFechaIncidenteMaquinariaRequest();
+            inValue.fechaIncio = fechaIncio;
+            inValue.fechaFin = fechaFin;
+            BuildUp.IncidenteMaquinariaWS.listarPorRangoFechaIncidenteMaquinariaResponse retVal = ((BuildUp.IncidenteMaquinariaWS.IncidenteMaquinariaWS)(this)).listarPorRangoFechaIncidenteMaquinaria(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<BuildUp.IncidenteMaquinariaWS.listarPorRangoFechaIncidenteMaquinariaResponse> BuildUp.IncidenteMaquinariaWS.IncidenteMaquinariaWS.listarPorRangoFechaIncidenteMaquinariaAsync(BuildUp.IncidenteMaquinariaWS.listarPorRangoFechaIncidenteMaquinariaRequest request) {
+            return base.Channel.listarPorRangoFechaIncidenteMaquinariaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<BuildUp.IncidenteMaquinariaWS.listarPorRangoFechaIncidenteMaquinariaResponse> listarPorRangoFechaIncidenteMaquinariaAsync(System.DateTime fechaIncio, System.DateTime fechaFin) {
+            BuildUp.IncidenteMaquinariaWS.listarPorRangoFechaIncidenteMaquinariaRequest inValue = new BuildUp.IncidenteMaquinariaWS.listarPorRangoFechaIncidenteMaquinariaRequest();
+            inValue.fechaIncio = fechaIncio;
+            inValue.fechaFin = fechaFin;
+            return ((BuildUp.IncidenteMaquinariaWS.IncidenteMaquinariaWS)(this)).listarPorRangoFechaIncidenteMaquinariaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        BuildUp.IncidenteMaquinariaWS.insertarProblemaIncidenteMaquinariaResponse1 BuildUp.IncidenteMaquinariaWS.IncidenteMaquinariaWS.insertarProblemaIncidenteMaquinaria(BuildUp.IncidenteMaquinariaWS.insertarProblemaIncidenteMaquinariaRequest request) {
+            return base.Channel.insertarProblemaIncidenteMaquinaria(request);
+        }
+        
+        public int insertarProblemaIncidenteMaquinaria(BuildUp.IncidenteMaquinariaWS.incidenteMaquinaria incidenteMaquinaria) {
+            BuildUp.IncidenteMaquinariaWS.insertarProblemaIncidenteMaquinariaRequest inValue = new BuildUp.IncidenteMaquinariaWS.insertarProblemaIncidenteMaquinariaRequest();
+            inValue.incidenteMaquinaria = incidenteMaquinaria;
+            BuildUp.IncidenteMaquinariaWS.insertarProblemaIncidenteMaquinariaResponse1 retVal = ((BuildUp.IncidenteMaquinariaWS.IncidenteMaquinariaWS)(this)).insertarProblemaIncidenteMaquinaria(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<BuildUp.IncidenteMaquinariaWS.insertarProblemaIncidenteMaquinariaResponse1> BuildUp.IncidenteMaquinariaWS.IncidenteMaquinariaWS.insertarProblemaIncidenteMaquinariaAsync(BuildUp.IncidenteMaquinariaWS.insertarProblemaIncidenteMaquinariaRequest request) {
+            return base.Channel.insertarProblemaIncidenteMaquinariaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<BuildUp.IncidenteMaquinariaWS.insertarProblemaIncidenteMaquinariaResponse1> insertarProblemaIncidenteMaquinariaAsync(BuildUp.IncidenteMaquinariaWS.incidenteMaquinaria incidenteMaquinaria) {
+            BuildUp.IncidenteMaquinariaWS.insertarProblemaIncidenteMaquinariaRequest inValue = new BuildUp.IncidenteMaquinariaWS.insertarProblemaIncidenteMaquinariaRequest();
+            inValue.incidenteMaquinaria = incidenteMaquinaria;
+            return ((BuildUp.IncidenteMaquinariaWS.IncidenteMaquinariaWS)(this)).insertarProblemaIncidenteMaquinariaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        BuildUp.IncidenteMaquinariaWS.obtenerRespuestaIncidenteMaquinariaResponse BuildUp.IncidenteMaquinariaWS.IncidenteMaquinariaWS.obtenerRespuestaIncidenteMaquinaria(BuildUp.IncidenteMaquinariaWS.obtenerRespuestaIncidenteMaquinariaRequest request) {
+            return base.Channel.obtenerRespuestaIncidenteMaquinaria(request);
+        }
+        
+        public object[] obtenerRespuestaIncidenteMaquinaria(int idIncidenteMaquinaria) {
+            BuildUp.IncidenteMaquinariaWS.obtenerRespuestaIncidenteMaquinariaRequest inValue = new BuildUp.IncidenteMaquinariaWS.obtenerRespuestaIncidenteMaquinariaRequest();
+            inValue.idIncidenteMaquinaria = idIncidenteMaquinaria;
+            BuildUp.IncidenteMaquinariaWS.obtenerRespuestaIncidenteMaquinariaResponse retVal = ((BuildUp.IncidenteMaquinariaWS.IncidenteMaquinariaWS)(this)).obtenerRespuestaIncidenteMaquinaria(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<BuildUp.IncidenteMaquinariaWS.obtenerRespuestaIncidenteMaquinariaResponse> BuildUp.IncidenteMaquinariaWS.IncidenteMaquinariaWS.obtenerRespuestaIncidenteMaquinariaAsync(BuildUp.IncidenteMaquinariaWS.obtenerRespuestaIncidenteMaquinariaRequest request) {
+            return base.Channel.obtenerRespuestaIncidenteMaquinariaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<BuildUp.IncidenteMaquinariaWS.obtenerRespuestaIncidenteMaquinariaResponse> obtenerRespuestaIncidenteMaquinariaAsync(int idIncidenteMaquinaria) {
+            BuildUp.IncidenteMaquinariaWS.obtenerRespuestaIncidenteMaquinariaRequest inValue = new BuildUp.IncidenteMaquinariaWS.obtenerRespuestaIncidenteMaquinariaRequest();
+            inValue.idIncidenteMaquinaria = idIncidenteMaquinaria;
+            return ((BuildUp.IncidenteMaquinariaWS.IncidenteMaquinariaWS)(this)).obtenerRespuestaIncidenteMaquinariaAsync(inValue);
         }
     }
 }

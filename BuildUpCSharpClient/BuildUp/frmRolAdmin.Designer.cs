@@ -61,16 +61,16 @@
             // lblNombres
             // 
             this.lblNombres.AutoSize = true;
-            this.lblNombres.Font = new System.Drawing.Font("Trebuchet MS", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombres.Location = new System.Drawing.Point(199, 26);
+            this.lblNombres.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombres.Location = new System.Drawing.Point(225, 36);
             this.lblNombres.Name = "lblNombres";
-            this.lblNombres.Size = new System.Drawing.Size(150, 29);
+            this.lblNombres.Size = new System.Drawing.Size(161, 32);
             this.lblNombres.TabIndex = 28;
             this.lblNombres.Text = "MissingName";
             // 
             // button2
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(322, 309);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(113, 39);
@@ -93,8 +93,8 @@
             // 
             // btnCerrarSesion
             // 
-            this.btnCerrarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrarSesion.Location = new System.Drawing.Point(656, 346);
+            this.btnCerrarSesion.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrarSesion.Location = new System.Drawing.Point(610, 339);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.Size = new System.Drawing.Size(107, 27);
             this.btnCerrarSesion.TabIndex = 11;
@@ -106,21 +106,21 @@
             // 
             this.pbFoto.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.pbFoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbFoto.Location = new System.Drawing.Point(618, 26);
+            this.pbFoto.Location = new System.Drawing.Point(611, 36);
             this.pbFoto.Name = "pbFoto";
-            this.pbFoto.Size = new System.Drawing.Size(136, 140);
+            this.pbFoto.Size = new System.Drawing.Size(106, 111);
             this.pbFoto.TabIndex = 19;
             this.pbFoto.TabStop = false;
             // 
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Trebuchet MS", 18F);
+            this.lblTitulo.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblTitulo.Location = new System.Drawing.Point(36, 26);
+            this.lblTitulo.Location = new System.Drawing.Point(62, 36);
             this.lblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(166, 29);
+            this.lblTitulo.Size = new System.Drawing.Size(165, 32);
             this.lblTitulo.TabIndex = 7;
             this.lblTitulo.Text = "Bienvenido/a:";
             // 
@@ -128,7 +128,7 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.Ivory;
             this.panel3.Controls.Add(this.label1);
-            this.panel3.Location = new System.Drawing.Point(23, 87);
+            this.panel3.Location = new System.Drawing.Point(62, 86);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(254, 40);
             this.panel3.TabIndex = 10;
@@ -149,7 +149,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DimGray;
+            this.BackColor = System.Drawing.Color.DarkSlateGray;
             this.ClientSize = new System.Drawing.Size(777, 459);
             this.Controls.Add(this.panelAdmin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

@@ -6,12 +6,17 @@
   <xs:element name="eliminarMaquinariaResponse" type="tns:eliminarMaquinariaResponse" />
   <xs:element name="insertarMaquinaria" type="tns:insertarMaquinaria" />
   <xs:element name="insertarMaquinariaResponse" type="tns:insertarMaquinariaResponse" />
-  <xs:element name="listarMaquinaria" type="tns:listarMaquinaria" />
-  <xs:element name="listarMaquinariaResponse" type="tns:listarMaquinariaResponse" />
-  <xs:complexType name="listarMaquinaria">
-    <xs:sequence />
+  <xs:element name="listarMaquinariasConParametros" type="tns:listarMaquinariasConParametros" />
+  <xs:element name="listarMaquinariasConParametrosResponse" type="tns:listarMaquinariasConParametrosResponse" />
+  <xs:element name="modificarMaquinaria" type="tns:modificarMaquinaria" />
+  <xs:element name="modificarMaquinariaResponse" type="tns:modificarMaquinariaResponse" />
+  <xs:complexType name="listarMaquinariasConParametros">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nombreMaquinaria" type="xs:string" />
+      <xs:element minOccurs="0" name="nombreLineaProduccion" type="xs:string" />
+    </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="listarMaquinariaResponse">
+  <xs:complexType name="listarMaquinariasConParametrosResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:maquinaria" />
     </xs:sequence>
@@ -51,6 +56,7 @@
       <xs:element minOccurs="0" name="apellidos" type="xs:string" />
       <xs:element minOccurs="0" name="correo" type="xs:string" />
       <xs:element minOccurs="0" name="fechaFinContrato" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaNacimiento" type="xs:dateTime" />
       <xs:element minOccurs="0" name="foto" type="xs:base64Binary" />
       <xs:element name="idPersona" type="xs:int" />
       <xs:element minOccurs="0" name="nombres" type="xs:string" />
@@ -85,6 +91,16 @@
       <xs:element minOccurs="0" name="representante" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="modificarMaquinaria">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="maquinaria" type="tns:maquinaria" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarMaquinariaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="eliminarMaquinaria">
     <xs:sequence>
       <xs:element name="idMaquinaria" type="xs:int" />
@@ -97,8 +113,8 @@
   </xs:complexType>
   <xs:complexType name="actualizarMaquinaria">
     <xs:sequence>
-      <xs:element name="maquinaria" type="xs:int" />
-      <xs:element name="state" type="xs:boolean" />
+      <xs:element name="idMaquinaria" type="xs:int" />
+      <xs:element name="nuevo" type="xs:boolean" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="actualizarMaquinariaResponse">

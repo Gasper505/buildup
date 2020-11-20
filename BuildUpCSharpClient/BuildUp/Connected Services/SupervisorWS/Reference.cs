@@ -18,6 +18,7 @@ namespace BuildUp.SupervisorWS {
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/SupervisorWS/actualizarSupervisorRequest", ReplyAction="http://services.buildup.pucp.edu.pe/SupervisorWS/actualizarSupervisorResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
         BuildUp.SupervisorWS.actualizarSupervisorResponse actualizarSupervisor(BuildUp.SupervisorWS.actualizarSupervisorRequest request);
         
@@ -53,47 +54,6 @@ namespace BuildUp.SupervisorWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/SupervisorWS/listarSupervisorRequest", ReplyAction="http://services.buildup.pucp.edu.pe/SupervisorWS/listarSupervisorResponse")]
         System.Threading.Tasks.Task<BuildUp.SupervisorWS.listarSupervisorResponse> listarSupervisorAsync(BuildUp.SupervisorWS.listarSupervisorRequest request);
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarSupervisor", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
-    public partial class actualizarSupervisorRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idPersona;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public bool nuevo;
-        
-        public actualizarSupervisorRequest() {
-        }
-        
-        public actualizarSupervisorRequest(int idPersona, bool nuevo) {
-            this.idPersona = idPersona;
-            this.nuevo = nuevo;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarSupervisorResponse", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
-    public partial class actualizarSupervisorResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public actualizarSupervisorResponse() {
-        }
-        
-        public actualizarSupervisorResponse(int @return) {
-            this.@return = @return;
-        }
     }
     
     /// <remarks/>
@@ -264,6 +224,10 @@ namespace BuildUp.SupervisorWS {
         
         private bool fechaFinContratoFieldSpecified;
         
+        private System.DateTime fechaNacimientoField;
+        
+        private bool fechaNacimientoFieldSpecified;
+        
         private byte[] fotoField;
         
         private int idPersonaField;
@@ -335,7 +299,31 @@ namespace BuildUp.SupervisorWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public System.DateTime fechaNacimiento {
+            get {
+                return this.fechaNacimientoField;
+            }
+            set {
+                this.fechaNacimientoField = value;
+                this.RaisePropertyChanged("fechaNacimiento");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool fechaNacimientoSpecified {
+            get {
+                return this.fechaNacimientoFieldSpecified;
+            }
+            set {
+                this.fechaNacimientoFieldSpecified = value;
+                this.RaisePropertyChanged("fechaNacimientoSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", Order=5)]
         public byte[] foto {
             get {
                 return this.fotoField;
@@ -347,7 +335,7 @@ namespace BuildUp.SupervisorWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
         public int idPersona {
             get {
                 return this.idPersonaField;
@@ -359,7 +347,7 @@ namespace BuildUp.SupervisorWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
         public string nombres {
             get {
                 return this.nombresField;
@@ -371,7 +359,7 @@ namespace BuildUp.SupervisorWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
         public string rol {
             get {
                 return this.rolField;
@@ -383,7 +371,7 @@ namespace BuildUp.SupervisorWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
         public string telefono {
             get {
                 return this.telefonoField;
@@ -489,6 +477,42 @@ namespace BuildUp.SupervisorWS {
             if ((propertyChanged != null)) {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarSupervisor", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
+    public partial class actualizarSupervisorRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public BuildUp.SupervisorWS.supervisor supervisor;
+        
+        public actualizarSupervisorRequest() {
+        }
+        
+        public actualizarSupervisorRequest(BuildUp.SupervisorWS.supervisor supervisor) {
+            this.supervisor = supervisor;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarSupervisorResponse", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
+    public partial class actualizarSupervisorResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public actualizarSupervisorResponse() {
+        }
+        
+        public actualizarSupervisorResponse(int @return) {
+            this.@return = @return;
         }
     }
     
@@ -624,10 +648,9 @@ namespace BuildUp.SupervisorWS {
             return base.Channel.actualizarSupervisor(request);
         }
         
-        public int actualizarSupervisor(int idPersona, bool nuevo) {
+        public int actualizarSupervisor(BuildUp.SupervisorWS.supervisor supervisor) {
             BuildUp.SupervisorWS.actualizarSupervisorRequest inValue = new BuildUp.SupervisorWS.actualizarSupervisorRequest();
-            inValue.idPersona = idPersona;
-            inValue.nuevo = nuevo;
+            inValue.supervisor = supervisor;
             BuildUp.SupervisorWS.actualizarSupervisorResponse retVal = ((BuildUp.SupervisorWS.SupervisorWS)(this)).actualizarSupervisor(inValue);
             return retVal.@return;
         }
@@ -637,10 +660,9 @@ namespace BuildUp.SupervisorWS {
             return base.Channel.actualizarSupervisorAsync(request);
         }
         
-        public System.Threading.Tasks.Task<BuildUp.SupervisorWS.actualizarSupervisorResponse> actualizarSupervisorAsync(int idPersona, bool nuevo) {
+        public System.Threading.Tasks.Task<BuildUp.SupervisorWS.actualizarSupervisorResponse> actualizarSupervisorAsync(BuildUp.SupervisorWS.supervisor supervisor) {
             BuildUp.SupervisorWS.actualizarSupervisorRequest inValue = new BuildUp.SupervisorWS.actualizarSupervisorRequest();
-            inValue.idPersona = idPersona;
-            inValue.nuevo = nuevo;
+            inValue.supervisor = supervisor;
             return ((BuildUp.SupervisorWS.SupervisorWS)(this)).actualizarSupervisorAsync(inValue);
         }
         

@@ -5,23 +5,23 @@
       <xsd:import schemaLocation="http://52.207.108.70:8080/BuildUpServices/OrdenSalidaWS?xsd=1" namespace="http://services.buildup.pucp.edu.pe/" />
     </xsd:schema>
   </types>
-  <message name="insertar">
-    <part name="parameters" element="tns:insertar" />
+  <message name="insertarOrdenSalida">
+    <part name="parameters" element="tns:insertarOrdenSalida" />
   </message>
-  <message name="insertarResponse">
-    <part name="parameters" element="tns:insertarResponse" />
+  <message name="insertarOrdenSalidaResponse">
+    <part name="parameters" element="tns:insertarOrdenSalidaResponse" />
   </message>
-  <message name="actualizar">
-    <part name="parameters" element="tns:actualizar" />
+  <message name="actualizarOrdenSalida">
+    <part name="parameters" element="tns:actualizarOrdenSalida" />
   </message>
-  <message name="actualizarResponse">
-    <part name="parameters" element="tns:actualizarResponse" />
+  <message name="actualizarOrdenSalidaResponse">
+    <part name="parameters" element="tns:actualizarOrdenSalidaResponse" />
   </message>
-  <message name="eliminar">
-    <part name="parameters" element="tns:eliminar" />
+  <message name="eliminarOrdenSalida">
+    <part name="parameters" element="tns:eliminarOrdenSalida" />
   </message>
-  <message name="eliminarResponse">
-    <part name="parameters" element="tns:eliminarResponse" />
+  <message name="eliminarOrdenSalidaResponse">
+    <part name="parameters" element="tns:eliminarOrdenSalidaResponse" />
   </message>
   <message name="listarOrdenesSalida">
     <part name="parameters" element="tns:listarOrdenesSalida" />
@@ -36,17 +36,17 @@
     <part name="parameters" element="tns:listarOrdenesSalidaConParametrosResponse" />
   </message>
   <portType name="OrdenSalidaWS">
-    <operation name="insertar">
-      <input wsam:Action="http://services.buildup.pucp.edu.pe/OrdenSalidaWS/insertarRequest" message="tns:insertar" />
-      <output wsam:Action="http://services.buildup.pucp.edu.pe/OrdenSalidaWS/insertarResponse" message="tns:insertarResponse" />
+    <operation name="insertarOrdenSalida">
+      <input wsam:Action="http://services.buildup.pucp.edu.pe/OrdenSalidaWS/insertarOrdenSalidaRequest" message="tns:insertarOrdenSalida" />
+      <output wsam:Action="http://services.buildup.pucp.edu.pe/OrdenSalidaWS/insertarOrdenSalidaResponse" message="tns:insertarOrdenSalidaResponse" />
     </operation>
-    <operation name="actualizar">
-      <input wsam:Action="http://services.buildup.pucp.edu.pe/OrdenSalidaWS/actualizarRequest" message="tns:actualizar" />
-      <output wsam:Action="http://services.buildup.pucp.edu.pe/OrdenSalidaWS/actualizarResponse" message="tns:actualizarResponse" />
+    <operation name="actualizarOrdenSalida">
+      <input wsam:Action="http://services.buildup.pucp.edu.pe/OrdenSalidaWS/actualizarOrdenSalidaRequest" message="tns:actualizarOrdenSalida" />
+      <output wsam:Action="http://services.buildup.pucp.edu.pe/OrdenSalidaWS/actualizarOrdenSalidaResponse" message="tns:actualizarOrdenSalidaResponse" />
     </operation>
-    <operation name="eliminar">
-      <input wsam:Action="http://services.buildup.pucp.edu.pe/OrdenSalidaWS/eliminarRequest" message="tns:eliminar" />
-      <output wsam:Action="http://services.buildup.pucp.edu.pe/OrdenSalidaWS/eliminarResponse" message="tns:eliminarResponse" />
+    <operation name="eliminarOrdenSalida">
+      <input wsam:Action="http://services.buildup.pucp.edu.pe/OrdenSalidaWS/eliminarOrdenSalidaRequest" message="tns:eliminarOrdenSalida" />
+      <output wsam:Action="http://services.buildup.pucp.edu.pe/OrdenSalidaWS/eliminarOrdenSalidaResponse" message="tns:eliminarOrdenSalidaResponse" />
     </operation>
     <operation name="listarOrdenesSalida">
       <input wsam:Action="http://services.buildup.pucp.edu.pe/OrdenSalidaWS/listarOrdenesSalidaRequest" message="tns:listarOrdenesSalida" />
@@ -59,7 +59,7 @@
   </portType>
   <binding name="OrdenSalidaWSPortBinding" type="tns:OrdenSalidaWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="insertar">
+    <operation name="insertarOrdenSalida">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -68,7 +68,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="actualizar">
+    <operation name="actualizarOrdenSalida">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -77,7 +77,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="eliminar">
+    <operation name="eliminarOrdenSalida">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

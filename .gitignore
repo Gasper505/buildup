@@ -22,3 +22,11 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 /BuildUpJAVAServer/BuildUpServices/dist/
+/BuildUpJAVAServer/BuildUpServices/nbproject/private/
+/BuildUpJAVAServer/BuildUpModel/nbproject/private/
+/BuildUpJAVAServer/BuildUpController/nbproject/private/
+/BuildUpJAVAServer/BuildUpServices/build/
+/BuildUpJAVAServer/BuildUpModel/dist/
+/BuildUpJAVAServer/BuildUpController/build/
+/BuildUpJAVAServer/BuildUpModel/build/
+/BuildUpJAVAServer/BuildUpController/dist/

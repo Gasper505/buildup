@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://52.207.108.70:8080/BuildUpServices/IncidenteMaquinaria?wsdl" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://52.207.108.70:8080/BuildUpServices/IncidenteMaquinariaWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="IncidenteMaquinaria.wsdl" MetadataType="Wsdl" ID="8ba417cc-d9a8-4125-945b-cabd6ddd7cb8" SourceId="1" SourceUrl="http://52.207.108.70:8080/BuildUpServices/IncidenteMaquinaria?wsdl" />
-    <MetadataFile FileName="IncidenteMaquinaria.xsd" MetadataType="Schema" ID="99e0d3df-7e01-436a-b5b4-e3688e5c95b4" SourceId="1" SourceUrl="http://52.207.108.70:8080/BuildUpServices/IncidenteMaquinaria?xsd=1" />
+    <MetadataFile FileName="IncidenteMaquinariaWS.xsd" MetadataType="Schema" ID="081ba3f3-654b-4588-bf02-354f26454f2c" SourceId="1" SourceUrl="http://52.207.108.70:8080/BuildUpServices/IncidenteMaquinariaWS?xsd=1" />
+    <MetadataFile FileName="IncidenteMaquinariaWS.wsdl" MetadataType="Wsdl" ID="3e3243ee-72a8-4137-9768-24a4a8e9bfb1" SourceId="1" SourceUrl="http://52.207.108.70:8080/BuildUpServices/IncidenteMaquinariaWS?WSDL" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

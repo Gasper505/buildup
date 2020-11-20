@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://52.207.108.70:8080/BuildUpServices/JefeArea?wsdl" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://52.207.108.70:8080/BuildUpServices/JefeAreaWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="JefeArea.wsdl" MetadataType="Wsdl" ID="84a2946d-2b54-439b-8c69-c7a0fa688e43" SourceId="1" SourceUrl="http://52.207.108.70:8080/BuildUpServices/JefeArea?wsdl" />
-    <MetadataFile FileName="JefeArea.xsd" MetadataType="Schema" ID="89d4a0a3-e735-456f-b76c-67a8583e1e76" SourceId="1" SourceUrl="http://52.207.108.70:8080/BuildUpServices/JefeArea?xsd=1" />
+    <MetadataFile FileName="JefeAreaWS.wsdl" MetadataType="Wsdl" ID="831e3b47-8592-45bc-afb9-f6e5f88bbc06" SourceId="1" SourceUrl="http://52.207.108.70:8080/BuildUpServices/JefeAreaWS?WSDL" />
+    <MetadataFile FileName="JefeAreaWS.xsd" MetadataType="Schema" ID="a5e6d049-70a7-4064-8f11-8e80140150e8" SourceId="1" SourceUrl="http://52.207.108.70:8080/BuildUpServices/JefeAreaWS?xsd=1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

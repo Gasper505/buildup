@@ -111,7 +111,7 @@
             // 
             // ID
             // 
-            this.ID.DataPropertyName = "idTipoLadrillo";
+            this.ID.DataPropertyName = "idMerma";
             this.ID.HeaderText = "ID";
             this.ID.Name = "ID";
             this.ID.ReadOnly = true;
@@ -119,6 +119,7 @@
             // 
             // TipoMerma
             // 
+            this.TipoMerma.DataPropertyName = "tipo";
             this.TipoMerma.HeaderText = "Tipo de Merma";
             this.TipoMerma.Name = "TipoMerma";
             this.TipoMerma.ReadOnly = true;
@@ -126,6 +127,7 @@
             // 
             // UnidadMedida
             // 
+            this.UnidadMedida.DataPropertyName = "unidad";
             this.UnidadMedida.HeaderText = "Unidad de Medida";
             this.UnidadMedida.Name = "UnidadMedida";
             this.UnidadMedida.ReadOnly = true;
@@ -141,6 +143,7 @@
             this.Controls.Add(this.dgvMermas);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmBuscarMerma";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Búsqueda de Mermas";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

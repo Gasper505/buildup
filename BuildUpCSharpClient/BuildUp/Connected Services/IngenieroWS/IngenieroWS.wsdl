@@ -11,12 +11,6 @@
   <message name="eliminarIngenieroResponse">
     <part name="parameters" element="tns:eliminarIngenieroResponse" />
   </message>
-  <message name="actualizarIngeniero">
-    <part name="parameters" element="tns:actualizarIngeniero" />
-  </message>
-  <message name="actualizarIngenieroResponse">
-    <part name="parameters" element="tns:actualizarIngenieroResponse" />
-  </message>
   <message name="insertarIngeniero">
     <part name="parameters" element="tns:insertarIngeniero" />
   </message>
@@ -29,14 +23,28 @@
   <message name="listarIngenieroResponse">
     <part name="parameters" element="tns:listarIngenieroResponse" />
   </message>
+  <message name="actualizarEstadoIngeniero">
+    <part name="parameters" element="tns:actualizarEstadoIngeniero" />
+  </message>
+  <message name="actualizarEstadoIngenieroResponse">
+    <part name="parameters" element="tns:actualizarEstadoIngenieroResponse" />
+  </message>
+  <message name="modificarIngeniero">
+    <part name="parameters" element="tns:modificarIngeniero" />
+  </message>
+  <message name="modificarIngenieroResponse">
+    <part name="parameters" element="tns:modificarIngenieroResponse" />
+  </message>
+  <message name="obtenerEspecialidadIngeniero">
+    <part name="parameters" element="tns:obtenerEspecialidadIngeniero" />
+  </message>
+  <message name="obtenerEspecialidadIngenieroResponse">
+    <part name="parameters" element="tns:obtenerEspecialidadIngenieroResponse" />
+  </message>
   <portType name="IngenieroWS">
     <operation name="eliminarIngeniero">
       <input wsam:Action="http://services.buildup.pucp.edu.pe/IngenieroWS/eliminarIngenieroRequest" message="tns:eliminarIngeniero" />
       <output wsam:Action="http://services.buildup.pucp.edu.pe/IngenieroWS/eliminarIngenieroResponse" message="tns:eliminarIngenieroResponse" />
-    </operation>
-    <operation name="actualizarIngeniero">
-      <input wsam:Action="http://services.buildup.pucp.edu.pe/IngenieroWS/actualizarIngenieroRequest" message="tns:actualizarIngeniero" />
-      <output wsam:Action="http://services.buildup.pucp.edu.pe/IngenieroWS/actualizarIngenieroResponse" message="tns:actualizarIngenieroResponse" />
     </operation>
     <operation name="insertarIngeniero">
       <input wsam:Action="http://services.buildup.pucp.edu.pe/IngenieroWS/insertarIngenieroRequest" message="tns:insertarIngeniero" />
@@ -45,6 +53,18 @@
     <operation name="listarIngeniero">
       <input wsam:Action="http://services.buildup.pucp.edu.pe/IngenieroWS/listarIngenieroRequest" message="tns:listarIngeniero" />
       <output wsam:Action="http://services.buildup.pucp.edu.pe/IngenieroWS/listarIngenieroResponse" message="tns:listarIngenieroResponse" />
+    </operation>
+    <operation name="actualizarEstadoIngeniero">
+      <input wsam:Action="http://services.buildup.pucp.edu.pe/IngenieroWS/actualizarEstadoIngenieroRequest" message="tns:actualizarEstadoIngeniero" />
+      <output wsam:Action="http://services.buildup.pucp.edu.pe/IngenieroWS/actualizarEstadoIngenieroResponse" message="tns:actualizarEstadoIngenieroResponse" />
+    </operation>
+    <operation name="modificarIngeniero">
+      <input wsam:Action="http://services.buildup.pucp.edu.pe/IngenieroWS/modificarIngenieroRequest" message="tns:modificarIngeniero" />
+      <output wsam:Action="http://services.buildup.pucp.edu.pe/IngenieroWS/modificarIngenieroResponse" message="tns:modificarIngenieroResponse" />
+    </operation>
+    <operation name="obtenerEspecialidadIngeniero">
+      <input wsam:Action="http://services.buildup.pucp.edu.pe/IngenieroWS/obtenerEspecialidadIngenieroRequest" message="tns:obtenerEspecialidadIngeniero" />
+      <output wsam:Action="http://services.buildup.pucp.edu.pe/IngenieroWS/obtenerEspecialidadIngenieroResponse" message="tns:obtenerEspecialidadIngenieroResponse" />
     </operation>
   </portType>
   <binding name="IngenieroWSPortBinding" type="tns:IngenieroWS">
@@ -58,15 +78,6 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="actualizarIngeniero">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
     <operation name="insertarIngeniero">
       <soap:operation soapAction="" />
       <input>
@@ -77,6 +88,33 @@
       </output>
     </operation>
     <operation name="listarIngeniero">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="actualizarEstadoIngeniero">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarIngeniero">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerEspecialidadIngeniero">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

@@ -25,16 +25,6 @@ namespace BuildUp.IngenieroWS {
         System.Threading.Tasks.Task<BuildUp.IngenieroWS.eliminarIngenieroResponse> eliminarIngenieroAsync(BuildUp.IngenieroWS.eliminarIngenieroRequest request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/IngenieroWS/actualizarIngenieroRequest", ReplyAction="http://services.buildup.pucp.edu.pe/IngenieroWS/actualizarIngenieroResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        BuildUp.IngenieroWS.actualizarIngenieroResponse actualizarIngeniero(BuildUp.IngenieroWS.actualizarIngenieroRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/IngenieroWS/actualizarIngenieroRequest", ReplyAction="http://services.buildup.pucp.edu.pe/IngenieroWS/actualizarIngenieroResponse")]
-        System.Threading.Tasks.Task<BuildUp.IngenieroWS.actualizarIngenieroResponse> actualizarIngenieroAsync(BuildUp.IngenieroWS.actualizarIngenieroRequest request);
-        
-        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/IngenieroWS/insertarIngenieroRequest", ReplyAction="http://services.buildup.pucp.edu.pe/IngenieroWS/insertarIngenieroResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
@@ -53,6 +43,42 @@ namespace BuildUp.IngenieroWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/IngenieroWS/listarIngenieroRequest", ReplyAction="http://services.buildup.pucp.edu.pe/IngenieroWS/listarIngenieroResponse")]
         System.Threading.Tasks.Task<BuildUp.IngenieroWS.listarIngenieroResponse> listarIngenieroAsync(BuildUp.IngenieroWS.listarIngenieroRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/IngenieroWS/actualizarEstadoIngenieroRequest", ReplyAction="http://services.buildup.pucp.edu.pe/IngenieroWS/actualizarEstadoIngenieroResponse" +
+            "")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        BuildUp.IngenieroWS.actualizarEstadoIngenieroResponse actualizarEstadoIngeniero(BuildUp.IngenieroWS.actualizarEstadoIngenieroRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/IngenieroWS/actualizarEstadoIngenieroRequest", ReplyAction="http://services.buildup.pucp.edu.pe/IngenieroWS/actualizarEstadoIngenieroResponse" +
+            "")]
+        System.Threading.Tasks.Task<BuildUp.IngenieroWS.actualizarEstadoIngenieroResponse> actualizarEstadoIngenieroAsync(BuildUp.IngenieroWS.actualizarEstadoIngenieroRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/IngenieroWS/modificarIngenieroRequest", ReplyAction="http://services.buildup.pucp.edu.pe/IngenieroWS/modificarIngenieroResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        BuildUp.IngenieroWS.modificarIngenieroResponse modificarIngeniero(BuildUp.IngenieroWS.modificarIngenieroRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/IngenieroWS/modificarIngenieroRequest", ReplyAction="http://services.buildup.pucp.edu.pe/IngenieroWS/modificarIngenieroResponse")]
+        System.Threading.Tasks.Task<BuildUp.IngenieroWS.modificarIngenieroResponse> modificarIngenieroAsync(BuildUp.IngenieroWS.modificarIngenieroRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/IngenieroWS/obtenerEspecialidadIngenieroReque" +
+            "st", ReplyAction="http://services.buildup.pucp.edu.pe/IngenieroWS/obtenerEspecialidadIngenieroRespo" +
+            "nse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        BuildUp.IngenieroWS.obtenerEspecialidadIngenieroResponse obtenerEspecialidadIngeniero(BuildUp.IngenieroWS.obtenerEspecialidadIngenieroRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/IngenieroWS/obtenerEspecialidadIngenieroReque" +
+            "st", ReplyAction="http://services.buildup.pucp.edu.pe/IngenieroWS/obtenerEspecialidadIngenieroRespo" +
+            "nse")]
+        System.Threading.Tasks.Task<BuildUp.IngenieroWS.obtenerEspecialidadIngenieroResponse> obtenerEspecialidadIngenieroAsync(BuildUp.IngenieroWS.obtenerEspecialidadIngenieroRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -133,6 +159,10 @@ namespace BuildUp.IngenieroWS {
         
         private bool fechaFinContratoFieldSpecified;
         
+        private System.DateTime fechaNacimientoField;
+        
+        private bool fechaNacimientoFieldSpecified;
+        
         private byte[] fotoField;
         
         private int idPersonaField;
@@ -204,7 +234,31 @@ namespace BuildUp.IngenieroWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public System.DateTime fechaNacimiento {
+            get {
+                return this.fechaNacimientoField;
+            }
+            set {
+                this.fechaNacimientoField = value;
+                this.RaisePropertyChanged("fechaNacimiento");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool fechaNacimientoSpecified {
+            get {
+                return this.fechaNacimientoFieldSpecified;
+            }
+            set {
+                this.fechaNacimientoFieldSpecified = value;
+                this.RaisePropertyChanged("fechaNacimientoSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", Order=5)]
         public byte[] foto {
             get {
                 return this.fotoField;
@@ -216,7 +270,7 @@ namespace BuildUp.IngenieroWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
         public int idPersona {
             get {
                 return this.idPersonaField;
@@ -228,7 +282,7 @@ namespace BuildUp.IngenieroWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
         public string nombres {
             get {
                 return this.nombresField;
@@ -240,7 +294,7 @@ namespace BuildUp.IngenieroWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
         public string rol {
             get {
                 return this.rolField;
@@ -252,7 +306,7 @@ namespace BuildUp.IngenieroWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
         public string telefono {
             get {
                 return this.telefonoField;
@@ -270,42 +324,6 @@ namespace BuildUp.IngenieroWS {
             if ((propertyChanged != null)) {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarIngeniero", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
-    public partial class actualizarIngenieroRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public BuildUp.IngenieroWS.ingeniero ingeniero;
-        
-        public actualizarIngenieroRequest() {
-        }
-        
-        public actualizarIngenieroRequest(BuildUp.IngenieroWS.ingeniero ingeniero) {
-            this.ingeniero = ingeniero;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarIngenieroResponse", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
-    public partial class actualizarIngenieroResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public actualizarIngenieroResponse() {
-        }
-        
-        public actualizarIngenieroResponse(int @return) {
-            this.@return = @return;
         }
     }
     
@@ -373,6 +391,119 @@ namespace BuildUp.IngenieroWS {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarEstadoIngeniero", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
+    public partial class actualizarEstadoIngenieroRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idIng;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public bool activo;
+        
+        public actualizarEstadoIngenieroRequest() {
+        }
+        
+        public actualizarEstadoIngenieroRequest(int idIng, bool activo) {
+            this.idIng = idIng;
+            this.activo = activo;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarEstadoIngenieroResponse", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
+    public partial class actualizarEstadoIngenieroResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public actualizarEstadoIngenieroResponse() {
+        }
+        
+        public actualizarEstadoIngenieroResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarIngeniero", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
+    public partial class modificarIngenieroRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public BuildUp.IngenieroWS.ingeniero ingeniero;
+        
+        public modificarIngenieroRequest() {
+        }
+        
+        public modificarIngenieroRequest(BuildUp.IngenieroWS.ingeniero ingeniero) {
+            this.ingeniero = ingeniero;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarIngenieroResponse", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
+    public partial class modificarIngenieroResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public modificarIngenieroResponse() {
+        }
+        
+        public modificarIngenieroResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerEspecialidadIngeniero", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
+    public partial class obtenerEspecialidadIngenieroRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idIngeniero;
+        
+        public obtenerEspecialidadIngenieroRequest() {
+        }
+        
+        public obtenerEspecialidadIngenieroRequest(int idIngeniero) {
+            this.idIngeniero = idIngeniero;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerEspecialidadIngenieroResponse", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
+    public partial class obtenerEspecialidadIngenieroResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string @return;
+        
+        public obtenerEspecialidadIngenieroResponse() {
+        }
+        
+        public obtenerEspecialidadIngenieroResponse(string @return) {
+            this.@return = @return;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface IngenieroWSChannel : BuildUp.IngenieroWS.IngenieroWS, System.ServiceModel.IClientChannel {
     }
@@ -424,29 +555,6 @@ namespace BuildUp.IngenieroWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        BuildUp.IngenieroWS.actualizarIngenieroResponse BuildUp.IngenieroWS.IngenieroWS.actualizarIngeniero(BuildUp.IngenieroWS.actualizarIngenieroRequest request) {
-            return base.Channel.actualizarIngeniero(request);
-        }
-        
-        public int actualizarIngeniero(BuildUp.IngenieroWS.ingeniero ingeniero) {
-            BuildUp.IngenieroWS.actualizarIngenieroRequest inValue = new BuildUp.IngenieroWS.actualizarIngenieroRequest();
-            inValue.ingeniero = ingeniero;
-            BuildUp.IngenieroWS.actualizarIngenieroResponse retVal = ((BuildUp.IngenieroWS.IngenieroWS)(this)).actualizarIngeniero(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<BuildUp.IngenieroWS.actualizarIngenieroResponse> BuildUp.IngenieroWS.IngenieroWS.actualizarIngenieroAsync(BuildUp.IngenieroWS.actualizarIngenieroRequest request) {
-            return base.Channel.actualizarIngenieroAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<BuildUp.IngenieroWS.actualizarIngenieroResponse> actualizarIngenieroAsync(BuildUp.IngenieroWS.ingeniero ingeniero) {
-            BuildUp.IngenieroWS.actualizarIngenieroRequest inValue = new BuildUp.IngenieroWS.actualizarIngenieroRequest();
-            inValue.ingeniero = ingeniero;
-            return ((BuildUp.IngenieroWS.IngenieroWS)(this)).actualizarIngenieroAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         BuildUp.IngenieroWS.insertarIngenieroResponse BuildUp.IngenieroWS.IngenieroWS.insertarIngeniero(BuildUp.IngenieroWS.insertarIngenieroRequest request) {
             return base.Channel.insertarIngeniero(request);
         }
@@ -488,6 +596,77 @@ namespace BuildUp.IngenieroWS {
         public System.Threading.Tasks.Task<BuildUp.IngenieroWS.listarIngenieroResponse> listarIngenieroAsync() {
             BuildUp.IngenieroWS.listarIngenieroRequest inValue = new BuildUp.IngenieroWS.listarIngenieroRequest();
             return ((BuildUp.IngenieroWS.IngenieroWS)(this)).listarIngenieroAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        BuildUp.IngenieroWS.actualizarEstadoIngenieroResponse BuildUp.IngenieroWS.IngenieroWS.actualizarEstadoIngeniero(BuildUp.IngenieroWS.actualizarEstadoIngenieroRequest request) {
+            return base.Channel.actualizarEstadoIngeniero(request);
+        }
+        
+        public int actualizarEstadoIngeniero(int idIng, bool activo) {
+            BuildUp.IngenieroWS.actualizarEstadoIngenieroRequest inValue = new BuildUp.IngenieroWS.actualizarEstadoIngenieroRequest();
+            inValue.idIng = idIng;
+            inValue.activo = activo;
+            BuildUp.IngenieroWS.actualizarEstadoIngenieroResponse retVal = ((BuildUp.IngenieroWS.IngenieroWS)(this)).actualizarEstadoIngeniero(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<BuildUp.IngenieroWS.actualizarEstadoIngenieroResponse> BuildUp.IngenieroWS.IngenieroWS.actualizarEstadoIngenieroAsync(BuildUp.IngenieroWS.actualizarEstadoIngenieroRequest request) {
+            return base.Channel.actualizarEstadoIngenieroAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<BuildUp.IngenieroWS.actualizarEstadoIngenieroResponse> actualizarEstadoIngenieroAsync(int idIng, bool activo) {
+            BuildUp.IngenieroWS.actualizarEstadoIngenieroRequest inValue = new BuildUp.IngenieroWS.actualizarEstadoIngenieroRequest();
+            inValue.idIng = idIng;
+            inValue.activo = activo;
+            return ((BuildUp.IngenieroWS.IngenieroWS)(this)).actualizarEstadoIngenieroAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        BuildUp.IngenieroWS.modificarIngenieroResponse BuildUp.IngenieroWS.IngenieroWS.modificarIngeniero(BuildUp.IngenieroWS.modificarIngenieroRequest request) {
+            return base.Channel.modificarIngeniero(request);
+        }
+        
+        public int modificarIngeniero(BuildUp.IngenieroWS.ingeniero ingeniero) {
+            BuildUp.IngenieroWS.modificarIngenieroRequest inValue = new BuildUp.IngenieroWS.modificarIngenieroRequest();
+            inValue.ingeniero = ingeniero;
+            BuildUp.IngenieroWS.modificarIngenieroResponse retVal = ((BuildUp.IngenieroWS.IngenieroWS)(this)).modificarIngeniero(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<BuildUp.IngenieroWS.modificarIngenieroResponse> BuildUp.IngenieroWS.IngenieroWS.modificarIngenieroAsync(BuildUp.IngenieroWS.modificarIngenieroRequest request) {
+            return base.Channel.modificarIngenieroAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<BuildUp.IngenieroWS.modificarIngenieroResponse> modificarIngenieroAsync(BuildUp.IngenieroWS.ingeniero ingeniero) {
+            BuildUp.IngenieroWS.modificarIngenieroRequest inValue = new BuildUp.IngenieroWS.modificarIngenieroRequest();
+            inValue.ingeniero = ingeniero;
+            return ((BuildUp.IngenieroWS.IngenieroWS)(this)).modificarIngenieroAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        BuildUp.IngenieroWS.obtenerEspecialidadIngenieroResponse BuildUp.IngenieroWS.IngenieroWS.obtenerEspecialidadIngeniero(BuildUp.IngenieroWS.obtenerEspecialidadIngenieroRequest request) {
+            return base.Channel.obtenerEspecialidadIngeniero(request);
+        }
+        
+        public string obtenerEspecialidadIngeniero(int idIngeniero) {
+            BuildUp.IngenieroWS.obtenerEspecialidadIngenieroRequest inValue = new BuildUp.IngenieroWS.obtenerEspecialidadIngenieroRequest();
+            inValue.idIngeniero = idIngeniero;
+            BuildUp.IngenieroWS.obtenerEspecialidadIngenieroResponse retVal = ((BuildUp.IngenieroWS.IngenieroWS)(this)).obtenerEspecialidadIngeniero(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<BuildUp.IngenieroWS.obtenerEspecialidadIngenieroResponse> BuildUp.IngenieroWS.IngenieroWS.obtenerEspecialidadIngenieroAsync(BuildUp.IngenieroWS.obtenerEspecialidadIngenieroRequest request) {
+            return base.Channel.obtenerEspecialidadIngenieroAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<BuildUp.IngenieroWS.obtenerEspecialidadIngenieroResponse> obtenerEspecialidadIngenieroAsync(int idIngeniero) {
+            BuildUp.IngenieroWS.obtenerEspecialidadIngenieroRequest inValue = new BuildUp.IngenieroWS.obtenerEspecialidadIngenieroRequest();
+            inValue.idIngeniero = idIngeniero;
+            return ((BuildUp.IngenieroWS.IngenieroWS)(this)).obtenerEspecialidadIngenieroAsync(inValue);
         }
     }
 }

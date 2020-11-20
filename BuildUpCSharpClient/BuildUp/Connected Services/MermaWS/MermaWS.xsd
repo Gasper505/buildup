@@ -8,6 +8,8 @@
   <xs:element name="insertarMermaResponse" type="tns:insertarMermaResponse" />
   <xs:element name="listarMerma" type="tns:listarMerma" />
   <xs:element name="listarMermaResponse" type="tns:listarMermaResponse" />
+  <xs:element name="listarPorTipoMerma" type="tns:listarPorTipoMerma" />
+  <xs:element name="listarPorTipoMermaResponse" type="tns:listarPorTipoMermaResponse" />
   <xs:complexType name="eliminarMerma">
     <xs:sequence>
       <xs:element name="idMerma" type="xs:int" />
@@ -53,6 +55,16 @@
   <xs:complexType name="insertarMermaResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPorTipoMerma">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="tipo" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPorTipoMermaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:merma" />
     </xs:sequence>
   </xs:complexType>
 </xs:schema>

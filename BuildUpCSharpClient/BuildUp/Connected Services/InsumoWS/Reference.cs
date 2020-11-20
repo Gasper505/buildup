@@ -34,15 +34,6 @@ namespace BuildUp.InsumoWS {
         System.Threading.Tasks.Task<BuildUp.InsumoWS.eliminarInsumoResponse> eliminarInsumoAsync(BuildUp.InsumoWS.eliminarInsumoRequest request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/InsumoWS/actualizarInsumoRequest", ReplyAction="http://services.buildup.pucp.edu.pe/InsumoWS/actualizarInsumoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        BuildUp.InsumoWS.actualizarInsumoResponse actualizarInsumo(BuildUp.InsumoWS.actualizarInsumoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/InsumoWS/actualizarInsumoRequest", ReplyAction="http://services.buildup.pucp.edu.pe/InsumoWS/actualizarInsumoResponse")]
-        System.Threading.Tasks.Task<BuildUp.InsumoWS.actualizarInsumoResponse> actualizarInsumoAsync(BuildUp.InsumoWS.actualizarInsumoRequest request);
-        
-        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/InsumoWS/listarInsumoRequest", ReplyAction="http://services.buildup.pucp.edu.pe/InsumoWS/listarInsumoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -50,6 +41,24 @@ namespace BuildUp.InsumoWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/InsumoWS/listarInsumoRequest", ReplyAction="http://services.buildup.pucp.edu.pe/InsumoWS/listarInsumoResponse")]
         System.Threading.Tasks.Task<BuildUp.InsumoWS.listarInsumoResponse> listarInsumoAsync(BuildUp.InsumoWS.listarInsumoRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/InsumoWS/listarPorNombreInsumoRequest", ReplyAction="http://services.buildup.pucp.edu.pe/InsumoWS/listarPorNombreInsumoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        BuildUp.InsumoWS.listarPorNombreInsumoResponse listarPorNombreInsumo(BuildUp.InsumoWS.listarPorNombreInsumoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/InsumoWS/listarPorNombreInsumoRequest", ReplyAction="http://services.buildup.pucp.edu.pe/InsumoWS/listarPorNombreInsumoResponse")]
+        System.Threading.Tasks.Task<BuildUp.InsumoWS.listarPorNombreInsumoResponse> listarPorNombreInsumoAsync(BuildUp.InsumoWS.listarPorNombreInsumoRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/InsumoWS/modificarInsumoRequest", ReplyAction="http://services.buildup.pucp.edu.pe/InsumoWS/modificarInsumoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        BuildUp.InsumoWS.modificarInsumoResponse modificarInsumo(BuildUp.InsumoWS.modificarInsumoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/InsumoWS/modificarInsumoRequest", ReplyAction="http://services.buildup.pucp.edu.pe/InsumoWS/modificarInsumoResponse")]
+        System.Threading.Tasks.Task<BuildUp.InsumoWS.modificarInsumoResponse> modificarInsumoAsync(BuildUp.InsumoWS.modificarInsumoRequest request);
     }
     
     /// <remarks/>
@@ -201,42 +210,6 @@ namespace BuildUp.InsumoWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarInsumo", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
-    public partial class actualizarInsumoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public BuildUp.InsumoWS.insumo insumo;
-        
-        public actualizarInsumoRequest() {
-        }
-        
-        public actualizarInsumoRequest(BuildUp.InsumoWS.insumo insumo) {
-            this.insumo = insumo;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarInsumoResponse", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
-    public partial class actualizarInsumoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public actualizarInsumoResponse() {
-        }
-        
-        public actualizarInsumoResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="listarInsumo", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
     public partial class listarInsumoRequest {
         
@@ -258,6 +231,78 @@ namespace BuildUp.InsumoWS {
         }
         
         public listarInsumoResponse(BuildUp.InsumoWS.insumo[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPorNombreInsumo", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarPorNombreInsumoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string arg0;
+        
+        public listarPorNombreInsumoRequest() {
+        }
+        
+        public listarPorNombreInsumoRequest(string arg0) {
+            this.arg0 = arg0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPorNombreInsumoResponse", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarPorNombreInsumoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public BuildUp.InsumoWS.insumo[] @return;
+        
+        public listarPorNombreInsumoResponse() {
+        }
+        
+        public listarPorNombreInsumoResponse(BuildUp.InsumoWS.insumo[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarInsumo", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
+    public partial class modificarInsumoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public BuildUp.InsumoWS.insumo insumo;
+        
+        public modificarInsumoRequest() {
+        }
+        
+        public modificarInsumoRequest(BuildUp.InsumoWS.insumo insumo) {
+            this.insumo = insumo;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarInsumoResponse", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
+    public partial class modificarInsumoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public modificarInsumoResponse() {
+        }
+        
+        public modificarInsumoResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -336,29 +381,6 @@ namespace BuildUp.InsumoWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        BuildUp.InsumoWS.actualizarInsumoResponse BuildUp.InsumoWS.InsumoWS.actualizarInsumo(BuildUp.InsumoWS.actualizarInsumoRequest request) {
-            return base.Channel.actualizarInsumo(request);
-        }
-        
-        public int actualizarInsumo(BuildUp.InsumoWS.insumo insumo) {
-            BuildUp.InsumoWS.actualizarInsumoRequest inValue = new BuildUp.InsumoWS.actualizarInsumoRequest();
-            inValue.insumo = insumo;
-            BuildUp.InsumoWS.actualizarInsumoResponse retVal = ((BuildUp.InsumoWS.InsumoWS)(this)).actualizarInsumo(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<BuildUp.InsumoWS.actualizarInsumoResponse> BuildUp.InsumoWS.InsumoWS.actualizarInsumoAsync(BuildUp.InsumoWS.actualizarInsumoRequest request) {
-            return base.Channel.actualizarInsumoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<BuildUp.InsumoWS.actualizarInsumoResponse> actualizarInsumoAsync(BuildUp.InsumoWS.insumo insumo) {
-            BuildUp.InsumoWS.actualizarInsumoRequest inValue = new BuildUp.InsumoWS.actualizarInsumoRequest();
-            inValue.insumo = insumo;
-            return ((BuildUp.InsumoWS.InsumoWS)(this)).actualizarInsumoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         BuildUp.InsumoWS.listarInsumoResponse BuildUp.InsumoWS.InsumoWS.listarInsumo(BuildUp.InsumoWS.listarInsumoRequest request) {
             return base.Channel.listarInsumo(request);
         }
@@ -377,6 +399,52 @@ namespace BuildUp.InsumoWS {
         public System.Threading.Tasks.Task<BuildUp.InsumoWS.listarInsumoResponse> listarInsumoAsync() {
             BuildUp.InsumoWS.listarInsumoRequest inValue = new BuildUp.InsumoWS.listarInsumoRequest();
             return ((BuildUp.InsumoWS.InsumoWS)(this)).listarInsumoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        BuildUp.InsumoWS.listarPorNombreInsumoResponse BuildUp.InsumoWS.InsumoWS.listarPorNombreInsumo(BuildUp.InsumoWS.listarPorNombreInsumoRequest request) {
+            return base.Channel.listarPorNombreInsumo(request);
+        }
+        
+        public BuildUp.InsumoWS.insumo[] listarPorNombreInsumo(string arg0) {
+            BuildUp.InsumoWS.listarPorNombreInsumoRequest inValue = new BuildUp.InsumoWS.listarPorNombreInsumoRequest();
+            inValue.arg0 = arg0;
+            BuildUp.InsumoWS.listarPorNombreInsumoResponse retVal = ((BuildUp.InsumoWS.InsumoWS)(this)).listarPorNombreInsumo(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<BuildUp.InsumoWS.listarPorNombreInsumoResponse> BuildUp.InsumoWS.InsumoWS.listarPorNombreInsumoAsync(BuildUp.InsumoWS.listarPorNombreInsumoRequest request) {
+            return base.Channel.listarPorNombreInsumoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<BuildUp.InsumoWS.listarPorNombreInsumoResponse> listarPorNombreInsumoAsync(string arg0) {
+            BuildUp.InsumoWS.listarPorNombreInsumoRequest inValue = new BuildUp.InsumoWS.listarPorNombreInsumoRequest();
+            inValue.arg0 = arg0;
+            return ((BuildUp.InsumoWS.InsumoWS)(this)).listarPorNombreInsumoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        BuildUp.InsumoWS.modificarInsumoResponse BuildUp.InsumoWS.InsumoWS.modificarInsumo(BuildUp.InsumoWS.modificarInsumoRequest request) {
+            return base.Channel.modificarInsumo(request);
+        }
+        
+        public int modificarInsumo(BuildUp.InsumoWS.insumo insumo) {
+            BuildUp.InsumoWS.modificarInsumoRequest inValue = new BuildUp.InsumoWS.modificarInsumoRequest();
+            inValue.insumo = insumo;
+            BuildUp.InsumoWS.modificarInsumoResponse retVal = ((BuildUp.InsumoWS.InsumoWS)(this)).modificarInsumo(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<BuildUp.InsumoWS.modificarInsumoResponse> BuildUp.InsumoWS.InsumoWS.modificarInsumoAsync(BuildUp.InsumoWS.modificarInsumoRequest request) {
+            return base.Channel.modificarInsumoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<BuildUp.InsumoWS.modificarInsumoResponse> modificarInsumoAsync(BuildUp.InsumoWS.insumo insumo) {
+            BuildUp.InsumoWS.modificarInsumoRequest inValue = new BuildUp.InsumoWS.modificarInsumoRequest();
+            inValue.insumo = insumo;
+            return ((BuildUp.InsumoWS.InsumoWS)(this)).modificarInsumoAsync(inValue);
         }
     }
 }

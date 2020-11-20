@@ -45,8 +45,8 @@
             // 
             // txtUsuario
             // 
-            this.txtUsuario.ForeColor = System.Drawing.SystemColors.WindowFrame;
             resources.ApplyResources(this.txtUsuario, "txtUsuario");
+            this.txtUsuario.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Enter += new System.EventHandler(this.txtUsuario_Enter);
             this.txtUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassword_KeyPress);
@@ -54,8 +54,8 @@
             // 
             // txtContrasena
             // 
-            this.txtContrasena.ForeColor = System.Drawing.SystemColors.WindowFrame;
             resources.ApplyResources(this.txtContrasena, "txtContrasena");
+            this.txtContrasena.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.txtContrasena.Name = "txtContrasena";
             this.txtContrasena.Enter += new System.EventHandler(this.txtContrasena_Enter);
             this.txtContrasena.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassword_KeyPress);
@@ -68,7 +68,7 @@
             // 
             // panelLogeo
             // 
-            this.panelLogeo.BackColor = System.Drawing.SystemColors.Window;
+            this.panelLogeo.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.panelLogeo.Controls.Add(this.lblInfoLogueo);
             this.panelLogeo.Controls.Add(this.picContrasena);
             this.panelLogeo.Controls.Add(this.picUsuario);
@@ -111,7 +111,7 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.LavenderBlush;
+            this.button1.BackColor = System.Drawing.SystemColors.Control;
             resources.ApplyResources(this.button1, "button1");
             this.button1.Name = "button1";
             this.button1.UseVisualStyleBackColor = false;
@@ -121,7 +121,7 @@
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DimGray;
+            this.BackColor = System.Drawing.Color.DarkSlateGray;
             this.Controls.Add(this.panelLogeo);
             this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

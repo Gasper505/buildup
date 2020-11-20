@@ -16,15 +16,6 @@ namespace BuildUp.JefeAreaWS {
     public interface JefeAreaWS {
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/JefeAreaWS/actualizarJefeAreaRequest", ReplyAction="http://services.buildup.pucp.edu.pe/JefeAreaWS/actualizarJefeAreaResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        BuildUp.JefeAreaWS.actualizarJefeAreaResponse actualizarJefeArea(BuildUp.JefeAreaWS.actualizarJefeAreaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/JefeAreaWS/actualizarJefeAreaRequest", ReplyAction="http://services.buildup.pucp.edu.pe/JefeAreaWS/actualizarJefeAreaResponse")]
-        System.Threading.Tasks.Task<BuildUp.JefeAreaWS.actualizarJefeAreaResponse> actualizarJefeAreaAsync(BuildUp.JefeAreaWS.actualizarJefeAreaRequest request);
-        
-        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/JefeAreaWS/listarJefeAreaRequest", ReplyAction="http://services.buildup.pucp.edu.pe/JefeAreaWS/listarJefeAreaResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
@@ -53,47 +44,36 @@ namespace BuildUp.JefeAreaWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/JefeAreaWS/eliminarJefeAreaRequest", ReplyAction="http://services.buildup.pucp.edu.pe/JefeAreaWS/eliminarJefeAreaResponse")]
         System.Threading.Tasks.Task<BuildUp.JefeAreaWS.eliminarJefeAreaResponse> eliminarJefeAreaAsync(BuildUp.JefeAreaWS.eliminarJefeAreaRequest request);
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarJefeArea", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
-    public partial class actualizarJefeAreaRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idPersona;
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/JefeAreaWS/obtenerFotoFirmaJefeAreaRequest", ReplyAction="http://services.buildup.pucp.edu.pe/JefeAreaWS/obtenerFotoFirmaJefeAreaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        BuildUp.JefeAreaWS.obtenerFotoFirmaJefeAreaResponse obtenerFotoFirmaJefeArea(BuildUp.JefeAreaWS.obtenerFotoFirmaJefeAreaRequest request);
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int nuevo;
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/JefeAreaWS/obtenerFotoFirmaJefeAreaRequest", ReplyAction="http://services.buildup.pucp.edu.pe/JefeAreaWS/obtenerFotoFirmaJefeAreaResponse")]
+        System.Threading.Tasks.Task<BuildUp.JefeAreaWS.obtenerFotoFirmaJefeAreaResponse> obtenerFotoFirmaJefeAreaAsync(BuildUp.JefeAreaWS.obtenerFotoFirmaJefeAreaRequest request);
         
-        public actualizarJefeAreaRequest() {
-        }
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/JefeAreaWS/modificarJefeAreaRequest", ReplyAction="http://services.buildup.pucp.edu.pe/JefeAreaWS/modificarJefeAreaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        BuildUp.JefeAreaWS.modificarJefeAreaResponse modificarJefeArea(BuildUp.JefeAreaWS.modificarJefeAreaRequest request);
         
-        public actualizarJefeAreaRequest(int idPersona, int nuevo) {
-            this.idPersona = idPersona;
-            this.nuevo = nuevo;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarJefeAreaResponse", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
-    public partial class actualizarJefeAreaResponse {
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/JefeAreaWS/modificarJefeAreaRequest", ReplyAction="http://services.buildup.pucp.edu.pe/JefeAreaWS/modificarJefeAreaResponse")]
+        System.Threading.Tasks.Task<BuildUp.JefeAreaWS.modificarJefeAreaResponse> modificarJefeAreaAsync(BuildUp.JefeAreaWS.modificarJefeAreaRequest request);
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/JefeAreaWS/actualizarEstadoJefeAreaRequest", ReplyAction="http://services.buildup.pucp.edu.pe/JefeAreaWS/actualizarEstadoJefeAreaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        BuildUp.JefeAreaWS.actualizarEstadoJefeAreaResponse actualizarEstadoJefeArea(BuildUp.JefeAreaWS.actualizarEstadoJefeAreaRequest request);
         
-        public actualizarJefeAreaResponse() {
-        }
-        
-        public actualizarJefeAreaResponse(int @return) {
-            this.@return = @return;
-        }
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/JefeAreaWS/actualizarEstadoJefeAreaRequest", ReplyAction="http://services.buildup.pucp.edu.pe/JefeAreaWS/actualizarEstadoJefeAreaResponse")]
+        System.Threading.Tasks.Task<BuildUp.JefeAreaWS.actualizarEstadoJefeAreaResponse> actualizarEstadoJefeAreaAsync(BuildUp.JefeAreaWS.actualizarEstadoJefeAreaRequest request);
     }
     
     /// <remarks/>
@@ -106,6 +86,8 @@ namespace BuildUp.JefeAreaWS {
         
         private string archivoFirmaDigitalField;
         
+        private byte[] foto_firmaField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
         public string archivoFirmaDigital {
@@ -115,6 +97,18 @@ namespace BuildUp.JefeAreaWS {
             set {
                 this.archivoFirmaDigitalField = value;
                 this.RaisePropertyChanged("archivoFirmaDigital");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", Order=1)]
+        public byte[] foto_firma {
+            get {
+                return this.foto_firmaField;
+            }
+            set {
+                this.foto_firmaField = value;
+                this.RaisePropertyChanged("foto_firma");
             }
         }
     }
@@ -137,6 +131,10 @@ namespace BuildUp.JefeAreaWS {
         private System.DateTime fechaFinContratoField;
         
         private bool fechaFinContratoFieldSpecified;
+        
+        private System.DateTime fechaNacimientoField;
+        
+        private bool fechaNacimientoFieldSpecified;
         
         private byte[] fotoField;
         
@@ -209,7 +207,31 @@ namespace BuildUp.JefeAreaWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public System.DateTime fechaNacimiento {
+            get {
+                return this.fechaNacimientoField;
+            }
+            set {
+                this.fechaNacimientoField = value;
+                this.RaisePropertyChanged("fechaNacimiento");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool fechaNacimientoSpecified {
+            get {
+                return this.fechaNacimientoFieldSpecified;
+            }
+            set {
+                this.fechaNacimientoFieldSpecified = value;
+                this.RaisePropertyChanged("fechaNacimientoSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", Order=5)]
         public byte[] foto {
             get {
                 return this.fotoField;
@@ -221,7 +243,7 @@ namespace BuildUp.JefeAreaWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
         public int idPersona {
             get {
                 return this.idPersonaField;
@@ -233,7 +255,7 @@ namespace BuildUp.JefeAreaWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
         public string nombres {
             get {
                 return this.nombresField;
@@ -245,7 +267,7 @@ namespace BuildUp.JefeAreaWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
         public string rol {
             get {
                 return this.rolField;
@@ -257,7 +279,7 @@ namespace BuildUp.JefeAreaWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
         public string telefono {
             get {
                 return this.telefonoField;
@@ -378,6 +400,119 @@ namespace BuildUp.JefeAreaWS {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerFotoFirmaJefeArea", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
+    public partial class obtenerFotoFirmaJefeAreaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idJefeArea;
+        
+        public obtenerFotoFirmaJefeAreaRequest() {
+        }
+        
+        public obtenerFotoFirmaJefeAreaRequest(int idJefeArea) {
+            this.idJefeArea = idJefeArea;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerFotoFirmaJefeAreaResponse", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
+    public partial class obtenerFotoFirmaJefeAreaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", IsNullable=true)]
+        public byte[] @return;
+        
+        public obtenerFotoFirmaJefeAreaResponse() {
+        }
+        
+        public obtenerFotoFirmaJefeAreaResponse(byte[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarJefeArea", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
+    public partial class modificarJefeAreaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public BuildUp.JefeAreaWS.jefeArea jefeArea;
+        
+        public modificarJefeAreaRequest() {
+        }
+        
+        public modificarJefeAreaRequest(BuildUp.JefeAreaWS.jefeArea jefeArea) {
+            this.jefeArea = jefeArea;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarJefeAreaResponse", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
+    public partial class modificarJefeAreaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public modificarJefeAreaResponse() {
+        }
+        
+        public modificarJefeAreaResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarEstadoJefeArea", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
+    public partial class actualizarEstadoJefeAreaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idPersona;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public bool activo;
+        
+        public actualizarEstadoJefeAreaRequest() {
+        }
+        
+        public actualizarEstadoJefeAreaRequest(int idPersona, bool activo) {
+            this.idPersona = idPersona;
+            this.activo = activo;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarEstadoJefeAreaResponse", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
+    public partial class actualizarEstadoJefeAreaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public actualizarEstadoJefeAreaResponse() {
+        }
+        
+        public actualizarEstadoJefeAreaResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface JefeAreaWSChannel : BuildUp.JefeAreaWS.JefeAreaWS, System.ServiceModel.IClientChannel {
     }
@@ -403,31 +538,6 @@ namespace BuildUp.JefeAreaWS {
         
         public JefeAreaWSClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        BuildUp.JefeAreaWS.actualizarJefeAreaResponse BuildUp.JefeAreaWS.JefeAreaWS.actualizarJefeArea(BuildUp.JefeAreaWS.actualizarJefeAreaRequest request) {
-            return base.Channel.actualizarJefeArea(request);
-        }
-        
-        public int actualizarJefeArea(int idPersona, int nuevo) {
-            BuildUp.JefeAreaWS.actualizarJefeAreaRequest inValue = new BuildUp.JefeAreaWS.actualizarJefeAreaRequest();
-            inValue.idPersona = idPersona;
-            inValue.nuevo = nuevo;
-            BuildUp.JefeAreaWS.actualizarJefeAreaResponse retVal = ((BuildUp.JefeAreaWS.JefeAreaWS)(this)).actualizarJefeArea(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<BuildUp.JefeAreaWS.actualizarJefeAreaResponse> BuildUp.JefeAreaWS.JefeAreaWS.actualizarJefeAreaAsync(BuildUp.JefeAreaWS.actualizarJefeAreaRequest request) {
-            return base.Channel.actualizarJefeAreaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<BuildUp.JefeAreaWS.actualizarJefeAreaResponse> actualizarJefeAreaAsync(int idPersona, int nuevo) {
-            BuildUp.JefeAreaWS.actualizarJefeAreaRequest inValue = new BuildUp.JefeAreaWS.actualizarJefeAreaRequest();
-            inValue.idPersona = idPersona;
-            inValue.nuevo = nuevo;
-            return ((BuildUp.JefeAreaWS.JefeAreaWS)(this)).actualizarJefeAreaAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -495,6 +605,77 @@ namespace BuildUp.JefeAreaWS {
             BuildUp.JefeAreaWS.eliminarJefeAreaRequest inValue = new BuildUp.JefeAreaWS.eliminarJefeAreaRequest();
             inValue.idJefeArea = idJefeArea;
             return ((BuildUp.JefeAreaWS.JefeAreaWS)(this)).eliminarJefeAreaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        BuildUp.JefeAreaWS.obtenerFotoFirmaJefeAreaResponse BuildUp.JefeAreaWS.JefeAreaWS.obtenerFotoFirmaJefeArea(BuildUp.JefeAreaWS.obtenerFotoFirmaJefeAreaRequest request) {
+            return base.Channel.obtenerFotoFirmaJefeArea(request);
+        }
+        
+        public byte[] obtenerFotoFirmaJefeArea(int idJefeArea) {
+            BuildUp.JefeAreaWS.obtenerFotoFirmaJefeAreaRequest inValue = new BuildUp.JefeAreaWS.obtenerFotoFirmaJefeAreaRequest();
+            inValue.idJefeArea = idJefeArea;
+            BuildUp.JefeAreaWS.obtenerFotoFirmaJefeAreaResponse retVal = ((BuildUp.JefeAreaWS.JefeAreaWS)(this)).obtenerFotoFirmaJefeArea(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<BuildUp.JefeAreaWS.obtenerFotoFirmaJefeAreaResponse> BuildUp.JefeAreaWS.JefeAreaWS.obtenerFotoFirmaJefeAreaAsync(BuildUp.JefeAreaWS.obtenerFotoFirmaJefeAreaRequest request) {
+            return base.Channel.obtenerFotoFirmaJefeAreaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<BuildUp.JefeAreaWS.obtenerFotoFirmaJefeAreaResponse> obtenerFotoFirmaJefeAreaAsync(int idJefeArea) {
+            BuildUp.JefeAreaWS.obtenerFotoFirmaJefeAreaRequest inValue = new BuildUp.JefeAreaWS.obtenerFotoFirmaJefeAreaRequest();
+            inValue.idJefeArea = idJefeArea;
+            return ((BuildUp.JefeAreaWS.JefeAreaWS)(this)).obtenerFotoFirmaJefeAreaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        BuildUp.JefeAreaWS.modificarJefeAreaResponse BuildUp.JefeAreaWS.JefeAreaWS.modificarJefeArea(BuildUp.JefeAreaWS.modificarJefeAreaRequest request) {
+            return base.Channel.modificarJefeArea(request);
+        }
+        
+        public int modificarJefeArea(BuildUp.JefeAreaWS.jefeArea jefeArea) {
+            BuildUp.JefeAreaWS.modificarJefeAreaRequest inValue = new BuildUp.JefeAreaWS.modificarJefeAreaRequest();
+            inValue.jefeArea = jefeArea;
+            BuildUp.JefeAreaWS.modificarJefeAreaResponse retVal = ((BuildUp.JefeAreaWS.JefeAreaWS)(this)).modificarJefeArea(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<BuildUp.JefeAreaWS.modificarJefeAreaResponse> BuildUp.JefeAreaWS.JefeAreaWS.modificarJefeAreaAsync(BuildUp.JefeAreaWS.modificarJefeAreaRequest request) {
+            return base.Channel.modificarJefeAreaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<BuildUp.JefeAreaWS.modificarJefeAreaResponse> modificarJefeAreaAsync(BuildUp.JefeAreaWS.jefeArea jefeArea) {
+            BuildUp.JefeAreaWS.modificarJefeAreaRequest inValue = new BuildUp.JefeAreaWS.modificarJefeAreaRequest();
+            inValue.jefeArea = jefeArea;
+            return ((BuildUp.JefeAreaWS.JefeAreaWS)(this)).modificarJefeAreaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        BuildUp.JefeAreaWS.actualizarEstadoJefeAreaResponse BuildUp.JefeAreaWS.JefeAreaWS.actualizarEstadoJefeArea(BuildUp.JefeAreaWS.actualizarEstadoJefeAreaRequest request) {
+            return base.Channel.actualizarEstadoJefeArea(request);
+        }
+        
+        public int actualizarEstadoJefeArea(int idPersona, bool activo) {
+            BuildUp.JefeAreaWS.actualizarEstadoJefeAreaRequest inValue = new BuildUp.JefeAreaWS.actualizarEstadoJefeAreaRequest();
+            inValue.idPersona = idPersona;
+            inValue.activo = activo;
+            BuildUp.JefeAreaWS.actualizarEstadoJefeAreaResponse retVal = ((BuildUp.JefeAreaWS.JefeAreaWS)(this)).actualizarEstadoJefeArea(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<BuildUp.JefeAreaWS.actualizarEstadoJefeAreaResponse> BuildUp.JefeAreaWS.JefeAreaWS.actualizarEstadoJefeAreaAsync(BuildUp.JefeAreaWS.actualizarEstadoJefeAreaRequest request) {
+            return base.Channel.actualizarEstadoJefeAreaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<BuildUp.JefeAreaWS.actualizarEstadoJefeAreaResponse> actualizarEstadoJefeAreaAsync(int idPersona, bool activo) {
+            BuildUp.JefeAreaWS.actualizarEstadoJefeAreaRequest inValue = new BuildUp.JefeAreaWS.actualizarEstadoJefeAreaRequest();
+            inValue.idPersona = idPersona;
+            inValue.activo = activo;
+            return ((BuildUp.JefeAreaWS.JefeAreaWS)(this)).actualizarEstadoJefeAreaAsync(inValue);
         }
     }
 }

@@ -160,6 +160,7 @@
             this.Controls.Add(this.dgvTiposLadrillo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "frmBuscarTipoLadrillo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Búsqueda de Tipos de Ladrillo";
             ((System.ComponentModel.ISupportInitialize)(this.dgvTiposLadrillo)).EndInit();
             this.groupBox1.ResumeLayout(false);

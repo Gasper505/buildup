@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://services.buildup.pucp.edu.pe/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="JefeAreaWS" targetNamespace="http://services.buildup.pucp.edu.pe/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://52.207.108.70:8080/BuildUpServices/JefeAreaWS?xsd=1" namespace="http://services.buildup.pucp.edu.pe/" />
+    </xsd:schema>
+  </types>
+  <message name="listarJefeArea">
+    <part name="parameters" element="tns:listarJefeArea" />
+  </message>
+  <message name="listarJefeAreaResponse">
+    <part name="parameters" element="tns:listarJefeAreaResponse" />
+  </message>
+  <message name="insertarJefeArea">
+    <part name="parameters" element="tns:insertarJefeArea" />
+  </message>
+  <message name="insertarJefeAreaResponse">
+    <part name="parameters" element="tns:insertarJefeAreaResponse" />
+  </message>
+  <message name="eliminarJefeArea">
+    <part name="parameters" element="tns:eliminarJefeArea" />
+  </message>
+  <message name="eliminarJefeAreaResponse">
+    <part name="parameters" element="tns:eliminarJefeAreaResponse" />
+  </message>
+  <message name="obtenerFotoFirmaJefeArea">
+    <part name="parameters" element="tns:obtenerFotoFirmaJefeArea" />
+  </message>
+  <message name="obtenerFotoFirmaJefeAreaResponse">
+    <part name="parameters" element="tns:obtenerFotoFirmaJefeAreaResponse" />
+  </message>
+  <message name="modificarJefeArea">
+    <part name="parameters" element="tns:modificarJefeArea" />
+  </message>
+  <message name="modificarJefeAreaResponse">
+    <part name="parameters" element="tns:modificarJefeAreaResponse" />
+  </message>
+  <message name="actualizarEstadoJefeArea">
+    <part name="parameters" element="tns:actualizarEstadoJefeArea" />
+  </message>
+  <message name="actualizarEstadoJefeAreaResponse">
+    <part name="parameters" element="tns:actualizarEstadoJefeAreaResponse" />
+  </message>
+  <portType name="JefeAreaWS">
+    <operation name="listarJefeArea">
+      <input wsam:Action="http://services.buildup.pucp.edu.pe/JefeAreaWS/listarJefeAreaRequest" message="tns:listarJefeArea" />
+      <output wsam:Action="http://services.buildup.pucp.edu.pe/JefeAreaWS/listarJefeAreaResponse" message="tns:listarJefeAreaResponse" />
+    </operation>
+    <operation name="insertarJefeArea">
+      <input wsam:Action="http://services.buildup.pucp.edu.pe/JefeAreaWS/insertarJefeAreaRequest" message="tns:insertarJefeArea" />
+      <output wsam:Action="http://services.buildup.pucp.edu.pe/JefeAreaWS/insertarJefeAreaResponse" message="tns:insertarJefeAreaResponse" />
+    </operation>
+    <operation name="eliminarJefeArea">
+      <input wsam:Action="http://services.buildup.pucp.edu.pe/JefeAreaWS/eliminarJefeAreaRequest" message="tns:eliminarJefeArea" />
+      <output wsam:Action="http://services.buildup.pucp.edu.pe/JefeAreaWS/eliminarJefeAreaResponse" message="tns:eliminarJefeAreaResponse" />
+    </operation>
+    <operation name="obtenerFotoFirmaJefeArea">
+      <input wsam:Action="http://services.buildup.pucp.edu.pe/JefeAreaWS/obtenerFotoFirmaJefeAreaRequest" message="tns:obtenerFotoFirmaJefeArea" />
+      <output wsam:Action="http://services.buildup.pucp.edu.pe/JefeAreaWS/obtenerFotoFirmaJefeAreaResponse" message="tns:obtenerFotoFirmaJefeAreaResponse" />
+    </operation>
+    <operation name="modificarJefeArea">
+      <input wsam:Action="http://services.buildup.pucp.edu.pe/JefeAreaWS/modificarJefeAreaRequest" message="tns:modificarJefeArea" />
+      <output wsam:Action="http://services.buildup.pucp.edu.pe/JefeAreaWS/modificarJefeAreaResponse" message="tns:modificarJefeAreaResponse" />
+    </operation>
+    <operation name="actualizarEstadoJefeArea">
+      <input wsam:Action="http://services.buildup.pucp.edu.pe/JefeAreaWS/actualizarEstadoJefeAreaRequest" message="tns:actualizarEstadoJefeArea" />
+      <output wsam:Action="http://services.buildup.pucp.edu.pe/JefeAreaWS/actualizarEstadoJefeAreaResponse" message="tns:actualizarEstadoJefeAreaResponse" />
+    </operation>
+  </portType>
+  <binding name="JefeAreaWSPortBinding" type="tns:JefeAreaWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="listarJefeArea">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarJefeArea">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarJefeArea">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerFotoFirmaJefeArea">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarJefeArea">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="actualizarEstadoJefeArea">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="JefeAreaWS">
+    <port name="JefeAreaWSPort" binding="tns:JefeAreaWSPortBinding">
+      <soap:address location="http://52.207.108.70:8080/BuildUpServices/JefeAreaWS" />
+    </port>
+  </service>
+</definitions>

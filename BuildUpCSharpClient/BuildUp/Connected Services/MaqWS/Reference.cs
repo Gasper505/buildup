@@ -46,14 +46,28 @@ namespace BuildUp.MaqWS {
         System.Threading.Tasks.Task<BuildUp.MaqWS.actualizarMaquinariaResponse> actualizarMaquinariaAsync(BuildUp.MaqWS.actualizarMaquinariaRequest request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/MaquinariaWS/listarMaquinariaRequest", ReplyAction="http://services.buildup.pucp.edu.pe/MaquinariaWS/listarMaquinariaResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/MaquinariaWS/modificarMaquinariaRequest", ReplyAction="http://services.buildup.pucp.edu.pe/MaquinariaWS/modificarMaquinariaResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        BuildUp.MaqWS.listarMaquinariaResponse listarMaquinaria(BuildUp.MaqWS.listarMaquinariaRequest request);
+        BuildUp.MaqWS.modificarMaquinariaResponse modificarMaquinaria(BuildUp.MaqWS.modificarMaquinariaRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/MaquinariaWS/listarMaquinariaRequest", ReplyAction="http://services.buildup.pucp.edu.pe/MaquinariaWS/listarMaquinariaResponse")]
-        System.Threading.Tasks.Task<BuildUp.MaqWS.listarMaquinariaResponse> listarMaquinariaAsync(BuildUp.MaqWS.listarMaquinariaRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/MaquinariaWS/modificarMaquinariaRequest", ReplyAction="http://services.buildup.pucp.edu.pe/MaquinariaWS/modificarMaquinariaResponse")]
+        System.Threading.Tasks.Task<BuildUp.MaqWS.modificarMaquinariaResponse> modificarMaquinariaAsync(BuildUp.MaqWS.modificarMaquinariaRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/MaquinariaWS/listarMaquinariasConParametrosRe" +
+            "quest", ReplyAction="http://services.buildup.pucp.edu.pe/MaquinariaWS/listarMaquinariasConParametrosRe" +
+            "sponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        BuildUp.MaqWS.listarMaquinariasConParametrosResponse listarMaquinariasConParametros(BuildUp.MaqWS.listarMaquinariasConParametrosRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/MaquinariaWS/listarMaquinariasConParametrosRe" +
+            "quest", ReplyAction="http://services.buildup.pucp.edu.pe/MaquinariaWS/listarMaquinariasConParametrosRe" +
+            "sponse")]
+        System.Threading.Tasks.Task<BuildUp.MaqWS.listarMaquinariasConParametrosResponse> listarMaquinariasConParametrosAsync(BuildUp.MaqWS.listarMaquinariasConParametrosRequest request);
     }
     
     /// <remarks/>
@@ -317,6 +331,10 @@ namespace BuildUp.MaqWS {
         
         private bool fechaFinContratoFieldSpecified;
         
+        private System.DateTime fechaNacimientoField;
+        
+        private bool fechaNacimientoFieldSpecified;
+        
         private byte[] fotoField;
         
         private int idPersonaField;
@@ -388,7 +406,31 @@ namespace BuildUp.MaqWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public System.DateTime fechaNacimiento {
+            get {
+                return this.fechaNacimientoField;
+            }
+            set {
+                this.fechaNacimientoField = value;
+                this.RaisePropertyChanged("fechaNacimiento");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool fechaNacimientoSpecified {
+            get {
+                return this.fechaNacimientoFieldSpecified;
+            }
+            set {
+                this.fechaNacimientoFieldSpecified = value;
+                this.RaisePropertyChanged("fechaNacimientoSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", Order=5)]
         public byte[] foto {
             get {
                 return this.fotoField;
@@ -400,7 +442,7 @@ namespace BuildUp.MaqWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
         public int idPersona {
             get {
                 return this.idPersonaField;
@@ -412,7 +454,7 @@ namespace BuildUp.MaqWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
         public string nombres {
             get {
                 return this.nombresField;
@@ -424,7 +466,7 @@ namespace BuildUp.MaqWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
         public string rol {
             get {
                 return this.rolField;
@@ -436,7 +478,7 @@ namespace BuildUp.MaqWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
         public string telefono {
             get {
                 return this.telefonoField;
@@ -736,18 +778,18 @@ namespace BuildUp.MaqWS {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int maquinaria;
+        public int idMaquinaria;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=1)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public bool state;
+        public bool nuevo;
         
         public actualizarMaquinariaRequest() {
         }
         
-        public actualizarMaquinariaRequest(int maquinaria, bool state) {
-            this.maquinaria = maquinaria;
-            this.state = state;
+        public actualizarMaquinariaRequest(int idMaquinaria, bool nuevo) {
+            this.idMaquinaria = idMaquinaria;
+            this.nuevo = nuevo;
         }
     }
     
@@ -772,27 +814,76 @@ namespace BuildUp.MaqWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarMaquinaria", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarMaquinariaRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarMaquinaria", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
+    public partial class modificarMaquinariaRequest {
         
-        public listarMaquinariaRequest() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public BuildUp.MaqWS.maquinaria maquinaria;
+        
+        public modificarMaquinariaRequest() {
+        }
+        
+        public modificarMaquinariaRequest(BuildUp.MaqWS.maquinaria maquinaria) {
+            this.maquinaria = maquinaria;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarMaquinariaResponse", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarMaquinariaResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarMaquinariaResponse", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
+    public partial class modificarMaquinariaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public modificarMaquinariaResponse() {
+        }
+        
+        public modificarMaquinariaResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarMaquinariasConParametros", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarMaquinariasConParametrosRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string nombreMaquinaria;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string nombreLineaProduccion;
+        
+        public listarMaquinariasConParametrosRequest() {
+        }
+        
+        public listarMaquinariasConParametrosRequest(string nombreMaquinaria, string nombreLineaProduccion) {
+            this.nombreMaquinaria = nombreMaquinaria;
+            this.nombreLineaProduccion = nombreLineaProduccion;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarMaquinariasConParametrosResponse", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarMaquinariasConParametrosResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public BuildUp.MaqWS.maquinaria[] @return;
         
-        public listarMaquinariaResponse() {
+        public listarMaquinariasConParametrosResponse() {
         }
         
-        public listarMaquinariaResponse(BuildUp.MaqWS.maquinaria[] @return) {
+        public listarMaquinariasConParametrosResponse(BuildUp.MaqWS.maquinaria[] @return) {
             this.@return = @return;
         }
     }
@@ -875,10 +966,10 @@ namespace BuildUp.MaqWS {
             return base.Channel.actualizarMaquinaria(request);
         }
         
-        public int actualizarMaquinaria(int maquinaria, bool state) {
+        public int actualizarMaquinaria(int idMaquinaria, bool nuevo) {
             BuildUp.MaqWS.actualizarMaquinariaRequest inValue = new BuildUp.MaqWS.actualizarMaquinariaRequest();
-            inValue.maquinaria = maquinaria;
-            inValue.state = state;
+            inValue.idMaquinaria = idMaquinaria;
+            inValue.nuevo = nuevo;
             BuildUp.MaqWS.actualizarMaquinariaResponse retVal = ((BuildUp.MaqWS.MaquinariaWS)(this)).actualizarMaquinaria(inValue);
             return retVal.@return;
         }
@@ -888,32 +979,59 @@ namespace BuildUp.MaqWS {
             return base.Channel.actualizarMaquinariaAsync(request);
         }
         
-        public System.Threading.Tasks.Task<BuildUp.MaqWS.actualizarMaquinariaResponse> actualizarMaquinariaAsync(int maquinaria, bool state) {
+        public System.Threading.Tasks.Task<BuildUp.MaqWS.actualizarMaquinariaResponse> actualizarMaquinariaAsync(int idMaquinaria, bool nuevo) {
             BuildUp.MaqWS.actualizarMaquinariaRequest inValue = new BuildUp.MaqWS.actualizarMaquinariaRequest();
-            inValue.maquinaria = maquinaria;
-            inValue.state = state;
+            inValue.idMaquinaria = idMaquinaria;
+            inValue.nuevo = nuevo;
             return ((BuildUp.MaqWS.MaquinariaWS)(this)).actualizarMaquinariaAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        BuildUp.MaqWS.listarMaquinariaResponse BuildUp.MaqWS.MaquinariaWS.listarMaquinaria(BuildUp.MaqWS.listarMaquinariaRequest request) {
-            return base.Channel.listarMaquinaria(request);
+        BuildUp.MaqWS.modificarMaquinariaResponse BuildUp.MaqWS.MaquinariaWS.modificarMaquinaria(BuildUp.MaqWS.modificarMaquinariaRequest request) {
+            return base.Channel.modificarMaquinaria(request);
         }
         
-        public BuildUp.MaqWS.maquinaria[] listarMaquinaria() {
-            BuildUp.MaqWS.listarMaquinariaRequest inValue = new BuildUp.MaqWS.listarMaquinariaRequest();
-            BuildUp.MaqWS.listarMaquinariaResponse retVal = ((BuildUp.MaqWS.MaquinariaWS)(this)).listarMaquinaria(inValue);
+        public int modificarMaquinaria(BuildUp.MaqWS.maquinaria maquinaria) {
+            BuildUp.MaqWS.modificarMaquinariaRequest inValue = new BuildUp.MaqWS.modificarMaquinariaRequest();
+            inValue.maquinaria = maquinaria;
+            BuildUp.MaqWS.modificarMaquinariaResponse retVal = ((BuildUp.MaqWS.MaquinariaWS)(this)).modificarMaquinaria(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<BuildUp.MaqWS.listarMaquinariaResponse> BuildUp.MaqWS.MaquinariaWS.listarMaquinariaAsync(BuildUp.MaqWS.listarMaquinariaRequest request) {
-            return base.Channel.listarMaquinariaAsync(request);
+        System.Threading.Tasks.Task<BuildUp.MaqWS.modificarMaquinariaResponse> BuildUp.MaqWS.MaquinariaWS.modificarMaquinariaAsync(BuildUp.MaqWS.modificarMaquinariaRequest request) {
+            return base.Channel.modificarMaquinariaAsync(request);
         }
         
-        public System.Threading.Tasks.Task<BuildUp.MaqWS.listarMaquinariaResponse> listarMaquinariaAsync() {
-            BuildUp.MaqWS.listarMaquinariaRequest inValue = new BuildUp.MaqWS.listarMaquinariaRequest();
-            return ((BuildUp.MaqWS.MaquinariaWS)(this)).listarMaquinariaAsync(inValue);
+        public System.Threading.Tasks.Task<BuildUp.MaqWS.modificarMaquinariaResponse> modificarMaquinariaAsync(BuildUp.MaqWS.maquinaria maquinaria) {
+            BuildUp.MaqWS.modificarMaquinariaRequest inValue = new BuildUp.MaqWS.modificarMaquinariaRequest();
+            inValue.maquinaria = maquinaria;
+            return ((BuildUp.MaqWS.MaquinariaWS)(this)).modificarMaquinariaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        BuildUp.MaqWS.listarMaquinariasConParametrosResponse BuildUp.MaqWS.MaquinariaWS.listarMaquinariasConParametros(BuildUp.MaqWS.listarMaquinariasConParametrosRequest request) {
+            return base.Channel.listarMaquinariasConParametros(request);
+        }
+        
+        public BuildUp.MaqWS.maquinaria[] listarMaquinariasConParametros(string nombreMaquinaria, string nombreLineaProduccion) {
+            BuildUp.MaqWS.listarMaquinariasConParametrosRequest inValue = new BuildUp.MaqWS.listarMaquinariasConParametrosRequest();
+            inValue.nombreMaquinaria = nombreMaquinaria;
+            inValue.nombreLineaProduccion = nombreLineaProduccion;
+            BuildUp.MaqWS.listarMaquinariasConParametrosResponse retVal = ((BuildUp.MaqWS.MaquinariaWS)(this)).listarMaquinariasConParametros(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<BuildUp.MaqWS.listarMaquinariasConParametrosResponse> BuildUp.MaqWS.MaquinariaWS.listarMaquinariasConParametrosAsync(BuildUp.MaqWS.listarMaquinariasConParametrosRequest request) {
+            return base.Channel.listarMaquinariasConParametrosAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<BuildUp.MaqWS.listarMaquinariasConParametrosResponse> listarMaquinariasConParametrosAsync(string nombreMaquinaria, string nombreLineaProduccion) {
+            BuildUp.MaqWS.listarMaquinariasConParametrosRequest inValue = new BuildUp.MaqWS.listarMaquinariasConParametrosRequest();
+            inValue.nombreMaquinaria = nombreMaquinaria;
+            inValue.nombreLineaProduccion = nombreLineaProduccion;
+            return ((BuildUp.MaqWS.MaquinariaWS)(this)).listarMaquinariasConParametrosAsync(inValue);
         }
     }
 }

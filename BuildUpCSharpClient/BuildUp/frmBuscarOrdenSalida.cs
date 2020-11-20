@@ -33,15 +33,10 @@ namespace BuildUp
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            //txtNombreOperario.Text = "";
-            //BindingList<OSalidaWS.ordenSalida> ordenes = new BindingList<OSalidaWS.ordenSalida>(daoOrdenSalida.listarOrdenesSalidaConParametros
-            //    (txtNombreOperario.Text, dtpFechaRegistro.Value).ToArray());
-            /*BindingList<OSalidaWS.ordenSalida> ordenes = new BindingList<OSalidaWS.ordenSalida>(daoOrdenSalida.listarOrdenesSalida().ToArray());*/
+            BindingList<OSalidaWS.ordenSalida> ordenes = new BindingList<OSalidaWS.ordenSalida>(daoOrdenSalida.listarOrdenesSalidaConParametros
+                (txtNombreOperario.Text, dtpFechaInf.Value, dtpFechaSup.Value).ToList());
 
-
-
-
-            //dgvOrdenesSalida.DataSource = ordenes;
+            dgvOrdenesSalida.DataSource = ordenes;
 
         }
 

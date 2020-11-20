@@ -23,11 +23,17 @@
   <message name="eliminarLineaProduccionResponse">
     <part name="parameters" element="tns:eliminarLineaProduccionResponse" />
   </message>
-  <message name="listarLineaProduccion">
-    <part name="parameters" element="tns:listarLineaProduccion" />
+  <message name="listarPorNombreLineaProduccion">
+    <part name="parameters" element="tns:listarPorNombreLineaProduccion" />
   </message>
-  <message name="listarLineaProduccionResponse">
-    <part name="parameters" element="tns:listarLineaProduccionResponse" />
+  <message name="listarPorNombreLineaProduccionResponse">
+    <part name="parameters" element="tns:listarPorNombreLineaProduccionResponse" />
+  </message>
+  <message name="modificarLineaProduccion">
+    <part name="parameters" element="tns:modificarLineaProduccion" />
+  </message>
+  <message name="modificarLineaProduccionResponse">
+    <part name="parameters" element="tns:modificarLineaProduccionResponse" />
   </message>
   <portType name="LineaProduccionWS">
     <operation name="actualizarLineaProduccion">
@@ -42,9 +48,13 @@
       <input wsam:Action="http://services.buildup.pucp.edu.pe/LineaProduccionWS/eliminarLineaProduccionRequest" message="tns:eliminarLineaProduccion" />
       <output wsam:Action="http://services.buildup.pucp.edu.pe/LineaProduccionWS/eliminarLineaProduccionResponse" message="tns:eliminarLineaProduccionResponse" />
     </operation>
-    <operation name="listarLineaProduccion">
-      <input wsam:Action="http://services.buildup.pucp.edu.pe/LineaProduccionWS/listarLineaProduccionRequest" message="tns:listarLineaProduccion" />
-      <output wsam:Action="http://services.buildup.pucp.edu.pe/LineaProduccionWS/listarLineaProduccionResponse" message="tns:listarLineaProduccionResponse" />
+    <operation name="listarPorNombreLineaProduccion">
+      <input wsam:Action="http://services.buildup.pucp.edu.pe/LineaProduccionWS/listarPorNombreLineaProduccionRequest" message="tns:listarPorNombreLineaProduccion" />
+      <output wsam:Action="http://services.buildup.pucp.edu.pe/LineaProduccionWS/listarPorNombreLineaProduccionResponse" message="tns:listarPorNombreLineaProduccionResponse" />
+    </operation>
+    <operation name="modificarLineaProduccion">
+      <input wsam:Action="http://services.buildup.pucp.edu.pe/LineaProduccionWS/modificarLineaProduccionRequest" message="tns:modificarLineaProduccion" />
+      <output wsam:Action="http://services.buildup.pucp.edu.pe/LineaProduccionWS/modificarLineaProduccionResponse" message="tns:modificarLineaProduccionResponse" />
     </operation>
   </portType>
   <binding name="LineaProduccionWSPortBinding" type="tns:LineaProduccionWS">
@@ -76,7 +86,16 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarLineaProduccion">
+    <operation name="listarPorNombreLineaProduccion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarLineaProduccion">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

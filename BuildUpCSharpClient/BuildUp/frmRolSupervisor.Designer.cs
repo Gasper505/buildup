@@ -67,19 +67,19 @@
             // lblNombres
             // 
             this.lblNombres.AutoSize = true;
-            this.lblNombres.Font = new System.Drawing.Font("Trebuchet MS", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombres.Location = new System.Drawing.Point(202, 26);
+            this.lblNombres.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombres.Location = new System.Drawing.Point(239, 37);
             this.lblNombres.Name = "lblNombres";
-            this.lblNombres.Size = new System.Drawing.Size(150, 29);
+            this.lblNombres.Size = new System.Drawing.Size(161, 32);
             this.lblNombres.TabIndex = 28;
             this.lblNombres.Text = "MissingName";
             // 
             // btnMerma
             // 
-            this.btnMerma.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMerma.Location = new System.Drawing.Point(314, 305);
+            this.btnMerma.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMerma.Location = new System.Drawing.Point(276, 310);
             this.btnMerma.Name = "btnMerma";
-            this.btnMerma.Size = new System.Drawing.Size(113, 39);
+            this.btnMerma.Size = new System.Drawing.Size(113, 49);
             this.btnMerma.TabIndex = 26;
             this.btnMerma.Text = "Mermas";
             this.btnMerma.UseVisualStyleBackColor = true;
@@ -87,10 +87,10 @@
             // 
             // btnIncidencia
             // 
-            this.btnIncidencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIncidencia.Location = new System.Drawing.Point(92, 305);
+            this.btnIncidencia.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIncidencia.Location = new System.Drawing.Point(80, 310);
             this.btnIncidencia.Name = "btnIncidencia";
-            this.btnIncidencia.Size = new System.Drawing.Size(113, 39);
+            this.btnIncidencia.Size = new System.Drawing.Size(113, 49);
             this.btnIncidencia.TabIndex = 24;
             this.btnIncidencia.Text = "Incidencias de Maquinarias";
             this.btnIncidencia.UseVisualStyleBackColor = true;
@@ -101,7 +101,7 @@
             this.pictureBox3.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox3.Image = global::BuildUp.Properties.Resources.vector_document_icon1;
-            this.pictureBox3.Location = new System.Drawing.Point(315, 164);
+            this.pictureBox3.Location = new System.Drawing.Point(277, 169);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(112, 122);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -113,7 +113,7 @@
             this.pictureBox2.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(92, 164);
+            this.pictureBox2.Location = new System.Drawing.Point(80, 169);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(112, 122);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -122,10 +122,10 @@
             // 
             // btnLogout
             // 
-            this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogout.Location = new System.Drawing.Point(694, 403);
+            this.btnLogout.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.Location = new System.Drawing.Point(639, 395);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(119, 27);
+            this.btnLogout.Size = new System.Drawing.Size(119, 34);
             this.btnLogout.TabIndex = 11;
             this.btnLogout.Text = "Cerrar Sesión ";
             this.btnLogout.UseVisualStyleBackColor = true;
@@ -135,21 +135,21 @@
             // 
             this.pbFoto.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.pbFoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbFoto.Location = new System.Drawing.Point(677, 16);
+            this.pbFoto.Location = new System.Drawing.Point(652, 37);
             this.pbFoto.Name = "pbFoto";
-            this.pbFoto.Size = new System.Drawing.Size(136, 140);
+            this.pbFoto.Size = new System.Drawing.Size(106, 122);
             this.pbFoto.TabIndex = 19;
             this.pbFoto.TabStop = false;
             // 
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Trebuchet MS", 18F);
+            this.lblTitulo.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblTitulo.Location = new System.Drawing.Point(38, 26);
+            this.lblTitulo.Location = new System.Drawing.Point(75, 37);
             this.lblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(166, 29);
+            this.lblTitulo.Size = new System.Drawing.Size(165, 32);
             this.lblTitulo.TabIndex = 7;
             this.lblTitulo.Text = "Bienvenido/a:";
             // 
@@ -157,7 +157,7 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.Ivory;
             this.panel3.Controls.Add(this.label1);
-            this.panel3.Location = new System.Drawing.Point(43, 70);
+            this.panel3.Location = new System.Drawing.Point(80, 83);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(141, 40);
             this.panel3.TabIndex = 10;
@@ -178,7 +178,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DimGray;
+            this.BackColor = System.Drawing.Color.DarkSlateGray;
             this.ClientSize = new System.Drawing.Size(836, 523);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

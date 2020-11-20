@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://services.buildup.pucp.edu.pe/" targetNamespace="http://services.buildup.pucp.edu.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:element name="actualizarInsumo" type="tns:actualizarInsumo" />
-  <xs:element name="actualizarInsumoResponse" type="tns:actualizarInsumoResponse" />
   <xs:element name="eliminarInsumo" type="tns:eliminarInsumo" />
   <xs:element name="eliminarInsumoResponse" type="tns:eliminarInsumoResponse" />
   <xs:element name="insertarInsumo" type="tns:insertarInsumo" />
   <xs:element name="insertarInsumoResponse" type="tns:insertarInsumoResponse" />
   <xs:element name="listarInsumo" type="tns:listarInsumo" />
   <xs:element name="listarInsumoResponse" type="tns:listarInsumoResponse" />
-  <xs:complexType name="actualizarInsumo">
+  <xs:element name="listarPorNombreInsumo" type="tns:listarPorNombreInsumo" />
+  <xs:element name="listarPorNombreInsumoResponse" type="tns:listarPorNombreInsumoResponse" />
+  <xs:element name="modificarInsumo" type="tns:modificarInsumo" />
+  <xs:element name="modificarInsumoResponse" type="tns:modificarInsumoResponse" />
+  <xs:complexType name="modificarInsumo">
     <xs:sequence>
       <xs:element minOccurs="0" name="insumo" type="tns:insumo" />
     </xs:sequence>
@@ -21,7 +23,7 @@
       <xs:element minOccurs="0" name="unidadMedida" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="actualizarInsumoResponse">
+  <xs:complexType name="modificarInsumoResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
@@ -52,6 +54,16 @@
   <xs:complexType name="eliminarInsumoResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPorNombreInsumo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPorNombreInsumoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:insumo" />
     </xs:sequence>
   </xs:complexType>
 </xs:schema>

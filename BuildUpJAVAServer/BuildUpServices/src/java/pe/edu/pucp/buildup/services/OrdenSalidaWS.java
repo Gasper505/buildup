@@ -64,10 +64,10 @@ public class OrdenSalidaWS {
     }
     
     @WebMethod(operationName = "listarOrdenesSalidaConParametros")
-    public ArrayList<OrdenSalida> listarOrdenesSalidaConParametros(@WebParam(name = "nombreOperario") String nombreOperario, @WebParam(name = "fechaRegistro") Date fechaRegistro) {
+    public ArrayList<OrdenSalida> listarOrdenesSalidaConParametros(@WebParam(name = "nombreOperario") String nombreOperario, @WebParam(name = "fecha_inf") Date fecha_inf, @WebParam(name = "fecha_sup") Date fecha_sup) {
         ArrayList<OrdenSalida> ordenes = new ArrayList<>();
         try{
-            ordenes = daoOrdenSalida.listarOrdenesSalidaConParametros(nombreOperario, new java.sql.Date(fechaRegistro.getTime()));
+            ordenes = daoOrdenSalida.listarOrdenesSalidaConParametros(nombreOperario, new java.sql.Date(fecha_inf.getTime()), new java.sql.Date(fecha_sup.getTime()));
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }

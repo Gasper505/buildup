@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://services.buildup.pucp.edu.pe/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="IncidenteMaquinariaWS" targetNamespace="http://services.buildup.pucp.edu.pe/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://52.207.108.70:8080/BuildUpServices/IncidenteMaquinariaWS?xsd=1" namespace="http://services.buildup.pucp.edu.pe/" />
+    </xsd:schema>
+  </types>
+  <message name="insertarIncidenteMaquinaria">
+    <part name="parameters" element="tns:insertarIncidenteMaquinaria" />
+  </message>
+  <message name="insertarIncidenteMaquinariaResponse">
+    <part name="parameters" element="tns:insertarIncidenteMaquinariaResponse" />
+  </message>
+  <message name="listarIncidenteMaquinaria">
+    <part name="parameters" element="tns:listarIncidenteMaquinaria" />
+  </message>
+  <message name="listarIncidenteMaquinariaResponse">
+    <part name="parameters" element="tns:listarIncidenteMaquinariaResponse" />
+  </message>
+  <message name="eliminarIncidenteMaquinaria">
+    <part name="parameters" element="tns:eliminarIncidenteMaquinaria" />
+  </message>
+  <message name="eliminarIncidenteMaquinariaResponse">
+    <part name="parameters" element="tns:eliminarIncidenteMaquinariaResponse" />
+  </message>
+  <message name="modificarPorSupervisorIncidenteMaquinaria">
+    <part name="parameters" element="tns:modificarPorSupervisorIncidenteMaquinaria" />
+  </message>
+  <message name="modificarPorSupervisorIncidenteMaquinariaResponse">
+    <part name="parameters" element="tns:modificarPorSupervisorIncidenteMaquinariaResponse" />
+  </message>
+  <message name="insertarRespuestaIncidenteMaquinaria">
+    <part name="parameters" element="tns:insertarRespuestaIncidenteMaquinaria" />
+  </message>
+  <message name="insertarRespuestaIncidenteMaquinariaResponse">
+    <part name="parameters" element="tns:insertarRespuestaIncidenteMaquinariaResponse" />
+  </message>
+  <message name="obtenerIngenieroIncidenteMaquinaria">
+    <part name="parameters" element="tns:obtenerIngenieroIncidenteMaquinaria" />
+  </message>
+  <message name="obtenerIngenieroIncidenteMaquinariaResponse">
+    <part name="parameters" element="tns:obtenerIngenieroIncidenteMaquinariaResponse" />
+  </message>
+  <message name="modificarPorIngenieroIncidenteMaquinaria">
+    <part name="parameters" element="tns:modificarPorIngenieroIncidenteMaquinaria" />
+  </message>
+  <message name="modificarPorIngenieroIncidenteMaquinariaResponse">
+    <part name="parameters" element="tns:modificarPorIngenieroIncidenteMaquinariaResponse" />
+  </message>
+  <message name="listarPorRangoFechaIncidenteMaquinaria">
+    <part name="parameters" element="tns:listarPorRangoFechaIncidenteMaquinaria" />
+  </message>
+  <message name="listarPorRangoFechaIncidenteMaquinariaResponse">
+    <part name="parameters" element="tns:listarPorRangoFechaIncidenteMaquinariaResponse" />
+  </message>
+  <message name="insertarProblemaIncidenteMaquinaria">
+    <part name="parameters" element="tns:insertarProblemaIncidenteMaquinaria" />
+  </message>
+  <message name="insertarProblemaIncidenteMaquinariaResponse">
+    <part name="parameters" element="tns:insertarProblemaIncidenteMaquinariaResponse" />
+  </message>
+  <message name="obtenerRespuestaIncidenteMaquinaria">
+    <part name="parameters" element="tns:obtenerRespuestaIncidenteMaquinaria" />
+  </message>
+  <message name="obtenerRespuestaIncidenteMaquinariaResponse">
+    <part name="parameters" element="tns:obtenerRespuestaIncidenteMaquinariaResponse" />
+  </message>
+  <portType name="IncidenteMaquinariaWS">
+    <operation name="insertarIncidenteMaquinaria">
+      <input wsam:Action="http://services.buildup.pucp.edu.pe/IncidenteMaquinariaWS/insertarIncidenteMaquinariaRequest" message="tns:insertarIncidenteMaquinaria" />
+      <output wsam:Action="http://services.buildup.pucp.edu.pe/IncidenteMaquinariaWS/insertarIncidenteMaquinariaResponse" message="tns:insertarIncidenteMaquinariaResponse" />
+    </operation>
+    <operation name="listarIncidenteMaquinaria">
+      <input wsam:Action="http://services.buildup.pucp.edu.pe/IncidenteMaquinariaWS/listarIncidenteMaquinariaRequest" message="tns:listarIncidenteMaquinaria" />
+      <output wsam:Action="http://services.buildup.pucp.edu.pe/IncidenteMaquinariaWS/listarIncidenteMaquinariaResponse" message="tns:listarIncidenteMaquinariaResponse" />
+    </operation>
+    <operation name="eliminarIncidenteMaquinaria">
+      <input wsam:Action="http://services.buildup.pucp.edu.pe/IncidenteMaquinariaWS/eliminarIncidenteMaquinariaRequest" message="tns:eliminarIncidenteMaquinaria" />
+      <output wsam:Action="http://services.buildup.pucp.edu.pe/IncidenteMaquinariaWS/eliminarIncidenteMaquinariaResponse" message="tns:eliminarIncidenteMaquinariaResponse" />
+    </operation>
+    <operation name="modificarPorSupervisorIncidenteMaquinaria">
+      <input wsam:Action="http://services.buildup.pucp.edu.pe/IncidenteMaquinariaWS/modificarPorSupervisorIncidenteMaquinariaRequest" message="tns:modificarPorSupervisorIncidenteMaquinaria" />
+      <output wsam:Action="http://services.buildup.pucp.edu.pe/IncidenteMaquinariaWS/modificarPorSupervisorIncidenteMaquinariaResponse" message="tns:modificarPorSupervisorIncidenteMaquinariaResponse" />
+    </operation>
+    <operation name="insertarRespuestaIncidenteMaquinaria">
+      <input wsam:Action="http://services.buildup.pucp.edu.pe/IncidenteMaquinariaWS/insertarRespuestaIncidenteMaquinariaRequest" message="tns:insertarRespuestaIncidenteMaquinaria" />
+      <output wsam:Action="http://services.buildup.pucp.edu.pe/IncidenteMaquinariaWS/insertarRespuestaIncidenteMaquinariaResponse" message="tns:insertarRespuestaIncidenteMaquinariaResponse" />
+    </operation>
+    <operation name="obtenerIngenieroIncidenteMaquinaria">
+      <input wsam:Action="http://services.buildup.pucp.edu.pe/IncidenteMaquinariaWS/obtenerIngenieroIncidenteMaquinariaRequest" message="tns:obtenerIngenieroIncidenteMaquinaria" />
+      <output wsam:Action="http://services.buildup.pucp.edu.pe/IncidenteMaquinariaWS/obtenerIngenieroIncidenteMaquinariaResponse" message="tns:obtenerIngenieroIncidenteMaquinariaResponse" />
+    </operation>
+    <operation name="modificarPorIngenieroIncidenteMaquinaria">
+      <input wsam:Action="http://services.buildup.pucp.edu.pe/IncidenteMaquinariaWS/modificarPorIngenieroIncidenteMaquinariaRequest" message="tns:modificarPorIngenieroIncidenteMaquinaria" />
+      <output wsam:Action="http://services.buildup.pucp.edu.pe/IncidenteMaquinariaWS/modificarPorIngenieroIncidenteMaquinariaResponse" message="tns:modificarPorIngenieroIncidenteMaquinariaResponse" />
+    </operation>
+    <operation name="listarPorRangoFechaIncidenteMaquinaria">
+      <input wsam:Action="http://services.buildup.pucp.edu.pe/IncidenteMaquinariaWS/listarPorRangoFechaIncidenteMaquinariaRequest" message="tns:listarPorRangoFechaIncidenteMaquinaria" />
+      <output wsam:Action="http://services.buildup.pucp.edu.pe/IncidenteMaquinariaWS/listarPorRangoFechaIncidenteMaquinariaResponse" message="tns:listarPorRangoFechaIncidenteMaquinariaResponse" />
+    </operation>
+    <operation name="insertarProblemaIncidenteMaquinaria">
+      <input wsam:Action="http://services.buildup.pucp.edu.pe/IncidenteMaquinariaWS/insertarProblemaIncidenteMaquinariaRequest" message="tns:insertarProblemaIncidenteMaquinaria" />
+      <output wsam:Action="http://services.buildup.pucp.edu.pe/IncidenteMaquinariaWS/insertarProblemaIncidenteMaquinariaResponse" message="tns:insertarProblemaIncidenteMaquinariaResponse" />
+    </operation>
+    <operation name="obtenerRespuestaIncidenteMaquinaria">
+      <input wsam:Action="http://services.buildup.pucp.edu.pe/IncidenteMaquinariaWS/obtenerRespuestaIncidenteMaquinariaRequest" message="tns:obtenerRespuestaIncidenteMaquinaria" />
+      <output wsam:Action="http://services.buildup.pucp.edu.pe/IncidenteMaquinariaWS/obtenerRespuestaIncidenteMaquinariaResponse" message="tns:obtenerRespuestaIncidenteMaquinariaResponse" />
+    </operation>
+  </portType>
+  <binding name="IncidenteMaquinariaWSPortBinding" type="tns:IncidenteMaquinariaWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="insertarIncidenteMaquinaria">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarIncidenteMaquinaria">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarIncidenteMaquinaria">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarPorSupervisorIncidenteMaquinaria">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarRespuestaIncidenteMaquinaria">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerIngenieroIncidenteMaquinaria">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarPorIngenieroIncidenteMaquinaria">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarPorRangoFechaIncidenteMaquinaria">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarProblemaIncidenteMaquinaria">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerRespuestaIncidenteMaquinaria">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="IncidenteMaquinariaWS">
+    <port name="IncidenteMaquinariaWSPort" binding="tns:IncidenteMaquinariaWSPortBinding">
+      <soap:address location="http://52.207.108.70:8080/BuildUpServices/IncidenteMaquinariaWS" />
+    </port>
+  </service>
+</definitions>

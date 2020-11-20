@@ -17,17 +17,29 @@
   <message name="insertarOrdenInsumosResponse">
     <part name="parameters" element="tns:insertarOrdenInsumosResponse" />
   </message>
-  <message name="actualizarOrdenInsumos">
-    <part name="parameters" element="tns:actualizarOrdenInsumos" />
-  </message>
-  <message name="actualizarOrdenInsumosResponse">
-    <part name="parameters" element="tns:actualizarOrdenInsumosResponse" />
-  </message>
   <message name="eliminarOrdenInsumos">
     <part name="parameters" element="tns:eliminarOrdenInsumos" />
   </message>
   <message name="eliminarOrdenInsumosResponse">
     <part name="parameters" element="tns:eliminarOrdenInsumosResponse" />
+  </message>
+  <message name="listarOrdenInsumosPorRangoFecha">
+    <part name="parameters" element="tns:listarOrdenInsumosPorRangoFecha" />
+  </message>
+  <message name="listarOrdenInsumosPorRangoFechaResponse">
+    <part name="parameters" element="tns:listarOrdenInsumosPorRangoFechaResponse" />
+  </message>
+  <message name="modificarOrdenInsumos">
+    <part name="parameters" element="tns:modificarOrdenInsumos" />
+  </message>
+  <message name="modificarOrdenInsumosResponse">
+    <part name="parameters" element="tns:modificarOrdenInsumosResponse" />
+  </message>
+  <message name="aceptarOrdenInsumos">
+    <part name="parameters" element="tns:aceptarOrdenInsumos" />
+  </message>
+  <message name="aceptarOrdenInsumosResponse">
+    <part name="parameters" element="tns:aceptarOrdenInsumosResponse" />
   </message>
   <portType name="OrdenInsumosWS">
     <operation name="listarOrdenInsumos">
@@ -38,13 +50,21 @@
       <input wsam:Action="http://services.buildup.pucp.edu.pe/OrdenInsumosWS/insertarOrdenInsumosRequest" message="tns:insertarOrdenInsumos" />
       <output wsam:Action="http://services.buildup.pucp.edu.pe/OrdenInsumosWS/insertarOrdenInsumosResponse" message="tns:insertarOrdenInsumosResponse" />
     </operation>
-    <operation name="actualizarOrdenInsumos">
-      <input wsam:Action="http://services.buildup.pucp.edu.pe/OrdenInsumosWS/actualizarOrdenInsumosRequest" message="tns:actualizarOrdenInsumos" />
-      <output wsam:Action="http://services.buildup.pucp.edu.pe/OrdenInsumosWS/actualizarOrdenInsumosResponse" message="tns:actualizarOrdenInsumosResponse" />
-    </operation>
     <operation name="eliminarOrdenInsumos">
       <input wsam:Action="http://services.buildup.pucp.edu.pe/OrdenInsumosWS/eliminarOrdenInsumosRequest" message="tns:eliminarOrdenInsumos" />
       <output wsam:Action="http://services.buildup.pucp.edu.pe/OrdenInsumosWS/eliminarOrdenInsumosResponse" message="tns:eliminarOrdenInsumosResponse" />
+    </operation>
+    <operation name="listarOrdenInsumosPorRangoFecha">
+      <input wsam:Action="http://services.buildup.pucp.edu.pe/OrdenInsumosWS/listarOrdenInsumosPorRangoFechaRequest" message="tns:listarOrdenInsumosPorRangoFecha" />
+      <output wsam:Action="http://services.buildup.pucp.edu.pe/OrdenInsumosWS/listarOrdenInsumosPorRangoFechaResponse" message="tns:listarOrdenInsumosPorRangoFechaResponse" />
+    </operation>
+    <operation name="modificarOrdenInsumos">
+      <input wsam:Action="http://services.buildup.pucp.edu.pe/OrdenInsumosWS/modificarOrdenInsumosRequest" message="tns:modificarOrdenInsumos" />
+      <output wsam:Action="http://services.buildup.pucp.edu.pe/OrdenInsumosWS/modificarOrdenInsumosResponse" message="tns:modificarOrdenInsumosResponse" />
+    </operation>
+    <operation name="aceptarOrdenInsumos">
+      <input wsam:Action="http://services.buildup.pucp.edu.pe/OrdenInsumosWS/aceptarOrdenInsumosRequest" message="tns:aceptarOrdenInsumos" />
+      <output wsam:Action="http://services.buildup.pucp.edu.pe/OrdenInsumosWS/aceptarOrdenInsumosResponse" message="tns:aceptarOrdenInsumosResponse" />
     </operation>
   </portType>
   <binding name="OrdenInsumosWSPortBinding" type="tns:OrdenInsumosWS">
@@ -67,7 +87,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="actualizarOrdenInsumos">
+    <operation name="eliminarOrdenInsumos">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -76,7 +96,25 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="eliminarOrdenInsumos">
+    <operation name="listarOrdenInsumosPorRangoFecha">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarOrdenInsumos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="aceptarOrdenInsumos">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

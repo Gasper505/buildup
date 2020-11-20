@@ -30,7 +30,7 @@ namespace BuildUp
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            BindingList<MermaWS.merma> merms = new BindingList<MermaWS.merma>(daoMerma.listarMerma().ToArray());
+            BindingList<MermaWS.merma> merms = new BindingList<MermaWS.merma>(daoMerma.listarPorTipoMerma(txtTipoMerma.Text).ToArray());
             dgvMermas.DataSource = merms;
         }
 

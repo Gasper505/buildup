@@ -174,6 +174,7 @@
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "frmBuscarIncidencia";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Búsqueda de Incidencias";
             this.gbBusqueda.ResumeLayout(false);
             this.gbBusqueda.PerformLayout();

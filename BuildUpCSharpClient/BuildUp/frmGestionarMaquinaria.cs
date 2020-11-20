@@ -150,10 +150,11 @@ namespace BuildUp
             {
                 maquinaria = formBuscarMaquinaria.MaquinariaSeleccionada;
                 txtIdMaquinaria.Text = maquinaria.idMaquinaria.ToString();
-                txtIdLinea.Text = maquinaria.lineaProduccion.idLineaProduccion.ToString();
-                txtIdProveedor.Text = maquinaria.proveedor.idProveedor.ToString();
                 txtNombre.Text = maquinaria.nombre;
+                dtpFechaGarantia.Value = maquinaria.garantiaFin;
+                txtIdLinea.Text = maquinaria.lineaProduccion.idLineaProduccion.ToString();
                 txtNombreLinea.Text = maquinaria.lineaProduccion.nombre;
+                txtIdProveedor.Text = maquinaria.proveedor.idProveedor.ToString();
                 txtRepresentante.Text = maquinaria.proveedor.representante;
                 txtRazonSocial.Text = maquinaria.proveedor.razonSocial;
                 txtCorreoRep.Text = maquinaria.proveedor.correo;
@@ -197,7 +198,7 @@ namespace BuildUp
                 maquinaria.garantiaFin = dtpFechaGarantia.Value;
 
                 int result = 0;
-                //result = daoMaquinaria.actualizarMaquinaria(maquinaria);
+                result = daoMaquinaria.modificarMaquinaria(maquinaria);
                 if (result != 0)
                 {
                     MessageBox.Show("La actualización ha sido exitosa", "Mensaje de Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);

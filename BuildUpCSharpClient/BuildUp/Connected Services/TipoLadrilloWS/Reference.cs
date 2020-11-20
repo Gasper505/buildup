@@ -32,6 +32,15 @@ namespace BuildUp.TipoLadrilloWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/TipoLadrilloWS/listarTiposLadrilloRequest", ReplyAction="http://services.buildup.pucp.edu.pe/TipoLadrilloWS/listarTiposLadrilloResponse")]
         System.Threading.Tasks.Task<BuildUp.TipoLadrilloWS.listarTiposLadrilloResponse> listarTiposLadrilloAsync(BuildUp.TipoLadrilloWS.listarTiposLadrilloRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/TipoLadrilloWS/eliminarTipoLadrilloRequest", ReplyAction="http://services.buildup.pucp.edu.pe/TipoLadrilloWS/eliminarTipoLadrilloResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        BuildUp.TipoLadrilloWS.eliminarTipoLadrilloResponse eliminarTipoLadrillo(BuildUp.TipoLadrilloWS.eliminarTipoLadrilloRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/TipoLadrilloWS/eliminarTipoLadrilloRequest", ReplyAction="http://services.buildup.pucp.edu.pe/TipoLadrilloWS/eliminarTipoLadrilloResponse")]
+        System.Threading.Tasks.Task<BuildUp.TipoLadrilloWS.eliminarTipoLadrilloResponse> eliminarTipoLadrilloAsync(BuildUp.TipoLadrilloWS.eliminarTipoLadrilloRequest request);
     }
     
     /// <remarks/>
@@ -186,6 +195,42 @@ namespace BuildUp.TipoLadrilloWS {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarTipoLadrillo", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
+    public partial class eliminarTipoLadrilloRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idTipoLadrillo;
+        
+        public eliminarTipoLadrilloRequest() {
+        }
+        
+        public eliminarTipoLadrilloRequest(int idTipoLadrillo) {
+            this.idTipoLadrillo = idTipoLadrillo;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarTipoLadrilloResponse", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
+    public partial class eliminarTipoLadrilloResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public eliminarTipoLadrilloResponse() {
+        }
+        
+        public eliminarTipoLadrilloResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface TipoLadrilloWSChannel : BuildUp.TipoLadrilloWS.TipoLadrilloWS, System.ServiceModel.IClientChannel {
     }
@@ -255,6 +300,29 @@ namespace BuildUp.TipoLadrilloWS {
         public System.Threading.Tasks.Task<BuildUp.TipoLadrilloWS.listarTiposLadrilloResponse> listarTiposLadrilloAsync() {
             BuildUp.TipoLadrilloWS.listarTiposLadrilloRequest inValue = new BuildUp.TipoLadrilloWS.listarTiposLadrilloRequest();
             return ((BuildUp.TipoLadrilloWS.TipoLadrilloWS)(this)).listarTiposLadrilloAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        BuildUp.TipoLadrilloWS.eliminarTipoLadrilloResponse BuildUp.TipoLadrilloWS.TipoLadrilloWS.eliminarTipoLadrillo(BuildUp.TipoLadrilloWS.eliminarTipoLadrilloRequest request) {
+            return base.Channel.eliminarTipoLadrillo(request);
+        }
+        
+        public int eliminarTipoLadrillo(int idTipoLadrillo) {
+            BuildUp.TipoLadrilloWS.eliminarTipoLadrilloRequest inValue = new BuildUp.TipoLadrilloWS.eliminarTipoLadrilloRequest();
+            inValue.idTipoLadrillo = idTipoLadrillo;
+            BuildUp.TipoLadrilloWS.eliminarTipoLadrilloResponse retVal = ((BuildUp.TipoLadrilloWS.TipoLadrilloWS)(this)).eliminarTipoLadrillo(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<BuildUp.TipoLadrilloWS.eliminarTipoLadrilloResponse> BuildUp.TipoLadrilloWS.TipoLadrilloWS.eliminarTipoLadrilloAsync(BuildUp.TipoLadrilloWS.eliminarTipoLadrilloRequest request) {
+            return base.Channel.eliminarTipoLadrilloAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<BuildUp.TipoLadrilloWS.eliminarTipoLadrilloResponse> eliminarTipoLadrilloAsync(int idTipoLadrillo) {
+            BuildUp.TipoLadrilloWS.eliminarTipoLadrilloRequest inValue = new BuildUp.TipoLadrilloWS.eliminarTipoLadrilloRequest();
+            inValue.idTipoLadrillo = idTipoLadrillo;
+            return ((BuildUp.TipoLadrilloWS.TipoLadrilloWS)(this)).eliminarTipoLadrilloAsync(inValue);
         }
     }
 }

@@ -1,13 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://services.buildup.pucp.edu.pe/" targetNamespace="http://services.buildup.pucp.edu.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:element name="actualizarIncidenteMaquinaria" type="tns:actualizarIncidenteMaquinaria" />
-  <xs:element name="actualizarIncidenteMaquinariaResponse" type="tns:actualizarIncidenteMaquinariaResponse" />
   <xs:element name="eliminarIncidenteMaquinaria" type="tns:eliminarIncidenteMaquinaria" />
   <xs:element name="eliminarIncidenteMaquinariaResponse" type="tns:eliminarIncidenteMaquinariaResponse" />
   <xs:element name="insertarIncidenteMaquinaria" type="tns:insertarIncidenteMaquinaria" />
   <xs:element name="insertarIncidenteMaquinariaResponse" type="tns:insertarIncidenteMaquinariaResponse" />
+  <xs:element name="insertarProblemaIncidenteMaquinaria" type="tns:insertarProblemaIncidenteMaquinaria" />
+  <xs:element name="insertarProblemaIncidenteMaquinariaResponse" type="tns:insertarProblemaIncidenteMaquinariaResponse" />
+  <xs:element name="insertarRespuestaIncidenteMaquinaria" type="tns:insertarRespuestaIncidenteMaquinaria" />
+  <xs:element name="insertarRespuestaIncidenteMaquinariaResponse" type="tns:insertarRespuestaIncidenteMaquinariaResponse" />
   <xs:element name="listarIncidenteMaquinaria" type="tns:listarIncidenteMaquinaria" />
   <xs:element name="listarIncidenteMaquinariaResponse" type="tns:listarIncidenteMaquinariaResponse" />
+  <xs:element name="listarPorRangoFechaIncidenteMaquinaria" type="tns:listarPorRangoFechaIncidenteMaquinaria" />
+  <xs:element name="listarPorRangoFechaIncidenteMaquinariaResponse" type="tns:listarPorRangoFechaIncidenteMaquinariaResponse" />
+  <xs:element name="modificarPorIngenieroIncidenteMaquinaria" type="tns:modificarPorIngenieroIncidenteMaquinaria" />
+  <xs:element name="modificarPorIngenieroIncidenteMaquinariaResponse" type="tns:modificarPorIngenieroIncidenteMaquinariaResponse" />
+  <xs:element name="modificarPorSupervisorIncidenteMaquinaria" type="tns:modificarPorSupervisorIncidenteMaquinaria" />
+  <xs:element name="modificarPorSupervisorIncidenteMaquinariaResponse" type="tns:modificarPorSupervisorIncidenteMaquinariaResponse" />
+  <xs:element name="obtenerIngenieroIncidenteMaquinaria" type="tns:obtenerIngenieroIncidenteMaquinaria" />
+  <xs:element name="obtenerIngenieroIncidenteMaquinariaResponse" type="tns:obtenerIngenieroIncidenteMaquinariaResponse" />
+  <xs:element name="obtenerRespuestaIncidenteMaquinaria" type="tns:obtenerRespuestaIncidenteMaquinaria" />
+  <xs:element name="obtenerRespuestaIncidenteMaquinariaResponse" type="tns:obtenerRespuestaIncidenteMaquinariaResponse" />
   <xs:complexType name="eliminarIncidenteMaquinaria">
     <xs:sequence>
       <xs:element name="idIncidenteMaquinaria" type="xs:int" />
@@ -18,15 +30,22 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="actualizarIncidenteMaquinaria">
+  <xs:complexType name="listarPorRangoFechaIncidenteMaquinaria">
     <xs:sequence>
-      <xs:element minOccurs="0" name="incidenteMaquinaria" type="tns:incidenteMaquinaria" />
+      <xs:element minOccurs="0" name="fechaIncio" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaFin" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPorRangoFechaIncidenteMaquinariaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:incidenteMaquinaria" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="incidenteMaquinaria">
     <xs:sequence>
       <xs:element name="activo" type="xs:boolean" />
       <xs:element minOccurs="0" name="detalle" type="xs:string" />
+      <xs:element name="estado" type="xs:boolean" />
       <xs:element minOccurs="0" name="fechaAtencion" type="xs:dateTime" />
       <xs:element minOccurs="0" name="fechaIncidente" type="xs:dateTime" />
       <xs:element name="idIncidente" type="xs:int" />
@@ -52,6 +71,7 @@
       <xs:element minOccurs="0" name="apellidos" type="xs:string" />
       <xs:element minOccurs="0" name="correo" type="xs:string" />
       <xs:element minOccurs="0" name="fechaFinContrato" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaNacimiento" type="xs:dateTime" />
       <xs:element minOccurs="0" name="foto" type="xs:base64Binary" />
       <xs:element name="idPersona" type="xs:int" />
       <xs:element minOccurs="0" name="nombres" type="xs:string" />
@@ -130,11 +150,6 @@
       <xs:element minOccurs="0" name="tipo" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="actualizarIncidenteMaquinariaResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="listarIncidenteMaquinaria">
     <xs:sequence />
   </xs:complexType>
@@ -143,12 +158,72 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:incidenteMaquinaria" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="insertarProblemaIncidenteMaquinaria">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="incidenteMaquinaria" type="tns:incidenteMaquinaria" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarProblemaIncidenteMaquinariaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="insertarIncidenteMaquinaria">
     <xs:sequence>
       <xs:element minOccurs="0" name="incidenteMaquinaria" type="tns:incidenteMaquinaria" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="insertarIncidenteMaquinariaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerIngenieroIncidenteMaquinaria">
+    <xs:sequence>
+      <xs:element name="idIncidenteMaquinaria" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerIngenieroIncidenteMaquinariaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:ingeniero" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarPorSupervisorIncidenteMaquinaria">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="incidenteMaquinaria" type="tns:incidenteMaquinaria" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarPorSupervisorIncidenteMaquinariaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerRespuestaIncidenteMaquinaria">
+    <xs:sequence>
+      <xs:element name="idIncidenteMaquinaria" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerRespuestaIncidenteMaquinariaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="xs:anyType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarRespuestaIncidenteMaquinaria">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="incidenteMaquinaria" type="tns:incidenteMaquinaria" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarRespuestaIncidenteMaquinariaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarPorIngenieroIncidenteMaquinaria">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="incidenteMaquinaria" type="tns:incidenteMaquinaria" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarPorIngenieroIncidenteMaquinariaResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>

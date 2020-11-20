@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="rAbqLeSxqsS1m6wS/e7aJrFzhASSvUAM1uGxR8Wtp2s=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="tg2miqWOP2ZZ+vGI0Zqkgh7TIn37PD+AxRanTQVg7Zc=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="JefeAreaWSPortBinding">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="JefeAreaWSPort" contract="JefeAreaWS.JefeAreaWS" bindingType="basicHttpBinding" address="http://52.207.108.70:8080/BuildUpServices/JefeArea" bindingConfiguration="JefeAreaWSPortBinding">
+    <endpoint name="JefeAreaWSPort" contract="JefeAreaWS.JefeAreaWS" bindingType="basicHttpBinding" address="http://52.207.108.70:8080/BuildUpServices/JefeAreaWS" bindingConfiguration="JefeAreaWSPortBinding">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://52.207.108.70:8080/BuildUpServices/JefeArea</serializedValue>
+          <serializedValue>http://52.207.108.70:8080/BuildUpServices/JefeAreaWS</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

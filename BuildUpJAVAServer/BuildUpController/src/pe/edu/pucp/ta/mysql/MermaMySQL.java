@@ -49,13 +49,12 @@ public class MermaMySQL implements MermaDAO{
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con =DriverManager.getConnection(DBManager.urlMySQL, DBManager.user,DBManager.password);
-            String sql = "{call ACTUALIZAR_MERMA(?,?,?,?,?)}";
+            String sql = "{call ACTUALIZAR_MERMA(?,?,?,?)}";
             cs = con.prepareCall(sql);
             cs.setInt("_ID_MERMA", merma.getIdMerma());
             cs.setString("_TIPO", merma.getTipo());
             cs.setString("_DESCRIPCION", merma.getDescripcion());
             cs.setString("_UNIDAD_MEDIDA", merma.getUnidad());
-            cs.setBoolean("_ACTIVO", merma.getActivo());
             resultado=cs.executeUpdate();
         }catch(Exception ex){
             System.out.println(ex.getMessage());
@@ -126,7 +125,7 @@ public class MermaMySQL implements MermaDAO{
                 mer.setIdMerma(rs.getInt("ID_MERMA"));
                 mer.setTipo(rs.getString("TIPO"));
                 mer.setDescripcion(rs.getString("DESCRIPCION"));
-                mer.setUnidad(rs.getString("UNIDAD_MEDIDA|"));
+                mer.setUnidad(rs.getString("UNIDAD_MEDIDA"));
                 mer.setActivo(rs.getBoolean("ACTIVO"));
                 mermas.add(mer);
             }

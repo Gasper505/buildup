@@ -57,18 +57,32 @@ namespace BuildUp.LineaProduccionWS {
         System.Threading.Tasks.Task<BuildUp.LineaProduccionWS.eliminarLineaProduccionResponse> eliminarLineaProduccionAsync(BuildUp.LineaProduccionWS.eliminarLineaProduccionRequest request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/LineaProduccionWS/listarLineaProduccionReques" +
-            "t", ReplyAction="http://services.buildup.pucp.edu.pe/LineaProduccionWS/listarLineaProduccionRespon" +
-            "se")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/LineaProduccionWS/listarPorNombreLineaProducc" +
+            "ionRequest", ReplyAction="http://services.buildup.pucp.edu.pe/LineaProduccionWS/listarPorNombreLineaProducc" +
+            "ionResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        BuildUp.LineaProduccionWS.listarLineaProduccionResponse listarLineaProduccion(BuildUp.LineaProduccionWS.listarLineaProduccionRequest request);
+        BuildUp.LineaProduccionWS.listarPorNombreLineaProduccionResponse listarPorNombreLineaProduccion(BuildUp.LineaProduccionWS.listarPorNombreLineaProduccionRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/LineaProduccionWS/listarLineaProduccionReques" +
-            "t", ReplyAction="http://services.buildup.pucp.edu.pe/LineaProduccionWS/listarLineaProduccionRespon" +
-            "se")]
-        System.Threading.Tasks.Task<BuildUp.LineaProduccionWS.listarLineaProduccionResponse> listarLineaProduccionAsync(BuildUp.LineaProduccionWS.listarLineaProduccionRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/LineaProduccionWS/listarPorNombreLineaProducc" +
+            "ionRequest", ReplyAction="http://services.buildup.pucp.edu.pe/LineaProduccionWS/listarPorNombreLineaProducc" +
+            "ionResponse")]
+        System.Threading.Tasks.Task<BuildUp.LineaProduccionWS.listarPorNombreLineaProduccionResponse> listarPorNombreLineaProduccionAsync(BuildUp.LineaProduccionWS.listarPorNombreLineaProduccionRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/LineaProduccionWS/modificarLineaProduccionReq" +
+            "uest", ReplyAction="http://services.buildup.pucp.edu.pe/LineaProduccionWS/modificarLineaProduccionRes" +
+            "ponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        BuildUp.LineaProduccionWS.modificarLineaProduccionResponse modificarLineaProduccion(BuildUp.LineaProduccionWS.modificarLineaProduccionRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/LineaProduccionWS/modificarLineaProduccionReq" +
+            "uest", ReplyAction="http://services.buildup.pucp.edu.pe/LineaProduccionWS/modificarLineaProduccionRes" +
+            "ponse")]
+        System.Threading.Tasks.Task<BuildUp.LineaProduccionWS.modificarLineaProduccionResponse> modificarLineaProduccionAsync(BuildUp.LineaProduccionWS.modificarLineaProduccionRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -83,14 +97,14 @@ namespace BuildUp.LineaProduccionWS {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=1)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int arg1;
+        public int idTipoLadrillo;
         
         public actualizarLineaProduccionRequest() {
         }
         
-        public actualizarLineaProduccionRequest(int idlineaProduccion, int arg1) {
+        public actualizarLineaProduccionRequest(int idlineaProduccion, int idTipoLadrillo) {
             this.idlineaProduccion = idlineaProduccion;
-            this.arg1 = arg1;
+            this.idTipoLadrillo = idTipoLadrillo;
         }
     }
     
@@ -257,6 +271,10 @@ namespace BuildUp.LineaProduccionWS {
         
         private bool fechaFinContratoFieldSpecified;
         
+        private System.DateTime fechaNacimientoField;
+        
+        private bool fechaNacimientoFieldSpecified;
+        
         private byte[] fotoField;
         
         private int idPersonaField;
@@ -328,7 +346,31 @@ namespace BuildUp.LineaProduccionWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public System.DateTime fechaNacimiento {
+            get {
+                return this.fechaNacimientoField;
+            }
+            set {
+                this.fechaNacimientoField = value;
+                this.RaisePropertyChanged("fechaNacimiento");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool fechaNacimientoSpecified {
+            get {
+                return this.fechaNacimientoFieldSpecified;
+            }
+            set {
+                this.fechaNacimientoFieldSpecified = value;
+                this.RaisePropertyChanged("fechaNacimientoSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", Order=5)]
         public byte[] foto {
             get {
                 return this.fotoField;
@@ -340,7 +382,7 @@ namespace BuildUp.LineaProduccionWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
         public int idPersona {
             get {
                 return this.idPersonaField;
@@ -352,7 +394,7 @@ namespace BuildUp.LineaProduccionWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
         public string nombres {
             get {
                 return this.nombresField;
@@ -364,7 +406,7 @@ namespace BuildUp.LineaProduccionWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
         public string rol {
             get {
                 return this.rolField;
@@ -376,7 +418,7 @@ namespace BuildUp.LineaProduccionWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
         public string telefono {
             get {
                 return this.telefonoField;
@@ -583,27 +625,71 @@ namespace BuildUp.LineaProduccionWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarLineaProduccion", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarLineaProduccionRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPorNombreLineaProduccion", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarPorNombreLineaProduccionRequest {
         
-        public listarLineaProduccionRequest() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string nombre;
+        
+        public listarPorNombreLineaProduccionRequest() {
+        }
+        
+        public listarPorNombreLineaProduccionRequest(string nombre) {
+            this.nombre = nombre;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarLineaProduccionResponse", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarLineaProduccionResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPorNombreLineaProduccionResponse", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarPorNombreLineaProduccionResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public BuildUp.LineaProduccionWS.lineaProduccion[] @return;
         
-        public listarLineaProduccionResponse() {
+        public listarPorNombreLineaProduccionResponse() {
         }
         
-        public listarLineaProduccionResponse(BuildUp.LineaProduccionWS.lineaProduccion[] @return) {
+        public listarPorNombreLineaProduccionResponse(BuildUp.LineaProduccionWS.lineaProduccion[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarLineaProduccion", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
+    public partial class modificarLineaProduccionRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public BuildUp.LineaProduccionWS.lineaProduccion lineaProduccion;
+        
+        public modificarLineaProduccionRequest() {
+        }
+        
+        public modificarLineaProduccionRequest(BuildUp.LineaProduccionWS.lineaProduccion lineaProduccion) {
+            this.lineaProduccion = lineaProduccion;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarLineaProduccionResponse", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
+    public partial class modificarLineaProduccionResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public modificarLineaProduccionResponse() {
+        }
+        
+        public modificarLineaProduccionResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -640,10 +726,10 @@ namespace BuildUp.LineaProduccionWS {
             return base.Channel.actualizarLineaProduccion(request);
         }
         
-        public int actualizarLineaProduccion(int idlineaProduccion, int arg1) {
+        public int actualizarLineaProduccion(int idlineaProduccion, int idTipoLadrillo) {
             BuildUp.LineaProduccionWS.actualizarLineaProduccionRequest inValue = new BuildUp.LineaProduccionWS.actualizarLineaProduccionRequest();
             inValue.idlineaProduccion = idlineaProduccion;
-            inValue.arg1 = arg1;
+            inValue.idTipoLadrillo = idTipoLadrillo;
             BuildUp.LineaProduccionWS.actualizarLineaProduccionResponse retVal = ((BuildUp.LineaProduccionWS.LineaProduccionWS)(this)).actualizarLineaProduccion(inValue);
             return retVal.@return;
         }
@@ -653,10 +739,10 @@ namespace BuildUp.LineaProduccionWS {
             return base.Channel.actualizarLineaProduccionAsync(request);
         }
         
-        public System.Threading.Tasks.Task<BuildUp.LineaProduccionWS.actualizarLineaProduccionResponse> actualizarLineaProduccionAsync(int idlineaProduccion, int arg1) {
+        public System.Threading.Tasks.Task<BuildUp.LineaProduccionWS.actualizarLineaProduccionResponse> actualizarLineaProduccionAsync(int idlineaProduccion, int idTipoLadrillo) {
             BuildUp.LineaProduccionWS.actualizarLineaProduccionRequest inValue = new BuildUp.LineaProduccionWS.actualizarLineaProduccionRequest();
             inValue.idlineaProduccion = idlineaProduccion;
-            inValue.arg1 = arg1;
+            inValue.idTipoLadrillo = idTipoLadrillo;
             return ((BuildUp.LineaProduccionWS.LineaProduccionWS)(this)).actualizarLineaProduccionAsync(inValue);
         }
         
@@ -707,24 +793,49 @@ namespace BuildUp.LineaProduccionWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        BuildUp.LineaProduccionWS.listarLineaProduccionResponse BuildUp.LineaProduccionWS.LineaProduccionWS.listarLineaProduccion(BuildUp.LineaProduccionWS.listarLineaProduccionRequest request) {
-            return base.Channel.listarLineaProduccion(request);
+        BuildUp.LineaProduccionWS.listarPorNombreLineaProduccionResponse BuildUp.LineaProduccionWS.LineaProduccionWS.listarPorNombreLineaProduccion(BuildUp.LineaProduccionWS.listarPorNombreLineaProduccionRequest request) {
+            return base.Channel.listarPorNombreLineaProduccion(request);
         }
         
-        public BuildUp.LineaProduccionWS.lineaProduccion[] listarLineaProduccion() {
-            BuildUp.LineaProduccionWS.listarLineaProduccionRequest inValue = new BuildUp.LineaProduccionWS.listarLineaProduccionRequest();
-            BuildUp.LineaProduccionWS.listarLineaProduccionResponse retVal = ((BuildUp.LineaProduccionWS.LineaProduccionWS)(this)).listarLineaProduccion(inValue);
+        public BuildUp.LineaProduccionWS.lineaProduccion[] listarPorNombreLineaProduccion(string nombre) {
+            BuildUp.LineaProduccionWS.listarPorNombreLineaProduccionRequest inValue = new BuildUp.LineaProduccionWS.listarPorNombreLineaProduccionRequest();
+            inValue.nombre = nombre;
+            BuildUp.LineaProduccionWS.listarPorNombreLineaProduccionResponse retVal = ((BuildUp.LineaProduccionWS.LineaProduccionWS)(this)).listarPorNombreLineaProduccion(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<BuildUp.LineaProduccionWS.listarLineaProduccionResponse> BuildUp.LineaProduccionWS.LineaProduccionWS.listarLineaProduccionAsync(BuildUp.LineaProduccionWS.listarLineaProduccionRequest request) {
-            return base.Channel.listarLineaProduccionAsync(request);
+        System.Threading.Tasks.Task<BuildUp.LineaProduccionWS.listarPorNombreLineaProduccionResponse> BuildUp.LineaProduccionWS.LineaProduccionWS.listarPorNombreLineaProduccionAsync(BuildUp.LineaProduccionWS.listarPorNombreLineaProduccionRequest request) {
+            return base.Channel.listarPorNombreLineaProduccionAsync(request);
         }
         
-        public System.Threading.Tasks.Task<BuildUp.LineaProduccionWS.listarLineaProduccionResponse> listarLineaProduccionAsync() {
-            BuildUp.LineaProduccionWS.listarLineaProduccionRequest inValue = new BuildUp.LineaProduccionWS.listarLineaProduccionRequest();
-            return ((BuildUp.LineaProduccionWS.LineaProduccionWS)(this)).listarLineaProduccionAsync(inValue);
+        public System.Threading.Tasks.Task<BuildUp.LineaProduccionWS.listarPorNombreLineaProduccionResponse> listarPorNombreLineaProduccionAsync(string nombre) {
+            BuildUp.LineaProduccionWS.listarPorNombreLineaProduccionRequest inValue = new BuildUp.LineaProduccionWS.listarPorNombreLineaProduccionRequest();
+            inValue.nombre = nombre;
+            return ((BuildUp.LineaProduccionWS.LineaProduccionWS)(this)).listarPorNombreLineaProduccionAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        BuildUp.LineaProduccionWS.modificarLineaProduccionResponse BuildUp.LineaProduccionWS.LineaProduccionWS.modificarLineaProduccion(BuildUp.LineaProduccionWS.modificarLineaProduccionRequest request) {
+            return base.Channel.modificarLineaProduccion(request);
+        }
+        
+        public int modificarLineaProduccion(BuildUp.LineaProduccionWS.lineaProduccion lineaProduccion) {
+            BuildUp.LineaProduccionWS.modificarLineaProduccionRequest inValue = new BuildUp.LineaProduccionWS.modificarLineaProduccionRequest();
+            inValue.lineaProduccion = lineaProduccion;
+            BuildUp.LineaProduccionWS.modificarLineaProduccionResponse retVal = ((BuildUp.LineaProduccionWS.LineaProduccionWS)(this)).modificarLineaProduccion(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<BuildUp.LineaProduccionWS.modificarLineaProduccionResponse> BuildUp.LineaProduccionWS.LineaProduccionWS.modificarLineaProduccionAsync(BuildUp.LineaProduccionWS.modificarLineaProduccionRequest request) {
+            return base.Channel.modificarLineaProduccionAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<BuildUp.LineaProduccionWS.modificarLineaProduccionResponse> modificarLineaProduccionAsync(BuildUp.LineaProduccionWS.lineaProduccion lineaProduccion) {
+            BuildUp.LineaProduccionWS.modificarLineaProduccionRequest inValue = new BuildUp.LineaProduccionWS.modificarLineaProduccionRequest();
+            inValue.lineaProduccion = lineaProduccion;
+            return ((BuildUp.LineaProduccionWS.LineaProduccionWS)(this)).modificarLineaProduccionAsync(inValue);
         }
     }
 }

@@ -34,7 +34,7 @@ namespace BuildUp
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            dgvMaquinarias.DataSource = new BindingList<MaqWS.maquinaria>(daoMaquinaria.listarMaquinaria().ToArray());
+            dgvMaquinarias.DataSource = new BindingList<MaqWS.maquinaria>(daoMaquinaria.listarMaquinariasConParametros(txtBusqNombreMaq.Text, txtBusqLineaProduccion.Text).ToList());
 
             //dgvMaquinarias.DataSource =
             //    new BindingList<MaqWS.maquinaria>(daoMaquinaria.listarMaquinariasConParametros(txtBusqNombreMaq.Text, txtBusqLineaProduccion.Text).ToArray());

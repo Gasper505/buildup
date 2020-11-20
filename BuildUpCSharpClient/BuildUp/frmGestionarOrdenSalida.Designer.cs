@@ -50,9 +50,6 @@
             this.btnRemover = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.dgvLotes = new System.Windows.Forms.DataGridView();
-            this.NumeroLote = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreTipoLadrillo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CantidadEnElLote = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.btnNuevo = new System.Windows.Forms.ToolStripButton();
@@ -64,6 +61,8 @@
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.btnCancelar = new System.Windows.Forms.ToolStripButton();
             this.btnRegresar = new System.Windows.Forms.ToolStripButton();
+            this.NombreTipoLadrillo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CantidadEnElLote = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.numNroAproxLadrillos)).BeginInit();
             this.gbDatosOrden.SuspendLayout();
             this.gbDatosOperario.SuspendLayout();
@@ -75,82 +74,83 @@
             // lblNroLotes
             // 
             this.lblNroLotes.AutoSize = true;
-            this.lblNroLotes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNroLotes.Location = new System.Drawing.Point(49, 69);
+            this.lblNroLotes.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNroLotes.Location = new System.Drawing.Point(61, 82);
             this.lblNroLotes.Name = "lblNroLotes";
-            this.lblNroLotes.Size = new System.Drawing.Size(157, 15);
+            this.lblNroLotes.Size = new System.Drawing.Size(153, 15);
             this.lblNroLotes.TabIndex = 23;
             this.lblNroLotes.Text = "N° Aproximado de Ladrillos";
             // 
             // lblNombreOperario
             // 
             this.lblNombreOperario.AutoSize = true;
-            this.lblNombreOperario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreOperario.Location = new System.Drawing.Point(209, 56);
+            this.lblNombreOperario.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreOperario.Location = new System.Drawing.Point(219, 61);
             this.lblNombreOperario.Name = "lblNombreOperario";
-            this.lblNombreOperario.Size = new System.Drawing.Size(58, 15);
+            this.lblNombreOperario.Size = new System.Drawing.Size(56, 15);
             this.lblNombreOperario.TabIndex = 21;
             this.lblNombreOperario.Text = "Nombres";
             // 
             // txtIDOrden
             // 
-            this.txtIDOrden.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIDOrden.Location = new System.Drawing.Point(273, 19);
+            this.txtIDOrden.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIDOrden.Location = new System.Drawing.Point(281, 17);
             this.txtIDOrden.Name = "txtIDOrden";
-            this.txtIDOrden.Size = new System.Drawing.Size(107, 21);
+            this.txtIDOrden.Size = new System.Drawing.Size(65, 23);
             this.txtIDOrden.TabIndex = 20;
             // 
             // lblIDOrden
             // 
             this.lblIDOrden.AutoSize = true;
-            this.lblIDOrden.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIDOrden.Location = new System.Drawing.Point(156, 20);
+            this.lblIDOrden.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIDOrden.Location = new System.Drawing.Point(171, 20);
             this.lblIDOrden.Name = "lblIDOrden";
-            this.lblIDOrden.Size = new System.Drawing.Size(111, 15);
+            this.lblIDOrden.Size = new System.Drawing.Size(104, 15);
             this.lblIDOrden.TabIndex = 19;
             this.lblIDOrden.Text = "ID Orden de Salida";
             // 
             // lblFechaRegistro
             // 
             this.lblFechaRegistro.AutoSize = true;
-            this.lblFechaRegistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaRegistro.Location = new System.Drawing.Point(177, 51);
+            this.lblFechaRegistro.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaRegistro.Location = new System.Drawing.Point(191, 57);
             this.lblFechaRegistro.Name = "lblFechaRegistro";
-            this.lblFechaRegistro.Size = new System.Drawing.Size(90, 15);
+            this.lblFechaRegistro.Size = new System.Drawing.Size(84, 15);
             this.lblFechaRegistro.TabIndex = 27;
             this.lblFechaRegistro.Text = "Fecha Registro";
             // 
             // dtpFechaRegistro
             // 
-            this.dtpFechaRegistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFechaRegistro.Location = new System.Drawing.Point(273, 51);
+            this.dtpFechaRegistro.CalendarFont = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFechaRegistro.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFechaRegistro.Location = new System.Drawing.Point(281, 51);
             this.dtpFechaRegistro.Name = "dtpFechaRegistro";
-            this.dtpFechaRegistro.Size = new System.Drawing.Size(205, 21);
+            this.dtpFechaRegistro.Size = new System.Drawing.Size(205, 23);
             this.dtpFechaRegistro.TabIndex = 28;
             // 
             // numNroAproxLadrillos
             // 
-            this.numNroAproxLadrillos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numNroAproxLadrillos.Location = new System.Drawing.Point(212, 69);
+            this.numNroAproxLadrillos.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numNroAproxLadrillos.Location = new System.Drawing.Point(220, 80);
             this.numNroAproxLadrillos.Name = "numNroAproxLadrillos";
-            this.numNroAproxLadrillos.Size = new System.Drawing.Size(86, 21);
+            this.numNroAproxLadrillos.Size = new System.Drawing.Size(86, 23);
             this.numNroAproxLadrillos.TabIndex = 31;
             // 
             // lblNombreTipoLadrillo
             // 
             this.lblNombreTipoLadrillo.AutoSize = true;
-            this.lblNombreTipoLadrillo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreTipoLadrillo.Location = new System.Drawing.Point(46, 34);
+            this.lblNombreTipoLadrillo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreTipoLadrillo.Location = new System.Drawing.Point(60, 49);
             this.lblNombreTipoLadrillo.Name = "lblNombreTipoLadrillo";
-            this.lblNombreTipoLadrillo.Size = new System.Drawing.Size(160, 15);
+            this.lblNombreTipoLadrillo.Size = new System.Drawing.Size(154, 15);
             this.lblNombreTipoLadrillo.TabIndex = 32;
             this.lblNombreTipoLadrillo.Text = "Nombre del Tipo de Ladrillo";
             // 
             // cboNombreTipoLadrillo
             // 
-            this.cboNombreTipoLadrillo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboNombreTipoLadrillo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboNombreTipoLadrillo.FormattingEnabled = true;
-            this.cboNombreTipoLadrillo.Location = new System.Drawing.Point(212, 33);
+            this.cboNombreTipoLadrillo.Location = new System.Drawing.Point(220, 46);
             this.cboNombreTipoLadrillo.Name = "cboNombreTipoLadrillo";
             this.cboNombreTipoLadrillo.Size = new System.Drawing.Size(182, 23);
             this.cboNombreTipoLadrillo.TabIndex = 33;
@@ -161,6 +161,7 @@
             this.gbDatosOrden.Controls.Add(this.lblIDOrden);
             this.gbDatosOrden.Controls.Add(this.lblFechaRegistro);
             this.gbDatosOrden.Controls.Add(this.dtpFechaRegistro);
+            this.gbDatosOrden.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbDatosOrden.Location = new System.Drawing.Point(68, 63);
             this.gbDatosOrden.Name = "gbDatosOrden";
             this.gbDatosOrden.Size = new System.Drawing.Size(653, 92);
@@ -176,6 +177,7 @@
             this.gbDatosOperario.Controls.Add(this.label1);
             this.gbDatosOperario.Controls.Add(this.txtNombres);
             this.gbDatosOperario.Controls.Add(this.lblNombreOperario);
+            this.gbDatosOperario.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbDatosOperario.Location = new System.Drawing.Point(68, 170);
             this.gbDatosOperario.Name = "gbDatosOperario";
             this.gbDatosOperario.Size = new System.Drawing.Size(653, 123);
@@ -185,46 +187,46 @@
             // 
             // txtApellidos
             // 
-            this.txtApellidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApellidos.Location = new System.Drawing.Point(273, 81);
+            this.txtApellidos.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtApellidos.Location = new System.Drawing.Point(281, 84);
             this.txtApellidos.Name = "txtApellidos";
-            this.txtApellidos.Size = new System.Drawing.Size(259, 21);
+            this.txtApellidos.Size = new System.Drawing.Size(259, 23);
             this.txtApellidos.TabIndex = 28;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(209, 82);
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(219, 87);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(57, 15);
+            this.label3.Size = new System.Drawing.Size(56, 15);
             this.label3.TabIndex = 27;
             this.label3.Text = "Apellidos";
             // 
             // txtIDOperario
             // 
-            this.txtIDOperario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIDOperario.Location = new System.Drawing.Point(273, 29);
+            this.txtIDOperario.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIDOperario.Location = new System.Drawing.Point(281, 32);
             this.txtIDOperario.Name = "txtIDOperario";
-            this.txtIDOperario.Size = new System.Drawing.Size(107, 21);
+            this.txtIDOperario.Size = new System.Drawing.Size(107, 23);
             this.txtIDOperario.TabIndex = 24;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(247, 30);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(257, 35);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(19, 15);
+            this.label1.Size = new System.Drawing.Size(18, 15);
             this.label1.TabIndex = 23;
             this.label1.Text = "ID";
             // 
             // txtNombres
             // 
-            this.txtNombres.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombres.Location = new System.Drawing.Point(273, 55);
+            this.txtNombres.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombres.Location = new System.Drawing.Point(281, 58);
             this.txtNombres.Name = "txtNombres";
-            this.txtNombres.Size = new System.Drawing.Size(259, 21);
+            this.txtNombres.Size = new System.Drawing.Size(259, 23);
             this.txtNombres.TabIndex = 22;
             // 
             // gbLotesSalientes
@@ -236,17 +238,18 @@
             this.gbLotesSalientes.Controls.Add(this.lblNombreTipoLadrillo);
             this.gbLotesSalientes.Controls.Add(this.numNroAproxLadrillos);
             this.gbLotesSalientes.Controls.Add(this.lblNroLotes);
+            this.gbLotesSalientes.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbLotesSalientes.Location = new System.Drawing.Point(68, 311);
             this.gbLotesSalientes.Name = "gbLotesSalientes";
-            this.gbLotesSalientes.Size = new System.Drawing.Size(653, 302);
+            this.gbLotesSalientes.Size = new System.Drawing.Size(653, 318);
             this.gbLotesSalientes.TabIndex = 38;
             this.gbLotesSalientes.TabStop = false;
             this.gbLotesSalientes.Text = "Lotes Salientes";
             // 
             // btnRemover
             // 
-            this.btnRemover.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemover.Location = new System.Drawing.Point(550, 49);
+            this.btnRemover.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemover.Location = new System.Drawing.Point(512, 62);
             this.btnRemover.Name = "btnRemover";
             this.btnRemover.Size = new System.Drawing.Size(59, 35);
             this.btnRemover.TabIndex = 36;
@@ -255,8 +258,8 @@
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.Location = new System.Drawing.Point(485, 49);
+            this.btnAgregar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.Location = new System.Drawing.Point(447, 62);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(59, 35);
             this.btnAgregar.TabIndex = 35;
@@ -269,38 +272,16 @@
             this.dgvLotes.AllowUserToDeleteRows = false;
             this.dgvLotes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvLotes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.NumeroLote,
             this.NombreTipoLadrillo,
             this.CantidadEnElLote});
-            this.dgvLotes.Location = new System.Drawing.Point(30, 110);
+            this.dgvLotes.Location = new System.Drawing.Point(63, 128);
+            this.dgvLotes.MultiSelect = false;
             this.dgvLotes.Name = "dgvLotes";
             this.dgvLotes.ReadOnly = true;
             this.dgvLotes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvLotes.Size = new System.Drawing.Size(594, 162);
+            this.dgvLotes.Size = new System.Drawing.Size(520, 162);
             this.dgvLotes.TabIndex = 34;
             this.dgvLotes.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvLotes_CellFormatting);
-            // 
-            // NumeroLote
-            // 
-            this.NumeroLote.DataPropertyName = "IdLineaOrdenSalida";
-            this.NumeroLote.HeaderText = "Nro. Lote";
-            this.NumeroLote.Name = "NumeroLote";
-            this.NumeroLote.ReadOnly = true;
-            // 
-            // NombreTipoLadrillo
-            // 
-            this.NombreTipoLadrillo.HeaderText = "Nombre Tipo Ladrillo";
-            this.NombreTipoLadrillo.Name = "NombreTipoLadrillo";
-            this.NombreTipoLadrillo.ReadOnly = true;
-            this.NombreTipoLadrillo.Width = 300;
-            // 
-            // CantidadEnElLote
-            // 
-            this.CantidadEnElLote.DataPropertyName = "Cantidad";
-            this.CantidadEnElLote.HeaderText = "Cantidad en el Lote";
-            this.CantidadEnElLote.Name = "CantidadEnElLote";
-            this.CantidadEnElLote.ReadOnly = true;
-            this.CantidadEnElLote.Width = 150;
             // 
             // toolStrip2
             // 
@@ -330,19 +311,21 @@
             // 
             // btnNuevo
             // 
+            this.btnNuevo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevo.Image = global::BuildUp.Properties.Resources.new_file_icon_4;
             this.btnNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(66, 22);
+            this.btnNuevo.Size = new System.Drawing.Size(62, 22);
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // btnGuardar
             // 
+            this.btnGuardar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
             this.btnGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(76, 22);
+            this.btnGuardar.Size = new System.Drawing.Size(69, 22);
             this.btnGuardar.Text = "&Guardar";
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
@@ -353,28 +336,31 @@
             // 
             // btnBuscar
             // 
+            this.btnBuscar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
             this.btnBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(66, 22);
+            this.btnBuscar.Size = new System.Drawing.Size(62, 22);
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btnActualizar
             // 
+            this.btnActualizar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActualizar.Image = ((System.Drawing.Image)(resources.GetObject("btnActualizar.Image")));
             this.btnActualizar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(84, 22);
+            this.btnActualizar.Size = new System.Drawing.Size(79, 22);
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // btnEliminar
             // 
+            this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
             this.btnEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(74, 22);
+            this.btnEliminar.Size = new System.Drawing.Size(70, 22);
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
@@ -385,22 +371,40 @@
             // 
             // btnCancelar
             // 
+            this.btnCancelar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
             this.btnCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(135, 22);
+            this.btnCancelar.Size = new System.Drawing.Size(125, 22);
             this.btnCancelar.Text = "Limpiar y Cancelar";
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnRegresar
             // 
             this.btnRegresar.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.btnRegresar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegresar.Image = ((System.Drawing.Image)(resources.GetObject("btnRegresar.Image")));
             this.btnRegresar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Size = new System.Drawing.Size(81, 22);
+            this.btnRegresar.Size = new System.Drawing.Size(72, 22);
             this.btnRegresar.Text = "Regresar";
             this.btnRegresar.Click += new System.EventHandler(this.btnVolver_Click);
+            // 
+            // NombreTipoLadrillo
+            // 
+            this.NombreTipoLadrillo.DataPropertyName = "tipoLadrillo";
+            this.NombreTipoLadrillo.HeaderText = "Nombre Tipo Ladrillo";
+            this.NombreTipoLadrillo.Name = "NombreTipoLadrillo";
+            this.NombreTipoLadrillo.ReadOnly = true;
+            this.NombreTipoLadrillo.Width = 320;
+            // 
+            // CantidadEnElLote
+            // 
+            this.CantidadEnElLote.DataPropertyName = "cantidad";
+            this.CantidadEnElLote.HeaderText = "Cantidad en el Lote";
+            this.CantidadEnElLote.Name = "CantidadEnElLote";
+            this.CantidadEnElLote.ReadOnly = true;
+            this.CantidadEnElLote.Width = 150;
             // 
             // frmGestionarOrdenSalida
             // 
@@ -464,7 +468,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripButton btnCancelar;
         private System.Windows.Forms.ToolStripButton btnRegresar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NumeroLote;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreTipoLadrillo;
         private System.Windows.Forms.DataGridViewTextBoxColumn CantidadEnElLote;
     }

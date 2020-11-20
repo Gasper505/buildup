@@ -16,34 +16,34 @@ namespace BuildUp.OSalidaWS {
     public interface OrdenSalidaWS {
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/OrdenSalidaWS/insertarRequest", ReplyAction="http://services.buildup.pucp.edu.pe/OrdenSalidaWS/insertarResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/OrdenSalidaWS/insertarOrdenSalidaRequest", ReplyAction="http://services.buildup.pucp.edu.pe/OrdenSalidaWS/insertarOrdenSalidaResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        BuildUp.OSalidaWS.insertarResponse insertar(BuildUp.OSalidaWS.insertarRequest request);
+        BuildUp.OSalidaWS.insertarOrdenSalidaResponse insertarOrdenSalida(BuildUp.OSalidaWS.insertarOrdenSalidaRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/OrdenSalidaWS/insertarRequest", ReplyAction="http://services.buildup.pucp.edu.pe/OrdenSalidaWS/insertarResponse")]
-        System.Threading.Tasks.Task<BuildUp.OSalidaWS.insertarResponse> insertarAsync(BuildUp.OSalidaWS.insertarRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/OrdenSalidaWS/insertarOrdenSalidaRequest", ReplyAction="http://services.buildup.pucp.edu.pe/OrdenSalidaWS/insertarOrdenSalidaResponse")]
+        System.Threading.Tasks.Task<BuildUp.OSalidaWS.insertarOrdenSalidaResponse> insertarOrdenSalidaAsync(BuildUp.OSalidaWS.insertarOrdenSalidaRequest request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/OrdenSalidaWS/actualizarRequest", ReplyAction="http://services.buildup.pucp.edu.pe/OrdenSalidaWS/actualizarResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/OrdenSalidaWS/actualizarOrdenSalidaRequest", ReplyAction="http://services.buildup.pucp.edu.pe/OrdenSalidaWS/actualizarOrdenSalidaResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        BuildUp.OSalidaWS.actualizarResponse actualizar(BuildUp.OSalidaWS.actualizarRequest request);
+        BuildUp.OSalidaWS.actualizarOrdenSalidaResponse actualizarOrdenSalida(BuildUp.OSalidaWS.actualizarOrdenSalidaRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/OrdenSalidaWS/actualizarRequest", ReplyAction="http://services.buildup.pucp.edu.pe/OrdenSalidaWS/actualizarResponse")]
-        System.Threading.Tasks.Task<BuildUp.OSalidaWS.actualizarResponse> actualizarAsync(BuildUp.OSalidaWS.actualizarRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/OrdenSalidaWS/actualizarOrdenSalidaRequest", ReplyAction="http://services.buildup.pucp.edu.pe/OrdenSalidaWS/actualizarOrdenSalidaResponse")]
+        System.Threading.Tasks.Task<BuildUp.OSalidaWS.actualizarOrdenSalidaResponse> actualizarOrdenSalidaAsync(BuildUp.OSalidaWS.actualizarOrdenSalidaRequest request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/OrdenSalidaWS/eliminarRequest", ReplyAction="http://services.buildup.pucp.edu.pe/OrdenSalidaWS/eliminarResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/OrdenSalidaWS/eliminarOrdenSalidaRequest", ReplyAction="http://services.buildup.pucp.edu.pe/OrdenSalidaWS/eliminarOrdenSalidaResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        BuildUp.OSalidaWS.eliminarResponse eliminar(BuildUp.OSalidaWS.eliminarRequest request);
+        BuildUp.OSalidaWS.eliminarOrdenSalidaResponse eliminarOrdenSalida(BuildUp.OSalidaWS.eliminarOrdenSalidaRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/OrdenSalidaWS/eliminarRequest", ReplyAction="http://services.buildup.pucp.edu.pe/OrdenSalidaWS/eliminarResponse")]
-        System.Threading.Tasks.Task<BuildUp.OSalidaWS.eliminarResponse> eliminarAsync(BuildUp.OSalidaWS.eliminarRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/OrdenSalidaWS/eliminarOrdenSalidaRequest", ReplyAction="http://services.buildup.pucp.edu.pe/OrdenSalidaWS/eliminarOrdenSalidaResponse")]
+        System.Threading.Tasks.Task<BuildUp.OSalidaWS.eliminarOrdenSalidaResponse> eliminarOrdenSalidaAsync(BuildUp.OSalidaWS.eliminarOrdenSalidaRequest request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/OrdenSalidaWS/listarOrdenesSalidaRequest", ReplyAction="http://services.buildup.pucp.edu.pe/OrdenSalidaWS/listarOrdenesSalidaResponse")]
@@ -465,6 +465,10 @@ namespace BuildUp.OSalidaWS {
         
         private bool fechaFinContratoFieldSpecified;
         
+        private System.DateTime fechaNacimientoField;
+        
+        private bool fechaNacimientoFieldSpecified;
+        
         private byte[] fotoField;
         
         private int idPersonaField;
@@ -536,7 +540,31 @@ namespace BuildUp.OSalidaWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public System.DateTime fechaNacimiento {
+            get {
+                return this.fechaNacimientoField;
+            }
+            set {
+                this.fechaNacimientoField = value;
+                this.RaisePropertyChanged("fechaNacimiento");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool fechaNacimientoSpecified {
+            get {
+                return this.fechaNacimientoFieldSpecified;
+            }
+            set {
+                this.fechaNacimientoFieldSpecified = value;
+                this.RaisePropertyChanged("fechaNacimientoSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", Order=5)]
         public byte[] foto {
             get {
                 return this.fotoField;
@@ -548,7 +576,7 @@ namespace BuildUp.OSalidaWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
         public int idPersona {
             get {
                 return this.idPersonaField;
@@ -560,7 +588,7 @@ namespace BuildUp.OSalidaWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
         public string nombres {
             get {
                 return this.nombresField;
@@ -572,7 +600,7 @@ namespace BuildUp.OSalidaWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
         public string rol {
             get {
                 return this.rolField;
@@ -584,7 +612,7 @@ namespace BuildUp.OSalidaWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
         public string telefono {
             get {
                 return this.telefonoField;
@@ -631,17 +659,17 @@ namespace BuildUp.OSalidaWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertar", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertarRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarOrdenSalida", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertarOrdenSalidaRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public BuildUp.OSalidaWS.ordenSalida ordenSalida;
         
-        public insertarRequest() {
+        public insertarOrdenSalidaRequest() {
         }
         
-        public insertarRequest(BuildUp.OSalidaWS.ordenSalida ordenSalida) {
+        public insertarOrdenSalidaRequest(BuildUp.OSalidaWS.ordenSalida ordenSalida) {
             this.ordenSalida = ordenSalida;
         }
     }
@@ -649,17 +677,17 @@ namespace BuildUp.OSalidaWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarResponse", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertarResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarOrdenSalidaResponse", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertarOrdenSalidaResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public insertarResponse() {
+        public insertarOrdenSalidaResponse() {
         }
         
-        public insertarResponse(int @return) {
+        public insertarOrdenSalidaResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -667,17 +695,17 @@ namespace BuildUp.OSalidaWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizar", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
-    public partial class actualizarRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarOrdenSalida", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
+    public partial class actualizarOrdenSalidaRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public BuildUp.OSalidaWS.ordenSalida ordenSalida;
         
-        public actualizarRequest() {
+        public actualizarOrdenSalidaRequest() {
         }
         
-        public actualizarRequest(BuildUp.OSalidaWS.ordenSalida ordenSalida) {
+        public actualizarOrdenSalidaRequest(BuildUp.OSalidaWS.ordenSalida ordenSalida) {
             this.ordenSalida = ordenSalida;
         }
     }
@@ -685,17 +713,17 @@ namespace BuildUp.OSalidaWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarResponse", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
-    public partial class actualizarResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarOrdenSalidaResponse", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
+    public partial class actualizarOrdenSalidaResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public actualizarResponse() {
+        public actualizarOrdenSalidaResponse() {
         }
         
-        public actualizarResponse(int @return) {
+        public actualizarOrdenSalidaResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -703,17 +731,17 @@ namespace BuildUp.OSalidaWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminar", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
-    public partial class eliminarRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarOrdenSalida", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
+    public partial class eliminarOrdenSalidaRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int idOrdenSalida;
         
-        public eliminarRequest() {
+        public eliminarOrdenSalidaRequest() {
         }
         
-        public eliminarRequest(int idOrdenSalida) {
+        public eliminarOrdenSalidaRequest(int idOrdenSalida) {
             this.idOrdenSalida = idOrdenSalida;
         }
     }
@@ -721,17 +749,17 @@ namespace BuildUp.OSalidaWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarResponse", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
-    public partial class eliminarResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarOrdenSalidaResponse", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
+    public partial class eliminarOrdenSalidaResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public eliminarResponse() {
+        public eliminarOrdenSalidaResponse() {
         }
         
-        public eliminarResponse(int @return) {
+        public eliminarOrdenSalidaResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -776,14 +804,19 @@ namespace BuildUp.OSalidaWS {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=1)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public System.DateTime fechaRegistro;
+        public System.DateTime fecha_inf;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public System.DateTime fecha_sup;
         
         public listarOrdenesSalidaConParametrosRequest() {
         }
         
-        public listarOrdenesSalidaConParametrosRequest(string nombreOperario, System.DateTime fechaRegistro) {
+        public listarOrdenesSalidaConParametrosRequest(string nombreOperario, System.DateTime fecha_inf, System.DateTime fecha_sup) {
             this.nombreOperario = nombreOperario;
-            this.fechaRegistro = fechaRegistro;
+            this.fecha_inf = fecha_inf;
+            this.fecha_sup = fecha_sup;
         }
     }
     
@@ -833,72 +866,72 @@ namespace BuildUp.OSalidaWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        BuildUp.OSalidaWS.insertarResponse BuildUp.OSalidaWS.OrdenSalidaWS.insertar(BuildUp.OSalidaWS.insertarRequest request) {
-            return base.Channel.insertar(request);
+        BuildUp.OSalidaWS.insertarOrdenSalidaResponse BuildUp.OSalidaWS.OrdenSalidaWS.insertarOrdenSalida(BuildUp.OSalidaWS.insertarOrdenSalidaRequest request) {
+            return base.Channel.insertarOrdenSalida(request);
         }
         
-        public int insertar(BuildUp.OSalidaWS.ordenSalida ordenSalida) {
-            BuildUp.OSalidaWS.insertarRequest inValue = new BuildUp.OSalidaWS.insertarRequest();
+        public int insertarOrdenSalida(BuildUp.OSalidaWS.ordenSalida ordenSalida) {
+            BuildUp.OSalidaWS.insertarOrdenSalidaRequest inValue = new BuildUp.OSalidaWS.insertarOrdenSalidaRequest();
             inValue.ordenSalida = ordenSalida;
-            BuildUp.OSalidaWS.insertarResponse retVal = ((BuildUp.OSalidaWS.OrdenSalidaWS)(this)).insertar(inValue);
+            BuildUp.OSalidaWS.insertarOrdenSalidaResponse retVal = ((BuildUp.OSalidaWS.OrdenSalidaWS)(this)).insertarOrdenSalida(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<BuildUp.OSalidaWS.insertarResponse> BuildUp.OSalidaWS.OrdenSalidaWS.insertarAsync(BuildUp.OSalidaWS.insertarRequest request) {
-            return base.Channel.insertarAsync(request);
+        System.Threading.Tasks.Task<BuildUp.OSalidaWS.insertarOrdenSalidaResponse> BuildUp.OSalidaWS.OrdenSalidaWS.insertarOrdenSalidaAsync(BuildUp.OSalidaWS.insertarOrdenSalidaRequest request) {
+            return base.Channel.insertarOrdenSalidaAsync(request);
         }
         
-        public System.Threading.Tasks.Task<BuildUp.OSalidaWS.insertarResponse> insertarAsync(BuildUp.OSalidaWS.ordenSalida ordenSalida) {
-            BuildUp.OSalidaWS.insertarRequest inValue = new BuildUp.OSalidaWS.insertarRequest();
+        public System.Threading.Tasks.Task<BuildUp.OSalidaWS.insertarOrdenSalidaResponse> insertarOrdenSalidaAsync(BuildUp.OSalidaWS.ordenSalida ordenSalida) {
+            BuildUp.OSalidaWS.insertarOrdenSalidaRequest inValue = new BuildUp.OSalidaWS.insertarOrdenSalidaRequest();
             inValue.ordenSalida = ordenSalida;
-            return ((BuildUp.OSalidaWS.OrdenSalidaWS)(this)).insertarAsync(inValue);
+            return ((BuildUp.OSalidaWS.OrdenSalidaWS)(this)).insertarOrdenSalidaAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        BuildUp.OSalidaWS.actualizarResponse BuildUp.OSalidaWS.OrdenSalidaWS.actualizar(BuildUp.OSalidaWS.actualizarRequest request) {
-            return base.Channel.actualizar(request);
+        BuildUp.OSalidaWS.actualizarOrdenSalidaResponse BuildUp.OSalidaWS.OrdenSalidaWS.actualizarOrdenSalida(BuildUp.OSalidaWS.actualizarOrdenSalidaRequest request) {
+            return base.Channel.actualizarOrdenSalida(request);
         }
         
-        public int actualizar(BuildUp.OSalidaWS.ordenSalida ordenSalida) {
-            BuildUp.OSalidaWS.actualizarRequest inValue = new BuildUp.OSalidaWS.actualizarRequest();
+        public int actualizarOrdenSalida(BuildUp.OSalidaWS.ordenSalida ordenSalida) {
+            BuildUp.OSalidaWS.actualizarOrdenSalidaRequest inValue = new BuildUp.OSalidaWS.actualizarOrdenSalidaRequest();
             inValue.ordenSalida = ordenSalida;
-            BuildUp.OSalidaWS.actualizarResponse retVal = ((BuildUp.OSalidaWS.OrdenSalidaWS)(this)).actualizar(inValue);
+            BuildUp.OSalidaWS.actualizarOrdenSalidaResponse retVal = ((BuildUp.OSalidaWS.OrdenSalidaWS)(this)).actualizarOrdenSalida(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<BuildUp.OSalidaWS.actualizarResponse> BuildUp.OSalidaWS.OrdenSalidaWS.actualizarAsync(BuildUp.OSalidaWS.actualizarRequest request) {
-            return base.Channel.actualizarAsync(request);
+        System.Threading.Tasks.Task<BuildUp.OSalidaWS.actualizarOrdenSalidaResponse> BuildUp.OSalidaWS.OrdenSalidaWS.actualizarOrdenSalidaAsync(BuildUp.OSalidaWS.actualizarOrdenSalidaRequest request) {
+            return base.Channel.actualizarOrdenSalidaAsync(request);
         }
         
-        public System.Threading.Tasks.Task<BuildUp.OSalidaWS.actualizarResponse> actualizarAsync(BuildUp.OSalidaWS.ordenSalida ordenSalida) {
-            BuildUp.OSalidaWS.actualizarRequest inValue = new BuildUp.OSalidaWS.actualizarRequest();
+        public System.Threading.Tasks.Task<BuildUp.OSalidaWS.actualizarOrdenSalidaResponse> actualizarOrdenSalidaAsync(BuildUp.OSalidaWS.ordenSalida ordenSalida) {
+            BuildUp.OSalidaWS.actualizarOrdenSalidaRequest inValue = new BuildUp.OSalidaWS.actualizarOrdenSalidaRequest();
             inValue.ordenSalida = ordenSalida;
-            return ((BuildUp.OSalidaWS.OrdenSalidaWS)(this)).actualizarAsync(inValue);
+            return ((BuildUp.OSalidaWS.OrdenSalidaWS)(this)).actualizarOrdenSalidaAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        BuildUp.OSalidaWS.eliminarResponse BuildUp.OSalidaWS.OrdenSalidaWS.eliminar(BuildUp.OSalidaWS.eliminarRequest request) {
-            return base.Channel.eliminar(request);
+        BuildUp.OSalidaWS.eliminarOrdenSalidaResponse BuildUp.OSalidaWS.OrdenSalidaWS.eliminarOrdenSalida(BuildUp.OSalidaWS.eliminarOrdenSalidaRequest request) {
+            return base.Channel.eliminarOrdenSalida(request);
         }
         
-        public int eliminar(int idOrdenSalida) {
-            BuildUp.OSalidaWS.eliminarRequest inValue = new BuildUp.OSalidaWS.eliminarRequest();
+        public int eliminarOrdenSalida(int idOrdenSalida) {
+            BuildUp.OSalidaWS.eliminarOrdenSalidaRequest inValue = new BuildUp.OSalidaWS.eliminarOrdenSalidaRequest();
             inValue.idOrdenSalida = idOrdenSalida;
-            BuildUp.OSalidaWS.eliminarResponse retVal = ((BuildUp.OSalidaWS.OrdenSalidaWS)(this)).eliminar(inValue);
+            BuildUp.OSalidaWS.eliminarOrdenSalidaResponse retVal = ((BuildUp.OSalidaWS.OrdenSalidaWS)(this)).eliminarOrdenSalida(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<BuildUp.OSalidaWS.eliminarResponse> BuildUp.OSalidaWS.OrdenSalidaWS.eliminarAsync(BuildUp.OSalidaWS.eliminarRequest request) {
-            return base.Channel.eliminarAsync(request);
+        System.Threading.Tasks.Task<BuildUp.OSalidaWS.eliminarOrdenSalidaResponse> BuildUp.OSalidaWS.OrdenSalidaWS.eliminarOrdenSalidaAsync(BuildUp.OSalidaWS.eliminarOrdenSalidaRequest request) {
+            return base.Channel.eliminarOrdenSalidaAsync(request);
         }
         
-        public System.Threading.Tasks.Task<BuildUp.OSalidaWS.eliminarResponse> eliminarAsync(int idOrdenSalida) {
-            BuildUp.OSalidaWS.eliminarRequest inValue = new BuildUp.OSalidaWS.eliminarRequest();
+        public System.Threading.Tasks.Task<BuildUp.OSalidaWS.eliminarOrdenSalidaResponse> eliminarOrdenSalidaAsync(int idOrdenSalida) {
+            BuildUp.OSalidaWS.eliminarOrdenSalidaRequest inValue = new BuildUp.OSalidaWS.eliminarOrdenSalidaRequest();
             inValue.idOrdenSalida = idOrdenSalida;
-            return ((BuildUp.OSalidaWS.OrdenSalidaWS)(this)).eliminarAsync(inValue);
+            return ((BuildUp.OSalidaWS.OrdenSalidaWS)(this)).eliminarOrdenSalidaAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -927,10 +960,11 @@ namespace BuildUp.OSalidaWS {
             return base.Channel.listarOrdenesSalidaConParametros(request);
         }
         
-        public BuildUp.OSalidaWS.ordenSalida[] listarOrdenesSalidaConParametros(string nombreOperario, System.DateTime fechaRegistro) {
+        public BuildUp.OSalidaWS.ordenSalida[] listarOrdenesSalidaConParametros(string nombreOperario, System.DateTime fecha_inf, System.DateTime fecha_sup) {
             BuildUp.OSalidaWS.listarOrdenesSalidaConParametrosRequest inValue = new BuildUp.OSalidaWS.listarOrdenesSalidaConParametrosRequest();
             inValue.nombreOperario = nombreOperario;
-            inValue.fechaRegistro = fechaRegistro;
+            inValue.fecha_inf = fecha_inf;
+            inValue.fecha_sup = fecha_sup;
             BuildUp.OSalidaWS.listarOrdenesSalidaConParametrosResponse retVal = ((BuildUp.OSalidaWS.OrdenSalidaWS)(this)).listarOrdenesSalidaConParametros(inValue);
             return retVal.@return;
         }
@@ -940,10 +974,11 @@ namespace BuildUp.OSalidaWS {
             return base.Channel.listarOrdenesSalidaConParametrosAsync(request);
         }
         
-        public System.Threading.Tasks.Task<BuildUp.OSalidaWS.listarOrdenesSalidaConParametrosResponse> listarOrdenesSalidaConParametrosAsync(string nombreOperario, System.DateTime fechaRegistro) {
+        public System.Threading.Tasks.Task<BuildUp.OSalidaWS.listarOrdenesSalidaConParametrosResponse> listarOrdenesSalidaConParametrosAsync(string nombreOperario, System.DateTime fecha_inf, System.DateTime fecha_sup) {
             BuildUp.OSalidaWS.listarOrdenesSalidaConParametrosRequest inValue = new BuildUp.OSalidaWS.listarOrdenesSalidaConParametrosRequest();
             inValue.nombreOperario = nombreOperario;
-            inValue.fechaRegistro = fechaRegistro;
+            inValue.fecha_inf = fecha_inf;
+            inValue.fecha_sup = fecha_sup;
             return ((BuildUp.OSalidaWS.OrdenSalidaWS)(this)).listarOrdenesSalidaConParametrosAsync(inValue);
         }
     }

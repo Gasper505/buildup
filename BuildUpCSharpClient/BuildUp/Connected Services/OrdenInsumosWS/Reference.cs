@@ -36,18 +36,6 @@ namespace BuildUp.OrdenInsumosWS {
         System.Threading.Tasks.Task<BuildUp.OrdenInsumosWS.insertarOrdenInsumosResponse> insertarOrdenInsumosAsync(BuildUp.OrdenInsumosWS.insertarOrdenInsumosRequest request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/OrdenInsumosWS/actualizarOrdenInsumosRequest", ReplyAction="http://services.buildup.pucp.edu.pe/OrdenInsumosWS/actualizarOrdenInsumosResponse" +
-            "")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        BuildUp.OrdenInsumosWS.actualizarOrdenInsumosResponse actualizarOrdenInsumos(BuildUp.OrdenInsumosWS.actualizarOrdenInsumosRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/OrdenInsumosWS/actualizarOrdenInsumosRequest", ReplyAction="http://services.buildup.pucp.edu.pe/OrdenInsumosWS/actualizarOrdenInsumosResponse" +
-            "")]
-        System.Threading.Tasks.Task<BuildUp.OrdenInsumosWS.actualizarOrdenInsumosResponse> actualizarOrdenInsumosAsync(BuildUp.OrdenInsumosWS.actualizarOrdenInsumosRequest request);
-        
-        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/OrdenInsumosWS/eliminarOrdenInsumosRequest", ReplyAction="http://services.buildup.pucp.edu.pe/OrdenInsumosWS/eliminarOrdenInsumosResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
@@ -56,6 +44,40 @@ namespace BuildUp.OrdenInsumosWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/OrdenInsumosWS/eliminarOrdenInsumosRequest", ReplyAction="http://services.buildup.pucp.edu.pe/OrdenInsumosWS/eliminarOrdenInsumosResponse")]
         System.Threading.Tasks.Task<BuildUp.OrdenInsumosWS.eliminarOrdenInsumosResponse> eliminarOrdenInsumosAsync(BuildUp.OrdenInsumosWS.eliminarOrdenInsumosRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/OrdenInsumosWS/listarOrdenInsumosPorRangoFech" +
+            "aRequest", ReplyAction="http://services.buildup.pucp.edu.pe/OrdenInsumosWS/listarOrdenInsumosPorRangoFech" +
+            "aResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        BuildUp.OrdenInsumosWS.listarOrdenInsumosPorRangoFechaResponse listarOrdenInsumosPorRangoFecha(BuildUp.OrdenInsumosWS.listarOrdenInsumosPorRangoFechaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/OrdenInsumosWS/listarOrdenInsumosPorRangoFech" +
+            "aRequest", ReplyAction="http://services.buildup.pucp.edu.pe/OrdenInsumosWS/listarOrdenInsumosPorRangoFech" +
+            "aResponse")]
+        System.Threading.Tasks.Task<BuildUp.OrdenInsumosWS.listarOrdenInsumosPorRangoFechaResponse> listarOrdenInsumosPorRangoFechaAsync(BuildUp.OrdenInsumosWS.listarOrdenInsumosPorRangoFechaRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/OrdenInsumosWS/modificarOrdenInsumosRequest", ReplyAction="http://services.buildup.pucp.edu.pe/OrdenInsumosWS/modificarOrdenInsumosResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        BuildUp.OrdenInsumosWS.modificarOrdenInsumosResponse modificarOrdenInsumos(BuildUp.OrdenInsumosWS.modificarOrdenInsumosRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/OrdenInsumosWS/modificarOrdenInsumosRequest", ReplyAction="http://services.buildup.pucp.edu.pe/OrdenInsumosWS/modificarOrdenInsumosResponse")]
+        System.Threading.Tasks.Task<BuildUp.OrdenInsumosWS.modificarOrdenInsumosResponse> modificarOrdenInsumosAsync(BuildUp.OrdenInsumosWS.modificarOrdenInsumosRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/OrdenInsumosWS/aceptarOrdenInsumosRequest", ReplyAction="http://services.buildup.pucp.edu.pe/OrdenInsumosWS/aceptarOrdenInsumosResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        BuildUp.OrdenInsumosWS.aceptarOrdenInsumosResponse aceptarOrdenInsumos(BuildUp.OrdenInsumosWS.aceptarOrdenInsumosRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/OrdenInsumosWS/aceptarOrdenInsumosRequest", ReplyAction="http://services.buildup.pucp.edu.pe/OrdenInsumosWS/aceptarOrdenInsumosResponse")]
+        System.Threading.Tasks.Task<BuildUp.OrdenInsumosWS.aceptarOrdenInsumosResponse> aceptarOrdenInsumosAsync(BuildUp.OrdenInsumosWS.aceptarOrdenInsumosRequest request);
     }
     
     /// <remarks/>
@@ -66,7 +88,11 @@ namespace BuildUp.OrdenInsumosWS {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.buildup.pucp.edu.pe/")]
     public partial class ordenInsumos : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private double cantidadField;
+        private bool activoField;
+        
+        private int cantidadField;
+        
+        private bool estadoField;
         
         private System.DateTime fechaField;
         
@@ -82,7 +108,19 @@ namespace BuildUp.OrdenInsumosWS {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public double cantidad {
+        public bool activo {
+            get {
+                return this.activoField;
+            }
+            set {
+                this.activoField = value;
+                this.RaisePropertyChanged("activo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public int cantidad {
             get {
                 return this.cantidadField;
             }
@@ -93,7 +131,19 @@ namespace BuildUp.OrdenInsumosWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public bool estado {
+            get {
+                return this.estadoField;
+            }
+            set {
+                this.estadoField = value;
+                this.RaisePropertyChanged("estado");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
         public System.DateTime fecha {
             get {
                 return this.fechaField;
@@ -117,7 +167,7 @@ namespace BuildUp.OrdenInsumosWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
         public int idOrdenInsumos {
             get {
                 return this.idOrdenInsumosField;
@@ -129,7 +179,7 @@ namespace BuildUp.OrdenInsumosWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
         public insumo insumo {
             get {
                 return this.insumoField;
@@ -141,7 +191,7 @@ namespace BuildUp.OrdenInsumosWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
         public operario operario {
             get {
                 return this.operarioField;
@@ -153,7 +203,7 @@ namespace BuildUp.OrdenInsumosWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
         public string unidadMedida {
             get {
                 return this.unidadMedidaField;
@@ -481,6 +531,10 @@ namespace BuildUp.OrdenInsumosWS {
         
         private bool fechaFinContratoFieldSpecified;
         
+        private System.DateTime fechaNacimientoField;
+        
+        private bool fechaNacimientoFieldSpecified;
+        
         private byte[] fotoField;
         
         private int idPersonaField;
@@ -552,7 +606,31 @@ namespace BuildUp.OrdenInsumosWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public System.DateTime fechaNacimiento {
+            get {
+                return this.fechaNacimientoField;
+            }
+            set {
+                this.fechaNacimientoField = value;
+                this.RaisePropertyChanged("fechaNacimiento");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool fechaNacimientoSpecified {
+            get {
+                return this.fechaNacimientoFieldSpecified;
+            }
+            set {
+                this.fechaNacimientoFieldSpecified = value;
+                this.RaisePropertyChanged("fechaNacimientoSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", Order=5)]
         public byte[] foto {
             get {
                 return this.fotoField;
@@ -564,7 +642,7 @@ namespace BuildUp.OrdenInsumosWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
         public int idPersona {
             get {
                 return this.idPersonaField;
@@ -576,7 +654,7 @@ namespace BuildUp.OrdenInsumosWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
         public string nombres {
             get {
                 return this.nombresField;
@@ -588,7 +666,7 @@ namespace BuildUp.OrdenInsumosWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
         public string rol {
             get {
                 return this.rolField;
@@ -600,7 +678,7 @@ namespace BuildUp.OrdenInsumosWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
         public string telefono {
             get {
                 return this.telefonoField;
@@ -711,42 +789,6 @@ namespace BuildUp.OrdenInsumosWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarOrdenInsumos", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
-    public partial class actualizarOrdenInsumosRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public BuildUp.OrdenInsumosWS.ordenInsumos ordenInsumo;
-        
-        public actualizarOrdenInsumosRequest() {
-        }
-        
-        public actualizarOrdenInsumosRequest(BuildUp.OrdenInsumosWS.ordenInsumos ordenInsumo) {
-            this.ordenInsumo = ordenInsumo;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarOrdenInsumosResponse", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
-    public partial class actualizarOrdenInsumosResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public actualizarOrdenInsumosResponse() {
-        }
-        
-        public actualizarOrdenInsumosResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarOrdenInsumos", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
     public partial class eliminarOrdenInsumosRequest {
         
@@ -776,6 +818,119 @@ namespace BuildUp.OrdenInsumosWS {
         }
         
         public eliminarOrdenInsumosResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarOrdenInsumosPorRangoFecha", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarOrdenInsumosPorRangoFechaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public System.DateTime fechaInicio;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public System.DateTime fechaFin;
+        
+        public listarOrdenInsumosPorRangoFechaRequest() {
+        }
+        
+        public listarOrdenInsumosPorRangoFechaRequest(System.DateTime fechaInicio, System.DateTime fechaFin) {
+            this.fechaInicio = fechaInicio;
+            this.fechaFin = fechaFin;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarOrdenInsumosPorRangoFechaResponse", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarOrdenInsumosPorRangoFechaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public BuildUp.OrdenInsumosWS.ordenInsumos[] @return;
+        
+        public listarOrdenInsumosPorRangoFechaResponse() {
+        }
+        
+        public listarOrdenInsumosPorRangoFechaResponse(BuildUp.OrdenInsumosWS.ordenInsumos[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarOrdenInsumos", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
+    public partial class modificarOrdenInsumosRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public BuildUp.OrdenInsumosWS.ordenInsumos ordenInsumo;
+        
+        public modificarOrdenInsumosRequest() {
+        }
+        
+        public modificarOrdenInsumosRequest(BuildUp.OrdenInsumosWS.ordenInsumos ordenInsumo) {
+            this.ordenInsumo = ordenInsumo;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarOrdenInsumosResponse", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
+    public partial class modificarOrdenInsumosResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public modificarOrdenInsumosResponse() {
+        }
+        
+        public modificarOrdenInsumosResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="aceptarOrdenInsumos", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
+    public partial class aceptarOrdenInsumosRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idOrdenInsumos;
+        
+        public aceptarOrdenInsumosRequest() {
+        }
+        
+        public aceptarOrdenInsumosRequest(int idOrdenInsumos) {
+            this.idOrdenInsumos = idOrdenInsumos;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="aceptarOrdenInsumosResponse", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
+    public partial class aceptarOrdenInsumosResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public aceptarOrdenInsumosResponse() {
+        }
+        
+        public aceptarOrdenInsumosResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -852,29 +1007,6 @@ namespace BuildUp.OrdenInsumosWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        BuildUp.OrdenInsumosWS.actualizarOrdenInsumosResponse BuildUp.OrdenInsumosWS.OrdenInsumosWS.actualizarOrdenInsumos(BuildUp.OrdenInsumosWS.actualizarOrdenInsumosRequest request) {
-            return base.Channel.actualizarOrdenInsumos(request);
-        }
-        
-        public int actualizarOrdenInsumos(BuildUp.OrdenInsumosWS.ordenInsumos ordenInsumo) {
-            BuildUp.OrdenInsumosWS.actualizarOrdenInsumosRequest inValue = new BuildUp.OrdenInsumosWS.actualizarOrdenInsumosRequest();
-            inValue.ordenInsumo = ordenInsumo;
-            BuildUp.OrdenInsumosWS.actualizarOrdenInsumosResponse retVal = ((BuildUp.OrdenInsumosWS.OrdenInsumosWS)(this)).actualizarOrdenInsumos(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<BuildUp.OrdenInsumosWS.actualizarOrdenInsumosResponse> BuildUp.OrdenInsumosWS.OrdenInsumosWS.actualizarOrdenInsumosAsync(BuildUp.OrdenInsumosWS.actualizarOrdenInsumosRequest request) {
-            return base.Channel.actualizarOrdenInsumosAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<BuildUp.OrdenInsumosWS.actualizarOrdenInsumosResponse> actualizarOrdenInsumosAsync(BuildUp.OrdenInsumosWS.ordenInsumos ordenInsumo) {
-            BuildUp.OrdenInsumosWS.actualizarOrdenInsumosRequest inValue = new BuildUp.OrdenInsumosWS.actualizarOrdenInsumosRequest();
-            inValue.ordenInsumo = ordenInsumo;
-            return ((BuildUp.OrdenInsumosWS.OrdenInsumosWS)(this)).actualizarOrdenInsumosAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         BuildUp.OrdenInsumosWS.eliminarOrdenInsumosResponse BuildUp.OrdenInsumosWS.OrdenInsumosWS.eliminarOrdenInsumos(BuildUp.OrdenInsumosWS.eliminarOrdenInsumosRequest request) {
             return base.Channel.eliminarOrdenInsumos(request);
         }
@@ -895,6 +1027,77 @@ namespace BuildUp.OrdenInsumosWS {
             BuildUp.OrdenInsumosWS.eliminarOrdenInsumosRequest inValue = new BuildUp.OrdenInsumosWS.eliminarOrdenInsumosRequest();
             inValue.idOrdenInsumos = idOrdenInsumos;
             return ((BuildUp.OrdenInsumosWS.OrdenInsumosWS)(this)).eliminarOrdenInsumosAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        BuildUp.OrdenInsumosWS.listarOrdenInsumosPorRangoFechaResponse BuildUp.OrdenInsumosWS.OrdenInsumosWS.listarOrdenInsumosPorRangoFecha(BuildUp.OrdenInsumosWS.listarOrdenInsumosPorRangoFechaRequest request) {
+            return base.Channel.listarOrdenInsumosPorRangoFecha(request);
+        }
+        
+        public BuildUp.OrdenInsumosWS.ordenInsumos[] listarOrdenInsumosPorRangoFecha(System.DateTime fechaInicio, System.DateTime fechaFin) {
+            BuildUp.OrdenInsumosWS.listarOrdenInsumosPorRangoFechaRequest inValue = new BuildUp.OrdenInsumosWS.listarOrdenInsumosPorRangoFechaRequest();
+            inValue.fechaInicio = fechaInicio;
+            inValue.fechaFin = fechaFin;
+            BuildUp.OrdenInsumosWS.listarOrdenInsumosPorRangoFechaResponse retVal = ((BuildUp.OrdenInsumosWS.OrdenInsumosWS)(this)).listarOrdenInsumosPorRangoFecha(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<BuildUp.OrdenInsumosWS.listarOrdenInsumosPorRangoFechaResponse> BuildUp.OrdenInsumosWS.OrdenInsumosWS.listarOrdenInsumosPorRangoFechaAsync(BuildUp.OrdenInsumosWS.listarOrdenInsumosPorRangoFechaRequest request) {
+            return base.Channel.listarOrdenInsumosPorRangoFechaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<BuildUp.OrdenInsumosWS.listarOrdenInsumosPorRangoFechaResponse> listarOrdenInsumosPorRangoFechaAsync(System.DateTime fechaInicio, System.DateTime fechaFin) {
+            BuildUp.OrdenInsumosWS.listarOrdenInsumosPorRangoFechaRequest inValue = new BuildUp.OrdenInsumosWS.listarOrdenInsumosPorRangoFechaRequest();
+            inValue.fechaInicio = fechaInicio;
+            inValue.fechaFin = fechaFin;
+            return ((BuildUp.OrdenInsumosWS.OrdenInsumosWS)(this)).listarOrdenInsumosPorRangoFechaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        BuildUp.OrdenInsumosWS.modificarOrdenInsumosResponse BuildUp.OrdenInsumosWS.OrdenInsumosWS.modificarOrdenInsumos(BuildUp.OrdenInsumosWS.modificarOrdenInsumosRequest request) {
+            return base.Channel.modificarOrdenInsumos(request);
+        }
+        
+        public int modificarOrdenInsumos(BuildUp.OrdenInsumosWS.ordenInsumos ordenInsumo) {
+            BuildUp.OrdenInsumosWS.modificarOrdenInsumosRequest inValue = new BuildUp.OrdenInsumosWS.modificarOrdenInsumosRequest();
+            inValue.ordenInsumo = ordenInsumo;
+            BuildUp.OrdenInsumosWS.modificarOrdenInsumosResponse retVal = ((BuildUp.OrdenInsumosWS.OrdenInsumosWS)(this)).modificarOrdenInsumos(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<BuildUp.OrdenInsumosWS.modificarOrdenInsumosResponse> BuildUp.OrdenInsumosWS.OrdenInsumosWS.modificarOrdenInsumosAsync(BuildUp.OrdenInsumosWS.modificarOrdenInsumosRequest request) {
+            return base.Channel.modificarOrdenInsumosAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<BuildUp.OrdenInsumosWS.modificarOrdenInsumosResponse> modificarOrdenInsumosAsync(BuildUp.OrdenInsumosWS.ordenInsumos ordenInsumo) {
+            BuildUp.OrdenInsumosWS.modificarOrdenInsumosRequest inValue = new BuildUp.OrdenInsumosWS.modificarOrdenInsumosRequest();
+            inValue.ordenInsumo = ordenInsumo;
+            return ((BuildUp.OrdenInsumosWS.OrdenInsumosWS)(this)).modificarOrdenInsumosAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        BuildUp.OrdenInsumosWS.aceptarOrdenInsumosResponse BuildUp.OrdenInsumosWS.OrdenInsumosWS.aceptarOrdenInsumos(BuildUp.OrdenInsumosWS.aceptarOrdenInsumosRequest request) {
+            return base.Channel.aceptarOrdenInsumos(request);
+        }
+        
+        public int aceptarOrdenInsumos(int idOrdenInsumos) {
+            BuildUp.OrdenInsumosWS.aceptarOrdenInsumosRequest inValue = new BuildUp.OrdenInsumosWS.aceptarOrdenInsumosRequest();
+            inValue.idOrdenInsumos = idOrdenInsumos;
+            BuildUp.OrdenInsumosWS.aceptarOrdenInsumosResponse retVal = ((BuildUp.OrdenInsumosWS.OrdenInsumosWS)(this)).aceptarOrdenInsumos(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<BuildUp.OrdenInsumosWS.aceptarOrdenInsumosResponse> BuildUp.OrdenInsumosWS.OrdenInsumosWS.aceptarOrdenInsumosAsync(BuildUp.OrdenInsumosWS.aceptarOrdenInsumosRequest request) {
+            return base.Channel.aceptarOrdenInsumosAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<BuildUp.OrdenInsumosWS.aceptarOrdenInsumosResponse> aceptarOrdenInsumosAsync(int idOrdenInsumos) {
+            BuildUp.OrdenInsumosWS.aceptarOrdenInsumosRequest inValue = new BuildUp.OrdenInsumosWS.aceptarOrdenInsumosRequest();
+            inValue.idOrdenInsumos = idOrdenInsumos;
+            return ((BuildUp.OrdenInsumosWS.OrdenInsumosWS)(this)).aceptarOrdenInsumosAsync(inValue);
         }
     }
 }

@@ -98,6 +98,7 @@
             this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.dgvProblemas);
             this.Name = "frmBuscarProblema";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Búsqueda de Problemas";
             ((System.ComponentModel.ISupportInitialize)(this.dgvProblemas)).EndInit();
             this.ResumeLayout(false);

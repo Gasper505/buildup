@@ -15,6 +15,7 @@ namespace BuildUp
 
         OSalidaWS.OrdenSalidaWSClient daoOrdenSalida;
         OSalidaWS.ordenSalida ordenSalida;
+        TipoLadrilloWS.TipoLadrilloWSClient daoTipoLadrillo;
 
         public frmGestionarOrdenSalida()
         {
@@ -22,8 +23,14 @@ namespace BuildUp
             EstablecerEstadoComponentes(Estado.Inicial);
             daoOrdenSalida = new OSalidaWS.OrdenSalidaWSClient();
             ordenSalida = new OSalidaWS.ordenSalida();
+            daoTipoLadrillo = new TipoLadrilloWS.TipoLadrilloWSClient();
+
             dgvLotes.AutoGenerateColumns = false;
             dgvLotes.DataSource = ordenSalida.lineasOrdenSalida;
+
+            cboNombreTipoLadrillo.DataSource = new BindingList<TipoLadrilloWS.tipoLadrillo>(daoTipoLadrillo.listarTiposLadrillo().ToArray());
+            cboNombreTipoLadrillo.ValueMember = "idTipoLadrillo";
+            cboNombreTipoLadrillo.DisplayMember = "nombre";
 
             if (frmLogIn.Usuario.rol == "Jefe"
                 || frmLogIn.Usuario.rol == "JEFE"
@@ -37,7 +44,6 @@ namespace BuildUp
                 btnGuardar.Visible = false;
                 btnEliminar.Visible = false;
                 btnCancelar.Visible = false;
-                
             }
         }
 
@@ -118,25 +124,42 @@ namespace BuildUp
                     break;
             }
         }
-        private void btnNuevo_Click(object sender, EventArgs e)
-        {
-            EstablecerEstadoComponentes(Estado.Nuevo);
-        }
+        
+
+        //-----------------------------------------------------------------
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            ordenSalida = new OSalidaWS.ordenSalida();
-            ordenSalida.fecha = dtpFechaRegistro.Value;
-            ordenSalida.idOrdenSalida = Int32.Parse(txtIDOrden.Text);
-            ordenSalida.operario.apellidos = txtApellidos.Text;
-            ordenSalida.operario.nombres = txtNombres.Text;
-            ordenSalida.operario.idPersona = Int32.Parse(txtIDOperario.Text);
+            DialogResult dr = MessageBox.Show("¿Está seguro que desea registrar esta Orden de Salida?", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (dr == DialogResult.Yes)
+            {
+                ordenSalida.fecha = dtpFechaRegistro.Value;
+                ordenSalida.operario.apellidos = txtApellidos.Text;
+                ordenSalida.operario.nombres = txtNombres.Text;
+                ordenSalida.operario.idPersona = Int32.Parse(txtIDOperario.Text);
+                //...
 
 
-            daoOrdenSalida.insertar(ordenSalida);
-            MessageBox.Show("Orden de Salida registrada con éxito", "Mensaje Informativo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            EstablecerEstadoComponentes(Estado.Inicial);
-            
+                int result = daoOrdenSalida.insertarOrdenSalida(ordenSalida);
+                if (result != 0)
+                {
+                    MessageBox.Show("El registro ha sido exitoso", "Mensaje de Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtIDOrden.Text = "";
+                    dtpFechaRegistro.Value = DateTime.Now;
+                    txtIDOperario.Text = "";
+                    txtNombres.Text = "";
+                    txtApellidos.Text = "";
+                    cboNombreTipoLadrillo.Text = "";
+                    dgvLotes.DataSource = ordenSalida.lineasOrdenSalida;
+                    numNroAproxLadrillos.Value = 0;
+                    EstablecerEstadoComponentes(Estado.Inicial);
+                }
+                else
+                {
+                    MessageBox.Show("Error en el proceso", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -152,14 +175,82 @@ namespace BuildUp
                 txtNombres.Text = ordenSalida.operario.nombres;
                 txtApellidos.Text = ordenSalida.operario.apellidos;
 
-                dgvLotes.DataSource = ordenSalida.lineasOrdenSalida;
+                dgvLotes.DataSource = ordenSalida.lineasOrdenSalida; //<---
                 
                 EstablecerEstadoComponentes(Estado.Modificacion);
             }
         }
 
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            DialogResult dr = MessageBox.Show("¿Esta seguro que desea actualizar esta Orden de Salida?", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (dr == DialogResult.Yes)
+            {
+                ordenSalida.idOrdenSalida = Int32.Parse(txtIDOrden.Text);
+                ordenSalida.fecha = dtpFechaRegistro.Value;
+                ordenSalida.operario.apellidos = txtApellidos.Text;
+                ordenSalida.operario.nombres = txtNombres.Text;
+                ordenSalida.operario.idPersona = Int32.Parse(txtIDOperario.Text);
+                //...
+
+                int result = 0;
+                result = daoOrdenSalida.actualizarOrdenSalida(ordenSalida);
+                if (result != 0)
+                {
+                    MessageBox.Show("La actualización ha sido exitosa", "Mensaje de Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtIDOrden.Text = "";
+                    dtpFechaRegistro.Value = DateTime.Now;
+                    txtIDOperario.Text = "";
+                    txtNombres.Text = "";
+                    txtApellidos.Text = "";
+                    cboNombreTipoLadrillo.Text = "";
+                    dgvLotes.DataSource = ordenSalida.lineasOrdenSalida;
+                    numNroAproxLadrillos.Value = 0;
+                    EstablecerEstadoComponentes(Estado.Inicial);
+                }
+                else
+                {
+                    MessageBox.Show("Error en el proceso", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            DialogResult dr = MessageBox.Show("¿Está seguro que desea eliminar esta Orden de Salida del registro?", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (dr == DialogResult.Yes)
+            {
+                daoOrdenSalida.eliminarOrdenSalida(Int32.Parse(txtIDOrden.Text));
+                txtIDOrden.Text = "";
+                dtpFechaRegistro.Value = DateTime.Now;
+                txtIDOperario.Text = "";
+                txtNombres.Text = "";
+                txtApellidos.Text = "";
+                cboNombreTipoLadrillo.Text = "";
+                dgvLotes.DataSource = ordenSalida.lineasOrdenSalida;
+                numNroAproxLadrillos.Value = 0;
+                EstablecerEstadoComponentes(Estado.Inicial);
+            }
+        }
+
+        //-----------------------------------------------------------------
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            EstablecerEstadoComponentes(Estado.Nuevo);
+        }
+
         private void btnCancelar_Click(object sender, EventArgs e)
         {
+            txtIDOrden.Text = "";
+            dtpFechaRegistro.Value = DateTime.Now;
+            txtIDOperario.Text = "";
+            txtNombres.Text = "";
+            txtApellidos.Text = "";
+            cboNombreTipoLadrillo.Text = "";
+            dgvLotes.DataSource = ordenSalida.lineasOrdenSalida;
+            numNroAproxLadrillos.Value = 0;
             EstablecerEstadoComponentes(Estado.Inicial);
         }
 
@@ -168,20 +259,13 @@ namespace BuildUp
             this.Hide();
         }
 
-        private void btnActualizar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnEliminar_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void dgvLotes_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            OSalidaWS.ordenSalida data = dgvLotes.Rows[e.RowIndex].DataBoundItem as OSalidaWS.ordenSalida;
-            dgvLotes.Rows[e.RowIndex].Cells[1].Value = data.operario.nombres + data.operario.apellidos;
+            //OSalidaWS.ordenSalida data = dgvLotes.Rows[e.RowIndex].DataBoundItem as OSalidaWS.ordenSalida;
+            //dgvLotes.Rows[e.RowIndex].Cells[1].Value = data.;
+
+            //TipoLadrilloWS.tipoLadrillo data = dgvLotes.Rows[e.RowIndex].DataBoundItem as TipoLadrilloWS.tipoLadrillo;
+            //dgvLotes.Rows[e.RowIndex].Cells[1].Value = data.nombre;
         }
     }
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="ctUw6w0Hl0h2SxD1VZAb20M9SNInZ0VOv4Lrpr4Cf8U=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="5FW4H0Wd/8P2XgsgJXmsWgjvXTXNuUX7/RfOfE75fVI=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="IncidenteMaquinariaWSPortBinding">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="IncidenteMaquinariaWSPort" contract="IncidenteMaquinariaWS.IncidenteMaquinariaWS" bindingType="basicHttpBinding" address="http://52.207.108.70:8080/BuildUpServices/IncidenteMaquinaria" bindingConfiguration="IncidenteMaquinariaWSPortBinding">
+    <endpoint name="IncidenteMaquinariaWSPort" contract="IncidenteMaquinariaWS.IncidenteMaquinariaWS" bindingType="basicHttpBinding" address="http://52.207.108.70:8080/BuildUpServices/IncidenteMaquinariaWS" bindingConfiguration="IncidenteMaquinariaWSPortBinding">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://52.207.108.70:8080/BuildUpServices/IncidenteMaquinaria</serializedValue>
+          <serializedValue>http://52.207.108.70:8080/BuildUpServices/IncidenteMaquinariaWS</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

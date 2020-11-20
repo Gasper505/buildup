@@ -6,12 +6,16 @@
   <xs:element name="eliminarLineaProduccionResponse" type="tns:eliminarLineaProduccionResponse" />
   <xs:element name="insertarLineaProduccion" type="tns:insertarLineaProduccion" />
   <xs:element name="insertarLineaProduccionResponse" type="tns:insertarLineaProduccionResponse" />
-  <xs:element name="listarLineaProduccion" type="tns:listarLineaProduccion" />
-  <xs:element name="listarLineaProduccionResponse" type="tns:listarLineaProduccionResponse" />
-  <xs:complexType name="listarLineaProduccion">
-    <xs:sequence />
+  <xs:element name="listarPorNombreLineaProduccion" type="tns:listarPorNombreLineaProduccion" />
+  <xs:element name="listarPorNombreLineaProduccionResponse" type="tns:listarPorNombreLineaProduccionResponse" />
+  <xs:element name="modificarLineaProduccion" type="tns:modificarLineaProduccion" />
+  <xs:element name="modificarLineaProduccionResponse" type="tns:modificarLineaProduccionResponse" />
+  <xs:complexType name="listarPorNombreLineaProduccion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="listarLineaProduccionResponse">
+  <xs:complexType name="listarPorNombreLineaProduccionResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:lineaProduccion" />
     </xs:sequence>
@@ -41,6 +45,7 @@
       <xs:element minOccurs="0" name="apellidos" type="xs:string" />
       <xs:element minOccurs="0" name="correo" type="xs:string" />
       <xs:element minOccurs="0" name="fechaFinContrato" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaNacimiento" type="xs:dateTime" />
       <xs:element minOccurs="0" name="foto" type="xs:base64Binary" />
       <xs:element name="idPersona" type="xs:int" />
       <xs:element minOccurs="0" name="nombres" type="xs:string" />
@@ -79,10 +84,20 @@
   <xs:complexType name="actualizarLineaProduccion">
     <xs:sequence>
       <xs:element name="idlineaProduccion" type="xs:int" />
-      <xs:element name="arg1" type="xs:int" />
+      <xs:element name="idTipoLadrillo" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="actualizarLineaProduccionResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarLineaProduccion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="lineaProduccion" type="tns:lineaProduccion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarLineaProduccionResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>

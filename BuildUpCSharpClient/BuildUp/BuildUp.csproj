@@ -466,26 +466,47 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\IncidenteMaquinariaWS\BuildUp.IncidenteMaquinariaWS.actualizarIncidenteMaquinariaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\IncidenteMaquinariaWS\BuildUp.IncidenteMaquinariaWS.eliminarIncidenteMaquinariaResponse.datasource">
+    <None Include="Connected Services\IncidenteMaquinariaWS\BuildUp.IncidenteMaquinariaWS.eliminarIncidenteMaquinariaResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\IncidenteMaquinariaWS\BuildUp.IncidenteMaquinariaWS.incidenteMaquinaria.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\IncidenteMaquinariaWS\BuildUp.IncidenteMaquinariaWS.insertarIncidenteMaquinariaResponse.datasource">
+    <None Include="Connected Services\IncidenteMaquinariaWS\BuildUp.IncidenteMaquinariaWS.ingeniero.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\IncidenteMaquinariaWS\BuildUp.IncidenteMaquinariaWS.insertarIncidenteMaquinariaResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\IncidenteMaquinariaWS\BuildUp.IncidenteMaquinariaWS.insertarProblemaIncidenteMaquinariaResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\IncidenteMaquinariaWS\BuildUp.IncidenteMaquinariaWS.insertarRespuestaIncidenteMaquinariaResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\IncidenteMaquinariaWS\BuildUp.IncidenteMaquinariaWS.listarIncidenteMaquinariaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\IncidenteMaquinariaWS\IncidenteMaquinaria.wsdl" />
-    <None Include="Connected Services\IncidenteMaquinariaWS\IncidenteMaquinaria.xsd">
+    <None Include="Connected Services\IncidenteMaquinariaWS\BuildUp.IncidenteMaquinariaWS.listarPorRangoFechaIncidenteMaquinariaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\IncidenteMaquinariaWS\BuildUp.IncidenteMaquinariaWS.modificarPorIngenieroIncidenteMaquinariaResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\IncidenteMaquinariaWS\BuildUp.IncidenteMaquinariaWS.modificarPorSupervisorIncidenteMaquinariaResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\IncidenteMaquinariaWS\BuildUp.IncidenteMaquinariaWS.obtenerIngenieroIncidenteMaquinariaResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\IncidenteMaquinariaWS\BuildUp.IncidenteMaquinariaWS.obtenerRespuestaIncidenteMaquinariaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\IncidenteMaquinariaWS\IncidenteMaquinariaWS.wsdl" />
+    <None Include="Connected Services\IncidenteMaquinariaWS\IncidenteMaquinariaWS.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\IngenieroWS\BuildUp.IngenieroWS.actualizarIngenieroResponse.datasource">
+    <None Include="Connected Services\IngenieroWS\BuildUp.IngenieroWS.actualizarEstadoIngenieroResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\IngenieroWS\BuildUp.IngenieroWS.eliminarIngenieroResponse.datasource">
@@ -500,12 +521,15 @@
     <None Include="Connected Services\IngenieroWS\BuildUp.IngenieroWS.listarIngenieroResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\IngenieroWS\BuildUp.IngenieroWS.modificarIngenieroResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\IngenieroWS\BuildUp.IngenieroWS.obtenerEspecialidadIngenieroResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\IngenieroWS\IngenieroWS.wsdl" />
     <None Include="Connected Services\IngenieroWS\IngenieroWS.xsd">
       <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\InsumoWS\BuildUp.InsumoWS.actualizarInsumoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\InsumoWS\BuildUp.InsumoWS.eliminarInsumoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -519,11 +543,17 @@
     <None Include="Connected Services\InsumoWS\BuildUp.InsumoWS.listarInsumoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\InsumoWS\BuildUp.InsumoWS.listarPorNombreInsumoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\InsumoWS\BuildUp.InsumoWS.modificarInsumoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\InsumoWS\InsumoWS.wsdl" />
     <None Include="Connected Services\InsumoWS\InsumoWS.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\JefeAreaWS\BuildUp.JefeAreaWS.actualizarJefeAreaResponse.datasource">
+    <None Include="Connected Services\JefeAreaWS\BuildUp.JefeAreaWS.actualizarEstadoJefeAreaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\JefeAreaWS\BuildUp.JefeAreaWS.eliminarJefeAreaResponse.datasource">
@@ -538,8 +568,14 @@
     <None Include="Connected Services\JefeAreaWS\BuildUp.JefeAreaWS.listarJefeAreaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\JefeAreaWS\JefeArea.wsdl" />
-    <None Include="Connected Services\JefeAreaWS\JefeArea.xsd">
+    <None Include="Connected Services\JefeAreaWS\BuildUp.JefeAreaWS.modificarJefeAreaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\JefeAreaWS\BuildUp.JefeAreaWS.obtenerFotoFirmaJefeAreaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\JefeAreaWS\JefeAreaWS.wsdl" />
+    <None Include="Connected Services\JefeAreaWS\JefeAreaWS.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\LineaProduccionWS\BuildUp.LineaProduccionWS.actualizarLineaProduccionResponse.datasource">
@@ -554,7 +590,10 @@
     <None Include="Connected Services\LineaProduccionWS\BuildUp.LineaProduccionWS.lineaProduccion.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\LineaProduccionWS\BuildUp.LineaProduccionWS.listarLineaProduccionResponse.datasource">
+    <None Include="Connected Services\LineaProduccionWS\BuildUp.LineaProduccionWS.listarPorNombreLineaProduccionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LineaProduccionWS\BuildUp.LineaProduccionWS.modificarLineaProduccionResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\LineaProduccionWS\LineaProduccionWS.wsdl" />
@@ -570,10 +609,13 @@
     <None Include="Connected Services\MaqWS\BuildUp.MaqWS.insertarMaquinariaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\MaqWS\BuildUp.MaqWS.listarMaquinariaResponse.datasource">
+    <None Include="Connected Services\MaqWS\BuildUp.MaqWS.listarMaquinariasConParametrosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\MaqWS\BuildUp.MaqWS.maquinaria.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MaqWS\BuildUp.MaqWS.modificarMaquinariaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\MaqWS\MaquinariaWS.wsdl" />
@@ -592,6 +634,9 @@
     <None Include="Connected Services\MermaWS\BuildUp.MermaWS.listarMermaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\MermaWS\BuildUp.MermaWS.listarPorTipoMermaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\MermaWS\BuildUp.MermaWS.merma.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -599,7 +644,7 @@
     <None Include="Connected Services\MermaWS\MermaWS.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\OperarioWS\BuildUp.OperarioWS.actualizarOperarioResponse.datasource">
+    <None Include="Connected Services\OperarioWS\BuildUp.OperarioWS.actualizarEstadoOperarioResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\OperarioWS\BuildUp.OperarioWS.eliminarOperarioResponse.datasource">
@@ -611,6 +656,12 @@
     <None Include="Connected Services\OperarioWS\BuildUp.OperarioWS.listarOperarioResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\OperarioWS\BuildUp.OperarioWS.modificarOperarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OperarioWS\BuildUp.OperarioWS.obtenerLineaProduccionOperarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\OperarioWS\BuildUp.OperarioWS.operario.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -618,7 +669,7 @@
     <None Include="Connected Services\OperarioWS\OperarioWS.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\OrdenInsumosWS\BuildUp.OrdenInsumosWS.actualizarOrdenInsumosResponse.datasource">
+    <None Include="Connected Services\OrdenInsumosWS\BuildUp.OrdenInsumosWS.aceptarOrdenInsumosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\OrdenInsumosWS\BuildUp.OrdenInsumosWS.eliminarOrdenInsumosResponse.datasource">
@@ -627,7 +678,13 @@
     <None Include="Connected Services\OrdenInsumosWS\BuildUp.OrdenInsumosWS.insertarOrdenInsumosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\OrdenInsumosWS\BuildUp.OrdenInsumosWS.listarOrdenInsumosPorRangoFechaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\OrdenInsumosWS\BuildUp.OrdenInsumosWS.listarOrdenInsumosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OrdenInsumosWS\BuildUp.OrdenInsumosWS.modificarOrdenInsumosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\OrdenInsumosWS\BuildUp.OrdenInsumosWS.ordenInsumos.datasource">
@@ -637,13 +694,13 @@
     <None Include="Connected Services\OrdenInsumosWS\OrdenInsumosWS.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\OSalidaWS\BuildUp.OSalidaWS.actualizarResponse.datasource">
+    <None Include="Connected Services\OSalidaWS\BuildUp.OSalidaWS.actualizarOrdenSalidaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\OSalidaWS\BuildUp.OSalidaWS.eliminarResponse.datasource">
+    <None Include="Connected Services\OSalidaWS\BuildUp.OSalidaWS.eliminarOrdenSalidaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\OSalidaWS\BuildUp.OSalidaWS.insertarResponse.datasource">
+    <None Include="Connected Services\OSalidaWS\BuildUp.OSalidaWS.insertarOrdenSalidaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\OSalidaWS\BuildUp.OSalidaWS.listarOrdenesSalidaConParametrosResponse.datasource">
@@ -772,6 +829,9 @@
     <None Include="Connected Services\SupervisorWS\SupervisorWS.wsdl" />
     <None Include="Connected Services\SupervisorWS\SupervisorWS.xsd">
       <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TipoLadrilloWS\BuildUp.TipoLadrilloWS.eliminarTipoLadrilloResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\TipoLadrilloWS\BuildUp.TipoLadrilloWS.insertarTipoLadrilloResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>

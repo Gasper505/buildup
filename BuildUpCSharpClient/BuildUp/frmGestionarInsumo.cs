@@ -100,7 +100,7 @@ namespace BuildUp
                 insumo.nombre = txtNombreInsumo.Text;
                 insumo.unidadMedida = cboUnidadMedida.Text;
 
-                int result = daoInsumo.actualizarInsumo(insumo);
+                int result = daoInsumo.modificarInsumo(insumo);
                 if (result != 0)
                 {
                     MessageBox.Show("La actualización ha sido exitosa", "Mensaje de Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);

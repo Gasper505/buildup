@@ -16,19 +16,8 @@ namespace BuildUp.OperarioWS {
     public interface OperarioWS {
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/OperarioWS/actualizarOperarioRequest", ReplyAction="http://services.buildup.pucp.edu.pe/OperarioWS/actualizarOperarioResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        BuildUp.OperarioWS.actualizarOperarioResponse actualizarOperario(BuildUp.OperarioWS.actualizarOperarioRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/OperarioWS/actualizarOperarioRequest", ReplyAction="http://services.buildup.pucp.edu.pe/OperarioWS/actualizarOperarioResponse")]
-        System.Threading.Tasks.Task<BuildUp.OperarioWS.actualizarOperarioResponse> actualizarOperarioAsync(BuildUp.OperarioWS.actualizarOperarioRequest request);
-        
-        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/OperarioWS/eliminarOperarioRequest", ReplyAction="http://services.buildup.pucp.edu.pe/OperarioWS/eliminarOperarioResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
         BuildUp.OperarioWS.eliminarOperarioResponse eliminarOperario(BuildUp.OperarioWS.eliminarOperarioRequest request);
         
@@ -54,6 +43,76 @@ namespace BuildUp.OperarioWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/OperarioWS/listarOperarioRequest", ReplyAction="http://services.buildup.pucp.edu.pe/OperarioWS/listarOperarioResponse")]
         System.Threading.Tasks.Task<BuildUp.OperarioWS.listarOperarioResponse> listarOperarioAsync(BuildUp.OperarioWS.listarOperarioRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/OperarioWS/modificarOperarioRequest", ReplyAction="http://services.buildup.pucp.edu.pe/OperarioWS/modificarOperarioResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        BuildUp.OperarioWS.modificarOperarioResponse modificarOperario(BuildUp.OperarioWS.modificarOperarioRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/OperarioWS/modificarOperarioRequest", ReplyAction="http://services.buildup.pucp.edu.pe/OperarioWS/modificarOperarioResponse")]
+        System.Threading.Tasks.Task<BuildUp.OperarioWS.modificarOperarioResponse> modificarOperarioAsync(BuildUp.OperarioWS.modificarOperarioRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/OperarioWS/obtenerLineaProduccionOperarioRequ" +
+            "est", ReplyAction="http://services.buildup.pucp.edu.pe/OperarioWS/obtenerLineaProduccionOperarioResp" +
+            "onse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        BuildUp.OperarioWS.obtenerLineaProduccionOperarioResponse obtenerLineaProduccionOperario(BuildUp.OperarioWS.obtenerLineaProduccionOperarioRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/OperarioWS/obtenerLineaProduccionOperarioRequ" +
+            "est", ReplyAction="http://services.buildup.pucp.edu.pe/OperarioWS/obtenerLineaProduccionOperarioResp" +
+            "onse")]
+        System.Threading.Tasks.Task<BuildUp.OperarioWS.obtenerLineaProduccionOperarioResponse> obtenerLineaProduccionOperarioAsync(BuildUp.OperarioWS.obtenerLineaProduccionOperarioRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/OperarioWS/actualizarEstadoOperarioRequest", ReplyAction="http://services.buildup.pucp.edu.pe/OperarioWS/actualizarEstadoOperarioResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        BuildUp.OperarioWS.actualizarEstadoOperarioResponse actualizarEstadoOperario(BuildUp.OperarioWS.actualizarEstadoOperarioRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/OperarioWS/actualizarEstadoOperarioRequest", ReplyAction="http://services.buildup.pucp.edu.pe/OperarioWS/actualizarEstadoOperarioResponse")]
+        System.Threading.Tasks.Task<BuildUp.OperarioWS.actualizarEstadoOperarioResponse> actualizarEstadoOperarioAsync(BuildUp.OperarioWS.actualizarEstadoOperarioRequest request);
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarOperario", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
+    public partial class eliminarOperarioRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idOperario;
+        
+        public eliminarOperarioRequest() {
+        }
+        
+        public eliminarOperarioRequest(int idOperario) {
+            this.idOperario = idOperario;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarOperarioResponse", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
+    public partial class eliminarOperarioResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public eliminarOperarioResponse() {
+        }
+        
+        public eliminarOperarioResponse(int @return) {
+            this.@return = @return;
+        }
     }
     
     /// <remarks/>
@@ -224,6 +283,10 @@ namespace BuildUp.OperarioWS {
         
         private bool fechaFinContratoFieldSpecified;
         
+        private System.DateTime fechaNacimientoField;
+        
+        private bool fechaNacimientoFieldSpecified;
+        
         private byte[] fotoField;
         
         private int idPersonaField;
@@ -295,7 +358,31 @@ namespace BuildUp.OperarioWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public System.DateTime fechaNacimiento {
+            get {
+                return this.fechaNacimientoField;
+            }
+            set {
+                this.fechaNacimientoField = value;
+                this.RaisePropertyChanged("fechaNacimiento");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool fechaNacimientoSpecified {
+            get {
+                return this.fechaNacimientoFieldSpecified;
+            }
+            set {
+                this.fechaNacimientoFieldSpecified = value;
+                this.RaisePropertyChanged("fechaNacimientoSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", Order=5)]
         public byte[] foto {
             get {
                 return this.fotoField;
@@ -307,7 +394,7 @@ namespace BuildUp.OperarioWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
         public int idPersona {
             get {
                 return this.idPersonaField;
@@ -319,7 +406,7 @@ namespace BuildUp.OperarioWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
         public string nombres {
             get {
                 return this.nombresField;
@@ -331,7 +418,7 @@ namespace BuildUp.OperarioWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
         public string rol {
             get {
                 return this.rolField;
@@ -343,7 +430,7 @@ namespace BuildUp.OperarioWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
         public string telefono {
             get {
                 return this.telefonoField;
@@ -455,78 +542,6 @@ namespace BuildUp.OperarioWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarOperario", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
-    public partial class actualizarOperarioRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public BuildUp.OperarioWS.operario operario;
-        
-        public actualizarOperarioRequest() {
-        }
-        
-        public actualizarOperarioRequest(BuildUp.OperarioWS.operario operario) {
-            this.operario = operario;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarOperarioResponse", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
-    public partial class actualizarOperarioResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public actualizarOperarioResponse() {
-        }
-        
-        public actualizarOperarioResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarOperario", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
-    public partial class eliminarOperarioRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idOperario;
-        
-        public eliminarOperarioRequest() {
-        }
-        
-        public eliminarOperarioRequest(int idOperario) {
-            this.idOperario = idOperario;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarOperarioResponse", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
-    public partial class eliminarOperarioResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public eliminarOperarioResponse() {
-        }
-        
-        public eliminarOperarioResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="insertarOperario", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
     public partial class insertarOperarioRequest {
         
@@ -588,6 +603,119 @@ namespace BuildUp.OperarioWS {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarOperario", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
+    public partial class modificarOperarioRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public BuildUp.OperarioWS.operario operario;
+        
+        public modificarOperarioRequest() {
+        }
+        
+        public modificarOperarioRequest(BuildUp.OperarioWS.operario operario) {
+            this.operario = operario;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarOperarioResponse", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
+    public partial class modificarOperarioResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public modificarOperarioResponse() {
+        }
+        
+        public modificarOperarioResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerLineaProduccionOperario", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
+    public partial class obtenerLineaProduccionOperarioRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idOperario;
+        
+        public obtenerLineaProduccionOperarioRequest() {
+        }
+        
+        public obtenerLineaProduccionOperarioRequest(int idOperario) {
+            this.idOperario = idOperario;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerLineaProduccionOperarioResponse", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
+    public partial class obtenerLineaProduccionOperarioResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string @return;
+        
+        public obtenerLineaProduccionOperarioResponse() {
+        }
+        
+        public obtenerLineaProduccionOperarioResponse(string @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarEstadoOperario", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
+    public partial class actualizarEstadoOperarioRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idOp;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public bool activo;
+        
+        public actualizarEstadoOperarioRequest() {
+        }
+        
+        public actualizarEstadoOperarioRequest(int idOp, bool activo) {
+            this.idOp = idOp;
+            this.activo = activo;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarEstadoOperarioResponse", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
+    public partial class actualizarEstadoOperarioResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public actualizarEstadoOperarioResponse() {
+        }
+        
+        public actualizarEstadoOperarioResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface OperarioWSChannel : BuildUp.OperarioWS.OperarioWS, System.ServiceModel.IClientChannel {
     }
@@ -613,29 +741,6 @@ namespace BuildUp.OperarioWS {
         
         public OperarioWSClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        BuildUp.OperarioWS.actualizarOperarioResponse BuildUp.OperarioWS.OperarioWS.actualizarOperario(BuildUp.OperarioWS.actualizarOperarioRequest request) {
-            return base.Channel.actualizarOperario(request);
-        }
-        
-        public int actualizarOperario(BuildUp.OperarioWS.operario operario) {
-            BuildUp.OperarioWS.actualizarOperarioRequest inValue = new BuildUp.OperarioWS.actualizarOperarioRequest();
-            inValue.operario = operario;
-            BuildUp.OperarioWS.actualizarOperarioResponse retVal = ((BuildUp.OperarioWS.OperarioWS)(this)).actualizarOperario(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<BuildUp.OperarioWS.actualizarOperarioResponse> BuildUp.OperarioWS.OperarioWS.actualizarOperarioAsync(BuildUp.OperarioWS.actualizarOperarioRequest request) {
-            return base.Channel.actualizarOperarioAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<BuildUp.OperarioWS.actualizarOperarioResponse> actualizarOperarioAsync(BuildUp.OperarioWS.operario operario) {
-            BuildUp.OperarioWS.actualizarOperarioRequest inValue = new BuildUp.OperarioWS.actualizarOperarioRequest();
-            inValue.operario = operario;
-            return ((BuildUp.OperarioWS.OperarioWS)(this)).actualizarOperarioAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -703,6 +808,77 @@ namespace BuildUp.OperarioWS {
         public System.Threading.Tasks.Task<BuildUp.OperarioWS.listarOperarioResponse> listarOperarioAsync() {
             BuildUp.OperarioWS.listarOperarioRequest inValue = new BuildUp.OperarioWS.listarOperarioRequest();
             return ((BuildUp.OperarioWS.OperarioWS)(this)).listarOperarioAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        BuildUp.OperarioWS.modificarOperarioResponse BuildUp.OperarioWS.OperarioWS.modificarOperario(BuildUp.OperarioWS.modificarOperarioRequest request) {
+            return base.Channel.modificarOperario(request);
+        }
+        
+        public int modificarOperario(BuildUp.OperarioWS.operario operario) {
+            BuildUp.OperarioWS.modificarOperarioRequest inValue = new BuildUp.OperarioWS.modificarOperarioRequest();
+            inValue.operario = operario;
+            BuildUp.OperarioWS.modificarOperarioResponse retVal = ((BuildUp.OperarioWS.OperarioWS)(this)).modificarOperario(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<BuildUp.OperarioWS.modificarOperarioResponse> BuildUp.OperarioWS.OperarioWS.modificarOperarioAsync(BuildUp.OperarioWS.modificarOperarioRequest request) {
+            return base.Channel.modificarOperarioAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<BuildUp.OperarioWS.modificarOperarioResponse> modificarOperarioAsync(BuildUp.OperarioWS.operario operario) {
+            BuildUp.OperarioWS.modificarOperarioRequest inValue = new BuildUp.OperarioWS.modificarOperarioRequest();
+            inValue.operario = operario;
+            return ((BuildUp.OperarioWS.OperarioWS)(this)).modificarOperarioAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        BuildUp.OperarioWS.obtenerLineaProduccionOperarioResponse BuildUp.OperarioWS.OperarioWS.obtenerLineaProduccionOperario(BuildUp.OperarioWS.obtenerLineaProduccionOperarioRequest request) {
+            return base.Channel.obtenerLineaProduccionOperario(request);
+        }
+        
+        public string obtenerLineaProduccionOperario(int idOperario) {
+            BuildUp.OperarioWS.obtenerLineaProduccionOperarioRequest inValue = new BuildUp.OperarioWS.obtenerLineaProduccionOperarioRequest();
+            inValue.idOperario = idOperario;
+            BuildUp.OperarioWS.obtenerLineaProduccionOperarioResponse retVal = ((BuildUp.OperarioWS.OperarioWS)(this)).obtenerLineaProduccionOperario(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<BuildUp.OperarioWS.obtenerLineaProduccionOperarioResponse> BuildUp.OperarioWS.OperarioWS.obtenerLineaProduccionOperarioAsync(BuildUp.OperarioWS.obtenerLineaProduccionOperarioRequest request) {
+            return base.Channel.obtenerLineaProduccionOperarioAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<BuildUp.OperarioWS.obtenerLineaProduccionOperarioResponse> obtenerLineaProduccionOperarioAsync(int idOperario) {
+            BuildUp.OperarioWS.obtenerLineaProduccionOperarioRequest inValue = new BuildUp.OperarioWS.obtenerLineaProduccionOperarioRequest();
+            inValue.idOperario = idOperario;
+            return ((BuildUp.OperarioWS.OperarioWS)(this)).obtenerLineaProduccionOperarioAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        BuildUp.OperarioWS.actualizarEstadoOperarioResponse BuildUp.OperarioWS.OperarioWS.actualizarEstadoOperario(BuildUp.OperarioWS.actualizarEstadoOperarioRequest request) {
+            return base.Channel.actualizarEstadoOperario(request);
+        }
+        
+        public int actualizarEstadoOperario(int idOp, bool activo) {
+            BuildUp.OperarioWS.actualizarEstadoOperarioRequest inValue = new BuildUp.OperarioWS.actualizarEstadoOperarioRequest();
+            inValue.idOp = idOp;
+            inValue.activo = activo;
+            BuildUp.OperarioWS.actualizarEstadoOperarioResponse retVal = ((BuildUp.OperarioWS.OperarioWS)(this)).actualizarEstadoOperario(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<BuildUp.OperarioWS.actualizarEstadoOperarioResponse> BuildUp.OperarioWS.OperarioWS.actualizarEstadoOperarioAsync(BuildUp.OperarioWS.actualizarEstadoOperarioRequest request) {
+            return base.Channel.actualizarEstadoOperarioAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<BuildUp.OperarioWS.actualizarEstadoOperarioResponse> actualizarEstadoOperarioAsync(int idOp, bool activo) {
+            BuildUp.OperarioWS.actualizarEstadoOperarioRequest inValue = new BuildUp.OperarioWS.actualizarEstadoOperarioRequest();
+            inValue.idOp = idOp;
+            inValue.activo = activo;
+            return ((BuildUp.OperarioWS.OperarioWS)(this)).actualizarEstadoOperarioAsync(inValue);
         }
     }
 }

@@ -5,12 +5,6 @@
       <xsd:import schemaLocation="http://52.207.108.70:8080/BuildUpServices/OperarioWS?xsd=1" namespace="http://services.buildup.pucp.edu.pe/" />
     </xsd:schema>
   </types>
-  <message name="actualizarOperario">
-    <part name="parameters" element="tns:actualizarOperario" />
-  </message>
-  <message name="actualizarOperarioResponse">
-    <part name="parameters" element="tns:actualizarOperarioResponse" />
-  </message>
   <message name="eliminarOperario">
     <part name="parameters" element="tns:eliminarOperario" />
   </message>
@@ -29,11 +23,25 @@
   <message name="listarOperarioResponse">
     <part name="parameters" element="tns:listarOperarioResponse" />
   </message>
+  <message name="modificarOperario">
+    <part name="parameters" element="tns:modificarOperario" />
+  </message>
+  <message name="modificarOperarioResponse">
+    <part name="parameters" element="tns:modificarOperarioResponse" />
+  </message>
+  <message name="obtenerLineaProduccionOperario">
+    <part name="parameters" element="tns:obtenerLineaProduccionOperario" />
+  </message>
+  <message name="obtenerLineaProduccionOperarioResponse">
+    <part name="parameters" element="tns:obtenerLineaProduccionOperarioResponse" />
+  </message>
+  <message name="actualizarEstadoOperario">
+    <part name="parameters" element="tns:actualizarEstadoOperario" />
+  </message>
+  <message name="actualizarEstadoOperarioResponse">
+    <part name="parameters" element="tns:actualizarEstadoOperarioResponse" />
+  </message>
   <portType name="OperarioWS">
-    <operation name="actualizarOperario">
-      <input wsam:Action="http://services.buildup.pucp.edu.pe/OperarioWS/actualizarOperarioRequest" message="tns:actualizarOperario" />
-      <output wsam:Action="http://services.buildup.pucp.edu.pe/OperarioWS/actualizarOperarioResponse" message="tns:actualizarOperarioResponse" />
-    </operation>
     <operation name="eliminarOperario">
       <input wsam:Action="http://services.buildup.pucp.edu.pe/OperarioWS/eliminarOperarioRequest" message="tns:eliminarOperario" />
       <output wsam:Action="http://services.buildup.pucp.edu.pe/OperarioWS/eliminarOperarioResponse" message="tns:eliminarOperarioResponse" />
@@ -46,18 +54,21 @@
       <input wsam:Action="http://services.buildup.pucp.edu.pe/OperarioWS/listarOperarioRequest" message="tns:listarOperario" />
       <output wsam:Action="http://services.buildup.pucp.edu.pe/OperarioWS/listarOperarioResponse" message="tns:listarOperarioResponse" />
     </operation>
+    <operation name="modificarOperario">
+      <input wsam:Action="http://services.buildup.pucp.edu.pe/OperarioWS/modificarOperarioRequest" message="tns:modificarOperario" />
+      <output wsam:Action="http://services.buildup.pucp.edu.pe/OperarioWS/modificarOperarioResponse" message="tns:modificarOperarioResponse" />
+    </operation>
+    <operation name="obtenerLineaProduccionOperario">
+      <input wsam:Action="http://services.buildup.pucp.edu.pe/OperarioWS/obtenerLineaProduccionOperarioRequest" message="tns:obtenerLineaProduccionOperario" />
+      <output wsam:Action="http://services.buildup.pucp.edu.pe/OperarioWS/obtenerLineaProduccionOperarioResponse" message="tns:obtenerLineaProduccionOperarioResponse" />
+    </operation>
+    <operation name="actualizarEstadoOperario">
+      <input wsam:Action="http://services.buildup.pucp.edu.pe/OperarioWS/actualizarEstadoOperarioRequest" message="tns:actualizarEstadoOperario" />
+      <output wsam:Action="http://services.buildup.pucp.edu.pe/OperarioWS/actualizarEstadoOperarioResponse" message="tns:actualizarEstadoOperarioResponse" />
+    </operation>
   </portType>
   <binding name="OperarioWSPortBinding" type="tns:OperarioWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="actualizarOperario">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
     <operation name="eliminarOperario">
       <soap:operation soapAction="" />
       <input>
@@ -77,6 +88,33 @@
       </output>
     </operation>
     <operation name="listarOperario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarOperario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerLineaProduccionOperario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="actualizarEstadoOperario">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

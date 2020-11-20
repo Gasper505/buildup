@@ -59,6 +59,7 @@
       <xs:element minOccurs="0" name="apellidos" type="xs:string" />
       <xs:element minOccurs="0" name="correo" type="xs:string" />
       <xs:element minOccurs="0" name="fechaFinContrato" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaNacimiento" type="xs:dateTime" />
       <xs:element minOccurs="0" name="foto" type="xs:base64Binary" />
       <xs:element name="idPersona" type="xs:int" />
       <xs:element minOccurs="0" name="nombres" type="xs:string" />

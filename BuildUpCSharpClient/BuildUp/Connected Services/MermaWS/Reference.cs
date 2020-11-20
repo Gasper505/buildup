@@ -50,6 +50,15 @@ namespace BuildUp.MermaWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/MermaWS/eliminarMermaRequest", ReplyAction="http://services.buildup.pucp.edu.pe/MermaWS/eliminarMermaResponse")]
         System.Threading.Tasks.Task<BuildUp.MermaWS.eliminarMermaResponse> eliminarMermaAsync(BuildUp.MermaWS.eliminarMermaRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/MermaWS/listarPorTipoMermaRequest", ReplyAction="http://services.buildup.pucp.edu.pe/MermaWS/listarPorTipoMermaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        BuildUp.MermaWS.listarPorTipoMermaResponse listarPorTipoMerma(BuildUp.MermaWS.listarPorTipoMermaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/MermaWS/listarPorTipoMermaRequest", ReplyAction="http://services.buildup.pucp.edu.pe/MermaWS/listarPorTipoMermaResponse")]
+        System.Threading.Tasks.Task<BuildUp.MermaWS.listarPorTipoMermaResponse> listarPorTipoMermaAsync(BuildUp.MermaWS.listarPorTipoMermaRequest request);
     }
     
     /// <remarks/>
@@ -276,6 +285,42 @@ namespace BuildUp.MermaWS {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPorTipoMerma", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarPorTipoMermaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string tipo;
+        
+        public listarPorTipoMermaRequest() {
+        }
+        
+        public listarPorTipoMermaRequest(string tipo) {
+            this.tipo = tipo;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPorTipoMermaResponse", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarPorTipoMermaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public BuildUp.MermaWS.merma[] @return;
+        
+        public listarPorTipoMermaResponse() {
+        }
+        
+        public listarPorTipoMermaResponse(BuildUp.MermaWS.merma[] @return) {
+            this.@return = @return;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface MermaWSChannel : BuildUp.MermaWS.MermaWS, System.ServiceModel.IClientChannel {
     }
@@ -391,6 +436,29 @@ namespace BuildUp.MermaWS {
             BuildUp.MermaWS.eliminarMermaRequest inValue = new BuildUp.MermaWS.eliminarMermaRequest();
             inValue.idMerma = idMerma;
             return ((BuildUp.MermaWS.MermaWS)(this)).eliminarMermaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        BuildUp.MermaWS.listarPorTipoMermaResponse BuildUp.MermaWS.MermaWS.listarPorTipoMerma(BuildUp.MermaWS.listarPorTipoMermaRequest request) {
+            return base.Channel.listarPorTipoMerma(request);
+        }
+        
+        public BuildUp.MermaWS.merma[] listarPorTipoMerma(string tipo) {
+            BuildUp.MermaWS.listarPorTipoMermaRequest inValue = new BuildUp.MermaWS.listarPorTipoMermaRequest();
+            inValue.tipo = tipo;
+            BuildUp.MermaWS.listarPorTipoMermaResponse retVal = ((BuildUp.MermaWS.MermaWS)(this)).listarPorTipoMerma(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<BuildUp.MermaWS.listarPorTipoMermaResponse> BuildUp.MermaWS.MermaWS.listarPorTipoMermaAsync(BuildUp.MermaWS.listarPorTipoMermaRequest request) {
+            return base.Channel.listarPorTipoMermaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<BuildUp.MermaWS.listarPorTipoMermaResponse> listarPorTipoMermaAsync(string tipo) {
+            BuildUp.MermaWS.listarPorTipoMermaRequest inValue = new BuildUp.MermaWS.listarPorTipoMermaRequest();
+            inValue.tipo = tipo;
+            return ((BuildUp.MermaWS.MermaWS)(this)).listarPorTipoMermaAsync(inValue);
         }
     }
 }

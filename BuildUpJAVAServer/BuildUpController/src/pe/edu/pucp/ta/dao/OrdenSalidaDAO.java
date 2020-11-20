@@ -12,6 +12,6 @@ public interface OrdenSalidaDAO {
     int actualizar(OrdenSalida ordenSalida);
     int eliminar(int idOrdenSalida);
     ArrayList<OrdenSalida> listar();
-    ArrayList<OrdenSalida> listarOrdenesSalidaConParametros(String nombreOperario, Date fechaRegistro);
+    ArrayList<OrdenSalida> listarOrdenesSalidaConParametros(String nombreOperario, Date fecha_inf, Date fecha_sup);
     
 }

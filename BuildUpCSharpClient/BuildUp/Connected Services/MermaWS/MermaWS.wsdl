@@ -29,6 +29,12 @@
   <message name="eliminarMermaResponse">
     <part name="parameters" element="tns:eliminarMermaResponse" />
   </message>
+  <message name="listarPorTipoMerma">
+    <part name="parameters" element="tns:listarPorTipoMerma" />
+  </message>
+  <message name="listarPorTipoMermaResponse">
+    <part name="parameters" element="tns:listarPorTipoMermaResponse" />
+  </message>
   <portType name="MermaWS">
     <operation name="insertarMerma">
       <input wsam:Action="http://services.buildup.pucp.edu.pe/MermaWS/insertarMermaRequest" message="tns:insertarMerma" />
@@ -45,6 +51,10 @@
     <operation name="eliminarMerma">
       <input wsam:Action="http://services.buildup.pucp.edu.pe/MermaWS/eliminarMermaRequest" message="tns:eliminarMerma" />
       <output wsam:Action="http://services.buildup.pucp.edu.pe/MermaWS/eliminarMermaResponse" message="tns:eliminarMermaResponse" />
+    </operation>
+    <operation name="listarPorTipoMerma">
+      <input wsam:Action="http://services.buildup.pucp.edu.pe/MermaWS/listarPorTipoMermaRequest" message="tns:listarPorTipoMerma" />
+      <output wsam:Action="http://services.buildup.pucp.edu.pe/MermaWS/listarPorTipoMermaResponse" message="tns:listarPorTipoMermaResponse" />
     </operation>
   </portType>
   <binding name="MermaWSPortBinding" type="tns:MermaWS">
@@ -77,6 +87,15 @@
       </output>
     </operation>
     <operation name="eliminarMerma">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarPorTipoMerma">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

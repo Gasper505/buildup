@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://services.buildup.pucp.edu.pe/" targetNamespace="http://services.buildup.pucp.edu.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:element name="actualizarOperario" type="tns:actualizarOperario" />
-  <xs:element name="actualizarOperarioResponse" type="tns:actualizarOperarioResponse" />
+  <xs:element name="actualizarEstadoOperario" type="tns:actualizarEstadoOperario" />
+  <xs:element name="actualizarEstadoOperarioResponse" type="tns:actualizarEstadoOperarioResponse" />
   <xs:element name="eliminarOperario" type="tns:eliminarOperario" />
   <xs:element name="eliminarOperarioResponse" type="tns:eliminarOperarioResponse" />
   <xs:element name="insertarOperario" type="tns:insertarOperario" />
   <xs:element name="insertarOperarioResponse" type="tns:insertarOperarioResponse" />
   <xs:element name="listarOperario" type="tns:listarOperario" />
   <xs:element name="listarOperarioResponse" type="tns:listarOperarioResponse" />
+  <xs:element name="modificarOperario" type="tns:modificarOperario" />
+  <xs:element name="modificarOperarioResponse" type="tns:modificarOperarioResponse" />
+  <xs:element name="obtenerLineaProduccionOperario" type="tns:obtenerLineaProduccionOperario" />
+  <xs:element name="obtenerLineaProduccionOperarioResponse" type="tns:obtenerLineaProduccionOperarioResponse" />
   <xs:complexType name="eliminarOperario">
     <xs:sequence>
       <xs:element name="idOperario" type="xs:int" />
@@ -18,7 +22,18 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="actualizarOperario">
+  <xs:complexType name="actualizarEstadoOperario">
+    <xs:sequence>
+      <xs:element name="idOp" type="xs:int" />
+      <xs:element name="activo" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarEstadoOperarioResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarOperario">
     <xs:sequence>
       <xs:element minOccurs="0" name="operario" type="tns:operario" />
     </xs:sequence>
@@ -38,6 +53,7 @@
       <xs:element minOccurs="0" name="apellidos" type="xs:string" />
       <xs:element minOccurs="0" name="correo" type="xs:string" />
       <xs:element minOccurs="0" name="fechaFinContrato" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaNacimiento" type="xs:dateTime" />
       <xs:element minOccurs="0" name="foto" type="xs:base64Binary" />
       <xs:element name="idPersona" type="xs:int" />
       <xs:element minOccurs="0" name="nombres" type="xs:string" />
@@ -73,17 +89,27 @@
       <xs:element minOccurs="0" name="nombre" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="actualizarOperarioResponse">
+  <xs:complexType name="insertarOperarioResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="insertarOperario">
+  <xs:complexType name="obtenerLineaProduccionOperario">
+    <xs:sequence>
+      <xs:element name="idOperario" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerLineaProduccionOperarioResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarOperario">
     <xs:sequence>
       <xs:element minOccurs="0" name="operario" type="tns:operario" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="insertarOperarioResponse">
+  <xs:complexType name="modificarOperarioResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>

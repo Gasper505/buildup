@@ -188,6 +188,7 @@
             this.Controls.Add(this.gbParametrosBusqueda);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "frmBuscarOrdenInsumos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Búsqueda de Orden de Insumos";
             this.gbParametrosBusqueda.ResumeLayout(false);
             this.gbParametrosBusqueda.PerformLayout();

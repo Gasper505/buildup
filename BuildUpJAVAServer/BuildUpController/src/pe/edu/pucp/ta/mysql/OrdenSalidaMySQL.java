@@ -160,14 +160,15 @@ public class OrdenSalidaMySQL implements OrdenSalidaDAO{
     }
 
     @Override
-    public ArrayList<OrdenSalida> listarOrdenesSalidaConParametros(String nombreOperario, Date fechaRegistro) {
+    public ArrayList<OrdenSalida> listarOrdenesSalidaConParametros(String nombreOperario, Date fecha_inf, Date fecha_sup) {
         ArrayList<OrdenSalida> ordenes = new ArrayList<>();
         try{            
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.password);
-            cs = con.prepareCall("{call LISTAR_ORDEN_SALIDA_POR_NOMBREOPERARIO_FECHA(?, ?)}");
+            cs = con.prepareCall("{call LISTAR_ORDEN_SALIDA_POR_NOMBRE_OPERARIO_RANGO_FECHAS(?, ?, ?)}");
             cs.setString("_NOMBRE_OPERARIO", nombreOperario);
-            cs.setDate("_FECHA", fechaRegistro);
+            cs.setDate("_FECHA_INICIO", fecha_inf);
+            cs.setDate("_FECHA_FIN", fecha_sup);
             rs = cs.executeQuery();
             
             while(rs.next()){
@@ -183,7 +184,7 @@ public class OrdenSalidaMySQL implements OrdenSalidaDAO{
             rs.close();
             
             for(OrdenSalida orden : ordenes){
-                cs = con.prepareCall("{call LISTAR_LINEAS_ORDEN_SALIDA_POR_ID_ORDEN_SALIDAD(?)}");
+                cs = con.prepareCall("{call LISTAR_LINEAS_ORDEN_SALIDA_POR_ID_ORDEN_SALIDA(?)}");
                 cs.setInt("_ID_ORDEN_SALIDA", orden.getIdOrdenSalida());
                 rs = cs.executeQuery();
                 while(rs.next()){

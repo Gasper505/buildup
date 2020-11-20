@@ -34,14 +34,14 @@
             this.ApellidoOperario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbParametrosBusqueda = new System.Windows.Forms.GroupBox();
+            this.dtpFechaSup = new System.Windows.Forms.DateTimePicker();
+            this.lblHasta = new System.Windows.Forms.Label();
+            this.lblDesde = new System.Windows.Forms.Label();
+            this.dtpFechaInf = new System.Windows.Forms.DateTimePicker();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtNombreOperario = new System.Windows.Forms.TextBox();
             this.lblNombreOperario = new System.Windows.Forms.Label();
             this.btnSeleccionar = new System.Windows.Forms.Button();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.lblHasta = new System.Windows.Forms.Label();
-            this.lblDesde = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrdenesSalida)).BeginInit();
             this.gbParametrosBusqueda.SuspendLayout();
             this.SuspendLayout();
@@ -56,11 +56,11 @@
             this.Column2,
             this.ApellidoOperario,
             this.Column5});
-            this.dgvOrdenesSalida.Location = new System.Drawing.Point(46, 193);
+            this.dgvOrdenesSalida.Location = new System.Drawing.Point(46, 211);
             this.dgvOrdenesSalida.Name = "dgvOrdenesSalida";
             this.dgvOrdenesSalida.ReadOnly = true;
             this.dgvOrdenesSalida.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvOrdenesSalida.Size = new System.Drawing.Size(697, 217);
+            this.dgvOrdenesSalida.Size = new System.Drawing.Size(644, 217);
             this.dgvOrdenesSalida.TabIndex = 0;
             this.dgvOrdenesSalida.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvOrdenesSalida_CellFormatting);
             // 
@@ -97,24 +97,61 @@
             // 
             // gbParametrosBusqueda
             // 
-            this.gbParametrosBusqueda.Controls.Add(this.dateTimePicker2);
+            this.gbParametrosBusqueda.Controls.Add(this.dtpFechaSup);
             this.gbParametrosBusqueda.Controls.Add(this.lblHasta);
             this.gbParametrosBusqueda.Controls.Add(this.lblDesde);
-            this.gbParametrosBusqueda.Controls.Add(this.dateTimePicker1);
+            this.gbParametrosBusqueda.Controls.Add(this.dtpFechaInf);
             this.gbParametrosBusqueda.Controls.Add(this.btnBuscar);
             this.gbParametrosBusqueda.Controls.Add(this.txtNombreOperario);
             this.gbParametrosBusqueda.Controls.Add(this.lblNombreOperario);
+            this.gbParametrosBusqueda.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbParametrosBusqueda.Location = new System.Drawing.Point(46, 23);
             this.gbParametrosBusqueda.Name = "gbParametrosBusqueda";
-            this.gbParametrosBusqueda.Size = new System.Drawing.Size(697, 141);
+            this.gbParametrosBusqueda.Size = new System.Drawing.Size(644, 156);
             this.gbParametrosBusqueda.TabIndex = 9;
             this.gbParametrosBusqueda.TabStop = false;
             this.gbParametrosBusqueda.Text = "Parámetros de Búsqueda";
             // 
+            // dtpFechaSup
+            // 
+            this.dtpFechaSup.Location = new System.Drawing.Point(227, 106);
+            this.dtpFechaSup.Name = "dtpFechaSup";
+            this.dtpFechaSup.Size = new System.Drawing.Size(237, 23);
+            this.dtpFechaSup.TabIndex = 21;
+            this.dtpFechaSup.Value = new System.DateTime(2020, 12, 31, 0, 0, 0, 0);
+            // 
+            // lblHasta
+            // 
+            this.lblHasta.AutoSize = true;
+            this.lblHasta.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHasta.Location = new System.Drawing.Point(184, 112);
+            this.lblHasta.Name = "lblHasta";
+            this.lblHasta.Size = new System.Drawing.Size(37, 15);
+            this.lblHasta.TabIndex = 20;
+            this.lblHasta.Text = "Hasta";
+            // 
+            // lblDesde
+            // 
+            this.lblDesde.AutoSize = true;
+            this.lblDesde.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDesde.Location = new System.Drawing.Point(182, 82);
+            this.lblDesde.Name = "lblDesde";
+            this.lblDesde.Size = new System.Drawing.Size(39, 15);
+            this.lblDesde.TabIndex = 19;
+            this.lblDesde.Text = "Desde";
+            // 
+            // dtpFechaInf
+            // 
+            this.dtpFechaInf.Location = new System.Drawing.Point(227, 76);
+            this.dtpFechaInf.Name = "dtpFechaInf";
+            this.dtpFechaInf.Size = new System.Drawing.Size(237, 23);
+            this.dtpFechaInf.TabIndex = 18;
+            this.dtpFechaInf.Value = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
+            // 
             // btnBuscar
             // 
-            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(544, 42);
+            this.btnBuscar.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.Location = new System.Drawing.Point(501, 61);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(109, 36);
             this.btnBuscar.TabIndex = 11;
@@ -124,25 +161,26 @@
             // 
             // txtNombreOperario
             // 
-            this.txtNombreOperario.Location = new System.Drawing.Point(224, 42);
+            this.txtNombreOperario.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreOperario.Location = new System.Drawing.Point(227, 42);
             this.txtNombreOperario.Name = "txtNombreOperario";
-            this.txtNombreOperario.Size = new System.Drawing.Size(263, 20);
+            this.txtNombreOperario.Size = new System.Drawing.Size(237, 23);
             this.txtNombreOperario.TabIndex = 4;
             // 
             // lblNombreOperario
             // 
             this.lblNombreOperario.AutoSize = true;
-            this.lblNombreOperario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreOperario.Location = new System.Drawing.Point(32, 42);
+            this.lblNombreOperario.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreOperario.Location = new System.Drawing.Point(43, 45);
             this.lblNombreOperario.Name = "lblNombreOperario";
-            this.lblNombreOperario.Size = new System.Drawing.Size(186, 15);
+            this.lblNombreOperario.Size = new System.Drawing.Size(178, 15);
             this.lblNombreOperario.TabIndex = 0;
             this.lblNombreOperario.Text = "Nombre del Operario Encargado";
             // 
             // btnSeleccionar
             // 
-            this.btnSeleccionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSeleccionar.Location = new System.Drawing.Point(282, 430);
+            this.btnSeleccionar.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeleccionar.Location = new System.Drawing.Point(254, 453);
             this.btnSeleccionar.Name = "btnSeleccionar";
             this.btnSeleccionar.Size = new System.Drawing.Size(225, 36);
             this.btnSeleccionar.TabIndex = 11;
@@ -150,50 +188,17 @@
             this.btnSeleccionar.UseVisualStyleBackColor = true;
             this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
             // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(224, 106);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(254, 20);
-            this.dateTimePicker2.TabIndex = 21;
-            // 
-            // lblHasta
-            // 
-            this.lblHasta.AutoSize = true;
-            this.lblHasta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHasta.Location = new System.Drawing.Point(179, 110);
-            this.lblHasta.Name = "lblHasta";
-            this.lblHasta.Size = new System.Drawing.Size(39, 15);
-            this.lblHasta.TabIndex = 20;
-            this.lblHasta.Text = "Hasta";
-            // 
-            // lblDesde
-            // 
-            this.lblDesde.AutoSize = true;
-            this.lblDesde.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDesde.Location = new System.Drawing.Point(175, 80);
-            this.lblDesde.Name = "lblDesde";
-            this.lblDesde.Size = new System.Drawing.Size(43, 15);
-            this.lblDesde.TabIndex = 19;
-            this.lblDesde.Text = "Desde";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(224, 76);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(254, 20);
-            this.dateTimePicker1.TabIndex = 18;
-            // 
             // frmBuscarOrdenSalida
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(787, 488);
+            this.ClientSize = new System.Drawing.Size(739, 512);
             this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.gbParametrosBusqueda);
             this.Controls.Add(this.dgvOrdenesSalida);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "frmBuscarOrdenSalida";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Búsqueda de Órdenes de Salida";
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrdenesSalida)).EndInit();
             this.gbParametrosBusqueda.ResumeLayout(false);
@@ -214,9 +219,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn ApellidoOperario;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dtpFechaSup;
         private System.Windows.Forms.Label lblHasta;
         private System.Windows.Forms.Label lblDesde;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpFechaInf;
     }
 }
