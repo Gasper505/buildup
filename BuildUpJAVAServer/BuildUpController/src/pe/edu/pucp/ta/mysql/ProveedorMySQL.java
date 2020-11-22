@@ -57,11 +57,10 @@ public class ProveedorMySQL implements ProveedorDAO{
             cs.setString("_RAZON_SOCIAL", proveedor.getRazonSocial());
             cs.setString("_CORREO",proveedor.getCorreo());
             cs.setString("_REPRESENTANTE", proveedor.getRepresentante());
-            //cs.setBoolean("_ACTIVO", proveedor.getActivo());
            
             cs.executeUpdate();
-            proveedor.setIdProveedor(cs.getInt("_ID_PROVEEDOR"));       
-            resultado=1;
+            
+            resultado = 1;
         
         }catch(Exception ex){
             System.out.println(ex.getMessage());
