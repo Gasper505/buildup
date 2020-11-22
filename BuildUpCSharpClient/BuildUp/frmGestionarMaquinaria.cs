@@ -35,6 +35,10 @@ namespace BuildUp
             }
             daoMaquinaria = new MaqWS.MaquinariaWSClient();
             maquinaria = new MaqWS.maquinaria();
+
+            maquinaria.proveedor = new MaqWS.proveedor();
+            maquinaria.lineaProduccion = new MaqWS.lineaProduccion();
+
             lineaProduccion = new LineaProduccionWS.lineaProduccion();
             proveedor = new ProveedorWS.proveedor();
         }
@@ -113,13 +117,13 @@ namespace BuildUp
             if (dr == DialogResult.Yes)
             {
                 maquinaria.nombre = txtNombre.Text;
+                maquinaria.garantiaFin = dtpFechaGarantia.Value;
                 maquinaria.proveedor.idProveedor = Int32.Parse(txtIdProveedor.Text);
                 maquinaria.proveedor.razonSocial = txtRazonSocial.Text;
                 maquinaria.proveedor.representante = txtRepresentante.Text;
                 maquinaria.proveedor.correo = txtCorreoRep.Text;
                 maquinaria.lineaProduccion.idLineaProduccion = Int32.Parse(txtIdLinea.Text);
                 maquinaria.lineaProduccion.nombre = txtNombreLinea.Text;
-                maquinaria.garantiaFin = dtpFechaGarantia.Value;
                 
 
                 int result = daoMaquinaria.insertarMaquinaria(maquinaria);
@@ -240,7 +244,7 @@ namespace BuildUp
             frmBuscarLineaProduccion formBuscarLineaProduccion = new frmBuscarLineaProduccion();
             if (formBuscarLineaProduccion.ShowDialog() == DialogResult.OK)
             {
-                //lineaProduccion = formBuscarLineaProduccion.LineaProduccionSeleccionada;
+                lineaProduccion = formBuscarLineaProduccion.LineaProduccionSeleccionada;
                 txtIdLinea.Text = lineaProduccion.idLineaProduccion.ToString();
                 txtNombreLinea.Text = lineaProduccion.nombre;
             }
