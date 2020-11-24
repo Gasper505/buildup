@@ -42,7 +42,7 @@ public class OrdenInsumosWS {
     public ArrayList<OrdenInsumos> listarOrdenInsumosPorRangoFecha(@WebParam(name="fechaInicio") Date fechaInicio,@WebParam(name="fechaFin") Date fechaFin) {
         ArrayList<OrdenInsumos> ordenInsumos = new ArrayList<>();
         try{
-            ordenInsumos =daoOrdenInsumos.listar_por_fecha(fechaFin, fechaFin);
+            ordenInsumos =daoOrdenInsumos.listar_por_fecha(fechaInicio, fechaFin);
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }
