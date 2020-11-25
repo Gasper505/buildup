@@ -128,7 +128,7 @@
             // 
             // TipoLadrillo
             // 
-            this.TipoLadrillo.DataPropertyName = "tipoLadrillo";
+            this.TipoLadrillo.DataPropertyName = "nombre";
             this.TipoLadrillo.HeaderText = "Tipo de Ladrillo";
             this.TipoLadrillo.Name = "TipoLadrillo";
             this.TipoLadrillo.ReadOnly = true;

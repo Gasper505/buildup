@@ -26,6 +26,12 @@ namespace BuildUp
 
         private void btnSeleccionar_Click(object sender, EventArgs e)
         {
+            if (dgvOrdenes.SelectedRows.Count < 1)
+            {
+                MessageBox.Show("Debe seleccionar una orden de insumo", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             ordenInsumoSeleccionado = (OrdenInsumosWS.ordenInsumos)dgvOrdenes.CurrentRow.DataBoundItem;
             this.DialogResult = DialogResult.OK;
         }

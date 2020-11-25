@@ -23,7 +23,9 @@ namespace BuildUp
             daoProveedor = new ProveedorWS.ProveedorWSClient();
             proveedor = new ProveedorWS.proveedor();
 
-            if (frmLogIn.Usuario.rol == "Ingeniero")
+            if (frmLogIn.Usuario.rol == "Ingeniero"
+                || frmLogIn.Usuario.rol == "ingeniero"
+                || frmLogIn.Usuario.rol == "INGENIERO")
             {
                 btnActualizar.Visible = false;
                 btnNuevo.Visible = false;
@@ -117,7 +119,14 @@ namespace BuildUp
                 txtRepresentante.Text = proveedor.representante;
                 EstablecerEstadoComponentes(Estado.Modificacion);
             }
-            
+
+            if (frmLogIn.Usuario.rol == "Ingeniero"
+                || frmLogIn.Usuario.rol == "ingeniero"
+                || frmLogIn.Usuario.rol == "INGENIERO")
+            {
+                EstablecerEstadoComponentes(Estado.Inicial);
+            }
+
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
