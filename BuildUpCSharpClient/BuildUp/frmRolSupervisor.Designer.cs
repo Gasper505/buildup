@@ -92,7 +92,7 @@
             this.btnIncidencia.Name = "btnIncidencia";
             this.btnIncidencia.Size = new System.Drawing.Size(113, 49);
             this.btnIncidencia.TabIndex = 24;
-            this.btnIncidencia.Text = "Incidencias de Maquinarias";
+            this.btnIncidencia.Text = "Incidentes de Maquinarias";
             this.btnIncidencia.UseVisualStyleBackColor = true;
             this.btnIncidencia.Click += new System.EventHandler(this.btnIncidencia_Click);
             // 

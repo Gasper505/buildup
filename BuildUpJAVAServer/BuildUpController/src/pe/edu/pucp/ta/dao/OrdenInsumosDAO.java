@@ -2,7 +2,7 @@
 package pe.edu.pucp.ta.dao;
 
 import java.util.ArrayList;
-import java.util.Date;
+import java.sql.Date;
 import pe.edu.pucp.ta.model.OrdenInsumos;
 
 

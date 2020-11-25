@@ -36,8 +36,6 @@ namespace BuildUp
         {
             dgvMaquinarias.DataSource = new BindingList<MaqWS.maquinaria>(daoMaquinaria.listarMaquinariasConParametros(txtBusqNombreMaq.Text, txtBusqLineaProduccion.Text).ToList());
 
-            //dgvMaquinarias.DataSource =
-            //    new BindingList<MaqWS.maquinaria>(daoMaquinaria.listarMaquinariasConParametros(txtBusqNombreMaq.Text, txtBusqLineaProduccion.Text).ToArray());
         }
     
 

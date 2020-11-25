@@ -2,9 +2,10 @@
 package pe.edu.pucp.ta.dao;
 
 import java.util.ArrayList;
-import java.util.Date;
+import java.sql.Date;
 import pe.edu.pucp.ta.model.IncidenteMaquinaria;
 import pe.edu.pucp.ta.model.Ingeniero;
+import pe.edu.pucp.ta.model.Respuesta;
 
 
 public interface IncidenteMaquinariaDAO {
@@ -18,6 +19,6 @@ public interface IncidenteMaquinariaDAO {
     int insertarProblema(IncidenteMaquinaria incidenteMaquinaria);
     int insertarRespuesta(IncidenteMaquinaria incidenteMaquinaria);
     Ingeniero obtenerIngeniero(int idIncidenteMaquinaria);
-    ArrayList<Object> obtenerRespuesta(int idIncidenteMaquinaria);
+    Respuesta obtenerRespuesta(int idIncidenteMaquinaria);
     
 }

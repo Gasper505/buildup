@@ -13,6 +13,7 @@ import javax.jws.WebParam;
 import pe.edu.pucp.ta.dao.IncidenteMaquinariaDAO;
 import pe.edu.pucp.ta.model.IncidenteMaquinaria;
 import pe.edu.pucp.ta.model.Ingeniero;
+import pe.edu.pucp.ta.model.Respuesta;
 import pe.edu.pucp.ta.mysql.IncidenteMaquinariaMySQL;
 
 /**
@@ -37,10 +38,10 @@ public class IncidenteMaquinariaWS {
         return incidenteMaquinarias;
     }
     @WebMethod(operationName = "listarPorRangoFechaIncidenteMaquinaria")
-    public ArrayList<IncidenteMaquinaria> listarPorRangoFechaIncidenteMaquinaria(@WebParam(name="fechaIncio") Date fechaInicio,@WebParam(name="fechaFin") Date fechaFin ) {
+    public ArrayList<IncidenteMaquinaria> listarPorRangoFechaIncidenteMaquinaria(@WebParam(name="fechaInicio") Date fechaInicio, @WebParam(name="fechaFin") Date fechaFin ) {
         ArrayList<IncidenteMaquinaria> incidenteMaquinarias = new ArrayList<>();
         try{
-            incidenteMaquinarias =daoIncidenteMaquinaria.listarPorRangoFecha(fechaFin, fechaFin);
+            incidenteMaquinarias =daoIncidenteMaquinaria.listarPorRangoFecha(new java.sql.Date(fechaInicio.getTime()), new java.sql.Date(fechaFin.getTime()));
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }
@@ -118,8 +119,8 @@ public class IncidenteMaquinariaWS {
         return ingeniero;
     }
     @WebMethod(operationName = "obtenerRespuestaIncidenteMaquinaria")
-    public ArrayList<Object> obtenerRespuestaIncidenteMaquinaria(@WebParam(name = "idIncidenteMaquinaria") int idIncidenteMaquinaria) {
-        ArrayList<Object> respuesta = new ArrayList <>();
+    public Respuesta obtenerRespuestaIncidenteMaquinaria(@WebParam(name = "idIncidenteMaquinaria") int idIncidenteMaquinaria) {
+        Respuesta respuesta = new Respuesta();
         try{
             respuesta = daoIncidenteMaquinaria.obtenerRespuesta(idIncidenteMaquinaria);
         }catch(Exception ex){

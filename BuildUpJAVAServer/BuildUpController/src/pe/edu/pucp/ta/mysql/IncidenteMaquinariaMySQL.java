@@ -7,11 +7,12 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
-import java.util.Date;
+import java.sql.Date;
 import pe.edu.pucp.ta.config.DBManager;
 import pe.edu.pucp.ta.dao.IncidenteMaquinariaDAO;
 import pe.edu.pucp.ta.model.IncidenteMaquinaria;
 import pe.edu.pucp.ta.model.Ingeniero;
+import pe.edu.pucp.ta.model.Respuesta;
 
 public class IncidenteMaquinariaMySQL implements IncidenteMaquinariaDAO{
     
@@ -78,11 +79,6 @@ public class IncidenteMaquinariaMySQL implements IncidenteMaquinariaDAO{
             while(rs.next()){
                 IncidenteMaquinaria incidente = new IncidenteMaquinaria();
                 incidente.setIdIncidente(rs.getInt("ID_INCIDENTE")); 
-//                incidente.getMaquinaria().setIdMaquinaria(rs.getInt("ID_MAQUINARIA"));           //
-//                incidente.getSupervisor().setIdPersona(rs.getInt("ID_SUPERVISOR"));           //
-//                incidente.getIngeniero().setIdPersona(rs.getInt("ID_INGENIERO"));             //
-//                incidente.getProblema().setIdProblema(rs.getInt("ID_PROBLEMA"));               //
-//                incidente.getRespuesta().setIdRespuesta(rs.getInt("ID_RESPUESTA"));             //
                 incidente.setDetalle(rs.getString("DESCRIPCION_RESPUESTA"));
                 incidente.setFechaIncidente(rs.getDate("FECHA_INCIDENTE"));
                 incidente.setFechaAtencion(rs.getDate("FECHA_ATENCION"));
@@ -150,8 +146,8 @@ public class IncidenteMaquinariaMySQL implements IncidenteMaquinariaDAO{
             con = DriverManager.getConnection(DBManager.urlMySQL, 
                     DBManager.user, DBManager.password);
             cs=con.prepareCall("{call LISTAR_INCIDENTE_POR_RANGO_FECHAS(?,?)}");
-            cs.setDate("_FECHA_INICIO", (java.sql.Date) fechaIni);
-            cs.setDate("_FECHA_FIN", (java.sql.Date) fechaFin);
+            cs.setDate("_FECHA_INICIO", fechaIni);
+            cs.setDate("_FECHA_FIN", fechaFin);
             rs = cs.executeQuery();  
             while(rs.next()){
                 IncidenteMaquinaria incidente = new IncidenteMaquinaria();
@@ -178,11 +174,10 @@ public class IncidenteMaquinariaMySQL implements IncidenteMaquinariaDAO{
 
     @Override
     public Ingeniero obtenerIngeniero(int idIncidenteMaquinaria) {
-        Ingeniero ingeniero =new Ingeniero();
+        Ingeniero ingeniero = new Ingeniero();
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
-            con = DriverManager.getConnection(DBManager.urlMySQL, 
-                    DBManager.user, DBManager.password);
+            con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.password);
             cs=con.prepareCall("{call OBTENER_INGENIERO_POR_ID_INCIDENTE(?)}");
             cs.setInt("_ID_INCIDENTE", idIncidenteMaquinaria);
             rs = cs.executeQuery();  
@@ -199,19 +194,18 @@ public class IncidenteMaquinariaMySQL implements IncidenteMaquinariaDAO{
     }
 
     @Override
-    public  ArrayList<Object> obtenerRespuesta(int idIncidenteMaquinaria) {
-        ArrayList<Object> respuesta = new ArrayList <>();
+    public Respuesta obtenerRespuesta(int idIncidenteMaquinaria) {
+        Respuesta respuesta = new Respuesta();
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
-            con = DriverManager.getConnection(DBManager.urlMySQL, 
-                    DBManager.user, DBManager.password);
+            con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.password);
             cs=con.prepareCall("{call OBTENER_RESPUESTA_POR_ID_INCIDENTE(?)}");
             cs.setInt("_ID_INCIDENTE", idIncidenteMaquinaria);
             rs = cs.executeQuery();  
             while(rs.next()){
-                respuesta.add(rs.getString("TIPO_RESPUESTA"));
-                respuesta.add(rs.getString("DESCRIPCION_RESPUESTA"));
-                respuesta.add(rs.getDate("FECHA_RESPUESTA"));
+//                respuesta.setTipo(rs.getString("TIPO_RESPUESTA"));
+//                respuesta.setTipo(rs.getString("DESCRIPCION_RESPUESTA"));
+//                respuesta.add(rs.getDate("FECHA_RESPUESTA"));
             }
         }catch(Exception ex){
             System.out.println(ex.getMessage());

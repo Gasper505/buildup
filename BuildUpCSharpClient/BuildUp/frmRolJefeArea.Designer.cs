@@ -177,7 +177,7 @@
             this.button7.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.button7.Size = new System.Drawing.Size(121, 50);
             this.button7.TabIndex = 36;
-            this.button7.Text = "Incidencias de Maquinarias";
+            this.button7.Text = "Incidentes de Maquinarias";
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
