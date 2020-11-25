@@ -80,7 +80,7 @@ public class OrdenSalidaMySQL implements OrdenSalidaDAO{
             cs.setInt("_ID_OPERARIO", ordenSalida.getOperario().getIdPersona());
             cs.executeUpdate();
             //eliminar lineas anteriores
-            sql = "call {ELIMINAR_LINEA_ORDEN_SALIDA(?)}";
+            sql = "{call ELIMINAR_LINEA_ORDEN_SALIDA(?)}";
             cs = con.prepareCall(sql);
             cs.setInt("_ID_ORDEN_SALIDA", ordenSalida.getIdOrdenSalida());
             cs.executeUpdate();
@@ -189,6 +189,7 @@ public class OrdenSalidaMySQL implements OrdenSalidaDAO{
                 rs = cs.executeQuery();
                 while(rs.next()){
                     LineaOrdenSalida linea = new LineaOrdenSalida();
+                    linea.getTipoLadrillo().setIdTipoLadrillo(rs.getInt("ID_TIPO_LADRILLO"));
                     linea.getTipoLadrillo().setNombre(rs.getString("NOMBRE_TIPO_LADRILLO"));
                     linea.setCantidad(rs.getInt("CANTIDAD"));
                     orden.getLineasOrdenSalida().add(linea);

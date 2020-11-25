@@ -56,7 +56,7 @@ public class ProblemaMySQL implements ProblemaDAO {
             cs.setInt("_NIVEL_IMPORTANCIA", prob.getNivelImportancia());
             //cs.setBoolean("_ACTIVO", prob.getActivo());
             cs.executeUpdate();
-            prob.setIdProblema(cs.getInt("_ID_PROBLEMA")); 
+//            prob.setIdProblema(cs.getInt("_ID_PROBLEMA"));
        
             resultado=1;
         
