@@ -255,6 +255,7 @@
             this.btnRemover.TabIndex = 36;
             this.btnRemover.Text = "-";
             this.btnRemover.UseVisualStyleBackColor = true;
+            this.btnRemover.Click += new System.EventHandler(this.btnRemover_Click);
             // 
             // btnAgregar
             // 
@@ -265,6 +266,7 @@
             this.btnAgregar.TabIndex = 35;
             this.btnAgregar.Text = "+";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // dgvLotes
             // 
@@ -392,7 +394,7 @@
             // 
             // NombreTipoLadrillo
             // 
-            this.NombreTipoLadrillo.DataPropertyName = "tipoLadrillo";
+            this.NombreTipoLadrillo.DataPropertyName = "nombre";
             this.NombreTipoLadrillo.HeaderText = "Nombre Tipo Ladrillo";
             this.NombreTipoLadrillo.Name = "NombreTipoLadrillo";
             this.NombreTipoLadrillo.ReadOnly = true;

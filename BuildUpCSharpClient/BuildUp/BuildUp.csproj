@@ -466,7 +466,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\IncidenteMaquinariaWS\BuildUp.IncidenteMaquinariaWS.eliminarIncidenteMaquinariaResponse1.datasource">
+    <None Include="Connected Services\IncidenteMaquinariaWS\BuildUp.IncidenteMaquinariaWS.eliminarIncidenteMaquinariaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\IncidenteMaquinariaWS\BuildUp.IncidenteMaquinariaWS.incidenteMaquinaria.datasource">
@@ -475,13 +475,13 @@
     <None Include="Connected Services\IncidenteMaquinariaWS\BuildUp.IncidenteMaquinariaWS.ingeniero.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\IncidenteMaquinariaWS\BuildUp.IncidenteMaquinariaWS.insertarIncidenteMaquinariaResponse1.datasource">
+    <None Include="Connected Services\IncidenteMaquinariaWS\BuildUp.IncidenteMaquinariaWS.insertarIncidenteMaquinariaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\IncidenteMaquinariaWS\BuildUp.IncidenteMaquinariaWS.insertarProblemaIncidenteMaquinariaResponse1.datasource">
+    <None Include="Connected Services\IncidenteMaquinariaWS\BuildUp.IncidenteMaquinariaWS.insertarProblemaIncidenteMaquinariaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\IncidenteMaquinariaWS\BuildUp.IncidenteMaquinariaWS.insertarRespuestaIncidenteMaquinariaResponse1.datasource">
+    <None Include="Connected Services\IncidenteMaquinariaWS\BuildUp.IncidenteMaquinariaWS.insertarRespuestaIncidenteMaquinariaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\IncidenteMaquinariaWS\BuildUp.IncidenteMaquinariaWS.listarIncidenteMaquinariaResponse.datasource">
@@ -490,16 +490,19 @@
     <None Include="Connected Services\IncidenteMaquinariaWS\BuildUp.IncidenteMaquinariaWS.listarPorRangoFechaIncidenteMaquinariaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\IncidenteMaquinariaWS\BuildUp.IncidenteMaquinariaWS.modificarPorIngenieroIncidenteMaquinariaResponse1.datasource">
+    <None Include="Connected Services\IncidenteMaquinariaWS\BuildUp.IncidenteMaquinariaWS.modificarPorIngenieroIncidenteMaquinariaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\IncidenteMaquinariaWS\BuildUp.IncidenteMaquinariaWS.modificarPorSupervisorIncidenteMaquinariaResponse1.datasource">
+    <None Include="Connected Services\IncidenteMaquinariaWS\BuildUp.IncidenteMaquinariaWS.modificarPorSupervisorIncidenteMaquinariaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\IncidenteMaquinariaWS\BuildUp.IncidenteMaquinariaWS.obtenerIngenieroIncidenteMaquinariaResponse1.datasource">
+    <None Include="Connected Services\IncidenteMaquinariaWS\BuildUp.IncidenteMaquinariaWS.obtenerIngenieroIncidenteMaquinariaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\IncidenteMaquinariaWS\BuildUp.IncidenteMaquinariaWS.obtenerRespuestaIncidenteMaquinariaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\IncidenteMaquinariaWS\BuildUp.IncidenteMaquinariaWS.respuesta.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\IncidenteMaquinariaWS\IncidenteMaquinariaWS.wsdl" />
