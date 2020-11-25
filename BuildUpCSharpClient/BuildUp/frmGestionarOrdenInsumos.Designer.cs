@@ -60,9 +60,7 @@
             this.btnRegresar = new System.Windows.Forms.ToolStripButton();
             this.pnlAceptacionOrden = new System.Windows.Forms.Panel();
             this.picCheck = new System.Windows.Forms.PictureBox();
-            this.btnRechazarOrden = new System.Windows.Forms.Button();
             this.btnAceptarOrden = new System.Windows.Forms.Button();
-            this.picEquis = new System.Windows.Forms.PictureBox();
             this.gbDatosOrdenInsumos.SuspendLayout();
             this.gbDatosInsumo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -70,7 +68,6 @@
             this.toolStrip2.SuspendLayout();
             this.pnlAceptacionOrden.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picCheck)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picEquis)).BeginInit();
             this.SuspendLayout();
             // 
             // dtpFechaActual
@@ -362,9 +359,7 @@
             // 
             this.pnlAceptacionOrden.BackColor = System.Drawing.SystemColors.ControlLight;
             this.pnlAceptacionOrden.Controls.Add(this.picCheck);
-            this.pnlAceptacionOrden.Controls.Add(this.btnRechazarOrden);
             this.pnlAceptacionOrden.Controls.Add(this.btnAceptarOrden);
-            this.pnlAceptacionOrden.Controls.Add(this.picEquis);
             this.pnlAceptacionOrden.Location = new System.Drawing.Point(160, 457);
             this.pnlAceptacionOrden.Name = "pnlAceptacionOrden";
             this.pnlAceptacionOrden.Size = new System.Drawing.Size(360, 75);
@@ -375,27 +370,11 @@
             // 
             this.picCheck.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picCheck.BackgroundImage")));
             this.picCheck.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picCheck.Location = new System.Drawing.Point(300, 19);
+            this.picCheck.Location = new System.Drawing.Point(204, 18);
             this.picCheck.Name = "picCheck";
             this.picCheck.Size = new System.Drawing.Size(37, 36);
             this.picCheck.TabIndex = 43;
             this.picCheck.TabStop = false;
-            // 
-            // btnRechazarOrden
-            // 
-            this.btnRechazarOrden.BackColor = System.Drawing.SystemColors.Menu;
-            this.btnRechazarOrden.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnRechazarOrden.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRechazarOrden.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRechazarOrden.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRechazarOrden.Location = new System.Drawing.Point(26, 19);
-            this.btnRechazarOrden.Name = "btnRechazarOrden";
-            this.btnRechazarOrden.Size = new System.Drawing.Size(82, 36);
-            this.btnRechazarOrden.TabIndex = 0;
-            this.btnRechazarOrden.Text = "Rechazar";
-            this.btnRechazarOrden.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.btnRechazarOrden.UseVisualStyleBackColor = false;
-            this.btnRechazarOrden.Click += new System.EventHandler(this.btnRechazarOrden_Click);
             // 
             // btnAceptarOrden
             // 
@@ -403,23 +382,13 @@
             this.btnAceptarOrden.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnAceptarOrden.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAceptarOrden.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAceptarOrden.Location = new System.Drawing.Point(213, 19);
+            this.btnAceptarOrden.Location = new System.Drawing.Point(117, 18);
             this.btnAceptarOrden.Name = "btnAceptarOrden";
             this.btnAceptarOrden.Size = new System.Drawing.Size(82, 36);
             this.btnAceptarOrden.TabIndex = 1;
             this.btnAceptarOrden.Text = "Aceptar";
             this.btnAceptarOrden.UseVisualStyleBackColor = false;
             this.btnAceptarOrden.Click += new System.EventHandler(this.btnAceptarOrden_Click);
-            // 
-            // picEquis
-            // 
-            this.picEquis.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picEquis.BackgroundImage")));
-            this.picEquis.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picEquis.Location = new System.Drawing.Point(114, 19);
-            this.picEquis.Name = "picEquis";
-            this.picEquis.Size = new System.Drawing.Size(37, 36);
-            this.picEquis.TabIndex = 42;
-            this.picEquis.TabStop = false;
             // 
             // frmGestionarOrdenInsumos
             // 
@@ -448,7 +417,6 @@
             this.toolStrip2.PerformLayout();
             this.pnlAceptacionOrden.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picCheck)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picEquis)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -484,9 +452,7 @@
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Label lblCantidad;
         private System.Windows.Forms.Panel pnlAceptacionOrden;
-        private System.Windows.Forms.PictureBox picEquis;
         private System.Windows.Forms.Button btnAceptarOrden;
-        private System.Windows.Forms.Button btnRechazarOrden;
         private System.Windows.Forms.PictureBox picCheck;
         private System.Windows.Forms.ToolStripButton btnCancelar;
     }

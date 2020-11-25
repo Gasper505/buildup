@@ -15,7 +15,7 @@ namespace BuildUp
 
         OrdenInsumosWS.OrdenInsumosWSClient daoOrdenInsumos;
         OrdenInsumosWS.ordenInsumos ordenInsumos;
-
+        bool estado;
 
         public frmGestionarOrdenInsumos()
         {
@@ -37,6 +37,7 @@ namespace BuildUp
                 btnGuardar.Visible = false;
                 btnEliminar.Visible = false;
                 btnCancelar.Visible = false;
+                
                 pnlAceptacionOrden.Visible = true;
             }
         }
@@ -63,7 +64,7 @@ namespace BuildUp
                     btnBuscarInsumo.Enabled = false;
                     numericUpDown1.Enabled = false;
                     btnAceptarOrden.Enabled = false;
-                    btnRechazarOrden.Enabled = false;
+                    //btnRechazarOrden.Enabled = false;
                     break;
                 case Estado.Nuevo:
                     btnNuevo.Enabled = false;
@@ -84,7 +85,7 @@ namespace BuildUp
                     btnBuscarInsumo.Enabled = true;
                     numericUpDown1.Enabled = true;
                     btnAceptarOrden.Enabled = true;
-                    btnRechazarOrden.Enabled = true;
+                    //btnRechazarOrden.Enabled = true;
 
                     break;
                 case Estado.Modificacion:
@@ -111,7 +112,7 @@ namespace BuildUp
                         btnBuscarInsumo.Enabled = false;
                         numericUpDown1.Enabled = false;
                         btnAceptarOrden.Enabled = true;
-                        btnRechazarOrden.Enabled = true;
+                        //btnRechazarOrden.Enabled = true;
                     }
                     else
                     {
@@ -132,7 +133,7 @@ namespace BuildUp
                         btnBuscarInsumo.Enabled = true;
                         numericUpDown1.Enabled = true;
                         btnAceptarOrden.Enabled = true;
-                        btnRechazarOrden.Enabled = true;
+                        //btnRechazarOrden.Enabled = true;
                     }
                     break;
 
@@ -151,6 +152,19 @@ namespace BuildUp
 
         private void btnGuardarOrdenInsumos_Click(object sender, EventArgs e)
         {
+            if (txtIdInsumo.Text == "")
+            {
+                MessageBox.Show("No ha ingresado el insumo", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (Int32.Parse(numericUpDown1.Text)==0)
+            {
+                MessageBox.Show("No ha ingresado la cantidad del insumo", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+
+
             DialogResult dr = MessageBox.Show("¿Está seguro que desea registrar esta Orden de Insumos?", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (dr == DialogResult.Yes)
             {
@@ -213,7 +227,7 @@ namespace BuildUp
                 txtNombreInsumo.Text = formBuscarOrdenInsumos.OrdenInsumoSeleccionado.insumo.nombre.ToString();
                 //txtUnidadMedida.Text = formBuscarOrdenInsumos.OrdenInsumoSeleccionado.insumo.unidadMedida.ToString();
                 numericUpDown1.Text = formBuscarOrdenInsumos.OrdenInsumoSeleccionado.cantidad.ToString();
-
+                estado = formBuscarOrdenInsumos.OrdenInsumoSeleccionado.estado;
 
                 EstablecerEstadoComponentes(Estado.Modificacion);
             }
@@ -304,26 +318,48 @@ namespace BuildUp
 
         private void btnRechazarOrden_Click(object sender, EventArgs e)
         {
-            if(!(txtIdOrdenInsumos.Text == ""))
-            {
 
-            }
-            else
-            {
-                MessageBox.Show("No se ha seleccionado una Orden de Insumos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
         }
 
         private void btnAceptarOrden_Click(object sender, EventArgs e)
         {
             if (!(txtIdOrdenInsumos.Text == ""))
             {
-
+                if (estado)
+                {
+                    MessageBox.Show("La Orden de Insumos ya ha sido aceptada", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    DialogResult dr = MessageBox.Show("¿Esta seguro que desea aceptar esta Orden de Insumo?", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (dr == DialogResult.Yes)
+                    {
+                        int result = 0;
+                        result = daoOrdenInsumos.aceptarOrdenInsumos(Int32.Parse(txtIdOrdenInsumos.Text));
+                        if (result != 0)
+                        {
+                            MessageBox.Show("La operacion ha sido exitosa", "Mensaje de Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            txtIdOperario.Text = "";
+                            txtNombresOperario.Text = "";
+                            txtIdOrdenInsumos.Text = "";
+                            dtpFechaActual.Value = DateTime.Now;
+                            txtIdInsumo.Text = "";
+                            txtNombreInsumo.Text = "";
+                            numericUpDown1.Text = "";
+                            EstablecerEstadoComponentes(Estado.Inicial);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Error en el proceso", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                }
             }
             else
             {
                 MessageBox.Show("No se ha seleccionado una Orden de Insumos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            
         }
     }
 }

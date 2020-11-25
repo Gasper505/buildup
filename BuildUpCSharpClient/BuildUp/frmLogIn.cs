@@ -48,7 +48,7 @@ namespace BuildUp
                 //test every possibility
                 switch (usuario.rol)
                 {
-                    case "Jefe de Área":
+                    case "Jefe":
                         frmRolJefeArea formJefeArea = new frmRolJefeArea();
                         this.Hide();
                         formJefeArea.ShowDialog();
