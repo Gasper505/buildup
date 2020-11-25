@@ -173,8 +173,8 @@ public class IncidenteMaquinariaMySQL implements IncidenteMaquinariaDAO{
     }
 
     @Override
-    public IncidenteMaquinaria obtenerIngeniero(int idIncidenteMaquinaria) {
-        IncidenteMaquinaria incidenteActualizado = new IncidenteMaquinaria();
+    public Ingeniero obtenerIngeniero(int idIncidenteMaquinaria) {
+        Ingeniero ingeniero = new Ingeniero();
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.password);
@@ -194,8 +194,8 @@ public class IncidenteMaquinariaMySQL implements IncidenteMaquinariaDAO{
     }
 
     @Override
-    public IncidenteMaquinaria obtenerRespuesta(int idIncidenteMaquinaria) {
-        IncidenteMaquinaria incidenteActualizado = new IncidenteMaquinaria();
+    public Respuesta obtenerRespuesta(int idIncidenteMaquinaria) {
+        Respuesta respuesta = new Respuesta();
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.password);
@@ -203,9 +203,9 @@ public class IncidenteMaquinariaMySQL implements IncidenteMaquinariaDAO{
             cs.setInt("_ID_INCIDENTE", idIncidenteMaquinaria);
             rs = cs.executeQuery();  
             while(rs.next()){
-                .setTipo(rs.getString("TIPO_RESPUESTA"));
-                respuesta.setTipo(rs.getString("DESCRIPCION_RESPUESTA"));
-                respuesta.add(rs.getDate("FECHA_RESPUESTA"));
+//                respuesta.setTipo(rs.getString("TIPO_RESPUESTA"));
+//                respuesta.setTipo(rs.getString("DESCRIPCION_RESPUESTA"));
+//                respuesta.add(rs.getDate("FECHA_RESPUESTA"));
             }
         }catch(Exception ex){
             System.out.println(ex.getMessage());
