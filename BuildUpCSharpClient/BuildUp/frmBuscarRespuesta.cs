@@ -32,6 +32,11 @@ namespace BuildUp
 
         private void btnSeleccionar_Click(object sender, EventArgs e)
         {
+            if (dgvRespuestas.SelectedRows.Count < 1)
+            {
+                MessageBox.Show("Debe seleccionar una respuesta", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             respuestaSeleccionada = (RespuestaWS.respuesta)dgvRespuestas.CurrentRow.DataBoundItem;
             this.DialogResult = DialogResult.OK;
         }

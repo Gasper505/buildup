@@ -113,6 +113,23 @@ namespace BuildUp
 
         private void btnGuardarMaquinaria_Click(object sender, EventArgs e)
         {
+            if (txtNombre.Text == "")
+            {
+                MessageBox.Show("Debe escribir el nombre de la maquinaria", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (txtIdProveedor.Text == "")
+            {
+                MessageBox.Show("Debe seleccionar un proveedor", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (txtIdLinea.Text == "")
+            {
+                MessageBox.Show("Debe seleccionar una linea de produccion", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+
             DialogResult dr = MessageBox.Show("¿Está seguro que desea registrar esta Maquinaria?", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (dr == DialogResult.Yes)
             {
@@ -164,7 +181,16 @@ namespace BuildUp
                 txtCorreoRep.Text = maquinaria.proveedor.correo;
                 EstablecerEstadoComponentes(Estado.Modificacion);
             }
-            
+
+            if (frmLogIn.Usuario.rol == "Ingeniero"
+                || frmLogIn.Usuario.rol == "ingeniero"
+                || frmLogIn.Usuario.rol == "INGENIERO")
+            {
+
+                EstablecerEstadoComponentes(Estado.Inicial);
+
+            }
+
         }
 
 
@@ -188,6 +214,22 @@ namespace BuildUp
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
+            if (txtNombre.Text == "")
+            {
+                MessageBox.Show("Debe escribir el nombre de la maquinaria", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (txtIdProveedor.Text == "")
+            {
+                MessageBox.Show("Debe seleccionar un proveedor", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (txtIdLinea.Text == "")
+            {
+                MessageBox.Show("Debe seleccionar una linea de produccion", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             DialogResult dr = MessageBox.Show("¿Esta seguro que desea actualizar esta Maquinaria?", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (dr == DialogResult.Yes)
             {

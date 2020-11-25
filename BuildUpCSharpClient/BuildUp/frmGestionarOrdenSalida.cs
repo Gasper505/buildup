@@ -135,6 +135,13 @@ namespace BuildUp
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            if (lineasOs==null || lineasOs.Count==0)
+            {
+                MessageBox.Show("Debe agregar lineas para orden de salida", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+
             DialogResult dr = MessageBox.Show("¿Está seguro que desea registrar esta Orden de Salida?", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (dr == DialogResult.Yes)
             {

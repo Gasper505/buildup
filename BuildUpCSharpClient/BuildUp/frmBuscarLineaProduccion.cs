@@ -30,6 +30,12 @@ namespace BuildUp
 
         private void btnSeleccionar_Click(object sender, EventArgs e)
         {
+            if (dgvLineasProduccion.SelectedRows.Count<1)
+            {
+                MessageBox.Show("Debe seleccionar una linea de produccion", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             lineaProduccionSeleccionada = (LineaProduccionWS.lineaProduccion)dgvLineasProduccion.CurrentRow.DataBoundItem;
             this.DialogResult = DialogResult.OK;
         }
@@ -38,6 +44,12 @@ namespace BuildUp
         {
             dgvLineasProduccion.DataSource = 
                 new BindingList<LineaProduccionWS.lineaProduccion>(daoLineaProduccion.listarPorNombreLineaProduccion(txtNombre.Text).ToList());
+        }
+
+        private void dgvLineasProduccion_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            LineaProduccionWS.lineaProduccion data = dgvLineasProduccion.Rows[e.RowIndex].DataBoundItem as LineaProduccionWS.lineaProduccion;
+            dgvLineasProduccion.Rows[e.RowIndex].Cells[2].Value = data.tipoLadrillo.nombre;
         }
     }
 }

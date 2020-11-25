@@ -29,6 +29,11 @@ namespace BuildUp
 
         private void btnSeleccionar_Click(object sender, EventArgs e)
         {
+            if (dgvInsumos.SelectedRows.Count < 1)
+            {
+                MessageBox.Show("Debe seleccionar un insumo", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             insumoSeleccionado = (InsumoWS.insumo)dgvInsumos.CurrentRow.DataBoundItem;
             this.DialogResult = DialogResult.OK;
         }

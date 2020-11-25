@@ -74,6 +74,19 @@ namespace BuildUp
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            if (txtTipo.Text == "")
+            {
+                MessageBox.Show("Debe escribir un tipo de problema", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (txtNivelImportancia.Text == "")
+            {
+                MessageBox.Show("Debe seleccionar un nivel de importancia", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+
             DialogResult dr = MessageBox.Show("¿Está seguro que desea registrar este Problema?", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (dr == DialogResult.Yes)
             {
@@ -101,6 +114,7 @@ namespace BuildUp
             DialogResult dr = MessageBox.Show("¿Esta seguro que desea actualizar este Problema?", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (dr == DialogResult.Yes)
             {
+                problema = new ProblemaWS.problema();
                 problema.idProblema = Int32.Parse(txtIdProblema.Text);
                 problema.tipo = txtTipo.Text;
                 problema.nivelImportancia = Int32.Parse(txtNivelImportancia.Text);

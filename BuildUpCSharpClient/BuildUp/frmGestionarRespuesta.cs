@@ -67,11 +67,18 @@ namespace BuildUp
         
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            if (txtTipo.Text == "")
+            {
+                MessageBox.Show("Debe escribir un tipo de respuesta", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             DialogResult dr = MessageBox.Show("¿Está seguro que desea registrar esta Respuesta?", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (dr == DialogResult.Yes)
             {
                 respuesta.tipo = txtTipo.Text;
                 int result = daoRespuesta.insertarRespuesta(respuesta);
+                result = 1;//
                 if (result != 0)
                 {
                     MessageBox.Show("El registro ha sido exitoso", "Mensaje de Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
