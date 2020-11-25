@@ -210,9 +210,7 @@ namespace BuildUp
                 ordenSalida.operario.apellidos = txtApellidos.Text;
                 ordenSalida.operario.nombres = txtNombres.Text;
                 ordenSalida.operario.idPersona = Int32.Parse(txtIDOperario.Text);
-                ordenSalida.lineasOrdenSalida = lineasOs.ToArray();
-         
-
+                //ordenSalida.lineasOrdenSalida = lineasOs.ToArray();
 
                 int result = 0;
                 result = daoOrdenSalida.actualizarOrdenSalida(ordenSalida);
@@ -234,6 +232,7 @@ namespace BuildUp
                     MessageBox.Show("Error en el proceso", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
+                //lineasOs = null;
             }
         }
 
@@ -249,7 +248,7 @@ namespace BuildUp
                 txtNombres.Text = "";
                 txtApellidos.Text = "";
                 cboNombreTipoLadrillo.Text = "";
-                dgvLotes.DataSource = ordenSalida.lineasOrdenSalida;
+                dgvLotes.DataSource = null;
                 numNroAproxLadrillos.Value = 0;
                 EstablecerEstadoComponentes(Estado.Inicial);
             }
@@ -316,8 +315,9 @@ namespace BuildUp
                         dgvLotes.Refresh();
                         return;
                     }
-                }
+                }         
             }
+
             OSalidaWS.lineaOrdenSalida los = new OSalidaWS.lineaOrdenSalida();
 
             los.tipoLadrillo = new OSalidaWS.tipoLadrillo();

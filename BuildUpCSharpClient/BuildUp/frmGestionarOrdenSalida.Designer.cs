@@ -50,6 +50,8 @@
             this.btnRemover = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.dgvLotes = new System.Windows.Forms.DataGridView();
+            this.NombreTipoLadrillo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CantidadEnElLote = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.btnNuevo = new System.Windows.Forms.ToolStripButton();
@@ -61,8 +63,6 @@
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.btnCancelar = new System.Windows.Forms.ToolStripButton();
             this.btnRegresar = new System.Windows.Forms.ToolStripButton();
-            this.NombreTipoLadrillo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CantidadEnElLote = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.numNroAproxLadrillos)).BeginInit();
             this.gbDatosOrden.SuspendLayout();
             this.gbDatosOperario.SuspendLayout();
@@ -285,6 +285,22 @@
             this.dgvLotes.TabIndex = 34;
             this.dgvLotes.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvLotes_CellFormatting);
             // 
+            // NombreTipoLadrillo
+            // 
+            this.NombreTipoLadrillo.DataPropertyName = "nombre";
+            this.NombreTipoLadrillo.HeaderText = "Nombre Tipo Ladrillo";
+            this.NombreTipoLadrillo.Name = "NombreTipoLadrillo";
+            this.NombreTipoLadrillo.ReadOnly = true;
+            this.NombreTipoLadrillo.Width = 320;
+            // 
+            // CantidadEnElLote
+            // 
+            this.CantidadEnElLote.DataPropertyName = "cantidad";
+            this.CantidadEnElLote.HeaderText = "Cantidad en el Lote";
+            this.CantidadEnElLote.Name = "CantidadEnElLote";
+            this.CantidadEnElLote.ReadOnly = true;
+            this.CantidadEnElLote.Width = 150;
+            // 
             // toolStrip2
             // 
             this.toolStrip2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -391,22 +407,6 @@
             this.btnRegresar.Size = new System.Drawing.Size(72, 22);
             this.btnRegresar.Text = "Regresar";
             this.btnRegresar.Click += new System.EventHandler(this.btnVolver_Click);
-            // 
-            // NombreTipoLadrillo
-            // 
-            this.NombreTipoLadrillo.DataPropertyName = "nombre";
-            this.NombreTipoLadrillo.HeaderText = "Nombre Tipo Ladrillo";
-            this.NombreTipoLadrillo.Name = "NombreTipoLadrillo";
-            this.NombreTipoLadrillo.ReadOnly = true;
-            this.NombreTipoLadrillo.Width = 320;
-            // 
-            // CantidadEnElLote
-            // 
-            this.CantidadEnElLote.DataPropertyName = "cantidad";
-            this.CantidadEnElLote.HeaderText = "Cantidad en el Lote";
-            this.CantidadEnElLote.Name = "CantidadEnElLote";
-            this.CantidadEnElLote.ReadOnly = true;
-            this.CantidadEnElLote.Width = 150;
             // 
             // frmGestionarOrdenSalida
             // 
