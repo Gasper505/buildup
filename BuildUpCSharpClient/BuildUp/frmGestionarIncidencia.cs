@@ -89,6 +89,7 @@ namespace BuildUp
 
                     txtIDProblema.Enabled = false;
                     txtProblema.Enabled = false;
+                    txtNivelImp.Enabled = false;
                     btnBuscarProblema.Enabled = false;
 
                     btnBuscarRespuesta.Enabled = false;

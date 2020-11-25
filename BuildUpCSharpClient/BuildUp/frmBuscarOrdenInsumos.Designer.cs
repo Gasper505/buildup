@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.gbParametrosBusqueda = new System.Windows.Forms.GroupBox();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dtpHasta = new System.Windows.Forms.DateTimePicker();
             this.lblHasta = new System.Windows.Forms.Label();
             this.lblDesde = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpDesde = new System.Windows.Forms.DateTimePicker();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnSeleccionar = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvOrdenes = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,63 +45,66 @@
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbParametrosBusqueda.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOrdenes)).BeginInit();
             this.SuspendLayout();
             // 
             // gbParametrosBusqueda
             // 
-            this.gbParametrosBusqueda.Controls.Add(this.dateTimePicker2);
+            this.gbParametrosBusqueda.Controls.Add(this.dtpHasta);
             this.gbParametrosBusqueda.Controls.Add(this.lblHasta);
             this.gbParametrosBusqueda.Controls.Add(this.lblDesde);
-            this.gbParametrosBusqueda.Controls.Add(this.dateTimePicker1);
+            this.gbParametrosBusqueda.Controls.Add(this.dtpDesde);
             this.gbParametrosBusqueda.Controls.Add(this.btnBuscar);
+            this.gbParametrosBusqueda.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbParametrosBusqueda.Location = new System.Drawing.Point(42, 28);
             this.gbParametrosBusqueda.Name = "gbParametrosBusqueda";
-            this.gbParametrosBusqueda.Size = new System.Drawing.Size(700, 108);
+            this.gbParametrosBusqueda.Size = new System.Drawing.Size(845, 130);
             this.gbParametrosBusqueda.TabIndex = 3;
             this.gbParametrosBusqueda.TabStop = false;
             this.gbParametrosBusqueda.Text = "Parámetros de Búsqueda";
             // 
-            // dateTimePicker2
+            // dtpHasta
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(160, 67);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(254, 20);
-            this.dateTimePicker2.TabIndex = 21;
+            this.dtpHasta.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpHasta.Location = new System.Drawing.Point(206, 73);
+            this.dtpHasta.Name = "dtpHasta";
+            this.dtpHasta.Size = new System.Drawing.Size(254, 23);
+            this.dtpHasta.TabIndex = 21;
             // 
             // lblHasta
             // 
             this.lblHasta.AutoSize = true;
-            this.lblHasta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHasta.Location = new System.Drawing.Point(115, 71);
+            this.lblHasta.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHasta.Location = new System.Drawing.Point(163, 73);
             this.lblHasta.Name = "lblHasta";
-            this.lblHasta.Size = new System.Drawing.Size(39, 15);
+            this.lblHasta.Size = new System.Drawing.Size(37, 15);
             this.lblHasta.TabIndex = 20;
             this.lblHasta.Text = "Hasta";
             // 
             // lblDesde
             // 
             this.lblDesde.AutoSize = true;
-            this.lblDesde.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDesde.Location = new System.Drawing.Point(111, 41);
+            this.lblDesde.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDesde.Location = new System.Drawing.Point(161, 45);
             this.lblDesde.Name = "lblDesde";
-            this.lblDesde.Size = new System.Drawing.Size(43, 15);
+            this.lblDesde.Size = new System.Drawing.Size(39, 15);
             this.lblDesde.TabIndex = 19;
             this.lblDesde.Text = "Desde";
             // 
-            // dateTimePicker1
+            // dtpDesde
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(160, 37);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(254, 20);
-            this.dateTimePicker1.TabIndex = 18;
+            this.dtpDesde.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDesde.Location = new System.Drawing.Point(206, 39);
+            this.dtpDesde.Name = "dtpDesde";
+            this.dtpDesde.Size = new System.Drawing.Size(254, 23);
+            this.dtpDesde.TabIndex = 18;
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(487, 37);
+            this.btnBuscar.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.Location = new System.Drawing.Point(547, 52);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(120, 36);
+            this.btnBuscar.Size = new System.Drawing.Size(155, 36);
             this.btnBuscar.TabIndex = 6;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
@@ -109,8 +112,8 @@
             // 
             // btnSeleccionar
             // 
-            this.btnSeleccionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSeleccionar.Location = new System.Drawing.Point(267, 442);
+            this.btnSeleccionar.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeleccionar.Location = new System.Drawing.Point(338, 472);
             this.btnSeleccionar.Name = "btnSeleccionar";
             this.btnSeleccionar.Size = new System.Drawing.Size(257, 36);
             this.btnSeleccionar.TabIndex = 5;
@@ -118,12 +121,12 @@
             this.btnSeleccionar.UseVisualStyleBackColor = true;
             this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
             // 
-            // dataGridView1
+            // dgvOrdenes
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvOrdenes.AllowUserToAddRows = false;
+            this.dgvOrdenes.AllowUserToDeleteRows = false;
+            this.dgvOrdenes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvOrdenes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3,
@@ -132,12 +135,14 @@
             this.Column6,
             this.Column7,
             this.Column8});
-            this.dataGridView1.Location = new System.Drawing.Point(43, 174);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(721, 243);
-            this.dataGridView1.TabIndex = 6;
-            this.dataGridView1.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView1_CellFormatting);
+            this.dgvOrdenes.Location = new System.Drawing.Point(43, 188);
+            this.dgvOrdenes.MultiSelect = false;
+            this.dgvOrdenes.Name = "dgvOrdenes";
+            this.dgvOrdenes.ReadOnly = true;
+            this.dgvOrdenes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvOrdenes.Size = new System.Drawing.Size(844, 254);
+            this.dgvOrdenes.TabIndex = 6;
+            this.dgvOrdenes.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView1_CellFormatting);
             // 
             // Column1
             // 
@@ -199,17 +204,17 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(791, 501);
-            this.Controls.Add(this.dataGridView1);
+            this.ClientSize = new System.Drawing.Size(930, 535);
+            this.Controls.Add(this.dgvOrdenes);
             this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.gbParametrosBusqueda);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "frmBuscarOrdenInsumos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Búsqueda de Orden de Insumos";
+            this.Text = "Búsqueda de Órdenes de Insumos";
             this.gbParametrosBusqueda.ResumeLayout(false);
             this.gbParametrosBusqueda.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOrdenes)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -218,11 +223,11 @@
         private System.Windows.Forms.GroupBox gbParametrosBusqueda;
         private System.Windows.Forms.Button btnSeleccionar;
         private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dtpHasta;
         private System.Windows.Forms.Label lblHasta;
         private System.Windows.Forms.Label lblDesde;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DateTimePicker dtpDesde;
+        private System.Windows.Forms.DataGridView dgvOrdenes;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;

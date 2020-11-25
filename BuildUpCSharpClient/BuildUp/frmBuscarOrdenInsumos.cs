@@ -21,12 +21,12 @@ namespace BuildUp
         {
             daoOrdenInsumos = new OrdenInsumosWS.OrdenInsumosWSClient();
             InitializeComponent();
-            dataGridView1.AutoGenerateColumns = false;
+            dgvOrdenes.AutoGenerateColumns = false;
         }
 
         private void btnSeleccionar_Click(object sender, EventArgs e)
         {
-            ordenInsumoSeleccionado = (OrdenInsumosWS.ordenInsumos)dataGridView1.CurrentRow.DataBoundItem;
+            ordenInsumoSeleccionado = (OrdenInsumosWS.ordenInsumos)dgvOrdenes.CurrentRow.DataBoundItem;
             this.DialogResult = DialogResult.OK;
         }
 
@@ -34,12 +34,8 @@ namespace BuildUp
         {
             try
             {
-                BindingList<OrdenInsumosWS.ordenInsumos> ordenes = new BindingList<OrdenInsumosWS.ordenInsumos>(daoOrdenInsumos.listarOrdenInsumosPorRangoFecha(dateTimePicker1.Value, dateTimePicker2.Value).ToArray());
-                //BindingList<OrdenInsumosWS.ordenInsumos> ordenes = new BindingList<OrdenInsumosWS.ordenInsumos>(daoOrdenInsumos.listarOrdenInsumos().ToArray());
-                dataGridView1.DataSource = ordenes;
-
-
-
+                BindingList<OrdenInsumosWS.ordenInsumos> ordenes = new BindingList<OrdenInsumosWS.ordenInsumos>(daoOrdenInsumos.listarOrdenInsumosPorRangoFecha(dtpDesde.Value, dtpHasta.Value).ToArray());
+                dgvOrdenes.DataSource = ordenes;
             }
             catch (Exception ex)
             {
@@ -50,11 +46,11 @@ namespace BuildUp
         }
         private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            OrdenInsumosWS.ordenInsumos data = dataGridView1.Rows[e.RowIndex].DataBoundItem as OrdenInsumosWS.ordenInsumos;
-            dataGridView1.Rows[e.RowIndex].Cells[2].Value = data.operario.idPersona;
-            dataGridView1.Rows[e.RowIndex].Cells[3].Value = data.operario.nombres;
-            dataGridView1.Rows[e.RowIndex].Cells[4].Value = data.insumo.idInsumo;
-            dataGridView1.Rows[e.RowIndex].Cells[5].Value = data.insumo.nombre;
+            OrdenInsumosWS.ordenInsumos data = dgvOrdenes.Rows[e.RowIndex].DataBoundItem as OrdenInsumosWS.ordenInsumos;
+            dgvOrdenes.Rows[e.RowIndex].Cells[2].Value = data.operario.idPersona;
+            dgvOrdenes.Rows[e.RowIndex].Cells[3].Value = data.operario.nombres;
+            dgvOrdenes.Rows[e.RowIndex].Cells[4].Value = data.insumo.idInsumo;
+            dgvOrdenes.Rows[e.RowIndex].Cells[5].Value = data.insumo.nombre;
         }
     }
 
