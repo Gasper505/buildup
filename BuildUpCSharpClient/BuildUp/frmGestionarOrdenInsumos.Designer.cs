@@ -35,18 +35,14 @@
             this.lblFechaActual = new System.Windows.Forms.Label();
             this.gbDatosOrdenInsumos = new System.Windows.Forms.GroupBox();
             this.gbDatosInsumo = new System.Windows.Forms.GroupBox();
-            this.cboUnidadMedida = new System.Windows.Forms.ComboBox();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.lblCantidad = new System.Windows.Forms.Label();
             this.btnBuscarInsumo = new System.Windows.Forms.Button();
-            this.lblUnidadMedida = new System.Windows.Forms.Label();
             this.txtNombreInsumo = new System.Windows.Forms.TextBox();
             this.txtIdInsumo = new System.Windows.Forms.TextBox();
             this.lblNombreInsumo = new System.Windows.Forms.Label();
             this.lblIdInsumo = new System.Windows.Forms.Label();
             this.gbDatosOperario = new System.Windows.Forms.GroupBox();
-            this.txtApellidosOperario = new System.Windows.Forms.TextBox();
-            this.lblApellidosOperario = new System.Windows.Forms.Label();
             this.txtNombresOperario = new System.Windows.Forms.TextBox();
             this.txtIdOperario = new System.Windows.Forms.TextBox();
             this.lblNombresOperario = new System.Windows.Forms.Label();
@@ -64,9 +60,7 @@
             this.btnRegresar = new System.Windows.Forms.ToolStripButton();
             this.pnlAceptacionOrden = new System.Windows.Forms.Panel();
             this.picCheck = new System.Windows.Forms.PictureBox();
-            this.btnRechazarOrden = new System.Windows.Forms.Button();
             this.btnAceptarOrden = new System.Windows.Forms.Button();
-            this.picEquis = new System.Windows.Forms.PictureBox();
             this.gbDatosOrdenInsumos.SuspendLayout();
             this.gbDatosInsumo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -74,7 +68,6 @@
             this.toolStrip2.SuspendLayout();
             this.pnlAceptacionOrden.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picCheck)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picEquis)).BeginInit();
             this.SuspendLayout();
             // 
             // dtpFechaActual
@@ -119,7 +112,7 @@
             this.gbDatosOrdenInsumos.Controls.Add(this.lblIdOrdenInsumos);
             this.gbDatosOrdenInsumos.Controls.Add(this.txtIdOrdenInsumos);
             this.gbDatosOrdenInsumos.Controls.Add(this.dtpFechaActual);
-            this.gbDatosOrdenInsumos.Location = new System.Drawing.Point(90, 206);
+            this.gbDatosOrdenInsumos.Location = new System.Drawing.Point(90, 172);
             this.gbDatosOrdenInsumos.Name = "gbDatosOrdenInsumos";
             this.gbDatosOrdenInsumos.Size = new System.Drawing.Size(502, 106);
             this.gbDatosOrdenInsumos.TabIndex = 5;
@@ -128,36 +121,19 @@
             // 
             // gbDatosInsumo
             // 
-            this.gbDatosInsumo.Controls.Add(this.cboUnidadMedida);
             this.gbDatosInsumo.Controls.Add(this.numericUpDown1);
             this.gbDatosInsumo.Controls.Add(this.lblCantidad);
             this.gbDatosInsumo.Controls.Add(this.btnBuscarInsumo);
-            this.gbDatosInsumo.Controls.Add(this.lblUnidadMedida);
             this.gbDatosInsumo.Controls.Add(this.txtNombreInsumo);
             this.gbDatosInsumo.Controls.Add(this.txtIdInsumo);
             this.gbDatosInsumo.Controls.Add(this.lblNombreInsumo);
             this.gbDatosInsumo.Controls.Add(this.lblIdInsumo);
-            this.gbDatosInsumo.Location = new System.Drawing.Point(90, 331);
+            this.gbDatosInsumo.Location = new System.Drawing.Point(90, 295);
             this.gbDatosInsumo.Name = "gbDatosInsumo";
-            this.gbDatosInsumo.Size = new System.Drawing.Size(502, 172);
+            this.gbDatosInsumo.Size = new System.Drawing.Size(502, 139);
             this.gbDatosInsumo.TabIndex = 6;
             this.gbDatosInsumo.TabStop = false;
             this.gbDatosInsumo.Text = "Datos del Insumo";
-            // 
-            // cboUnidadMedida
-            // 
-            this.cboUnidadMedida.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboUnidadMedida.FormattingEnabled = true;
-            this.cboUnidadMedida.Items.AddRange(new object[] {
-            "Kilogramos",
-            "Toneladas",
-            "Litros",
-            "Onzas",
-            "Libras"});
-            this.cboUnidadMedida.Location = new System.Drawing.Point(189, 128);
-            this.cboUnidadMedida.Name = "cboUnidadMedida";
-            this.cboUnidadMedida.Size = new System.Drawing.Size(121, 23);
-            this.cboUnidadMedida.TabIndex = 47;
             // 
             // numericUpDown1
             // 
@@ -187,16 +163,6 @@
             this.btnBuscarInsumo.Text = "Buscar Insumo...";
             this.btnBuscarInsumo.UseVisualStyleBackColor = true;
             this.btnBuscarInsumo.Click += new System.EventHandler(this.btnBuscarInsumo_Click);
-            // 
-            // lblUnidadMedida
-            // 
-            this.lblUnidadMedida.AutoSize = true;
-            this.lblUnidadMedida.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUnidadMedida.Location = new System.Drawing.Point(74, 128);
-            this.lblUnidadMedida.Name = "lblUnidadMedida";
-            this.lblUnidadMedida.Size = new System.Drawing.Size(109, 15);
-            this.lblUnidadMedida.TabIndex = 8;
-            this.lblUnidadMedida.Text = "Unidad de Medida";
             // 
             // txtNombreInsumo
             // 
@@ -236,36 +202,16 @@
             // 
             // gbDatosOperario
             // 
-            this.gbDatosOperario.Controls.Add(this.txtApellidosOperario);
-            this.gbDatosOperario.Controls.Add(this.lblApellidosOperario);
             this.gbDatosOperario.Controls.Add(this.txtNombresOperario);
             this.gbDatosOperario.Controls.Add(this.txtIdOperario);
             this.gbDatosOperario.Controls.Add(this.lblNombresOperario);
             this.gbDatosOperario.Controls.Add(this.lblIdOperario);
             this.gbDatosOperario.Location = new System.Drawing.Point(90, 53);
             this.gbDatosOperario.Name = "gbDatosOperario";
-            this.gbDatosOperario.Size = new System.Drawing.Size(502, 132);
+            this.gbDatosOperario.Size = new System.Drawing.Size(502, 98);
             this.gbDatosOperario.TabIndex = 10;
             this.gbDatosOperario.TabStop = false;
             this.gbDatosOperario.Text = "Datos del Operario";
-            // 
-            // txtApellidosOperario
-            // 
-            this.txtApellidosOperario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApellidosOperario.Location = new System.Drawing.Point(189, 91);
-            this.txtApellidosOperario.Name = "txtApellidosOperario";
-            this.txtApellidosOperario.Size = new System.Drawing.Size(100, 21);
-            this.txtApellidosOperario.TabIndex = 9;
-            // 
-            // lblApellidosOperario
-            // 
-            this.lblApellidosOperario.AutoSize = true;
-            this.lblApellidosOperario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblApellidosOperario.Location = new System.Drawing.Point(127, 91);
-            this.lblApellidosOperario.Name = "lblApellidosOperario";
-            this.lblApellidosOperario.Size = new System.Drawing.Size(57, 15);
-            this.lblApellidosOperario.TabIndex = 8;
-            this.lblApellidosOperario.Text = "Apellidos";
             // 
             // txtNombresOperario
             // 
@@ -413,10 +359,8 @@
             // 
             this.pnlAceptacionOrden.BackColor = System.Drawing.SystemColors.ControlLight;
             this.pnlAceptacionOrden.Controls.Add(this.picCheck);
-            this.pnlAceptacionOrden.Controls.Add(this.btnRechazarOrden);
             this.pnlAceptacionOrden.Controls.Add(this.btnAceptarOrden);
-            this.pnlAceptacionOrden.Controls.Add(this.picEquis);
-            this.pnlAceptacionOrden.Location = new System.Drawing.Point(160, 522);
+            this.pnlAceptacionOrden.Location = new System.Drawing.Point(160, 457);
             this.pnlAceptacionOrden.Name = "pnlAceptacionOrden";
             this.pnlAceptacionOrden.Size = new System.Drawing.Size(360, 75);
             this.pnlAceptacionOrden.TabIndex = 41;
@@ -426,27 +370,11 @@
             // 
             this.picCheck.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picCheck.BackgroundImage")));
             this.picCheck.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picCheck.Location = new System.Drawing.Point(300, 19);
+            this.picCheck.Location = new System.Drawing.Point(204, 18);
             this.picCheck.Name = "picCheck";
             this.picCheck.Size = new System.Drawing.Size(37, 36);
             this.picCheck.TabIndex = 43;
             this.picCheck.TabStop = false;
-            // 
-            // btnRechazarOrden
-            // 
-            this.btnRechazarOrden.BackColor = System.Drawing.SystemColors.Menu;
-            this.btnRechazarOrden.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnRechazarOrden.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRechazarOrden.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRechazarOrden.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRechazarOrden.Location = new System.Drawing.Point(26, 19);
-            this.btnRechazarOrden.Name = "btnRechazarOrden";
-            this.btnRechazarOrden.Size = new System.Drawing.Size(82, 36);
-            this.btnRechazarOrden.TabIndex = 0;
-            this.btnRechazarOrden.Text = "Rechazar";
-            this.btnRechazarOrden.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.btnRechazarOrden.UseVisualStyleBackColor = false;
-            this.btnRechazarOrden.Click += new System.EventHandler(this.btnRechazarOrden_Click);
             // 
             // btnAceptarOrden
             // 
@@ -454,7 +382,7 @@
             this.btnAceptarOrden.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnAceptarOrden.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAceptarOrden.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAceptarOrden.Location = new System.Drawing.Point(213, 19);
+            this.btnAceptarOrden.Location = new System.Drawing.Point(117, 18);
             this.btnAceptarOrden.Name = "btnAceptarOrden";
             this.btnAceptarOrden.Size = new System.Drawing.Size(82, 36);
             this.btnAceptarOrden.TabIndex = 1;
@@ -462,22 +390,12 @@
             this.btnAceptarOrden.UseVisualStyleBackColor = false;
             this.btnAceptarOrden.Click += new System.EventHandler(this.btnAceptarOrden_Click);
             // 
-            // picEquis
-            // 
-            this.picEquis.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picEquis.BackgroundImage")));
-            this.picEquis.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picEquis.Location = new System.Drawing.Point(114, 19);
-            this.picEquis.Name = "picEquis";
-            this.picEquis.Size = new System.Drawing.Size(37, 36);
-            this.picEquis.TabIndex = 42;
-            this.picEquis.TabStop = false;
-            // 
             // frmGestionarOrdenInsumos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(682, 619);
+            this.ClientSize = new System.Drawing.Size(682, 551);
             this.ControlBox = false;
             this.Controls.Add(this.pnlAceptacionOrden);
             this.Controls.Add(this.toolStrip2);
@@ -499,7 +417,6 @@
             this.toolStrip2.PerformLayout();
             this.pnlAceptacionOrden.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picCheck)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picEquis)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -517,14 +434,11 @@
         private System.Windows.Forms.Label lblNombreInsumo;
         private System.Windows.Forms.Label lblIdInsumo;
         private System.Windows.Forms.GroupBox gbDatosOperario;
-        private System.Windows.Forms.Label lblApellidosOperario;
         private System.Windows.Forms.TextBox txtNombresOperario;
         private System.Windows.Forms.TextBox txtIdOperario;
         private System.Windows.Forms.Label lblNombresOperario;
         private System.Windows.Forms.Label lblIdOperario;
         private System.Windows.Forms.Button btnBuscarInsumo;
-        private System.Windows.Forms.Label lblUnidadMedida;
-        private System.Windows.Forms.TextBox txtApellidosOperario;
         private System.Windows.Forms.ToolStrip toolStrip2;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripButton btnNuevo;
@@ -538,11 +452,8 @@
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Label lblCantidad;
         private System.Windows.Forms.Panel pnlAceptacionOrden;
-        private System.Windows.Forms.PictureBox picEquis;
         private System.Windows.Forms.Button btnAceptarOrden;
-        private System.Windows.Forms.Button btnRechazarOrden;
         private System.Windows.Forms.PictureBox picCheck;
         private System.Windows.Forms.ToolStripButton btnCancelar;
-        private System.Windows.Forms.ComboBox cboUnidadMedida;
     }
 }

@@ -35,9 +35,20 @@ namespace BuildUp
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            BindingList<InsumoWS.insumo> insumos = new BindingList<InsumoWS.insumo>(daoInsumo.listarInsumo().ToArray());
-            dgvInsumos.DataSource = insumos;
-            
+            try
+            {
+                BindingList<InsumoWS.insumo> insumos = new BindingList<InsumoWS.insumo>(daoInsumo.listarPorNombreInsumo(txtNombreInsumo.Text).ToArray());
+                dgvInsumos.DataSource = insumos;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No existe el insumo buscado", "Mensaje aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+
+
         }
     }
 }
