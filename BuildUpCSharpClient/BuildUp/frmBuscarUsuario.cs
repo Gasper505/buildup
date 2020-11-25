@@ -35,7 +35,7 @@ namespace BuildUp
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            //BindingList<UsuarioWS.usuario> us = new BindingList<UsuarioWS.usuario>(daoUsuario.listar().ToArray());
+            //BindingList<UsuarioWS.usuario> us = new BindingList<UsuarioWS.usuario>(daoUsuario.buscarUsuarioPorUsername("").ToArray());
 
             //dgvUsuarios.DataSource = us;
         }
