@@ -3,7 +3,7 @@ package pe.edu.pucp.ta.mysql;
 
 import java.sql.CallableStatement;
 import java.sql.Connection;
-import java.util.Date;
+import java.sql.Date;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
@@ -52,7 +52,7 @@ public class OrdenInsumosMySQL implements OrdenInsumosDAO{
             cs = con.prepareCall(sql);
             cs.setInt("_ID_ORDEN_INSUMOS",ordenInsumos.getIdOrdenInsumos());
             cs.setInt("_ID_INSUMO",ordenInsumos.getInsumo().getIdInsumo());
-            cs.setInt("_ID_OPERARIO",ordenInsumos.getIdOrdenInsumos());
+            cs.setInt("_ID_OPERARIO",ordenInsumos.getOperario().getIdPersona());
             cs.setInt("_CANTIDAD",ordenInsumos.getCantidad());
             resultado=cs.executeUpdate();       
         }catch(Exception ex){
@@ -117,8 +117,8 @@ public class OrdenInsumosMySQL implements OrdenInsumosDAO{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.password);
             cs=con.prepareCall("{call LISTAR_ORDEN_INSUMOS_POR_RANGO_FECHAS(?,?)}");
-            cs.setDate("_FECHA_INICIO", (java.sql.Date) fechaIni);
-            cs.setDate("_FECHA_FIN", (java.sql.Date) fechaFin);
+            cs.setDate("_FECHA_INICIO", fechaIni);
+            cs.setDate("_FECHA_FIN", fechaFin);
             rs = cs.executeQuery();
             while(rs.next()){
                 OrdenInsumos orden = new OrdenInsumos();
