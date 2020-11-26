@@ -107,8 +107,9 @@ public class IncidenteMaquinariaMySQL implements IncidenteMaquinariaDAO{
             cs.setInt("_ID_MAQUINARIA",incidenteMaquinaria.getMaquinaria().getIdMaquinaria());
             cs.setInt("_ID_SUPERVISOR",incidenteMaquinaria.getSupervisor().getIdPersona());
             cs.setInt("_ID_PROBLEMA",incidenteMaquinaria.getProblema().getIdProblema());
-            incidenteMaquinaria.setIdIncidente(cs.getInt("_ID_INCIDENTE"));
             resultado=cs.executeUpdate();
+            incidenteMaquinaria.setIdIncidente(cs.getInt("_ID_INCIDENTE"));
+            
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }finally{
@@ -154,10 +155,12 @@ public class IncidenteMaquinariaMySQL implements IncidenteMaquinariaDAO{
                 incidente.setIdIncidente(rs.getInt("ID_INCIDENTE"));           
                 incidente.getSupervisor().setIdPersona(rs.getInt("ID_SUPERVISOR"));   
                 incidente.getSupervisor().setNombres(rs.getString("NOMBRE_SUPERVISOR"));
+                incidente.getSupervisor().setApellidos(rs.getString("APELLIDO_SUPERVISOR"));
                 incidente.setFechaIncidente(rs.getDate("FECHA_INCIDENTE"));
                 incidente.setEstado(rs.getBoolean("ESTADO_INCIDENTE"));
                 incidente.getProblema().setIdProblema(rs.getInt("ID_PROBLEMA")); 
                 incidente.getProblema().setTipo(rs.getString("NOMBRE_PROBLEMA"));
+                incidente.getProblema().setNivelImportancia(rs.getInt("NIVEL_IMPORTANCIA_PROBLEMA"));
                 incidente.getMaquinaria().setIdMaquinaria(rs.getInt("ID_MAQUINARIA")); 
                 incidente.getMaquinaria().setNombre(rs.getString("NOMBRE_MAQUINARIA"));
                 incidente.getMaquinaria().getProveedor().setRazonSocial(rs.getString("NOMBRE_PROVEEDOR"));
@@ -173,46 +176,50 @@ public class IncidenteMaquinariaMySQL implements IncidenteMaquinariaDAO{
     }
 
     @Override
-    public Ingeniero obtenerIngeniero(int idIncidenteMaquinaria) {
-        Ingeniero ingeniero = new Ingeniero();
+    public IncidenteMaquinaria obtenerIngeniero(IncidenteMaquinaria incidenteMaquinaria) {
+        int resultado=0;
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.password);
             cs=con.prepareCall("{call OBTENER_INGENIERO_POR_ID_INCIDENTE(?)}");
-            cs.setInt("_ID_INCIDENTE", idIncidenteMaquinaria);
+            cs.setInt("_ID_INCIDENTE",incidenteMaquinaria.getIdIncidente());
             rs = cs.executeQuery();  
             while(rs.next()){
-                ingeniero.setIdPersona(rs.getInt("ID_INGENIERO"));
-                ingeniero.setNombres(rs.getString("NOMBRE_INGENIERO"));
+                incidenteMaquinaria.getIngeniero().setIdPersona(rs.getInt("ID_INGENIERO"));
+                incidenteMaquinaria.getIngeniero().setNombres(rs.getString("NOMBRE_INGENIERO"));
+                incidenteMaquinaria.getIngeniero().setApellidos(rs.getString("APELLIDO_INGENIERO"));
             }
+            resultado=1;
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }finally{
             try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());}
         }
-        return ingeniero;
+        return incidenteMaquinaria;
     }
 
     @Override
-    public Respuesta obtenerRespuesta(int idIncidenteMaquinaria) {
-        Respuesta respuesta = new Respuesta();
+    public IncidenteMaquinaria obtenerRespuesta(IncidenteMaquinaria incidenteMaquinaria) {
+        int resultado=0;
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.password);
             cs=con.prepareCall("{call OBTENER_RESPUESTA_POR_ID_INCIDENTE(?)}");
-            cs.setInt("_ID_INCIDENTE", idIncidenteMaquinaria);
+            cs.setInt("_ID_INCIDENTE", incidenteMaquinaria.getIdIncidente());
             rs = cs.executeQuery();  
             while(rs.next()){
-//                respuesta.setTipo(rs.getString("TIPO_RESPUESTA"));
-//                respuesta.setTipo(rs.getString("DESCRIPCION_RESPUESTA"));
-//                respuesta.add(rs.getDate("FECHA_RESPUESTA"));
+                incidenteMaquinaria.getRespuesta().setIdRespuesta(rs.getInt("ID_RESPUESTA"));
+                incidenteMaquinaria.getRespuesta().setTipo(rs.getString("TIPO_RESPUESTA"));
+                incidenteMaquinaria.setDetalle(rs.getString("DESCRIPCION_RESPUESTA"));
+                incidenteMaquinaria.setFechaAtencion(rs.getDate("FECHA_RESPUESTA"));
             }
+            resultado=1;
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }finally{
             try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());}
         }
-        return respuesta;
+        return incidenteMaquinaria;
     }
 
     @Override
