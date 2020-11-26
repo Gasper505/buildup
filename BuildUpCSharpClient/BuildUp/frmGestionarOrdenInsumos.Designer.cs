@@ -364,7 +364,7 @@
             this.pnlAceptacionOrden.BackColor = System.Drawing.SystemColors.ControlLight;
             this.pnlAceptacionOrden.Controls.Add(this.picCheck);
             this.pnlAceptacionOrden.Controls.Add(this.btnAceptarOrden);
-            this.pnlAceptacionOrden.Location = new System.Drawing.Point(160, 457);
+            this.pnlAceptacionOrden.Location = new System.Drawing.Point(160, 460);
             this.pnlAceptacionOrden.Name = "pnlAceptacionOrden";
             this.pnlAceptacionOrden.Size = new System.Drawing.Size(360, 75);
             this.pnlAceptacionOrden.TabIndex = 41;
@@ -374,7 +374,7 @@
             // 
             this.picCheck.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picCheck.BackgroundImage")));
             this.picCheck.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picCheck.Location = new System.Drawing.Point(204, 18);
+            this.picCheck.Location = new System.Drawing.Point(206, 20);
             this.picCheck.Name = "picCheck";
             this.picCheck.Size = new System.Drawing.Size(37, 36);
             this.picCheck.TabIndex = 43;
@@ -386,7 +386,7 @@
             this.btnAceptarOrden.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnAceptarOrden.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAceptarOrden.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAceptarOrden.Location = new System.Drawing.Point(117, 18);
+            this.btnAceptarOrden.Location = new System.Drawing.Point(119, 20);
             this.btnAceptarOrden.Name = "btnAceptarOrden";
             this.btnAceptarOrden.Size = new System.Drawing.Size(82, 36);
             this.btnAceptarOrden.TabIndex = 1;
@@ -399,7 +399,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(682, 551);
+            this.ClientSize = new System.Drawing.Size(682, 562);
             this.ControlBox = false;
             this.Controls.Add(this.pnlAceptacionOrden);
             this.Controls.Add(this.toolStrip2);
