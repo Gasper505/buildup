@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRolSupervisor));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnAcontecimientoMerma = new System.Windows.Forms.Button();
             this.lblNombres = new System.Windows.Forms.Label();
             this.btnMerma = new System.Windows.Forms.Button();
             this.btnIncidencia = new System.Windows.Forms.Button();
@@ -41,6 +43,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
@@ -50,6 +53,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Window;
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.btnAcontecimientoMerma);
             this.panel1.Controls.Add(this.lblNombres);
             this.panel1.Controls.Add(this.btnMerma);
             this.panel1.Controls.Add(this.btnIncidencia);
@@ -61,14 +66,37 @@
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Location = new System.Drawing.Point(0, 35);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(837, 451);
+            this.panel1.Size = new System.Drawing.Size(843, 451);
             this.panel1.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(452, 177);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(126, 122);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 30;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnAcontecimientoMerma
+            // 
+            this.btnAcontecimientoMerma.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAcontecimientoMerma.Location = new System.Drawing.Point(452, 318);
+            this.btnAcontecimientoMerma.Name = "btnAcontecimientoMerma";
+            this.btnAcontecimientoMerma.Size = new System.Drawing.Size(126, 49);
+            this.btnAcontecimientoMerma.TabIndex = 29;
+            this.btnAcontecimientoMerma.Text = "Acontecimiento de Merma";
+            this.btnAcontecimientoMerma.UseVisualStyleBackColor = true;
+            this.btnAcontecimientoMerma.Click += new System.EventHandler(this.btnAcontecimientoMerma_Click);
             // 
             // lblNombres
             // 
             this.lblNombres.AutoSize = true;
             this.lblNombres.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombres.Location = new System.Drawing.Point(239, 37);
+            this.lblNombres.Location = new System.Drawing.Point(252, 45);
             this.lblNombres.Name = "lblNombres";
             this.lblNombres.Size = new System.Drawing.Size(161, 32);
             this.lblNombres.TabIndex = 28;
@@ -77,9 +105,9 @@
             // btnMerma
             // 
             this.btnMerma.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMerma.Location = new System.Drawing.Point(276, 310);
+            this.btnMerma.Location = new System.Drawing.Point(274, 318);
             this.btnMerma.Name = "btnMerma";
-            this.btnMerma.Size = new System.Drawing.Size(113, 49);
+            this.btnMerma.Size = new System.Drawing.Size(126, 49);
             this.btnMerma.TabIndex = 26;
             this.btnMerma.Text = "Mermas";
             this.btnMerma.UseVisualStyleBackColor = true;
@@ -88,9 +116,9 @@
             // btnIncidencia
             // 
             this.btnIncidencia.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIncidencia.Location = new System.Drawing.Point(80, 310);
+            this.btnIncidencia.Location = new System.Drawing.Point(93, 318);
             this.btnIncidencia.Name = "btnIncidencia";
-            this.btnIncidencia.Size = new System.Drawing.Size(113, 49);
+            this.btnIncidencia.Size = new System.Drawing.Size(126, 49);
             this.btnIncidencia.TabIndex = 24;
             this.btnIncidencia.Text = "Incidentes de Maquinarias";
             this.btnIncidencia.UseVisualStyleBackColor = true;
@@ -101,9 +129,9 @@
             this.pictureBox3.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox3.Image = global::BuildUp.Properties.Resources.vector_document_icon1;
-            this.pictureBox3.Location = new System.Drawing.Point(277, 169);
+            this.pictureBox3.Location = new System.Drawing.Point(274, 177);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(112, 122);
+            this.pictureBox3.Size = new System.Drawing.Size(126, 122);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 23;
             this.pictureBox3.TabStop = false;
@@ -113,9 +141,9 @@
             this.pictureBox2.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(80, 169);
+            this.pictureBox2.Location = new System.Drawing.Point(93, 177);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(112, 122);
+            this.pictureBox2.Size = new System.Drawing.Size(126, 122);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 21;
             this.pictureBox2.TabStop = false;
@@ -135,7 +163,7 @@
             // 
             this.pbFoto.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.pbFoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbFoto.Location = new System.Drawing.Point(652, 37);
+            this.pbFoto.Location = new System.Drawing.Point(652, 45);
             this.pbFoto.Name = "pbFoto";
             this.pbFoto.Size = new System.Drawing.Size(106, 122);
             this.pbFoto.TabIndex = 19;
@@ -146,7 +174,7 @@
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblTitulo.Location = new System.Drawing.Point(75, 37);
+            this.lblTitulo.Location = new System.Drawing.Point(88, 45);
             this.lblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(165, 32);
@@ -157,7 +185,7 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.Ivory;
             this.panel3.Controls.Add(this.label1);
-            this.panel3.Location = new System.Drawing.Point(80, 83);
+            this.panel3.Location = new System.Drawing.Point(93, 91);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(141, 40);
             this.panel3.TabIndex = 10;
@@ -179,7 +207,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.ClientSize = new System.Drawing.Size(836, 523);
+            this.ClientSize = new System.Drawing.Size(843, 523);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmRolSupervisor";
@@ -187,6 +215,7 @@
             this.Text = "frmRolSupervisor";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).EndInit();
@@ -209,5 +238,7 @@
         private System.Windows.Forms.Label lblNombres;
         private System.Windows.Forms.Button btnMerma;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Button btnAcontecimientoMerma;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

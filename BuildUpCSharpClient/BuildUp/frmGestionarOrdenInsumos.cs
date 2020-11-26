@@ -242,6 +242,8 @@ namespace BuildUp
             txtIdOrdenInsumos.Text = "";
             txtNombresOperario.Text = "";
             txtNombreInsumo.Text = "";
+            dtpFechaActual.Value = DateTime.Now;
+            numericUpDown1.Text = "";
             EstablecerEstadoComponentes(Estado.Inicial);
         }
 

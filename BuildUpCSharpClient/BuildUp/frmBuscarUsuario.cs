@@ -16,6 +16,12 @@ namespace BuildUp
 
         UsuarioWS.UsuarioWSClient daoUsuario;
         UsuarioWS.usuario usuarioSeleccionado;
+        PersonaWS.PersonaWSClient daoPersona;
+
+        //JefeAreaWS.jefeArea jefeSeleccionado;
+        //IngenieroWS.ingeniero ingenieroSeleccionado;
+        //SupervisorWS.supervisor supervisorSeleccionado;
+        //OperarioWS.operario operarioSeleccionado;
 
         public usuario UsuarioSeleccionado { get => usuarioSeleccionado; set => usuarioSeleccionado = value; }
 
@@ -29,15 +35,15 @@ namespace BuildUp
 
         private void btnSeleccionar_Click(object sender, EventArgs e)
         {
-            //usuarioSeleccionado = (UsuarioWS.usuario)dgvUsuarios.CurrentRow.DataBoundItem;
+            usuarioSeleccionado = (UsuarioWS.usuario)dgvUsuarios.CurrentRow.DataBoundItem;
             this.DialogResult = DialogResult.OK;
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            //BindingList<UsuarioWS.usuario> us = new BindingList<UsuarioWS.usuario>(daoUsuario.buscarUsuarioPorUsername("").ToArray());
+            BindingList<UsuarioWS.usuario> us = new BindingList<UsuarioWS.usuario>(daoUsuario.lia("").ToArray());
 
-            //dgvUsuarios.DataSource = us;
+            dgvUsuarios.DataSource = us;
         }
     }
 }

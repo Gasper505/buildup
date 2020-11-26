@@ -37,5 +37,10 @@ namespace BuildUp
             frmLog.ShowDialog();
         }
 
+        private void btnAcontecimientoMerma_Click(object sender, EventArgs e)
+        {
+            frmGestionarRegistroMerma formGestionarRegistroMerma = new frmGestionarRegistroMerma();
+            formGestionarRegistroMerma.Show(this);
+        }
     }
 }

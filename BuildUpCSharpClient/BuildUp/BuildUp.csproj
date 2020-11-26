@@ -477,9 +477,6 @@
     <None Include="Connected Services\IncidenteMaquinariaWS\BuildUp.IncidenteMaquinariaWS.incidenteMaquinaria.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\IncidenteMaquinariaWS\BuildUp.IncidenteMaquinariaWS.ingeniero.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
     <None Include="Connected Services\IncidenteMaquinariaWS\BuildUp.IncidenteMaquinariaWS.insertarIncidenteMaquinariaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -505,9 +502,6 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\IncidenteMaquinariaWS\BuildUp.IncidenteMaquinariaWS.obtenerRespuestaIncidenteMaquinariaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\IncidenteMaquinariaWS\BuildUp.IncidenteMaquinariaWS.respuesta.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\IncidenteMaquinariaWS\IncidenteMaquinariaWS.wsdl" />

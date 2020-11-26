@@ -180,12 +180,12 @@
   </xs:complexType>
   <xs:complexType name="obtenerIngenieroIncidenteMaquinaria">
     <xs:sequence>
-      <xs:element name="idIncidenteMaquinaria" type="xs:int" />
+      <xs:element minOccurs="0" name="incidenteMaquinaria" type="tns:incidenteMaquinaria" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="obtenerIngenieroIncidenteMaquinariaResponse">
     <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="tns:ingeniero" />
+      <xs:element minOccurs="0" name="return" type="tns:incidenteMaquinaria" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="modificarPorSupervisorIncidenteMaquinaria">
@@ -200,12 +200,12 @@
   </xs:complexType>
   <xs:complexType name="obtenerRespuestaIncidenteMaquinaria">
     <xs:sequence>
-      <xs:element name="idIncidenteMaquinaria" type="xs:int" />
+      <xs:element minOccurs="0" name="incidenteMaquinaria" type="tns:incidenteMaquinaria" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="obtenerRespuestaIncidenteMaquinariaResponse">
     <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="tns:respuesta" />
+      <xs:element minOccurs="0" name="return" type="tns:incidenteMaquinaria" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="insertarRespuestaIncidenteMaquinaria">

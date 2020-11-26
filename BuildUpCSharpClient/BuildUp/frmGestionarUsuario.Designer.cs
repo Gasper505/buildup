@@ -62,10 +62,8 @@
             this.btnCancelar = new System.Windows.Forms.ToolStripButton();
             this.btnRegresar = new System.Windows.Forms.ToolStripButton();
             this.gbUsuario = new System.Windows.Forms.GroupBox();
-            this.cbLineaP = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.txtEspecialidad = new System.Windows.Forms.TextBox();
+            this.exclusiveLabel = new System.Windows.Forms.Label();
+            this.exclusiveComboBox = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
             this.toolStrip2.SuspendLayout();
             this.gbUsuario.SuspendLayout();
@@ -142,7 +140,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(389, 254);
+            this.label9.Location = new System.Drawing.Point(389, 189);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(31, 15);
             this.label9.TabIndex = 8;
@@ -219,6 +217,7 @@
             this.cbRol.Name = "cbRol";
             this.cbRol.Size = new System.Drawing.Size(135, 23);
             this.cbRol.TabIndex = 17;
+            this.cbRol.SelectedIndexChanged += new System.EventHandler(this.cbRol_SelectedIndexChanged);
             // 
             // lblID
             // 
@@ -243,7 +242,7 @@
             this.btAgregarFoto.BackgroundImage = global::BuildUp.Properties.Resources.boton_agregar_cruzar_circulo_318_9475;
             this.btAgregarFoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btAgregarFoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btAgregarFoto.Location = new System.Drawing.Point(500, 272);
+            this.btAgregarFoto.Location = new System.Drawing.Point(500, 207);
             this.btAgregarFoto.Name = "btAgregarFoto";
             this.btAgregarFoto.Size = new System.Drawing.Size(28, 25);
             this.btAgregarFoto.TabIndex = 3;
@@ -254,7 +253,7 @@
             // 
             this.pbFoto.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.pbFoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbFoto.Location = new System.Drawing.Point(392, 272);
+            this.pbFoto.Location = new System.Drawing.Point(392, 207);
             this.pbFoto.Name = "pbFoto";
             this.pbFoto.Size = new System.Drawing.Size(136, 140);
             this.pbFoto.TabIndex = 18;
@@ -372,10 +371,8 @@
             // 
             // gbUsuario
             // 
-            this.gbUsuario.Controls.Add(this.txtEspecialidad);
-            this.gbUsuario.Controls.Add(this.label11);
-            this.gbUsuario.Controls.Add(this.label3);
-            this.gbUsuario.Controls.Add(this.cbLineaP);
+            this.gbUsuario.Controls.Add(this.exclusiveLabel);
+            this.gbUsuario.Controls.Add(this.exclusiveComboBox);
             this.gbUsuario.Controls.Add(this.txtID);
             this.gbUsuario.Controls.Add(this.lblID);
             this.gbUsuario.Controls.Add(this.btAgregarFoto);
@@ -398,59 +395,36 @@
             this.gbUsuario.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbUsuario.Location = new System.Drawing.Point(65, 52);
             this.gbUsuario.Name = "gbUsuario";
-            this.gbUsuario.Size = new System.Drawing.Size(585, 527);
+            this.gbUsuario.Size = new System.Drawing.Size(585, 544);
             this.gbUsuario.TabIndex = 44;
             this.gbUsuario.TabStop = false;
             this.gbUsuario.Text = "Datos del Usuario";
             // 
-            // cbLineaP
+            // exclusiveLabel
             // 
-            this.cbLineaP.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbLineaP.FormattingEnabled = true;
-            this.cbLineaP.Items.AddRange(new object[] {
-            "Jefe de Área",
-            "Supervisor",
-            "Ingeniero",
-            "Operario"});
-            this.cbLineaP.Location = new System.Drawing.Point(42, 447);
-            this.cbLineaP.Name = "cbLineaP";
-            this.cbLineaP.Size = new System.Drawing.Size(135, 23);
-            this.cbLineaP.TabIndex = 24;
+            this.exclusiveLabel.AutoSize = true;
+            this.exclusiveLabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exclusiveLabel.Location = new System.Drawing.Point(39, 431);
+            this.exclusiveLabel.Name = "exclusiveLabel";
+            this.exclusiveLabel.Size = new System.Drawing.Size(84, 15);
+            this.exclusiveLabel.TabIndex = 25;
+            this.exclusiveLabel.Text = "<sample text>";
             // 
-            // label3
+            // exclusiveComboBox
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(39, 429);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(99, 15);
-            this.label3.TabIndex = 25;
-            this.label3.Text = "Línea Producción";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(220, 429);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(72, 15);
-            this.label11.TabIndex = 26;
-            this.label11.Text = "Especialidad";
-            // 
-            // txtEspecialidad
-            // 
-            this.txtEspecialidad.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEspecialidad.Location = new System.Drawing.Point(223, 447);
-            this.txtEspecialidad.Name = "txtEspecialidad";
-            this.txtEspecialidad.Size = new System.Drawing.Size(114, 23);
-            this.txtEspecialidad.TabIndex = 27;
+            this.exclusiveComboBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exclusiveComboBox.FormattingEnabled = true;
+            this.exclusiveComboBox.Location = new System.Drawing.Point(42, 449);
+            this.exclusiveComboBox.Name = "exclusiveComboBox";
+            this.exclusiveComboBox.Size = new System.Drawing.Size(179, 23);
+            this.exclusiveComboBox.TabIndex = 24;
             // 
             // frmGestionarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(715, 615);
+            this.ClientSize = new System.Drawing.Size(715, 641);
             this.ControlBox = false;
             this.Controls.Add(this.gbUsuario);
             this.Controls.Add(this.toolStrip2);
@@ -504,9 +478,7 @@
         private System.Windows.Forms.ToolStripButton btnCancelar;
         private System.Windows.Forms.ToolStripButton btnRegresar;
         private System.Windows.Forms.GroupBox gbUsuario;
-        private System.Windows.Forms.TextBox txtEspecialidad;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox cbLineaP;
+        private System.Windows.Forms.Label exclusiveLabel;
+        private System.Windows.Forms.ComboBox exclusiveComboBox;
     }
 }
