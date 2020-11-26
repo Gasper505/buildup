@@ -34,6 +34,16 @@ namespace BuildUp.UsuarioWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/UsuarioWS/buscarUsuarioPorUsernameRequest", ReplyAction="http://services.buildup.pucp.edu.pe/UsuarioWS/buscarUsuarioPorUsernameResponse")]
         System.Threading.Tasks.Task<BuildUp.UsuarioWS.buscarUsuarioPorUsernameResponse> buscarUsuarioPorUsernameAsync(BuildUp.UsuarioWS.buscarUsuarioPorUsernameRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/UsuarioWS/listarUsuarioPorParametrosRequest", ReplyAction="http://services.buildup.pucp.edu.pe/UsuarioWS/listarUsuarioPorParametrosResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        BuildUp.UsuarioWS.listarUsuarioPorParametrosResponse listarUsuarioPorParametros(BuildUp.UsuarioWS.listarUsuarioPorParametrosRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/UsuarioWS/listarUsuarioPorParametrosRequest", ReplyAction="http://services.buildup.pucp.edu.pe/UsuarioWS/listarUsuarioPorParametrosResponse")]
+        System.Threading.Tasks.Task<BuildUp.UsuarioWS.listarUsuarioPorParametrosResponse> listarUsuarioPorParametrosAsync(BuildUp.UsuarioWS.listarUsuarioPorParametrosRequest request);
     }
     
     /// <remarks/>
@@ -332,6 +342,62 @@ namespace BuildUp.UsuarioWS {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarUsuarioPorParametros", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarUsuarioPorParametrosRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idUsuario;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string username;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string nombres;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string apellidos;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string cargo;
+        
+        public listarUsuarioPorParametrosRequest() {
+        }
+        
+        public listarUsuarioPorParametrosRequest(int idUsuario, string username, string nombres, string apellidos, string cargo) {
+            this.idUsuario = idUsuario;
+            this.username = username;
+            this.nombres = nombres;
+            this.apellidos = apellidos;
+            this.cargo = cargo;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarUsuarioPorParametrosResponse", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarUsuarioPorParametrosResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public BuildUp.UsuarioWS.usuario[] @return;
+        
+        public listarUsuarioPorParametrosResponse() {
+        }
+        
+        public listarUsuarioPorParametrosResponse(BuildUp.UsuarioWS.usuario[] @return) {
+            this.@return = @return;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface UsuarioWSChannel : BuildUp.UsuarioWS.UsuarioWS, System.ServiceModel.IClientChannel {
     }
@@ -403,6 +469,37 @@ namespace BuildUp.UsuarioWS {
             BuildUp.UsuarioWS.buscarUsuarioPorUsernameRequest inValue = new BuildUp.UsuarioWS.buscarUsuarioPorUsernameRequest();
             inValue.username = username;
             return ((BuildUp.UsuarioWS.UsuarioWS)(this)).buscarUsuarioPorUsernameAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        BuildUp.UsuarioWS.listarUsuarioPorParametrosResponse BuildUp.UsuarioWS.UsuarioWS.listarUsuarioPorParametros(BuildUp.UsuarioWS.listarUsuarioPorParametrosRequest request) {
+            return base.Channel.listarUsuarioPorParametros(request);
+        }
+        
+        public BuildUp.UsuarioWS.usuario[] listarUsuarioPorParametros(int idUsuario, string username, string nombres, string apellidos, string cargo) {
+            BuildUp.UsuarioWS.listarUsuarioPorParametrosRequest inValue = new BuildUp.UsuarioWS.listarUsuarioPorParametrosRequest();
+            inValue.idUsuario = idUsuario;
+            inValue.username = username;
+            inValue.nombres = nombres;
+            inValue.apellidos = apellidos;
+            inValue.cargo = cargo;
+            BuildUp.UsuarioWS.listarUsuarioPorParametrosResponse retVal = ((BuildUp.UsuarioWS.UsuarioWS)(this)).listarUsuarioPorParametros(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<BuildUp.UsuarioWS.listarUsuarioPorParametrosResponse> BuildUp.UsuarioWS.UsuarioWS.listarUsuarioPorParametrosAsync(BuildUp.UsuarioWS.listarUsuarioPorParametrosRequest request) {
+            return base.Channel.listarUsuarioPorParametrosAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<BuildUp.UsuarioWS.listarUsuarioPorParametrosResponse> listarUsuarioPorParametrosAsync(int idUsuario, string username, string nombres, string apellidos, string cargo) {
+            BuildUp.UsuarioWS.listarUsuarioPorParametrosRequest inValue = new BuildUp.UsuarioWS.listarUsuarioPorParametrosRequest();
+            inValue.idUsuario = idUsuario;
+            inValue.username = username;
+            inValue.nombres = nombres;
+            inValue.apellidos = apellidos;
+            inValue.cargo = cargo;
+            return ((BuildUp.UsuarioWS.UsuarioWS)(this)).listarUsuarioPorParametrosAsync(inValue);
         }
     }
 }

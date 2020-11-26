@@ -46,9 +46,11 @@ namespace BuildUp
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            //BindingList<UsuarioWS.usuario> us = new BindingList<UsuarioWS.usuario>(daoUsuario.l("").ToArray());
+            BindingList<UsuarioWS.usuario> us = 
+                new BindingList<UsuarioWS.usuario>
+                (daoUsuario.listarUsuarioPorParametros(Int32.Parse(txtID.Text), txtUsername.Text, txtNombres.Text, txtApellidos.Text, cboRol.Text).ToArray());
 
-            //dgvUsuarios.DataSource = us;
+            dgvUsuarios.DataSource = us;
         }
     }
 }

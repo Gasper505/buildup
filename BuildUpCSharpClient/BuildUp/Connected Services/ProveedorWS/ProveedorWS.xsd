@@ -7,6 +7,8 @@
   <xs:element name="insertarProveedor" type="tns:insertarProveedor" />
   <xs:element name="insertarProveedorResponse" type="tns:insertarProveedorResponse" />
   <xs:element name="listarProveedor" type="tns:listarProveedor" />
+  <xs:element name="listarProveedorPorRazonSocial" type="tns:listarProveedorPorRazonSocial" />
+  <xs:element name="listarProveedorPorRazonSocialResponse" type="tns:listarProveedorPorRazonSocialResponse" />
   <xs:element name="listarProveedorResponse" type="tns:listarProveedorResponse" />
   <xs:complexType name="listarProveedor">
     <xs:sequence />
@@ -23,6 +25,16 @@
       <xs:element name="idProveedor" type="xs:int" />
       <xs:element minOccurs="0" name="razonSocial" type="xs:string" />
       <xs:element minOccurs="0" name="representante" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarProveedorPorRazonSocial">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="razonSocial" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarProveedorPorRazonSocialResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:proveedor" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="eliminarProveedor">

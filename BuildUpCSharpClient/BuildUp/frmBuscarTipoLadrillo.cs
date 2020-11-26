@@ -42,7 +42,7 @@ namespace BuildUp
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             BindingList<TipoLadrilloWS.tipoLadrillo> ladrillos = 
-                new BindingList<TipoLadrilloWS.tipoLadrillo>(daoTipoLadrillo.listarTiposLadrillo().ToArray());
+                new BindingList<TipoLadrilloWS.tipoLadrillo>(daoTipoLadrillo.listarTipoLadrilloPorNombre(txtBusqNombreLadrillo.Text).ToArray());
 
             dgvTiposLadrillo.DataSource = ladrillos;
 

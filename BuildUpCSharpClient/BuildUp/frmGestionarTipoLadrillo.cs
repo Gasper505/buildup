@@ -154,7 +154,7 @@ namespace BuildUp
                 tipoLadrillo.ancho = (int)numAncho.Value;
                 tipoLadrillo.largo = (int)numLargo.Value;
                 int result = 0;
-                //result = daoTipoLadrillo.actualizarTipoLadrillo(tipoLadrillo);
+                result = daoTipoLadrillo.actualizarTipoLadrillo(tipoLadrillo);
                 if (result != 0)
                 {
                     MessageBox.Show("La actualización ha sido exitosa", "Mensaje de Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);

@@ -40,7 +40,7 @@ namespace BuildUp
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            BindingList<ProveedorWS.proveedor> provs = new BindingList<ProveedorWS.proveedor>(daoProveedor.listarProveedor().ToArray());
+            BindingList<ProveedorWS.proveedor> provs = new BindingList<ProveedorWS.proveedor>(daoProveedor.listarProveedorPorRazonSocial(txtRazonSocial.Text).ToArray());
             dgvProveedores.DataSource = provs;
         }
     }
