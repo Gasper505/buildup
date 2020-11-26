@@ -1322,13 +1322,13 @@ namespace BuildUp.IncidenteMaquinariaWS {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idIncidenteMaquinaria;
+        public BuildUp.IncidenteMaquinariaWS.incidenteMaquinaria incidenteMaquinaria;
         
         public obtenerIngenieroIncidenteMaquinariaRequest() {
         }
         
-        public obtenerIngenieroIncidenteMaquinariaRequest(int idIncidenteMaquinaria) {
-            this.idIncidenteMaquinaria = idIncidenteMaquinaria;
+        public obtenerIngenieroIncidenteMaquinariaRequest(BuildUp.IncidenteMaquinariaWS.incidenteMaquinaria incidenteMaquinaria) {
+            this.incidenteMaquinaria = incidenteMaquinaria;
         }
     }
     
@@ -1340,12 +1340,12 @@ namespace BuildUp.IncidenteMaquinariaWS {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public BuildUp.IncidenteMaquinariaWS.ingeniero @return;
+        public BuildUp.IncidenteMaquinariaWS.incidenteMaquinaria @return;
         
         public obtenerIngenieroIncidenteMaquinariaResponse() {
         }
         
-        public obtenerIngenieroIncidenteMaquinariaResponse(BuildUp.IncidenteMaquinariaWS.ingeniero @return) {
+        public obtenerIngenieroIncidenteMaquinariaResponse(BuildUp.IncidenteMaquinariaWS.incidenteMaquinaria @return) {
             this.@return = @return;
         }
     }
@@ -1471,13 +1471,13 @@ namespace BuildUp.IncidenteMaquinariaWS {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idIncidenteMaquinaria;
+        public BuildUp.IncidenteMaquinariaWS.incidenteMaquinaria incidenteMaquinaria;
         
         public obtenerRespuestaIncidenteMaquinariaRequest() {
         }
         
-        public obtenerRespuestaIncidenteMaquinariaRequest(int idIncidenteMaquinaria) {
-            this.idIncidenteMaquinaria = idIncidenteMaquinaria;
+        public obtenerRespuestaIncidenteMaquinariaRequest(BuildUp.IncidenteMaquinariaWS.incidenteMaquinaria incidenteMaquinaria) {
+            this.incidenteMaquinaria = incidenteMaquinaria;
         }
     }
     
@@ -1489,12 +1489,12 @@ namespace BuildUp.IncidenteMaquinariaWS {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public BuildUp.IncidenteMaquinariaWS.respuesta @return;
+        public BuildUp.IncidenteMaquinariaWS.incidenteMaquinaria @return;
         
         public obtenerRespuestaIncidenteMaquinariaResponse() {
         }
         
-        public obtenerRespuestaIncidenteMaquinariaResponse(BuildUp.IncidenteMaquinariaWS.respuesta @return) {
+        public obtenerRespuestaIncidenteMaquinariaResponse(BuildUp.IncidenteMaquinariaWS.incidenteMaquinaria @return) {
             this.@return = @return;
         }
     }
@@ -1644,9 +1644,9 @@ namespace BuildUp.IncidenteMaquinariaWS {
             return base.Channel.obtenerIngenieroIncidenteMaquinaria(request);
         }
         
-        public BuildUp.IncidenteMaquinariaWS.ingeniero obtenerIngenieroIncidenteMaquinaria(int idIncidenteMaquinaria) {
+        public BuildUp.IncidenteMaquinariaWS.incidenteMaquinaria obtenerIngenieroIncidenteMaquinaria(BuildUp.IncidenteMaquinariaWS.incidenteMaquinaria incidenteMaquinaria) {
             BuildUp.IncidenteMaquinariaWS.obtenerIngenieroIncidenteMaquinariaRequest inValue = new BuildUp.IncidenteMaquinariaWS.obtenerIngenieroIncidenteMaquinariaRequest();
-            inValue.idIncidenteMaquinaria = idIncidenteMaquinaria;
+            inValue.incidenteMaquinaria = incidenteMaquinaria;
             BuildUp.IncidenteMaquinariaWS.obtenerIngenieroIncidenteMaquinariaResponse retVal = ((BuildUp.IncidenteMaquinariaWS.IncidenteMaquinariaWS)(this)).obtenerIngenieroIncidenteMaquinaria(inValue);
             return retVal.@return;
         }
@@ -1656,9 +1656,9 @@ namespace BuildUp.IncidenteMaquinariaWS {
             return base.Channel.obtenerIngenieroIncidenteMaquinariaAsync(request);
         }
         
-        public System.Threading.Tasks.Task<BuildUp.IncidenteMaquinariaWS.obtenerIngenieroIncidenteMaquinariaResponse> obtenerIngenieroIncidenteMaquinariaAsync(int idIncidenteMaquinaria) {
+        public System.Threading.Tasks.Task<BuildUp.IncidenteMaquinariaWS.obtenerIngenieroIncidenteMaquinariaResponse> obtenerIngenieroIncidenteMaquinariaAsync(BuildUp.IncidenteMaquinariaWS.incidenteMaquinaria incidenteMaquinaria) {
             BuildUp.IncidenteMaquinariaWS.obtenerIngenieroIncidenteMaquinariaRequest inValue = new BuildUp.IncidenteMaquinariaWS.obtenerIngenieroIncidenteMaquinariaRequest();
-            inValue.idIncidenteMaquinaria = idIncidenteMaquinaria;
+            inValue.incidenteMaquinaria = incidenteMaquinaria;
             return ((BuildUp.IncidenteMaquinariaWS.IncidenteMaquinariaWS)(this)).obtenerIngenieroIncidenteMaquinariaAsync(inValue);
         }
         
@@ -1738,9 +1738,9 @@ namespace BuildUp.IncidenteMaquinariaWS {
             return base.Channel.obtenerRespuestaIncidenteMaquinaria(request);
         }
         
-        public BuildUp.IncidenteMaquinariaWS.respuesta obtenerRespuestaIncidenteMaquinaria(int idIncidenteMaquinaria) {
+        public BuildUp.IncidenteMaquinariaWS.incidenteMaquinaria obtenerRespuestaIncidenteMaquinaria(BuildUp.IncidenteMaquinariaWS.incidenteMaquinaria incidenteMaquinaria) {
             BuildUp.IncidenteMaquinariaWS.obtenerRespuestaIncidenteMaquinariaRequest inValue = new BuildUp.IncidenteMaquinariaWS.obtenerRespuestaIncidenteMaquinariaRequest();
-            inValue.idIncidenteMaquinaria = idIncidenteMaquinaria;
+            inValue.incidenteMaquinaria = incidenteMaquinaria;
             BuildUp.IncidenteMaquinariaWS.obtenerRespuestaIncidenteMaquinariaResponse retVal = ((BuildUp.IncidenteMaquinariaWS.IncidenteMaquinariaWS)(this)).obtenerRespuestaIncidenteMaquinaria(inValue);
             return retVal.@return;
         }
@@ -1750,9 +1750,9 @@ namespace BuildUp.IncidenteMaquinariaWS {
             return base.Channel.obtenerRespuestaIncidenteMaquinariaAsync(request);
         }
         
-        public System.Threading.Tasks.Task<BuildUp.IncidenteMaquinariaWS.obtenerRespuestaIncidenteMaquinariaResponse> obtenerRespuestaIncidenteMaquinariaAsync(int idIncidenteMaquinaria) {
+        public System.Threading.Tasks.Task<BuildUp.IncidenteMaquinariaWS.obtenerRespuestaIncidenteMaquinariaResponse> obtenerRespuestaIncidenteMaquinariaAsync(BuildUp.IncidenteMaquinariaWS.incidenteMaquinaria incidenteMaquinaria) {
             BuildUp.IncidenteMaquinariaWS.obtenerRespuestaIncidenteMaquinariaRequest inValue = new BuildUp.IncidenteMaquinariaWS.obtenerRespuestaIncidenteMaquinariaRequest();
-            inValue.idIncidenteMaquinaria = idIncidenteMaquinaria;
+            inValue.incidenteMaquinaria = incidenteMaquinaria;
             return ((BuildUp.IncidenteMaquinariaWS.IncidenteMaquinariaWS)(this)).obtenerRespuestaIncidenteMaquinariaAsync(inValue);
         }
     }
