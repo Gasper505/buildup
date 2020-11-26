@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://services.buildup.pucp.edu.pe/" targetNamespace="http://services.buildup.pucp.edu.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="actualizarPlanProduccion" type="tns:actualizarPlanProduccion" />
+  <xs:element name="actualizarPlanProduccionResponse" type="tns:actualizarPlanProduccionResponse" />
+  <xs:element name="eliminarPlanProduccion" type="tns:eliminarPlanProduccion" />
+  <xs:element name="eliminarPlanProduccionResponse" type="tns:eliminarPlanProduccionResponse" />
+  <xs:element name="insertarPlanProduccion" type="tns:insertarPlanProduccion" />
+  <xs:element name="insertarPlanProduccionResponse" type="tns:insertarPlanProduccionResponse" />
+  <xs:element name="listarPlanesProduccion" type="tns:listarPlanesProduccion" />
+  <xs:element name="listarPlanesProduccionResponse" type="tns:listarPlanesProduccionResponse" />
+  <xs:complexType name="listarPlanesProduccion">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarPlanesProduccionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:planProduccion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="planProduccion">
+    <xs:sequence>
+      <xs:element name="anhoPlan" type="xs:int" />
+      <xs:element name="idPlan" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="lineasPlan" nillable="true" type="tns:lineaPlanProduccion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="lineaPlanProduccion">
+    <xs:sequence>
+      <xs:element name="cantidad" type="xs:int" />
+      <xs:element name="idLineaPlan" type="xs:int" />
+      <xs:element minOccurs="0" name="plan" type="tns:planProduccion" />
+      <xs:element minOccurs="0" name="tipoLadrillo" type="tns:tipoLadrillo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="tipoLadrillo">
+    <xs:sequence>
+      <xs:element name="altura" type="xs:double" />
+      <xs:element name="ancho" type="xs:double" />
+      <xs:element name="idTipoLadrillo" type="xs:int" />
+      <xs:element name="largo" type="xs:double" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarPlanProduccion">
+    <xs:sequence>
+      <xs:element name="idPlanProduccion" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarPlanProduccionResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarPlanProduccion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="planProduccion" type="tns:planProduccion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarPlanProduccionResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarPlanProduccion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="planProduccion" type="tns:planProduccion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarPlanProduccionResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

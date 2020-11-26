@@ -44,9 +44,6 @@
             this.btnRemover = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.dgvAsignacion = new System.Windows.Forms.DataGridView();
-            this.Numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreTipoLadrillo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cboNombreTipoLadrillo = new System.Windows.Forms.ComboBox();
             this.lblNombreTipoLadrillo = new System.Windows.Forms.Label();
             this.numNroAproxLadrillos = new System.Windows.Forms.NumericUpDown();
@@ -56,6 +53,8 @@
             this.txtIDPlan = new System.Windows.Forms.TextBox();
             this.lblIDPlan = new System.Windows.Forms.Label();
             this.lblAnho = new System.Windows.Forms.Label();
+            this.NombreTipoLadrillo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip2.SuspendLayout();
             this.gbLotesSalientes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAsignacion)).BeginInit();
@@ -188,6 +187,7 @@
             this.btnRemover.TabIndex = 36;
             this.btnRemover.Text = "-";
             this.btnRemover.UseVisualStyleBackColor = true;
+            this.btnRemover.Click += new System.EventHandler(this.btnRemover_Click);
             // 
             // btnAgregar
             // 
@@ -198,6 +198,7 @@
             this.btnAgregar.TabIndex = 35;
             this.btnAgregar.Text = "+";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // dgvAsignacion
             // 
@@ -205,7 +206,6 @@
             this.dgvAsignacion.AllowUserToDeleteRows = false;
             this.dgvAsignacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAsignacion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Numero,
             this.NombreTipoLadrillo,
             this.Cantidad});
             this.dgvAsignacion.Location = new System.Drawing.Point(30, 132);
@@ -213,28 +213,9 @@
             this.dgvAsignacion.Name = "dgvAsignacion";
             this.dgvAsignacion.ReadOnly = true;
             this.dgvAsignacion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAsignacion.Size = new System.Drawing.Size(594, 202);
+            this.dgvAsignacion.Size = new System.Drawing.Size(593, 202);
             this.dgvAsignacion.TabIndex = 34;
-            // 
-            // Numero
-            // 
-            this.Numero.HeaderText = "N°";
-            this.Numero.Name = "Numero";
-            this.Numero.ReadOnly = true;
-            // 
-            // NombreTipoLadrillo
-            // 
-            this.NombreTipoLadrillo.HeaderText = "Nombre Tipo de Ladrillo";
-            this.NombreTipoLadrillo.Name = "NombreTipoLadrillo";
-            this.NombreTipoLadrillo.ReadOnly = true;
-            this.NombreTipoLadrillo.Width = 300;
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.HeaderText = "Cantidad";
-            this.Cantidad.Name = "Cantidad";
-            this.Cantidad.ReadOnly = true;
-            this.Cantidad.Width = 150;
+            this.dgvAsignacion.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvAsignacion_CellFormatting);
             // 
             // cboNombreTipoLadrillo
             // 
@@ -335,6 +316,21 @@
             this.lblAnho.TabIndex = 21;
             this.lblAnho.Text = "Año";
             // 
+            // NombreTipoLadrillo
+            // 
+            this.NombreTipoLadrillo.HeaderText = "Nombre Tipo de Ladrillo";
+            this.NombreTipoLadrillo.Name = "NombreTipoLadrillo";
+            this.NombreTipoLadrillo.ReadOnly = true;
+            this.NombreTipoLadrillo.Width = 300;
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.DataPropertyName = "cantidad";
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.Name = "Cantidad";
+            this.Cantidad.ReadOnly = true;
+            this.Cantidad.Width = 250;
+            // 
             // frmGestionarPlanProduccion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -377,9 +373,6 @@
         private System.Windows.Forms.Button btnRemover;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.DataGridView dgvAsignacion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Numero;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NombreTipoLadrillo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.ComboBox cboNombreTipoLadrillo;
         private System.Windows.Forms.Label lblNombreTipoLadrillo;
         private System.Windows.Forms.NumericUpDown numNroAproxLadrillos;
@@ -389,5 +382,7 @@
         private System.Windows.Forms.Label lblIDPlan;
         private System.Windows.Forms.Label lblAnho;
         private System.Windows.Forms.ComboBox txtAnho;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NombreTipoLadrillo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
     }
 }

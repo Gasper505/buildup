@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,7 @@ namespace BuildUp
 
         OSalidaWS.OrdenSalidaWSClient daoOrdenSalida;
         OSalidaWS.ordenSalida ordenSalida;
+        BindingList<OSalidaWS.lineaOrdenSalida> lineasOs;
         TipoLadrilloWS.TipoLadrilloWSClient daoTipoLadrillo;
 
         public frmGestionarOrdenSalida()
@@ -23,6 +25,9 @@ namespace BuildUp
             EstablecerEstadoComponentes(Estado.Inicial);
             daoOrdenSalida = new OSalidaWS.OrdenSalidaWSClient();
             ordenSalida = new OSalidaWS.ordenSalida();
+            //lineasOs = new BindingList<OSalidaWS.lineaOrdenSalida>();
+
+
             daoTipoLadrillo = new TipoLadrilloWS.TipoLadrilloWSClient();
 
             dgvLotes.AutoGenerateColumns = false;
@@ -67,7 +72,7 @@ namespace BuildUp
                     }
                         
                     cboNombreTipoLadrillo.Text = "";
-                    dgvLotes.RowCount = 0;
+                    //dgvLotes.RowCount = 0;
                     numNroAproxLadrillos.Value = 0;
                     btnNuevo.Enabled = true;
                     btnGuardar.Enabled = false;
@@ -130,14 +135,22 @@ namespace BuildUp
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            if (lineasOs==null || lineasOs.Count==0)
+            {
+                MessageBox.Show("Debe agregar lineas para orden de salida", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+
             DialogResult dr = MessageBox.Show("¿Está seguro que desea registrar esta Orden de Salida?", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (dr == DialogResult.Yes)
             {
                 ordenSalida.fecha = dtpFechaRegistro.Value;
+                ordenSalida.operario = new OSalidaWS.operario();
                 ordenSalida.operario.apellidos = txtApellidos.Text;
                 ordenSalida.operario.nombres = txtNombres.Text;
                 ordenSalida.operario.idPersona = Int32.Parse(txtIDOperario.Text);
-                //...
+                ordenSalida.lineasOrdenSalida = lineasOs.ToArray();
 
 
                 int result = daoOrdenSalida.insertarOrdenSalida(ordenSalida);
@@ -150,7 +163,7 @@ namespace BuildUp
                     txtNombres.Text = "";
                     txtApellidos.Text = "";
                     cboNombreTipoLadrillo.Text = "";
-                    dgvLotes.DataSource = ordenSalida.lineasOrdenSalida;
+                    dgvLotes.DataSource = null;
                     numNroAproxLadrillos.Value = 0;
                     EstablecerEstadoComponentes(Estado.Inicial);
                 }
@@ -158,12 +171,15 @@ namespace BuildUp
                 {
                     MessageBox.Show("Error en el proceso", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+
+
             }
 
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
+            lineasOs = new BindingList<OSalidaWS.lineaOrdenSalida>();
             frmBuscarOrdenSalida formBuscarOrdenSalida = new frmBuscarOrdenSalida();
             if (formBuscarOrdenSalida.ShowDialog() == DialogResult.OK)
             {
@@ -175,10 +191,30 @@ namespace BuildUp
                 txtNombres.Text = ordenSalida.operario.nombres;
                 txtApellidos.Text = ordenSalida.operario.apellidos;
 
-                dgvLotes.DataSource = ordenSalida.lineasOrdenSalida; //<---
-                
+                if (ordenSalida.lineasOrdenSalida != null)
+                {
+                    foreach (OSalidaWS.lineaOrdenSalida linea in ordenSalida.lineasOrdenSalida)
+                    {
+                        lineasOs.Add(linea);
+                    }
+                }
+
+                //dgvLotes.DataSource = ordenSalida.lineasOrdenSalida; //<---
+                dgvLotes.DataSource = lineasOs.ToArray();
+
                 EstablecerEstadoComponentes(Estado.Modificacion);
             }
+            if (frmLogIn.Usuario.rol == "Jefe"
+                || frmLogIn.Usuario.rol == "JEFE"
+                || frmLogIn.Usuario.rol == "Jefe de Área"
+                || frmLogIn.Usuario.rol == "Jefe de Area"
+                || frmLogIn.Usuario.rol == "JEFE DE AREA"
+                || frmLogIn.Usuario.rol == "JEFE DE ÁREA")
+            {
+                EstablecerEstadoComponentes(Estado.Inicial);
+            }
+
+
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
@@ -187,11 +223,12 @@ namespace BuildUp
             if (dr == DialogResult.Yes)
             {
                 ordenSalida.idOrdenSalida = Int32.Parse(txtIDOrden.Text);
+                ordenSalida.operario = new OSalidaWS.operario();
                 ordenSalida.fecha = dtpFechaRegistro.Value;
                 ordenSalida.operario.apellidos = txtApellidos.Text;
                 ordenSalida.operario.nombres = txtNombres.Text;
                 ordenSalida.operario.idPersona = Int32.Parse(txtIDOperario.Text);
-                //...
+                //ordenSalida.lineasOrdenSalida = lineasOs.ToArray();
 
                 int result = 0;
                 result = daoOrdenSalida.actualizarOrdenSalida(ordenSalida);
@@ -204,7 +241,7 @@ namespace BuildUp
                     txtNombres.Text = "";
                     txtApellidos.Text = "";
                     cboNombreTipoLadrillo.Text = "";
-                    dgvLotes.DataSource = ordenSalida.lineasOrdenSalida;
+                    dgvLotes.DataSource =null;
                     numNroAproxLadrillos.Value = 0;
                     EstablecerEstadoComponentes(Estado.Inicial);
                 }
@@ -213,6 +250,7 @@ namespace BuildUp
                     MessageBox.Show("Error en el proceso", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
+                //lineasOs = null;
             }
         }
 
@@ -228,7 +266,7 @@ namespace BuildUp
                 txtNombres.Text = "";
                 txtApellidos.Text = "";
                 cboNombreTipoLadrillo.Text = "";
-                dgvLotes.DataSource = ordenSalida.lineasOrdenSalida;
+                dgvLotes.DataSource = null;
                 numNroAproxLadrillos.Value = 0;
                 EstablecerEstadoComponentes(Estado.Inicial);
             }
@@ -249,7 +287,7 @@ namespace BuildUp
             txtNombres.Text = "";
             txtApellidos.Text = "";
             cboNombreTipoLadrillo.Text = "";
-            dgvLotes.DataSource = ordenSalida.lineasOrdenSalida;
+            dgvLotes.DataSource = null;
             numNroAproxLadrillos.Value = 0;
             EstablecerEstadoComponentes(Estado.Inicial);
         }
@@ -260,12 +298,74 @@ namespace BuildUp
         }
 
         private void dgvLotes_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-            //OSalidaWS.ordenSalida data = dgvLotes.Rows[e.RowIndex].DataBoundItem as OSalidaWS.ordenSalida;
-            //dgvLotes.Rows[e.RowIndex].Cells[1].Value = data.;
+        { 
+            OSalidaWS.lineaOrdenSalida data = dgvLotes.Rows[e.RowIndex].DataBoundItem as OSalidaWS.lineaOrdenSalida;
+            dgvLotes.Rows[e.RowIndex].Cells[0].Value = data.tipoLadrillo.nombre;
+            
+        }
 
-            //TipoLadrilloWS.tipoLadrillo data = dgvLotes.Rows[e.RowIndex].DataBoundItem as TipoLadrilloWS.tipoLadrillo;
-            //dgvLotes.Rows[e.RowIndex].Cells[1].Value = data.nombre;
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            if (lineasOs == null)
+            {
+                lineasOs = new BindingList<OSalidaWS.lineaOrdenSalida>();
+            }
+
+            if (cboNombreTipoLadrillo.Text == "")
+            {
+                MessageBox.Show("Debe seleccionar un ladrillo", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (Int32.Parse(numNroAproxLadrillos.Text) == 0)
+            {
+                MessageBox.Show("Debe ingresar una cantidad del ladrillo", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+
+            if (ordenSalida.lineasOrdenSalida != null) {
+                foreach (OSalidaWS.lineaOrdenSalida linea in ordenSalida.lineasOrdenSalida)
+                {
+                    if (linea.tipoLadrillo.nombre.Equals(cboNombreTipoLadrillo.Text))
+                    {
+                        linea.cantidad = linea.cantidad + Int32.Parse(numNroAproxLadrillos.Text);
+                        dgvLotes.DataSource = ordenSalida.lineasOrdenSalida;
+                        dgvLotes.Refresh();
+                        return;
+                    }
+                }         
+            }
+
+            OSalidaWS.lineaOrdenSalida los = new OSalidaWS.lineaOrdenSalida();
+
+            los.tipoLadrillo = new OSalidaWS.tipoLadrillo();
+            TipoLadrilloWS.tipoLadrillo tipLad = (TipoLadrilloWS.tipoLadrillo)cboNombreTipoLadrillo.SelectedItem;
+            los.tipoLadrillo.idTipoLadrillo = tipLad.idTipoLadrillo;
+            los.tipoLadrillo.nombre = tipLad.nombre;
+            los.cantidad = Int32.Parse(numNroAproxLadrillos.Text);
+
+ 
+            lineasOs.Add(los);
+            ordenSalida.lineasOrdenSalida =lineasOs.ToArray();
+
+            dgvLotes.DataSource = lineasOs.ToArray();
+
+        }
+
+        private void btnRemover_Click(object sender, EventArgs e)
+        {
+            if (dgvLotes.CurrentRow != null)
+            {
+                OSalidaWS.lineaOrdenSalida l = (OSalidaWS.lineaOrdenSalida)dgvLotes.CurrentRow.DataBoundItem;
+                lineasOs.Remove(l);
+                ordenSalida.lineasOrdenSalida = lineasOs.ToArray();
+                dgvLotes.DataSource = lineasOs.ToArray();
+            }
+            else
+            {
+                MessageBox.Show("Debe seleccionar una linea de orden de salida", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
         }
     }
 }

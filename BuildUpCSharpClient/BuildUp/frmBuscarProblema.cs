@@ -33,6 +33,11 @@ namespace BuildUp
 
         private void btnSeleccionar_Click(object sender, EventArgs e)
         {
+            if (dgvProblemas.SelectedRows.Count < 1)
+            {
+                MessageBox.Show("Debe seleccionar un problema", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             problemaSeleccionado = (ProblemaWS.problema)dgvProblemas.CurrentRow.DataBoundItem;
             this.DialogResult = DialogResult.OK;
         }

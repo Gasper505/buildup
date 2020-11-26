@@ -106,6 +106,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Connected Services\PlanProduccionWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\ProblemaWS\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -466,7 +471,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\IncidenteMaquinariaWS\BuildUp.IncidenteMaquinariaWS.eliminarIncidenteMaquinariaResponse1.datasource">
+    <None Include="Connected Services\IncidenteMaquinariaWS\BuildUp.IncidenteMaquinariaWS.eliminarIncidenteMaquinariaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\IncidenteMaquinariaWS\BuildUp.IncidenteMaquinariaWS.incidenteMaquinaria.datasource">
@@ -475,13 +480,13 @@
     <None Include="Connected Services\IncidenteMaquinariaWS\BuildUp.IncidenteMaquinariaWS.ingeniero.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\IncidenteMaquinariaWS\BuildUp.IncidenteMaquinariaWS.insertarIncidenteMaquinariaResponse1.datasource">
+    <None Include="Connected Services\IncidenteMaquinariaWS\BuildUp.IncidenteMaquinariaWS.insertarIncidenteMaquinariaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\IncidenteMaquinariaWS\BuildUp.IncidenteMaquinariaWS.insertarProblemaIncidenteMaquinariaResponse1.datasource">
+    <None Include="Connected Services\IncidenteMaquinariaWS\BuildUp.IncidenteMaquinariaWS.insertarProblemaIncidenteMaquinariaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\IncidenteMaquinariaWS\BuildUp.IncidenteMaquinariaWS.insertarRespuestaIncidenteMaquinariaResponse1.datasource">
+    <None Include="Connected Services\IncidenteMaquinariaWS\BuildUp.IncidenteMaquinariaWS.insertarRespuestaIncidenteMaquinariaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\IncidenteMaquinariaWS\BuildUp.IncidenteMaquinariaWS.listarIncidenteMaquinariaResponse.datasource">
@@ -490,16 +495,19 @@
     <None Include="Connected Services\IncidenteMaquinariaWS\BuildUp.IncidenteMaquinariaWS.listarPorRangoFechaIncidenteMaquinariaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\IncidenteMaquinariaWS\BuildUp.IncidenteMaquinariaWS.modificarPorIngenieroIncidenteMaquinariaResponse1.datasource">
+    <None Include="Connected Services\IncidenteMaquinariaWS\BuildUp.IncidenteMaquinariaWS.modificarPorIngenieroIncidenteMaquinariaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\IncidenteMaquinariaWS\BuildUp.IncidenteMaquinariaWS.modificarPorSupervisorIncidenteMaquinariaResponse1.datasource">
+    <None Include="Connected Services\IncidenteMaquinariaWS\BuildUp.IncidenteMaquinariaWS.modificarPorSupervisorIncidenteMaquinariaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\IncidenteMaquinariaWS\BuildUp.IncidenteMaquinariaWS.obtenerIngenieroIncidenteMaquinariaResponse1.datasource">
+    <None Include="Connected Services\IncidenteMaquinariaWS\BuildUp.IncidenteMaquinariaWS.obtenerIngenieroIncidenteMaquinariaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\IncidenteMaquinariaWS\BuildUp.IncidenteMaquinariaWS.obtenerRespuestaIncidenteMaquinariaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\IncidenteMaquinariaWS\BuildUp.IncidenteMaquinariaWS.respuesta.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\IncidenteMaquinariaWS\IncidenteMaquinariaWS.wsdl" />
@@ -735,6 +743,25 @@
     <None Include="Connected Services\PersonaWS\PersonaWS.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\PlanProduccionWS\BuildUp.PlanProduccionWS.actualizarPlanProduccionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PlanProduccionWS\BuildUp.PlanProduccionWS.eliminarPlanProduccionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PlanProduccionWS\BuildUp.PlanProduccionWS.insertarPlanProduccionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PlanProduccionWS\BuildUp.PlanProduccionWS.listarPlanesProduccionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PlanProduccionWS\BuildUp.PlanProduccionWS.planProduccion.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PlanProduccionWS\PlanProduccionWS.wsdl" />
+    <None Include="Connected Services\PlanProduccionWS\PlanProduccionWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\ProblemaWS\BuildUp.ProblemaWS.actualizarProblemaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -876,6 +903,7 @@
     <WCFMetadataStorage Include="Connected Services\OrdenInsumosWS\" />
     <WCFMetadataStorage Include="Connected Services\OSalidaWS\" />
     <WCFMetadataStorage Include="Connected Services\PersonaWS\" />
+    <WCFMetadataStorage Include="Connected Services\PlanProduccionWS\" />
     <WCFMetadataStorage Include="Connected Services\ProblemaWS\" />
     <WCFMetadataStorage Include="Connected Services\ProveedorWS\" />
     <WCFMetadataStorage Include="Connected Services\RegistroMermaWS\" />
@@ -1146,6 +1174,12 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Connected Services\PlanProduccionWS\configuration91.svcinfo" />
+    <None Include="Connected Services\PlanProduccionWS\configuration.svcinfo" />
+    <None Include="Connected Services\PlanProduccionWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Resources\1437213.png" />
     <Content Include="Resources\delete+deny+no+out+sign+out+x+icon-1320196067039321214.png" />
     <Content Include="Resources\icono-proveedor-png-7.png" />

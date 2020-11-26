@@ -32,7 +32,7 @@
   </xs:complexType>
   <xs:complexType name="listarPorRangoFechaIncidenteMaquinaria">
     <xs:sequence>
-      <xs:element minOccurs="0" name="fechaIncio" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaInicio" type="xs:dateTime" />
       <xs:element minOccurs="0" name="fechaFin" type="xs:dateTime" />
     </xs:sequence>
   </xs:complexType>
@@ -205,7 +205,7 @@
   </xs:complexType>
   <xs:complexType name="obtenerRespuestaIncidenteMaquinariaResponse">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="xs:anyType" />
+      <xs:element minOccurs="0" name="return" type="tns:respuesta" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="insertarRespuestaIncidenteMaquinaria">

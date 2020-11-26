@@ -36,7 +36,6 @@
             this.dgvLineasProduccion = new System.Windows.Forms.DataGridView();
             this.IDLinea = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TipoLadrillo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbBusqueda.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLineasProduccion)).BeginInit();
             this.SuspendLayout();
@@ -47,9 +46,9 @@
             this.gbBusqueda.Controls.Add(this.lblNombre);
             this.gbBusqueda.Controls.Add(this.btnBuscar);
             this.gbBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbBusqueda.Location = new System.Drawing.Point(55, 41);
+            this.gbBusqueda.Location = new System.Drawing.Point(12, 12);
             this.gbBusqueda.Name = "gbBusqueda";
-            this.gbBusqueda.Size = new System.Drawing.Size(585, 92);
+            this.gbBusqueda.Size = new System.Drawing.Size(495, 92);
             this.gbBusqueda.TabIndex = 20;
             this.gbBusqueda.TabStop = false;
             this.gbBusqueda.Text = "Parámetros de Búsqueda";
@@ -74,7 +73,7 @@
             // btnBuscar
             // 
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(402, 32);
+            this.btnBuscar.Location = new System.Drawing.Point(367, 26);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(116, 36);
             this.btnBuscar.TabIndex = 13;
@@ -85,7 +84,7 @@
             // btnSeleccionar
             // 
             this.btnSeleccionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSeleccionar.Location = new System.Drawing.Point(234, 411);
+            this.btnSeleccionar.Location = new System.Drawing.Point(140, 362);
             this.btnSeleccionar.Name = "btnSeleccionar";
             this.btnSeleccionar.Size = new System.Drawing.Size(225, 36);
             this.btnSeleccionar.TabIndex = 19;
@@ -100,15 +99,15 @@
             this.dgvLineasProduccion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvLineasProduccion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IDLinea,
-            this.Nombre,
-            this.TipoLadrillo});
-            this.dgvLineasProduccion.Location = new System.Drawing.Point(55, 168);
+            this.Nombre});
+            this.dgvLineasProduccion.Location = new System.Drawing.Point(51, 124);
             this.dgvLineasProduccion.MultiSelect = false;
             this.dgvLineasProduccion.Name = "dgvLineasProduccion";
             this.dgvLineasProduccion.ReadOnly = true;
             this.dgvLineasProduccion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvLineasProduccion.Size = new System.Drawing.Size(585, 214);
+            this.dgvLineasProduccion.Size = new System.Drawing.Size(413, 214);
             this.dgvLineasProduccion.TabIndex = 18;
+            //this.dgvLineasProduccion.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvLineasProduccion_CellFormatting);
             // 
             // IDLinea
             // 
@@ -126,19 +125,11 @@
             this.Nombre.ReadOnly = true;
             this.Nombre.Width = 250;
             // 
-            // TipoLadrillo
-            // 
-            this.TipoLadrillo.DataPropertyName = "tipoLadrillo";
-            this.TipoLadrillo.HeaderText = "Tipo de Ladrillo";
-            this.TipoLadrillo.Name = "TipoLadrillo";
-            this.TipoLadrillo.ReadOnly = true;
-            this.TipoLadrillo.Width = 170;
-            // 
             // frmBuscarLineaProduccion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(694, 481);
+            this.ClientSize = new System.Drawing.Size(508, 434);
             this.Controls.Add(this.gbBusqueda);
             this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.dgvLineasProduccion);
@@ -163,6 +154,5 @@
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn IDLinea;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TipoLadrillo;
     }
 }

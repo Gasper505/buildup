@@ -195,7 +195,6 @@
             // 
             // Column8
             // 
-            this.Column8.DataPropertyName = "estado";
             this.Column8.HeaderText = "Estado";
             this.Column8.Name = "Column8";
             this.Column8.ReadOnly = true;

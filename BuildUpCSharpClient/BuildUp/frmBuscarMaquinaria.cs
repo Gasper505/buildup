@@ -28,6 +28,12 @@ namespace BuildUp
 
         private void btnSeleccionar_Click(object sender, EventArgs e)
         {
+            if (dgvMaquinarias.SelectedRows.Count < 1)
+            {
+                MessageBox.Show("Debe seleccionar una maquinaria", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             maquinariaSeleccionada = (MaqWS.maquinaria)dgvMaquinarias.CurrentRow.DataBoundItem;
             this.DialogResult = DialogResult.OK;
         }

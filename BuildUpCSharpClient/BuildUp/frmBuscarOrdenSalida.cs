@@ -26,6 +26,11 @@ namespace BuildUp
 
         private void btnSeleccionar_Click(object sender, EventArgs e)
         {
+            if (dgvOrdenesSalida.SelectedRows.Count < 1)
+            {
+                MessageBox.Show("Debe seleccionar una orden de salida", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             ordenSeleccionada = new OSalidaWS.ordenSalida();
             ordenSeleccionada = (OSalidaWS.ordenSalida)dgvOrdenesSalida.CurrentRow.DataBoundItem;
             this.DialogResult = DialogResult.OK;

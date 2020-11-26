@@ -29,6 +29,12 @@ namespace BuildUp
 
         private void btnSeleccionar_Click(object sender, EventArgs e)
         {
+            if (dgvTiposLadrillo.SelectedRows.Count < 1)
+            {
+                MessageBox.Show("Debe seleccionar un tipo de ladrillo", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             tipoLadrilloSeleccionado = (TipoLadrilloWS.tipoLadrillo)dgvTiposLadrillo.CurrentRow.DataBoundItem;
             this.DialogResult = DialogResult.OK;
         }

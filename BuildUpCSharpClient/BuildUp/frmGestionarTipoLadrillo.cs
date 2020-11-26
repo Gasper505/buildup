@@ -77,6 +77,28 @@ namespace BuildUp
         //-----------------------------------------------------------------
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            if (txtNombre.Text == "")
+            {
+                MessageBox.Show("Debe escribir el nombre del tipo de ladrillo", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (Int32.Parse(numLargo.Text)==0 || numLargo.Text=="")
+            {
+                MessageBox.Show("Debe insertar el largo del ladrillo", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (Int32.Parse(numAncho.Text) == 0 || numAncho.Text == "")
+            {
+                MessageBox.Show("Debe insertar el ancho del ladrillo", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (Int32.Parse(numAltura.Text) == 0 || numAltura.Text == "")
+            {
+                MessageBox.Show("Debe insertar la altura del ladrillo", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
 
             DialogResult dr = MessageBox.Show("¿Está seguro que desea registrar este Tipo de Ladrillo?", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (dr == DialogResult.Yes)
@@ -156,7 +178,7 @@ namespace BuildUp
             DialogResult dr = MessageBox.Show("¿Está seguro que desea eliminar este Tipo de Ladrillo del registro?", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (dr == DialogResult.Yes)
             {
-                //daoTipoLadrillo.eliminarTipoLadrillo(Int32.Parse(txtIDTipo.Text));
+                daoTipoLadrillo.eliminarTipoLadrillo(Int32.Parse(txtIDTipo.Text));
                 txtIDTipo.Text = "";
                 txtNombre.Text = "";
                 numAltura.Value = 0;
