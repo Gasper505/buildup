@@ -86,15 +86,16 @@ public class OrdenSalidaMySQL implements OrdenSalidaDAO{
             cs.executeUpdate();
             //insertar nuevas lineas
             for(LineaOrdenSalida lov : ordenSalida.getLineasOrdenSalida()){
-                sql = "{call INSERTAR_LINEA_ORDEN_SALIDA(?,?,?,?)}";
-                cs = con.prepareCall(sql);
+                cs = con.prepareCall("{call INSERTAR_LINEA_ORDEN_SALIDA(?,?,?,?)}");
+                cs.registerOutParameter("_ID_LINEA_ORDEN_SALIDA", java.sql.Types.INTEGER);
                 cs.setInt("_FID_ORDEN_SALIDA", ordenSalida.getIdOrdenSalida());
                 cs.setInt("_FID_TIPO_LADRILLO", lov.getTipoLadrillo().getIdTipoLadrillo());
                 cs.setInt("_CANTIDAD",lov.getCantidad());
-                cs.registerOutParameter("_ID_LINEA_ORDEN_SALIDA", java.sql.Types.INTEGER);
                 cs.executeUpdate();
                 lov.setIdLineaOrdenSalida(cs.getInt("_ID_LINEA_ORDEN_SALIDA"));
             }
+           
+            
             con.commit();
             resultado = 1;
         }catch(Exception ex){
