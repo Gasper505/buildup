@@ -109,23 +109,23 @@ public class IncidenteMaquinariaWS {
         return resultado;
     }
     @WebMethod(operationName = "obtenerIngenieroIncidenteMaquinaria")
-    public Ingeniero obtenerIngenieroIncidenteMaquinaria(@WebParam(name = "idIncidenteMaquinaria") int idIncidenteMaquinaria) {
-        Ingeniero ingeniero = new Ingeniero();
+    public IncidenteMaquinaria obtenerIngenieroIncidenteMaquinaria(@WebParam(name = "incidenteMaquinaria") IncidenteMaquinaria incidenteMaquinaria) {
+        IncidenteMaquinaria inc= new IncidenteMaquinaria();
         try{
-            ingeniero = daoIncidenteMaquinaria.obtenerIngeniero(idIncidenteMaquinaria);
+            inc = daoIncidenteMaquinaria.obtenerIngeniero(incidenteMaquinaria);
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }
-        return ingeniero;
+        return inc;
     }
     @WebMethod(operationName = "obtenerRespuestaIncidenteMaquinaria")
-    public Respuesta obtenerRespuestaIncidenteMaquinaria(@WebParam(name = "idIncidenteMaquinaria") int idIncidenteMaquinaria) {
-        Respuesta respuesta = new Respuesta();
+    public IncidenteMaquinaria obtenerRespuestaIncidenteMaquinaria(@WebParam(name = "incidenteMaquinaria") IncidenteMaquinaria incidenteMaquinaria) {
+        IncidenteMaquinaria inc= new IncidenteMaquinaria();
         try{
-            respuesta = daoIncidenteMaquinaria.obtenerRespuesta(idIncidenteMaquinaria);
+            inc = daoIncidenteMaquinaria.obtenerRespuesta(incidenteMaquinaria);
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }
-        return respuesta;
+        return inc;
     }
 }
