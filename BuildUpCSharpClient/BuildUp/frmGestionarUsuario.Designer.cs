@@ -62,6 +62,10 @@
             this.btnCancelar = new System.Windows.Forms.ToolStripButton();
             this.btnRegresar = new System.Windows.Forms.ToolStripButton();
             this.gbUsuario = new System.Windows.Forms.GroupBox();
+            this.cbLineaP = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtEspecialidad = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
             this.toolStrip2.SuspendLayout();
             this.gbUsuario.SuspendLayout();
@@ -368,6 +372,10 @@
             // 
             // gbUsuario
             // 
+            this.gbUsuario.Controls.Add(this.txtEspecialidad);
+            this.gbUsuario.Controls.Add(this.label11);
+            this.gbUsuario.Controls.Add(this.label3);
+            this.gbUsuario.Controls.Add(this.cbLineaP);
             this.gbUsuario.Controls.Add(this.txtID);
             this.gbUsuario.Controls.Add(this.lblID);
             this.gbUsuario.Controls.Add(this.btAgregarFoto);
@@ -394,6 +402,48 @@
             this.gbUsuario.TabIndex = 44;
             this.gbUsuario.TabStop = false;
             this.gbUsuario.Text = "Datos del Usuario";
+            // 
+            // cbLineaP
+            // 
+            this.cbLineaP.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbLineaP.FormattingEnabled = true;
+            this.cbLineaP.Items.AddRange(new object[] {
+            "Jefe de Área",
+            "Supervisor",
+            "Ingeniero",
+            "Operario"});
+            this.cbLineaP.Location = new System.Drawing.Point(42, 447);
+            this.cbLineaP.Name = "cbLineaP";
+            this.cbLineaP.Size = new System.Drawing.Size(135, 23);
+            this.cbLineaP.TabIndex = 24;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(39, 429);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(99, 15);
+            this.label3.TabIndex = 25;
+            this.label3.Text = "Línea Producción";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(220, 429);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(72, 15);
+            this.label11.TabIndex = 26;
+            this.label11.Text = "Especialidad";
+            // 
+            // txtEspecialidad
+            // 
+            this.txtEspecialidad.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEspecialidad.Location = new System.Drawing.Point(223, 447);
+            this.txtEspecialidad.Name = "txtEspecialidad";
+            this.txtEspecialidad.Size = new System.Drawing.Size(114, 23);
+            this.txtEspecialidad.TabIndex = 27;
             // 
             // frmGestionarUsuario
             // 
@@ -454,5 +504,9 @@
         private System.Windows.Forms.ToolStripButton btnCancelar;
         private System.Windows.Forms.ToolStripButton btnRegresar;
         private System.Windows.Forms.GroupBox gbUsuario;
+        private System.Windows.Forms.TextBox txtEspecialidad;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox cbLineaP;
     }
 }

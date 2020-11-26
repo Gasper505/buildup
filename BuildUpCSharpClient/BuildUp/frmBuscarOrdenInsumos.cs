@@ -56,7 +56,18 @@ namespace BuildUp
             dgvOrdenes.Rows[e.RowIndex].Cells[2].Value = data.operario.idPersona;
             dgvOrdenes.Rows[e.RowIndex].Cells[3].Value = data.operario.nombres;
             dgvOrdenes.Rows[e.RowIndex].Cells[4].Value = data.insumo.idInsumo;
+            
+
             dgvOrdenes.Rows[e.RowIndex].Cells[5].Value = data.insumo.nombre;
+            if (data.estado)
+            {
+                dgvOrdenes.Rows[e.RowIndex].Cells[7].Value = "Solicitud aceptada";
+            }
+            else
+            {
+                dgvOrdenes.Rows[e.RowIndex].Cells[7].Value = "Solicitud en espera";
+            }
+            
         }
     }
 

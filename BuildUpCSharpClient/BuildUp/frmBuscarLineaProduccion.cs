@@ -46,10 +46,5 @@ namespace BuildUp
                 new BindingList<LineaProduccionWS.lineaProduccion>(daoLineaProduccion.listarPorNombreLineaProduccion(txtNombre.Text).ToList());
         }
 
-        private void dgvLineasProduccion_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-            LineaProduccionWS.lineaProduccion data = dgvLineasProduccion.Rows[e.RowIndex].DataBoundItem as LineaProduccionWS.lineaProduccion;
-            dgvLineasProduccion.Rows[e.RowIndex].Cells[2].Value = data.tipoLadrillo.nombre;
-        }
     }
 }

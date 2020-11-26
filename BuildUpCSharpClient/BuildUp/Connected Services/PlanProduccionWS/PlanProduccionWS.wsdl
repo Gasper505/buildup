@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://services.buildup.pucp.edu.pe/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="PlanProduccionWS" targetNamespace="http://services.buildup.pucp.edu.pe/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://52.207.108.70:8080/BuildUpServices/PlanProduccionWS?xsd=1" namespace="http://services.buildup.pucp.edu.pe/" />
+    </xsd:schema>
+  </types>
+  <message name="eliminarPlanProduccion">
+    <part name="parameters" element="tns:eliminarPlanProduccion" />
+  </message>
+  <message name="eliminarPlanProduccionResponse">
+    <part name="parameters" element="tns:eliminarPlanProduccionResponse" />
+  </message>
+  <message name="actualizarPlanProduccion">
+    <part name="parameters" element="tns:actualizarPlanProduccion" />
+  </message>
+  <message name="actualizarPlanProduccionResponse">
+    <part name="parameters" element="tns:actualizarPlanProduccionResponse" />
+  </message>
+  <message name="listarPlanesProduccion">
+    <part name="parameters" element="tns:listarPlanesProduccion" />
+  </message>
+  <message name="listarPlanesProduccionResponse">
+    <part name="parameters" element="tns:listarPlanesProduccionResponse" />
+  </message>
+  <message name="insertarPlanProduccion">
+    <part name="parameters" element="tns:insertarPlanProduccion" />
+  </message>
+  <message name="insertarPlanProduccionResponse">
+    <part name="parameters" element="tns:insertarPlanProduccionResponse" />
+  </message>
+  <portType name="PlanProduccionWS">
+    <operation name="eliminarPlanProduccion">
+      <input wsam:Action="http://services.buildup.pucp.edu.pe/PlanProduccionWS/eliminarPlanProduccionRequest" message="tns:eliminarPlanProduccion" />
+      <output wsam:Action="http://services.buildup.pucp.edu.pe/PlanProduccionWS/eliminarPlanProduccionResponse" message="tns:eliminarPlanProduccionResponse" />
+    </operation>
+    <operation name="actualizarPlanProduccion">
+      <input wsam:Action="http://services.buildup.pucp.edu.pe/PlanProduccionWS/actualizarPlanProduccionRequest" message="tns:actualizarPlanProduccion" />
+      <output wsam:Action="http://services.buildup.pucp.edu.pe/PlanProduccionWS/actualizarPlanProduccionResponse" message="tns:actualizarPlanProduccionResponse" />
+    </operation>
+    <operation name="listarPlanesProduccion">
+      <input wsam:Action="http://services.buildup.pucp.edu.pe/PlanProduccionWS/listarPlanesProduccionRequest" message="tns:listarPlanesProduccion" />
+      <output wsam:Action="http://services.buildup.pucp.edu.pe/PlanProduccionWS/listarPlanesProduccionResponse" message="tns:listarPlanesProduccionResponse" />
+    </operation>
+    <operation name="insertarPlanProduccion">
+      <input wsam:Action="http://services.buildup.pucp.edu.pe/PlanProduccionWS/insertarPlanProduccionRequest" message="tns:insertarPlanProduccion" />
+      <output wsam:Action="http://services.buildup.pucp.edu.pe/PlanProduccionWS/insertarPlanProduccionResponse" message="tns:insertarPlanProduccionResponse" />
+    </operation>
+  </portType>
+  <binding name="PlanProduccionWSPortBinding" type="tns:PlanProduccionWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="eliminarPlanProduccion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="actualizarPlanProduccion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarPlanesProduccion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarPlanProduccion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="PlanProduccionWS">
+    <port name="PlanProduccionWSPort" binding="tns:PlanProduccionWSPortBinding">
+      <soap:address location="http://52.207.108.70:8080/BuildUpServices/PlanProduccionWS" />
+    </port>
+  </service>
+</definitions>

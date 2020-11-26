@@ -83,6 +83,23 @@ namespace BuildUp
         //-----------------------------------------------------------------
         private void btnGuardar_Click_1(object sender, EventArgs e)
         {
+            if (txtRazonSocial.Text == "")
+            {
+                MessageBox.Show("Debe escribir la razon social", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (txtCorreo.Text == "")
+            {
+                MessageBox.Show("Debe ingresar el correo electronico", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (txtRepresentante.Text == "")
+            {
+                MessageBox.Show("Debe ingresar el nombre del representante", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+
             DialogResult dr = MessageBox.Show("¿Está seguro que desea registrar este Proveedor?", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (dr == DialogResult.Yes)
             {

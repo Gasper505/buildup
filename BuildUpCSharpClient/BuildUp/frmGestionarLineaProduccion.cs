@@ -80,12 +80,25 @@ namespace BuildUp
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            if (txtNombre.Text == "")
+            {
+                MessageBox.Show("Debe escribir el nombre de la linea de produccion", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (cboTipoLadrillo.Text == "")
+            {
+                MessageBox.Show("Debe seleccionar un tipo de ladrillo", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
             DialogResult dr = MessageBox.Show("¿Está seguro que desea registrar esta Línea de Producción?", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (dr == DialogResult.Yes)
             {
                 lineaProduccion.nombre = txtNombre.Text;
-                lineaProduccion.tipoLadrillo = (LineaProduccionWS.tipoLadrillo)cboTipoLadrillo.SelectedItem;
+                lineaProduccion.tipoLadrillo = new LineaProduccionWS.tipoLadrillo();
+                TipoLadrilloWS.tipoLadrillo tipLad=(TipoLadrilloWS.tipoLadrillo)cboTipoLadrillo.SelectedItem;
+                lineaProduccion.tipoLadrillo.idTipoLadrillo = tipLad.idTipoLadrillo;
+
 
                 int result = daoLineaProduccion.insertarLineaProduccion(lineaProduccion);
                 if (result != 0)
@@ -119,6 +132,16 @@ namespace BuildUp
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
+            if (txtNombre.Text == "")
+            {
+                MessageBox.Show("Debe escribir el nombre de la linea de produccion", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (cboTipoLadrillo.Text == "")
+            {
+                MessageBox.Show("Debe seleccionar un tipo de ladrillo", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             DialogResult dr = MessageBox.Show("¿Esta seguro que desea actualizar esta Línea de Producción?", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (dr == DialogResult.Yes)
             {

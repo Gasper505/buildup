@@ -204,6 +204,17 @@ namespace BuildUp
 
                 EstablecerEstadoComponentes(Estado.Modificacion);
             }
+            if (frmLogIn.Usuario.rol == "Jefe"
+                || frmLogIn.Usuario.rol == "JEFE"
+                || frmLogIn.Usuario.rol == "Jefe de Área"
+                || frmLogIn.Usuario.rol == "Jefe de Area"
+                || frmLogIn.Usuario.rol == "JEFE DE AREA"
+                || frmLogIn.Usuario.rol == "JEFE DE ÁREA")
+            {
+                EstablecerEstadoComponentes(Estado.Inicial);
+            }
+
+
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
@@ -230,7 +241,7 @@ namespace BuildUp
                     txtNombres.Text = "";
                     txtApellidos.Text = "";
                     cboNombreTipoLadrillo.Text = "";
-                    dgvLotes.DataSource = ordenSalida.lineasOrdenSalida;
+                    dgvLotes.DataSource =null;
                     numNroAproxLadrillos.Value = 0;
                     EstablecerEstadoComponentes(Estado.Inicial);
                 }

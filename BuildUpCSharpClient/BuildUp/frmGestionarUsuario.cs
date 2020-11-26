@@ -24,6 +24,9 @@ namespace BuildUp
         SupervisorWS.supervisor supervisor;
         OperarioWS.operario operario;
         IngenieroWS.ingeniero ingeniero;
+        LineaProduccionWS.lineaProduccion lineaP;
+        LineaProduccionWS.LineaProduccionWSClient daoLineaP;
+
 
         UsuarioWS.usuario usuario;
 
@@ -41,6 +44,31 @@ namespace BuildUp
             supervisor = new SupervisorWS.supervisor();
             operario = new OperarioWS.operario();
             ingeniero = new IngenieroWS.ingeniero();
+
+            daoLineaP = new LineaProduccionWS.LineaProduccionWSClient();
+            cbLineaP.DataSource = new BindingList<LineaProduccionWS.lineaProduccion>(daoLineaP.listarPorNombreLineaProduccion("").ToArray());
+            cbLineaP.ValueMember = "idLineaProduccion";
+            cbLineaP.DisplayMember = "nombre";
+
+            /*while (true)
+            {
+                if(cbRol.Text == "Operario")
+                {
+                    cbLineaP.Enabled = true;
+                }
+                if (cbRol.Text == "Supervisor")
+                {
+                    cbLineaP.Enabled = true;
+
+                }
+                if (cbRol.Text == "Ingeniero")
+                {
+                    txtEspecialidad.Enabled = true;
+                }
+                if (cbRol.Text == "Jefe de Área")
+                { 
+                }
+            }*/
 
         }
 
@@ -65,6 +93,8 @@ namespace BuildUp
                     cbRol.Enabled = false;
                     pbFoto.Enabled = false;
                     btAgregarFoto.Enabled = false;
+                    cbLineaP.Enabled = false;
+                    txtEspecialidad.Enabled = false;
                     break;
                 case Estado.Nuevo:
                     btnNuevo.Enabled = false;
@@ -83,6 +113,8 @@ namespace BuildUp
                     cbRol.Enabled = true;
                     pbFoto.Enabled = true;
                     btAgregarFoto.Enabled = true;
+                    cbLineaP.Enabled = false;
+                    txtEspecialidad.Enabled = false;
                     break;
                 case Estado.Modificacion:
                     btnNuevo.Enabled = false;
@@ -112,15 +144,43 @@ namespace BuildUp
         }
 
         private void btGuardar_Click(object sender, EventArgs e)
-        {
-
-            usuario.nombres = txtNombre.Text;
-            usuario.apellidos = txtApellidos.Text;
-            usuario.telefono = txtNumero.Text;
-            usuario.correo = txtCorreo.Text;
-            usuario.fechaFinContrato = dtpFinContrato.Value;
-            usuario.rol = cbRol.Text;
-            
+        {          
+            if (cbRol.Text == "Operario")
+            {
+                operario.nombres = txtNombre.Text;
+                operario.apellidos = txtApellidos.Text;
+                operario.telefono = txtNumero.Text;
+                operario.correo = txtCorreo.Text;
+                operario.fechaFinContrato = dtpFinContrato.Value;
+                operario.rol = "Operario";
+            }
+            if (cbRol.Text == "Supervisor")
+            {
+                operario.nombres = txtNombre.Text;
+                operario.apellidos = txtApellidos.Text;
+                operario.telefono = txtNumero.Text;
+                operario.correo = txtCorreo.Text;
+                operario.fechaFinContrato = dtpFinContrato.Value;
+                operario.rol = "Supervisor";
+            }
+            if (cbRol.Text == "Ingeniero")
+            {
+                operario.nombres = txtNombre.Text;
+                operario.apellidos = txtApellidos.Text;
+                operario.telefono = txtNumero.Text;
+                operario.correo = txtCorreo.Text;
+                operario.fechaFinContrato = dtpFinContrato.Value;
+                operario.rol = "Ingeniero";
+            }
+            if (cbRol.Text == "Jefe de Área")
+            {
+                operario.nombres = txtNombre.Text;
+                operario.apellidos = txtApellidos.Text;
+                operario.telefono = txtNumero.Text;
+                operario.correo = txtCorreo.Text;
+                operario.fechaFinContrato = dtpFinContrato.Value;
+                operario.rol = "Jefe";
+            }
 
             //daoUsuario.insertar(usuario);
 
