@@ -80,21 +80,22 @@ public class OrdenSalidaMySQL implements OrdenSalidaDAO{
             cs.setInt("_ID_OPERARIO", ordenSalida.getOperario().getIdPersona());
             cs.executeUpdate();
             //eliminar lineas anteriores
-            sql = "call {ELIMINAR_LINEA_ORDEN_SALIDA(?)}";
+            sql = "{call ELIMINAR_LINEA_ORDEN_SALIDA(?)}";
             cs = con.prepareCall(sql);
             cs.setInt("_ID_ORDEN_SALIDA", ordenSalida.getIdOrdenSalida());
             cs.executeUpdate();
             //insertar nuevas lineas
             for(LineaOrdenSalida lov : ordenSalida.getLineasOrdenSalida()){
-                sql = "{call INSERTAR_LINEA_ORDEN_SALIDA(?,?,?,?)}";
-                cs = con.prepareCall(sql);
+                cs = con.prepareCall("{call INSERTAR_LINEA_ORDEN_SALIDA(?,?,?,?)}");
+                cs.registerOutParameter("_ID_LINEA_ORDEN_SALIDA", java.sql.Types.INTEGER);
                 cs.setInt("_FID_ORDEN_SALIDA", ordenSalida.getIdOrdenSalida());
                 cs.setInt("_FID_TIPO_LADRILLO", lov.getTipoLadrillo().getIdTipoLadrillo());
                 cs.setInt("_CANTIDAD",lov.getCantidad());
-                cs.registerOutParameter("_ID_LINEA_ORDEN_SALIDA", java.sql.Types.INTEGER);
                 cs.executeUpdate();
                 lov.setIdLineaOrdenSalida(cs.getInt("_ID_LINEA_ORDEN_SALIDA"));
             }
+           
+            
             con.commit();
             resultado = 1;
         }catch(Exception ex){
@@ -189,6 +190,7 @@ public class OrdenSalidaMySQL implements OrdenSalidaDAO{
                 rs = cs.executeQuery();
                 while(rs.next()){
                     LineaOrdenSalida linea = new LineaOrdenSalida();
+                    linea.getTipoLadrillo().setIdTipoLadrillo(rs.getInt("ID_TIPO_LADRILLO"));
                     linea.getTipoLadrillo().setNombre(rs.getString("NOMBRE_TIPO_LADRILLO"));
                     linea.setCantidad(rs.getInt("CANTIDAD"));
                     orden.getLineasOrdenSalida().add(linea);

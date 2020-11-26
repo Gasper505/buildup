@@ -56,7 +56,7 @@ public class RespuestaMySQL implements RespuestaDAO{
             cs.setString("_TIPO", resp.getTipo());
             //cs.setBoolean("_ACTIVO", resp.getActivo());
             cs.executeUpdate();
-            resp.setIdRespuesta(cs.getInt("_ID_RESPUESTA"));
+            //resp.setIdRespuesta(cs.getInt("_ID_RESPUESTA"));
        
             resultado=1;
         
