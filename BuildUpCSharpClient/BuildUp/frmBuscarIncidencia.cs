@@ -44,8 +44,14 @@ namespace BuildUp
         private void dgvIncidentes_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             IncidenteMaquinariaWS.incidenteMaquinaria data = dgvIncidentes.Rows[e.RowIndex].DataBoundItem as IncidenteMaquinariaWS.incidenteMaquinaria;
-            //dgvIncidentes.Rows[e.RowIndex].Cells[1].Value = data.supervisor.nombres + data.supervisor.apellidos;
-            //dgvIncidentes.Rows[e.RowIndex].Cells[2].Value = data.ingeniero.nombres + data.ingeniero.apellidos;
+            if (data.estado)
+            {
+                dgvIncidentes.Rows[e.RowIndex].Cells[2].Value = "Atendida";
+            }
+            else
+            {
+                dgvIncidentes.Rows[e.RowIndex].Cells[2].Value = "En espera";
+            }
         }
     }
 }

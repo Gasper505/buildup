@@ -18,7 +18,7 @@ public interface IncidenteMaquinariaDAO {
     ArrayList<IncidenteMaquinaria> listarPorRangoFecha(Date fechaIni, Date fechaFin);
     int insertarProblema(IncidenteMaquinaria incidenteMaquinaria);
     int insertarRespuesta(IncidenteMaquinaria incidenteMaquinaria);
-    Ingeniero obtenerIngeniero(int idIncidenteMaquinaria);
-    Respuesta obtenerRespuesta(int idIncidenteMaquinaria);
+    IncidenteMaquinaria obtenerIngeniero(IncidenteMaquinaria incidenteMaquinaria);
+    IncidenteMaquinaria obtenerRespuesta(IncidenteMaquinaria incidenteMaquinaria);
     
 }

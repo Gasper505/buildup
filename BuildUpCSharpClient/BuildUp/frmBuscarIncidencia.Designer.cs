@@ -38,6 +38,7 @@
             this.dgvIncidentes = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbBusqueda.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvIncidentes)).BeginInit();
             this.SuspendLayout();
@@ -122,7 +123,8 @@
             this.dgvIncidentes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvIncidentes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
-            this.Column5});
+            this.Column5,
+            this.Column2});
             this.dgvIncidentes.Location = new System.Drawing.Point(81, 198);
             this.dgvIncidentes.MultiSelect = false;
             this.dgvIncidentes.Name = "dgvIncidentes";
@@ -146,7 +148,13 @@
             this.Column5.HeaderText = "Fecha";
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
-            this.Column5.Width = 250;
+            this.Column5.Width = 150;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Estado";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             // 
             // frmBuscarIncidencia
             // 
@@ -179,5 +187,6 @@
         private System.Windows.Forms.DataGridView dgvIncidentes;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
     }
 }
