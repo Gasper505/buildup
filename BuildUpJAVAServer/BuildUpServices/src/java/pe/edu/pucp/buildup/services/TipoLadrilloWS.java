@@ -28,6 +28,16 @@ public class TipoLadrilloWS {
         }
         return ladrillos;
     }
+    @WebMethod(operationName = "listarTipoLadrilloPorNombre")
+    public ArrayList<TipoLadrillo> listarTipoLadrilloPorNombre(@WebParam(name = "nombre") String nombre) {
+        ArrayList<TipoLadrillo> ladrillos = new ArrayList<>();
+        try{
+            ladrillos = daoTipoLadrillo.listarTipoLadrilloPorNombre(nombre);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return ladrillos;
+    }
     
     @WebMethod(operationName = "insertarTipoLadrillo")
     public int insertarTipoLadrillo(@WebParam(name = "tipoLadrillo") TipoLadrillo lad) {
@@ -45,6 +55,17 @@ public class TipoLadrilloWS {
         int resultado = 0;
         try{
             resultado = daoTipoLadrillo.eliminar(idTipoLadrillo);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return resultado;
+    }
+    
+    @WebMethod(operationName = "actualizarTipoLadrillo")
+    public int actualizarTipoLadrillo(@WebParam(name = "tipoLadrillo") TipoLadrillo tipoLadrillo) {
+        int resultado = 0;
+        try{
+            resultado = daoTipoLadrillo.actualizar(tipoLadrillo);
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }
