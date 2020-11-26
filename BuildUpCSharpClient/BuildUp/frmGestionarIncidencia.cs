@@ -179,6 +179,19 @@ namespace BuildUp
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            if (txtIDMaq.Text == "")
+            {
+                MessageBox.Show("Debe seleccionar una maquinaria", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (txtIDProblema.Text == "")
+            {
+                MessageBox.Show("Debe seleccionar un tipo de problema", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+
+
             DialogResult dr = MessageBox.Show("¿Está seguro que desea registrar este Incidente?", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (dr == DialogResult.Yes)
             {
@@ -186,33 +199,23 @@ namespace BuildUp
 
                 maquinaria.idMaquinaria = Int32.Parse(txtIDMaq.Text);
                 maquinaria.nombre = txtNombreMaq.Text;
+                maquinaria.proveedor = new IncidenteMaquinariaWS.proveedor();
                 maquinaria.proveedor.razonSocial = txtProveedor.Text;
 
                 supervisor.idPersona = Int32.Parse(txtIDSup.Text);
                 supervisor.nombres = txtNombreSup.Text;
                 supervisor.apellidos = txtApellidosSup.Text;
 
-                ingeniero.idPersona = Int32.Parse(txtIDIng.Text);
-                ingeniero.nombres = txtNombreIng.Text;
-                ingeniero.apellidos = txtApellidosIng.Text;
-
                 problema.idProblema = Int32.Parse(txtIDProblema.Text);
                 problema.tipo = txtProblema.Text;
                 problema.nivelImportancia = Int32.Parse(txtNivelImp.Text);
 
-                respuesta.idRespuesta = Int32.Parse(txtIDResp.Text);
-                respuesta.tipo = txtRespuesta.Text;
-
-                incidenteMaq.ingeniero = ingeniero;
                 incidenteMaq.supervisor = supervisor;
                 incidenteMaq.maquinaria = maquinaria;
                 incidenteMaq.problema = problema;
-                incidenteMaq.respuesta = respuesta;
-                incidenteMaq.fechaAtencion = dtpFechaRespuesta.Value;
-                incidenteMaq.detalle = tbDescripcionRespuesta.Text;
 
 
-                int result = daoIncidenteMaq.insertarIncidenteMaquinaria(incidenteMaq);
+                int result = daoIncidenteMaq.insertarProblemaIncidenteMaquinaria(incidenteMaq);
                 if (result != 0)
                 {
                     MessageBox.Show("El registro ha sido exitoso", "Mensaje de Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -250,6 +253,30 @@ namespace BuildUp
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
+            txtID.Text = "";
+            dtpFechaRegistro.Text = "";
+
+            txtIDMaq.Text = "";
+            txtNombreMaq.Text = "";
+            txtProveedor.Text = "";
+
+            txtIDSup.Text = "";
+            txtNombreSup.Text = "";
+            txtApellidosSup.Text = "";
+
+            txtIDIng.Text = "";
+            txtNombreIng.Text = "";
+            txtApellidosIng.Text = "";
+
+            txtIDProblema.Text = "";
+            txtProblema.Text = "";
+            txtNivelImp.Text = "";
+
+            txtIDResp.Text = "";
+            txtRespuesta.Text = "";
+            tbDescripcionRespuesta.Text = "";
+            dtpFechaRespuesta.Text = "";
+
             frmBuscarIncidencia formBuscarIncidencia = new frmBuscarIncidencia();
             if (formBuscarIncidencia.ShowDialog() == DialogResult.OK)
             {
@@ -257,39 +284,84 @@ namespace BuildUp
                 incidenteMaq = formBuscarIncidencia.IncidenteSeleccionado;
                 txtID.Text = incidenteMaq.idIncidente.ToString();
                 dtpFechaRegistro.Value = incidenteMaq.fechaIncidente;
-
-                //incidenteMaq.ingeniero = daoIncidenteMaq.obtenerIngenieroIncidenteMaquinaria(incidenteMaq.idIncidente);
-                //incidenteMaq.respuesta = daoIncidenteMaq.obtenerRespuestaIncidenteMaquinaria(incidenteMaq.idIncidente);
-
+                //Maquinaria
                 txtIDMaq.Text = incidenteMaq.maquinaria.idMaquinaria.ToString();
                 txtNombreMaq.Text = incidenteMaq.maquinaria.nombre;
                 txtProveedor.Text = incidenteMaq.maquinaria.proveedor.razonSocial;
-
+                //Supervisor
                 txtIDSup.Text = incidenteMaq.supervisor.idPersona.ToString();
                 txtNombreSup.Text = incidenteMaq.supervisor.nombres;
                 txtApellidosSup.Text = incidenteMaq.supervisor.apellidos;
-
-                txtIDIng.Text = incidenteMaq.ingeniero.idPersona.ToString();
-                txtNombreIng.Text = incidenteMaq.ingeniero.nombres;
-                txtApellidosIng.Text = incidenteMaq.ingeniero.apellidos;
-
+                //Problema
                 txtIDProblema.Text = incidenteMaq.problema.idProblema.ToString();
                 txtProblema.Text = incidenteMaq.problema.tipo;
                 txtNivelImp.Text = incidenteMaq.problema.nivelImportancia.ToString();
 
-                txtIDResp.Text = incidenteMaq.respuesta.idRespuesta.ToString();
-                txtRespuesta.Text = incidenteMaq.respuesta.tipo;
-                tbDescripcionRespuesta.Text = incidenteMaq.detalle;
-                dtpFechaRespuesta.Text = incidenteMaq.fechaAtencion.ToString();
+                if (incidenteMaq.estado)
+                {
+                    //Ingeniero
+                    //incidenteMaq.ingeniero = new IncidenteMaquinariaWS.ingeniero();
+                    //incidenteMaq.problema = new IncidenteMaquinariaWS.problema();
+                    incidenteMaq = daoIncidenteMaq.obtenerIngenieroIncidenteMaquinaria(incidenteMaq);
+                    txtIDIng.Text = incidenteMaq.ingeniero.idPersona.ToString();
+                    txtNombreIng.Text = incidenteMaq.ingeniero.nombres;
+                    txtApellidosIng.Text = incidenteMaq.ingeniero.apellidos;
 
+                    //Respuesta
+                    incidenteMaq=daoIncidenteMaq.obtenerRespuestaIncidenteMaquinaria(incidenteMaq);
+                    txtIDResp.Text = incidenteMaq.respuesta.idRespuesta.ToString();
+                    txtRespuesta.Text = incidenteMaq.respuesta.tipo;
+                    tbDescripcionRespuesta.Text = incidenteMaq.detalle;
+                    dtpFechaRespuesta.Value = incidenteMaq.fechaAtencion;
+                }
+            }                 
+            if (!incidenteMaq.estado)
+            {
                 EstablecerEstadoComponentes(Estado.Modificacion);
+                if(frmLogIn.Usuario.rol == "Supervisor")
+                {
+                }
+                else
+                {
+                    tbDescripcionRespuesta.Enabled = true;
+                    dtpFechaRespuesta.Enabled = false;
+                }
+                
             }
+      }
             
-        }
+      
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            DialogResult dr = MessageBox.Show("¿Está seguro que desea actualizar este Incidente?", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (frmLogIn.Usuario.rol == "Supervisor")
+            {
+                if (txtIDMaq.Text == "")
+                {
+                    MessageBox.Show("Debe seleccionar una maquinaria", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                if (txtIDProblema.Text == "")
+                {
+                    MessageBox.Show("Debe seleccionar un tipo de problema", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+            }
+            else
+            {
+                if (txtIDResp.Text == "")
+                {
+                    MessageBox.Show("Debe seleccionar un tipo de respuesta", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                if (tbDescripcionRespuesta.Text == "")
+                {
+                    MessageBox.Show("Debe colocar una descripción de su respuesta", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+            }
+
+                DialogResult dr = MessageBox.Show("¿Está seguro que desea actualizar este Incidente?", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (dr == DialogResult.Yes)
             {
                 incidenteMaq.idIncidente = Int32.Parse(txtID.Text);
@@ -297,33 +369,42 @@ namespace BuildUp
 
                 maquinaria.idMaquinaria = Int32.Parse(txtIDMaq.Text);
                 maquinaria.nombre = txtNombreMaq.Text;
+                maquinaria.proveedor = new IncidenteMaquinariaWS.proveedor();
                 maquinaria.proveedor.razonSocial = txtProveedor.Text;
 
                 supervisor.idPersona = Int32.Parse(txtIDSup.Text);
                 supervisor.nombres = txtNombreSup.Text;
                 supervisor.apellidos = txtApellidosSup.Text;
 
-                ingeniero.idPersona = Int32.Parse(txtIDIng.Text);
-                ingeniero.nombres = txtNombreIng.Text;
-                ingeniero.apellidos = txtApellidosIng.Text;
-
                 problema.idProblema = Int32.Parse(txtIDProblema.Text);
                 problema.tipo = txtProblema.Text;
                 problema.nivelImportancia = Int32.Parse(txtNivelImp.Text);
 
-                respuesta.idRespuesta = Int32.Parse(txtIDResp.Text);
-                respuesta.tipo = txtRespuesta.Text;
-
-                incidenteMaq.ingeniero = ingeniero;
                 incidenteMaq.supervisor = supervisor;
                 incidenteMaq.maquinaria = maquinaria;
                 incidenteMaq.problema = problema;
-                incidenteMaq.respuesta = respuesta;
-                incidenteMaq.fechaAtencion = dtpFechaRespuesta.Value;
-                incidenteMaq.detalle = tbDescripcionRespuesta.Text;
 
                 int result = 0;
-                //result = daoIncidenteMaq.m(maquinaria); //<-----------------------------
+                if (frmLogIn.Usuario.rol == "Supervisor")//EL SUPERVISOR - AUN PUEDE MODIFICAR EL PROBLEMA DE LA INCIDENCIA
+                {
+                    result = daoIncidenteMaq.modificarPorSupervisorIncidenteMaquinaria(incidenteMaq);
+                }
+                else //INGENIERO PUEDE MODIFICAR LA RESPUESTA
+                { 
+                    ingeniero.idPersona = Int32.Parse(txtIDIng.Text);
+                    ingeniero.nombres = txtNombreIng.Text;
+                    ingeniero.apellidos = txtApellidosIng.Text;
+
+                    respuesta.idRespuesta = Int32.Parse(txtIDResp.Text);
+                    respuesta.tipo = txtRespuesta.Text;
+
+                    incidenteMaq.ingeniero = ingeniero;
+                    incidenteMaq.respuesta = respuesta;
+                    incidenteMaq.fechaAtencion = dtpFechaRespuesta.Value;
+                    incidenteMaq.detalle = tbDescripcionRespuesta.Text;
+                    //incidenteMaq.estado = true;
+                    result = daoIncidenteMaq.insertarRespuestaIncidenteMaquinaria(incidenteMaq);
+                }
 
                 if (result != 0)
                 {
