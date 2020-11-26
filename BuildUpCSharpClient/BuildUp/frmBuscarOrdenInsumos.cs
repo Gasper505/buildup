@@ -28,7 +28,7 @@ namespace BuildUp
         {
             if (dgvOrdenes.SelectedRows.Count < 1)
             {
-                MessageBox.Show("Debe seleccionar una orden de insumo", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Debe seleccionar una Orden de Insumos", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -61,11 +61,11 @@ namespace BuildUp
             dgvOrdenes.Rows[e.RowIndex].Cells[5].Value = data.insumo.nombre;
             if (data.estado)
             {
-                dgvOrdenes.Rows[e.RowIndex].Cells[7].Value = "Solicitud aceptada";
+                dgvOrdenes.Rows[e.RowIndex].Cells[7].Value = "Solicitud Aceptada";
             }
             else
             {
-                dgvOrdenes.Rows[e.RowIndex].Cells[7].Value = "Solicitud en espera";
+                dgvOrdenes.Rows[e.RowIndex].Cells[7].Value = "Solicitud en Espera";
             }
             
         }

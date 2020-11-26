@@ -31,7 +31,7 @@ namespace BuildUp
         {
             if (dgvInsumos.SelectedRows.Count < 1)
             {
-                MessageBox.Show("Debe seleccionar un insumo", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Debe seleccionar un Insumo", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             insumoSeleccionado = (InsumoWS.insumo)dgvInsumos.CurrentRow.DataBoundItem;

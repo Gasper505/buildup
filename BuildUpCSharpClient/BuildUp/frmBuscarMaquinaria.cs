@@ -30,7 +30,7 @@ namespace BuildUp
         {
             if (dgvMaquinarias.SelectedRows.Count < 1)
             {
-                MessageBox.Show("Debe seleccionar una maquinaria", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Debe seleccionar una Maquinaria", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 

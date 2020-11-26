@@ -117,6 +117,9 @@ namespace BuildUp
                     pbFoto.Enabled = false;
                     btAgregarFoto.Enabled = false;
 
+                    exclusiveLabel.Visible = true;
+                    exclusiveComboBox.Visible = true;
+
                     exclusiveComboBox.Enabled = true;
                     break;
 
@@ -158,6 +161,12 @@ namespace BuildUp
                     operario.correo = txtCorreo.Text;
                     operario.fechaFinContrato = dtpFinContrato.Value;
                     operario.rol = "Operario";
+
+                    FileStream fs = new FileStream(ruta, FileMode.Open, FileAccess.Read);
+                    BinaryReader br = new BinaryReader(fs);
+                    operario.foto = br.ReadBytes((int)fs.Length);
+                    fs.Close();
+
                     result = daoOperario.insertarOperario(operario);
                 }
                 else if (cbRol.Text == "Supervisor")
@@ -168,6 +177,12 @@ namespace BuildUp
                     supervisor.correo = txtCorreo.Text;
                     supervisor.fechaFinContrato = dtpFinContrato.Value;
                     supervisor.rol = "Supervisor";
+
+                    FileStream fs = new FileStream(ruta, FileMode.Open, FileAccess.Read);
+                    BinaryReader br = new BinaryReader(fs);
+                    operario.foto = br.ReadBytes((int)fs.Length);
+                    fs.Close();
+
                     result = daoSupervisor.insertarSupervisor(supervisor);
                 }
                 else if (cbRol.Text == "Ingeniero")
@@ -178,6 +193,12 @@ namespace BuildUp
                     ingeniero.correo = txtCorreo.Text;
                     ingeniero.fechaFinContrato = dtpFinContrato.Value;
                     ingeniero.rol = "Ingeniero";
+
+                    FileStream fs = new FileStream(ruta, FileMode.Open, FileAccess.Read);
+                    BinaryReader br = new BinaryReader(fs);
+                    operario.foto = br.ReadBytes((int)fs.Length);
+                    fs.Close();
+
                     result = daoIngeniero.insertarIngeniero(ingeniero);
                 }
                 else if (cbRol.Text == "Jefe de Área")
@@ -188,6 +209,12 @@ namespace BuildUp
                     jefeArea.correo = txtCorreo.Text;
                     jefeArea.fechaFinContrato = dtpFinContrato.Value;
                     jefeArea.rol = "Jefe de Área";
+
+                    FileStream fs = new FileStream(ruta, FileMode.Open, FileAccess.Read);
+                    BinaryReader br = new BinaryReader(fs);
+                    operario.foto = br.ReadBytes((int)fs.Length);
+                    fs.Close();
+
                     result = daoJefeArea.insertarJefeArea(jefeArea);
                 }
 
@@ -232,7 +259,27 @@ namespace BuildUp
                 dtpFinContrato.Value = usuario.fechaFinContrato;
                 cbRol.Text = usuario.rol;
 
-                //falta establecer campo exclusivo de rol.
+                if (cbRol.Text == "Operario")
+                {
+                    exclusiveComboBox.Text = daoOperario.obtenerLineaProduccionOperario(usuario.idPersona);
+                    exclusiveLabel.Text = "Línea de Producción";
+                }
+                else if (cbRol.Text == "Supervisor")
+                {
+                    //exclusiveComboBox.Text = daoSupervisor.obt(usuario.idPersona);
+                    exclusiveLabel.Text = "Línea de Producción";
+                }
+                else if (cbRol.Text == "Ingeniero")
+                {
+                    exclusiveComboBox.Text = daoIngeniero.obtenerEspecialidadIngeniero(usuario.idPersona);
+                    exclusiveLabel.Text = "Especialidad";
+                }
+                else if (cbRol.Text == "Jefe de Área")
+                {
+                    //exclusiveComboBox.Text = daoJefeArea.obtenerFotoFirmaJefeArea(usuario.idPersona);
+                    exclusiveLabel.Text = "Firma Digital";
+                }
+
                 EstablecerEstadoComponentes(Estado.Modificacion);
             }
 
@@ -253,6 +300,12 @@ namespace BuildUp
                     operario.correo = txtCorreo.Text;
                     operario.fechaFinContrato = dtpFinContrato.Value;
                     operario.rol = "Operario";
+
+                    FileStream fs = new FileStream(ruta, FileMode.Open, FileAccess.Read);
+                    BinaryReader br = new BinaryReader(fs);
+                    operario.foto = br.ReadBytes((int)fs.Length);
+                    fs.Close();
+
                     result = daoOperario.modificarOperario(operario);
                 }
                 else if (cbRol.Text == "Supervisor")
@@ -263,6 +316,12 @@ namespace BuildUp
                     supervisor.correo = txtCorreo.Text;
                     supervisor.fechaFinContrato = dtpFinContrato.Value;
                     supervisor.rol = "Supervisor";
+
+                    FileStream fs = new FileStream(ruta, FileMode.Open, FileAccess.Read);
+                    BinaryReader br = new BinaryReader(fs);
+                    operario.foto = br.ReadBytes((int)fs.Length);
+                    fs.Close();
+
                     result = daoSupervisor.actualizarSupervisor(supervisor);
                 }
                 else if (cbRol.Text == "Ingeniero")
@@ -273,6 +332,12 @@ namespace BuildUp
                     ingeniero.correo = txtCorreo.Text;
                     ingeniero.fechaFinContrato = dtpFinContrato.Value;
                     ingeniero.rol = "Ingeniero";
+
+                    FileStream fs = new FileStream(ruta, FileMode.Open, FileAccess.Read);
+                    BinaryReader br = new BinaryReader(fs);
+                    operario.foto = br.ReadBytes((int)fs.Length);
+                    fs.Close();
+
                     result = daoIngeniero.modificarIngeniero(ingeniero);
                 }
                 else if (cbRol.Text == "Jefe de Área")
@@ -283,6 +348,12 @@ namespace BuildUp
                     jefeArea.correo = txtCorreo.Text;
                     jefeArea.fechaFinContrato = dtpFinContrato.Value;
                     jefeArea.rol = "Jefe de Área";
+
+                    FileStream fs = new FileStream(ruta, FileMode.Open, FileAccess.Read);
+                    BinaryReader br = new BinaryReader(fs);
+                    operario.foto = br.ReadBytes((int)fs.Length);
+                    fs.Close();
+
                     result = daoJefeArea.modificarJefeArea(jefeArea);
                 }
 
@@ -388,13 +459,8 @@ namespace BuildUp
             {
                 if (ofFoto.ShowDialog() == DialogResult.OK)
                 {
-                    //ruta = ofFoto.FileName;
-                    //pbFoto.Image = Image.FromFile(ruta);
-
-                    FileStream fs = new FileStream(ruta, FileMode.Open, FileAccess.Read);
-                    BinaryReader br = new BinaryReader(fs);
-                    usuario.foto = br.ReadBytes((int)fs.Length);
-                    fs.Close();
+                    ruta = ofFoto.FileName;
+                    pbFoto.Image = Image.FromFile(ruta);
                 }
             }
             catch (Exception ex)
@@ -413,8 +479,10 @@ namespace BuildUp
             switch (cbRol.Text)
             {
                 case "Jefe de Área":
-                    exclusiveLabel.Visible = false;
+                    exclusiveLabel.Text = "Firma Digital";
+
                     exclusiveComboBox.Visible = false;
+                    
                     break;
                 case "Ingeniero":
                     BindingList<String> especialidades = new BindingList<String>();

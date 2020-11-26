@@ -116,6 +116,7 @@ namespace BuildUp
                     }
                     else
                     {
+                        
                         btnNuevo.Enabled = false;
                         btnGuardar.Enabled = false;
                         btnCancelar.Enabled = true;
@@ -134,6 +135,13 @@ namespace BuildUp
                         numericUpDown1.Enabled = true;
                         btnAceptarOrden.Enabled = true;
                         //btnRechazarOrden.Enabled = true;
+                        if (this.estado)
+                        {
+                            btnEliminar.Enabled = false;
+                            btnActualizar.Enabled = false;
+                            btnBuscarInsumo.Enabled = false;
+                            numericUpDown1.Enabled = false;
+                        }
                     }
                     break;
 

@@ -16,6 +16,8 @@ namespace BuildUp
         {
             InitializeComponent();
             lblNombres.Text = frmLogIn.Usuario.nombres + ' ' + frmLogIn.Usuario.apellidos;
+            //MemoryStream ms = new MemoryStream(frmLogIn.Usuario.foto);
+            //pbFoto.Image = new Bitmap(ms);
         }
 
         private void button1_Click(object sender, EventArgs e)

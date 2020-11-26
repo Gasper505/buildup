@@ -34,7 +34,7 @@ namespace BuildUp
         {
             if (dgvRespuestas.SelectedRows.Count < 1)
             {
-                MessageBox.Show("Debe seleccionar una respuesta", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Debe seleccionar una Respuesta", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             respuestaSeleccionada = (RespuestaWS.respuesta)dgvRespuestas.CurrentRow.DataBoundItem;

@@ -35,15 +35,20 @@ namespace BuildUp
 
         private void btnSeleccionar_Click(object sender, EventArgs e)
         {
+            if (dgvUsuarios.SelectedRows.Count < 1)
+            {
+                MessageBox.Show("Debe seleccionar un Usuario", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             usuarioSeleccionado = (UsuarioWS.usuario)dgvUsuarios.CurrentRow.DataBoundItem;
             this.DialogResult = DialogResult.OK;
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            BindingList<UsuarioWS.usuario> us = new BindingList<UsuarioWS.usuario>(daoUsuario.lia("").ToArray());
+            //BindingList<UsuarioWS.usuario> us = new BindingList<UsuarioWS.usuario>(daoUsuario.l("").ToArray());
 
-            dgvUsuarios.DataSource = us;
+            //dgvUsuarios.DataSource = us;
         }
     }
 }

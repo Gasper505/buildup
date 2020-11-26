@@ -31,7 +31,7 @@ namespace BuildUp
         {
             if (dgvProveedores.SelectedRows.Count < 1)
             {
-                MessageBox.Show("Debe seleccionar un proveedor", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Debe seleccionar un Proveedor", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             proveedorSeleccionado = (ProveedorWS.proveedor)dgvProveedores.CurrentRow.DataBoundItem;

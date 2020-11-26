@@ -31,7 +31,7 @@ namespace BuildUp
         {
             if (dgvTiposLadrillo.SelectedRows.Count < 1)
             {
-                MessageBox.Show("Debe seleccionar un tipo de ladrillo", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Debe seleccionar un Tipo de Ladrillo", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 

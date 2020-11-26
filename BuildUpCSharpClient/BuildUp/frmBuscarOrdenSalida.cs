@@ -28,7 +28,7 @@ namespace BuildUp
         {
             if (dgvOrdenesSalida.SelectedRows.Count < 1)
             {
-                MessageBox.Show("Debe seleccionar una orden de salida", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Debe seleccionar una Orden de Salida", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             ordenSeleccionada = new OSalidaWS.ordenSalida();

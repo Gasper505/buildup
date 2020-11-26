@@ -33,7 +33,7 @@ namespace BuildUp
         {
             if (dataGridView1.SelectedRows.Count < 1)
             {
-                MessageBox.Show("Debe seleccionar un plan de produccion", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Debe seleccionar un Plan de Producción", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             planSeleccionado = (PlanProduccionWS.planProduccion)dataGridView1.CurrentRow.DataBoundItem;
