@@ -34,7 +34,6 @@
             this.lblBusqNombreInsumo = new System.Windows.Forms.Label();
             this.dgvInsumos = new System.Windows.Forms.DataGridView();
             this.btnSeleccionar = new System.Windows.Forms.Button();
-            this.IDInsumo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreInsumo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UnidadMedida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbParametrosBusqueda.SuspendLayout();
@@ -46,19 +45,20 @@
             this.gbParametrosBusqueda.Controls.Add(this.btnBuscar);
             this.gbParametrosBusqueda.Controls.Add(this.txtNombreInsumo);
             this.gbParametrosBusqueda.Controls.Add(this.lblBusqNombreInsumo);
+            this.gbParametrosBusqueda.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbParametrosBusqueda.Location = new System.Drawing.Point(55, 28);
             this.gbParametrosBusqueda.Name = "gbParametrosBusqueda";
-            this.gbParametrosBusqueda.Size = new System.Drawing.Size(571, 94);
+            this.gbParametrosBusqueda.Size = new System.Drawing.Size(510, 94);
             this.gbParametrosBusqueda.TabIndex = 4;
             this.gbParametrosBusqueda.TabStop = false;
             this.gbParametrosBusqueda.Text = "Parámetros de Búsqueda";
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(433, 31);
+            this.btnBuscar.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.Location = new System.Drawing.Point(367, 31);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(102, 36);
+            this.btnBuscar.Size = new System.Drawing.Size(110, 36);
             this.btnBuscar.TabIndex = 7;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
@@ -66,18 +66,19 @@
             // 
             // txtNombreInsumo
             // 
-            this.txtNombreInsumo.Location = new System.Drawing.Point(158, 41);
+            this.txtNombreInsumo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreInsumo.Location = new System.Drawing.Point(153, 41);
             this.txtNombreInsumo.Name = "txtNombreInsumo";
-            this.txtNombreInsumo.Size = new System.Drawing.Size(225, 20);
+            this.txtNombreInsumo.Size = new System.Drawing.Size(181, 23);
             this.txtNombreInsumo.TabIndex = 4;
             // 
             // lblBusqNombreInsumo
             // 
             this.lblBusqNombreInsumo.AutoSize = true;
-            this.lblBusqNombreInsumo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBusqNombreInsumo.Location = new System.Drawing.Point(36, 41);
+            this.lblBusqNombreInsumo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBusqNombreInsumo.Location = new System.Drawing.Point(34, 44);
             this.lblBusqNombreInsumo.Name = "lblBusqNombreInsumo";
-            this.lblBusqNombreInsumo.Size = new System.Drawing.Size(116, 15);
+            this.lblBusqNombreInsumo.Size = new System.Drawing.Size(113, 15);
             this.lblBusqNombreInsumo.TabIndex = 0;
             this.lblBusqNombreInsumo.Text = "Nombre del Insumo";
             // 
@@ -88,7 +89,6 @@
             this.dgvInsumos.BackgroundColor = System.Drawing.SystemColors.ScrollBar;
             this.dgvInsumos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvInsumos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.IDInsumo,
             this.NombreInsumo,
             this.UnidadMedida});
             this.dgvInsumos.Location = new System.Drawing.Point(55, 146);
@@ -96,26 +96,19 @@
             this.dgvInsumos.Name = "dgvInsumos";
             this.dgvInsumos.ReadOnly = true;
             this.dgvInsumos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvInsumos.Size = new System.Drawing.Size(571, 267);
+            this.dgvInsumos.Size = new System.Drawing.Size(510, 252);
             this.dgvInsumos.TabIndex = 5;
             // 
             // btnSeleccionar
             // 
-            this.btnSeleccionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSeleccionar.Location = new System.Drawing.Point(232, 435);
+            this.btnSeleccionar.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeleccionar.Location = new System.Drawing.Point(198, 428);
             this.btnSeleccionar.Name = "btnSeleccionar";
             this.btnSeleccionar.Size = new System.Drawing.Size(225, 36);
             this.btnSeleccionar.TabIndex = 6;
             this.btnSeleccionar.Text = "Seleccionar";
             this.btnSeleccionar.UseVisualStyleBackColor = true;
             this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
-            // 
-            // IDInsumo
-            // 
-            this.IDInsumo.DataPropertyName = "idInsumo";
-            this.IDInsumo.HeaderText = "ID Insumo";
-            this.IDInsumo.Name = "IDInsumo";
-            this.IDInsumo.ReadOnly = true;
             // 
             // NombreInsumo
             // 
@@ -137,7 +130,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(681, 493);
+            this.ClientSize = new System.Drawing.Size(624, 493);
             this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.dgvInsumos);
             this.Controls.Add(this.gbParametrosBusqueda);
@@ -160,7 +153,6 @@
         private System.Windows.Forms.DataGridView dgvInsumos;
         private System.Windows.Forms.Button btnSeleccionar;
         private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IDInsumo;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreInsumo;
         private System.Windows.Forms.DataGridViewTextBoxColumn UnidadMedida;
     }

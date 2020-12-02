@@ -45,10 +45,9 @@ namespace BuildUp
             usuario = daoUsuario.buscarUsuarioPorUsername(usuario.username);
             if (resultado == 1)
             {
-                //test every possibility
                 switch (usuario.rol)
                 {
-                    case "Jefe":
+                    case "Jefe": //debería ser 'Jefe de Área'
                         frmRolJefeArea formJefeArea = new frmRolJefeArea();
                         this.Hide();
                         formJefeArea.ShowDialog();
