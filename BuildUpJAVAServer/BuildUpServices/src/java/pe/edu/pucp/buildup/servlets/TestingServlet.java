@@ -40,44 +40,44 @@ public class TestingServlet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-//        try{
-//            //Referencia al archivo Jasper
-//            JasperReport reporte = (JasperReport)JRLoader.loadObjectFromFile(TestingServlet.class.getResource("/pe/edu/pucp/buildup/reportes/TestingReport.jasper").getFile());
-//            
-//            
-//            //Referencia a la ruta de la imagen
-//            String rutaLogo = TestingServlet.class.getResource("/pe/edu/pucp/buildup/images/foto.jpg").getPath();
-//            //Generación del objeto Image
-//            ImageIcon icono = new ImageIcon(rutaLogo);
-//            Image imagen = icono.getImage();
-//            
-//            
-//            //Registro del driver
-//            Class.forName("com.mysql.cj.jdbc.Driver");
-//            //Creación del objeto Connection
-//            Connection con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.password);
-//            
-//            
-//            //Creamos un HashMap para enviar los parámetros del reporte
-//            HashMap hm = new HashMap();
-//            hm.put("AUTOR", "Diego Ramírez");
-//            hm.put("FOTO_AUTOR", imagen);
-//            
-//            
-//            //Población del reporte
-//            JasperPrint jp = JasperFillManager.fillReport(reporte, hm, con);
-//            
-//            
-//            //Cierre de conexión
-//            con.close();
-//            
-//            
-//            //Mostramos el reporte a nivel web
-//            JasperExportManager.exportReportToPdfStream(jp, response.getOutputStream());
-//        }
-//        catch(Exception ex){
-//            System.out.println(ex.getMessage());
-//        }
+        try{
+            //Referencia al archivo Jasper
+            JasperReport reporte = (JasperReport)JRLoader.loadObjectFromFile(TestingServlet.class.getResource("/pe/edu/pucp/buildup/reportes/TestingReport.jasper").getFile());
+            
+            
+            //Referencia a la ruta de la imagen
+            String rutaLogo = TestingServlet.class.getResource("/pe/edu/pucp/buildup/images/foto.jpg").getPath();
+            //Generación del objeto Image
+            ImageIcon icono = new ImageIcon(rutaLogo);
+            Image imagen = icono.getImage();
+            
+            
+            //Registro del driver
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            //Creación del objeto Connection
+            Connection con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.password);
+            
+            
+            //Creamos un HashMap para enviar los parámetros del reporte
+            HashMap hm = new HashMap();
+            hm.put("AUTOR", "Diego Ramírez");
+            hm.put("FOTO_AUTOR", imagen);
+            
+            
+            //Población del reporte
+            JasperPrint jp = JasperFillManager.fillReport(reporte, hm, con);
+            
+            
+            //Cierre de conexión
+            con.close();
+            
+            
+            //Mostramos el reporte a nivel web
+            JasperExportManager.exportReportToPdfStream(jp, response.getOutputStream());
+        }
+        catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
         
     }
 
