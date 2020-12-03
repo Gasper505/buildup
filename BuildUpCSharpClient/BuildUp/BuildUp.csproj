@@ -844,6 +844,9 @@
     <None Include="Connected Services\SupervisorWS\BuildUp.SupervisorWS.listarSupervisorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\SupervisorWS\BuildUp.SupervisorWS.obtenerLineaProduccionSupervisorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\SupervisorWS\BuildUp.SupervisorWS.supervisor.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -871,6 +874,12 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\UsuarioWS\BuildUp.UsuarioWS.buscarUsuarioPorUsernameResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UsuarioWS\BuildUp.UsuarioWS.listarUsuarioPorParametrosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UsuarioWS\BuildUp.UsuarioWS.persona.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\UsuarioWS\BuildUp.UsuarioWS.usuario.datasource">

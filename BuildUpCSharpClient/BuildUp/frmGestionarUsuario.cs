@@ -28,7 +28,7 @@ namespace BuildUp
         LineaProduccionWS.LineaProduccionWSClient daoLineaP;
 
 
-        UsuarioWS.usuario usuario;
+        UsuarioWS.persona usuario;
 
         public frmGestionarUsuario()
         {
@@ -40,9 +40,12 @@ namespace BuildUp
             daoOperario = new OperarioWS.OperarioWSClient();
             daoIngeniero = new IngenieroWS.IngenieroWSClient();
 
+            usuario = new UsuarioWS.persona();
             jefeArea = new JefeAreaWS.jefeArea();
             supervisor = new SupervisorWS.supervisor();
+            supervisor.lineaProduccion = new SupervisorWS.lineaProduccion();
             operario = new OperarioWS.operario();
+            operario.lineaProduccion = new OperarioWS.lineaProduccion();
             ingeniero = new IngenieroWS.ingeniero();
 
             daoLineaP = new LineaProduccionWS.LineaProduccionWSClient();
@@ -110,12 +113,12 @@ namespace BuildUp
                     txtNombre.Enabled = false;
                     txtApellidos.Enabled = false;
                     dtpNacimiento.Enabled = false;
-                    dtpFinContrato.Enabled = false;
-                    txtNumero.Enabled = false;
-                    txtCorreo.Enabled = false;
+                    dtpFinContrato.Enabled = true;
+                    txtNumero.Enabled = true;
+                    txtCorreo.Enabled = true;
                     cbRol.Enabled = false;
-                    pbFoto.Enabled = false;
-                    btAgregarFoto.Enabled = false;
+                    pbFoto.Enabled = true;
+                    btAgregarFoto.Enabled = true;
 
                     exclusiveComboBox.Enabled = true;
                     break;
@@ -143,52 +146,130 @@ namespace BuildUp
                 MessageBox.Show("Debe ingresar el rol del usuario", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+            if (txtNumero.Text == "")
+            {
+                MessageBox.Show("Debe ingresar el telefono del usuario", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (txtCorreo.Text == "")
+            {
+                MessageBox.Show("Debe ingresar el correo del usuario", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (cbRol.Text == "Operario" || cbRol.Text == "Supervisor")
+            {
+                if (exclusiveComboBox.Text == "")
+                {
+                    MessageBox.Show("Debe ingresar la línea de producción a la que pertenece el usuario", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+            }
+            if (cbRol.Text == "Ingeniero")
+            {
+                if (exclusiveComboBox.Text == "")
+                {
+                    MessageBox.Show("Debe ingresar la especialidad del usuario", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+            }
+            if (pbFoto.Image == null)
+            {
+                MessageBox.Show("Debe ingresar una foto para el usuario", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
 
 
-            DialogResult dr = MessageBox.Show("¿Está seguro que desea registrar a este Usuario?", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                DialogResult dr = MessageBox.Show("¿Está seguro que desea registrar a este Usuario?", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (dr == DialogResult.Yes)
             {
                 int result = 0;
 
                 if (cbRol.Text == "Operario")
                 {
+                    lineaP = new LineaProduccionWS.lineaProduccion();
+                    lineaP = (LineaProduccionWS.lineaProduccion)exclusiveComboBox.SelectedItem;
+                    operario.lineaProduccion.idLineaProduccion = lineaP.idLineaProduccion;
                     operario.nombres = txtNombre.Text;
                     operario.apellidos = txtApellidos.Text;
+                    operario.fechaNacimiento = dtpNacimiento.Value;
+                    operario.fechaNacimientoSpecified = true;
                     operario.telefono = txtNumero.Text;
                     operario.correo = txtCorreo.Text;
                     operario.fechaFinContrato = dtpFinContrato.Value;
-                    operario.rol = "Operario";
+                    operario.fechaFinContratoSpecified = true;
+                    operario.rol = cbRol.Text;
+
+                    FileStream fs = new FileStream(ruta, FileMode.Open, FileAccess.Read);
+                    BinaryReader br = new BinaryReader(fs);
+                    operario.foto= br.ReadBytes((int)fs.Length);
+                    fs.Close();
+
                     result = daoOperario.insertarOperario(operario);
+                    txtID.Text = result.ToString();
                 }
                 else if (cbRol.Text == "Supervisor")
                 {
+                    lineaP = new LineaProduccionWS.lineaProduccion();
+                    lineaP = (LineaProduccionWS.lineaProduccion)exclusiveComboBox.SelectedItem;
+                    supervisor.lineaProduccion.idLineaProduccion = lineaP.idLineaProduccion;
                     supervisor.nombres = txtNombre.Text;
                     supervisor.apellidos = txtApellidos.Text;
+                    supervisor.fechaNacimiento = dtpNacimiento.Value;
+                    supervisor.fechaNacimientoSpecified = true;
                     supervisor.telefono = txtNumero.Text;
                     supervisor.correo = txtCorreo.Text;
                     supervisor.fechaFinContrato = dtpFinContrato.Value;
-                    supervisor.rol = "Supervisor";
+                    supervisor.fechaFinContratoSpecified = true;
+                    supervisor.rol = cbRol.Text;
+
+                    FileStream fs = new FileStream(ruta, FileMode.Open, FileAccess.Read);
+                    BinaryReader br = new BinaryReader(fs);
+                    supervisor.foto = br.ReadBytes((int)fs.Length);
+                    fs.Close();
+
                     result = daoSupervisor.insertarSupervisor(supervisor);
+                    txtID.Text = result.ToString();
                 }
                 else if (cbRol.Text == "Ingeniero")
                 {
                     ingeniero.nombres = txtNombre.Text;
                     ingeniero.apellidos = txtApellidos.Text;
+                    ingeniero.fechaNacimiento = dtpNacimiento.Value;
                     ingeniero.telefono = txtNumero.Text;
                     ingeniero.correo = txtCorreo.Text;
                     ingeniero.fechaFinContrato = dtpFinContrato.Value;
-                    ingeniero.rol = "Ingeniero";
+                    ingeniero.rol = cbRol.Text;
+                    ingeniero.especialidad = exclusiveComboBox.Text;
+                    ingeniero.fechaNacimientoSpecified = true;
+                    ingeniero.fechaFinContratoSpecified = true;
+
+                    FileStream fs = new FileStream(ruta, FileMode.Open, FileAccess.Read);
+                    BinaryReader br = new BinaryReader(fs);
+                    ingeniero.foto = br.ReadBytes((int)fs.Length);
+                    fs.Close();
+
                     result = daoIngeniero.insertarIngeniero(ingeniero);
+                    txtID.Text = result.ToString();
                 }
                 else if (cbRol.Text == "Jefe de Área")
                 {
                     jefeArea.nombres = txtNombre.Text;
                     jefeArea.apellidos = txtApellidos.Text;
+                    jefeArea.fechaNacimiento = dtpNacimiento.Value;
                     jefeArea.telefono = txtNumero.Text;
                     jefeArea.correo = txtCorreo.Text;
                     jefeArea.fechaFinContrato = dtpFinContrato.Value;
-                    jefeArea.rol = "Jefe de Área";
+                    jefeArea.rol = cbRol.Text;
+                    jefeArea.fechaNacimientoSpecified = true;
+                    jefeArea.fechaFinContratoSpecified = true;
+
+                    FileStream fs = new FileStream(ruta, FileMode.Open, FileAccess.Read);
+                    BinaryReader br = new BinaryReader(fs);
+                    jefeArea.foto = br.ReadBytes((int)fs.Length);
+                    fs.Close();
+
                     result = daoJefeArea.insertarJefeArea(jefeArea);
+                    txtID.Text = result.ToString();
                 }
 
                 if (result != 0)
@@ -218,19 +299,62 @@ namespace BuildUp
 
         private void btBuscar_Click(object sender, EventArgs e)
         {
+            txtID.Text = "";
+            txtNombre.Text = "";
+            txtApellidos.Text = "";
+            dtpNacimiento.Text = "";
+            dtpFinContrato.Text = "";
+            txtNumero.Text = "";
+            txtCorreo.Text = "";
+            cbRol.Text = "";         
+
+
+            if (pbFoto.Image != null)
+            {
+                pbFoto.Image.Dispose();
+                pbFoto.Image = null;
+            }
+
+
             frmBuscarUsuario formBuscarUsuario = new frmBuscarUsuario();
             if (formBuscarUsuario.ShowDialog() == DialogResult.OK)
             {
-                MemoryStream ms = new MemoryStream(usuario.foto);
-                pbFoto.Image = new Bitmap(ms);
-
                 usuario = formBuscarUsuario.UsuarioSeleccionado;
+                MemoryStream ms;
+                if (usuario.foto != null)
+                {
+                    ms = new MemoryStream(usuario.foto);
+                    if (ms.Length != 0) pbFoto.Image = new Bitmap(ms);
+                }
+                
+                txtID.Text = usuario.idPersona.ToString();
                 txtNombre.Text = usuario.nombres;
                 txtApellidos.Text = usuario.apellidos;
                 txtNumero.Text = usuario.telefono;
                 txtCorreo.Text = usuario.correo;
                 dtpFinContrato.Value = usuario.fechaFinContrato;
                 cbRol.Text = usuario.rol;
+               if(usuario.rol=="Operario") {
+                    exclusiveLabel.Visible = true;
+                    exclusiveComboBox.Visible = true;
+                    exclusiveComboBox.Text = daoOperario.obtenerLineaProduccionOperario(usuario.idPersona);
+                }
+                if (usuario.rol == "Supervisor")
+                {
+                    exclusiveLabel.Visible = true;
+                    exclusiveComboBox.Visible = true;
+                    exclusiveComboBox.Text = daoSupervisor.obtenerLineaProduccionSupervisor(usuario.idPersona);
+                }
+                if (usuario.rol == "Ingeniero")
+                {
+                    exclusiveLabel.Visible = true;
+                    exclusiveComboBox.Visible = true;
+                    exclusiveComboBox.Text = daoIngeniero.obtenerEspecialidadIngeniero(usuario.idPersona);
+                }
+
+
+
+
 
                 //falta establecer campo exclusivo de rol.
                 EstablecerEstadoComponentes(Estado.Modificacion);
@@ -240,49 +364,156 @@ namespace BuildUp
 
         private void btActualizar_Click(object sender, EventArgs e)
         {
+            if (txtNumero.Text == "")
+            {
+                MessageBox.Show("Debe ingresar el telefono del usuario", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (txtCorreo.Text == "")
+            {
+                MessageBox.Show("Debe ingresar el correo del usuario", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (cbRol.Text == "Operario" || cbRol.Text == "Supervisor")
+            {
+                if (exclusiveComboBox.Text == "")
+                {
+                    MessageBox.Show("Debe ingresar la línea de producción a la que pertenece el usuario", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+            }
+            if (cbRol.Text == "Ingeniero")
+            {
+                if (exclusiveComboBox.Text == "")
+                {
+                    MessageBox.Show("Debe ingresar la especialidad del usuario", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+            }
+            if (pbFoto.Image==null)
+            {
+                MessageBox.Show("Debe ingresar una foto para el usuario", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             DialogResult dr = MessageBox.Show("¿Esta seguro que desea actualizar los datos de este Usuario?", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (dr == DialogResult.Yes)
             {
-                int result = 0;
+                int result=0;
 
                 if (cbRol.Text == "Operario")
                 {
+                    operario.idPersona = Int32.Parse(txtID.Text);
+                    lineaP = new LineaProduccionWS.lineaProduccion();
+                    lineaP = (LineaProduccionWS.lineaProduccion)exclusiveComboBox.SelectedItem;
+                    operario.lineaProduccion.idLineaProduccion = lineaP.idLineaProduccion;;
                     operario.nombres = txtNombre.Text;
                     operario.apellidos = txtApellidos.Text;
+                    operario.fechaNacimiento = dtpNacimiento.Value;
+                    operario.fechaNacimientoSpecified = true;
                     operario.telefono = txtNumero.Text;
                     operario.correo = txtCorreo.Text;
                     operario.fechaFinContrato = dtpFinContrato.Value;
+                    operario.fechaFinContratoSpecified = true;
                     operario.rol = "Operario";
+
+                    if (ruta != null)
+                    {
+                        FileStream fs = new FileStream(ruta, FileMode.Open, FileAccess.Read);
+                        BinaryReader br = new BinaryReader(fs);
+                        operario.foto = br.ReadBytes((int)fs.Length);
+                        fs.Close();
+                    }
+                    else
+                    {
+                        operario.foto = usuario.foto;
+                    }
+
                     result = daoOperario.modificarOperario(operario);
                 }
                 else if (cbRol.Text == "Supervisor")
                 {
+                    supervisor.idPersona= Int32.Parse(txtID.Text);
+                    lineaP = new LineaProduccionWS.lineaProduccion();
+                    lineaP = (LineaProduccionWS.lineaProduccion)exclusiveComboBox.SelectedItem;
+                    supervisor.lineaProduccion.idLineaProduccion = lineaP.idLineaProduccion;
                     supervisor.nombres = txtNombre.Text;
                     supervisor.apellidos = txtApellidos.Text;
+                    supervisor.fechaNacimiento = dtpNacimiento.Value;
+                    supervisor.fechaNacimientoSpecified = true;
                     supervisor.telefono = txtNumero.Text;
                     supervisor.correo = txtCorreo.Text;
                     supervisor.fechaFinContrato = dtpFinContrato.Value;
-                    supervisor.rol = "Supervisor";
+                    supervisor.fechaFinContratoSpecified = true;
+                    supervisor.rol = cbRol.Text;
+
+                    if (ruta != null)
+                    {
+                        FileStream fs = new FileStream(ruta, FileMode.Open, FileAccess.Read);
+                        BinaryReader br = new BinaryReader(fs);
+                        supervisor.foto = br.ReadBytes((int)fs.Length);
+                        fs.Close();
+                    }
+                    else
+                    {
+                        supervisor.foto = usuario.foto;
+                    }
+
                     result = daoSupervisor.actualizarSupervisor(supervisor);
                 }
                 else if (cbRol.Text == "Ingeniero")
                 {
+                    ingeniero.idPersona = Int32.Parse(txtID.Text);
                     ingeniero.nombres = txtNombre.Text;
                     ingeniero.apellidos = txtApellidos.Text;
+                    ingeniero.fechaNacimiento = dtpNacimiento.Value;
                     ingeniero.telefono = txtNumero.Text;
                     ingeniero.correo = txtCorreo.Text;
                     ingeniero.fechaFinContrato = dtpFinContrato.Value;
-                    ingeniero.rol = "Ingeniero";
+                    ingeniero.rol = cbRol.Text;
+                    ingeniero.especialidad = exclusiveComboBox.Text;
+                    ingeniero.fechaNacimientoSpecified = true;
+                    ingeniero.fechaFinContratoSpecified = true;
+
+                    if (ruta != null)
+                    {
+                        FileStream fs = new FileStream(ruta, FileMode.Open, FileAccess.Read);
+                        BinaryReader br = new BinaryReader(fs);
+                        ingeniero.foto = br.ReadBytes((int)fs.Length);
+                        fs.Close();
+                    }
+                    else
+                    {
+                        ingeniero.foto = usuario.foto;
+                    }
+
                     result = daoIngeniero.modificarIngeniero(ingeniero);
                 }
                 else if (cbRol.Text == "Jefe de Área")
                 {
+                    jefeArea.idPersona = Int32.Parse(txtID.Text);
                     jefeArea.nombres = txtNombre.Text;
                     jefeArea.apellidos = txtApellidos.Text;
+                    jefeArea.fechaNacimiento = dtpNacimiento.Value;
                     jefeArea.telefono = txtNumero.Text;
                     jefeArea.correo = txtCorreo.Text;
                     jefeArea.fechaFinContrato = dtpFinContrato.Value;
-                    jefeArea.rol = "Jefe de Área";
+                    jefeArea.rol = cbRol.Text;
+                    jefeArea.fechaNacimientoSpecified = true;
+                    jefeArea.fechaFinContratoSpecified = true;
+
+                    if (ruta != null)
+                    {
+                        FileStream fs = new FileStream(ruta, FileMode.Open, FileAccess.Read);
+                        BinaryReader br = new BinaryReader(fs);
+                        jefeArea.foto = br.ReadBytes((int)fs.Length);
+                        fs.Close();
+                    }
+                    else
+                    {
+                        jefeArea.foto = usuario.foto;
+                    }
+
                     result = daoJefeArea.modificarJefeArea(jefeArea);
                 }
 
@@ -388,13 +619,8 @@ namespace BuildUp
             {
                 if (ofFoto.ShowDialog() == DialogResult.OK)
                 {
-                    //ruta = ofFoto.FileName;
-                    //pbFoto.Image = Image.FromFile(ruta);
-
-                    FileStream fs = new FileStream(ruta, FileMode.Open, FileAccess.Read);
-                    BinaryReader br = new BinaryReader(fs);
-                    usuario.foto = br.ReadBytes((int)fs.Length);
-                    fs.Close();
+                    ruta = ofFoto.FileName;
+                    pbFoto.Image = Image.FromFile(ruta);
                 }
             }
             catch (Exception ex)

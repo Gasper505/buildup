@@ -17,6 +17,12 @@
   <message name="buscarUsuarioPorUsernameResponse">
     <part name="parameters" element="tns:buscarUsuarioPorUsernameResponse" />
   </message>
+  <message name="listarUsuarioPorParametros">
+    <part name="parameters" element="tns:listarUsuarioPorParametros" />
+  </message>
+  <message name="listarUsuarioPorParametrosResponse">
+    <part name="parameters" element="tns:listarUsuarioPorParametrosResponse" />
+  </message>
   <portType name="UsuarioWS">
     <operation name="autenticarUsuario">
       <input wsam:Action="http://services.buildup.pucp.edu.pe/UsuarioWS/autenticarUsuarioRequest" message="tns:autenticarUsuario" />
@@ -25,6 +31,10 @@
     <operation name="buscarUsuarioPorUsername">
       <input wsam:Action="http://services.buildup.pucp.edu.pe/UsuarioWS/buscarUsuarioPorUsernameRequest" message="tns:buscarUsuarioPorUsername" />
       <output wsam:Action="http://services.buildup.pucp.edu.pe/UsuarioWS/buscarUsuarioPorUsernameResponse" message="tns:buscarUsuarioPorUsernameResponse" />
+    </operation>
+    <operation name="listarUsuarioPorParametros">
+      <input wsam:Action="http://services.buildup.pucp.edu.pe/UsuarioWS/listarUsuarioPorParametrosRequest" message="tns:listarUsuarioPorParametros" />
+      <output wsam:Action="http://services.buildup.pucp.edu.pe/UsuarioWS/listarUsuarioPorParametrosResponse" message="tns:listarUsuarioPorParametrosResponse" />
     </operation>
   </portType>
   <binding name="UsuarioWSPortBinding" type="tns:UsuarioWS">
@@ -39,6 +49,15 @@
       </output>
     </operation>
     <operation name="buscarUsuarioPorUsername">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarUsuarioPorParametros">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

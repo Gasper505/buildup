@@ -4,6 +4,35 @@
   <xs:element name="autenticarUsuarioResponse" type="tns:autenticarUsuarioResponse" />
   <xs:element name="buscarUsuarioPorUsername" type="tns:buscarUsuarioPorUsername" />
   <xs:element name="buscarUsuarioPorUsernameResponse" type="tns:buscarUsuarioPorUsernameResponse" />
+  <xs:element name="listarUsuarioPorParametros" type="tns:listarUsuarioPorParametros" />
+  <xs:element name="listarUsuarioPorParametrosResponse" type="tns:listarUsuarioPorParametrosResponse" />
+  <xs:complexType name="listarUsuarioPorParametros">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="username" type="xs:string" />
+      <xs:element minOccurs="0" name="nombres" type="xs:string" />
+      <xs:element minOccurs="0" name="apellidos" type="xs:string" />
+      <xs:element minOccurs="0" name="cargo" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarUsuarioPorParametrosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:persona" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="persona">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="apellidos" type="xs:string" />
+      <xs:element minOccurs="0" name="correo" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaFinContrato" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaNacimiento" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="foto" type="xs:base64Binary" />
+      <xs:element name="idPersona" type="xs:int" />
+      <xs:element minOccurs="0" name="nombres" type="xs:string" />
+      <xs:element minOccurs="0" name="rol" type="xs:string" />
+      <xs:element minOccurs="0" name="telefono" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="buscarUsuarioPorUsername">
     <xs:sequence>
       <xs:element minOccurs="0" name="username" type="xs:string" />
@@ -23,20 +52,6 @@
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
-  </xs:complexType>
-  <xs:complexType name="persona">
-    <xs:sequence>
-      <xs:element name="activo" type="xs:boolean" />
-      <xs:element minOccurs="0" name="apellidos" type="xs:string" />
-      <xs:element minOccurs="0" name="correo" type="xs:string" />
-      <xs:element minOccurs="0" name="fechaFinContrato" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="fechaNacimiento" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="foto" type="xs:base64Binary" />
-      <xs:element name="idPersona" type="xs:int" />
-      <xs:element minOccurs="0" name="nombres" type="xs:string" />
-      <xs:element minOccurs="0" name="rol" type="xs:string" />
-      <xs:element minOccurs="0" name="telefono" type="xs:string" />
-    </xs:sequence>
   </xs:complexType>
   <xs:complexType name="autenticarUsuario">
     <xs:sequence>

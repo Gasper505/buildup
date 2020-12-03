@@ -54,6 +54,20 @@ namespace BuildUp.SupervisorWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/SupervisorWS/listarSupervisorRequest", ReplyAction="http://services.buildup.pucp.edu.pe/SupervisorWS/listarSupervisorResponse")]
         System.Threading.Tasks.Task<BuildUp.SupervisorWS.listarSupervisorResponse> listarSupervisorAsync(BuildUp.SupervisorWS.listarSupervisorRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/SupervisorWS/obtenerLineaProduccionSupervisor" +
+            "Request", ReplyAction="http://services.buildup.pucp.edu.pe/SupervisorWS/obtenerLineaProduccionSupervisor" +
+            "Response")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        BuildUp.SupervisorWS.obtenerLineaProduccionSupervisorResponse obtenerLineaProduccionSupervisor(BuildUp.SupervisorWS.obtenerLineaProduccionSupervisorRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/SupervisorWS/obtenerLineaProduccionSupervisor" +
+            "Request", ReplyAction="http://services.buildup.pucp.edu.pe/SupervisorWS/obtenerLineaProduccionSupervisor" +
+            "Response")]
+        System.Threading.Tasks.Task<BuildUp.SupervisorWS.obtenerLineaProduccionSupervisorResponse> obtenerLineaProduccionSupervisorAsync(BuildUp.SupervisorWS.obtenerLineaProduccionSupervisorRequest request);
     }
     
     /// <remarks/>
@@ -616,6 +630,42 @@ namespace BuildUp.SupervisorWS {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerLineaProduccionSupervisor", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
+    public partial class obtenerLineaProduccionSupervisorRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idSupervisor;
+        
+        public obtenerLineaProduccionSupervisorRequest() {
+        }
+        
+        public obtenerLineaProduccionSupervisorRequest(int idSupervisor) {
+            this.idSupervisor = idSupervisor;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerLineaProduccionSupervisorResponse", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
+    public partial class obtenerLineaProduccionSupervisorResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string @return;
+        
+        public obtenerLineaProduccionSupervisorResponse() {
+        }
+        
+        public obtenerLineaProduccionSupervisorResponse(string @return) {
+            this.@return = @return;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface SupervisorWSChannel : BuildUp.SupervisorWS.SupervisorWS, System.ServiceModel.IClientChannel {
     }
@@ -731,6 +781,29 @@ namespace BuildUp.SupervisorWS {
         public System.Threading.Tasks.Task<BuildUp.SupervisorWS.listarSupervisorResponse> listarSupervisorAsync() {
             BuildUp.SupervisorWS.listarSupervisorRequest inValue = new BuildUp.SupervisorWS.listarSupervisorRequest();
             return ((BuildUp.SupervisorWS.SupervisorWS)(this)).listarSupervisorAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        BuildUp.SupervisorWS.obtenerLineaProduccionSupervisorResponse BuildUp.SupervisorWS.SupervisorWS.obtenerLineaProduccionSupervisor(BuildUp.SupervisorWS.obtenerLineaProduccionSupervisorRequest request) {
+            return base.Channel.obtenerLineaProduccionSupervisor(request);
+        }
+        
+        public string obtenerLineaProduccionSupervisor(int idSupervisor) {
+            BuildUp.SupervisorWS.obtenerLineaProduccionSupervisorRequest inValue = new BuildUp.SupervisorWS.obtenerLineaProduccionSupervisorRequest();
+            inValue.idSupervisor = idSupervisor;
+            BuildUp.SupervisorWS.obtenerLineaProduccionSupervisorResponse retVal = ((BuildUp.SupervisorWS.SupervisorWS)(this)).obtenerLineaProduccionSupervisor(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<BuildUp.SupervisorWS.obtenerLineaProduccionSupervisorResponse> BuildUp.SupervisorWS.SupervisorWS.obtenerLineaProduccionSupervisorAsync(BuildUp.SupervisorWS.obtenerLineaProduccionSupervisorRequest request) {
+            return base.Channel.obtenerLineaProduccionSupervisorAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<BuildUp.SupervisorWS.obtenerLineaProduccionSupervisorResponse> obtenerLineaProduccionSupervisorAsync(int idSupervisor) {
+            BuildUp.SupervisorWS.obtenerLineaProduccionSupervisorRequest inValue = new BuildUp.SupervisorWS.obtenerLineaProduccionSupervisorRequest();
+            inValue.idSupervisor = idSupervisor;
+            return ((BuildUp.SupervisorWS.SupervisorWS)(this)).obtenerLineaProduccionSupervisorAsync(inValue);
         }
     }
 }
