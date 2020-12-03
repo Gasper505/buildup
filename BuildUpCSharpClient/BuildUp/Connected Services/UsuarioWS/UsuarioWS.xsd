@@ -8,7 +8,6 @@
   <xs:element name="listarUsuarioPorParametrosResponse" type="tns:listarUsuarioPorParametrosResponse" />
   <xs:complexType name="listarUsuarioPorParametros">
     <xs:sequence>
-      <xs:element name="idUsuario" type="xs:int" />
       <xs:element minOccurs="0" name="username" type="xs:string" />
       <xs:element minOccurs="0" name="nombres" type="xs:string" />
       <xs:element minOccurs="0" name="apellidos" type="xs:string" />
@@ -17,18 +16,8 @@
   </xs:complexType>
   <xs:complexType name="listarUsuarioPorParametrosResponse">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:usuario" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:persona" />
     </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="usuario">
-    <xs:complexContent mixed="false">
-      <xs:extension base="tns:persona">
-        <xs:sequence>
-          <xs:element minOccurs="0" name="password" type="xs:string" />
-          <xs:element minOccurs="0" name="username" type="xs:string" />
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
   </xs:complexType>
   <xs:complexType name="persona">
     <xs:sequence>
@@ -53,6 +42,16 @@
     <xs:sequence>
       <xs:element minOccurs="0" name="return" type="tns:usuario" />
     </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="usuario">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:persona">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="password" type="xs:string" />
+          <xs:element minOccurs="0" name="username" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
   </xs:complexType>
   <xs:complexType name="autenticarUsuario">
     <xs:sequence>

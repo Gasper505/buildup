@@ -29,6 +29,12 @@
   <message name="listarSupervisorResponse">
     <part name="parameters" element="tns:listarSupervisorResponse" />
   </message>
+  <message name="obtenerLineaProduccionSupervisor">
+    <part name="parameters" element="tns:obtenerLineaProduccionSupervisor" />
+  </message>
+  <message name="obtenerLineaProduccionSupervisorResponse">
+    <part name="parameters" element="tns:obtenerLineaProduccionSupervisorResponse" />
+  </message>
   <portType name="SupervisorWS">
     <operation name="actualizarSupervisor">
       <input wsam:Action="http://services.buildup.pucp.edu.pe/SupervisorWS/actualizarSupervisorRequest" message="tns:actualizarSupervisor" />
@@ -45,6 +51,10 @@
     <operation name="listarSupervisor">
       <input wsam:Action="http://services.buildup.pucp.edu.pe/SupervisorWS/listarSupervisorRequest" message="tns:listarSupervisor" />
       <output wsam:Action="http://services.buildup.pucp.edu.pe/SupervisorWS/listarSupervisorResponse" message="tns:listarSupervisorResponse" />
+    </operation>
+    <operation name="obtenerLineaProduccionSupervisor">
+      <input wsam:Action="http://services.buildup.pucp.edu.pe/SupervisorWS/obtenerLineaProduccionSupervisorRequest" message="tns:obtenerLineaProduccionSupervisor" />
+      <output wsam:Action="http://services.buildup.pucp.edu.pe/SupervisorWS/obtenerLineaProduccionSupervisorResponse" message="tns:obtenerLineaProduccionSupervisorResponse" />
     </operation>
   </portType>
   <binding name="SupervisorWSPortBinding" type="tns:SupervisorWS">
@@ -77,6 +87,15 @@
       </output>
     </operation>
     <operation name="listarSupervisor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerLineaProduccionSupervisor">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

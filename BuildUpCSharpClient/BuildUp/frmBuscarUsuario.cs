@@ -15,7 +15,7 @@ namespace BuildUp
     {
 
         UsuarioWS.UsuarioWSClient daoUsuario;
-        UsuarioWS.usuario usuarioSeleccionado;
+        UsuarioWS.persona usuarioSeleccionado;
         PersonaWS.PersonaWSClient daoPersona;
 
         //JefeAreaWS.jefeArea jefeSeleccionado;
@@ -23,12 +23,12 @@ namespace BuildUp
         //SupervisorWS.supervisor supervisorSeleccionado;
         //OperarioWS.operario operarioSeleccionado;
 
-        public usuario UsuarioSeleccionado { get => usuarioSeleccionado; set => usuarioSeleccionado = value; }
+        public persona UsuarioSeleccionado { get => usuarioSeleccionado; set => usuarioSeleccionado = value; }
 
         public frmBuscarUsuario()
         {
             daoUsuario = new UsuarioWS.UsuarioWSClient();
-            usuarioSeleccionado = new UsuarioWS.usuario();
+            usuarioSeleccionado = new UsuarioWS.persona();
             InitializeComponent();
             dgvUsuarios.AutoGenerateColumns = false;
         }
@@ -37,20 +37,28 @@ namespace BuildUp
         {
             if (dgvUsuarios.SelectedRows.Count < 1)
             {
-                MessageBox.Show("Debe seleccionar un Usuario", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Debe seleccionar un usuario", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            usuarioSeleccionado = (UsuarioWS.usuario)dgvUsuarios.CurrentRow.DataBoundItem;
+            usuarioSeleccionado = (UsuarioWS.persona)dgvUsuarios.CurrentRow.DataBoundItem;
             this.DialogResult = DialogResult.OK;
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            BindingList<UsuarioWS.usuario> us = 
-                new BindingList<UsuarioWS.usuario>
-                (daoUsuario.listarUsuarioPorParametros(Int32.Parse(txtID.Text), txtUsername.Text, txtNombres.Text, txtApellidos.Text, cboRol.Text).ToArray());
+            try
+            {
+                BindingList<UsuarioWS.persona> us =
+                new BindingList<UsuarioWS.persona>
+                (daoUsuario.listarUsuarioPorParametros(txtUsername.Text, txtNombre.Text, txtApellido.Text, cboCargo.Text).ToArray());
+                dgvUsuarios.DataSource = us;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No existe el usuario buscado", "Mensaje aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
-            dgvUsuarios.DataSource = us;
         }
     }
 }

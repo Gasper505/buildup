@@ -784,9 +784,6 @@
     <None Include="Connected Services\ProveedorWS\BuildUp.ProveedorWS.insertarProveedorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\ProveedorWS\BuildUp.ProveedorWS.listarProveedorPorRazonSocialResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
     <None Include="Connected Services\ProveedorWS\BuildUp.ProveedorWS.listarProveedorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -847,6 +844,9 @@
     <None Include="Connected Services\SupervisorWS\BuildUp.SupervisorWS.listarSupervisorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\SupervisorWS\BuildUp.SupervisorWS.obtenerLineaProduccionSupervisorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\SupervisorWS\BuildUp.SupervisorWS.supervisor.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -854,16 +854,10 @@
     <None Include="Connected Services\SupervisorWS\SupervisorWS.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\TipoLadrilloWS\BuildUp.TipoLadrilloWS.actualizarTipoLadrilloResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
     <None Include="Connected Services\TipoLadrilloWS\BuildUp.TipoLadrilloWS.eliminarTipoLadrilloResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\TipoLadrilloWS\BuildUp.TipoLadrilloWS.insertarTipoLadrilloResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\TipoLadrilloWS\BuildUp.TipoLadrilloWS.listarTipoLadrilloPorNombreResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\TipoLadrilloWS\BuildUp.TipoLadrilloWS.listarTiposLadrilloResponse.datasource">
@@ -883,6 +877,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\UsuarioWS\BuildUp.UsuarioWS.listarUsuarioPorParametrosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UsuarioWS\BuildUp.UsuarioWS.persona.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\UsuarioWS\BuildUp.UsuarioWS.usuario.datasource">
