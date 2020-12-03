@@ -75,30 +75,33 @@ public class UsuarioMySQL implements UsuarioDAO{
         return usuarioLogeado;
 
     }
-    
     @Override
-    public ArrayList<Usuario> listarUsuarioPorIDNombreApellidoNombreCargo(int id, String username, 
+    public ArrayList<Persona> listarUsuarioPorNombreApellidoNombreCargo(String username, 
                                                     String nombres, String apellidos, String cargo){
         
-        ArrayList<Usuario> usuarios = new ArrayList<>();
+        ArrayList<Persona> personas = new ArrayList<>();
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.password);
-            cs = con.prepareCall("{call LISTAR_USUARIO_POR_ID_USERNAME_NOMBRE_APELLIDO_NOMBRE_CARGO(?,?,?,?,?)}");
-            cs.setInt("_ID_USUARIO", id);
+            cs = con.prepareCall("{call LISTAR_USUARIO_POR_USERNAME_NOMBRE_APELLIDO_NOMBRE_CARGO(?,?,?,?)}");
             cs.setString("_USERNAME", username);
             cs.setString("_NOMBRES", nombres);
             cs.setString("_APELLIDOS", apellidos);
             cs.setString("_CARGO", cargo);
             rs = cs.executeQuery();
             while(rs.next()){
-                Usuario usuario = new Usuario();
-                usuario.setIdPersona(rs.getInt("_ID_USUARIO"));
-                usuario.setUsername(rs.getString("_USERNAME"));
-                usuario.setNombres(rs.getString("_NOMBRES"));
-                usuario.setApellidos(rs.getString("_APELLIDOS"));
-                usuario.setRol(rs.getString("_CARGO"));
-                usuarios.add(usuario);
+                Persona persona = new Persona();
+                //usuario.setUsername(rs.getString("USERNAME"));
+                persona.setIdPersona(rs.getInt("ID_PERSONA")); 
+                persona.setNombres(rs.getString("NOMBRES"));
+                persona.setApellidos(rs.getString("APELLIDOS"));
+                persona.setFechaNacimiento(rs.getDate("FECHA_NACIMIENTO"));
+                persona.setTelefono(rs.getString("TELEFONO"));
+                persona.setCorreo(rs.getString("CORREO"));
+                persona.setRol(rs.getString("CARGO"));
+                persona.setFechaFinContrato(rs.getDate("FECHA_FIN_CONTRATO"));
+                persona.setFoto(rs.getBytes("FOTO"));
+                personas.add(persona);
             }
             
         }catch(Exception ex){
@@ -106,7 +109,7 @@ public class UsuarioMySQL implements UsuarioDAO{
         }finally{
             try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());}
         }
-        return usuarios;
+        return personas;
     }
     
 }
