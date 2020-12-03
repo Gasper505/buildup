@@ -31,15 +31,14 @@
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnSeleccionar = new System.Windows.Forms.Button();
             this.dgvMaquinarias = new System.Windows.Forms.DataGridView();
-            this.IDMaquinaria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreMaquinaria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreLineaProduccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Proveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbParametrosBusqueda = new System.Windows.Forms.GroupBox();
             this.txtBusqLineaProduccion = new System.Windows.Forms.TextBox();
             this.lblBusqLineaProduccion = new System.Windows.Forms.Label();
             this.txtBusqNombreMaq = new System.Windows.Forms.TextBox();
             this.lblBusqNombreMaq = new System.Windows.Forms.Label();
+            this.NombreMaquinaria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NombreLineaProduccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Proveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMaquinarias)).BeginInit();
             this.gbParametrosBusqueda.SuspendLayout();
             this.SuspendLayout();
@@ -73,7 +72,6 @@
             this.dgvMaquinarias.BackgroundColor = System.Drawing.SystemColors.ScrollBar;
             this.dgvMaquinarias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMaquinarias.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.IDMaquinaria,
             this.NombreMaquinaria,
             this.NombreLineaProduccion,
             this.Proveedor});
@@ -85,35 +83,6 @@
             this.dgvMaquinarias.Size = new System.Drawing.Size(703, 250);
             this.dgvMaquinarias.TabIndex = 9;
             this.dgvMaquinarias.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvMaquinarias_CellFormatting);
-            // 
-            // IDMaquinaria
-            // 
-            this.IDMaquinaria.DataPropertyName = "idMaquinaria";
-            this.IDMaquinaria.HeaderText = "ID Maquinaria";
-            this.IDMaquinaria.Name = "IDMaquinaria";
-            this.IDMaquinaria.ReadOnly = true;
-            // 
-            // NombreMaquinaria
-            // 
-            this.NombreMaquinaria.DataPropertyName = "nombre";
-            this.NombreMaquinaria.HeaderText = "Nombre Maquinaria";
-            this.NombreMaquinaria.Name = "NombreMaquinaria";
-            this.NombreMaquinaria.ReadOnly = true;
-            this.NombreMaquinaria.Width = 240;
-            // 
-            // NombreLineaProduccion
-            // 
-            this.NombreLineaProduccion.HeaderText = "Linea de Produccion";
-            this.NombreLineaProduccion.Name = "NombreLineaProduccion";
-            this.NombreLineaProduccion.ReadOnly = true;
-            this.NombreLineaProduccion.Width = 150;
-            // 
-            // Proveedor
-            // 
-            this.Proveedor.HeaderText = "Proveedor";
-            this.Proveedor.Name = "Proveedor";
-            this.Proveedor.ReadOnly = true;
-            this.Proveedor.Width = 170;
             // 
             // gbParametrosBusqueda
             // 
@@ -133,7 +102,7 @@
             // txtBusqLineaProduccion
             // 
             this.txtBusqLineaProduccion.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBusqLineaProduccion.Location = new System.Drawing.Point(243, 76);
+            this.txtBusqLineaProduccion.Location = new System.Drawing.Point(243, 79);
             this.txtBusqLineaProduccion.Name = "txtBusqLineaProduccion";
             this.txtBusqLineaProduccion.Size = new System.Drawing.Size(263, 23);
             this.txtBusqLineaProduccion.TabIndex = 6;
@@ -142,7 +111,7 @@
             // 
             this.lblBusqLineaProduccion.AutoSize = true;
             this.lblBusqLineaProduccion.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBusqLineaProduccion.Location = new System.Drawing.Point(39, 76);
+            this.lblBusqLineaProduccion.Location = new System.Drawing.Point(39, 79);
             this.lblBusqLineaProduccion.Name = "lblBusqLineaProduccion";
             this.lblBusqLineaProduccion.Size = new System.Drawing.Size(190, 15);
             this.lblBusqLineaProduccion.TabIndex = 5;
@@ -151,7 +120,7 @@
             // txtBusqNombreMaq
             // 
             this.txtBusqNombreMaq.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBusqNombreMaq.Location = new System.Drawing.Point(243, 46);
+            this.txtBusqNombreMaq.Location = new System.Drawing.Point(243, 49);
             this.txtBusqNombreMaq.Name = "txtBusqNombreMaq";
             this.txtBusqNombreMaq.Size = new System.Drawing.Size(263, 23);
             this.txtBusqNombreMaq.TabIndex = 4;
@@ -160,11 +129,33 @@
             // 
             this.lblBusqNombreMaq.AutoSize = true;
             this.lblBusqNombreMaq.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBusqNombreMaq.Location = new System.Drawing.Point(89, 46);
+            this.lblBusqNombreMaq.Location = new System.Drawing.Point(89, 49);
             this.lblBusqNombreMaq.Name = "lblBusqNombreMaq";
             this.lblBusqNombreMaq.Size = new System.Drawing.Size(142, 15);
             this.lblBusqNombreMaq.TabIndex = 0;
             this.lblBusqNombreMaq.Text = "Nombre de la Maquinaria";
+            // 
+            // NombreMaquinaria
+            // 
+            this.NombreMaquinaria.DataPropertyName = "nombre";
+            this.NombreMaquinaria.HeaderText = "Nombre Maquinaria";
+            this.NombreMaquinaria.Name = "NombreMaquinaria";
+            this.NombreMaquinaria.ReadOnly = true;
+            this.NombreMaquinaria.Width = 240;
+            // 
+            // NombreLineaProduccion
+            // 
+            this.NombreLineaProduccion.HeaderText = "Linea de Produccion";
+            this.NombreLineaProduccion.Name = "NombreLineaProduccion";
+            this.NombreLineaProduccion.ReadOnly = true;
+            this.NombreLineaProduccion.Width = 190;
+            // 
+            // Proveedor
+            // 
+            this.Proveedor.HeaderText = "Proveedor";
+            this.Proveedor.Name = "Proveedor";
+            this.Proveedor.ReadOnly = true;
+            this.Proveedor.Width = 185;
             // 
             // frmBuscarMaquinaria
             // 
@@ -195,7 +186,6 @@
         private System.Windows.Forms.Label lblBusqNombreMaq;
         private System.Windows.Forms.TextBox txtBusqLineaProduccion;
         private System.Windows.Forms.Label lblBusqLineaProduccion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IDMaquinaria;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreMaquinaria;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreLineaProduccion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Proveedor;

@@ -31,7 +31,7 @@ namespace BuildUp
         {
             if (dgvProveedores.SelectedRows.Count < 1)
             {
-                MessageBox.Show("Debe seleccionar un proveedor", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Debe seleccionar un Proveedor", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             proveedorSeleccionado = (ProveedorWS.proveedor)dgvProveedores.CurrentRow.DataBoundItem;
@@ -40,7 +40,7 @@ namespace BuildUp
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            BindingList<ProveedorWS.proveedor> provs = new BindingList<ProveedorWS.proveedor>(daoProveedor.listarProveedor().ToArray());
+            BindingList<ProveedorWS.proveedor> provs = new BindingList<ProveedorWS.proveedor>(daoProveedor.listarProveedorPorRazonSocial(txtRazonSocial.Text).ToArray());
             dgvProveedores.DataSource = provs;
         }
     }

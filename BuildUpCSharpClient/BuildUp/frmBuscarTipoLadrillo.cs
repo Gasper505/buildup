@@ -31,7 +31,7 @@ namespace BuildUp
         {
             if (dgvTiposLadrillo.SelectedRows.Count < 1)
             {
-                MessageBox.Show("Debe seleccionar un tipo de ladrillo", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Debe seleccionar un Tipo de Ladrillo", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -42,7 +42,7 @@ namespace BuildUp
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             BindingList<TipoLadrilloWS.tipoLadrillo> ladrillos = 
-                new BindingList<TipoLadrilloWS.tipoLadrillo>(daoTipoLadrillo.listarTiposLadrillo().ToArray());
+                new BindingList<TipoLadrilloWS.tipoLadrillo>(daoTipoLadrillo.listarTipoLadrilloPorNombre(txtBusqNombreLadrillo.Text).ToArray());
 
             dgvTiposLadrillo.DataSource = ladrillos;
 

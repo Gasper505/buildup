@@ -29,6 +29,12 @@
   <message name="listarProveedorResponse">
     <part name="parameters" element="tns:listarProveedorResponse" />
   </message>
+  <message name="listarProveedorPorRazonSocial">
+    <part name="parameters" element="tns:listarProveedorPorRazonSocial" />
+  </message>
+  <message name="listarProveedorPorRazonSocialResponse">
+    <part name="parameters" element="tns:listarProveedorPorRazonSocialResponse" />
+  </message>
   <portType name="ProveedorWS">
     <operation name="insertarProveedor">
       <input wsam:Action="http://services.buildup.pucp.edu.pe/ProveedorWS/insertarProveedorRequest" message="tns:insertarProveedor" />
@@ -45,6 +51,10 @@
     <operation name="listarProveedor">
       <input wsam:Action="http://services.buildup.pucp.edu.pe/ProveedorWS/listarProveedorRequest" message="tns:listarProveedor" />
       <output wsam:Action="http://services.buildup.pucp.edu.pe/ProveedorWS/listarProveedorResponse" message="tns:listarProveedorResponse" />
+    </operation>
+    <operation name="listarProveedorPorRazonSocial">
+      <input wsam:Action="http://services.buildup.pucp.edu.pe/ProveedorWS/listarProveedorPorRazonSocialRequest" message="tns:listarProveedorPorRazonSocial" />
+      <output wsam:Action="http://services.buildup.pucp.edu.pe/ProveedorWS/listarProveedorPorRazonSocialResponse" message="tns:listarProveedorPorRazonSocialResponse" />
     </operation>
   </portType>
   <binding name="ProveedorWSPortBinding" type="tns:ProveedorWS">
@@ -77,6 +87,15 @@
       </output>
     </operation>
     <operation name="listarProveedor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarProveedorPorRazonSocial">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

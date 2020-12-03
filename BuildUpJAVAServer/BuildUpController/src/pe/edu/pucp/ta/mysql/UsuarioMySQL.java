@@ -76,4 +76,37 @@ public class UsuarioMySQL implements UsuarioDAO{
 
     }
     
+    @Override
+    public ArrayList<Usuario> listarUsuarioPorIDNombreApellidoNombreCargo(int id, String username, 
+                                                    String nombres, String apellidos, String cargo){
+        
+        ArrayList<Usuario> usuarios = new ArrayList<>();
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.password);
+            cs = con.prepareCall("{call LISTAR_USUARIO_POR_ID_USERNAME_NOMBRE_APELLIDO_NOMBRE_CARGO(?,?,?,?,?)}");
+            cs.setInt("_ID_USUARIO", id);
+            cs.setString("_USERNAME", username);
+            cs.setString("_NOMBRES", nombres);
+            cs.setString("_APELLIDOS", apellidos);
+            cs.setString("_CARGO", cargo);
+            rs = cs.executeQuery();
+            while(rs.next()){
+                Usuario usuario = new Usuario();
+                usuario.setIdPersona(rs.getInt("_ID_USUARIO"));
+                usuario.setUsername(rs.getString("_USERNAME"));
+                usuario.setNombres(rs.getString("_NOMBRES"));
+                usuario.setApellidos(rs.getString("_APELLIDOS"));
+                usuario.setRol(rs.getString("_CARGO"));
+                usuarios.add(usuario);
+            }
+            
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }finally{
+            try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());}
+        }
+        return usuarios;
+    }
+    
 }

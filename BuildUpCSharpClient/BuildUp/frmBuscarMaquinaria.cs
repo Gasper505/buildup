@@ -30,7 +30,7 @@ namespace BuildUp
         {
             if (dgvMaquinarias.SelectedRows.Count < 1)
             {
-                MessageBox.Show("Debe seleccionar una maquinaria", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Debe seleccionar una Maquinaria", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -48,8 +48,8 @@ namespace BuildUp
         private void dgvMaquinarias_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             MaqWS.maquinaria data = dgvMaquinarias.Rows[e.RowIndex].DataBoundItem as MaqWS.maquinaria;
-            dgvMaquinarias.Rows[e.RowIndex].Cells[2].Value = data.lineaProduccion.nombre;
-            dgvMaquinarias.Rows[e.RowIndex].Cells[3].Value = data.proveedor.razonSocial;
+            dgvMaquinarias.Rows[e.RowIndex].Cells[1].Value = data.lineaProduccion.nombre;
+            dgvMaquinarias.Rows[e.RowIndex].Cells[2].Value = data.proveedor.razonSocial;
         }
 
     }

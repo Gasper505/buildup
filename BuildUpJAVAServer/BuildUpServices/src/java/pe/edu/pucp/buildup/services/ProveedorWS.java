@@ -64,4 +64,15 @@ public class ProveedorWS {
         }
         return resultado;
     }
+    
+    @WebMethod(operationName = "listarProveedorPorRazonSocial")
+    public ArrayList<Proveedor> listarProveedorPorRazonSocial(@WebParam(name = "razonSocial") String razonSocial) {
+        ArrayList<Proveedor> proveedores = new ArrayList<>();
+        try{
+            proveedores = daoProveedor.listarProveedorPorRazonSocial(razonSocial);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return proveedores;
+    }
 }

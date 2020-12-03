@@ -28,7 +28,7 @@ namespace BuildUp
         {
             if (dgvOrdenes.SelectedRows.Count < 1)
             {
-                MessageBox.Show("Debe seleccionar una orden de insumo", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Debe seleccionar una Orden de Insumos", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -45,7 +45,7 @@ namespace BuildUp
             }
             catch (Exception ex)
             {
-                MessageBox.Show("No existe ordenes de insumo", "Mensaje aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("No se han encontrado resultados", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -53,19 +53,15 @@ namespace BuildUp
         private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             OrdenInsumosWS.ordenInsumos data = dgvOrdenes.Rows[e.RowIndex].DataBoundItem as OrdenInsumosWS.ordenInsumos;
-            dgvOrdenes.Rows[e.RowIndex].Cells[2].Value = data.operario.idPersona;
-            dgvOrdenes.Rows[e.RowIndex].Cells[3].Value = data.operario.nombres;
-            dgvOrdenes.Rows[e.RowIndex].Cells[4].Value = data.insumo.idInsumo;
-            
-
-            dgvOrdenes.Rows[e.RowIndex].Cells[5].Value = data.insumo.nombre;
+            dgvOrdenes.Rows[e.RowIndex].Cells[2].Value = data.operario.nombres + data.operario.apellidos;
+            dgvOrdenes.Rows[e.RowIndex].Cells[3].Value = data.insumo.nombre;
             if (data.estado)
             {
-                dgvOrdenes.Rows[e.RowIndex].Cells[7].Value = "Solicitud aceptada";
+                dgvOrdenes.Rows[e.RowIndex].Cells[5].Value = "Solicitud Aceptada";
             }
             else
             {
-                dgvOrdenes.Rows[e.RowIndex].Cells[7].Value = "Solicitud en espera";
+                dgvOrdenes.Rows[e.RowIndex].Cells[5].Value = "Solicitud en Espera";
             }
             
         }

@@ -35,7 +35,7 @@ namespace BuildUp
         {
             if (dgvProblemas.SelectedRows.Count < 1)
             {
-                MessageBox.Show("Debe seleccionar un problema", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Debe seleccionar un Problema", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             problemaSeleccionado = (ProblemaWS.problema)dgvProblemas.CurrentRow.DataBoundItem;

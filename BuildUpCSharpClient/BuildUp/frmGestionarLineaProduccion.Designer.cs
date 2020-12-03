@@ -169,7 +169,7 @@
             this.gbDatosMaquinaria.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbDatosMaquinaria.Location = new System.Drawing.Point(64, 60);
             this.gbDatosMaquinaria.Name = "gbDatosMaquinaria";
-            this.gbDatosMaquinaria.Size = new System.Drawing.Size(508, 179);
+            this.gbDatosMaquinaria.Size = new System.Drawing.Size(508, 178);
             this.gbDatosMaquinaria.TabIndex = 46;
             this.gbDatosMaquinaria.TabStop = false;
             this.gbDatosMaquinaria.Text = "Datos de la Línea de Producción";
@@ -178,7 +178,7 @@
             // 
             this.cboTipoLadrillo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboTipoLadrillo.FormattingEnabled = true;
-            this.cboTipoLadrillo.Location = new System.Drawing.Point(211, 118);
+            this.cboTipoLadrillo.Location = new System.Drawing.Point(210, 112);
             this.cboTipoLadrillo.Name = "cboTipoLadrillo";
             this.cboTipoLadrillo.Size = new System.Drawing.Size(195, 23);
             this.cboTipoLadrillo.TabIndex = 9;
@@ -187,7 +187,7 @@
             // 
             this.lblTipo.AutoSize = true;
             this.lblTipo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTipo.Location = new System.Drawing.Point(117, 121);
+            this.lblTipo.Location = new System.Drawing.Point(116, 115);
             this.lblTipo.Name = "lblTipo";
             this.lblTipo.Size = new System.Drawing.Size(88, 15);
             this.lblTipo.TabIndex = 8;
@@ -196,7 +196,7 @@
             // txtNombre
             // 
             this.txtNombre.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(211, 84);
+            this.txtNombre.Location = new System.Drawing.Point(210, 78);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(196, 23);
             this.txtNombre.TabIndex = 7;
@@ -204,7 +204,7 @@
             // txtIDLinea
             // 
             this.txtIDLinea.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIDLinea.Location = new System.Drawing.Point(211, 49);
+            this.txtIDLinea.Location = new System.Drawing.Point(210, 43);
             this.txtIDLinea.Name = "txtIDLinea";
             this.txtIDLinea.Size = new System.Drawing.Size(80, 23);
             this.txtIDLinea.TabIndex = 5;
@@ -213,7 +213,7 @@
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(153, 87);
+            this.lblNombre.Location = new System.Drawing.Point(152, 81);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(51, 15);
             this.lblNombre.TabIndex = 6;
@@ -223,7 +223,7 @@
             // 
             this.lblIDLinea.AutoSize = true;
             this.lblIDLinea.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIDLinea.Location = new System.Drawing.Point(185, 52);
+            this.lblIDLinea.Location = new System.Drawing.Point(184, 46);
             this.lblIDLinea.Name = "lblIDLinea";
             this.lblIDLinea.Size = new System.Drawing.Size(18, 15);
             this.lblIDLinea.TabIndex = 5;
@@ -233,7 +233,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(648, 278);
+            this.ClientSize = new System.Drawing.Size(648, 281);
             this.ControlBox = false;
             this.Controls.Add(this.gbDatosMaquinaria);
             this.Controls.Add(this.toolStrip2);

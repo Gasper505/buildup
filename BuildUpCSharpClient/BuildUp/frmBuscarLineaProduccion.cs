@@ -32,7 +32,7 @@ namespace BuildUp
         {
             if (dgvLineasProduccion.SelectedRows.Count<1)
             {
-                MessageBox.Show("Debe seleccionar una linea de produccion", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Debe seleccionar una Línea de Producción", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 

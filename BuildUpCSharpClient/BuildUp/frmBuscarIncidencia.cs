@@ -29,6 +29,11 @@ namespace BuildUp
 
         private void btnSeleccionar_Click(object sender, EventArgs e)
         {
+            if (dgvIncidentes.SelectedRows.Count < 1)
+            {
+                MessageBox.Show("Debe seleccionar un Incidente", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             incidenteSeleccionado = (IncidenteMaquinariaWS.incidenteMaquinaria)dgvIncidentes.CurrentRow.DataBoundItem;
             this.DialogResult = DialogResult.OK;
         }

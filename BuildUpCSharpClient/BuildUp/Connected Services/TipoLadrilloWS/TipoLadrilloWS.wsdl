@@ -23,6 +23,18 @@
   <message name="eliminarTipoLadrilloResponse">
     <part name="parameters" element="tns:eliminarTipoLadrilloResponse" />
   </message>
+  <message name="listarTipoLadrilloPorNombre">
+    <part name="parameters" element="tns:listarTipoLadrilloPorNombre" />
+  </message>
+  <message name="listarTipoLadrilloPorNombreResponse">
+    <part name="parameters" element="tns:listarTipoLadrilloPorNombreResponse" />
+  </message>
+  <message name="actualizarTipoLadrillo">
+    <part name="parameters" element="tns:actualizarTipoLadrillo" />
+  </message>
+  <message name="actualizarTipoLadrilloResponse">
+    <part name="parameters" element="tns:actualizarTipoLadrilloResponse" />
+  </message>
   <portType name="TipoLadrilloWS">
     <operation name="insertarTipoLadrillo">
       <input wsam:Action="http://services.buildup.pucp.edu.pe/TipoLadrilloWS/insertarTipoLadrilloRequest" message="tns:insertarTipoLadrillo" />
@@ -35,6 +47,14 @@
     <operation name="eliminarTipoLadrillo">
       <input wsam:Action="http://services.buildup.pucp.edu.pe/TipoLadrilloWS/eliminarTipoLadrilloRequest" message="tns:eliminarTipoLadrillo" />
       <output wsam:Action="http://services.buildup.pucp.edu.pe/TipoLadrilloWS/eliminarTipoLadrilloResponse" message="tns:eliminarTipoLadrilloResponse" />
+    </operation>
+    <operation name="listarTipoLadrilloPorNombre">
+      <input wsam:Action="http://services.buildup.pucp.edu.pe/TipoLadrilloWS/listarTipoLadrilloPorNombreRequest" message="tns:listarTipoLadrilloPorNombre" />
+      <output wsam:Action="http://services.buildup.pucp.edu.pe/TipoLadrilloWS/listarTipoLadrilloPorNombreResponse" message="tns:listarTipoLadrilloPorNombreResponse" />
+    </operation>
+    <operation name="actualizarTipoLadrillo">
+      <input wsam:Action="http://services.buildup.pucp.edu.pe/TipoLadrilloWS/actualizarTipoLadrilloRequest" message="tns:actualizarTipoLadrillo" />
+      <output wsam:Action="http://services.buildup.pucp.edu.pe/TipoLadrilloWS/actualizarTipoLadrilloResponse" message="tns:actualizarTipoLadrilloResponse" />
     </operation>
   </portType>
   <binding name="TipoLadrilloWSPortBinding" type="tns:TipoLadrilloWS">
@@ -58,6 +78,24 @@
       </output>
     </operation>
     <operation name="eliminarTipoLadrillo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarTipoLadrilloPorNombre">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="actualizarTipoLadrillo">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

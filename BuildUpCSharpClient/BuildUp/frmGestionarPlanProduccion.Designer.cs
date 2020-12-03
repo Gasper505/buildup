@@ -44,6 +44,8 @@
             this.btnRemover = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.dgvAsignacion = new System.Windows.Forms.DataGridView();
+            this.NombreTipoLadrillo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cboNombreTipoLadrillo = new System.Windows.Forms.ComboBox();
             this.lblNombreTipoLadrillo = new System.Windows.Forms.Label();
             this.numNroAproxLadrillos = new System.Windows.Forms.NumericUpDown();
@@ -53,8 +55,6 @@
             this.txtIDPlan = new System.Windows.Forms.TextBox();
             this.lblIDPlan = new System.Windows.Forms.Label();
             this.lblAnho = new System.Windows.Forms.Label();
-            this.NombreTipoLadrillo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip2.SuspendLayout();
             this.gbLotesSalientes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAsignacion)).BeginInit();
@@ -171,17 +171,18 @@
             this.gbLotesSalientes.Controls.Add(this.lblNombreTipoLadrillo);
             this.gbLotesSalientes.Controls.Add(this.numNroAproxLadrillos);
             this.gbLotesSalientes.Controls.Add(this.lblNro);
+            this.gbLotesSalientes.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbLotesSalientes.Location = new System.Drawing.Point(69, 201);
             this.gbLotesSalientes.Name = "gbLotesSalientes";
-            this.gbLotesSalientes.Size = new System.Drawing.Size(653, 364);
+            this.gbLotesSalientes.Size = new System.Drawing.Size(623, 364);
             this.gbLotesSalientes.TabIndex = 42;
             this.gbLotesSalientes.TabStop = false;
             this.gbLotesSalientes.Text = "Asignación de Producción";
             // 
             // btnRemover
             // 
-            this.btnRemover.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemover.Location = new System.Drawing.Point(540, 64);
+            this.btnRemover.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemover.Location = new System.Drawing.Point(522, 70);
             this.btnRemover.Name = "btnRemover";
             this.btnRemover.Size = new System.Drawing.Size(59, 35);
             this.btnRemover.TabIndex = 36;
@@ -191,8 +192,8 @@
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.Location = new System.Drawing.Point(475, 64);
+            this.btnAgregar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.Location = new System.Drawing.Point(457, 70);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(59, 35);
             this.btnAgregar.TabIndex = 35;
@@ -208,7 +209,7 @@
             this.dgvAsignacion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.NombreTipoLadrillo,
             this.Cantidad});
-            this.dgvAsignacion.Location = new System.Drawing.Point(30, 132);
+            this.dgvAsignacion.Location = new System.Drawing.Point(15, 140);
             this.dgvAsignacion.MultiSelect = false;
             this.dgvAsignacion.Name = "dgvAsignacion";
             this.dgvAsignacion.ReadOnly = true;
@@ -216,105 +217,6 @@
             this.dgvAsignacion.Size = new System.Drawing.Size(593, 202);
             this.dgvAsignacion.TabIndex = 34;
             this.dgvAsignacion.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvAsignacion_CellFormatting);
-            // 
-            // cboNombreTipoLadrillo
-            // 
-            this.cboNombreTipoLadrillo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboNombreTipoLadrillo.FormattingEnabled = true;
-            this.cboNombreTipoLadrillo.Location = new System.Drawing.Point(251, 48);
-            this.cboNombreTipoLadrillo.Name = "cboNombreTipoLadrillo";
-            this.cboNombreTipoLadrillo.Size = new System.Drawing.Size(189, 23);
-            this.cboNombreTipoLadrillo.TabIndex = 33;
-            // 
-            // lblNombreTipoLadrillo
-            // 
-            this.lblNombreTipoLadrillo.AutoSize = true;
-            this.lblNombreTipoLadrillo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreTipoLadrillo.Location = new System.Drawing.Point(85, 49);
-            this.lblNombreTipoLadrillo.Name = "lblNombreTipoLadrillo";
-            this.lblNombreTipoLadrillo.Size = new System.Drawing.Size(160, 15);
-            this.lblNombreTipoLadrillo.TabIndex = 32;
-            this.lblNombreTipoLadrillo.Text = "Nombre del Tipo de Ladrillo";
-            // 
-            // numNroAproxLadrillos
-            // 
-            this.numNroAproxLadrillos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numNroAproxLadrillos.Location = new System.Drawing.Point(251, 84);
-            this.numNroAproxLadrillos.Name = "numNroAproxLadrillos";
-            this.numNroAproxLadrillos.Size = new System.Drawing.Size(91, 21);
-            this.numNroAproxLadrillos.TabIndex = 31;
-            // 
-            // lblNro
-            // 
-            this.lblNro.AutoSize = true;
-            this.lblNro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNro.Location = new System.Drawing.Point(88, 84);
-            this.lblNro.Name = "lblNro";
-            this.lblNro.Size = new System.Drawing.Size(157, 15);
-            this.lblNro.TabIndex = 23;
-            this.lblNro.Text = "N° Aproximado de Ladrillos";
-            // 
-            // gbDatosOperario
-            // 
-            this.gbDatosOperario.Controls.Add(this.txtAnho);
-            this.gbDatosOperario.Controls.Add(this.txtIDPlan);
-            this.gbDatosOperario.Controls.Add(this.lblIDPlan);
-            this.gbDatosOperario.Controls.Add(this.lblAnho);
-            this.gbDatosOperario.Location = new System.Drawing.Point(69, 73);
-            this.gbDatosOperario.Name = "gbDatosOperario";
-            this.gbDatosOperario.Size = new System.Drawing.Size(653, 106);
-            this.gbDatosOperario.TabIndex = 41;
-            this.gbDatosOperario.TabStop = false;
-            this.gbDatosOperario.Text = "Datos del Plan de Producción";
-            // 
-            // txtAnho
-            // 
-            this.txtAnho.FormattingEnabled = true;
-            this.txtAnho.Items.AddRange(new object[] {
-            "2021",
-            "2020",
-            "2019",
-            "2018",
-            "2017",
-            "2016",
-            "2015",
-            "2014",
-            "2013",
-            "2012",
-            "2011",
-            "2010"});
-            this.txtAnho.Location = new System.Drawing.Point(270, 60);
-            this.txtAnho.Name = "txtAnho";
-            this.txtAnho.Size = new System.Drawing.Size(116, 21);
-            this.txtAnho.TabIndex = 25;
-            // 
-            // txtIDPlan
-            // 
-            this.txtIDPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIDPlan.Location = new System.Drawing.Point(270, 32);
-            this.txtIDPlan.Name = "txtIDPlan";
-            this.txtIDPlan.Size = new System.Drawing.Size(84, 21);
-            this.txtIDPlan.TabIndex = 24;
-            // 
-            // lblIDPlan
-            // 
-            this.lblIDPlan.AutoSize = true;
-            this.lblIDPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIDPlan.Location = new System.Drawing.Point(244, 33);
-            this.lblIDPlan.Name = "lblIDPlan";
-            this.lblIDPlan.Size = new System.Drawing.Size(19, 15);
-            this.lblIDPlan.TabIndex = 23;
-            this.lblIDPlan.Text = "ID";
-            // 
-            // lblAnho
-            // 
-            this.lblAnho.AutoSize = true;
-            this.lblAnho.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAnho.Location = new System.Drawing.Point(235, 59);
-            this.lblAnho.Name = "lblAnho";
-            this.lblAnho.Size = new System.Drawing.Size(28, 15);
-            this.lblAnho.TabIndex = 21;
-            this.lblAnho.Text = "Año";
             // 
             // NombreTipoLadrillo
             // 
@@ -330,6 +232,107 @@
             this.Cantidad.Name = "Cantidad";
             this.Cantidad.ReadOnly = true;
             this.Cantidad.Width = 250;
+            // 
+            // cboNombreTipoLadrillo
+            // 
+            this.cboNombreTipoLadrillo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboNombreTipoLadrillo.FormattingEnabled = true;
+            this.cboNombreTipoLadrillo.Location = new System.Drawing.Point(216, 52);
+            this.cboNombreTipoLadrillo.Name = "cboNombreTipoLadrillo";
+            this.cboNombreTipoLadrillo.Size = new System.Drawing.Size(189, 23);
+            this.cboNombreTipoLadrillo.TabIndex = 33;
+            // 
+            // lblNombreTipoLadrillo
+            // 
+            this.lblNombreTipoLadrillo.AutoSize = true;
+            this.lblNombreTipoLadrillo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreTipoLadrillo.Location = new System.Drawing.Point(56, 55);
+            this.lblNombreTipoLadrillo.Name = "lblNombreTipoLadrillo";
+            this.lblNombreTipoLadrillo.Size = new System.Drawing.Size(154, 15);
+            this.lblNombreTipoLadrillo.TabIndex = 32;
+            this.lblNombreTipoLadrillo.Text = "Nombre del Tipo de Ladrillo";
+            // 
+            // numNroAproxLadrillos
+            // 
+            this.numNroAproxLadrillos.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numNroAproxLadrillos.Location = new System.Drawing.Point(216, 88);
+            this.numNroAproxLadrillos.Name = "numNroAproxLadrillos";
+            this.numNroAproxLadrillos.Size = new System.Drawing.Size(91, 23);
+            this.numNroAproxLadrillos.TabIndex = 31;
+            // 
+            // lblNro
+            // 
+            this.lblNro.AutoSize = true;
+            this.lblNro.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNro.Location = new System.Drawing.Point(57, 90);
+            this.lblNro.Name = "lblNro";
+            this.lblNro.Size = new System.Drawing.Size(153, 15);
+            this.lblNro.TabIndex = 23;
+            this.lblNro.Text = "N° Aproximado de Ladrillos";
+            // 
+            // gbDatosOperario
+            // 
+            this.gbDatosOperario.Controls.Add(this.txtAnho);
+            this.gbDatosOperario.Controls.Add(this.txtIDPlan);
+            this.gbDatosOperario.Controls.Add(this.lblIDPlan);
+            this.gbDatosOperario.Controls.Add(this.lblAnho);
+            this.gbDatosOperario.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbDatosOperario.Location = new System.Drawing.Point(69, 67);
+            this.gbDatosOperario.Name = "gbDatosOperario";
+            this.gbDatosOperario.Size = new System.Drawing.Size(623, 106);
+            this.gbDatosOperario.TabIndex = 41;
+            this.gbDatosOperario.TabStop = false;
+            this.gbDatosOperario.Text = "Datos del Plan de Producción";
+            // 
+            // txtAnho
+            // 
+            this.txtAnho.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAnho.FormattingEnabled = true;
+            this.txtAnho.Items.AddRange(new object[] {
+            "2021",
+            "2020",
+            "2019",
+            "2018",
+            "2017",
+            "2016",
+            "2015",
+            "2014",
+            "2013",
+            "2012",
+            "2011",
+            "2010"});
+            this.txtAnho.Location = new System.Drawing.Point(258, 60);
+            this.txtAnho.Name = "txtAnho";
+            this.txtAnho.Size = new System.Drawing.Size(116, 23);
+            this.txtAnho.TabIndex = 25;
+            // 
+            // txtIDPlan
+            // 
+            this.txtIDPlan.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIDPlan.Location = new System.Drawing.Point(258, 32);
+            this.txtIDPlan.Name = "txtIDPlan";
+            this.txtIDPlan.Size = new System.Drawing.Size(84, 23);
+            this.txtIDPlan.TabIndex = 24;
+            // 
+            // lblIDPlan
+            // 
+            this.lblIDPlan.AutoSize = true;
+            this.lblIDPlan.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIDPlan.Location = new System.Drawing.Point(236, 35);
+            this.lblIDPlan.Name = "lblIDPlan";
+            this.lblIDPlan.Size = new System.Drawing.Size(18, 15);
+            this.lblIDPlan.TabIndex = 23;
+            this.lblIDPlan.Text = "ID";
+            // 
+            // lblAnho
+            // 
+            this.lblAnho.AutoSize = true;
+            this.lblAnho.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAnho.Location = new System.Drawing.Point(223, 63);
+            this.lblAnho.Name = "lblAnho";
+            this.lblAnho.Size = new System.Drawing.Size(29, 15);
+            this.lblAnho.TabIndex = 21;
+            this.lblAnho.Text = "Año";
             // 
             // frmGestionarPlanProduccion
             // 

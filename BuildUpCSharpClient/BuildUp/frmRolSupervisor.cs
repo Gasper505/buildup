@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,6 +17,9 @@ namespace BuildUp
         {
             InitializeComponent();
             lblNombres.Text = frmLogIn.Usuario.nombres + ' ' + frmLogIn.Usuario.apellidos;
+
+            //MemoryStream ms = new MemoryStream(frmLogIn.Usuario.foto);
+            //pbFoto.Image = new Bitmap(ms);
         }
 
         private void btnIncidencia_Click(object sender, EventArgs e)
