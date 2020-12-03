@@ -81,7 +81,7 @@ public class OperarioMySQL implements OperarioDAO{
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user,DBManager.password);
-            String sql =  "{call MODIFICAR_OPERARIO(?,?,?,?,?,?,?,?,?,?}";
+            String sql =  "{call MODIFICAR_OPERARIO(?,?,?,?,?,?,?,?,?,?})";
             cs = con.prepareCall(sql);
             cs.setInt("_ID_PERSONA", op.getIdPersona());
             cs.setInt("_ID_LINEA_PRODUCCION", op.getLineaProduccion().getIdLineaProduccion());
