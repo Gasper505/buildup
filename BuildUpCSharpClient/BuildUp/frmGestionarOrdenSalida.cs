@@ -289,6 +289,7 @@ namespace BuildUp
             cboNombreTipoLadrillo.Text = "";
             dgvLotes.DataSource = null;
             numNroAproxLadrillos.Value = 0;
+            lineasOs = new BindingList<OSalidaWS.lineaOrdenSalida>();
             EstablecerEstadoComponentes(Estado.Inicial);
         }
 
@@ -314,6 +315,11 @@ namespace BuildUp
             if (cboNombreTipoLadrillo.Text == "")
             {
                 MessageBox.Show("Debe seleccionar un ladrillo", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (numNroAproxLadrillos.Text == "")
+            {
+                MessageBox.Show("Debe ingresar una cantidad del ladrillo", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             if (Int32.Parse(numNroAproxLadrillos.Text) == 0)

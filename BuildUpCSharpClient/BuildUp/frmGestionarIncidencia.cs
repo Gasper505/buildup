@@ -559,6 +559,34 @@ namespace BuildUp
             }
             MessageBox.Show("Se ha guardado correctamente", "Mensaje de Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void btnCancelar_Click_1(object sender, EventArgs e)
+        {
+            txtID.Text = "";
+            dtpFechaRegistro.Text = "";
+
+            txtIDMaq.Text = "";
+            txtNombreMaq.Text = "";
+            txtProveedor.Text = "";
+
+            txtIDSup.Text = "";
+            txtNombreSup.Text = "";
+            txtApellidosSup.Text = "";
+
+            txtIDIng.Text = "";
+            txtNombreIng.Text = "";
+            txtApellidosIng.Text = "";
+
+            txtIDProblema.Text = "";
+            txtProblema.Text = "";
+            txtNivelImp.Text = "";
+
+            txtIDResp.Text = "";
+            txtRespuesta.Text = "";
+            tbDescripcionRespuesta.Text = "";
+            dtpFechaRespuesta.Text = "";
+            EstablecerEstadoComponentes(Estado.Inicial);
+        }
     }
 }
 

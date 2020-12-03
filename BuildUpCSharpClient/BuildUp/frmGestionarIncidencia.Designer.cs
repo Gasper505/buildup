@@ -43,7 +43,9 @@
             this.btnActualizar = new System.Windows.Forms.ToolStripButton();
             this.btnEliminar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnCancelar = new System.Windows.Forms.ToolStripButton();
             this.btnRegresar = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.lblNombreMaq = new System.Windows.Forms.Label();
             this.lblNombreSup = new System.Windows.Forms.Label();
             this.lblIDSup = new System.Windows.Forms.Label();
@@ -87,9 +89,7 @@
             this.txtID = new System.Windows.Forms.TextBox();
             this.lblFechaReg = new System.Windows.Forms.Label();
             this.dtpFechaRegistro = new System.Windows.Forms.DateTimePicker();
-            this.btnCancelar = new System.Windows.Forms.ToolStripButton();
             this.sfdReporteIncidencia = new System.Windows.Forms.SaveFileDialog();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStrip2.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -236,6 +236,16 @@
             this.toolStripSeparator4.Name = "toolStripSeparator4";
             this.toolStripSeparator4.Size = new System.Drawing.Size(6, 25);
             // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
+            this.btnCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(125, 22);
+            this.btnCancelar.Text = "Limpiar y Cancelar";
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click_1);
+            // 
             // btnRegresar
             // 
             this.btnRegresar.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
@@ -246,6 +256,16 @@
             this.btnRegresar.Size = new System.Drawing.Size(72, 22);
             this.btnRegresar.Text = "Regresar";
             this.btnRegresar.Click += new System.EventHandler(this.btnVolver_Click);
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripButton2.Image = global::BuildUp.Properties.Resources.new_file_icon_4;
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(68, 22);
+            this.toolStripButton2.Text = "Reporte";
+            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click_1);
             // 
             // lblNombreMaq
             // 
@@ -705,25 +725,6 @@
             this.dtpFechaRegistro.Name = "dtpFechaRegistro";
             this.dtpFechaRegistro.Size = new System.Drawing.Size(231, 23);
             this.dtpFechaRegistro.TabIndex = 19;
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
-            this.btnCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(125, 22);
-            this.btnCancelar.Text = "Limpiar y Cancelar";
-            // 
-            // toolStripButton2
-            // 
-            this.toolStripButton2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripButton2.Image = global::BuildUp.Properties.Resources.new_file_icon_4;
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(68, 22);
-            this.toolStripButton2.Text = "Reporte";
-            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click_1);
             // 
             // frmGestionarIncidencia
             // 

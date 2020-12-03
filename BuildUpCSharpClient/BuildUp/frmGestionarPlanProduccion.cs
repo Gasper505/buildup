@@ -233,6 +233,12 @@ namespace BuildUp
                 MessageBox.Show("Debe seleccionar un ladrillo", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+
+            if (numNroAproxLadrillos.Text == "") 
+            {
+                MessageBox.Show("Debe ingresar una cantidad del ladrillo", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }          
             if (Int32.Parse(numNroAproxLadrillos.Text) == 0)
             {
                 MessageBox.Show("Debe ingresar una cantidad del ladrillo", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
