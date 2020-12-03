@@ -55,7 +55,7 @@ namespace BuildUp.SupervisorWS {
         [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/SupervisorWS/listarSupervisorRequest", ReplyAction="http://services.buildup.pucp.edu.pe/SupervisorWS/listarSupervisorResponse")]
         System.Threading.Tasks.Task<BuildUp.SupervisorWS.listarSupervisorResponse> listarSupervisorAsync(BuildUp.SupervisorWS.listarSupervisorRequest request);
         
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/SupervisorWS/obtenerLineaProduccionSupervisor" +
             "Request", ReplyAction="http://services.buildup.pucp.edu.pe/SupervisorWS/obtenerLineaProduccionSupervisor" +
             "Response")]

@@ -51,7 +51,7 @@
             this.gbBusqueda.Controls.Add(this.dtpDesde);
             this.gbBusqueda.Controls.Add(this.btnBuscar);
             this.gbBusqueda.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbBusqueda.Location = new System.Drawing.Point(64, 43);
+            this.gbBusqueda.Location = new System.Drawing.Point(58, 43);
             this.gbBusqueda.Name = "gbBusqueda";
             this.gbBusqueda.Size = new System.Drawing.Size(466, 122);
             this.gbBusqueda.TabIndex = 17;
@@ -108,7 +108,7 @@
             // btnSeleccionar
             // 
             this.btnSeleccionar.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSeleccionar.Location = new System.Drawing.Point(185, 477);
+            this.btnSeleccionar.Location = new System.Drawing.Point(179, 477);
             this.btnSeleccionar.Name = "btnSeleccionar";
             this.btnSeleccionar.Size = new System.Drawing.Size(225, 36);
             this.btnSeleccionar.TabIndex = 16;
@@ -125,7 +125,7 @@
             this.Column1,
             this.Column5,
             this.Column2});
-            this.dgvIncidentes.Location = new System.Drawing.Point(64, 196);
+            this.dgvIncidentes.Location = new System.Drawing.Point(58, 196);
             this.dgvIncidentes.MultiSelect = false;
             this.dgvIncidentes.Name = "dgvIncidentes";
             this.dgvIncidentes.ReadOnly = true;
@@ -160,10 +160,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(596, 548);
+            this.ClientSize = new System.Drawing.Size(583, 548);
             this.Controls.Add(this.gbBusqueda);
             this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.dgvIncidentes);
+            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "frmBuscarIncidencia";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

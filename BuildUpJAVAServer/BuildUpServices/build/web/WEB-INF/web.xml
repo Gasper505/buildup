@@ -4,9 +4,25 @@
         <servlet-name>TestingServlet</servlet-name>
         <servlet-class>pe.edu.pucp.buildup.servlets.TestingServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ServletProduccionDiario</servlet-name>
+        <servlet-class>pe.edu.pucp.buildup.servlets.ServletProduccionDiario</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ServletProduccionMensual</servlet-name>
+        <servlet-class>pe.edu.pucp.buildup.servlets.ServletProduccionMensual</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>TestingServlet</servlet-name>
         <url-pattern>/TestingServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletProduccionDiario</servlet-name>
+        <url-pattern>/ServletProduccionDiario</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletProduccionMensual</servlet-name>
+        <url-pattern>/ServletProduccionMensual</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

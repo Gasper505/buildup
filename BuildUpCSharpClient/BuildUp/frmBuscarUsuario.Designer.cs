@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.dgvUsuarios = new System.Windows.Forms.DataGridView();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ApPat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Correo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cargo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbParametrosBusqueda = new System.Windows.Forms.GroupBox();
             this.cboCargo = new System.Windows.Forms.ComboBox();
             this.lblCargo = new System.Windows.Forms.Label();
@@ -40,10 +44,6 @@
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.lblUsername = new System.Windows.Forms.Label();
             this.btnSeleccionar = new System.Windows.Forms.Button();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ApPat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Correo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cargo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
             this.gbParametrosBusqueda.SuspendLayout();
             this.SuspendLayout();
@@ -65,6 +65,38 @@
             this.dgvUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvUsuarios.Size = new System.Drawing.Size(709, 295);
             this.dgvUsuarios.TabIndex = 9;
+            // 
+            // Nombre
+            // 
+            this.Nombre.DataPropertyName = "nombres";
+            this.Nombre.HeaderText = "Nombre(s)";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            this.Nombre.Width = 175;
+            // 
+            // ApPat
+            // 
+            this.ApPat.DataPropertyName = "apellidos";
+            this.ApPat.HeaderText = "Apellidos";
+            this.ApPat.Name = "ApPat";
+            this.ApPat.ReadOnly = true;
+            this.ApPat.Width = 175;
+            // 
+            // Correo
+            // 
+            this.Correo.DataPropertyName = "correo";
+            this.Correo.HeaderText = "Correo";
+            this.Correo.Name = "Correo";
+            this.Correo.ReadOnly = true;
+            this.Correo.Width = 175;
+            // 
+            // Cargo
+            // 
+            this.Cargo.DataPropertyName = "rol";
+            this.Cargo.HeaderText = "Cargo";
+            this.Cargo.Name = "Cargo";
+            this.Cargo.ReadOnly = true;
+            this.Cargo.Width = 140;
             // 
             // gbParametrosBusqueda
             // 
@@ -186,38 +218,6 @@
             this.btnSeleccionar.UseVisualStyleBackColor = true;
             this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
             // 
-            // Nombre
-            // 
-            this.Nombre.DataPropertyName = "nombres";
-            this.Nombre.HeaderText = "Nombre(s)";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            this.Nombre.Width = 175;
-            // 
-            // ApPat
-            // 
-            this.ApPat.DataPropertyName = "apellidos";
-            this.ApPat.HeaderText = "Apellidos";
-            this.ApPat.Name = "ApPat";
-            this.ApPat.ReadOnly = true;
-            this.ApPat.Width = 175;
-            // 
-            // Correo
-            // 
-            this.Correo.DataPropertyName = "correo";
-            this.Correo.HeaderText = "Correo";
-            this.Correo.Name = "Correo";
-            this.Correo.ReadOnly = true;
-            this.Correo.Width = 175;
-            // 
-            // Cargo
-            // 
-            this.Cargo.DataPropertyName = "rol";
-            this.Cargo.HeaderText = "Cargo";
-            this.Cargo.Name = "Cargo";
-            this.Cargo.ReadOnly = true;
-            this.Cargo.Width = 140;
-            // 
             // frmBuscarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -227,6 +227,7 @@
             this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.gbParametrosBusqueda);
             this.Controls.Add(this.dgvUsuarios);
+            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "frmBuscarUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

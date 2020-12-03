@@ -5,7 +5,6 @@
  */
 package pe.edu.pucp.buildup.servlets;
 
-import java.awt.Image;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
@@ -15,7 +14,6 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.swing.ImageIcon;
 import net.sf.jasperreports.engine.JasperExportManager;
 import net.sf.jasperreports.engine.JasperFillManager;
 import net.sf.jasperreports.engine.JasperPrint;
@@ -27,7 +25,7 @@ import pe.edu.pucp.ta.config.DBManager;
  *
  * @author Diego Alonso
  */
-public class TestingServlet extends HttpServlet {
+public class ServletProduccionMensual extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -42,14 +40,7 @@ public class TestingServlet extends HttpServlet {
             throws ServletException, IOException {
         try{
             //Referencia al archivo Jasper
-            JasperReport reporte = (JasperReport)JRLoader.loadObjectFromFile(TestingServlet.class.getResource("/pe/edu/pucp/buildup/reports/TestingReport.jasper").getFile());
-            
-            
-            //Referencia a la ruta de la imagen
-            String rutaLogo = TestingServlet.class.getResource("/pe/edu/pucp/buildup/images/foto.jpg").getPath();
-            //Generación del objeto Image
-            ImageIcon icono = new ImageIcon(rutaLogo);
-            Image imagen = icono.getImage();
+            JasperReport reporte = (JasperReport)JRLoader.loadObjectFromFile(ServletProduccionMensual.class.getResource("/pe/edu/pucp/buildup/reports/ReporteProduccionMensual.jasper").getFile());
             
             
             //Registro del driver
@@ -60,8 +51,7 @@ public class TestingServlet extends HttpServlet {
             
             //Creamos un HashMap para enviar los parámetros del reporte
             HashMap hm = new HashMap();
-            hm.put("AUTOR", "Diego Ramírez");
-            hm.put("FOTO_AUTOR", imagen);
+            hm.put("mes", 12);
             
             
             //Población del reporte
@@ -78,7 +68,6 @@ public class TestingServlet extends HttpServlet {
         catch(Exception ex){
             System.out.println(ex.getMessage());
         }
-        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

@@ -65,4 +65,16 @@ public class SupervisorWS {
         }
         return resultado;
     }
+        @WebMethod(operationName = "obtenerLineaProduccionSupervisor")
+    public String obtenerLineaProduccionSupervisor(@WebParam(name = "idSupervisor") int idSupervisor ) {
+        String lineaProd="";
+        try{
+            lineaProd = daoSupervisor.obtener_linea_produccion(idSupervisor);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return lineaProd;
+    }
+    
+    
 }

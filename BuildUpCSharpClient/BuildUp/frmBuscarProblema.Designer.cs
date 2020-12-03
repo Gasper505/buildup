@@ -39,9 +39,9 @@
             // btnSeleccionar
             // 
             this.btnSeleccionar.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSeleccionar.Location = new System.Drawing.Point(181, 300);
+            this.btnSeleccionar.Location = new System.Drawing.Point(181, 305);
             this.btnSeleccionar.Name = "btnSeleccionar";
-            this.btnSeleccionar.Size = new System.Drawing.Size(240, 42);
+            this.btnSeleccionar.Size = new System.Drawing.Size(240, 36);
             this.btnSeleccionar.TabIndex = 8;
             this.btnSeleccionar.Text = "Seleccionar";
             this.btnSeleccionar.UseVisualStyleBackColor = true;
@@ -97,6 +97,7 @@
             this.ClientSize = new System.Drawing.Size(613, 368);
             this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.dgvProblemas);
+            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "frmBuscarProblema";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Búsqueda de Problemas";

@@ -10,6 +10,7 @@ public interface SupervisorDAO {
     int insertar(Supervisor sup);
     int actualizar(Supervisor sup);
     int eliminar(int idSup);
+    String obtener_linea_produccion(int idSup);
     ArrayList<Supervisor> listar();
     
 }

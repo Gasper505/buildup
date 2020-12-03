@@ -86,6 +86,7 @@
             this.ClientSize = new System.Drawing.Size(508, 411);
             this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.dgvRespuestas);
+            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "frmBuscarRespuesta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Búsqueda de Respuestas";

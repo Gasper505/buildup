@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.dgvOrdenesSalida = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ApellidoOperario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbParametrosBusqueda = new System.Windows.Forms.GroupBox();
             this.dtpFechaSup = new System.Windows.Forms.DateTimePicker();
             this.lblHasta = new System.Windows.Forms.Label();
@@ -38,10 +42,6 @@
             this.txtNombreOperario = new System.Windows.Forms.TextBox();
             this.lblNombreOperario = new System.Windows.Forms.Label();
             this.btnSeleccionar = new System.Windows.Forms.Button();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ApellidoOperario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrdenesSalida)).BeginInit();
             this.gbParametrosBusqueda.SuspendLayout();
             this.SuspendLayout();
@@ -63,6 +63,37 @@
             this.dgvOrdenesSalida.Size = new System.Drawing.Size(644, 217);
             this.dgvOrdenesSalida.TabIndex = 0;
             this.dgvOrdenesSalida.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvOrdenesSalida_CellFormatting);
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "IdOrdenSalida";
+            this.Column1.HeaderText = "ID Orden Salida";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "Nombres";
+            this.Column2.HeaderText = "Nombre(s) del Operario";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 150;
+            // 
+            // ApellidoOperario
+            // 
+            this.ApellidoOperario.DataPropertyName = "Apellidos";
+            this.ApellidoOperario.HeaderText = "Apellidos del Operario";
+            this.ApellidoOperario.Name = "ApellidoOperario";
+            this.ApellidoOperario.ReadOnly = true;
+            this.ApellidoOperario.Width = 150;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "Fecha";
+            this.Column5.HeaderText = "Fecha de Registro";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Width = 200;
             // 
             // gbParametrosBusqueda
             // 
@@ -157,37 +188,6 @@
             this.btnSeleccionar.UseVisualStyleBackColor = true;
             this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
             // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "IdOrdenSalida";
-            this.Column1.HeaderText = "ID Orden Salida";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "Nombres";
-            this.Column2.HeaderText = "Nombre(s) del Operario";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 150;
-            // 
-            // ApellidoOperario
-            // 
-            this.ApellidoOperario.DataPropertyName = "Apellidos";
-            this.ApellidoOperario.HeaderText = "Apellidos del Operario";
-            this.ApellidoOperario.Name = "ApellidoOperario";
-            this.ApellidoOperario.ReadOnly = true;
-            this.ApellidoOperario.Width = 150;
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "Fecha";
-            this.Column5.HeaderText = "Fecha de Registro";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Width = 200;
-            // 
             // frmBuscarOrdenSalida
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -196,6 +196,7 @@
             this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.gbParametrosBusqueda);
             this.Controls.Add(this.dgvOrdenesSalida);
+            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "frmBuscarOrdenSalida";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

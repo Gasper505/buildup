@@ -134,4 +134,25 @@ public class SupervisorMySQL implements SupervisorDAO{
         return supervisores;
     }
     
+     @Override
+    public String obtener_linea_produccion(int idSup) {
+        String lineaProd = "";
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection(DBManager.urlMySQL, 
+                    DBManager.user, DBManager.password);
+            String sql = "{call OBTENER_SUPERVISOR_LINEA_PRODUCCION(?)}";
+            cs = con.prepareCall(sql);
+            cs.setInt("_ID_PERSONA",idSup);
+            rs=cs.executeQuery();     
+            while(rs.next()){
+                lineaProd = rs.getString("NOMBRE_LINEA_PRODUCCION");
+            }
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }finally{
+            try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());}
+        }
+        return lineaProd;
+    }
 }

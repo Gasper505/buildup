@@ -126,6 +126,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Connected Services\ReportesProduccionWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\RespuestaWS\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -813,6 +818,16 @@
     <None Include="Connected Services\RegistroMermaWS\RegistroMermaWS.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\ReportesProduccionWS\BuildUp.ReportesProduccionWS.generarReporteProduccionDiarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ReportesProduccionWS\BuildUp.ReportesProduccionWS.generarReporteProduccionMensualResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ReportesProduccionWS\ReportesProduccion.wsdl" />
+    <None Include="Connected Services\ReportesProduccionWS\ReportesProduccion.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\RespuestaWS\BuildUp.RespuestaWS.actualizarRespuestaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -910,6 +925,7 @@
     <WCFMetadataStorage Include="Connected Services\ProblemaWS\" />
     <WCFMetadataStorage Include="Connected Services\ProveedorWS\" />
     <WCFMetadataStorage Include="Connected Services\RegistroMermaWS\" />
+    <WCFMetadataStorage Include="Connected Services\ReportesProduccionWS\" />
     <WCFMetadataStorage Include="Connected Services\RespuestaWS\" />
     <WCFMetadataStorage Include="Connected Services\SupervisorWS\" />
     <WCFMetadataStorage Include="Connected Services\TipoLadrilloWS\" />
@@ -1180,6 +1196,12 @@
     <None Include="Connected Services\PlanProduccionWS\configuration91.svcinfo" />
     <None Include="Connected Services\PlanProduccionWS\configuration.svcinfo" />
     <None Include="Connected Services\PlanProduccionWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\ReportesProduccionWS\configuration91.svcinfo" />
+    <None Include="Connected Services\ReportesProduccionWS\configuration.svcinfo" />
+    <None Include="Connected Services\ReportesProduccionWS\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
