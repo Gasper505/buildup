@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,12 +21,13 @@ namespace BuildUp
         IncidenteMaquinariaWS.problema problema;
         IncidenteMaquinariaWS.respuesta respuesta;
         IncidenteMaquinariaWS.maquinaria maquinaria;
+        ReporteIncidenciaWS.ReportesIncidenciaClient daoRepIncidencia;
 
         public frmGestionarIncidencia()
         {
             InitializeComponent();
             EstablecerEstadoComponentes(Estado.Inicial);
-
+            daoRepIncidencia = new ReporteIncidenciaWS.ReportesIncidenciaClient();
             daoIncidenteMaq = new IncidenteMaquinariaWS.IncidenteMaquinariaWSClient();
             incidenteMaq = new IncidenteMaquinariaWS.incidenteMaquinaria();
             ingeniero = new IncidenteMaquinariaWS.ingeniero();
@@ -545,6 +547,17 @@ namespace BuildUp
                 txtIDResp.Text = formBuscarRespuesta.RespuestaSeleccionada.idRespuesta.ToString();
                 txtRespuesta.Text = formBuscarRespuesta.RespuestaSeleccionada.tipo;
             }
+        }
+
+        private void toolStripButton2_Click_1(object sender, EventArgs e)
+        {
+            sfdReporteIncidencia.ShowDialog();
+            if (sfdReporteIncidencia.FileName != null && sfdReporteIncidencia.FileName != "")
+            {
+                byte[] arreglo = daoRepIncidencia.generarReporteIncidencia();
+                File.WriteAllBytes(sfdReporteIncidencia.FileName + ".pdf", arreglo);
+            }
+            MessageBox.Show("Se ha guardado correctamente", "Mensaje de Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

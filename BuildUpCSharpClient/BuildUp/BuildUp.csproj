@@ -126,6 +126,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Connected Services\ReporteIncidenciaWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\ReportesProduccionWS\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -789,6 +794,9 @@
     <None Include="Connected Services\ProveedorWS\BuildUp.ProveedorWS.insertarProveedorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\ProveedorWS\BuildUp.ProveedorWS.listarProveedorPorRazonSocialResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\ProveedorWS\BuildUp.ProveedorWS.listarProveedorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -816,6 +824,13 @@
     </None>
     <None Include="Connected Services\RegistroMermaWS\RegistroMermaWS.wsdl" />
     <None Include="Connected Services\RegistroMermaWS\RegistroMermaWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ReporteIncidenciaWS\BuildUp.ReporteIncidenciaWS.generarReporteIncidenciaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ReporteIncidenciaWS\ReportesIncidencia.wsdl" />
+    <None Include="Connected Services\ReporteIncidenciaWS\ReportesIncidencia.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\ReportesProduccionWS\BuildUp.ReportesProduccionWS.generarReporteProduccionDiarioResponse.datasource">
@@ -869,10 +884,16 @@
     <None Include="Connected Services\SupervisorWS\SupervisorWS.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\TipoLadrilloWS\BuildUp.TipoLadrilloWS.actualizarTipoLadrilloResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\TipoLadrilloWS\BuildUp.TipoLadrilloWS.eliminarTipoLadrilloResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\TipoLadrilloWS\BuildUp.TipoLadrilloWS.insertarTipoLadrilloResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\TipoLadrilloWS\BuildUp.TipoLadrilloWS.listarTipoLadrilloPorNombreResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\TipoLadrilloWS\BuildUp.TipoLadrilloWS.listarTiposLadrilloResponse.datasource">
@@ -925,6 +946,7 @@
     <WCFMetadataStorage Include="Connected Services\ProblemaWS\" />
     <WCFMetadataStorage Include="Connected Services\ProveedorWS\" />
     <WCFMetadataStorage Include="Connected Services\RegistroMermaWS\" />
+    <WCFMetadataStorage Include="Connected Services\ReporteIncidenciaWS\" />
     <WCFMetadataStorage Include="Connected Services\ReportesProduccionWS\" />
     <WCFMetadataStorage Include="Connected Services\RespuestaWS\" />
     <WCFMetadataStorage Include="Connected Services\SupervisorWS\" />
@@ -1202,6 +1224,12 @@
     <None Include="Connected Services\ReportesProduccionWS\configuration91.svcinfo" />
     <None Include="Connected Services\ReportesProduccionWS\configuration.svcinfo" />
     <None Include="Connected Services\ReportesProduccionWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\ReporteIncidenciaWS\configuration91.svcinfo" />
+    <None Include="Connected Services\ReporteIncidenciaWS\configuration.svcinfo" />
+    <None Include="Connected Services\ReporteIncidenciaWS\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
