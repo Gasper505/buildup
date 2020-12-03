@@ -6,6 +6,7 @@ import javax.jws.WebMethod;
 import javax.jws.WebParam;
 import javax.jws.WebService;
 import pe.edu.pucp.ta.dao.UsuarioDAO;
+import pe.edu.pucp.ta.model.Persona;
 import pe.edu.pucp.ta.model.Usuario;
 import pe.edu.pucp.ta.mysql.UsuarioMySQL;
 
@@ -30,18 +31,17 @@ public class UsuarioWS {
         usuarioLogeado = daoUsuario.buscarUsuarioPorUsername(username);
         return usuarioLogeado;
     }
-    
     @WebMethod(operationName = "listarUsuarioPorParametros")
-    public ArrayList<Usuario> listarUsuarioPorParametros(@WebParam(name = "idUsuario") int idUsuario,
+    public ArrayList<Persona> listarUsuarioPorParametros(
                                                          @WebParam(name = "username") String username,@WebParam(name = "nombres") String nombres,
                                                          @WebParam(name = "apellidos") String apellidos,@WebParam(name = "cargo") String cargo){
-        ArrayList<Usuario> usuarios = new ArrayList<>();
+        ArrayList<Persona> personas = new ArrayList<>();
         try{
-            usuarios = daoUsuario.listarUsuarioPorIDNombreApellidoNombreCargo(idUsuario, username, nombres, apellidos, cargo);
+            personas = daoUsuario.listarUsuarioPorNombreApellidoNombreCargo(username, nombres, apellidos, cargo);
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }
-        return usuarios;
+        return personas;
     }
     
 }
