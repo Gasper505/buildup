@@ -12,6 +12,14 @@
         <servlet-name>ServletProduccionMensual</servlet-name>
         <servlet-class>pe.edu.pucp.buildup.servlets.ServletProduccionMensual</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ServletIncidencia</servlet-name>
+        <servlet-class>pe.edu.pucp.buildup.servlets.ServletIncidencia</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ServletMaquinaria</servlet-name>
+        <servlet-class>pe.edu.pucp.buildup.servlets.ServletMaquinaria</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>TestingServlet</servlet-name>
         <url-pattern>/TestingServlet</url-pattern>
@@ -23,6 +31,14 @@
     <servlet-mapping>
         <servlet-name>ServletProduccionMensual</servlet-name>
         <url-pattern>/ServletProduccionMensual</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletIncidencia</servlet-name>
+        <url-pattern>/ServletIncidencia</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletMaquinaria</servlet-name>
+        <url-pattern>/ServletMaquinaria</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

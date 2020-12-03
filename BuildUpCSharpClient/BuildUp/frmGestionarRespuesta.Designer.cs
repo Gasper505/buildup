@@ -173,7 +173,7 @@
             this.gbDatosMaquinaria.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbDatosMaquinaria.Location = new System.Drawing.Point(54, 61);
             this.gbDatosMaquinaria.Name = "gbDatosMaquinaria";
-            this.gbDatosMaquinaria.Size = new System.Drawing.Size(542, 130);
+            this.gbDatosMaquinaria.Size = new System.Drawing.Size(542, 133);
             this.gbDatosMaquinaria.TabIndex = 46;
             this.gbDatosMaquinaria.TabStop = false;
             this.gbDatosMaquinaria.Text = "Datos de la Respuesta";
@@ -181,7 +181,7 @@
             // txtTipo
             // 
             this.txtTipo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTipo.Location = new System.Drawing.Point(228, 74);
+            this.txtTipo.Location = new System.Drawing.Point(228, 81);
             this.txtTipo.Name = "txtTipo";
             this.txtTipo.Size = new System.Drawing.Size(241, 23);
             this.txtTipo.TabIndex = 7;
@@ -198,7 +198,7 @@
             // 
             this.lblNombreMaquinaria.AutoSize = true;
             this.lblNombreMaquinaria.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreMaquinaria.Location = new System.Drawing.Point(192, 76);
+            this.lblNombreMaquinaria.Location = new System.Drawing.Point(192, 83);
             this.lblNombreMaquinaria.Name = "lblNombreMaquinaria";
             this.lblNombreMaquinaria.Size = new System.Drawing.Size(30, 15);
             this.lblNombreMaquinaria.TabIndex = 6;
@@ -223,6 +223,7 @@
             this.Controls.Add(this.gbDatosMaquinaria);
             this.Controls.Add(this.toolStrip2);
             this.Controls.Add(this.label1);
+            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmGestionarRespuesta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

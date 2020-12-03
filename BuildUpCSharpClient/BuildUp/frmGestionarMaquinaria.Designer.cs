@@ -78,7 +78,7 @@
             this.gbDatosMaquinaria.Controls.Add(this.lblNombreMaquinaria);
             this.gbDatosMaquinaria.Controls.Add(this.lblIdMaquinaria);
             this.gbDatosMaquinaria.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbDatosMaquinaria.Location = new System.Drawing.Point(87, 61);
+            this.gbDatosMaquinaria.Location = new System.Drawing.Point(83, 61);
             this.gbDatosMaquinaria.Name = "gbDatosMaquinaria";
             this.gbDatosMaquinaria.Size = new System.Drawing.Size(502, 143);
             this.gbDatosMaquinaria.TabIndex = 13;
@@ -147,7 +147,7 @@
             this.gbDatosLinea.Controls.Add(this.lblNombreInsumo);
             this.gbDatosLinea.Controls.Add(this.lblIdInsumo);
             this.gbDatosLinea.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbDatosLinea.Location = new System.Drawing.Point(87, 422);
+            this.gbDatosLinea.Location = new System.Drawing.Point(83, 422);
             this.gbDatosLinea.Name = "gbDatosLinea";
             this.gbDatosLinea.Size = new System.Drawing.Size(502, 117);
             this.gbDatosLinea.TabIndex = 12;
@@ -213,7 +213,7 @@
             this.gbDatosProveedor.Controls.Add(this.lblIdProveedor);
             this.gbDatosProveedor.Controls.Add(this.txtIdProveedor);
             this.gbDatosProveedor.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbDatosProveedor.Location = new System.Drawing.Point(87, 220);
+            this.gbDatosProveedor.Location = new System.Drawing.Point(83, 220);
             this.gbDatosProveedor.Name = "gbDatosProveedor";
             this.gbDatosProveedor.Size = new System.Drawing.Size(502, 183);
             this.gbDatosProveedor.TabIndex = 11;
@@ -320,7 +320,7 @@
             this.btnRegresar});
             this.toolStrip2.Location = new System.Drawing.Point(0, 0);
             this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(672, 25);
+            this.toolStrip2.Size = new System.Drawing.Size(668, 25);
             this.toolStrip2.TabIndex = 26;
             this.toolStrip2.Text = "toolStrip2";
             // 
@@ -414,12 +414,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(672, 576);
+            this.ClientSize = new System.Drawing.Size(668, 576);
             this.ControlBox = false;
             this.Controls.Add(this.toolStrip2);
             this.Controls.Add(this.gbDatosMaquinaria);
             this.Controls.Add(this.gbDatosLinea);
             this.Controls.Add(this.gbDatosProveedor);
+            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

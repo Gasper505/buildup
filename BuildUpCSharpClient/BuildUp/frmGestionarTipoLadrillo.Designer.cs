@@ -167,7 +167,7 @@
             this.gbDatos.Controls.Add(this.txtIDTipo);
             this.gbDatos.Controls.Add(this.lblIdTipo);
             this.gbDatos.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbDatos.Location = new System.Drawing.Point(101, 47);
+            this.gbDatos.Location = new System.Drawing.Point(83, 48);
             this.gbDatos.Name = "gbDatos";
             this.gbDatos.Size = new System.Drawing.Size(451, 328);
             this.gbDatos.TabIndex = 25;
@@ -234,7 +234,7 @@
             this.btnRegresar});
             this.toolStrip2.Location = new System.Drawing.Point(0, 0);
             this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(649, 25);
+            this.toolStrip2.Size = new System.Drawing.Size(624, 25);
             this.toolStrip2.TabIndex = 42;
             this.toolStrip2.Text = "toolStrip2";
             // 
@@ -328,10 +328,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(649, 413);
+            this.ClientSize = new System.Drawing.Size(624, 413);
             this.ControlBox = false;
             this.Controls.Add(this.toolStrip2);
             this.Controls.Add(this.gbDatos);
+            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

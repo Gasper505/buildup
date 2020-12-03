@@ -52,8 +52,8 @@
             this.btnRegresar = new System.Windows.Forms.ToolStripButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txtLineaProduccion = new System.Windows.Forms.TextBox();
             this.txtSupervisor = new System.Windows.Forms.TextBox();
+            this.txtLineaProduccion = new System.Windows.Forms.TextBox();
             this.toolStrip2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -169,7 +169,7 @@
             this.btnRegresar});
             this.toolStrip2.Location = new System.Drawing.Point(0, 0);
             this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(690, 25);
+            this.toolStrip2.Size = new System.Drawing.Size(687, 25);
             this.toolStrip2.TabIndex = 41;
             this.toolStrip2.Text = "toolStrip2";
             // 
@@ -291,13 +291,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos del Supervisor Encargado";
             // 
-            // txtLineaProduccion
-            // 
-            this.txtLineaProduccion.Location = new System.Drawing.Point(249, 80);
-            this.txtLineaProduccion.Name = "txtLineaProduccion";
-            this.txtLineaProduccion.Size = new System.Drawing.Size(178, 23);
-            this.txtLineaProduccion.TabIndex = 4;
-            // 
             // txtSupervisor
             // 
             this.txtSupervisor.Location = new System.Drawing.Point(249, 48);
@@ -305,15 +298,23 @@
             this.txtSupervisor.Size = new System.Drawing.Size(206, 23);
             this.txtSupervisor.TabIndex = 5;
             // 
+            // txtLineaProduccion
+            // 
+            this.txtLineaProduccion.Location = new System.Drawing.Point(249, 80);
+            this.txtLineaProduccion.Name = "txtLineaProduccion";
+            this.txtLineaProduccion.Size = new System.Drawing.Size(178, 23);
+            this.txtLineaProduccion.TabIndex = 4;
+            // 
             // frmGestionarRegistroMerma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(690, 502);
+            this.ClientSize = new System.Drawing.Size(687, 502);
             this.ControlBox = false;
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.toolStrip2);
+            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmGestionarRegistroMerma";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

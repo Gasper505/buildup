@@ -69,7 +69,7 @@
             this.btnRegresar});
             this.toolStrip2.Location = new System.Drawing.Point(0, 0);
             this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(616, 25);
+            this.toolStrip2.Size = new System.Drawing.Size(611, 25);
             this.toolStrip2.TabIndex = 45;
             this.toolStrip2.Text = "toolStrip2";
             // 
@@ -175,7 +175,7 @@
             this.gbDatosMaquinaria.Controls.Add(this.lblTipo);
             this.gbDatosMaquinaria.Controls.Add(this.lblIdProblema);
             this.gbDatosMaquinaria.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbDatosMaquinaria.Location = new System.Drawing.Point(53, 67);
+            this.gbDatosMaquinaria.Location = new System.Drawing.Point(56, 58);
             this.gbDatosMaquinaria.Name = "gbDatosMaquinaria";
             this.gbDatosMaquinaria.Size = new System.Drawing.Size(509, 169);
             this.gbDatosMaquinaria.TabIndex = 46;
@@ -193,7 +193,7 @@
             "3",
             "4",
             "5"});
-            this.txtNivelImportancia.Location = new System.Drawing.Point(234, 107);
+            this.txtNivelImportancia.Location = new System.Drawing.Point(228, 107);
             this.txtNivelImportancia.Name = "txtNivelImportancia";
             this.txtNivelImportancia.Size = new System.Drawing.Size(76, 23);
             this.txtNivelImportancia.TabIndex = 9;
@@ -202,7 +202,7 @@
             // 
             this.lblNivelImportancia.AutoSize = true;
             this.lblNivelImportancia.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNivelImportancia.Location = new System.Drawing.Point(113, 109);
+            this.lblNivelImportancia.Location = new System.Drawing.Point(107, 109);
             this.lblNivelImportancia.Name = "lblNivelImportancia";
             this.lblNivelImportancia.Size = new System.Drawing.Size(117, 15);
             this.lblNivelImportancia.TabIndex = 8;
@@ -211,7 +211,7 @@
             // txtTipo
             // 
             this.txtTipo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTipo.Location = new System.Drawing.Point(234, 72);
+            this.txtTipo.Location = new System.Drawing.Point(228, 72);
             this.txtTipo.Name = "txtTipo";
             this.txtTipo.Size = new System.Drawing.Size(241, 23);
             this.txtTipo.TabIndex = 7;
@@ -219,7 +219,7 @@
             // txtIdProblema
             // 
             this.txtIdProblema.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdProblema.Location = new System.Drawing.Point(234, 40);
+            this.txtIdProblema.Location = new System.Drawing.Point(228, 40);
             this.txtIdProblema.Name = "txtIdProblema";
             this.txtIdProblema.Size = new System.Drawing.Size(100, 23);
             this.txtIdProblema.TabIndex = 5;
@@ -228,7 +228,7 @@
             // 
             this.lblTipo.AutoSize = true;
             this.lblTipo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTipo.Location = new System.Drawing.Point(198, 76);
+            this.lblTipo.Location = new System.Drawing.Point(192, 76);
             this.lblTipo.Name = "lblTipo";
             this.lblTipo.Size = new System.Drawing.Size(30, 15);
             this.lblTipo.TabIndex = 6;
@@ -238,7 +238,7 @@
             // 
             this.lblIdProblema.AutoSize = true;
             this.lblIdProblema.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIdProblema.Location = new System.Drawing.Point(139, 44);
+            this.lblIdProblema.Location = new System.Drawing.Point(133, 44);
             this.lblIdProblema.Name = "lblIdProblema";
             this.lblIdProblema.Size = new System.Drawing.Size(91, 15);
             this.lblIdProblema.TabIndex = 5;
@@ -248,11 +248,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(616, 269);
+            this.ClientSize = new System.Drawing.Size(611, 269);
             this.ControlBox = false;
             this.Controls.Add(this.gbDatosMaquinaria);
             this.Controls.Add(this.toolStrip2);
             this.Controls.Add(this.label1);
+            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmGestionarProblema";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

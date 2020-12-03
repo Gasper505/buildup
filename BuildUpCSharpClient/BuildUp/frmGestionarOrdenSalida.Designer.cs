@@ -418,6 +418,7 @@
             this.Controls.Add(this.gbLotesSalientes);
             this.Controls.Add(this.gbDatosOperario);
             this.Controls.Add(this.gbDatosOrden);
+            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmGestionarOrdenSalida";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

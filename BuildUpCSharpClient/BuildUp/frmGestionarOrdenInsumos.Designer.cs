@@ -113,7 +113,7 @@
             this.gbDatosOrdenInsumos.Controls.Add(this.txtIdOrdenInsumos);
             this.gbDatosOrdenInsumos.Controls.Add(this.dtpFechaActual);
             this.gbDatosOrdenInsumos.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbDatosOrdenInsumos.Location = new System.Drawing.Point(90, 172);
+            this.gbDatosOrdenInsumos.Location = new System.Drawing.Point(72, 178);
             this.gbDatosOrdenInsumos.Name = "gbDatosOrdenInsumos";
             this.gbDatosOrdenInsumos.Size = new System.Drawing.Size(502, 106);
             this.gbDatosOrdenInsumos.TabIndex = 5;
@@ -130,7 +130,7 @@
             this.gbDatosInsumo.Controls.Add(this.lblNombreInsumo);
             this.gbDatosInsumo.Controls.Add(this.lblIdInsumo);
             this.gbDatosInsumo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbDatosInsumo.Location = new System.Drawing.Point(90, 295);
+            this.gbDatosInsumo.Location = new System.Drawing.Point(72, 301);
             this.gbDatosInsumo.Name = "gbDatosInsumo";
             this.gbDatosInsumo.Size = new System.Drawing.Size(502, 139);
             this.gbDatosInsumo.TabIndex = 6;
@@ -209,7 +209,7 @@
             this.gbDatosOperario.Controls.Add(this.lblNombresOperario);
             this.gbDatosOperario.Controls.Add(this.lblIdOperario);
             this.gbDatosOperario.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbDatosOperario.Location = new System.Drawing.Point(90, 53);
+            this.gbDatosOperario.Location = new System.Drawing.Point(72, 59);
             this.gbDatosOperario.Name = "gbDatosOperario";
             this.gbDatosOperario.Size = new System.Drawing.Size(502, 98);
             this.gbDatosOperario.TabIndex = 10;
@@ -269,7 +269,7 @@
             this.btnRegresar});
             this.toolStrip2.Location = new System.Drawing.Point(0, 0);
             this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(682, 25);
+            this.toolStrip2.Size = new System.Drawing.Size(651, 25);
             this.toolStrip2.TabIndex = 27;
             this.toolStrip2.Text = "toolStrip2";
             // 
@@ -364,7 +364,7 @@
             this.pnlAceptacionOrden.BackColor = System.Drawing.SystemColors.ControlLight;
             this.pnlAceptacionOrden.Controls.Add(this.picCheck);
             this.pnlAceptacionOrden.Controls.Add(this.btnAceptarOrden);
-            this.pnlAceptacionOrden.Location = new System.Drawing.Point(160, 460);
+            this.pnlAceptacionOrden.Location = new System.Drawing.Point(142, 466);
             this.pnlAceptacionOrden.Name = "pnlAceptacionOrden";
             this.pnlAceptacionOrden.Size = new System.Drawing.Size(360, 75);
             this.pnlAceptacionOrden.TabIndex = 41;
@@ -399,13 +399,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(682, 565);
+            this.ClientSize = new System.Drawing.Size(651, 565);
             this.ControlBox = false;
             this.Controls.Add(this.pnlAceptacionOrden);
             this.Controls.Add(this.toolStrip2);
             this.Controls.Add(this.gbDatosOperario);
             this.Controls.Add(this.gbDatosInsumo);
             this.Controls.Add(this.gbDatosOrdenInsumos);
+            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmGestionarOrdenInsumos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
