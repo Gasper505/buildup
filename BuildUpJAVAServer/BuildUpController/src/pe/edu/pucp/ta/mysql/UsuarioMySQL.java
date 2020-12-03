@@ -64,6 +64,7 @@ public class UsuarioMySQL implements UsuarioDAO{
                 usuarioLogeado.setCorreo(rs.getString("CORREO"));
                 usuarioLogeado.setRol(rs.getString("ROL"));
                 usuarioLogeado.setFechaFinContrato(rs.getDate("FECHA_FIN_CONTRATO"));
+                usuarioLogeado.setFoto(rs.getBytes("PHOTO"));
             }
                 
         }catch(Exception ex){

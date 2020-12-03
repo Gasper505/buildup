@@ -37,7 +37,7 @@ namespace BuildUp
         {
             if (dgvUsuarios.SelectedRows.Count < 1)
             {
-                MessageBox.Show("Debe seleccionar un usuario", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Debe seleccionar un Usuario", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             usuarioSeleccionado = (UsuarioWS.persona)dgvUsuarios.CurrentRow.DataBoundItem;
@@ -55,7 +55,7 @@ namespace BuildUp
             }
             catch (Exception ex)
             {
-                MessageBox.Show("No existe el usuario buscado", "Mensaje aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("No se han encontrado resultados", "Mensaje aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 

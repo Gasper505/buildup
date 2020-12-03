@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,8 +17,18 @@ namespace BuildUp
         {
             InitializeComponent();
             lblNombres.Text = frmLogIn.Usuario.nombres + ' ' + frmLogIn.Usuario.apellidos;
-            //MemoryStream ms = new MemoryStream(frmLogIn.Usuario.foto);
-            //pbFoto.Image = new Bitmap(ms);
+
+            if (pbFoto.Image != null)
+            {
+                pbFoto.Image.Dispose();
+                pbFoto.Image = null;
+            }
+            MemoryStream ms;
+            if (frmLogIn.Usuario.foto != null)
+            {
+                ms = new MemoryStream(frmLogIn.Usuario.foto);
+                if (ms.Length != 0) pbFoto.Image = new Bitmap(ms);
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)

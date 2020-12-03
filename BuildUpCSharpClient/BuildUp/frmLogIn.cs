@@ -43,6 +43,7 @@ namespace BuildUp
             lblInfoLogueo.Text = "Cargando datos del usuario...";
             
             usuario = daoUsuario.buscarUsuarioPorUsername(usuario.username);
+
             if (resultado == 1)
             {
                 switch (usuario.rol)

@@ -132,35 +132,35 @@ namespace BuildUp
 
             if (txtNombre.Text == "")
             {
-                MessageBox.Show("Debe ingresar el nombre del usuario", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Debe ingresar el nombre del Usuario", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
             if (txtApellidos.Text == "")
             {
-                MessageBox.Show("Debe ingresar el apellido del usuario", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Debe ingresar el apellido del Usuario", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             if (cbRol.Text == "")
             {
-                MessageBox.Show("Debe ingresar el rol del usuario", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Debe seleccionar el rol del Usuario", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             if (txtNumero.Text == "")
             {
-                MessageBox.Show("Debe ingresar el telefono del usuario", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Debe ingresar el telefono del Usuario", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             if (txtCorreo.Text == "")
             {
-                MessageBox.Show("Debe ingresar el correo del usuario", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Debe ingresar el correo del Usuario", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             if (cbRol.Text == "Operario" || cbRol.Text == "Supervisor")
             {
                 if (exclusiveComboBox.Text == "")
                 {
-                    MessageBox.Show("Debe ingresar la línea de producción a la que pertenece el usuario", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Debe ingresar la línea de producción a la que pertenece el Usuario", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
             }
@@ -168,18 +168,18 @@ namespace BuildUp
             {
                 if (exclusiveComboBox.Text == "")
                 {
-                    MessageBox.Show("Debe ingresar la especialidad del usuario", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Debe ingresar la especialidad del Usuario", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
             }
             if (pbFoto.Image == null)
             {
-                MessageBox.Show("Debe ingresar una foto para el usuario", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Debe ingresar una foto para el Usuario", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
             }
 
 
-                DialogResult dr = MessageBox.Show("¿Está seguro que desea registrar a este Usuario?", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            DialogResult dr = MessageBox.Show("¿Está seguro que desea registrar a este Usuario?", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (dr == DialogResult.Yes)
             {
                 int result = 0;
@@ -320,6 +320,7 @@ namespace BuildUp
             if (formBuscarUsuario.ShowDialog() == DialogResult.OK)
             {
                 usuario = formBuscarUsuario.UsuarioSeleccionado;
+
                 MemoryStream ms;
                 if (usuario.foto != null)
                 {
@@ -334,7 +335,8 @@ namespace BuildUp
                 txtCorreo.Text = usuario.correo;
                 dtpFinContrato.Value = usuario.fechaFinContrato;
                 cbRol.Text = usuario.rol;
-               if(usuario.rol=="Operario") {
+
+                if(usuario.rol=="Operario") {
                     exclusiveLabel.Visible = true;
                     exclusiveComboBox.Visible = true;
                     exclusiveComboBox.Text = daoOperario.obtenerLineaProduccionOperario(usuario.idPersona);
@@ -353,9 +355,6 @@ namespace BuildUp
                 }
 
 
-
-
-
                 //falta establecer campo exclusivo de rol.
                 EstablecerEstadoComponentes(Estado.Modificacion);
             }
@@ -366,19 +365,19 @@ namespace BuildUp
         {
             if (txtNumero.Text == "")
             {
-                MessageBox.Show("Debe ingresar el telefono del usuario", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Debe ingresar el teléfono del Usuario", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             if (txtCorreo.Text == "")
             {
-                MessageBox.Show("Debe ingresar el correo del usuario", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Debe ingresar el correo electrónico del Usuario", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             if (cbRol.Text == "Operario" || cbRol.Text == "Supervisor")
             {
                 if (exclusiveComboBox.Text == "")
                 {
-                    MessageBox.Show("Debe ingresar la línea de producción a la que pertenece el usuario", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Debe ingresar la línea de producción a la que pertenece el Usuario", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
             }
@@ -386,17 +385,17 @@ namespace BuildUp
             {
                 if (exclusiveComboBox.Text == "")
                 {
-                    MessageBox.Show("Debe ingresar la especialidad del usuario", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Debe ingresar la especialidad del Usuario", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
             }
             if (pbFoto.Image==null)
             {
-                MessageBox.Show("Debe ingresar una foto para el usuario", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Debe ingresar una foto para el Usuario", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            DialogResult dr = MessageBox.Show("¿Esta seguro que desea actualizar los datos de este Usuario?", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            DialogResult dr = MessageBox.Show("¿Está seguro que desea actualizar los datos de este Usuario?", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (dr == DialogResult.Yes)
             {
                 int result=0;
