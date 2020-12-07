@@ -540,11 +540,21 @@ namespace BuildUp.SupervisorWS {
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public BuildUp.SupervisorWS.supervisor supervisor;
         
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string username;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string password;
+        
         public insertarSupervisorRequest() {
         }
         
-        public insertarSupervisorRequest(BuildUp.SupervisorWS.supervisor supervisor) {
+        public insertarSupervisorRequest(BuildUp.SupervisorWS.supervisor supervisor, string username, string password) {
             this.supervisor = supervisor;
+            this.username = username;
+            this.password = password;
         }
     }
     
@@ -721,9 +731,11 @@ namespace BuildUp.SupervisorWS {
             return base.Channel.insertarSupervisor(request);
         }
         
-        public int insertarSupervisor(BuildUp.SupervisorWS.supervisor supervisor) {
+        public int insertarSupervisor(BuildUp.SupervisorWS.supervisor supervisor, string username, string password) {
             BuildUp.SupervisorWS.insertarSupervisorRequest inValue = new BuildUp.SupervisorWS.insertarSupervisorRequest();
             inValue.supervisor = supervisor;
+            inValue.username = username;
+            inValue.password = password;
             BuildUp.SupervisorWS.insertarSupervisorResponse retVal = ((BuildUp.SupervisorWS.SupervisorWS)(this)).insertarSupervisor(inValue);
             return retVal.@return;
         }
@@ -733,9 +745,11 @@ namespace BuildUp.SupervisorWS {
             return base.Channel.insertarSupervisorAsync(request);
         }
         
-        public System.Threading.Tasks.Task<BuildUp.SupervisorWS.insertarSupervisorResponse> insertarSupervisorAsync(BuildUp.SupervisorWS.supervisor supervisor) {
+        public System.Threading.Tasks.Task<BuildUp.SupervisorWS.insertarSupervisorResponse> insertarSupervisorAsync(BuildUp.SupervisorWS.supervisor supervisor, string username, string password) {
             BuildUp.SupervisorWS.insertarSupervisorRequest inValue = new BuildUp.SupervisorWS.insertarSupervisorRequest();
             inValue.supervisor = supervisor;
+            inValue.username = username;
+            inValue.password = password;
             return ((BuildUp.SupervisorWS.SupervisorWS)(this)).insertarSupervisorAsync(inValue);
         }
         

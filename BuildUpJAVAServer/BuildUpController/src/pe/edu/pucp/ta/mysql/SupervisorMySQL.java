@@ -19,12 +19,12 @@ public class SupervisorMySQL implements SupervisorDAO{
     ResultSet rs;
     Statement st;
     @Override
-    public int insertar(Supervisor sup) {
+    public int insertar(Supervisor sup, String username, String password) {
             int resultado=0;
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.password);
-            String sql = "{call INSERTAR_SUPERVISOR(?,?,?,?,?,?,?,?,?,?)}";
+            String sql = "{call INSERTAR_SUPERVISOR(?,?,?,?,?,?,?,?,?,?,?,?)}";
             cs = con.prepareCall(sql);
             
             cs.registerOutParameter("_ID_SUPERVISOR", java.sql.Types.INTEGER);
@@ -37,6 +37,8 @@ public class SupervisorMySQL implements SupervisorDAO{
             cs.setDate("_FECHA_FIN_CONTRATO", new java.sql.Date(sup.getFechaFinContrato().getTime()));
             cs.setInt("_ID_LINEA_PRODUCCION", sup.getLineaProduccion().getIdLineaProduccion());
             cs.setBytes("_PHOTO", sup.getFoto());
+            cs.setString("_USERNAME",username);
+            cs.setString("_PASSWORD",password);
             
             cs.executeUpdate();
             sup.setIdPersona(cs.getInt("_ID_SUPERVISOR"));

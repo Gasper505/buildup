@@ -53,56 +53,56 @@
             this.gbParametrosBusqueda.Controls.Add(this.lblDesde);
             this.gbParametrosBusqueda.Controls.Add(this.dtpDesde);
             this.gbParametrosBusqueda.Controls.Add(this.btnBuscar);
-            this.gbParametrosBusqueda.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbParametrosBusqueda.Location = new System.Drawing.Point(50, 32);
+            this.gbParametrosBusqueda.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbParametrosBusqueda.Location = new System.Drawing.Point(37, 27);
             this.gbParametrosBusqueda.Name = "gbParametrosBusqueda";
-            this.gbParametrosBusqueda.Size = new System.Drawing.Size(776, 135);
+            this.gbParametrosBusqueda.Size = new System.Drawing.Size(812, 132);
             this.gbParametrosBusqueda.TabIndex = 3;
             this.gbParametrosBusqueda.TabStop = false;
             this.gbParametrosBusqueda.Text = "Parámetros de Búsqueda";
             // 
             // dtpHasta
             // 
-            this.dtpHasta.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpHasta.Location = new System.Drawing.Point(142, 80);
+            this.dtpHasta.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpHasta.Location = new System.Drawing.Point(145, 78);
             this.dtpHasta.Name = "dtpHasta";
-            this.dtpHasta.Size = new System.Drawing.Size(269, 23);
+            this.dtpHasta.Size = new System.Drawing.Size(313, 25);
             this.dtpHasta.TabIndex = 21;
             // 
             // lblHasta
             // 
             this.lblHasta.AutoSize = true;
-            this.lblHasta.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHasta.Location = new System.Drawing.Point(86, 80);
+            this.lblHasta.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHasta.Location = new System.Drawing.Point(98, 84);
             this.lblHasta.Name = "lblHasta";
-            this.lblHasta.Size = new System.Drawing.Size(37, 15);
+            this.lblHasta.Size = new System.Drawing.Size(41, 17);
             this.lblHasta.TabIndex = 20;
             this.lblHasta.Text = "Hasta";
             // 
             // lblDesde
             // 
             this.lblDesde.AutoSize = true;
-            this.lblDesde.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDesde.Location = new System.Drawing.Point(84, 52);
+            this.lblDesde.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDesde.Location = new System.Drawing.Point(94, 45);
             this.lblDesde.Name = "lblDesde";
-            this.lblDesde.Size = new System.Drawing.Size(39, 15);
+            this.lblDesde.Size = new System.Drawing.Size(45, 17);
             this.lblDesde.TabIndex = 19;
             this.lblDesde.Text = "Desde";
             // 
             // dtpDesde
             // 
-            this.dtpDesde.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpDesde.Location = new System.Drawing.Point(142, 46);
+            this.dtpDesde.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDesde.Location = new System.Drawing.Point(145, 39);
             this.dtpDesde.Name = "dtpDesde";
-            this.dtpDesde.Size = new System.Drawing.Size(269, 23);
+            this.dtpDesde.Size = new System.Drawing.Size(313, 25);
             this.dtpDesde.TabIndex = 18;
             // 
             // btnBuscar
             // 
             this.btnBuscar.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(493, 59);
+            this.btnBuscar.Location = new System.Drawing.Point(531, 58);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(185, 36);
+            this.btnBuscar.Size = new System.Drawing.Size(189, 34);
             this.btnBuscar.TabIndex = 6;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
@@ -111,9 +111,9 @@
             // btnSeleccionar
             // 
             this.btnSeleccionar.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSeleccionar.Location = new System.Drawing.Point(311, 475);
+            this.btnSeleccionar.Location = new System.Drawing.Point(292, 516);
             this.btnSeleccionar.Name = "btnSeleccionar";
-            this.btnSeleccionar.Size = new System.Drawing.Size(257, 36);
+            this.btnSeleccionar.Size = new System.Drawing.Size(300, 42);
             this.btnSeleccionar.TabIndex = 5;
             this.btnSeleccionar.Text = "Seleccionar";
             this.btnSeleccionar.UseVisualStyleBackColor = true;
@@ -123,6 +123,7 @@
             // 
             this.dgvOrdenes.AllowUserToAddRows = false;
             this.dgvOrdenes.AllowUserToDeleteRows = false;
+            this.dgvOrdenes.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvOrdenes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvOrdenes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -131,22 +132,22 @@
             this.Column6,
             this.Column7,
             this.Column8});
-            this.dgvOrdenes.Location = new System.Drawing.Point(51, 192);
+            this.dgvOrdenes.Location = new System.Drawing.Point(37, 180);
             this.dgvOrdenes.MultiSelect = false;
             this.dgvOrdenes.Name = "dgvOrdenes";
             this.dgvOrdenes.ReadOnly = true;
             this.dgvOrdenes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvOrdenes.Size = new System.Drawing.Size(775, 254);
+            this.dgvOrdenes.Size = new System.Drawing.Size(812, 308);
             this.dgvOrdenes.TabIndex = 6;
             this.dgvOrdenes.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView1_CellFormatting);
             // 
             // Column1
             // 
             this.Column1.DataPropertyName = "idOrdenInsumos";
-            this.Column1.HeaderText = "ID Orden Insumo";
+            this.Column1.HeaderText = "ID";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
-            this.Column1.Width = 80;
+            this.Column1.Width = 50;
             // 
             // Column2
             // 
@@ -161,7 +162,7 @@
             this.Column4.HeaderText = "Nombre Operario";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
-            this.Column4.Width = 250;
+            this.Column4.Width = 200;
             // 
             // Column6
             // 
@@ -169,6 +170,7 @@
             this.Column6.HeaderText = "Nombre Insumo";
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
+            this.Column6.Width = 150;
             // 
             // Column7
             // 
@@ -176,22 +178,24 @@
             this.Column7.HeaderText = "Cantidad";
             this.Column7.Name = "Column7";
             this.Column7.ReadOnly = true;
+            this.Column7.Width = 75;
             // 
             // Column8
             // 
             this.Column8.HeaderText = "Estado";
             this.Column8.Name = "Column8";
             this.Column8.ReadOnly = true;
+            this.Column8.Width = 125;
             // 
             // frmBuscarOrdenInsumos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(875, 538);
+            this.ClientSize = new System.Drawing.Size(886, 581);
             this.Controls.Add(this.dgvOrdenes);
             this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.gbParametrosBusqueda);
-            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "frmBuscarOrdenInsumos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -36,10 +36,10 @@ public class OperarioWS {
     }
     
     @WebMethod(operationName = "insertarOperario")
-    public int insertarOperario(@WebParam(name="operario") Operario operario) {
+    public int insertarOperario(@WebParam(name="operario") Operario operario, @WebParam(name="username") String username, @WebParam(name="password") String password) {
         int resultado =0;
         try{
-            resultado = daoOperario.insertar(operario);
+            resultado = daoOperario.insertar(operario,username,password);
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }

@@ -1552,7 +1552,7 @@
     <value>Zoom</value>
   </data>
   <data name="btn_Ingresar.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Malgun Gothic, 9.75pt</value>
+    <value>Segoe UI, 12pt</value>
   </data>
   <data name="btn_Ingresar.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>

@@ -25,6 +25,11 @@ namespace BuildUp
 
         public frmGestionarIncidencia()
         {
+
+            System.Globalization.CultureInfo culture = new System.Globalization.CultureInfo("es-ES");
+            System.Threading.Thread.CurrentThread.CurrentCulture = culture;
+            System.Threading.Thread.CurrentThread.CurrentUICulture = culture;
+
             InitializeComponent();
             EstablecerEstadoComponentes(Estado.Inicial);
             daoRepIncidencia = new ReporteIncidenciaWS.ReportesIncidenciaClient();
@@ -110,6 +115,10 @@ namespace BuildUp
                     btnEliminar.Enabled = false;
                     btnActualizar.Enabled = false;
 
+                    txtIDMaq.ReadOnly = true;
+                    txtNombreMaq.ReadOnly = true;
+                    txtProveedor.ReadOnly = true;
+
                     txtID.Enabled = false;
                     dtpFechaRegistro.Enabled = false;
 
@@ -121,6 +130,10 @@ namespace BuildUp
                         txtNombreSup.Text = frmLogIn.Usuario.nombres;
                         txtApellidosSup.Text = frmLogIn.Usuario.apellidos;
 
+                        txtIDSup.ReadOnly = true;
+                        txtNombreSup.ReadOnly = true;
+                        txtApellidosSup.ReadOnly = true;
+
                         btnBuscarProblema.Enabled = true;
                     }
                     
@@ -130,6 +143,10 @@ namespace BuildUp
                         txtIDIng.Text = frmLogIn.Usuario.idPersona.ToString();
                         txtNombreIng.Text = frmLogIn.Usuario.nombres;
                         txtApellidosIng.Text = frmLogIn.Usuario.apellidos;
+
+                        txtIDIng.ReadOnly = true;
+                        txtNombreIng.ReadOnly = true;
+                        txtApellidosIng.ReadOnly = true;
 
                         btnBuscarRespuesta.Enabled = true;
                         tbDescripcionRespuesta.Enabled = true;
@@ -316,20 +333,21 @@ namespace BuildUp
                     tbDescripcionRespuesta.Text = incidenteMaq.detalle;
                     dtpFechaRespuesta.Value = incidenteMaq.fechaAtencion;
                 }
-            }                 
-            if (!incidenteMaq.estado)
-            {
-                EstablecerEstadoComponentes(Estado.Modificacion);
-                if(frmLogIn.Usuario.rol == "Supervisor")
+                if (!incidenteMaq.estado)
                 {
+                    EstablecerEstadoComponentes(Estado.Modificacion);
+                    if (frmLogIn.Usuario.rol == "Supervisor")
+                    {
+                    }
+                    else
+                    {
+                        tbDescripcionRespuesta.Enabled = true;
+                        dtpFechaRespuesta.Enabled = false;
+                    }
+
                 }
-                else
-                {
-                    tbDescripcionRespuesta.Enabled = true;
-                    dtpFechaRespuesta.Enabled = false;
-                }
-                
             }
+            
       }
             
       

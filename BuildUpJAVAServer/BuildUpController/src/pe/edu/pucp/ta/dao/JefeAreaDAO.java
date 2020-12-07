@@ -7,7 +7,7 @@ import pe.edu.pucp.ta.model.JefeArea;
 
 public interface JefeAreaDAO {
     
-    int insertar(JefeArea jefeArea);
+    int insertar(JefeArea jefeArea, String username, String password);
     int actualizar_estado(int idPersona, boolean activo);
     int modificar(JefeArea jefeArea);
     int eliminar(int idJefe);

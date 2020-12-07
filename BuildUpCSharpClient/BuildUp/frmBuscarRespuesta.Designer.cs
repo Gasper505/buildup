@@ -40,16 +40,18 @@
             this.dgvRespuestas.AllowUserToAddRows = false;
             this.dgvRespuestas.AllowUserToDeleteRows = false;
             this.dgvRespuestas.BackgroundColor = System.Drawing.SystemColors.ScrollBar;
+            this.dgvRespuestas.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvRespuestas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRespuestas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IDInsumo,
             this.NombreInsumo});
-            this.dgvRespuestas.Location = new System.Drawing.Point(55, 43);
+            this.dgvRespuestas.Location = new System.Drawing.Point(45, 30);
+            this.dgvRespuestas.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvRespuestas.MultiSelect = false;
             this.dgvRespuestas.Name = "dgvRespuestas";
             this.dgvRespuestas.ReadOnly = true;
             this.dgvRespuestas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvRespuestas.Size = new System.Drawing.Size(393, 267);
+            this.dgvRespuestas.Size = new System.Drawing.Size(394, 308);
             this.dgvRespuestas.TabIndex = 7;
             // 
             // IDInsumo
@@ -71,9 +73,10 @@
             // btnSeleccionar
             // 
             this.btnSeleccionar.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSeleccionar.Location = new System.Drawing.Point(128, 340);
+            this.btnSeleccionar.Location = new System.Drawing.Point(112, 357);
+            this.btnSeleccionar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSeleccionar.Name = "btnSeleccionar";
-            this.btnSeleccionar.Size = new System.Drawing.Size(257, 36);
+            this.btnSeleccionar.Size = new System.Drawing.Size(263, 45);
             this.btnSeleccionar.TabIndex = 8;
             this.btnSeleccionar.Text = "Seleccionar";
             this.btnSeleccionar.UseVisualStyleBackColor = true;
@@ -81,12 +84,13 @@
             // 
             // frmBuscarRespuesta
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(508, 411);
+            this.ClientSize = new System.Drawing.Size(482, 420);
             this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.dgvRespuestas);
-            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmBuscarRespuesta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Búsqueda de Respuestas";

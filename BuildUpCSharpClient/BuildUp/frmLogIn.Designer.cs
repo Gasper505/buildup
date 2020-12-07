@@ -126,6 +126,7 @@
             this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmLogIn";
+            this.Opacity = 0.85D;
             this.Load += new System.EventHandler(this.LogIn_Load);
             this.panelLogeo.ResumeLayout(false);
             this.panelLogeo.PerformLayout();

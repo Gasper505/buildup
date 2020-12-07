@@ -17,7 +17,7 @@ namespace BuildUp
         {
             InitializeComponent();
             lblNombres.Text = frmLogIn.Usuario.nombres + ' ' + frmLogIn.Usuario.apellidos;
-
+            lblUsername.Text = frmLogIn.Usuario.username;
             if (pbFoto.Image != null)
             {
                 pbFoto.Image.Dispose();
@@ -26,8 +26,16 @@ namespace BuildUp
             MemoryStream ms;
             if (frmLogIn.Usuario.foto != null)
             {
-                ms = new MemoryStream(frmLogIn.Usuario.foto);
-                if (ms.Length != 0) pbFoto.Image = new Bitmap(ms);
+                try
+                {
+                    ms = new MemoryStream(frmLogIn.Usuario.foto);
+                    if (ms.Length != 0) pbFoto.Image = new Bitmap(ms);
+                }
+                catch
+                {
+
+                }
+                
             }
         }
 

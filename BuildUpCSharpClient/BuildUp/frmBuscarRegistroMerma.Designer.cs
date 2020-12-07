@@ -29,11 +29,6 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSeleccionar = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
@@ -43,6 +38,11 @@
             this.lblHasta = new System.Windows.Forms.Label();
             this.lblDesde = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.gbBusqueda.SuspendLayout();
             this.SuspendLayout();
@@ -51,6 +51,7 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -58,61 +59,31 @@
             this.Column3,
             this.Column4,
             this.Column5});
-            this.dataGridView1.Location = new System.Drawing.Point(52, 216);
+            this.dataGridView1.Location = new System.Drawing.Point(45, 248);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(644, 241);
+            this.dataGridView1.Size = new System.Drawing.Size(738, 278);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "ID Registro de Merma";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Cantidad";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Supervisor";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 150;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Linea de Produccion";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 150;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Fecha";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 43);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(25, 51);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(187, 15);
+            this.label1.Size = new System.Drawing.Size(212, 17);
             this.label1.TabIndex = 1;
             this.label1.Text = "Nombre del Supervisor Encargado";
             // 
             // btnSeleccionar
             // 
             this.btnSeleccionar.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSeleccionar.Location = new System.Drawing.Point(261, 489);
+            this.btnSeleccionar.Location = new System.Drawing.Point(289, 549);
+            this.btnSeleccionar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSeleccionar.Name = "btnSeleccionar";
-            this.btnSeleccionar.Size = new System.Drawing.Size(225, 36);
+            this.btnSeleccionar.Size = new System.Drawing.Size(262, 41);
             this.btnSeleccionar.TabIndex = 12;
             this.btnSeleccionar.Text = "Seleccionar";
             this.btnSeleccionar.UseVisualStyleBackColor = true;
@@ -121,9 +92,10 @@
             // btnBuscar
             // 
             this.btnBuscar.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(481, 69);
+            this.btnBuscar.Location = new System.Drawing.Point(556, 127);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(116, 36);
+            this.btnBuscar.Size = new System.Drawing.Size(135, 29);
             this.btnBuscar.TabIndex = 13;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
@@ -137,65 +109,109 @@
             this.gbBusqueda.Controls.Add(this.dateTimePicker1);
             this.gbBusqueda.Controls.Add(this.btnBuscar);
             this.gbBusqueda.Controls.Add(this.label1);
-            this.gbBusqueda.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbBusqueda.Location = new System.Drawing.Point(53, 29);
+            this.gbBusqueda.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbBusqueda.Location = new System.Drawing.Point(46, 33);
+            this.gbBusqueda.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gbBusqueda.Name = "gbBusqueda";
-            this.gbBusqueda.Size = new System.Drawing.Size(643, 159);
+            this.gbBusqueda.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.gbBusqueda.Size = new System.Drawing.Size(737, 184);
             this.gbBusqueda.TabIndex = 14;
             this.gbBusqueda.TabStop = false;
             this.gbBusqueda.Text = "Parámetros de Búsqueda";
             // 
             // txtNombreSup
             // 
-            this.txtNombreSup.Location = new System.Drawing.Point(208, 42);
+            this.txtNombreSup.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreSup.Location = new System.Drawing.Point(243, 49);
+            this.txtNombreSup.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNombreSup.Name = "txtNombreSup";
-            this.txtNombreSup.Size = new System.Drawing.Size(238, 23);
+            this.txtNombreSup.Size = new System.Drawing.Size(277, 25);
             this.txtNombreSup.TabIndex = 18;
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(208, 110);
+            this.dateTimePicker2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker2.Location = new System.Drawing.Point(243, 127);
+            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(238, 23);
+            this.dateTimePicker2.Size = new System.Drawing.Size(277, 25);
             this.dateTimePicker2.TabIndex = 17;
             // 
             // lblHasta
             // 
             this.lblHasta.AutoSize = true;
-            this.lblHasta.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHasta.Location = new System.Drawing.Point(163, 110);
+            this.lblHasta.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHasta.Location = new System.Drawing.Point(196, 132);
             this.lblHasta.Name = "lblHasta";
-            this.lblHasta.Size = new System.Drawing.Size(37, 15);
+            this.lblHasta.Size = new System.Drawing.Size(41, 17);
             this.lblHasta.TabIndex = 16;
             this.lblHasta.Text = "Hasta";
             // 
             // lblDesde
             // 
             this.lblDesde.AutoSize = true;
-            this.lblDesde.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDesde.Location = new System.Drawing.Point(159, 75);
+            this.lblDesde.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDesde.Location = new System.Drawing.Point(192, 92);
             this.lblDesde.Name = "lblDesde";
-            this.lblDesde.Size = new System.Drawing.Size(39, 15);
+            this.lblDesde.Size = new System.Drawing.Size(45, 17);
             this.lblDesde.TabIndex = 15;
             this.lblDesde.Text = "Desde";
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(208, 75);
+            this.dateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Location = new System.Drawing.Point(243, 86);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(238, 23);
+            this.dateTimePicker1.Size = new System.Drawing.Size(277, 25);
             this.dateTimePicker1.TabIndex = 14;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "ID";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 70;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Cantidad";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 125;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Supervisor";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 175;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Linea de Produccion";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 175;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Fecha";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Width = 150;
             // 
             // frmBuscarRegistroMerma
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(752, 558);
+            this.ClientSize = new System.Drawing.Size(826, 611);
             this.Controls.Add(this.gbBusqueda);
             this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.dataGridView1);
-            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmBuscarRegistroMerma";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Búsqueda de Registros de Merma";

@@ -22,8 +22,8 @@
     <MetadataSource Address="http://52.207.108.70:8080/BuildUpServices/JefeAreaWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="JefeAreaWS.wsdl" MetadataType="Wsdl" ID="831e3b47-8592-45bc-afb9-f6e5f88bbc06" SourceId="1" SourceUrl="http://52.207.108.70:8080/BuildUpServices/JefeAreaWS?WSDL" />
-    <MetadataFile FileName="JefeAreaWS.xsd" MetadataType="Schema" ID="a5e6d049-70a7-4064-8f11-8e80140150e8" SourceId="1" SourceUrl="http://52.207.108.70:8080/BuildUpServices/JefeAreaWS?xsd=1" />
+    <MetadataFile FileName="JefeAreaWS.wsdl" MetadataType="Wsdl" ID="3c208e79-52f6-41f6-a064-37492d19c7e5" SourceId="1" SourceUrl="http://52.207.108.70:8080/BuildUpServices/JefeAreaWS?WSDL" />
+    <MetadataFile FileName="JefeAreaWS.xsd" MetadataType="Schema" ID="b918846f-e577-4ed4-aa84-1a49ae48615a" SourceId="1" SourceUrl="http://52.207.108.70:8080/BuildUpServices/JefeAreaWS?xsd=1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

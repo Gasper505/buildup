@@ -338,11 +338,21 @@ namespace BuildUp.JefeAreaWS {
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public BuildUp.JefeAreaWS.jefeArea jefeArea;
         
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string username;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string password;
+        
         public insertarJefeAreaRequest() {
         }
         
-        public insertarJefeAreaRequest(BuildUp.JefeAreaWS.jefeArea jefeArea) {
+        public insertarJefeAreaRequest(BuildUp.JefeAreaWS.jefeArea jefeArea, string username, string password) {
             this.jefeArea = jefeArea;
+            this.username = username;
+            this.password = password;
         }
     }
     
@@ -566,9 +576,11 @@ namespace BuildUp.JefeAreaWS {
             return base.Channel.insertarJefeArea(request);
         }
         
-        public int insertarJefeArea(BuildUp.JefeAreaWS.jefeArea jefeArea) {
+        public int insertarJefeArea(BuildUp.JefeAreaWS.jefeArea jefeArea, string username, string password) {
             BuildUp.JefeAreaWS.insertarJefeAreaRequest inValue = new BuildUp.JefeAreaWS.insertarJefeAreaRequest();
             inValue.jefeArea = jefeArea;
+            inValue.username = username;
+            inValue.password = password;
             BuildUp.JefeAreaWS.insertarJefeAreaResponse retVal = ((BuildUp.JefeAreaWS.JefeAreaWS)(this)).insertarJefeArea(inValue);
             return retVal.@return;
         }
@@ -578,9 +590,11 @@ namespace BuildUp.JefeAreaWS {
             return base.Channel.insertarJefeAreaAsync(request);
         }
         
-        public System.Threading.Tasks.Task<BuildUp.JefeAreaWS.insertarJefeAreaResponse> insertarJefeAreaAsync(BuildUp.JefeAreaWS.jefeArea jefeArea) {
+        public System.Threading.Tasks.Task<BuildUp.JefeAreaWS.insertarJefeAreaResponse> insertarJefeAreaAsync(BuildUp.JefeAreaWS.jefeArea jefeArea, string username, string password) {
             BuildUp.JefeAreaWS.insertarJefeAreaRequest inValue = new BuildUp.JefeAreaWS.insertarJefeAreaRequest();
             inValue.jefeArea = jefeArea;
+            inValue.username = username;
+            inValue.password = password;
             return ((BuildUp.JefeAreaWS.JefeAreaWS)(this)).insertarJefeAreaAsync(inValue);
         }
         

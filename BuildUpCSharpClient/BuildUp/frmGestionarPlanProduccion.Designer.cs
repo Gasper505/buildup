@@ -44,8 +44,6 @@
             this.btnRemover = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.dgvAsignacion = new System.Windows.Forms.DataGridView();
-            this.NombreTipoLadrillo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cboNombreTipoLadrillo = new System.Windows.Forms.ComboBox();
             this.lblNombreTipoLadrillo = new System.Windows.Forms.Label();
             this.numNroAproxLadrillos = new System.Windows.Forms.NumericUpDown();
@@ -55,6 +53,8 @@
             this.txtIDPlan = new System.Windows.Forms.TextBox();
             this.lblIDPlan = new System.Windows.Forms.Label();
             this.lblAnho = new System.Windows.Forms.Label();
+            this.NombreTipoLadrillo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip2.SuspendLayout();
             this.gbLotesSalientes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAsignacion)).BeginInit();
@@ -79,7 +79,7 @@
             this.btnRegresar});
             this.toolStrip2.Location = new System.Drawing.Point(0, 0);
             this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(763, 25);
+            this.toolStrip2.Size = new System.Drawing.Size(669, 25);
             this.toolStrip2.TabIndex = 40;
             this.toolStrip2.Text = "toolStrip2";
             // 
@@ -90,21 +90,21 @@
             // 
             // btnNuevo
             // 
-            this.btnNuevo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevo.Image = global::BuildUp.Properties.Resources.new_file_icon_4;
             this.btnNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(62, 22);
+            this.btnNuevo.Size = new System.Drawing.Size(66, 22);
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
             this.btnGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(69, 22);
+            this.btnGuardar.Size = new System.Drawing.Size(76, 22);
             this.btnGuardar.Text = "&Guardar";
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
@@ -115,31 +115,31 @@
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
             this.btnBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(62, 22);
+            this.btnBuscar.Size = new System.Drawing.Size(66, 22);
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.Click += new System.EventHandler(this.btnHistorial_Click);
             // 
             // btnActualizar
             // 
-            this.btnActualizar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActualizar.Image = ((System.Drawing.Image)(resources.GetObject("btnActualizar.Image")));
             this.btnActualizar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(79, 22);
+            this.btnActualizar.Size = new System.Drawing.Size(84, 22);
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
             this.btnEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(70, 22);
+            this.btnEliminar.Size = new System.Drawing.Size(74, 22);
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
@@ -150,22 +150,22 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
             this.btnCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(125, 22);
+            this.btnCancelar.Size = new System.Drawing.Size(135, 22);
             this.btnCancelar.Text = "Limpiar y Cancelar";
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnRegresar
             // 
             this.btnRegresar.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.btnRegresar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegresar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegresar.Image = ((System.Drawing.Image)(resources.GetObject("btnRegresar.Image")));
             this.btnRegresar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Size = new System.Drawing.Size(72, 22);
+            this.btnRegresar.Size = new System.Drawing.Size(81, 22);
             this.btnRegresar.Text = "Regresar";
             this.btnRegresar.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
@@ -178,10 +178,10 @@
             this.gbLotesSalientes.Controls.Add(this.lblNombreTipoLadrillo);
             this.gbLotesSalientes.Controls.Add(this.numNroAproxLadrillos);
             this.gbLotesSalientes.Controls.Add(this.lblNro);
-            this.gbLotesSalientes.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbLotesSalientes.Location = new System.Drawing.Point(69, 201);
+            this.gbLotesSalientes.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbLotesSalientes.Location = new System.Drawing.Point(41, 185);
             this.gbLotesSalientes.Name = "gbLotesSalientes";
-            this.gbLotesSalientes.Size = new System.Drawing.Size(623, 364);
+            this.gbLotesSalientes.Size = new System.Drawing.Size(583, 364);
             this.gbLotesSalientes.TabIndex = 42;
             this.gbLotesSalientes.TabStop = false;
             this.gbLotesSalientes.Text = "Asignación de Producción";
@@ -189,7 +189,7 @@
             // btnRemover
             // 
             this.btnRemover.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemover.Location = new System.Drawing.Point(522, 70);
+            this.btnRemover.Location = new System.Drawing.Point(504, 64);
             this.btnRemover.Name = "btnRemover";
             this.btnRemover.Size = new System.Drawing.Size(59, 35);
             this.btnRemover.TabIndex = 36;
@@ -200,7 +200,7 @@
             // btnAgregar
             // 
             this.btnAgregar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.Location = new System.Drawing.Point(457, 70);
+            this.btnAgregar.Location = new System.Drawing.Point(439, 64);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(59, 35);
             this.btnAgregar.TabIndex = 35;
@@ -221,59 +221,44 @@
             this.dgvAsignacion.Name = "dgvAsignacion";
             this.dgvAsignacion.ReadOnly = true;
             this.dgvAsignacion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAsignacion.Size = new System.Drawing.Size(593, 202);
+            this.dgvAsignacion.Size = new System.Drawing.Size(548, 202);
             this.dgvAsignacion.TabIndex = 34;
             this.dgvAsignacion.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvAsignacion_CellFormatting);
             // 
-            // NombreTipoLadrillo
-            // 
-            this.NombreTipoLadrillo.HeaderText = "Nombre Tipo de Ladrillo";
-            this.NombreTipoLadrillo.Name = "NombreTipoLadrillo";
-            this.NombreTipoLadrillo.ReadOnly = true;
-            this.NombreTipoLadrillo.Width = 300;
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.DataPropertyName = "cantidad";
-            this.Cantidad.HeaderText = "Cantidad";
-            this.Cantidad.Name = "Cantidad";
-            this.Cantidad.ReadOnly = true;
-            this.Cantidad.Width = 250;
-            // 
             // cboNombreTipoLadrillo
             // 
-            this.cboNombreTipoLadrillo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboNombreTipoLadrillo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboNombreTipoLadrillo.FormattingEnabled = true;
-            this.cboNombreTipoLadrillo.Location = new System.Drawing.Point(216, 52);
+            this.cboNombreTipoLadrillo.Location = new System.Drawing.Point(217, 44);
             this.cboNombreTipoLadrillo.Name = "cboNombreTipoLadrillo";
-            this.cboNombreTipoLadrillo.Size = new System.Drawing.Size(189, 23);
+            this.cboNombreTipoLadrillo.Size = new System.Drawing.Size(189, 25);
             this.cboNombreTipoLadrillo.TabIndex = 33;
             // 
             // lblNombreTipoLadrillo
             // 
             this.lblNombreTipoLadrillo.AutoSize = true;
-            this.lblNombreTipoLadrillo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreTipoLadrillo.Location = new System.Drawing.Point(56, 55);
+            this.lblNombreTipoLadrillo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreTipoLadrillo.Location = new System.Drawing.Point(39, 47);
             this.lblNombreTipoLadrillo.Name = "lblNombreTipoLadrillo";
-            this.lblNombreTipoLadrillo.Size = new System.Drawing.Size(154, 15);
+            this.lblNombreTipoLadrillo.Size = new System.Drawing.Size(175, 17);
             this.lblNombreTipoLadrillo.TabIndex = 32;
             this.lblNombreTipoLadrillo.Text = "Nombre del Tipo de Ladrillo";
             // 
             // numNroAproxLadrillos
             // 
-            this.numNroAproxLadrillos.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numNroAproxLadrillos.Location = new System.Drawing.Point(216, 88);
+            this.numNroAproxLadrillos.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numNroAproxLadrillos.Location = new System.Drawing.Point(217, 80);
             this.numNroAproxLadrillos.Name = "numNroAproxLadrillos";
-            this.numNroAproxLadrillos.Size = new System.Drawing.Size(91, 23);
+            this.numNroAproxLadrillos.Size = new System.Drawing.Size(91, 25);
             this.numNroAproxLadrillos.TabIndex = 31;
             // 
             // lblNro
             // 
             this.lblNro.AutoSize = true;
-            this.lblNro.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNro.Location = new System.Drawing.Point(57, 90);
+            this.lblNro.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNro.Location = new System.Drawing.Point(40, 82);
             this.lblNro.Name = "lblNro";
-            this.lblNro.Size = new System.Drawing.Size(153, 15);
+            this.lblNro.Size = new System.Drawing.Size(171, 17);
             this.lblNro.TabIndex = 23;
             this.lblNro.Text = "N° Aproximado de Ladrillos";
             // 
@@ -283,17 +268,17 @@
             this.gbDatosOperario.Controls.Add(this.txtIDPlan);
             this.gbDatosOperario.Controls.Add(this.lblIDPlan);
             this.gbDatosOperario.Controls.Add(this.lblAnho);
-            this.gbDatosOperario.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbDatosOperario.Location = new System.Drawing.Point(69, 67);
+            this.gbDatosOperario.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbDatosOperario.Location = new System.Drawing.Point(41, 51);
             this.gbDatosOperario.Name = "gbDatosOperario";
-            this.gbDatosOperario.Size = new System.Drawing.Size(623, 106);
+            this.gbDatosOperario.Size = new System.Drawing.Size(583, 113);
             this.gbDatosOperario.TabIndex = 41;
             this.gbDatosOperario.TabStop = false;
             this.gbDatosOperario.Text = "Datos del Plan de Producción";
             // 
             // txtAnho
             // 
-            this.txtAnho.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAnho.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAnho.FormattingEnabled = true;
             this.txtAnho.Items.AddRange(new object[] {
             "2021",
@@ -308,44 +293,59 @@
             "2012",
             "2011",
             "2010"});
-            this.txtAnho.Location = new System.Drawing.Point(258, 60);
+            this.txtAnho.Location = new System.Drawing.Point(258, 63);
             this.txtAnho.Name = "txtAnho";
-            this.txtAnho.Size = new System.Drawing.Size(116, 23);
+            this.txtAnho.Size = new System.Drawing.Size(116, 25);
             this.txtAnho.TabIndex = 25;
             // 
             // txtIDPlan
             // 
-            this.txtIDPlan.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIDPlan.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIDPlan.Location = new System.Drawing.Point(258, 32);
             this.txtIDPlan.Name = "txtIDPlan";
-            this.txtIDPlan.Size = new System.Drawing.Size(84, 23);
+            this.txtIDPlan.Size = new System.Drawing.Size(84, 25);
             this.txtIDPlan.TabIndex = 24;
             // 
             // lblIDPlan
             // 
             this.lblIDPlan.AutoSize = true;
-            this.lblIDPlan.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIDPlan.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIDPlan.Location = new System.Drawing.Point(236, 35);
             this.lblIDPlan.Name = "lblIDPlan";
-            this.lblIDPlan.Size = new System.Drawing.Size(18, 15);
+            this.lblIDPlan.Size = new System.Drawing.Size(20, 17);
             this.lblIDPlan.TabIndex = 23;
             this.lblIDPlan.Text = "ID";
             // 
             // lblAnho
             // 
             this.lblAnho.AutoSize = true;
-            this.lblAnho.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAnho.Location = new System.Drawing.Point(223, 63);
+            this.lblAnho.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAnho.Location = new System.Drawing.Point(223, 66);
             this.lblAnho.Name = "lblAnho";
-            this.lblAnho.Size = new System.Drawing.Size(29, 15);
+            this.lblAnho.Size = new System.Drawing.Size(31, 17);
             this.lblAnho.TabIndex = 21;
             this.lblAnho.Text = "Año";
+            // 
+            // NombreTipoLadrillo
+            // 
+            this.NombreTipoLadrillo.HeaderText = "Nombre Tipo de Ladrillo";
+            this.NombreTipoLadrillo.Name = "NombreTipoLadrillo";
+            this.NombreTipoLadrillo.ReadOnly = true;
+            this.NombreTipoLadrillo.Width = 300;
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.DataPropertyName = "cantidad";
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.Name = "Cantidad";
+            this.Cantidad.ReadOnly = true;
+            this.Cantidad.Width = 200;
             // 
             // frmGestionarPlanProduccion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(763, 602);
+            this.ClientSize = new System.Drawing.Size(669, 583);
             this.ControlBox = false;
             this.Controls.Add(this.gbLotesSalientes);
             this.Controls.Add(this.gbDatosOperario);

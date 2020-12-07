@@ -1215,6 +1215,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\logout.png" />
     <None Include="Connected Services\PlanProduccionWS\configuration91.svcinfo" />
     <None Include="Connected Services\PlanProduccionWS\configuration.svcinfo" />
     <None Include="Connected Services\PlanProduccionWS\Reference.svcmap">

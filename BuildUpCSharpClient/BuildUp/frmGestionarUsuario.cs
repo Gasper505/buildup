@@ -5,15 +5,20 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Net;
+using System.Net.Mail;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace BuildUp
 {
+
+
     public partial class frmGestionarUsuario : Form
     {
-        String ruta;
+        string ruta;
         UsuarioWS.UsuarioWSClient daoUsuario;
         JefeAreaWS.JefeAreaWSClient daoJefeArea;
         SupervisorWS.SupervisorWSClient daoSupervisor;
@@ -78,7 +83,7 @@ namespace BuildUp
                     cbRol.Enabled = false;
                     pbFoto.Enabled = false;
                     btAgregarFoto.Enabled = false;
-
+                    txtUsername.Enabled = false;
                     exclusiveComboBox.Visible = false;
                     exclusiveLabel.Visible = false;
                     break;
@@ -99,7 +104,7 @@ namespace BuildUp
                     cbRol.Enabled = true;
                     pbFoto.Enabled = true;
                     btAgregarFoto.Enabled = true;
-
+                    txtUsername.Enabled = true;
                     exclusiveComboBox.Enabled = true;
                     break;
                 case Estado.Modificacion:
@@ -119,6 +124,7 @@ namespace BuildUp
                     cbRol.Enabled = false;
                     pbFoto.Enabled = true;
                     btAgregarFoto.Enabled = true;
+                    txtUsername.Enabled = true;
 
                     exclusiveComboBox.Enabled = true;
                     break;
@@ -175,7 +181,7 @@ namespace BuildUp
             if (pbFoto.Image == null)
             {
                 MessageBox.Show("Debe ingresar una foto para el Usuario", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
+                return;
             }
 
 
@@ -183,6 +189,7 @@ namespace BuildUp
             if (dr == DialogResult.Yes)
             {
                 int result = 0;
+                string passwordGenerado = RandomString(8);
 
                 if (cbRol.Text == "Operario")
                 {
@@ -204,7 +211,7 @@ namespace BuildUp
                     operario.foto= br.ReadBytes((int)fs.Length);
                     fs.Close();
 
-                    result = daoOperario.insertarOperario(operario);
+                    result = daoOperario.insertarOperario(operario, txtUsername.Text, passwordGenerado);
                     txtID.Text = result.ToString();
                 }
                 else if (cbRol.Text == "Supervisor")
@@ -227,7 +234,7 @@ namespace BuildUp
                     supervisor.foto = br.ReadBytes((int)fs.Length);
                     fs.Close();
 
-                    result = daoSupervisor.insertarSupervisor(supervisor);
+                    result = daoSupervisor.insertarSupervisor(supervisor, txtUsername.Text, passwordGenerado);
                     txtID.Text = result.ToString();
                 }
                 else if (cbRol.Text == "Ingeniero")
@@ -248,7 +255,7 @@ namespace BuildUp
                     ingeniero.foto = br.ReadBytes((int)fs.Length);
                     fs.Close();
 
-                    result = daoIngeniero.insertarIngeniero(ingeniero);
+                    result = daoIngeniero.insertarIngeniero(ingeniero, txtUsername.Text, passwordGenerado);
                     txtID.Text = result.ToString();
                 }
                 else if (cbRol.Text == "Jefe de Área")
@@ -268,13 +275,40 @@ namespace BuildUp
                     jefeArea.foto = br.ReadBytes((int)fs.Length);
                     fs.Close();
 
-                    result = daoJefeArea.insertarJefeArea(jefeArea);
+                    result = daoJefeArea.insertarJefeArea(jefeArea, txtUsername.Text, passwordGenerado);
                     txtID.Text = result.ToString();
                 }
 
+                
+
                 if (result != 0)
                 {
-                    MessageBox.Show("El registro ha sido exitoso", "Mensaje de Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //Envío de email con credenciales
+                    var fromAddress = new MailAddress("buildup.system@gmail.com", "BuildUpSystem");
+                    var toAddress = new MailAddress(txtCorreo.Text, txtNombre.Text + txtApellidos.Text);
+                    const string fromPassword = "elepedos";
+                    const string subject = "Credenciales de acceso al sistema BuildUp";
+                    string body = "\nUsuario: " + txtUsername.Text + "\nContraseña: " + passwordGenerado;
+
+                    var smtp = new SmtpClient
+                    {
+                        Host = "smtp.gmail.com",
+                        Port = 587,
+                        EnableSsl = true,
+                        DeliveryMethod = SmtpDeliveryMethod.Network,
+                        UseDefaultCredentials = false,
+                        Credentials = new NetworkCredential(fromAddress.Address, fromPassword)
+                    };
+                    using (var message = new MailMessage(fromAddress, toAddress)
+                    {
+                        Subject = subject,
+                        Body = body
+                    })
+                    {
+                        smtp.Send(message);
+                    }
+
+                    MessageBox.Show("El registro ha sido exitoso. Se ha enviado un correo electrónico al nuevo usuario con sus credenciales.", "Mensaje de Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     txtID.Text = "";
                     txtNombre.Text = "";
                     txtApellidos.Text = "";
@@ -284,6 +318,7 @@ namespace BuildUp
                     txtCorreo.Text = "";
                     cbRol.Text = "";
                     pbFoto.Image = null;
+                    txtUsername.Text = "";
                     exclusiveLabel.Visible = false;
                     exclusiveComboBox.Visible = false;
                     EstablecerEstadoComponentes(Estado.Inicial);
@@ -292,9 +327,9 @@ namespace BuildUp
                 {
                     MessageBox.Show("Error en el proceso", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+
+                
             }
-
-
         }
 
         private void btBuscar_Click(object sender, EventArgs e)
@@ -306,8 +341,8 @@ namespace BuildUp
             dtpFinContrato.Text = "";
             txtNumero.Text = "";
             txtCorreo.Text = "";
-            cbRol.Text = "";         
-
+            cbRol.Text = "";
+            txtUsername.Text = "";
 
             if (pbFoto.Image != null)
             {
@@ -354,8 +389,7 @@ namespace BuildUp
                     exclusiveComboBox.Text = daoIngeniero.obtenerEspecialidadIngeniero(usuario.idPersona);
                 }
 
-
-                //falta establecer campo exclusivo de rol.
+                
                 EstablecerEstadoComponentes(Estado.Modificacion);
             }
 
@@ -528,6 +562,7 @@ namespace BuildUp
                     txtCorreo.Text = "";
                     cbRol.Text = "";
                     pbFoto.Image = null;
+                    txtUsername.Text = "";
                     exclusiveLabel.Visible = false;
                     exclusiveComboBox.Visible = false;
                     EstablecerEstadoComponentes(Estado.Inicial);
@@ -576,6 +611,7 @@ namespace BuildUp
                     txtCorreo.Text = "";
                     cbRol.Text = "";
                     pbFoto.Image = null;
+                    txtUsername.Text = "";
                     exclusiveLabel.Visible = false;
                     exclusiveComboBox.Visible = false;
                     EstablecerEstadoComponentes(Estado.Inicial);
@@ -607,6 +643,7 @@ namespace BuildUp
             txtCorreo.Text = "";
             cbRol.Text = "";
             pbFoto.Image = null;
+            txtUsername.Text = "";
             exclusiveLabel.Visible = false;
             exclusiveComboBox.Visible = false;
             EstablecerEstadoComponentes(Estado.Inicial);
@@ -673,6 +710,25 @@ namespace BuildUp
                     exclusiveComboBox.Visible = true;
                     break;
             }
+        }
+
+        static string RandomString(int length)
+        {
+            const string valid = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+            StringBuilder res = new StringBuilder();
+            using (RNGCryptoServiceProvider rng = new RNGCryptoServiceProvider())
+            {
+                byte[] uintBuffer = new byte[sizeof(uint)];
+
+                while (length-- > 0)
+                {
+                    rng.GetBytes(uintBuffer);
+                    uint num = BitConverter.ToUInt32(uintBuffer, 0);
+                    res.Append(valid[(int)(num % (uint)valid.Length)]);
+                }
+            }
+
+            return res.ToString();
         }
     }
 

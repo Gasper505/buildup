@@ -36,10 +36,10 @@ public class SupervisorWS {
     }
     
     @WebMethod(operationName = "insertarSupervisor")
-    public int insertarSupervisor(@WebParam(name="supervisor") Supervisor supervisor) {
+    public int insertarSupervisor(@WebParam(name="supervisor") Supervisor supervisor, @WebParam(name="username") String username, @WebParam(name="password") String password) {
         int resultado =0;
         try{
-            resultado = daoSupervisor.insertar(supervisor);
+            resultado = daoSupervisor.insertar(supervisor,username,password);
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }

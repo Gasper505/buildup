@@ -7,7 +7,7 @@ import pe.edu.pucp.ta.model.Ingeniero;
 
 public interface IngenieroDAO {
     
-    int insertar(Ingeniero ing);
+    int insertar(Ingeniero ing, String username, String password);
     int actualizar_estado(int idIng, boolean activo);
     int modificar(Ingeniero ing);
     int eliminar(int idIng);

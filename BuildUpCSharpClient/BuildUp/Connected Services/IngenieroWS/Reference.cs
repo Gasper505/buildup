@@ -337,11 +337,21 @@ namespace BuildUp.IngenieroWS {
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public BuildUp.IngenieroWS.ingeniero ingeniero;
         
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string username;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string password;
+        
         public insertarIngenieroRequest() {
         }
         
-        public insertarIngenieroRequest(BuildUp.IngenieroWS.ingeniero ingeniero) {
+        public insertarIngenieroRequest(BuildUp.IngenieroWS.ingeniero ingeniero, string username, string password) {
             this.ingeniero = ingeniero;
+            this.username = username;
+            this.password = password;
         }
     }
     
@@ -559,9 +569,11 @@ namespace BuildUp.IngenieroWS {
             return base.Channel.insertarIngeniero(request);
         }
         
-        public int insertarIngeniero(BuildUp.IngenieroWS.ingeniero ingeniero) {
+        public int insertarIngeniero(BuildUp.IngenieroWS.ingeniero ingeniero, string username, string password) {
             BuildUp.IngenieroWS.insertarIngenieroRequest inValue = new BuildUp.IngenieroWS.insertarIngenieroRequest();
             inValue.ingeniero = ingeniero;
+            inValue.username = username;
+            inValue.password = password;
             BuildUp.IngenieroWS.insertarIngenieroResponse retVal = ((BuildUp.IngenieroWS.IngenieroWS)(this)).insertarIngeniero(inValue);
             return retVal.@return;
         }
@@ -571,9 +583,11 @@ namespace BuildUp.IngenieroWS {
             return base.Channel.insertarIngenieroAsync(request);
         }
         
-        public System.Threading.Tasks.Task<BuildUp.IngenieroWS.insertarIngenieroResponse> insertarIngenieroAsync(BuildUp.IngenieroWS.ingeniero ingeniero) {
+        public System.Threading.Tasks.Task<BuildUp.IngenieroWS.insertarIngenieroResponse> insertarIngenieroAsync(BuildUp.IngenieroWS.ingeniero ingeniero, string username, string password) {
             BuildUp.IngenieroWS.insertarIngenieroRequest inValue = new BuildUp.IngenieroWS.insertarIngenieroRequest();
             inValue.ingeniero = ingeniero;
+            inValue.username = username;
+            inValue.password = password;
             return ((BuildUp.IngenieroWS.IngenieroWS)(this)).insertarIngenieroAsync(inValue);
         }
         

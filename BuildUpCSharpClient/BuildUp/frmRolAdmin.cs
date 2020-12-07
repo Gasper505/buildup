@@ -17,6 +17,7 @@ namespace BuildUp
         {
             InitializeComponent();
             lblNombres.Text = frmLogIn.Usuario.nombres + ' ' + frmLogIn.Usuario.apellidos;
+            lblUsername.Text = frmLogIn.Usuario.username;
 
             if (pbFoto.Image != null)
             {
@@ -45,5 +46,6 @@ namespace BuildUp
             this.Hide();
             frmLog.ShowDialog();
         }
+
     }
 }

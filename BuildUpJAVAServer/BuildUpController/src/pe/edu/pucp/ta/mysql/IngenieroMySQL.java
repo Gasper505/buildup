@@ -19,13 +19,13 @@ public class IngenieroMySQL implements IngenieroDAO{
     Statement st;
 
     @Override
-    public int insertar(Ingeniero ing) {
+    public int insertar(Ingeniero ing, String username, String password) {
         int resultado=0;
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.urlMySQL, 
                     DBManager.user, DBManager.password);
-            String sql = "{call INSERTAR_INGENIERO(?,?,?,?,?,?,?,?,?,?)}";
+            String sql = "{call INSERTAR_INGENIERO(?,?,?,?,?,?,?,?,?,?,?,?)}";
             cs = con.prepareCall(sql);
             cs.registerOutParameter("_ID_INGENIERO", java.sql.Types.INTEGER);
             cs.setString("_NOMBRES", ing.getNombres());
@@ -37,7 +37,10 @@ public class IngenieroMySQL implements IngenieroDAO{
             cs.setDate("_FECHA_FIN_CONTRATO",new java.sql.Date(ing.getFechaFinContrato().getTime()));
             cs.setBytes("_PHOTO", ing.getFoto());
             cs.setString("_ESPECIALIDAD", ing.getEspecialidad());
+            cs.setString("_USERNAME",username);
+            cs.setString("_PASSWORD",password);
             cs.executeUpdate();
+            
             ing.setIdPersona(cs.getInt("_ID_INGENIERO"));
             resultado=cs.getInt("_ID_INGENIERO");         
         }catch(Exception ex){

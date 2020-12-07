@@ -36,10 +36,10 @@ public class JefeAreaWS {
     }
     
     @WebMethod(operationName = "insertarJefeArea")
-    public int insertarJefeArea(@WebParam(name="jefeArea") JefeArea jefeArea) {
+    public int insertarJefeArea(@WebParam(name="jefeArea") JefeArea jefeArea, @WebParam(name="username") String username, @WebParam(name="password") String password) {
         int resultado =0;
         try{
-            resultado = daoJefeArea.insertar(jefeArea);
+            resultado = daoJefeArea.insertar(jefeArea, username, password);
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }

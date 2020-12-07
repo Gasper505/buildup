@@ -35,10 +35,10 @@ private IngenieroDAO daoIngeniero;
     }
     
     @WebMethod(operationName = "insertarIngeniero")
-    public int insertarIngeniero(@WebParam(name="ingeniero") Ingeniero ingeniero) {
+    public int insertarIngeniero(@WebParam(name="ingeniero") Ingeniero ingeniero, @WebParam(name="username") String username, @WebParam(name="password") String password) {
         int resultado =0;
         try{
-            resultado = daoIngeniero.insertar(ingeniero);
+            resultado = daoIngeniero.insertar(ingeniero,username,password);
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }

@@ -7,7 +7,7 @@ import pe.edu.pucp.ta.model.Operario;
 
 public interface OperarioDAO {
     
-    int insertar(Operario op);
+    int insertar(Operario op, String username, String password);
     int actualizar_estado(int idOp,boolean activo);
     int modificar(Operario op);
     int eliminar(int idOp);

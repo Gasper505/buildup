@@ -20,13 +20,13 @@ public class OperarioMySQL implements OperarioDAO{
     Statement st;
 
     @Override
-    public int insertar(Operario op) {
+    public int insertar(Operario op, String username, String password) {
                 int resultado=0;
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.urlMySQL, 
                     DBManager.user, DBManager.password);
-            String sql = "{call INSERTAR_OPERARIO(?,?,?,?,?,?,?,?,?,?)}";
+            String sql = "{call INSERTAR_OPERARIO(?,?,?,?,?,?,?,?,?,?,?,?)}";
             cs = con.prepareCall(sql);
             cs.registerOutParameter("_ID_OPERARIO", java.sql.Types.INTEGER);
             cs.setString("_NOMBRES", op.getNombres());
@@ -38,7 +38,10 @@ public class OperarioMySQL implements OperarioDAO{
             cs.setDate("_FECHA_FIN_CONTRATO",new java.sql.Date(op.getFechaFinContrato().getTime()));
             cs.setInt("_ID_LINEA_PRODUCCION", op.getLineaProduccion().getIdLineaProduccion());
             cs.setBytes("_PHOTO", op.getFoto());
+            cs.setString("_USERNAME",username);
+            cs.setString("_PASSWORD",password);
             cs.executeUpdate();
+            
             op.setIdPersona(cs.getInt("_ID_OPERARIO"));
             resultado=cs.getInt("_ID_OPERARIO");       
         }catch(Exception ex){

@@ -549,11 +549,21 @@ namespace BuildUp.OperarioWS {
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public BuildUp.OperarioWS.operario operario;
         
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string username;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string password;
+        
         public insertarOperarioRequest() {
         }
         
-        public insertarOperarioRequest(BuildUp.OperarioWS.operario operario) {
+        public insertarOperarioRequest(BuildUp.OperarioWS.operario operario, string username, string password) {
             this.operario = operario;
+            this.username = username;
+            this.password = password;
         }
     }
     
@@ -771,9 +781,11 @@ namespace BuildUp.OperarioWS {
             return base.Channel.insertarOperario(request);
         }
         
-        public int insertarOperario(BuildUp.OperarioWS.operario operario) {
+        public int insertarOperario(BuildUp.OperarioWS.operario operario, string username, string password) {
             BuildUp.OperarioWS.insertarOperarioRequest inValue = new BuildUp.OperarioWS.insertarOperarioRequest();
             inValue.operario = operario;
+            inValue.username = username;
+            inValue.password = password;
             BuildUp.OperarioWS.insertarOperarioResponse retVal = ((BuildUp.OperarioWS.OperarioWS)(this)).insertarOperario(inValue);
             return retVal.@return;
         }
@@ -783,9 +795,11 @@ namespace BuildUp.OperarioWS {
             return base.Channel.insertarOperarioAsync(request);
         }
         
-        public System.Threading.Tasks.Task<BuildUp.OperarioWS.insertarOperarioResponse> insertarOperarioAsync(BuildUp.OperarioWS.operario operario) {
+        public System.Threading.Tasks.Task<BuildUp.OperarioWS.insertarOperarioResponse> insertarOperarioAsync(BuildUp.OperarioWS.operario operario, string username, string password) {
             BuildUp.OperarioWS.insertarOperarioRequest inValue = new BuildUp.OperarioWS.insertarOperarioRequest();
             inValue.operario = operario;
+            inValue.username = username;
+            inValue.password = password;
             return ((BuildUp.OperarioWS.OperarioWS)(this)).insertarOperarioAsync(inValue);
         }
         

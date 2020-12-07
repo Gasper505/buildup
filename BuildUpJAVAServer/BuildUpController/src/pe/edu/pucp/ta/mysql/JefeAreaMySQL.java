@@ -19,12 +19,12 @@ public class JefeAreaMySQL implements JefeAreaDAO{
     Statement st;
     
     @Override
-    public int insertar(JefeArea jefe) {
+    public int insertar(JefeArea jefe, String username, String password) {
         int resultado=0;
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.password);
-            String sql = "{call INSERTAR_JEFE_AREA(?,?,?,?,?,?,?,?,?,?)}";
+            String sql = "{call INSERTAR_JEFE_AREA(?,?,?,?,?,?,?,?,?,?,?)}";
             cs = con.prepareCall(sql);
             cs.registerOutParameter("_ID_JEFE_AREA", java.sql.Types.INTEGER);
             cs.setString("_NOMBRES", jefe.getNombres());
@@ -35,7 +35,9 @@ public class JefeAreaMySQL implements JefeAreaDAO{
             cs.setString("_ROL", jefe.getRol());
             cs.setDate("_FECHA_FIN_CONTRATO", new java.sql.Date(jefe.getFechaFinContrato().getTime()));
             cs.setBytes("_PHOTO", jefe.getFoto());
-            cs.setBytes("_PHOTO_FIRMA", jefe.getFoto_firma());
+            //cs.setBytes("_PHOTO_FIRMA", jefe.getFoto_firma());
+            cs.setString("_USERNAME", username);
+            cs.setString("_PASSWORD", password);
             cs.executeUpdate();
             jefe.setIdPersona(cs.getInt("_ID_JEFE_AREA"));
             resultado=cs.getInt("_ID_JEFE_AREA");
