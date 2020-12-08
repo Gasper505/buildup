@@ -35,7 +35,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtIDmerma = new System.Windows.Forms.TextBox();
+            this.txtIDRegMerma = new System.Windows.Forms.TextBox();
             this.cboTipoMerma = new System.Windows.Forms.ComboBox();
             this.txtCantidad = new System.Windows.Forms.TextBox();
             this.dtpFechaMerma = new System.Windows.Forms.DateTimePicker();
@@ -63,7 +63,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(197, 42);
+            this.label1.Location = new System.Drawing.Point(197, 27);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(20, 17);
             this.label1.TabIndex = 1;
@@ -73,7 +73,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(72, 51);
+            this.label2.Location = new System.Drawing.Point(72, 37);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(145, 17);
             this.label2.TabIndex = 2;
@@ -83,7 +83,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(91, 91);
+            this.label3.Location = new System.Drawing.Point(91, 68);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(126, 17);
             this.label3.TabIndex = 3;
@@ -93,7 +93,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(118, 78);
+            this.label4.Location = new System.Drawing.Point(118, 58);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(99, 17);
             this.label4.TabIndex = 4;
@@ -103,7 +103,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(114, 116);
+            this.label5.Location = new System.Drawing.Point(114, 89);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(103, 17);
             this.label5.TabIndex = 5;
@@ -113,25 +113,25 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(104, 157);
+            this.label6.Location = new System.Drawing.Point(104, 123);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(113, 17);
             this.label6.TabIndex = 6;
             this.label6.Text = "Fecha de Registro";
             // 
-            // txtIDmerma
+            // txtIDRegMerma
             // 
-            this.txtIDmerma.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIDmerma.Location = new System.Drawing.Point(223, 39);
-            this.txtIDmerma.Name = "txtIDmerma";
-            this.txtIDmerma.Size = new System.Drawing.Size(100, 25);
-            this.txtIDmerma.TabIndex = 7;
+            this.txtIDRegMerma.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIDRegMerma.Location = new System.Drawing.Point(223, 24);
+            this.txtIDRegMerma.Name = "txtIDRegMerma";
+            this.txtIDRegMerma.Size = new System.Drawing.Size(100, 25);
+            this.txtIDRegMerma.TabIndex = 7;
             // 
             // cboTipoMerma
             // 
             this.cboTipoMerma.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboTipoMerma.FormattingEnabled = true;
-            this.cboTipoMerma.Location = new System.Drawing.Point(223, 75);
+            this.cboTipoMerma.Location = new System.Drawing.Point(223, 55);
             this.cboTipoMerma.Name = "cboTipoMerma";
             this.cboTipoMerma.Size = new System.Drawing.Size(143, 25);
             this.cboTipoMerma.TabIndex = 8;
@@ -139,7 +139,7 @@
             // txtCantidad
             // 
             this.txtCantidad.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCantidad.Location = new System.Drawing.Point(223, 113);
+            this.txtCantidad.Location = new System.Drawing.Point(223, 86);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(100, 25);
             this.txtCantidad.TabIndex = 9;
@@ -147,7 +147,8 @@
             // dtpFechaMerma
             // 
             this.dtpFechaMerma.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFechaMerma.Location = new System.Drawing.Point(223, 151);
+            this.dtpFechaMerma.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFechaMerma.Location = new System.Drawing.Point(223, 117);
             this.dtpFechaMerma.Name = "dtpFechaMerma";
             this.dtpFechaMerma.Size = new System.Drawing.Size(232, 25);
             this.dtpFechaMerma.TabIndex = 12;
@@ -169,7 +170,7 @@
             this.btnRegresar});
             this.toolStrip2.Location = new System.Drawing.Point(0, 0);
             this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(620, 25);
+            this.toolStrip2.Size = new System.Drawing.Size(613, 25);
             this.toolStrip2.TabIndex = 41;
             this.toolStrip2.Text = "toolStrip2";
             // 
@@ -264,15 +265,15 @@
             this.groupBox1.Controls.Add(this.dtpFechaMerma);
             this.groupBox1.Controls.Add(this.txtCantidad);
             this.groupBox1.Controls.Add(this.cboTipoMerma);
-            this.groupBox1.Controls.Add(this.txtIDmerma);
+            this.groupBox1.Controls.Add(this.txtIDRegMerma);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(44, 48);
+            this.groupBox1.Location = new System.Drawing.Point(39, 48);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(532, 206);
+            this.groupBox1.Size = new System.Drawing.Size(532, 163);
             this.groupBox1.TabIndex = 42;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del Acontecimiento de Merma";
@@ -284,9 +285,9 @@
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(44, 260);
+            this.groupBox2.Location = new System.Drawing.Point(39, 217);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(532, 141);
+            this.groupBox2.Size = new System.Drawing.Size(532, 113);
             this.groupBox2.TabIndex = 43;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos del Supervisor Encargado";
@@ -294,7 +295,7 @@
             // txtSupervisor
             // 
             this.txtSupervisor.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSupervisor.Location = new System.Drawing.Point(223, 48);
+            this.txtSupervisor.Location = new System.Drawing.Point(223, 34);
             this.txtSupervisor.Name = "txtSupervisor";
             this.txtSupervisor.Size = new System.Drawing.Size(206, 25);
             this.txtSupervisor.TabIndex = 5;
@@ -302,7 +303,7 @@
             // txtLineaProduccion
             // 
             this.txtLineaProduccion.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLineaProduccion.Location = new System.Drawing.Point(223, 88);
+            this.txtLineaProduccion.Location = new System.Drawing.Point(223, 65);
             this.txtLineaProduccion.Name = "txtLineaProduccion";
             this.txtLineaProduccion.Size = new System.Drawing.Size(178, 25);
             this.txtLineaProduccion.TabIndex = 4;
@@ -311,7 +312,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(620, 446);
+            this.ClientSize = new System.Drawing.Size(613, 364);
             this.ControlBox = false;
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -339,7 +340,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtIDmerma;
+        private System.Windows.Forms.TextBox txtIDRegMerma;
         private System.Windows.Forms.ComboBox cboTipoMerma;
         private System.Windows.Forms.TextBox txtCantidad;
         private System.Windows.Forms.DateTimePicker dtpFechaMerma;

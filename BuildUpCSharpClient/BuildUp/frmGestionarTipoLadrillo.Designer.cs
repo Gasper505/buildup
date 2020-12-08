@@ -66,7 +66,7 @@
             // txtNombre
             // 
             this.txtNombre.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(226, 75);
+            this.txtNombre.Location = new System.Drawing.Point(226, 72);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(193, 25);
             this.txtNombre.TabIndex = 15;
@@ -75,7 +75,7 @@
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(45, 78);
+            this.lblNombre.Location = new System.Drawing.Point(45, 72);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(175, 17);
             this.lblNombre.TabIndex = 12;
@@ -103,7 +103,7 @@
             // 
             this.lblLargo.AutoSize = true;
             this.lblLargo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLargo.Location = new System.Drawing.Point(80, 37);
+            this.lblLargo.Location = new System.Drawing.Point(74, 37);
             this.lblLargo.Name = "lblLargo";
             this.lblLargo.Size = new System.Drawing.Size(42, 17);
             this.lblLargo.TabIndex = 16;
@@ -133,7 +133,7 @@
             // 
             this.lblAncho.AutoSize = true;
             this.lblAncho.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAncho.Location = new System.Drawing.Point(74, 67);
+            this.lblAncho.Location = new System.Drawing.Point(72, 67);
             this.lblAncho.Name = "lblAncho";
             this.lblAncho.Size = new System.Drawing.Size(44, 17);
             this.lblAncho.TabIndex = 19;
@@ -153,7 +153,7 @@
             // 
             this.lblAltura.AutoSize = true;
             this.lblAltura.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAltura.Location = new System.Drawing.Point(77, 97);
+            this.lblAltura.Location = new System.Drawing.Point(74, 97);
             this.lblAltura.Name = "lblAltura";
             this.lblAltura.Size = new System.Drawing.Size(42, 17);
             this.lblAltura.TabIndex = 22;

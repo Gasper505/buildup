@@ -56,7 +56,7 @@
             // txtNombre
             // 
             this.txtNombre.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(75, 34);
+            this.txtNombre.Location = new System.Drawing.Point(77, 40);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(243, 25);
             this.txtNombre.TabIndex = 16;
@@ -65,7 +65,7 @@
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(12, 37);
+            this.lblNombre.Location = new System.Drawing.Point(14, 43);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(57, 17);
             this.lblNombre.TabIndex = 15;
@@ -74,7 +74,7 @@
             // btnBuscar
             // 
             this.btnBuscar.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(333, 27);
+            this.btnBuscar.Location = new System.Drawing.Point(326, 33);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(134, 35);
             this.btnBuscar.TabIndex = 13;
@@ -85,7 +85,7 @@
             // btnSeleccionar
             // 
             this.btnSeleccionar.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSeleccionar.Location = new System.Drawing.Point(152, 423);
+            this.btnSeleccionar.Location = new System.Drawing.Point(152, 414);
             this.btnSeleccionar.Name = "btnSeleccionar";
             this.btnSeleccionar.Size = new System.Drawing.Size(262, 42);
             this.btnSeleccionar.TabIndex = 19;
@@ -101,12 +101,12 @@
             this.dgvLineasProduccion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IDLinea,
             this.Nombre});
-            this.dgvLineasProduccion.Location = new System.Drawing.Point(41, 152);
+            this.dgvLineasProduccion.Location = new System.Drawing.Point(41, 130);
             this.dgvLineasProduccion.MultiSelect = false;
             this.dgvLineasProduccion.Name = "dgvLineasProduccion";
             this.dgvLineasProduccion.ReadOnly = true;
             this.dgvLineasProduccion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvLineasProduccion.Size = new System.Drawing.Size(482, 247);
+            this.dgvLineasProduccion.Size = new System.Drawing.Size(482, 269);
             this.dgvLineasProduccion.TabIndex = 18;
             // 
             // IDLinea
@@ -129,7 +129,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(563, 485);
+            this.ClientSize = new System.Drawing.Size(563, 472);
             this.Controls.Add(this.gbBusqueda);
             this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.dgvLineasProduccion);

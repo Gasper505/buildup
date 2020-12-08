@@ -63,9 +63,9 @@
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.lblTitulo);
             this.panel1.Controls.Add(this.panel3);
-            this.panel1.Location = new System.Drawing.Point(0, 92);
+            this.panel1.Location = new System.Drawing.Point(0, 105);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(823, 384);
+            this.panel1.Size = new System.Drawing.Size(823, 394);
             this.panel1.TabIndex = 1;
             // 
             // pictureBox1
@@ -199,9 +199,9 @@
             // 
             this.pbFoto.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.pbFoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbFoto.Location = new System.Drawing.Point(620, 12);
+            this.pbFoto.Location = new System.Drawing.Point(607, 12);
             this.pbFoto.Name = "pbFoto";
-            this.pbFoto.Size = new System.Drawing.Size(62, 74);
+            this.pbFoto.Size = new System.Drawing.Size(75, 87);
             this.pbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbFoto.TabIndex = 19;
             this.pbFoto.TabStop = false;

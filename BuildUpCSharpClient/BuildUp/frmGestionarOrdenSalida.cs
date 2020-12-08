@@ -281,16 +281,20 @@ namespace BuildUp
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            txtIDOrden.Text = "";
-            dtpFechaRegistro.Value = DateTime.Now;
-            txtIDOperario.Text = "";
-            txtNombres.Text = "";
-            txtApellidos.Text = "";
-            cboNombreTipoLadrillo.Text = "";
-            dgvLotes.DataSource = null;
-            numNroAproxLadrillos.Value = 0;
-            lineasOs = new BindingList<OSalidaWS.lineaOrdenSalida>();
-            EstablecerEstadoComponentes(Estado.Inicial);
+            DialogResult dr = MessageBox.Show("Esta acción limpiará todos los campos llenados, echando a perder cualquier trabajo realizado.\n¿Está seguro que desea continuar?", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (dr == DialogResult.Yes)
+            {
+                txtIDOrden.Text = "";
+                dtpFechaRegistro.Value = DateTime.Now;
+                txtIDOperario.Text = "";
+                txtNombres.Text = "";
+                txtApellidos.Text = "";
+                cboNombreTipoLadrillo.Text = "";
+                dgvLotes.DataSource = null;
+                numNroAproxLadrillos.Value = 0;
+                lineasOs = new BindingList<OSalidaWS.lineaOrdenSalida>();
+                EstablecerEstadoComponentes(Estado.Inicial);
+            }
         }
 
         private void btnVolver_Click(object sender, EventArgs e)

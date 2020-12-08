@@ -42,12 +42,7 @@ namespace BuildUp
             maquinaria = new IncidenteMaquinariaWS.maquinaria();
 
 
-            if (frmLogIn.Usuario.rol == "Jefe"
-                || frmLogIn.Usuario.rol == "JEFE"
-                || frmLogIn.Usuario.rol == "Jefe de Área"
-                || frmLogIn.Usuario.rol == "Jefe de Area"
-                || frmLogIn.Usuario.rol == "JEFE DE AREA"
-                || frmLogIn.Usuario.rol == "JEFE DE ÁREA")
+            if (frmLogIn.Usuario.rol == "Jefe de Área")
             {
                 btnActualizar.Visible = false;
                 btnNuevo.Visible = false;
@@ -62,6 +57,9 @@ namespace BuildUp
                 btnGuardar.Visible = false;
                 btnEliminar.Visible = false;
             }
+
+            toolStrip2.Select();
+            this.VerticalScroll.Value = 0;
         }
 
 
@@ -580,31 +578,36 @@ namespace BuildUp
 
         private void btnCancelar_Click_1(object sender, EventArgs e)
         {
-            txtID.Text = "";
-            dtpFechaRegistro.Text = "";
+            DialogResult dr = MessageBox.Show("Esta acción limpiará todos los campos llenados, echando a perder cualquier trabajo realizado.\n¿Está seguro que desea continuar?", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (dr == DialogResult.Yes)
+            {
+                txtID.Text = "";
+                dtpFechaRegistro.Text = "";
 
-            txtIDMaq.Text = "";
-            txtNombreMaq.Text = "";
-            txtProveedor.Text = "";
+                txtIDMaq.Text = "";
+                txtNombreMaq.Text = "";
+                txtProveedor.Text = "";
 
-            txtIDSup.Text = "";
-            txtNombreSup.Text = "";
-            txtApellidosSup.Text = "";
+                txtIDSup.Text = "";
+                txtNombreSup.Text = "";
+                txtApellidosSup.Text = "";
 
-            txtIDIng.Text = "";
-            txtNombreIng.Text = "";
-            txtApellidosIng.Text = "";
+                txtIDIng.Text = "";
+                txtNombreIng.Text = "";
+                txtApellidosIng.Text = "";
 
-            txtIDProblema.Text = "";
-            txtProblema.Text = "";
-            txtNivelImp.Text = "";
+                txtIDProblema.Text = "";
+                txtProblema.Text = "";
+                txtNivelImp.Text = "";
 
-            txtIDResp.Text = "";
-            txtRespuesta.Text = "";
-            tbDescripcionRespuesta.Text = "";
-            dtpFechaRespuesta.Text = "";
-            EstablecerEstadoComponentes(Estado.Inicial);
+                txtIDResp.Text = "";
+                txtRespuesta.Text = "";
+                tbDescripcionRespuesta.Text = "";
+                dtpFechaRespuesta.Text = "";
+                EstablecerEstadoComponentes(Estado.Inicial);
+            }
         }
+
     }
 }
 

@@ -154,12 +154,17 @@ namespace BuildUp
             }
             if (txtNumero.Text == "")
             {
-                MessageBox.Show("Debe ingresar el telefono del Usuario", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Debe ingresar el teléfono del Usuario", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             if (txtCorreo.Text == "")
             {
-                MessageBox.Show("Debe ingresar el correo del Usuario", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Debe ingresar un correo para el Usuario", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if(txtCorreo.Text.IndexOf('@') == -1)
+            {
+                MessageBox.Show("Debe ingresar un correo válido para el Usuario", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             if (cbRol.Text == "Operario" || cbRol.Text == "Supervisor")
@@ -185,7 +190,7 @@ namespace BuildUp
             }
 
 
-            DialogResult dr = MessageBox.Show("¿Está seguro que desea registrar a este Usuario?", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            DialogResult dr = MessageBox.Show("¿Está seguro que desea registrar a este Usuario?", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dr == DialogResult.Yes)
             {
                 int result = 0;
@@ -280,52 +285,62 @@ namespace BuildUp
                 }
 
                 
-
                 if (result != 0)
                 {
-                    //Envío de email con credenciales
-                    var fromAddress = new MailAddress("buildup.system@gmail.com", "BuildUpSystem");
-                    var toAddress = new MailAddress(txtCorreo.Text, txtNombre.Text + txtApellidos.Text);
-                    const string fromPassword = "elepedos";
-                    const string subject = "Credenciales de acceso al sistema BuildUp";
-                    string body = "\nUsuario: " + txtUsername.Text + "\nContraseña: " + passwordGenerado;
+                    try
+                    {
+                        //Envío de email con credenciales
+                        var fromAddress = new MailAddress("buildup.system@gmail.com", "BuildUpSystem");
+                        var toAddress = new MailAddress(txtCorreo.Text, txtNombre.Text + txtApellidos.Text);
+                        const string fromPassword = "elepedos";
+                        const string subject = "Credenciales de acceso al sistema BuildUp";
+                        string body = "Estimado "+ txtNombre.Text + " " + txtApellidos.Text + ",\nTe damos la bienvenida." +
+                            "Estas son sus credenciales para acceder al sistema:\n" +
+                            "- Usuario: " + txtUsername.Text + "\n" +
+                            "- Contraseña: " + passwordGenerado + "\n" +
+                            "Recuerde que no debe compartir esta información con nadie.";
 
-                    var smtp = new SmtpClient
-                    {
-                        Host = "smtp.gmail.com",
-                        Port = 587,
-                        EnableSsl = true,
-                        DeliveryMethod = SmtpDeliveryMethod.Network,
-                        UseDefaultCredentials = false,
-                        Credentials = new NetworkCredential(fromAddress.Address, fromPassword)
-                    };
-                    using (var message = new MailMessage(fromAddress, toAddress)
-                    {
-                        Subject = subject,
-                        Body = body
-                    })
-                    {
-                        smtp.Send(message);
+                        var smtp = new SmtpClient
+                        {
+                            Host = "smtp.gmail.com",
+                            Port = 587,
+                            EnableSsl = true,
+                            DeliveryMethod = SmtpDeliveryMethod.Network,
+                            UseDefaultCredentials = false,
+                            Credentials = new NetworkCredential(fromAddress.Address, fromPassword)
+                        };
+                        using (var message = new MailMessage(fromAddress, toAddress)
+                        {
+                            Subject = subject,
+                            Body = body
+                        })
+                        {
+                            smtp.Send(message);
+                        }
+
+                        MessageBox.Show("El registro ha sido exitoso.\nSe ha enviado un correo electrónico al nuevo usuario con sus credenciales.", "Mensaje de Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        txtID.Text = "";
+                        txtNombre.Text = "";
+                        txtApellidos.Text = "";
+                        dtpNacimiento.Text = "";
+                        dtpFinContrato.Text = "";
+                        txtNumero.Text = "";
+                        txtCorreo.Text = "";
+                        cbRol.Text = "";
+                        pbFoto.Image = null;
+                        txtUsername.Text = "";
+                        exclusiveLabel.Visible = false;
+                        exclusiveComboBox.Visible = false;
+                        EstablecerEstadoComponentes(Estado.Inicial);
                     }
-
-                    MessageBox.Show("El registro ha sido exitoso. Se ha enviado un correo electrónico al nuevo usuario con sus credenciales.", "Mensaje de Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txtID.Text = "";
-                    txtNombre.Text = "";
-                    txtApellidos.Text = "";
-                    dtpNacimiento.Text = "";
-                    dtpFinContrato.Text = "";
-                    txtNumero.Text = "";
-                    txtCorreo.Text = "";
-                    cbRol.Text = "";
-                    pbFoto.Image = null;
-                    txtUsername.Text = "";
-                    exclusiveLabel.Visible = false;
-                    exclusiveComboBox.Visible = false;
-                    EstablecerEstadoComponentes(Estado.Inicial);
+                    catch
+                    {
+                        MessageBox.Show("No se ha logrado enviar el correo con las credenciales al usuario. Por favor, verifique que el correo ingresado es correcto.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Error en el proceso", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Error en el registro del usuario. Inténtelo más tarde.", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
                 
@@ -634,19 +649,23 @@ namespace BuildUp
 
         private void btCancelar_Click(object sender, EventArgs e)
         {
-            txtID.Text = "";
-            txtNombre.Text = "";
-            txtApellidos.Text = "";
-            dtpNacimiento.Text = "";
-            dtpFinContrato.Text = "";
-            txtNumero.Text = "";
-            txtCorreo.Text = "";
-            cbRol.Text = "";
-            pbFoto.Image = null;
-            txtUsername.Text = "";
-            exclusiveLabel.Visible = false;
-            exclusiveComboBox.Visible = false;
-            EstablecerEstadoComponentes(Estado.Inicial);
+            DialogResult dr = MessageBox.Show("Esta acción limpiará todos los campos llenados, echando a perder cualquier trabajo realizado.\n¿Está seguro que desea continuar?", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (dr == DialogResult.Yes)
+            {
+                txtID.Text = "";
+                txtNombre.Text = "";
+                txtApellidos.Text = "";
+                dtpNacimiento.Text = "";
+                dtpFinContrato.Text = "";
+                txtNumero.Text = "";
+                txtCorreo.Text = "";
+                cbRol.Text = "";
+                pbFoto.Image = null;
+                txtUsername.Text = "";
+                exclusiveLabel.Visible = false;
+                exclusiveComboBox.Visible = false;
+                EstablecerEstadoComponentes(Estado.Inicial);
+            }
         }
 
         private void btAgregarFoto_Click(object sender, EventArgs e)
@@ -659,7 +678,7 @@ namespace BuildUp
                     pbFoto.Image = Image.FromFile(ruta);
                 }
             }
-            catch (Exception ex)
+            catch
             {
                 MessageBox.Show("El archivo seleccionado no es un tipo de imagen válido");
             }

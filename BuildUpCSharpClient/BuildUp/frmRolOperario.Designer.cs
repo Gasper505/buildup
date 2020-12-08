@@ -60,7 +60,7 @@
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Location = new System.Drawing.Point(0, 96);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(774, 359);
+            this.panel1.Size = new System.Drawing.Size(774, 377);
             this.panel1.TabIndex = 0;
             // 
             // lblNombres
@@ -172,9 +172,9 @@
             // 
             this.pbFoto.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.pbFoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbFoto.Location = new System.Drawing.Point(566, 12);
+            this.pbFoto.Location = new System.Drawing.Point(558, 12);
             this.pbFoto.Name = "pbFoto";
-            this.pbFoto.Size = new System.Drawing.Size(64, 78);
+            this.pbFoto.Size = new System.Drawing.Size(72, 78);
             this.pbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbFoto.TabIndex = 19;
             this.pbFoto.TabStop = false;

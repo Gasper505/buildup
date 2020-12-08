@@ -60,9 +60,9 @@
             this.gbDatosInsumo.Controls.Add(this.lblNombreInsumo);
             this.gbDatosInsumo.Controls.Add(this.lblIdInsumo);
             this.gbDatosInsumo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbDatosInsumo.Location = new System.Drawing.Point(37, 51);
+            this.gbDatosInsumo.Location = new System.Drawing.Point(37, 46);
             this.gbDatosInsumo.Name = "gbDatosInsumo";
-            this.gbDatosInsumo.Size = new System.Drawing.Size(541, 179);
+            this.gbDatosInsumo.Size = new System.Drawing.Size(541, 137);
             this.gbDatosInsumo.TabIndex = 13;
             this.gbDatosInsumo.TabStop = false;
             this.gbDatosInsumo.Text = "Datos del Insumo";
@@ -77,7 +77,7 @@
             "Litros",
             "Onzas",
             "Libras"});
-            this.cboUnidadMedida.Location = new System.Drawing.Point(227, 122);
+            this.cboUnidadMedida.Location = new System.Drawing.Point(232, 86);
             this.cboUnidadMedida.Name = "cboUnidadMedida";
             this.cboUnidadMedida.Size = new System.Drawing.Size(134, 25);
             this.cboUnidadMedida.TabIndex = 47;
@@ -86,7 +86,7 @@
             // 
             this.lblUnidadMedida.AutoSize = true;
             this.lblUnidadMedida.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUnidadMedida.Location = new System.Drawing.Point(103, 125);
+            this.lblUnidadMedida.Location = new System.Drawing.Point(108, 89);
             this.lblUnidadMedida.Name = "lblUnidadMedida";
             this.lblUnidadMedida.Size = new System.Drawing.Size(118, 17);
             this.lblUnidadMedida.TabIndex = 8;
@@ -95,7 +95,7 @@
             // txtNombreInsumo
             // 
             this.txtNombreInsumo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreInsumo.Location = new System.Drawing.Point(227, 80);
+            this.txtNombreInsumo.Location = new System.Drawing.Point(232, 55);
             this.txtNombreInsumo.Name = "txtNombreInsumo";
             this.txtNombreInsumo.Size = new System.Drawing.Size(241, 25);
             this.txtNombreInsumo.TabIndex = 7;
@@ -103,7 +103,7 @@
             // txtIdInsumo
             // 
             this.txtIdInsumo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdInsumo.Location = new System.Drawing.Point(227, 40);
+            this.txtIdInsumo.Location = new System.Drawing.Point(232, 24);
             this.txtIdInsumo.Name = "txtIdInsumo";
             this.txtIdInsumo.Size = new System.Drawing.Size(87, 25);
             this.txtIdInsumo.TabIndex = 5;
@@ -112,7 +112,7 @@
             // 
             this.lblNombreInsumo.AutoSize = true;
             this.lblNombreInsumo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreInsumo.Location = new System.Drawing.Point(96, 83);
+            this.lblNombreInsumo.Location = new System.Drawing.Point(101, 58);
             this.lblNombreInsumo.Name = "lblNombreInsumo";
             this.lblNombreInsumo.Size = new System.Drawing.Size(125, 17);
             this.lblNombreInsumo.TabIndex = 6;
@@ -122,7 +122,7 @@
             // 
             this.lblIdInsumo.AutoSize = true;
             this.lblIdInsumo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIdInsumo.Location = new System.Drawing.Point(133, 43);
+            this.lblIdInsumo.Location = new System.Drawing.Point(138, 27);
             this.lblIdInsumo.Name = "lblIdInsumo";
             this.lblIdInsumo.Size = new System.Drawing.Size(88, 17);
             this.lblIdInsumo.TabIndex = 5;
@@ -240,7 +240,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(616, 261);
+            this.ClientSize = new System.Drawing.Size(616, 213);
             this.ControlBox = false;
             this.Controls.Add(this.toolStrip2);
             this.Controls.Add(this.gbDatosInsumo);

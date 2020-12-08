@@ -177,7 +177,7 @@
             this.gbDatosMaquinaria.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbDatosMaquinaria.Location = new System.Drawing.Point(41, 50);
             this.gbDatosMaquinaria.Name = "gbDatosMaquinaria";
-            this.gbDatosMaquinaria.Size = new System.Drawing.Size(542, 150);
+            this.gbDatosMaquinaria.Size = new System.Drawing.Size(542, 132);
             this.gbDatosMaquinaria.TabIndex = 46;
             this.gbDatosMaquinaria.TabStop = false;
             this.gbDatosMaquinaria.Text = "Datos del Problema";
@@ -193,7 +193,7 @@
             "3",
             "4",
             "5"});
-            this.txtNivelImportancia.Location = new System.Drawing.Point(225, 97);
+            this.txtNivelImportancia.Location = new System.Drawing.Point(226, 86);
             this.txtNivelImportancia.Name = "txtNivelImportancia";
             this.txtNivelImportancia.Size = new System.Drawing.Size(86, 25);
             this.txtNivelImportancia.TabIndex = 9;
@@ -202,7 +202,7 @@
             // 
             this.lblNivelImportancia.AutoSize = true;
             this.lblNivelImportancia.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNivelImportancia.Location = new System.Drawing.Point(90, 100);
+            this.lblNivelImportancia.Location = new System.Drawing.Point(91, 89);
             this.lblNivelImportancia.Name = "lblNivelImportancia";
             this.lblNivelImportancia.Size = new System.Drawing.Size(129, 17);
             this.lblNivelImportancia.TabIndex = 8;
@@ -211,7 +211,7 @@
             // txtTipo
             // 
             this.txtTipo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTipo.Location = new System.Drawing.Point(225, 66);
+            this.txtTipo.Location = new System.Drawing.Point(226, 55);
             this.txtTipo.Name = "txtTipo";
             this.txtTipo.Size = new System.Drawing.Size(241, 25);
             this.txtTipo.TabIndex = 7;
@@ -219,7 +219,7 @@
             // txtIdProblema
             // 
             this.txtIdProblema.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdProblema.Location = new System.Drawing.Point(225, 35);
+            this.txtIdProblema.Location = new System.Drawing.Point(226, 24);
             this.txtIdProblema.Name = "txtIdProblema";
             this.txtIdProblema.Size = new System.Drawing.Size(86, 25);
             this.txtIdProblema.TabIndex = 5;
@@ -228,7 +228,7 @@
             // 
             this.lblTipo.AutoSize = true;
             this.lblTipo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTipo.Location = new System.Drawing.Point(185, 69);
+            this.lblTipo.Location = new System.Drawing.Point(186, 58);
             this.lblTipo.Name = "lblTipo";
             this.lblTipo.Size = new System.Drawing.Size(34, 17);
             this.lblTipo.TabIndex = 6;
@@ -238,7 +238,7 @@
             // 
             this.lblIdProblema.AutoSize = true;
             this.lblIdProblema.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIdProblema.Location = new System.Drawing.Point(199, 38);
+            this.lblIdProblema.Location = new System.Drawing.Point(200, 27);
             this.lblIdProblema.Name = "lblIdProblema";
             this.lblIdProblema.Size = new System.Drawing.Size(20, 17);
             this.lblIdProblema.TabIndex = 5;
@@ -248,7 +248,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(623, 226);
+            this.ClientSize = new System.Drawing.Size(623, 216);
             this.ControlBox = false;
             this.Controls.Add(this.gbDatosMaquinaria);
             this.Controls.Add(this.toolStrip2);

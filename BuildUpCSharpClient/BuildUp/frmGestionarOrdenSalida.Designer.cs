@@ -75,7 +75,7 @@
             // 
             this.lblNroLotes.AutoSize = true;
             this.lblNroLotes.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNroLotes.Location = new System.Drawing.Point(45, 81);
+            this.lblNroLotes.Location = new System.Drawing.Point(45, 78);
             this.lblNroLotes.Name = "lblNroLotes";
             this.lblNroLotes.Size = new System.Drawing.Size(171, 17);
             this.lblNroLotes.TabIndex = 23;
@@ -113,7 +113,7 @@
             // 
             this.lblFechaRegistro.AutoSize = true;
             this.lblFechaRegistro.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaRegistro.Location = new System.Drawing.Point(140, 70);
+            this.lblFechaRegistro.Location = new System.Drawing.Point(140, 66);
             this.lblFechaRegistro.Name = "lblFechaRegistro";
             this.lblFechaRegistro.Size = new System.Drawing.Size(94, 17);
             this.lblFechaRegistro.TabIndex = 27;
@@ -123,7 +123,7 @@
             // 
             this.dtpFechaRegistro.CalendarFont = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaRegistro.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFechaRegistro.Location = new System.Drawing.Point(240, 64);
+            this.dtpFechaRegistro.Location = new System.Drawing.Point(240, 60);
             this.dtpFechaRegistro.Name = "dtpFechaRegistro";
             this.dtpFechaRegistro.Size = new System.Drawing.Size(259, 25);
             this.dtpFechaRegistro.TabIndex = 28;
@@ -131,7 +131,7 @@
             // numNroAproxLadrillos
             // 
             this.numNroAproxLadrillos.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numNroAproxLadrillos.Location = new System.Drawing.Point(222, 79);
+            this.numNroAproxLadrillos.Location = new System.Drawing.Point(222, 76);
             this.numNroAproxLadrillos.Name = "numNroAproxLadrillos";
             this.numNroAproxLadrillos.Size = new System.Drawing.Size(86, 25);
             this.numNroAproxLadrillos.TabIndex = 31;

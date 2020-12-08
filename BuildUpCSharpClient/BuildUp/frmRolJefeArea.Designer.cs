@@ -96,7 +96,7 @@
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Location = new System.Drawing.Point(0, 98);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(853, 761);
+            this.panel1.Size = new System.Drawing.Size(853, 786);
             this.panel1.TabIndex = 1;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -348,9 +348,9 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.Ivory;
             this.panel3.Controls.Add(this.label1);
-            this.panel3.Location = new System.Drawing.Point(56, 73);
+            this.panel3.Location = new System.Drawing.Point(56, 55);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(260, 40);
+            this.panel3.Size = new System.Drawing.Size(269, 40);
             this.panel3.TabIndex = 10;
             // 
             // label1
@@ -361,9 +361,9 @@
             this.label1.Location = new System.Drawing.Point(14, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(228, 21);
+            this.label1.Size = new System.Drawing.Size(249, 21);
             this.label1.TabIndex = 8;
-            this.label1.Text = "Rol:  Jefe/a  Área de Producción";
+            this.label1.Text = "Rol:  Jefe/a del Área de Producción";
             // 
             // pbFoto
             // 
@@ -379,7 +379,7 @@
             // btnCerrarSesión
             // 
             this.btnCerrarSesión.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCerrarSesión.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrarSesión.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnCerrarSesión.Location = new System.Drawing.Point(705, 49);
             this.btnCerrarSesión.Name = "btnCerrarSesión";
             this.btnCerrarSesión.Size = new System.Drawing.Size(116, 31);

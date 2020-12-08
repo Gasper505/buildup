@@ -122,11 +122,12 @@
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.ControlBox = false;
             this.Controls.Add(this.panelLogeo);
             this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmLogIn";
-            this.Opacity = 0.85D;
+            this.Opacity = 0.95D;
             this.Load += new System.EventHandler(this.LogIn_Load);
             this.panelLogeo.ResumeLayout(false);
             this.panelLogeo.PerformLayout();

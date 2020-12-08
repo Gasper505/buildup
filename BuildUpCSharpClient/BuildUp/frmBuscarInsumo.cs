@@ -46,13 +46,11 @@ namespace BuildUp
                 dgvInsumos.DataSource = insumos;
 
             }
-            catch (Exception ex)
+            catch
             {
-                MessageBox.Show("No existe el insumo buscado", "Mensaje aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("No se encontraron resultados", "Mensaje aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-
-
 
         }
     }

@@ -16,8 +16,6 @@ namespace BuildUp
 
         UsuarioWS.UsuarioWSClient daoUsuario;
         UsuarioWS.persona usuarioSeleccionado;
-        PersonaWS.PersonaWSClient daoPersona;
-
         //JefeAreaWS.jefeArea jefeSeleccionado;
         //IngenieroWS.ingeniero ingenieroSeleccionado;
         //SupervisorWS.supervisor supervisorSeleccionado;
@@ -53,7 +51,7 @@ namespace BuildUp
                 (daoUsuario.listarUsuarioPorParametros(txtUsername.Text, txtNombre.Text, txtApellido.Text, cboCargo.Text).ToArray());
                 dgvUsuarios.DataSource = us;
             }
-            catch (Exception ex)
+            catch
             {
                 MessageBox.Show("No se han encontrado resultados", "Mensaje aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;

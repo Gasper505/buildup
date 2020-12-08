@@ -52,9 +52,9 @@
             this.panelAdmin.Controls.Add(this.pictureBox2);
             this.panelAdmin.Controls.Add(this.lblTitulo);
             this.panelAdmin.Controls.Add(this.panel3);
-            this.panelAdmin.Location = new System.Drawing.Point(2, 99);
+            this.panelAdmin.Location = new System.Drawing.Point(2, 111);
             this.panelAdmin.Name = "panelAdmin";
-            this.panelAdmin.Size = new System.Drawing.Size(807, 332);
+            this.panelAdmin.Size = new System.Drawing.Size(807, 342);
             this.panelAdmin.TabIndex = 1;
             // 
             // lblNombres
@@ -142,9 +142,9 @@
             // 
             this.pbFoto.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.pbFoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbFoto.Location = new System.Drawing.Point(600, 12);
+            this.pbFoto.Location = new System.Drawing.Point(590, 12);
             this.pbFoto.Name = "pbFoto";
-            this.pbFoto.Size = new System.Drawing.Size(68, 81);
+            this.pbFoto.Size = new System.Drawing.Size(78, 93);
             this.pbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbFoto.TabIndex = 19;
             this.pbFoto.TabStop = false;

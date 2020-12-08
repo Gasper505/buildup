@@ -51,9 +51,9 @@
             this.gbBusqueda.Controls.Add(this.dtpDesde);
             this.gbBusqueda.Controls.Add(this.btnBuscar);
             this.gbBusqueda.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbBusqueda.Location = new System.Drawing.Point(43, 30);
+            this.gbBusqueda.Location = new System.Drawing.Point(33, 29);
             this.gbBusqueda.Name = "gbBusqueda";
-            this.gbBusqueda.Size = new System.Drawing.Size(525, 141);
+            this.gbBusqueda.Size = new System.Drawing.Size(525, 121);
             this.gbBusqueda.TabIndex = 17;
             this.gbBusqueda.TabStop = false;
             this.gbBusqueda.Text = "Parámetros de Búsqueda";
@@ -61,7 +61,7 @@
             // dtpHasta
             // 
             this.dtpHasta.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpHasta.Location = new System.Drawing.Point(73, 76);
+            this.dtpHasta.Location = new System.Drawing.Point(73, 72);
             this.dtpHasta.Name = "dtpHasta";
             this.dtpHasta.Size = new System.Drawing.Size(270, 25);
             this.dtpHasta.TabIndex = 17;
@@ -71,7 +71,7 @@
             // 
             this.lblHasta.AutoSize = true;
             this.lblHasta.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHasta.Location = new System.Drawing.Point(26, 82);
+            this.lblHasta.Location = new System.Drawing.Point(26, 73);
             this.lblHasta.Name = "lblHasta";
             this.lblHasta.Size = new System.Drawing.Size(41, 17);
             this.lblHasta.TabIndex = 16;
@@ -99,9 +99,9 @@
             // btnBuscar
             // 
             this.btnBuscar.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(364, 47);
+            this.btnBuscar.Location = new System.Drawing.Point(362, 53);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(137, 37);
+            this.btnBuscar.Size = new System.Drawing.Size(138, 37);
             this.btnBuscar.TabIndex = 13;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
@@ -110,7 +110,7 @@
             // btnSeleccionar
             // 
             this.btnSeleccionar.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSeleccionar.Location = new System.Drawing.Point(173, 510);
+            this.btnSeleccionar.Location = new System.Drawing.Point(161, 480);
             this.btnSeleccionar.Name = "btnSeleccionar";
             this.btnSeleccionar.Size = new System.Drawing.Size(262, 42);
             this.btnSeleccionar.TabIndex = 16;
@@ -127,12 +127,12 @@
             this.Column1,
             this.Column5,
             this.Column2});
-            this.dgvIncidentes.Location = new System.Drawing.Point(43, 195);
+            this.dgvIncidentes.Location = new System.Drawing.Point(33, 156);
             this.dgvIncidentes.MultiSelect = false;
             this.dgvIncidentes.Name = "dgvIncidentes";
             this.dgvIncidentes.ReadOnly = true;
             this.dgvIncidentes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvIncidentes.Size = new System.Drawing.Size(525, 291);
+            this.dgvIncidentes.Size = new System.Drawing.Size(525, 309);
             this.dgvIncidentes.TabIndex = 15;
             this.dgvIncidentes.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvIncidentes_CellFormatting);
             // 
@@ -163,7 +163,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(607, 577);
+            this.ClientSize = new System.Drawing.Size(592, 542);
             this.Controls.Add(this.gbBusqueda);
             this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.dgvIncidentes);

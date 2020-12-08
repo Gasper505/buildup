@@ -173,7 +173,7 @@
             this.gbDatosMaquinaria.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbDatosMaquinaria.Location = new System.Drawing.Point(45, 55);
             this.gbDatosMaquinaria.Name = "gbDatosMaquinaria";
-            this.gbDatosMaquinaria.Size = new System.Drawing.Size(532, 133);
+            this.gbDatosMaquinaria.Size = new System.Drawing.Size(532, 98);
             this.gbDatosMaquinaria.TabIndex = 46;
             this.gbDatosMaquinaria.TabStop = false;
             this.gbDatosMaquinaria.Text = "Datos de la Respuesta";
@@ -181,7 +181,7 @@
             // txtTipo
             // 
             this.txtTipo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTipo.Location = new System.Drawing.Point(200, 78);
+            this.txtTipo.Location = new System.Drawing.Point(193, 55);
             this.txtTipo.Name = "txtTipo";
             this.txtTipo.Size = new System.Drawing.Size(237, 25);
             this.txtTipo.TabIndex = 7;
@@ -189,7 +189,7 @@
             // txtIdRespuesta
             // 
             this.txtIdRespuesta.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdRespuesta.Location = new System.Drawing.Point(200, 39);
+            this.txtIdRespuesta.Location = new System.Drawing.Point(193, 24);
             this.txtIdRespuesta.Name = "txtIdRespuesta";
             this.txtIdRespuesta.Size = new System.Drawing.Size(87, 25);
             this.txtIdRespuesta.TabIndex = 5;
@@ -198,7 +198,7 @@
             // 
             this.lblNombreMaquinaria.AutoSize = true;
             this.lblNombreMaquinaria.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreMaquinaria.Location = new System.Drawing.Point(164, 81);
+            this.lblNombreMaquinaria.Location = new System.Drawing.Point(153, 58);
             this.lblNombreMaquinaria.Name = "lblNombreMaquinaria";
             this.lblNombreMaquinaria.Size = new System.Drawing.Size(34, 17);
             this.lblNombreMaquinaria.TabIndex = 6;
@@ -208,7 +208,7 @@
             // 
             this.lblIdMaquinaria.AutoSize = true;
             this.lblIdMaquinaria.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIdMaquinaria.Location = new System.Drawing.Point(174, 42);
+            this.lblIdMaquinaria.Location = new System.Drawing.Point(167, 27);
             this.lblIdMaquinaria.Name = "lblIdMaquinaria";
             this.lblIdMaquinaria.Size = new System.Drawing.Size(20, 17);
             this.lblIdMaquinaria.TabIndex = 5;
@@ -218,7 +218,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(620, 216);
+            this.ClientSize = new System.Drawing.Size(620, 184);
             this.ControlBox = false;
             this.Controls.Add(this.gbDatosMaquinaria);
             this.Controls.Add(this.toolStrip2);

@@ -12,10 +12,24 @@ namespace BuildUp
 {
     public partial class frmGestionarRegistroMerma : Form
     {
+
+        RegistroMermaWS.RegistroMermaWSClient daoRegistroMerma;
+        RegistroMermaWS.registroMerma registroMerma;
+        SupervisorWS.SupervisorWSClient daoSupervisor;
+        MermaWS.MermaWSClient daoMerma;
+
         public frmGestionarRegistroMerma()
         {
             InitializeComponent();
+            daoRegistroMerma = new RegistroMermaWS.RegistroMermaWSClient();
+            registroMerma = new RegistroMermaWS.registroMerma();
+            daoSupervisor = new SupervisorWS.SupervisorWSClient();
+            daoMerma = new MermaWS.MermaWSClient();
+
+            cboTipoMerma.DataSource = daoMerma.listarMerma();
+
             EstablecerEstadoComponentes(Estado.Inicial);
+
         }
         public void EstablecerEstadoComponentes(Estado estado)
         {
@@ -29,7 +43,7 @@ namespace BuildUp
                     btnEliminar.Enabled = false;
                     btnActualizar.Enabled = false;
 
-                    txtIDmerma.Enabled = false;
+                    txtIDRegMerma.Enabled = false;
                     cboTipoMerma.Enabled = false;
                     txtCantidad.Enabled = false;
                     dtpFechaMerma.Enabled = false;
@@ -44,10 +58,12 @@ namespace BuildUp
                     btnEliminar.Enabled = false;
                     btnActualizar.Enabled = false;
 
-                    txtIDmerma.Enabled = false;
+                    txtIDRegMerma.Enabled = false;
                     cboTipoMerma.Enabled = true;
                     txtCantidad.Enabled = true;
                     dtpFechaMerma.Enabled = true;
+                    txtSupervisor.Enabled = false;
+                    txtLineaProduccion.Enabled = false;
                     break;
                 case Estado.Modificacion:
                     btnNuevo.Enabled = false;
@@ -57,10 +73,12 @@ namespace BuildUp
                     btnEliminar.Enabled = true;
                     btnActualizar.Enabled = true;
 
-                    txtIDmerma.Enabled = false;
+                    txtIDRegMerma.Enabled = false;
                     cboTipoMerma.Enabled = true;
                     txtCantidad.Enabled = true;
                     dtpFechaMerma.Enabled = true;
+                    txtSupervisor.Enabled = false;
+                    txtLineaProduccion.Enabled = false;
                     break;
             }
         }
@@ -69,8 +87,36 @@ namespace BuildUp
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Se ha registrado correctamente","Mensaje Informativo", MessageBoxButtons.OK,MessageBoxIcon.Information);
-            EstablecerEstadoComponentes(Estado.Inicial);
+            DialogResult dr = MessageBox.Show("¿Está seguro que desea registrar este Acontecimiento de Merma?", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (dr == DialogResult.Yes)
+            {
+                registroMerma.merma = new RegistroMermaWS.merma();
+                registroMerma.lineaProduccion = new RegistroMermaWS.lineaProduccion();
+                registroMerma.merma = (RegistroMermaWS.merma)cboTipoMerma.SelectedItem;
+                registroMerma.lineaProduccion.nombre = daoSupervisor.obtenerLineaProduccionSupervisor(frmLogIn.Usuario.idPersona);
+
+                int resultado = 0;
+                resultado = daoRegistroMerma.insertarRegistroMerma(registroMerma);
+                txtIDRegMerma.Text = resultado.ToString();
+
+                if (resultado != 0)
+                {
+                    txtIDRegMerma.Text = "";
+                    cboTipoMerma.Text = "";
+                    txtCantidad.Text = "";
+                    dtpFechaMerma.Value = DateTime.Now;
+                    txtSupervisor.Text = "";
+                    txtLineaProduccion.Text = "";
+
+                    EstablecerEstadoComponentes(Estado.Inicial);
+                    MessageBox.Show("El registro ha sido exitoso", "Mensaje de Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                }
+                else
+                {
+                    MessageBox.Show("Error en el proceso", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
         private void btnHistorial_Click(object sender, EventArgs e)
@@ -93,14 +139,14 @@ namespace BuildUp
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            txtSupervisor.Text = frmLogIn.Usuario.nombres + frmLogIn.Usuario.apellidos;
-  
+            txtSupervisor.Text = frmLogIn.Usuario.nombres + frmLogIn.Usuario.apellidos; //Recordar que el único que tiene acceso a este form es el supervisor
+            txtLineaProduccion.Text = daoSupervisor.obtenerLineaProduccionSupervisor(frmLogIn.Usuario.idPersona);
             EstablecerEstadoComponentes(Estado.Nuevo);
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            txtIDmerma.Text = "";
+            txtIDRegMerma.Text = "";
             cboTipoMerma.Text = "";
             txtCantidad.Text = "";
             dtpFechaMerma.Value = DateTime.Now;

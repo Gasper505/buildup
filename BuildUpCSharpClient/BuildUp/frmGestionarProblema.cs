@@ -166,10 +166,14 @@ namespace BuildUp
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            txtIdProblema.Text = "";
-            txtTipo.Text = "";
-            txtNivelImportancia.Text = "";
-            establecerEstadoComponentes(Estado.Inicial);
+            DialogResult dr = MessageBox.Show("Esta acción limpiará todos los campos llenados, echando a perder cualquier trabajo realizado.\n¿Está seguro que desea continuar?", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (dr == DialogResult.Yes)
+            {
+                txtIdProblema.Text = "";
+                txtTipo.Text = "";
+                txtNivelImportancia.Text = "";
+                establecerEstadoComponentes(Estado.Inicial);
+            }
         }
         private void btnRegresar_Click(object sender, EventArgs e)
         {

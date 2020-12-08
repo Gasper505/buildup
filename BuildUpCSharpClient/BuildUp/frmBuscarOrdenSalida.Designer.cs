@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.dgvOrdenesSalida = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ApellidoOperario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbParametrosBusqueda = new System.Windows.Forms.GroupBox();
             this.dtpFechaSup = new System.Windows.Forms.DateTimePicker();
             this.lblHasta = new System.Windows.Forms.Label();
@@ -38,10 +42,6 @@
             this.txtNombreOperario = new System.Windows.Forms.TextBox();
             this.lblNombreOperario = new System.Windows.Forms.Label();
             this.btnSeleccionar = new System.Windows.Forms.Button();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ApellidoOperario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrdenesSalida)).BeginInit();
             this.gbParametrosBusqueda.SuspendLayout();
             this.SuspendLayout();
@@ -57,14 +57,46 @@
             this.Column2,
             this.ApellidoOperario,
             this.Column5});
-            this.dgvOrdenesSalida.Location = new System.Drawing.Point(42, 241);
+            this.dgvOrdenesSalida.Location = new System.Drawing.Point(42, 204);
             this.dgvOrdenesSalida.MultiSelect = false;
             this.dgvOrdenesSalida.Name = "dgvOrdenesSalida";
             this.dgvOrdenesSalida.ReadOnly = true;
             this.dgvOrdenesSalida.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvOrdenesSalida.Size = new System.Drawing.Size(665, 250);
+            this.dgvOrdenesSalida.Size = new System.Drawing.Size(665, 287);
             this.dgvOrdenesSalida.TabIndex = 0;
             this.dgvOrdenesSalida.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvOrdenesSalida_CellFormatting);
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "IdOrdenSalida";
+            this.Column1.HeaderText = "ID";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 50;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "Nombres";
+            this.Column2.HeaderText = "Nombre(s) del Operario";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 160;
+            // 
+            // ApellidoOperario
+            // 
+            this.ApellidoOperario.DataPropertyName = "Apellidos";
+            this.ApellidoOperario.HeaderText = "Apellidos del Operario";
+            this.ApellidoOperario.Name = "ApellidoOperario";
+            this.ApellidoOperario.ReadOnly = true;
+            this.ApellidoOperario.Width = 160;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "Fecha";
+            this.Column5.HeaderText = "Fecha de Registro";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Width = 200;
             // 
             // gbParametrosBusqueda
             // 
@@ -153,7 +185,7 @@
             // btnSeleccionar
             // 
             this.btnSeleccionar.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSeleccionar.Location = new System.Drawing.Point(240, 516);
+            this.btnSeleccionar.Location = new System.Drawing.Point(243, 506);
             this.btnSeleccionar.Name = "btnSeleccionar";
             this.btnSeleccionar.Size = new System.Drawing.Size(262, 42);
             this.btnSeleccionar.TabIndex = 11;
@@ -161,43 +193,11 @@
             this.btnSeleccionar.UseVisualStyleBackColor = true;
             this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
             // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "IdOrdenSalida";
-            this.Column1.HeaderText = "ID";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 50;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "Nombres";
-            this.Column2.HeaderText = "Nombre(s) del Operario";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 160;
-            // 
-            // ApellidoOperario
-            // 
-            this.ApellidoOperario.DataPropertyName = "Apellidos";
-            this.ApellidoOperario.HeaderText = "Apellidos del Operario";
-            this.ApellidoOperario.Name = "ApellidoOperario";
-            this.ApellidoOperario.ReadOnly = true;
-            this.ApellidoOperario.Width = 160;
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "Fecha";
-            this.Column5.HeaderText = "Fecha de Registro";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Width = 200;
-            // 
             // frmBuscarOrdenSalida
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(748, 582);
+            this.ClientSize = new System.Drawing.Size(748, 562);
             this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.gbParametrosBusqueda);
             this.Controls.Add(this.dgvOrdenesSalida);

@@ -53,7 +53,7 @@
             this.Largo,
             this.Ancho,
             this.Altura});
-            this.dgvTiposLadrillo.Location = new System.Drawing.Point(45, 141);
+            this.dgvTiposLadrillo.Location = new System.Drawing.Point(39, 127);
             this.dgvTiposLadrillo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvTiposLadrillo.MultiSelect = false;
             this.dgvTiposLadrillo.Name = "dgvTiposLadrillo";
@@ -113,7 +113,7 @@
             // btnSeleccionar
             // 
             this.btnSeleccionar.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSeleccionar.Location = new System.Drawing.Point(177, 426);
+            this.btnSeleccionar.Location = new System.Drawing.Point(171, 414);
             this.btnSeleccionar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSeleccionar.Name = "btnSeleccionar";
             this.btnSeleccionar.Size = new System.Drawing.Size(262, 34);
@@ -140,7 +140,7 @@
             this.groupBox1.Controls.Add(this.txtBusqNombreLadrillo);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(45, 26);
+            this.groupBox1.Location = new System.Drawing.Point(39, 25);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -153,7 +153,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(614, 480);
+            this.ClientSize = new System.Drawing.Size(607, 463);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.dgvTiposLadrillo);

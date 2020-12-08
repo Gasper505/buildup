@@ -111,7 +111,7 @@
             // btnSeleccionar
             // 
             this.btnSeleccionar.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSeleccionar.Location = new System.Drawing.Point(292, 516);
+            this.btnSeleccionar.Location = new System.Drawing.Point(296, 504);
             this.btnSeleccionar.Name = "btnSeleccionar";
             this.btnSeleccionar.Size = new System.Drawing.Size(300, 42);
             this.btnSeleccionar.TabIndex = 5;
@@ -132,12 +132,12 @@
             this.Column6,
             this.Column7,
             this.Column8});
-            this.dgvOrdenes.Location = new System.Drawing.Point(37, 180);
+            this.dgvOrdenes.Location = new System.Drawing.Point(37, 165);
             this.dgvOrdenes.MultiSelect = false;
             this.dgvOrdenes.Name = "dgvOrdenes";
             this.dgvOrdenes.ReadOnly = true;
             this.dgvOrdenes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvOrdenes.Size = new System.Drawing.Size(812, 308);
+            this.dgvOrdenes.Size = new System.Drawing.Size(812, 323);
             this.dgvOrdenes.TabIndex = 6;
             this.dgvOrdenes.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView1_CellFormatting);
             // 
@@ -191,7 +191,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(886, 581);
+            this.ClientSize = new System.Drawing.Size(886, 558);
             this.Controls.Add(this.dgvOrdenes);
             this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.gbParametrosBusqueda);

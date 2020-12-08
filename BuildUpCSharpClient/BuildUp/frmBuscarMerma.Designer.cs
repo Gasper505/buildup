@@ -86,7 +86,7 @@
             // btnSeleccionar
             // 
             this.btnSeleccionar.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSeleccionar.Location = new System.Drawing.Point(163, 453);
+            this.btnSeleccionar.Location = new System.Drawing.Point(165, 447);
             this.btnSeleccionar.Name = "btnSeleccionar";
             this.btnSeleccionar.Size = new System.Drawing.Size(262, 42);
             this.btnSeleccionar.TabIndex = 15;
@@ -104,12 +104,12 @@
             this.ID,
             this.TipoMerma,
             this.UnidadMedida});
-            this.dgvMermas.Location = new System.Drawing.Point(43, 144);
+            this.dgvMermas.Location = new System.Drawing.Point(43, 127);
             this.dgvMermas.MultiSelect = false;
             this.dgvMermas.Name = "dgvMermas";
             this.dgvMermas.ReadOnly = true;
             this.dgvMermas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMermas.Size = new System.Drawing.Size(511, 286);
+            this.dgvMermas.Size = new System.Drawing.Size(511, 303);
             this.dgvMermas.TabIndex = 14;
             // 
             // ID
@@ -140,7 +140,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(596, 513);
+            this.ClientSize = new System.Drawing.Size(596, 505);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.dgvMermas);

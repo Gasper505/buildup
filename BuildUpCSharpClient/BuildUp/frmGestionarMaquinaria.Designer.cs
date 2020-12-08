@@ -78,7 +78,7 @@
             this.gbDatosMaquinaria.Controls.Add(this.lblNombreMaquinaria);
             this.gbDatosMaquinaria.Controls.Add(this.lblIdMaquinaria);
             this.gbDatosMaquinaria.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbDatosMaquinaria.Location = new System.Drawing.Point(48, 56);
+            this.gbDatosMaquinaria.Location = new System.Drawing.Point(47, 49);
             this.gbDatosMaquinaria.Name = "gbDatosMaquinaria";
             this.gbDatosMaquinaria.Size = new System.Drawing.Size(545, 144);
             this.gbDatosMaquinaria.TabIndex = 13;
@@ -147,7 +147,7 @@
             this.gbDatosLinea.Controls.Add(this.lblNombreInsumo);
             this.gbDatosLinea.Controls.Add(this.lblIdInsumo);
             this.gbDatosLinea.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbDatosLinea.Location = new System.Drawing.Point(48, 419);
+            this.gbDatosLinea.Location = new System.Drawing.Point(47, 388);
             this.gbDatosLinea.Name = "gbDatosLinea";
             this.gbDatosLinea.Size = new System.Drawing.Size(545, 120);
             this.gbDatosLinea.TabIndex = 12;
@@ -213,7 +213,7 @@
             this.gbDatosProveedor.Controls.Add(this.lblIdProveedor);
             this.gbDatosProveedor.Controls.Add(this.txtIdProveedor);
             this.gbDatosProveedor.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbDatosProveedor.Location = new System.Drawing.Point(48, 217);
+            this.gbDatosProveedor.Location = new System.Drawing.Point(47, 199);
             this.gbDatosProveedor.Name = "gbDatosProveedor";
             this.gbDatosProveedor.Size = new System.Drawing.Size(545, 183);
             this.gbDatosProveedor.TabIndex = 11;
@@ -414,7 +414,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(637, 571);
+            this.ClientSize = new System.Drawing.Size(637, 538);
             this.ControlBox = false;
             this.Controls.Add(this.toolStrip2);
             this.Controls.Add(this.gbDatosMaquinaria);

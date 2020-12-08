@@ -57,7 +57,7 @@
             // btnSeleccionar
             // 
             this.btnSeleccionar.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSeleccionar.Location = new System.Drawing.Point(287, 523);
+            this.btnSeleccionar.Location = new System.Drawing.Point(287, 513);
             this.btnSeleccionar.Name = "btnSeleccionar";
             this.btnSeleccionar.Size = new System.Drawing.Size(262, 42);
             this.btnSeleccionar.TabIndex = 10;
@@ -76,12 +76,12 @@
             this.NombreMaquinaria,
             this.NombreLineaProduccion,
             this.Proveedor});
-            this.dgvMaquinarias.Location = new System.Drawing.Point(41, 174);
+            this.dgvMaquinarias.Location = new System.Drawing.Point(41, 160);
             this.dgvMaquinarias.MultiSelect = false;
             this.dgvMaquinarias.Name = "dgvMaquinarias";
             this.dgvMaquinarias.ReadOnly = true;
             this.dgvMaquinarias.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMaquinarias.Size = new System.Drawing.Size(748, 321);
+            this.dgvMaquinarias.Size = new System.Drawing.Size(748, 335);
             this.dgvMaquinarias.TabIndex = 9;
             this.dgvMaquinarias.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvMaquinarias_CellFormatting);
             // 
@@ -162,7 +162,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(829, 588);
+            this.ClientSize = new System.Drawing.Size(829, 573);
             this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.dgvMaquinarias);
             this.Controls.Add(this.gbParametrosBusqueda);

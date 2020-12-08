@@ -45,10 +45,10 @@
             this.gbParametrosBusqueda.Controls.Add(this.btnBuscar);
             this.gbParametrosBusqueda.Controls.Add(this.txtNombreInsumo);
             this.gbParametrosBusqueda.Controls.Add(this.lblBusqNombreInsumo);
-            this.gbParametrosBusqueda.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbParametrosBusqueda.Location = new System.Drawing.Point(55, 28);
+            this.gbParametrosBusqueda.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbParametrosBusqueda.Location = new System.Drawing.Point(36, 25);
             this.gbParametrosBusqueda.Name = "gbParametrosBusqueda";
-            this.gbParametrosBusqueda.Size = new System.Drawing.Size(510, 94);
+            this.gbParametrosBusqueda.Size = new System.Drawing.Size(557, 93);
             this.gbParametrosBusqueda.TabIndex = 4;
             this.gbParametrosBusqueda.TabStop = false;
             this.gbParametrosBusqueda.Text = "Parámetros de Búsqueda";
@@ -56,9 +56,9 @@
             // btnBuscar
             // 
             this.btnBuscar.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(367, 31);
+            this.btnBuscar.Location = new System.Drawing.Point(388, 26);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(110, 36);
+            this.btnBuscar.Size = new System.Drawing.Size(145, 42);
             this.btnBuscar.TabIndex = 7;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
@@ -66,19 +66,19 @@
             // 
             // txtNombreInsumo
             // 
-            this.txtNombreInsumo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreInsumo.Location = new System.Drawing.Point(153, 41);
+            this.txtNombreInsumo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreInsumo.Location = new System.Drawing.Point(152, 36);
             this.txtNombreInsumo.Name = "txtNombreInsumo";
-            this.txtNombreInsumo.Size = new System.Drawing.Size(181, 23);
+            this.txtNombreInsumo.Size = new System.Drawing.Size(210, 25);
             this.txtNombreInsumo.TabIndex = 4;
             // 
             // lblBusqNombreInsumo
             // 
             this.lblBusqNombreInsumo.AutoSize = true;
-            this.lblBusqNombreInsumo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBusqNombreInsumo.Location = new System.Drawing.Point(34, 44);
+            this.lblBusqNombreInsumo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBusqNombreInsumo.Location = new System.Drawing.Point(21, 40);
             this.lblBusqNombreInsumo.Name = "lblBusqNombreInsumo";
-            this.lblBusqNombreInsumo.Size = new System.Drawing.Size(113, 15);
+            this.lblBusqNombreInsumo.Size = new System.Drawing.Size(125, 17);
             this.lblBusqNombreInsumo.TabIndex = 0;
             this.lblBusqNombreInsumo.Text = "Nombre del Insumo";
             // 
@@ -91,12 +91,12 @@
             this.dgvInsumos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.NombreInsumo,
             this.UnidadMedida});
-            this.dgvInsumos.Location = new System.Drawing.Point(55, 146);
+            this.dgvInsumos.Location = new System.Drawing.Point(36, 124);
             this.dgvInsumos.MultiSelect = false;
             this.dgvInsumos.Name = "dgvInsumos";
             this.dgvInsumos.ReadOnly = true;
             this.dgvInsumos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvInsumos.Size = new System.Drawing.Size(510, 252);
+            this.dgvInsumos.Size = new System.Drawing.Size(557, 291);
             this.dgvInsumos.TabIndex = 5;
             // 
             // NombreInsumo
@@ -118,9 +118,9 @@
             // btnSeleccionar
             // 
             this.btnSeleccionar.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSeleccionar.Location = new System.Drawing.Point(198, 428);
+            this.btnSeleccionar.Location = new System.Drawing.Point(188, 436);
             this.btnSeleccionar.Name = "btnSeleccionar";
-            this.btnSeleccionar.Size = new System.Drawing.Size(225, 36);
+            this.btnSeleccionar.Size = new System.Drawing.Size(262, 42);
             this.btnSeleccionar.TabIndex = 6;
             this.btnSeleccionar.Text = "Seleccionar";
             this.btnSeleccionar.UseVisualStyleBackColor = true;
@@ -128,13 +128,13 @@
             // 
             // frmBuscarInsumo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(619, 493);
+            this.ClientSize = new System.Drawing.Size(626, 498);
             this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.dgvInsumos);
             this.Controls.Add(this.gbParametrosBusqueda);
-            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "frmBuscarInsumo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

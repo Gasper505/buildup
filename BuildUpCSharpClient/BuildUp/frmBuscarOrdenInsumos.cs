@@ -43,7 +43,7 @@ namespace BuildUp
                 BindingList<OrdenInsumosWS.ordenInsumos> ordenes = new BindingList<OrdenInsumosWS.ordenInsumos>(daoOrdenInsumos.listarOrdenInsumosPorRangoFecha(dtpDesde.Value, dtpHasta.Value).ToArray());
                 dgvOrdenes.DataSource = ordenes;
             }
-            catch (Exception ex)
+            catch
             {
                 MessageBox.Show("No se han encontrado resultados", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;

@@ -202,11 +202,15 @@ namespace BuildUp
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            txtIDProveedor.Text = "";
-            txtRazonSocial.Text = "";
-            txtCorreo.Text = "";
-            txtRepresentante.Text = "";
-            EstablecerEstadoComponentes(Estado.Inicial);
+            DialogResult dr = MessageBox.Show("Esta acción limpiará todos los campos llenados, echando a perder cualquier trabajo realizado.\n¿Está seguro que desea continuar?", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (dr == DialogResult.Yes)
+            {
+                txtIDProveedor.Text = "";
+                txtRazonSocial.Text = "";
+                txtCorreo.Text = "";
+                txtRepresentante.Text = "";
+                EstablecerEstadoComponentes(Estado.Inicial);
+            }
         }
     }
 }

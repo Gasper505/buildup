@@ -73,9 +73,10 @@
             // dtpFechaActual
             // 
             this.dtpFechaActual.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFechaActual.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFechaActual.Location = new System.Drawing.Point(210, 69);
             this.dtpFechaActual.Name = "dtpFechaActual";
-            this.dtpFechaActual.Size = new System.Drawing.Size(241, 25);
+            this.dtpFechaActual.Size = new System.Drawing.Size(187, 25);
             this.dtpFechaActual.TabIndex = 1;
             // 
             // txtIdOrdenInsumos
@@ -113,7 +114,7 @@
             this.gbDatosOrdenInsumos.Controls.Add(this.txtIdOrdenInsumos);
             this.gbDatosOrdenInsumos.Controls.Add(this.dtpFechaActual);
             this.gbDatosOrdenInsumos.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbDatosOrdenInsumos.Location = new System.Drawing.Point(46, 173);
+            this.gbDatosOrdenInsumos.Location = new System.Drawing.Point(46, 158);
             this.gbDatosOrdenInsumos.Name = "gbDatosOrdenInsumos";
             this.gbDatosOrdenInsumos.Size = new System.Drawing.Size(519, 117);
             this.gbDatosOrdenInsumos.TabIndex = 5;
@@ -130,7 +131,7 @@
             this.gbDatosInsumo.Controls.Add(this.lblNombreInsumo);
             this.gbDatosInsumo.Controls.Add(this.lblIdInsumo);
             this.gbDatosInsumo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbDatosInsumo.Location = new System.Drawing.Point(46, 308);
+            this.gbDatosInsumo.Location = new System.Drawing.Point(46, 281);
             this.gbDatosInsumo.Name = "gbDatosInsumo";
             this.gbDatosInsumo.Size = new System.Drawing.Size(519, 143);
             this.gbDatosInsumo.TabIndex = 6;
@@ -140,7 +141,7 @@
             // numericUpDown1
             // 
             this.numericUpDown1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(210, 93);
+            this.numericUpDown1.Location = new System.Drawing.Point(210, 89);
             this.numericUpDown1.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -155,7 +156,7 @@
             // 
             this.lblCantidad.AutoSize = true;
             this.lblCantidad.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCantidad.Location = new System.Drawing.Point(144, 95);
+            this.lblCantidad.Location = new System.Drawing.Point(144, 91);
             this.lblCantidad.Name = "lblCantidad";
             this.lblCantidad.Size = new System.Drawing.Size(60, 17);
             this.lblCantidad.TabIndex = 11;
@@ -164,9 +165,9 @@
             // btnBuscarInsumo
             // 
             this.btnBuscarInsumo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscarInsumo.Location = new System.Drawing.Point(324, 25);
+            this.btnBuscarInsumo.Location = new System.Drawing.Point(324, 20);
             this.btnBuscarInsumo.Name = "btnBuscarInsumo";
-            this.btnBuscarInsumo.Size = new System.Drawing.Size(127, 26);
+            this.btnBuscarInsumo.Size = new System.Drawing.Size(127, 35);
             this.btnBuscarInsumo.TabIndex = 10;
             this.btnBuscarInsumo.Text = "Buscar Insumo...";
             this.btnBuscarInsumo.UseVisualStyleBackColor = true;
@@ -370,7 +371,7 @@
             this.pnlAceptacionOrden.BackColor = System.Drawing.SystemColors.ControlLight;
             this.pnlAceptacionOrden.Controls.Add(this.picCheck);
             this.pnlAceptacionOrden.Controls.Add(this.btnAceptarOrden);
-            this.pnlAceptacionOrden.Location = new System.Drawing.Point(46, 467);
+            this.pnlAceptacionOrden.Location = new System.Drawing.Point(46, 430);
             this.pnlAceptacionOrden.Name = "pnlAceptacionOrden";
             this.pnlAceptacionOrden.Size = new System.Drawing.Size(519, 75);
             this.pnlAceptacionOrden.TabIndex = 41;
@@ -391,7 +392,7 @@
             this.btnAceptarOrden.BackColor = System.Drawing.SystemColors.Menu;
             this.btnAceptarOrden.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnAceptarOrden.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAceptarOrden.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAceptarOrden.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptarOrden.Location = new System.Drawing.Point(108, 19);
             this.btnAceptarOrden.Name = "btnAceptarOrden";
             this.btnAceptarOrden.Size = new System.Drawing.Size(82, 36);
@@ -405,7 +406,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(611, 566);
+            this.ClientSize = new System.Drawing.Size(611, 530);
             this.ControlBox = false;
             this.Controls.Add(this.pnlAceptacionOrden);
             this.Controls.Add(this.toolStrip2);

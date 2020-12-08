@@ -156,7 +156,7 @@
             this.btnRegresar.Image = ((System.Drawing.Image)(resources.GetObject("btnRegresar.Image")));
             this.btnRegresar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Size = new System.Drawing.Size(81, 22);
+            this.btnRegresar.Size = new System.Drawing.Size(81, 21);
             this.btnRegresar.Text = "Regresar";
             this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
             // 
@@ -173,7 +173,7 @@
             this.gbDatosMaquinaria.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbDatosMaquinaria.Location = new System.Drawing.Point(52, 51);
             this.gbDatosMaquinaria.Name = "gbDatosMaquinaria";
-            this.gbDatosMaquinaria.Size = new System.Drawing.Size(515, 260);
+            this.gbDatosMaquinaria.Size = new System.Drawing.Size(515, 223);
             this.gbDatosMaquinaria.TabIndex = 45;
             this.gbDatosMaquinaria.TabStop = false;
             this.gbDatosMaquinaria.Text = "Datos de la Merma";
@@ -185,7 +185,7 @@
             this.txtTipo.Items.AddRange(new object[] {
             "<tipo1>",
             "<tipo2>"});
-            this.txtTipo.Location = new System.Drawing.Point(198, 75);
+            this.txtTipo.Location = new System.Drawing.Point(205, 55);
             this.txtTipo.Name = "txtTipo";
             this.txtTipo.Size = new System.Drawing.Size(142, 25);
             this.txtTipo.TabIndex = 47;
@@ -200,7 +200,7 @@
             "Litros",
             "Onzas",
             "Libras"});
-            this.cboUnidadMedida.Location = new System.Drawing.Point(198, 206);
+            this.cboUnidadMedida.Location = new System.Drawing.Point(205, 172);
             this.cboUnidadMedida.Name = "cboUnidadMedida";
             this.cboUnidadMedida.Size = new System.Drawing.Size(142, 25);
             this.cboUnidadMedida.TabIndex = 46;
@@ -209,7 +209,7 @@
             // 
             this.lblUnidad.AutoSize = true;
             this.lblUnidad.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUnidad.Location = new System.Drawing.Point(74, 209);
+            this.lblUnidad.Location = new System.Drawing.Point(81, 175);
             this.lblUnidad.Name = "lblUnidad";
             this.lblUnidad.Size = new System.Drawing.Size(118, 17);
             this.lblUnidad.TabIndex = 10;
@@ -218,7 +218,7 @@
             // txtDescripcion
             // 
             this.txtDescripcion.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescripcion.Location = new System.Drawing.Point(198, 112);
+            this.txtDescripcion.Location = new System.Drawing.Point(205, 86);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(241, 80);
@@ -228,7 +228,7 @@
             // 
             this.lblDescripcion.AutoSize = true;
             this.lblDescripcion.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescripcion.Location = new System.Drawing.Point(116, 115);
+            this.lblDescripcion.Location = new System.Drawing.Point(123, 89);
             this.lblDescripcion.Name = "lblDescripcion";
             this.lblDescripcion.Size = new System.Drawing.Size(76, 17);
             this.lblDescripcion.TabIndex = 8;
@@ -237,7 +237,7 @@
             // txtIDMerma
             // 
             this.txtIDMerma.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIDMerma.Location = new System.Drawing.Point(198, 39);
+            this.txtIDMerma.Location = new System.Drawing.Point(205, 24);
             this.txtIDMerma.Name = "txtIDMerma";
             this.txtIDMerma.Size = new System.Drawing.Size(86, 25);
             this.txtIDMerma.TabIndex = 5;
@@ -246,7 +246,7 @@
             // 
             this.lblTipo.AutoSize = true;
             this.lblTipo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTipo.Location = new System.Drawing.Point(158, 78);
+            this.lblTipo.Location = new System.Drawing.Point(165, 58);
             this.lblTipo.Name = "lblTipo";
             this.lblTipo.Size = new System.Drawing.Size(34, 17);
             this.lblTipo.TabIndex = 6;
@@ -256,7 +256,7 @@
             // 
             this.lblIDMerma.AutoSize = true;
             this.lblIDMerma.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIDMerma.Location = new System.Drawing.Point(93, 42);
+            this.lblIDMerma.Location = new System.Drawing.Point(100, 27);
             this.lblIDMerma.Name = "lblIDMerma";
             this.lblIDMerma.Size = new System.Drawing.Size(99, 17);
             this.lblIDMerma.TabIndex = 5;
@@ -266,7 +266,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(619, 339);
+            this.ClientSize = new System.Drawing.Size(619, 305);
             this.ControlBox = false;
             this.Controls.Add(this.gbDatosMaquinaria);
             this.Controls.Add(this.toolStrip2);

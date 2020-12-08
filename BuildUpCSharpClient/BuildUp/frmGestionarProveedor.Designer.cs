@@ -56,7 +56,7 @@
             // txtCorreo
             // 
             this.txtCorreo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCorreo.Location = new System.Drawing.Point(222, 119);
+            this.txtCorreo.Location = new System.Drawing.Point(228, 86);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(226, 25);
             this.txtCorreo.TabIndex = 15;
@@ -65,7 +65,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(89, 161);
+            this.label4.Location = new System.Drawing.Point(95, 120);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(127, 17);
             this.label4.TabIndex = 14;
@@ -75,7 +75,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(99, 122);
+            this.label3.Location = new System.Drawing.Point(105, 89);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(117, 17);
             this.label3.TabIndex = 13;
@@ -85,7 +85,7 @@
             // 
             this.lblRazonSocial.AutoSize = true;
             this.lblRazonSocial.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRazonSocial.Location = new System.Drawing.Point(134, 82);
+            this.lblRazonSocial.Location = new System.Drawing.Point(140, 58);
             this.lblRazonSocial.Name = "lblRazonSocial";
             this.lblRazonSocial.Size = new System.Drawing.Size(82, 17);
             this.lblRazonSocial.TabIndex = 12;
@@ -94,7 +94,7 @@
             // txtIDProveedor
             // 
             this.txtIDProveedor.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIDProveedor.Location = new System.Drawing.Point(222, 42);
+            this.txtIDProveedor.Location = new System.Drawing.Point(228, 24);
             this.txtIDProveedor.Name = "txtIDProveedor";
             this.txtIDProveedor.Size = new System.Drawing.Size(82, 25);
             this.txtIDProveedor.TabIndex = 11;
@@ -103,7 +103,7 @@
             // 
             this.lblID.AutoSize = true;
             this.lblID.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblID.Location = new System.Drawing.Point(131, 45);
+            this.lblID.Location = new System.Drawing.Point(137, 27);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(85, 17);
             this.lblID.TabIndex = 10;
@@ -112,7 +112,7 @@
             // txtRazonSocial
             // 
             this.txtRazonSocial.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRazonSocial.Location = new System.Drawing.Point(222, 79);
+            this.txtRazonSocial.Location = new System.Drawing.Point(228, 55);
             this.txtRazonSocial.Name = "txtRazonSocial";
             this.txtRazonSocial.Size = new System.Drawing.Size(226, 25);
             this.txtRazonSocial.TabIndex = 16;
@@ -120,7 +120,7 @@
             // txtRepresentante
             // 
             this.txtRepresentante.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRepresentante.Location = new System.Drawing.Point(222, 158);
+            this.txtRepresentante.Location = new System.Drawing.Point(228, 117);
             this.txtRepresentante.Name = "txtRepresentante";
             this.txtRepresentante.Size = new System.Drawing.Size(226, 25);
             this.txtRepresentante.TabIndex = 17;
@@ -138,7 +138,7 @@
             this.gbDatosProveedor.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbDatosProveedor.Location = new System.Drawing.Point(39, 52);
             this.gbDatosProveedor.Name = "gbDatosProveedor";
-            this.gbDatosProveedor.Size = new System.Drawing.Size(523, 212);
+            this.gbDatosProveedor.Size = new System.Drawing.Size(523, 166);
             this.gbDatosProveedor.TabIndex = 36;
             this.gbDatosProveedor.TabStop = false;
             this.gbDatosProveedor.Text = "Datos del Proveedor";
@@ -246,7 +246,7 @@
             this.btnRegresar.Image = ((System.Drawing.Image)(resources.GetObject("btnRegresar.Image")));
             this.btnRegresar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Size = new System.Drawing.Size(81, 22);
+            this.btnRegresar.Size = new System.Drawing.Size(81, 21);
             this.btnRegresar.Text = "Regresar";
             this.btnRegresar.Click += new System.EventHandler(this.btnVolver_Click);
             // 
@@ -254,7 +254,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(605, 293);
+            this.ClientSize = new System.Drawing.Size(605, 249);
             this.ControlBox = false;
             this.Controls.Add(this.toolStrip2);
             this.Controls.Add(this.gbDatosProveedor);
