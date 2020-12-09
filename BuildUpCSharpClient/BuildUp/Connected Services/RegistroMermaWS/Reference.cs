@@ -16,14 +16,18 @@ namespace BuildUp.RegistroMermaWS {
     public interface RegistroMermaWS {
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/RegistroMermaWS/listarRegistroMermaRequest", ReplyAction="http://services.buildup.pucp.edu.pe/RegistroMermaWS/listarRegistroMermaResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/RegistroMermaWS/listarRegistrosMermasPorSuper" +
+            "visorYRangoFechasRequest", ReplyAction="http://services.buildup.pucp.edu.pe/RegistroMermaWS/listarRegistrosMermasPorSuper" +
+            "visorYRangoFechasResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        BuildUp.RegistroMermaWS.listarRegistroMermaResponse listarRegistroMerma(BuildUp.RegistroMermaWS.listarRegistroMermaRequest request);
+        BuildUp.RegistroMermaWS.listarRegistrosMermasPorSupervisorYRangoFechasResponse listarRegistrosMermasPorSupervisorYRangoFechas(BuildUp.RegistroMermaWS.listarRegistrosMermasPorSupervisorYRangoFechasRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/RegistroMermaWS/listarRegistroMermaRequest", ReplyAction="http://services.buildup.pucp.edu.pe/RegistroMermaWS/listarRegistroMermaResponse")]
-        System.Threading.Tasks.Task<BuildUp.RegistroMermaWS.listarRegistroMermaResponse> listarRegistroMermaAsync(BuildUp.RegistroMermaWS.listarRegistroMermaRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/RegistroMermaWS/listarRegistrosMermasPorSuper" +
+            "visorYRangoFechasRequest", ReplyAction="http://services.buildup.pucp.edu.pe/RegistroMermaWS/listarRegistrosMermasPorSuper" +
+            "visorYRangoFechasResponse")]
+        System.Threading.Tasks.Task<BuildUp.RegistroMermaWS.listarRegistrosMermasPorSupervisorYRangoFechasResponse> listarRegistrosMermasPorSupervisorYRangoFechasAsync(BuildUp.RegistroMermaWS.listarRegistrosMermasPorSupervisorYRangoFechasRequest request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/RegistroMermaWS/actualizarRegistroMermaReques" +
@@ -38,6 +42,16 @@ namespace BuildUp.RegistroMermaWS {
             "t", ReplyAction="http://services.buildup.pucp.edu.pe/RegistroMermaWS/actualizarRegistroMermaRespon" +
             "se")]
         System.Threading.Tasks.Task<BuildUp.RegistroMermaWS.actualizarRegistroMermaResponse> actualizarRegistroMermaAsync(BuildUp.RegistroMermaWS.actualizarRegistroMermaRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/RegistroMermaWS/listarRegistroMermaRequest", ReplyAction="http://services.buildup.pucp.edu.pe/RegistroMermaWS/listarRegistroMermaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        BuildUp.RegistroMermaWS.listarRegistroMermaResponse listarRegistroMerma(BuildUp.RegistroMermaWS.listarRegistroMermaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/RegistroMermaWS/listarRegistroMermaRequest", ReplyAction="http://services.buildup.pucp.edu.pe/RegistroMermaWS/listarRegistroMermaResponse")]
+        System.Threading.Tasks.Task<BuildUp.RegistroMermaWS.listarRegistroMermaResponse> listarRegistroMermaAsync(BuildUp.RegistroMermaWS.listarRegistroMermaRequest request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/RegistroMermaWS/eliminarRegistroMermaRequest", ReplyAction="http://services.buildup.pucp.edu.pe/RegistroMermaWS/eliminarRegistroMermaResponse" +
@@ -70,23 +84,35 @@ namespace BuildUp.RegistroMermaWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.buildup.pucp.edu.pe/")]
-    public partial class registroMerma : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class date : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.buildup.pucp.edu.pe/")]
+    public partial class merma : object, System.ComponentModel.INotifyPropertyChanged {
         
         private bool activoField;
         
-        private int cantidadField;
+        private string descripcionField;
         
-        private System.DateTime fechaField;
+        private int idMermaField;
         
-        private bool fechaFieldSpecified;
+        private string tipoField;
         
-        private int idRegistroMermaField;
-        
-        private lineaProduccion lineaProduccionField;
-        
-        private merma mermaField;
-        
-        private supervisor supervisorField;
+        private string unidadField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
@@ -102,85 +128,49 @@ namespace BuildUp.RegistroMermaWS {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public int cantidad {
+        public string descripcion {
             get {
-                return this.cantidadField;
+                return this.descripcionField;
             }
             set {
-                this.cantidadField = value;
-                this.RaisePropertyChanged("cantidad");
+                this.descripcionField = value;
+                this.RaisePropertyChanged("descripcion");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public System.DateTime fecha {
+        public int idMerma {
             get {
-                return this.fechaField;
+                return this.idMermaField;
             }
             set {
-                this.fechaField = value;
-                this.RaisePropertyChanged("fecha");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool fechaSpecified {
-            get {
-                return this.fechaFieldSpecified;
-            }
-            set {
-                this.fechaFieldSpecified = value;
-                this.RaisePropertyChanged("fechaSpecified");
+                this.idMermaField = value;
+                this.RaisePropertyChanged("idMerma");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public int idRegistroMerma {
+        public string tipo {
             get {
-                return this.idRegistroMermaField;
+                return this.tipoField;
             }
             set {
-                this.idRegistroMermaField = value;
-                this.RaisePropertyChanged("idRegistroMerma");
+                this.tipoField = value;
+                this.RaisePropertyChanged("tipo");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public lineaProduccion lineaProduccion {
+        public string unidad {
             get {
-                return this.lineaProduccionField;
+                return this.unidadField;
             }
             set {
-                this.lineaProduccionField = value;
-                this.RaisePropertyChanged("lineaProduccion");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public merma merma {
-            get {
-                return this.mermaField;
-            }
-            set {
-                this.mermaField = value;
-                this.RaisePropertyChanged("merma");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
-        public supervisor supervisor {
-            get {
-                return this.supervisorField;
-            }
-            set {
-                this.supervisorField = value;
-                this.RaisePropertyChanged("supervisor");
+                this.unidadField = value;
+                this.RaisePropertyChanged("unidad");
             }
         }
         
@@ -200,46 +190,68 @@ namespace BuildUp.RegistroMermaWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.buildup.pucp.edu.pe/")]
-    public partial class lineaProduccion : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class tipoLadrillo : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private bool activoField;
+        private double alturaField;
         
-        private int idLineaProduccionField;
+        private double anchoField;
+        
+        private int idTipoLadrilloField;
+        
+        private double largoField;
         
         private string nombreField;
         
-        private operario[] operariosField;
-        
-        private supervisor[] supervisoresField;
-        
-        private tipoLadrillo tipoLadrilloField;
-        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public bool activo {
+        public double altura {
             get {
-                return this.activoField;
+                return this.alturaField;
             }
             set {
-                this.activoField = value;
-                this.RaisePropertyChanged("activo");
+                this.alturaField = value;
+                this.RaisePropertyChanged("altura");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public int idLineaProduccion {
+        public double ancho {
             get {
-                return this.idLineaProduccionField;
+                return this.anchoField;
             }
             set {
-                this.idLineaProduccionField = value;
-                this.RaisePropertyChanged("idLineaProduccion");
+                this.anchoField = value;
+                this.RaisePropertyChanged("ancho");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public int idTipoLadrillo {
+            get {
+                return this.idTipoLadrilloField;
+            }
+            set {
+                this.idTipoLadrilloField = value;
+                this.RaisePropertyChanged("idTipoLadrillo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public double largo {
+            get {
+                return this.largoField;
+            }
+            set {
+                this.largoField = value;
+                this.RaisePropertyChanged("largo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
         public string nombre {
             get {
                 return this.nombreField;
@@ -250,71 +262,12 @@ namespace BuildUp.RegistroMermaWS {
             }
         }
         
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("operarios", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=3)]
-        public operario[] operarios {
-            get {
-                return this.operariosField;
-            }
-            set {
-                this.operariosField = value;
-                this.RaisePropertyChanged("operarios");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("supervisores", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=4)]
-        public supervisor[] supervisores {
-            get {
-                return this.supervisoresField;
-            }
-            set {
-                this.supervisoresField = value;
-                this.RaisePropertyChanged("supervisores");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public tipoLadrillo tipoLadrillo {
-            get {
-                return this.tipoLadrilloField;
-            }
-            set {
-                this.tipoLadrilloField = value;
-                this.RaisePropertyChanged("tipoLadrillo");
-            }
-        }
-        
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
         protected void RaisePropertyChanged(string propertyName) {
             System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
             if ((propertyChanged != null)) {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.buildup.pucp.edu.pe/")]
-    public partial class operario : persona {
-        
-        private lineaProduccion lineaProduccionField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public lineaProduccion lineaProduccion {
-            get {
-                return this.lineaProduccionField;
-            }
-            set {
-                this.lineaProduccionField = value;
-                this.RaisePropertyChanged("lineaProduccion");
             }
         }
     }
@@ -513,182 +466,6 @@ namespace BuildUp.RegistroMermaWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.buildup.pucp.edu.pe/")]
-    public partial class merma : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private bool activoField;
-        
-        private string descripcionField;
-        
-        private int idMermaField;
-        
-        private string tipoField;
-        
-        private string unidadField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public bool activo {
-            get {
-                return this.activoField;
-            }
-            set {
-                this.activoField = value;
-                this.RaisePropertyChanged("activo");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string descripcion {
-            get {
-                return this.descripcionField;
-            }
-            set {
-                this.descripcionField = value;
-                this.RaisePropertyChanged("descripcion");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public int idMerma {
-            get {
-                return this.idMermaField;
-            }
-            set {
-                this.idMermaField = value;
-                this.RaisePropertyChanged("idMerma");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public string tipo {
-            get {
-                return this.tipoField;
-            }
-            set {
-                this.tipoField = value;
-                this.RaisePropertyChanged("tipo");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public string unidad {
-            get {
-                return this.unidadField;
-            }
-            set {
-                this.unidadField = value;
-                this.RaisePropertyChanged("unidad");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.buildup.pucp.edu.pe/")]
-    public partial class tipoLadrillo : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private double alturaField;
-        
-        private double anchoField;
-        
-        private int idTipoLadrilloField;
-        
-        private double largoField;
-        
-        private string nombreField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public double altura {
-            get {
-                return this.alturaField;
-            }
-            set {
-                this.alturaField = value;
-                this.RaisePropertyChanged("altura");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public double ancho {
-            get {
-                return this.anchoField;
-            }
-            set {
-                this.anchoField = value;
-                this.RaisePropertyChanged("ancho");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public int idTipoLadrillo {
-            get {
-                return this.idTipoLadrilloField;
-            }
-            set {
-                this.idTipoLadrilloField = value;
-                this.RaisePropertyChanged("idTipoLadrillo");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public double largo {
-            get {
-                return this.largoField;
-            }
-            set {
-                this.largoField = value;
-                this.RaisePropertyChanged("largo");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public string nombre {
-            get {
-                return this.nombreField;
-            }
-            set {
-                this.nombreField = value;
-                this.RaisePropertyChanged("nombre");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.buildup.pucp.edu.pe/")]
     public partial class supervisor : persona {
         
         private lineaProduccion lineaProduccionField;
@@ -706,30 +483,303 @@ namespace BuildUp.RegistroMermaWS {
         }
     }
     
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarRegistroMerma", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarRegistroMermaRequest {
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.buildup.pucp.edu.pe/")]
+    public partial class lineaProduccion : object, System.ComponentModel.INotifyPropertyChanged {
         
-        public listarRegistroMermaRequest() {
+        private bool activoField;
+        
+        private int idLineaProduccionField;
+        
+        private string nombreField;
+        
+        private operario[] operariosField;
+        
+        private supervisor[] supervisoresField;
+        
+        private tipoLadrillo tipoLadrilloField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public bool activo {
+            get {
+                return this.activoField;
+            }
+            set {
+                this.activoField = value;
+                this.RaisePropertyChanged("activo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public int idLineaProduccion {
+            get {
+                return this.idLineaProduccionField;
+            }
+            set {
+                this.idLineaProduccionField = value;
+                this.RaisePropertyChanged("idLineaProduccion");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string nombre {
+            get {
+                return this.nombreField;
+            }
+            set {
+                this.nombreField = value;
+                this.RaisePropertyChanged("nombre");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("operarios", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=3)]
+        public operario[] operarios {
+            get {
+                return this.operariosField;
+            }
+            set {
+                this.operariosField = value;
+                this.RaisePropertyChanged("operarios");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("supervisores", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=4)]
+        public supervisor[] supervisores {
+            get {
+                return this.supervisoresField;
+            }
+            set {
+                this.supervisoresField = value;
+                this.RaisePropertyChanged("supervisores");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public tipoLadrillo tipoLadrillo {
+            get {
+                return this.tipoLadrilloField;
+            }
+            set {
+                this.tipoLadrilloField = value;
+                this.RaisePropertyChanged("tipoLadrillo");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.buildup.pucp.edu.pe/")]
+    public partial class operario : persona {
+        
+        private lineaProduccion lineaProduccionField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public lineaProduccion lineaProduccion {
+            get {
+                return this.lineaProduccionField;
+            }
+            set {
+                this.lineaProduccionField = value;
+                this.RaisePropertyChanged("lineaProduccion");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.buildup.pucp.edu.pe/")]
+    public partial class registroMerma : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private bool activoField;
+        
+        private int cantidadField;
+        
+        private System.DateTime fechaField;
+        
+        private bool fechaFieldSpecified;
+        
+        private int idRegistroMermaField;
+        
+        private lineaProduccion lineaProduccionField;
+        
+        private merma mermaField;
+        
+        private supervisor supervisorField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public bool activo {
+            get {
+                return this.activoField;
+            }
+            set {
+                this.activoField = value;
+                this.RaisePropertyChanged("activo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public int cantidad {
+            get {
+                return this.cantidadField;
+            }
+            set {
+                this.cantidadField = value;
+                this.RaisePropertyChanged("cantidad");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public System.DateTime fecha {
+            get {
+                return this.fechaField;
+            }
+            set {
+                this.fechaField = value;
+                this.RaisePropertyChanged("fecha");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool fechaSpecified {
+            get {
+                return this.fechaFieldSpecified;
+            }
+            set {
+                this.fechaFieldSpecified = value;
+                this.RaisePropertyChanged("fechaSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public int idRegistroMerma {
+            get {
+                return this.idRegistroMermaField;
+            }
+            set {
+                this.idRegistroMermaField = value;
+                this.RaisePropertyChanged("idRegistroMerma");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public lineaProduccion lineaProduccion {
+            get {
+                return this.lineaProduccionField;
+            }
+            set {
+                this.lineaProduccionField = value;
+                this.RaisePropertyChanged("lineaProduccion");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public merma merma {
+            get {
+                return this.mermaField;
+            }
+            set {
+                this.mermaField = value;
+                this.RaisePropertyChanged("merma");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        public supervisor supervisor {
+            get {
+                return this.supervisorField;
+            }
+            set {
+                this.supervisorField = value;
+                this.RaisePropertyChanged("supervisor");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarRegistroMermaResponse", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarRegistroMermaResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarRegistrosMermasPorSupervisorYRangoFechas", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarRegistrosMermasPorSupervisorYRangoFechasRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string nombreSup;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public BuildUp.RegistroMermaWS.date fechaInicial;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public BuildUp.RegistroMermaWS.date fechaFin;
+        
+        public listarRegistrosMermasPorSupervisorYRangoFechasRequest() {
+        }
+        
+        public listarRegistrosMermasPorSupervisorYRangoFechasRequest(string nombreSup, BuildUp.RegistroMermaWS.date fechaInicial, BuildUp.RegistroMermaWS.date fechaFin) {
+            this.nombreSup = nombreSup;
+            this.fechaInicial = fechaInicial;
+            this.fechaFin = fechaFin;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarRegistrosMermasPorSupervisorYRangoFechasResponse", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarRegistrosMermasPorSupervisorYRangoFechasResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public BuildUp.RegistroMermaWS.registroMerma[] @return;
         
-        public listarRegistroMermaResponse() {
+        public listarRegistrosMermasPorSupervisorYRangoFechasResponse() {
         }
         
-        public listarRegistroMermaResponse(BuildUp.RegistroMermaWS.registroMerma[] @return) {
+        public listarRegistrosMermasPorSupervisorYRangoFechasResponse(BuildUp.RegistroMermaWS.registroMerma[] @return) {
             this.@return = @return;
         }
     }
@@ -766,6 +816,34 @@ namespace BuildUp.RegistroMermaWS {
         }
         
         public actualizarRegistroMermaResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarRegistroMerma", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarRegistroMermaRequest {
+        
+        public listarRegistroMermaRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarRegistroMermaResponse", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarRegistroMermaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.buildup.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public BuildUp.RegistroMermaWS.registroMerma[] @return;
+        
+        public listarRegistroMermaResponse() {
+        }
+        
+        public listarRegistroMermaResponse(BuildUp.RegistroMermaWS.registroMerma[] @return) {
             this.@return = @return;
         }
     }
@@ -870,24 +948,30 @@ namespace BuildUp.RegistroMermaWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        BuildUp.RegistroMermaWS.listarRegistroMermaResponse BuildUp.RegistroMermaWS.RegistroMermaWS.listarRegistroMerma(BuildUp.RegistroMermaWS.listarRegistroMermaRequest request) {
-            return base.Channel.listarRegistroMerma(request);
+        BuildUp.RegistroMermaWS.listarRegistrosMermasPorSupervisorYRangoFechasResponse BuildUp.RegistroMermaWS.RegistroMermaWS.listarRegistrosMermasPorSupervisorYRangoFechas(BuildUp.RegistroMermaWS.listarRegistrosMermasPorSupervisorYRangoFechasRequest request) {
+            return base.Channel.listarRegistrosMermasPorSupervisorYRangoFechas(request);
         }
         
-        public BuildUp.RegistroMermaWS.registroMerma[] listarRegistroMerma() {
-            BuildUp.RegistroMermaWS.listarRegistroMermaRequest inValue = new BuildUp.RegistroMermaWS.listarRegistroMermaRequest();
-            BuildUp.RegistroMermaWS.listarRegistroMermaResponse retVal = ((BuildUp.RegistroMermaWS.RegistroMermaWS)(this)).listarRegistroMerma(inValue);
+        public BuildUp.RegistroMermaWS.registroMerma[] listarRegistrosMermasPorSupervisorYRangoFechas(string nombreSup, BuildUp.RegistroMermaWS.date fechaInicial, BuildUp.RegistroMermaWS.date fechaFin) {
+            BuildUp.RegistroMermaWS.listarRegistrosMermasPorSupervisorYRangoFechasRequest inValue = new BuildUp.RegistroMermaWS.listarRegistrosMermasPorSupervisorYRangoFechasRequest();
+            inValue.nombreSup = nombreSup;
+            inValue.fechaInicial = fechaInicial;
+            inValue.fechaFin = fechaFin;
+            BuildUp.RegistroMermaWS.listarRegistrosMermasPorSupervisorYRangoFechasResponse retVal = ((BuildUp.RegistroMermaWS.RegistroMermaWS)(this)).listarRegistrosMermasPorSupervisorYRangoFechas(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<BuildUp.RegistroMermaWS.listarRegistroMermaResponse> BuildUp.RegistroMermaWS.RegistroMermaWS.listarRegistroMermaAsync(BuildUp.RegistroMermaWS.listarRegistroMermaRequest request) {
-            return base.Channel.listarRegistroMermaAsync(request);
+        System.Threading.Tasks.Task<BuildUp.RegistroMermaWS.listarRegistrosMermasPorSupervisorYRangoFechasResponse> BuildUp.RegistroMermaWS.RegistroMermaWS.listarRegistrosMermasPorSupervisorYRangoFechasAsync(BuildUp.RegistroMermaWS.listarRegistrosMermasPorSupervisorYRangoFechasRequest request) {
+            return base.Channel.listarRegistrosMermasPorSupervisorYRangoFechasAsync(request);
         }
         
-        public System.Threading.Tasks.Task<BuildUp.RegistroMermaWS.listarRegistroMermaResponse> listarRegistroMermaAsync() {
-            BuildUp.RegistroMermaWS.listarRegistroMermaRequest inValue = new BuildUp.RegistroMermaWS.listarRegistroMermaRequest();
-            return ((BuildUp.RegistroMermaWS.RegistroMermaWS)(this)).listarRegistroMermaAsync(inValue);
+        public System.Threading.Tasks.Task<BuildUp.RegistroMermaWS.listarRegistrosMermasPorSupervisorYRangoFechasResponse> listarRegistrosMermasPorSupervisorYRangoFechasAsync(string nombreSup, BuildUp.RegistroMermaWS.date fechaInicial, BuildUp.RegistroMermaWS.date fechaFin) {
+            BuildUp.RegistroMermaWS.listarRegistrosMermasPorSupervisorYRangoFechasRequest inValue = new BuildUp.RegistroMermaWS.listarRegistrosMermasPorSupervisorYRangoFechasRequest();
+            inValue.nombreSup = nombreSup;
+            inValue.fechaInicial = fechaInicial;
+            inValue.fechaFin = fechaFin;
+            return ((BuildUp.RegistroMermaWS.RegistroMermaWS)(this)).listarRegistrosMermasPorSupervisorYRangoFechasAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -911,6 +995,27 @@ namespace BuildUp.RegistroMermaWS {
             BuildUp.RegistroMermaWS.actualizarRegistroMermaRequest inValue = new BuildUp.RegistroMermaWS.actualizarRegistroMermaRequest();
             inValue.registroMerma = registroMerma;
             return ((BuildUp.RegistroMermaWS.RegistroMermaWS)(this)).actualizarRegistroMermaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        BuildUp.RegistroMermaWS.listarRegistroMermaResponse BuildUp.RegistroMermaWS.RegistroMermaWS.listarRegistroMerma(BuildUp.RegistroMermaWS.listarRegistroMermaRequest request) {
+            return base.Channel.listarRegistroMerma(request);
+        }
+        
+        public BuildUp.RegistroMermaWS.registroMerma[] listarRegistroMerma() {
+            BuildUp.RegistroMermaWS.listarRegistroMermaRequest inValue = new BuildUp.RegistroMermaWS.listarRegistroMermaRequest();
+            BuildUp.RegistroMermaWS.listarRegistroMermaResponse retVal = ((BuildUp.RegistroMermaWS.RegistroMermaWS)(this)).listarRegistroMerma(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<BuildUp.RegistroMermaWS.listarRegistroMermaResponse> BuildUp.RegistroMermaWS.RegistroMermaWS.listarRegistroMermaAsync(BuildUp.RegistroMermaWS.listarRegistroMermaRequest request) {
+            return base.Channel.listarRegistroMermaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<BuildUp.RegistroMermaWS.listarRegistroMermaResponse> listarRegistroMermaAsync() {
+            BuildUp.RegistroMermaWS.listarRegistroMermaRequest inValue = new BuildUp.RegistroMermaWS.listarRegistroMermaRequest();
+            return ((BuildUp.RegistroMermaWS.RegistroMermaWS)(this)).listarRegistroMermaAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]

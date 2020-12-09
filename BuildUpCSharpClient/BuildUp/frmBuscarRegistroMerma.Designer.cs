@@ -51,6 +51,7 @@
             // 
             this.dgvRegistrosMerma.AllowUserToAddRows = false;
             this.dgvRegistrosMerma.AllowUserToDeleteRows = false;
+            this.dgvRegistrosMerma.BackgroundColor = System.Drawing.SystemColors.Desktop;
             this.dgvRegistrosMerma.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvRegistrosMerma.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRegistrosMerma.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -121,6 +122,7 @@
             // 
             // btnSeleccionar
             // 
+            this.btnSeleccionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSeleccionar.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeleccionar.Location = new System.Drawing.Point(272, 492);
             this.btnSeleccionar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -133,6 +135,7 @@
             // 
             // btnBuscar
             // 
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.Location = new System.Drawing.Point(532, 64);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);

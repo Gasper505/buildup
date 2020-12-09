@@ -27,6 +27,8 @@ namespace BuildUp
             daoMerma = new MermaWS.MermaWSClient();
 
             cboTipoMerma.DataSource = daoMerma.listarMerma();
+            cboTipoMerma.ValueMember = "idMerma";
+            cboTipoMerma.DisplayMember = "tipo";
 
             EstablecerEstadoComponentes(Estado.Inicial);
 
@@ -92,12 +94,16 @@ namespace BuildUp
             {
                 registroMerma.merma = new RegistroMermaWS.merma();
                 registroMerma.lineaProduccion = new RegistroMermaWS.lineaProduccion();
+                registroMerma.supervisor = new RegistroMermaWS.supervisor();
+
+                registroMerma.fecha = dtpFechaMerma.Value;
+                registroMerma.cantidad = Int32.Parse(txtCantidad.Text);
+                registroMerma.supervisor.nombres = frmLogIn.Usuario.nombres + frmLogIn.Usuario.apellidos;
                 registroMerma.merma = (RegistroMermaWS.merma)cboTipoMerma.SelectedItem;
                 registroMerma.lineaProduccion.nombre = daoSupervisor.obtenerLineaProduccionSupervisor(frmLogIn.Usuario.idPersona);
 
                 int resultado = 0;
                 resultado = daoRegistroMerma.insertarRegistroMerma(registroMerma);
-                txtIDRegMerma.Text = resultado.ToString();
 
                 if (resultado != 0)
                 {
@@ -110,7 +116,6 @@ namespace BuildUp
 
                     EstablecerEstadoComponentes(Estado.Inicial);
                     MessageBox.Show("El registro ha sido exitoso", "Mensaje de Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
                 }
                 else
                 {
@@ -122,12 +127,58 @@ namespace BuildUp
         private void btnHistorial_Click(object sender, EventArgs e)
         {
             frmBuscarRegistroMerma formBuscarMerma = new frmBuscarRegistroMerma();
-            formBuscarMerma.ShowDialog();
+            if (formBuscarMerma.ShowDialog() == DialogResult.OK)
+            {
+                registroMerma.merma = new RegistroMermaWS.merma();
+                registroMerma.lineaProduccion = new RegistroMermaWS.lineaProduccion();
+                registroMerma = formBuscarMerma.RegistroMermaSeleccionado;
+                txtIDRegMerma.Text = registroMerma.idRegistroMerma.ToString();
+                cboTipoMerma.Text = registroMerma.merma.tipo;
+                txtCantidad.Text = registroMerma.cantidad.ToString();
+                dtpFechaMerma.Value = registroMerma.fecha;
+                txtSupervisor.Text = registroMerma.supervisor.nombres + registroMerma.supervisor.apellidos;
+                txtLineaProduccion.Text = registroMerma.lineaProduccion.nombre;
+                EstablecerEstadoComponentes(Estado.Modificacion);
+            }
+
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
+            DialogResult dr = MessageBox.Show("¿Está seguro que desea actualizar los datos de este Acontecimiento de Merma?", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (dr == DialogResult.Yes)
+            {
+                registroMerma.merma = new RegistroMermaWS.merma();
+                registroMerma.lineaProduccion = new RegistroMermaWS.lineaProduccion();
+                registroMerma.supervisor = new RegistroMermaWS.supervisor();
 
+                registroMerma.idRegistroMerma = Int32.Parse(txtIDRegMerma.Text);
+                registroMerma.fecha = dtpFechaMerma.Value;
+                registroMerma.cantidad = Int32.Parse(txtCantidad.Text);
+                registroMerma.supervisor.nombres = frmLogIn.Usuario.nombres + frmLogIn.Usuario.apellidos;
+                registroMerma.merma = (RegistroMermaWS.merma)cboTipoMerma.SelectedItem;
+                registroMerma.lineaProduccion.nombre = daoSupervisor.obtenerLineaProduccionSupervisor(frmLogIn.Usuario.idPersona);
+
+                int resultado = 0;
+                resultado = daoRegistroMerma.actualizarRegistroMerma(registroMerma);
+
+                if (resultado != 0)
+                {
+                    txtIDRegMerma.Text = "";
+                    cboTipoMerma.Text = "";
+                    txtCantidad.Text = "";
+                    dtpFechaMerma.Value = DateTime.Now;
+                    txtSupervisor.Text = "";
+                    txtLineaProduccion.Text = "";
+
+                    EstablecerEstadoComponentes(Estado.Inicial);
+                    MessageBox.Show("La actualización ha sido exitosa", "Mensaje de Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Error en el proceso", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -152,11 +203,13 @@ namespace BuildUp
             dtpFechaMerma.Value = DateTime.Now;
             txtSupervisor.Text = "";
             txtLineaProduccion.Text = "";
+            EstablecerEstadoComponentes(Estado.Inicial);
         }
 
         private void tsbVolver_Click(object sender, EventArgs e)
         {
             this.Hide();
+            ActiveForm.Show();
         }
     }
 }

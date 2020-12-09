@@ -61,9 +61,10 @@
             // dtpHasta
             // 
             this.dtpHasta.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpHasta.Location = new System.Drawing.Point(73, 72);
+            this.dtpHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpHasta.Location = new System.Drawing.Point(93, 75);
             this.dtpHasta.Name = "dtpHasta";
-            this.dtpHasta.Size = new System.Drawing.Size(270, 25);
+            this.dtpHasta.Size = new System.Drawing.Size(233, 25);
             this.dtpHasta.TabIndex = 17;
             this.dtpHasta.Value = new System.DateTime(2020, 12, 31, 0, 0, 0, 0);
             // 
@@ -71,7 +72,7 @@
             // 
             this.lblHasta.AutoSize = true;
             this.lblHasta.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHasta.Location = new System.Drawing.Point(26, 73);
+            this.lblHasta.Location = new System.Drawing.Point(46, 76);
             this.lblHasta.Name = "lblHasta";
             this.lblHasta.Size = new System.Drawing.Size(41, 17);
             this.lblHasta.TabIndex = 16;
@@ -81,7 +82,7 @@
             // 
             this.lblDesde.AutoSize = true;
             this.lblDesde.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDesde.Location = new System.Drawing.Point(22, 47);
+            this.lblDesde.Location = new System.Drawing.Point(42, 50);
             this.lblDesde.Name = "lblDesde";
             this.lblDesde.Size = new System.Drawing.Size(45, 17);
             this.lblDesde.TabIndex = 15;
@@ -90,16 +91,18 @@
             // dtpDesde
             // 
             this.dtpDesde.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpDesde.Location = new System.Drawing.Point(73, 41);
+            this.dtpDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpDesde.Location = new System.Drawing.Point(93, 44);
             this.dtpDesde.Name = "dtpDesde";
-            this.dtpDesde.Size = new System.Drawing.Size(270, 25);
+            this.dtpDesde.Size = new System.Drawing.Size(233, 25);
             this.dtpDesde.TabIndex = 14;
             this.dtpDesde.Value = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
             // 
             // btnBuscar
             // 
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(362, 53);
+            this.btnBuscar.Location = new System.Drawing.Point(351, 56);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(138, 37);
             this.btnBuscar.TabIndex = 13;
@@ -109,6 +112,7 @@
             // 
             // btnSeleccionar
             // 
+            this.btnSeleccionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSeleccionar.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeleccionar.Location = new System.Drawing.Point(161, 480);
             this.btnSeleccionar.Name = "btnSeleccionar";
@@ -122,6 +126,7 @@
             // 
             this.dgvIncidentes.AllowUserToAddRows = false;
             this.dgvIncidentes.AllowUserToDeleteRows = false;
+            this.dgvIncidentes.BackgroundColor = System.Drawing.SystemColors.Desktop;
             this.dgvIncidentes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvIncidentes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,

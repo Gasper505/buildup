@@ -137,9 +137,7 @@ namespace BuildUp
                 EstablecerEstadoComponentes(Estado.Modificacion);
             }
 
-            if (frmLogIn.Usuario.rol == "Ingeniero"
-                || frmLogIn.Usuario.rol == "ingeniero"
-                || frmLogIn.Usuario.rol == "INGENIERO")
+            if (frmLogIn.Usuario.rol == "Ingeniero")
             {
                 EstablecerEstadoComponentes(Estado.Inicial);
             }
@@ -148,7 +146,23 @@ namespace BuildUp
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            DialogResult dr = MessageBox.Show("¿Esta seguro que desea actualizar este Proveedor?", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (txtRazonSocial.Text == "")
+            {
+                MessageBox.Show("Debe escribir la razon social", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (txtCorreo.Text == "")
+            {
+                MessageBox.Show("Debe ingresar el correo electronico", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (txtRepresentante.Text == "")
+            {
+                MessageBox.Show("Debe ingresar el nombre del representante", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            DialogResult dr = MessageBox.Show("¿Está seguro que desea actualizar los datos de este Proveedor?", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (dr == DialogResult.Yes)
             {
                 proveedor.idProveedor = Int32.Parse(txtIDProveedor.Text);
@@ -170,7 +184,6 @@ namespace BuildUp
                 {
                     MessageBox.Show("Error en el proceso", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-
             }
         }
 
@@ -193,6 +206,7 @@ namespace BuildUp
         private void btnVolver_Click(object sender, EventArgs e)
         {
             this.Hide();
+            ActiveForm.Show();
         }
 
         private void btnNuevo_Click_1(object sender, EventArgs e)

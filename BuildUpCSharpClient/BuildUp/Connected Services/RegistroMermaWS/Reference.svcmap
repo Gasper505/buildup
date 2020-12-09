@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://52.207.108.70:8080/BuildUpServices/RegistroMermaWS?wsdl" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:8080/BuildUpServices/RegistroMermaWS?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="RegistroMermaWS.wsdl" MetadataType="Wsdl" ID="31f011cf-77d1-4705-8286-4716d33f9efc" SourceId="1" SourceUrl="http://52.207.108.70:8080/BuildUpServices/RegistroMermaWS?wsdl" />
-    <MetadataFile FileName="RegistroMermaWS.xsd" MetadataType="Schema" ID="00ca7326-d931-497f-ae28-808d8fcd9614" SourceId="1" SourceUrl="http://52.207.108.70:8080/BuildUpServices/RegistroMermaWS?xsd=1" />
+    <MetadataFile FileName="RegistroMermaWS1.xsd" MetadataType="Schema" ID="cac8e9ae-9860-454f-ae55-367abded6f63" SourceId="1" SourceUrl="http://localhost:8080/BuildUpServices/RegistroMermaWS?xsd=1" />
+    <MetadataFile FileName="RegistroMermaWS1.wsdl" MetadataType="Wsdl" ID="5ebcc30e-2ce2-47ca-85e9-1dc2297b4295" SourceId="1" SourceUrl="http://localhost:8080/BuildUpServices/RegistroMermaWS?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

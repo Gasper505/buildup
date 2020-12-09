@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://services.buildup.pucp.edu.pe/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="RegistroMermaWS" targetNamespace="http://services.buildup.pucp.edu.pe/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/BuildUpServices/RegistroMermaWS?xsd=1" namespace="http://services.buildup.pucp.edu.pe/" />
+    </xsd:schema>
+  </types>
+  <message name="listarRegistrosMermasPorSupervisorYRangoFechas">
+    <part name="parameters" element="tns:listarRegistrosMermasPorSupervisorYRangoFechas" />
+  </message>
+  <message name="listarRegistrosMermasPorSupervisorYRangoFechasResponse">
+    <part name="parameters" element="tns:listarRegistrosMermasPorSupervisorYRangoFechasResponse" />
+  </message>
+  <message name="actualizarRegistroMerma">
+    <part name="parameters" element="tns:actualizarRegistroMerma" />
+  </message>
+  <message name="actualizarRegistroMermaResponse">
+    <part name="parameters" element="tns:actualizarRegistroMermaResponse" />
+  </message>
+  <message name="listarRegistroMerma">
+    <part name="parameters" element="tns:listarRegistroMerma" />
+  </message>
+  <message name="listarRegistroMermaResponse">
+    <part name="parameters" element="tns:listarRegistroMermaResponse" />
+  </message>
+  <message name="eliminarRegistroMerma">
+    <part name="parameters" element="tns:eliminarRegistroMerma" />
+  </message>
+  <message name="eliminarRegistroMermaResponse">
+    <part name="parameters" element="tns:eliminarRegistroMermaResponse" />
+  </message>
+  <message name="insertarRegistroMerma">
+    <part name="parameters" element="tns:insertarRegistroMerma" />
+  </message>
+  <message name="insertarRegistroMermaResponse">
+    <part name="parameters" element="tns:insertarRegistroMermaResponse" />
+  </message>
+  <portType name="RegistroMermaWS">
+    <operation name="listarRegistrosMermasPorSupervisorYRangoFechas">
+      <input wsam:Action="http://services.buildup.pucp.edu.pe/RegistroMermaWS/listarRegistrosMermasPorSupervisorYRangoFechasRequest" message="tns:listarRegistrosMermasPorSupervisorYRangoFechas" />
+      <output wsam:Action="http://services.buildup.pucp.edu.pe/RegistroMermaWS/listarRegistrosMermasPorSupervisorYRangoFechasResponse" message="tns:listarRegistrosMermasPorSupervisorYRangoFechasResponse" />
+    </operation>
+    <operation name="actualizarRegistroMerma">
+      <input wsam:Action="http://services.buildup.pucp.edu.pe/RegistroMermaWS/actualizarRegistroMermaRequest" message="tns:actualizarRegistroMerma" />
+      <output wsam:Action="http://services.buildup.pucp.edu.pe/RegistroMermaWS/actualizarRegistroMermaResponse" message="tns:actualizarRegistroMermaResponse" />
+    </operation>
+    <operation name="listarRegistroMerma">
+      <input wsam:Action="http://services.buildup.pucp.edu.pe/RegistroMermaWS/listarRegistroMermaRequest" message="tns:listarRegistroMerma" />
+      <output wsam:Action="http://services.buildup.pucp.edu.pe/RegistroMermaWS/listarRegistroMermaResponse" message="tns:listarRegistroMermaResponse" />
+    </operation>
+    <operation name="eliminarRegistroMerma">
+      <input wsam:Action="http://services.buildup.pucp.edu.pe/RegistroMermaWS/eliminarRegistroMermaRequest" message="tns:eliminarRegistroMerma" />
+      <output wsam:Action="http://services.buildup.pucp.edu.pe/RegistroMermaWS/eliminarRegistroMermaResponse" message="tns:eliminarRegistroMermaResponse" />
+    </operation>
+    <operation name="insertarRegistroMerma">
+      <input wsam:Action="http://services.buildup.pucp.edu.pe/RegistroMermaWS/insertarRegistroMermaRequest" message="tns:insertarRegistroMerma" />
+      <output wsam:Action="http://services.buildup.pucp.edu.pe/RegistroMermaWS/insertarRegistroMermaResponse" message="tns:insertarRegistroMermaResponse" />
+    </operation>
+  </portType>
+  <binding name="RegistroMermaWSPortBinding" type="tns:RegistroMermaWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="listarRegistrosMermasPorSupervisorYRangoFechas">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="actualizarRegistroMerma">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarRegistroMerma">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarRegistroMerma">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarRegistroMerma">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="RegistroMermaWS">
+    <port name="RegistroMermaWSPort" binding="tns:RegistroMermaWSPortBinding">
+      <soap:address location="http://localhost:8080/BuildUpServices/RegistroMermaWS" />
+    </port>
+  </service>
+</definitions>

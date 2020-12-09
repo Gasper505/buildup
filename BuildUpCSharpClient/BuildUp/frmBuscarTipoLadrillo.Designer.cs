@@ -46,6 +46,7 @@
             // 
             this.dgvTiposLadrillo.AllowUserToAddRows = false;
             this.dgvTiposLadrillo.AllowUserToDeleteRows = false;
+            this.dgvTiposLadrillo.BackgroundColor = System.Drawing.SystemColors.Desktop;
             this.dgvTiposLadrillo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvTiposLadrillo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTiposLadrillo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -112,11 +113,12 @@
             // 
             // btnSeleccionar
             // 
+            this.btnSeleccionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSeleccionar.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSeleccionar.Location = new System.Drawing.Point(171, 414);
+            this.btnSeleccionar.Location = new System.Drawing.Point(170, 417);
             this.btnSeleccionar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSeleccionar.Name = "btnSeleccionar";
-            this.btnSeleccionar.Size = new System.Drawing.Size(262, 34);
+            this.btnSeleccionar.Size = new System.Drawing.Size(262, 39);
             this.btnSeleccionar.TabIndex = 11;
             this.btnSeleccionar.Text = "Seleccionar";
             this.btnSeleccionar.UseVisualStyleBackColor = true;
@@ -124,6 +126,7 @@
             // 
             // btnBuscar
             // 
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.Location = new System.Drawing.Point(375, 37);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -153,7 +156,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(607, 463);
+            this.ClientSize = new System.Drawing.Size(607, 469);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.dgvTiposLadrillo);

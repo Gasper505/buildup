@@ -51,7 +51,6 @@
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Enter += new System.EventHandler(this.txtUsuario_Enter);
             this.txtUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassword_KeyPress);
-            this.txtUsuario.Leave += new System.EventHandler(this.txtUsuario_Leave);
             // 
             // txtContrasena
             // 
@@ -60,7 +59,6 @@
             this.txtContrasena.Name = "txtContrasena";
             this.txtContrasena.Enter += new System.EventHandler(this.txtContrasena_Enter);
             this.txtContrasena.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassword_KeyPress);
-            this.txtContrasena.Leave += new System.EventHandler(this.txtContrasena_Leave);
             // 
             // lblTitulo
             // 
@@ -112,7 +110,7 @@
             // 
             // btnCerrar
             // 
-            this.btnCerrar.BackColor = System.Drawing.SystemColors.Control;
+            this.btnCerrar.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.btnCerrar, "btnCerrar");
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.UseVisualStyleBackColor = false;
@@ -125,6 +123,7 @@
             this.btnMinimizar.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnMinimizar.Name = "btnMinimizar";
             this.btnMinimizar.UseVisualStyleBackColor = false;
+            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
             // 
             // frmLogIn
             // 
@@ -138,7 +137,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmLogIn";
             this.Opacity = 0.95D;
-            this.Load += new System.EventHandler(this.LogIn_Load);
             this.panelLogeo.ResumeLayout(false);
             this.panelLogeo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picContrasena)).EndInit();

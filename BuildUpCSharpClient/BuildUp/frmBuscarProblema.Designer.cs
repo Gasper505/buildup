@@ -38,6 +38,7 @@
             // 
             // btnSeleccionar
             // 
+            this.btnSeleccionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSeleccionar.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeleccionar.Location = new System.Drawing.Point(153, 346);
             this.btnSeleccionar.Name = "btnSeleccionar";
@@ -51,7 +52,7 @@
             // 
             this.dgvProblemas.AllowUserToAddRows = false;
             this.dgvProblemas.AllowUserToDeleteRows = false;
-            this.dgvProblemas.BackgroundColor = System.Drawing.SystemColors.ScrollBar;
+            this.dgvProblemas.BackgroundColor = System.Drawing.SystemColors.Desktop;
             this.dgvProblemas.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvProblemas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProblemas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {

@@ -50,6 +50,7 @@
             // 
             this.dgvOrdenesSalida.AllowUserToAddRows = false;
             this.dgvOrdenesSalida.AllowUserToDeleteRows = false;
+            this.dgvOrdenesSalida.BackgroundColor = System.Drawing.SystemColors.Desktop;
             this.dgvOrdenesSalida.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvOrdenesSalida.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvOrdenesSalida.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -118,9 +119,10 @@
             // dtpFechaSup
             // 
             this.dtpFechaSup.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFechaSup.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFechaSup.Location = new System.Drawing.Point(225, 116);
             this.dtpFechaSup.Name = "dtpFechaSup";
-            this.dtpFechaSup.Size = new System.Drawing.Size(276, 25);
+            this.dtpFechaSup.Size = new System.Drawing.Size(212, 25);
             this.dtpFechaSup.TabIndex = 21;
             this.dtpFechaSup.Value = new System.DateTime(2020, 12, 31, 0, 0, 0, 0);
             // 
@@ -147,14 +149,16 @@
             // dtpFechaInf
             // 
             this.dtpFechaInf.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFechaInf.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFechaInf.Location = new System.Drawing.Point(225, 83);
             this.dtpFechaInf.Name = "dtpFechaInf";
-            this.dtpFechaInf.Size = new System.Drawing.Size(276, 25);
+            this.dtpFechaInf.Size = new System.Drawing.Size(212, 25);
             this.dtpFechaInf.TabIndex = 18;
             this.dtpFechaInf.Value = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
             // 
             // btnBuscar
             // 
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.Location = new System.Drawing.Point(520, 79);
             this.btnBuscar.Name = "btnBuscar";
@@ -184,6 +188,7 @@
             // 
             // btnSeleccionar
             // 
+            this.btnSeleccionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSeleccionar.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeleccionar.Location = new System.Drawing.Point(243, 506);
             this.btnSeleccionar.Name = "btnSeleccionar";

@@ -169,7 +169,7 @@
             this.toolStripButton2});
             this.toolStrip2.Location = new System.Drawing.Point(0, 0);
             this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(866, 25);
+            this.toolStrip2.Size = new System.Drawing.Size(883, 25);
             this.toolStrip2.TabIndex = 25;
             this.toolStrip2.Text = "toolStrip2";
             // 
@@ -388,6 +388,7 @@
             // 
             // btnBuscarMaquinaria
             // 
+            this.btnBuscarMaquinaria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscarMaquinaria.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscarMaquinaria.Location = new System.Drawing.Point(429, 32);
             this.btnBuscarMaquinaria.Name = "btnBuscarMaquinaria";
@@ -504,7 +505,7 @@
             // 
             // tabProblema
             // 
-            this.tabProblema.BackColor = System.Drawing.Color.Beige;
+            this.tabProblema.BackColor = System.Drawing.Color.Ivory;
             this.tabProblema.Controls.Add(this.txtNivelImp);
             this.tabProblema.Controls.Add(this.lblImportancia);
             this.tabProblema.Controls.Add(this.txtIDProblema);
@@ -600,7 +601,7 @@
             // 
             // tabRespuesta
             // 
-            this.tabRespuesta.BackColor = System.Drawing.Color.MintCream;
+            this.tabRespuesta.BackColor = System.Drawing.Color.Honeydew;
             this.tabRespuesta.Controls.Add(this.txtIDResp);
             this.tabRespuesta.Controls.Add(this.label8);
             this.tabRespuesta.Controls.Add(this.btnBuscarRespuesta);
@@ -731,9 +732,10 @@
             // dtpFechaRegistro
             // 
             this.dtpFechaRegistro.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFechaRegistro.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFechaRegistro.Location = new System.Drawing.Point(315, 68);
             this.dtpFechaRegistro.Name = "dtpFechaRegistro";
-            this.dtpFechaRegistro.Size = new System.Drawing.Size(269, 25);
+            this.dtpFechaRegistro.Size = new System.Drawing.Size(169, 25);
             this.dtpFechaRegistro.TabIndex = 19;
             // 
             // frmGestionarIncidencia
@@ -742,7 +744,7 @@
             this.AutoScroll = true;
             this.AutoScrollMargin = new System.Drawing.Size(0, 60);
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(883, 637);
+            this.ClientSize = new System.Drawing.Size(900, 637);
             this.ControlBox = false;
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.tabControl1);

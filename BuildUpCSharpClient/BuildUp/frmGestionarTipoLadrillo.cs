@@ -145,7 +145,7 @@ namespace BuildUp
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            DialogResult dr = MessageBox.Show("¿Esta seguro que desea actualizar este Tipo de Ladrillo?", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            DialogResult dr = MessageBox.Show("¿Esta seguro que desea actualizar los datos de este Tipo de Ladrillo?", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (dr == DialogResult.Yes)
             {
                 tipoLadrillo.idTipoLadrillo = Int32.Parse(txtIDTipo.Text);
@@ -193,6 +193,7 @@ namespace BuildUp
         private void btnVolver_Click(object sender, EventArgs e)
         {
             this.Hide();
+            ActiveForm.Show();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

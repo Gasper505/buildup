@@ -34,13 +34,13 @@ namespace BuildUp
         private void btnIncidencia_Click(object sender, EventArgs e)
         {
             frmGestionarIncidencia formGestionarIncidencia = new frmGestionarIncidencia();
-            formGestionarIncidencia.Show(this);
+            formGestionarIncidencia.Show();
         }
 
         private void btnMerma_Click(object sender, EventArgs e)
         {
             frmGestionarMerma formGestionarMerma = new frmGestionarMerma();
-            formGestionarMerma.Show(this);
+            formGestionarMerma.Show();
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
@@ -53,7 +53,7 @@ namespace BuildUp
         private void btnAcontecimientoMerma_Click(object sender, EventArgs e)
         {
             frmGestionarRegistroMerma formGestionarRegistroMerma = new frmGestionarRegistroMerma();
-            formGestionarRegistroMerma.Show(this);
+            formGestionarRegistroMerma.Show();
         }
     }
 }

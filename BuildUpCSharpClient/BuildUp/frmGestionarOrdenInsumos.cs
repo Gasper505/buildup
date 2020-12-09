@@ -262,6 +262,7 @@ namespace BuildUp
         private void btnVolver_Click(object sender, EventArgs e)
         {
             this.Hide();
+            ActiveForm.Show();
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
@@ -332,7 +333,42 @@ namespace BuildUp
 
         private void btnRechazarOrden_Click(object sender, EventArgs e)
         {
-
+            if (!(txtIdOrdenInsumos.Text == ""))
+            {
+                if (estado)
+                {
+                    MessageBox.Show("La Orden de Insumos ya ha sido aceptada", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    DialogResult dr = MessageBox.Show("¿Está seguro que desea aceptar esta Orden de Insumos?", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (dr == DialogResult.Yes)
+                    {
+                        int result = 0;
+                        result = daoOrdenInsumos.aceptarOrdenInsumos(Int32.Parse(txtIdOrdenInsumos.Text));
+                        if (result != 0)
+                        {
+                            MessageBox.Show("La operacion ha sido exitosa", "Mensaje de Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            txtIdOperario.Text = "";
+                            txtNombresOperario.Text = "";
+                            txtIdOrdenInsumos.Text = "";
+                            dtpFechaActual.Value = DateTime.Now;
+                            txtIdInsumo.Text = "";
+                            txtNombreInsumo.Text = "";
+                            numericUpDown1.Text = "";
+                            EstablecerEstadoComponentes(Estado.Inicial);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Error en el proceso", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("No se ha seleccionado una Orden de Insumos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnAceptarOrden_Click(object sender, EventArgs e)
@@ -375,5 +411,6 @@ namespace BuildUp
             }
             
         }
+
     }
 }

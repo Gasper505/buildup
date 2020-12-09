@@ -55,6 +55,7 @@
             // 
             // btnBuscar
             // 
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.Location = new System.Drawing.Point(388, 26);
             this.btnBuscar.Name = "btnBuscar";
@@ -86,7 +87,7 @@
             // 
             this.dgvInsumos.AllowUserToAddRows = false;
             this.dgvInsumos.AllowUserToDeleteRows = false;
-            this.dgvInsumos.BackgroundColor = System.Drawing.SystemColors.ScrollBar;
+            this.dgvInsumos.BackgroundColor = System.Drawing.SystemColors.Desktop;
             this.dgvInsumos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvInsumos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.NombreInsumo,
@@ -117,6 +118,7 @@
             // 
             // btnSeleccionar
             // 
+            this.btnSeleccionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSeleccionar.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeleccionar.Location = new System.Drawing.Point(188, 436);
             this.btnSeleccionar.Name = "btnSeleccionar";

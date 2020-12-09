@@ -39,7 +39,7 @@
             // 
             this.dgvRespuestas.AllowUserToAddRows = false;
             this.dgvRespuestas.AllowUserToDeleteRows = false;
-            this.dgvRespuestas.BackgroundColor = System.Drawing.SystemColors.ScrollBar;
+            this.dgvRespuestas.BackgroundColor = System.Drawing.SystemColors.Desktop;
             this.dgvRespuestas.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvRespuestas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRespuestas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -72,6 +72,7 @@
             // 
             // btnSeleccionar
             // 
+            this.btnSeleccionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSeleccionar.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeleccionar.Location = new System.Drawing.Point(112, 357);
             this.btnSeleccionar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);

@@ -83,7 +83,9 @@
             // btnAcontecimientoMerma
             // 
             this.btnAcontecimientoMerma.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAcontecimientoMerma.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAcontecimientoMerma.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAcontecimientoMerma.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnAcontecimientoMerma.Location = new System.Drawing.Point(521, 271);
             this.btnAcontecimientoMerma.Name = "btnAcontecimientoMerma";
             this.btnAcontecimientoMerma.Size = new System.Drawing.Size(126, 49);
@@ -105,7 +107,9 @@
             // btnMerma
             // 
             this.btnMerma.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMerma.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMerma.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMerma.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnMerma.Location = new System.Drawing.Point(343, 271);
             this.btnMerma.Name = "btnMerma";
             this.btnMerma.Size = new System.Drawing.Size(126, 49);
@@ -117,7 +121,9 @@
             // btnIncidencia
             // 
             this.btnIncidencia.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnIncidencia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIncidencia.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIncidencia.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnIncidencia.Location = new System.Drawing.Point(162, 271);
             this.btnIncidencia.Name = "btnIncidencia";
             this.btnIncidencia.Size = new System.Drawing.Size(126, 49);
@@ -176,7 +182,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label1.Location = new System.Drawing.Point(14, 9);
+            this.label1.Location = new System.Drawing.Point(13, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(115, 21);
@@ -186,8 +192,10 @@
             // btnLogout
             // 
             this.btnLogout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogout.Location = new System.Drawing.Point(688, 49);
+            this.btnLogout.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnLogout.Location = new System.Drawing.Point(691, 59);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(105, 28);
             this.btnLogout.TabIndex = 11;

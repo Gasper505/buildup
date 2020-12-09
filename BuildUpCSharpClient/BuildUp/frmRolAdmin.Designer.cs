@@ -46,7 +46,7 @@
             // 
             // panelAdmin
             // 
-            this.panelAdmin.BackColor = System.Drawing.SystemColors.Window;
+            this.panelAdmin.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.panelAdmin.Controls.Add(this.lblNombres);
             this.panelAdmin.Controls.Add(this.button2);
             this.panelAdmin.Controls.Add(this.pictureBox2);
@@ -70,10 +70,11 @@
             // button2
             // 
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(337, 259);
+            this.button2.Location = new System.Drawing.Point(336, 258);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(129, 42);
+            this.button2.Size = new System.Drawing.Size(129, 48);
             this.button2.TabIndex = 24;
             this.button2.Text = "Gestión de Usuarios";
             this.button2.UseVisualStyleBackColor = true;
@@ -84,7 +85,7 @@
             this.pictureBox2.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.Image = global::BuildUp.Properties.Resources.icono_usuario_6091_78;
-            this.pictureBox2.Location = new System.Drawing.Point(337, 111);
+            this.pictureBox2.Location = new System.Drawing.Point(336, 110);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(129, 142);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -127,15 +128,18 @@
             // btnCerrarSesion
             // 
             this.btnCerrarSesion.AutoEllipsis = true;
+            this.btnCerrarSesion.BackColor = System.Drawing.Color.DarkSlateGray;
             this.btnCerrarSesion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnCerrarSesion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrarSesion.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrarSesion.Location = new System.Drawing.Point(674, 53);
+            this.btnCerrarSesion.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnCerrarSesion.Location = new System.Drawing.Point(674, 62);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Size = new System.Drawing.Size(115, 29);
+            this.btnCerrarSesion.Size = new System.Drawing.Size(115, 31);
             this.btnCerrarSesion.TabIndex = 11;
             this.btnCerrarSesion.Text = "Cerrar Sesión ";
-            this.btnCerrarSesion.UseVisualStyleBackColor = true;
+            this.btnCerrarSesion.UseVisualStyleBackColor = false;
             this.btnCerrarSesion.Click += new System.EventHandler(this.button1_Click);
             // 
             // pbFoto
@@ -154,7 +158,7 @@
             this.lblUsername.AutoSize = true;
             this.lblUsername.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsername.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblUsername.Location = new System.Drawing.Point(674, 33);
+            this.lblUsername.Location = new System.Drawing.Point(674, 42);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(0, 17);
             this.lblUsername.TabIndex = 29;

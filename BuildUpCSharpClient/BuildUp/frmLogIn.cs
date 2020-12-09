@@ -98,9 +98,6 @@ namespace BuildUp
             Application.Exit();
         }
 
-        private void LogIn_Load(object sender, EventArgs e)
-        {
-        }
 
         private void txtUsuario_Enter(object sender, EventArgs e)
         {
@@ -115,12 +112,10 @@ namespace BuildUp
             this.txtContrasena.PasswordChar = '*';
         }
 
-        private void txtUsuario_Leave(object sender, EventArgs e)
-        {
-        }
 
-        private void txtContrasena_Leave(object sender, EventArgs e)
+        private void btnMinimizar_Click(object sender, EventArgs e)
         {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

@@ -45,6 +45,7 @@
             // 
             // btnBuscar
             // 
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.Location = new System.Drawing.Point(570, 46);
             this.btnBuscar.Name = "btnBuscar";
@@ -56,6 +57,7 @@
             // 
             // btnSeleccionar
             // 
+            this.btnSeleccionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSeleccionar.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeleccionar.Location = new System.Drawing.Point(287, 513);
             this.btnSeleccionar.Name = "btnSeleccionar";
@@ -69,7 +71,7 @@
             // 
             this.dgvMaquinarias.AllowUserToAddRows = false;
             this.dgvMaquinarias.AllowUserToDeleteRows = false;
-            this.dgvMaquinarias.BackgroundColor = System.Drawing.SystemColors.ScrollBar;
+            this.dgvMaquinarias.BackgroundColor = System.Drawing.SystemColors.Desktop;
             this.dgvMaquinarias.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvMaquinarias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMaquinarias.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {

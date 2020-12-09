@@ -123,9 +123,10 @@
             // 
             this.dtpFechaRegistro.CalendarFont = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaRegistro.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFechaRegistro.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFechaRegistro.Location = new System.Drawing.Point(240, 60);
             this.dtpFechaRegistro.Name = "dtpFechaRegistro";
-            this.dtpFechaRegistro.Size = new System.Drawing.Size(259, 25);
+            this.dtpFechaRegistro.Size = new System.Drawing.Size(164, 25);
             this.dtpFechaRegistro.TabIndex = 28;
             // 
             // numNroAproxLadrillos
@@ -135,6 +136,7 @@
             this.numNroAproxLadrillos.Name = "numNroAproxLadrillos";
             this.numNroAproxLadrillos.Size = new System.Drawing.Size(86, 25);
             this.numNroAproxLadrillos.TabIndex = 31;
+            this.numNroAproxLadrillos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lblNombreTipoLadrillo
             // 

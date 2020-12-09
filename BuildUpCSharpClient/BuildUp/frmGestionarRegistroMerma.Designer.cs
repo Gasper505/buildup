@@ -150,7 +150,7 @@
             this.dtpFechaMerma.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFechaMerma.Location = new System.Drawing.Point(223, 117);
             this.dtpFechaMerma.Name = "dtpFechaMerma";
-            this.dtpFechaMerma.Size = new System.Drawing.Size(232, 25);
+            this.dtpFechaMerma.Size = new System.Drawing.Size(178, 25);
             this.dtpFechaMerma.TabIndex = 12;
             // 
             // toolStrip2
@@ -305,7 +305,7 @@
             this.txtLineaProduccion.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLineaProduccion.Location = new System.Drawing.Point(223, 65);
             this.txtLineaProduccion.Name = "txtLineaProduccion";
-            this.txtLineaProduccion.Size = new System.Drawing.Size(178, 25);
+            this.txtLineaProduccion.Size = new System.Drawing.Size(206, 25);
             this.txtLineaProduccion.TabIndex = 4;
             // 
             // frmGestionarRegistroMerma

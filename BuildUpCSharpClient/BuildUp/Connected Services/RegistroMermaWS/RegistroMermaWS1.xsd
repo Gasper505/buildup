@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://services.buildup.pucp.edu.pe/" targetNamespace="http://services.buildup.pucp.edu.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="actualizarRegistroMerma" type="tns:actualizarRegistroMerma" />
+  <xs:element name="actualizarRegistroMermaResponse" type="tns:actualizarRegistroMermaResponse" />
+  <xs:element name="eliminarRegistroMerma" type="tns:eliminarRegistroMerma" />
+  <xs:element name="eliminarRegistroMermaResponse" type="tns:eliminarRegistroMermaResponse" />
+  <xs:element name="insertarRegistroMerma" type="tns:insertarRegistroMerma" />
+  <xs:element name="insertarRegistroMermaResponse" type="tns:insertarRegistroMermaResponse" />
+  <xs:element name="listarRegistroMerma" type="tns:listarRegistroMerma" />
+  <xs:element name="listarRegistroMermaResponse" type="tns:listarRegistroMermaResponse" />
+  <xs:element name="listarRegistrosMermasPorSupervisorYRangoFechas" type="tns:listarRegistrosMermasPorSupervisorYRangoFechas" />
+  <xs:element name="listarRegistrosMermasPorSupervisorYRangoFechasResponse" type="tns:listarRegistrosMermasPorSupervisorYRangoFechasResponse" />
+  <xs:complexType name="eliminarRegistroMerma">
+    <xs:sequence>
+      <xs:element name="idRegistroMerma" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarRegistroMermaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarRegistroMerma">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="registroMerma" type="tns:registroMerma" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="registroMerma">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element name="cantidad" type="xs:int" />
+      <xs:element minOccurs="0" name="fecha" type="xs:dateTime" />
+      <xs:element name="idRegistroMerma" type="xs:int" />
+      <xs:element minOccurs="0" name="lineaProduccion" type="tns:lineaProduccion" />
+      <xs:element minOccurs="0" name="merma" type="tns:merma" />
+      <xs:element minOccurs="0" name="supervisor" type="tns:supervisor" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="lineaProduccion">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element name="idLineaProduccion" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="operarios" nillable="true" type="tns:operario" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="supervisores" nillable="true" type="tns:supervisor" />
+      <xs:element minOccurs="0" name="tipoLadrillo" type="tns:tipoLadrillo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="operario">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:persona">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="lineaProduccion" type="tns:lineaProduccion" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="persona">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="apellidos" type="xs:string" />
+      <xs:element minOccurs="0" name="correo" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaFinContrato" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaNacimiento" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="foto" type="xs:base64Binary" />
+      <xs:element name="idPersona" type="xs:int" />
+      <xs:element minOccurs="0" name="nombres" type="xs:string" />
+      <xs:element minOccurs="0" name="rol" type="xs:string" />
+      <xs:element minOccurs="0" name="telefono" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="supervisor">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:persona">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="lineaProduccion" type="tns:lineaProduccion" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="tipoLadrillo">
+    <xs:sequence>
+      <xs:element name="altura" type="xs:double" />
+      <xs:element name="ancho" type="xs:double" />
+      <xs:element name="idTipoLadrillo" type="xs:int" />
+      <xs:element name="largo" type="xs:double" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="merma">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element name="idMerma" type="xs:int" />
+      <xs:element minOccurs="0" name="tipo" type="xs:string" />
+      <xs:element minOccurs="0" name="unidad" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarRegistroMermaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarRegistroMerma">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarRegistroMermaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:registroMerma" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarRegistroMerma">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="registroMerma" type="tns:registroMerma" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarRegistroMermaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarRegistrosMermasPorSupervisorYRangoFechas">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nombreSup" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaInicial" type="tns:date" />
+      <xs:element minOccurs="0" name="fechaFin" type="tns:date" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="date">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarRegistrosMermasPorSupervisorYRangoFechasResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:registroMerma" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

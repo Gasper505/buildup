@@ -819,11 +819,14 @@
     <None Include="Connected Services\RegistroMermaWS\BuildUp.RegistroMermaWS.listarRegistroMermaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\RegistroMermaWS\BuildUp.RegistroMermaWS.listarRegistrosMermasPorSupervisorYRangoFechasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\RegistroMermaWS\BuildUp.RegistroMermaWS.registroMerma.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\RegistroMermaWS\RegistroMermaWS.wsdl" />
-    <None Include="Connected Services\RegistroMermaWS\RegistroMermaWS.xsd">
+    <None Include="Connected Services\RegistroMermaWS\RegistroMermaWS1.wsdl" />
+    <None Include="Connected Services\RegistroMermaWS\RegistroMermaWS1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\ReporteIncidenciaWS\BuildUp.ReporteIncidenciaWS.generarReporteIncidenciaResponse.datasource">

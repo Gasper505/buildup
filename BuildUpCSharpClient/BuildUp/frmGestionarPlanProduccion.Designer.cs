@@ -266,6 +266,7 @@
             this.numNroAproxLadrillos.Name = "numNroAproxLadrillos";
             this.numNroAproxLadrillos.Size = new System.Drawing.Size(91, 25);
             this.numNroAproxLadrillos.TabIndex = 31;
+            this.numNroAproxLadrillos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lblNro
             // 

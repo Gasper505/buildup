@@ -59,6 +59,8 @@
             this.btnCancelar = new System.Windows.Forms.ToolStripButton();
             this.btnRegresar = new System.Windows.Forms.ToolStripButton();
             this.pnlAceptacionOrden = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnRechazarOrden = new System.Windows.Forms.Button();
             this.picCheck = new System.Windows.Forms.PictureBox();
             this.btnAceptarOrden = new System.Windows.Forms.Button();
             this.gbDatosOrdenInsumos.SuspendLayout();
@@ -67,6 +69,7 @@
             this.gbDatosOperario.SuspendLayout();
             this.toolStrip2.SuspendLayout();
             this.pnlAceptacionOrden.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCheck)).BeginInit();
             this.SuspendLayout();
             // 
@@ -76,7 +79,7 @@
             this.dtpFechaActual.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFechaActual.Location = new System.Drawing.Point(210, 69);
             this.dtpFechaActual.Name = "dtpFechaActual";
-            this.dtpFechaActual.Size = new System.Drawing.Size(187, 25);
+            this.dtpFechaActual.Size = new System.Drawing.Size(167, 25);
             this.dtpFechaActual.TabIndex = 1;
             // 
             // txtIdOrdenInsumos
@@ -165,9 +168,9 @@
             // btnBuscarInsumo
             // 
             this.btnBuscarInsumo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscarInsumo.Location = new System.Drawing.Point(324, 20);
+            this.btnBuscarInsumo.Location = new System.Drawing.Point(324, 22);
             this.btnBuscarInsumo.Name = "btnBuscarInsumo";
-            this.btnBuscarInsumo.Size = new System.Drawing.Size(127, 35);
+            this.btnBuscarInsumo.Size = new System.Drawing.Size(127, 31);
             this.btnBuscarInsumo.TabIndex = 10;
             this.btnBuscarInsumo.Text = "Buscar Insumo...";
             this.btnBuscarInsumo.UseVisualStyleBackColor = true;
@@ -369,6 +372,8 @@
             // pnlAceptacionOrden
             // 
             this.pnlAceptacionOrden.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.pnlAceptacionOrden.Controls.Add(this.pictureBox1);
+            this.pnlAceptacionOrden.Controls.Add(this.btnRechazarOrden);
             this.pnlAceptacionOrden.Controls.Add(this.picCheck);
             this.pnlAceptacionOrden.Controls.Add(this.btnAceptarOrden);
             this.pnlAceptacionOrden.Location = new System.Drawing.Point(46, 430);
@@ -376,6 +381,32 @@
             this.pnlAceptacionOrden.Size = new System.Drawing.Size(519, 75);
             this.pnlAceptacionOrden.TabIndex = 41;
             this.pnlAceptacionOrden.Visible = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(369, 19);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(37, 36);
+            this.pictureBox1.TabIndex = 45;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnRechazarOrden
+            // 
+            this.btnRechazarOrden.BackColor = System.Drawing.SystemColors.Menu;
+            this.btnRechazarOrden.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnRechazarOrden.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRechazarOrden.Enabled = false;
+            this.btnRechazarOrden.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRechazarOrden.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRechazarOrden.Location = new System.Drawing.Point(282, 19);
+            this.btnRechazarOrden.Name = "btnRechazarOrden";
+            this.btnRechazarOrden.Size = new System.Drawing.Size(82, 36);
+            this.btnRechazarOrden.TabIndex = 44;
+            this.btnRechazarOrden.Text = "Rechazar";
+            this.btnRechazarOrden.UseVisualStyleBackColor = false;
+            this.btnRechazarOrden.Click += new System.EventHandler(this.btnRechazarOrden_Click);
             // 
             // picCheck
             // 
@@ -392,7 +423,8 @@
             this.btnAceptarOrden.BackColor = System.Drawing.SystemColors.Menu;
             this.btnAceptarOrden.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnAceptarOrden.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAceptarOrden.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAceptarOrden.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAceptarOrden.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptarOrden.Location = new System.Drawing.Point(108, 19);
             this.btnAceptarOrden.Name = "btnAceptarOrden";
             this.btnAceptarOrden.Size = new System.Drawing.Size(82, 36);
@@ -428,6 +460,7 @@
             this.toolStrip2.ResumeLayout(false);
             this.toolStrip2.PerformLayout();
             this.pnlAceptacionOrden.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCheck)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -467,5 +500,7 @@
         private System.Windows.Forms.Button btnAceptarOrden;
         private System.Windows.Forms.PictureBox picCheck;
         private System.Windows.Forms.ToolStripButton btnCancelar;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnRechazarOrden;
     }
 }

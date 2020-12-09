@@ -165,11 +165,12 @@ namespace BuildUp
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
             this.Hide();
+            ActiveForm.Show();
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            DialogResult dr = MessageBox.Show("¿Esta seguro que desea actualizar este plan de produccion?", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            DialogResult dr = MessageBox.Show("¿Esta seguro que desea actualizar los datos de este plan de produccion?", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (dr == DialogResult.Yes)
             {
                 planProduccion.idPlan = Int32.Parse(txtIDPlan.Text);

@@ -76,6 +76,7 @@
             // button4
             // 
             this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.Location = new System.Drawing.Point(414, 266);
             this.button4.Name = "button4";
@@ -88,6 +89,7 @@
             // button2
             // 
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(230, 266);
             this.button2.Name = "button2";
@@ -132,7 +134,6 @@
             this.lblTitulo.Size = new System.Drawing.Size(149, 30);
             this.lblTitulo.TabIndex = 7;
             this.lblTitulo.Text = "Bienvenido/a:";
-            this.lblTitulo.Click += new System.EventHandler(this.lblTitulo_Click);
             // 
             // panel3
             // 
@@ -154,12 +155,13 @@
             this.label1.Size = new System.Drawing.Size(105, 22);
             this.label1.TabIndex = 8;
             this.label1.Text = "Rol: Operario";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // button1
             // 
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button1.Location = new System.Drawing.Point(636, 52);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(109, 28);

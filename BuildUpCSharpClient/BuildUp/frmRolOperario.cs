@@ -33,21 +33,6 @@ namespace BuildUp
             }
         }
 
-        private void lblTitulo_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             frmLogIn frmLog = new frmLogIn();
@@ -58,13 +43,13 @@ namespace BuildUp
         private void button2_Click(object sender, EventArgs e)
         {
             frmGestionarOrdenInsumos f = new frmGestionarOrdenInsumos();
-            f.Show(this);
+            f.Show();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             frmGestionarOrdenSalida f = new frmGestionarOrdenSalida();
-            f.Show(this);
+            f.Show();
         }
 
     }

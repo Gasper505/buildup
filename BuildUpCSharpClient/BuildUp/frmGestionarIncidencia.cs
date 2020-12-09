@@ -498,6 +498,7 @@ namespace BuildUp
         private void btnVolver_Click(object sender, EventArgs e)
         {
             this.Hide();
+            ActiveForm.Show();
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)

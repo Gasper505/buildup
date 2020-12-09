@@ -32,10 +32,6 @@ namespace BuildUp
             }
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -47,55 +43,55 @@ namespace BuildUp
         private void button2_Click(object sender, EventArgs e)
         {
             frmGestionarPlanProduccion frmPlan = new frmGestionarPlanProduccion();
-            frmPlan.Show(this);
+            frmPlan.Show();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             frmGestionarOrdenInsumos frmOrdIns = new frmGestionarOrdenInsumos();
-            frmOrdIns.Show(this);
+            frmOrdIns.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             frmGestionarOrdenSalida f = new frmGestionarOrdenSalida();
-            f.Show(this);
+            f.Show();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             frmGestionarMaquinaria f= new frmGestionarMaquinaria();
-            f.Show(this);
+            f.Show();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
             frmGestionarProveedor f = new frmGestionarProveedor();
-            f.Show(this);
+            f.Show();
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
             frmGestionarIncidencia f = new frmGestionarIncidencia();
-            f.Show(this);
+            f.Show();
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
             frmGestionarInsumo f = new frmGestionarInsumo();
-            f.Show(this);
+            f.Show();
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
             frmGestionarTipoLadrillo f = new frmGestionarTipoLadrillo();
-            f.Show(this);
+            f.Show();
         }
 
         private void btnLineaProduccion_Click(object sender, EventArgs e)
         {
             frmGestionarLineaProduccion f = new frmGestionarLineaProduccion();
-            f.Show(this);
+            f.Show();
         }
     }
 }

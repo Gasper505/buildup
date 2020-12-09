@@ -49,31 +49,31 @@ namespace BuildUp
         private void button2_Click(object sender, EventArgs e)
         {
             frmGestionarIncidencia formGestionarIncidencia = new frmGestionarIncidencia();
-            formGestionarIncidencia.Show(this);
+            formGestionarIncidencia.Show();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             frmGestionarMaquinaria frmMaq = new frmGestionarMaquinaria();
-            frmMaq.Show(this);
+            frmMaq.Show();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
             frmGestionarProveedor frmProv = new frmGestionarProveedor();
-            frmProv.Show(this);
+            frmProv.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             frmGestionarProblema frmGesProb = new frmGestionarProblema();
-            frmGesProb.Show(this);
+            frmGesProb.Show();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             frmGestionarRespuesta frmGesResp = new frmGestionarRespuesta();
-            frmGesResp.Show(this);
+            frmGesResp.Show();
         }
     }
 }

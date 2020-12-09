@@ -114,9 +114,10 @@
             // dtpFechaGarantia
             // 
             this.dtpFechaGarantia.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFechaGarantia.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFechaGarantia.Location = new System.Drawing.Point(207, 100);
             this.dtpFechaGarantia.Name = "dtpFechaGarantia";
-            this.dtpFechaGarantia.Size = new System.Drawing.Size(241, 25);
+            this.dtpFechaGarantia.Size = new System.Drawing.Size(154, 25);
             this.dtpFechaGarantia.TabIndex = 1;
             // 
             // lblNombreMaquinaria

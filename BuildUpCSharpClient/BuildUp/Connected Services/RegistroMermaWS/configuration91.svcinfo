@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="fM0Fjv/u4QBloo2hwu8IkaRqbPC+5eOdA5ZhFs/lmlk=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="qBjC/Z4VZk/ZbilO6k8rVOi+7kTdidpLAyd1ep4jn6Y=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="RegistroMermaWSPortBinding">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="RegistroMermaWSPort" contract="RegistroMermaWS.RegistroMermaWS" bindingType="basicHttpBinding" address="http://52.207.108.70:8080/BuildUpServices/RegistroMermaWS" bindingConfiguration="RegistroMermaWSPortBinding">
+    <endpoint name="RegistroMermaWSPort" contract="RegistroMermaWS.RegistroMermaWS" bindingType="basicHttpBinding" address="http://localhost:8080/BuildUpServices/RegistroMermaWS" bindingConfiguration="RegistroMermaWSPortBinding">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://52.207.108.70:8080/BuildUpServices/RegistroMermaWS</serializedValue>
+          <serializedValue>http://localhost:8080/BuildUpServices/RegistroMermaWS</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
