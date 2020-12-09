@@ -37,7 +37,8 @@
             this.picContrasena = new System.Windows.Forms.PictureBox();
             this.picUsuario = new System.Windows.Forms.PictureBox();
             this.btn_Ingresar = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnCerrar = new System.Windows.Forms.Button();
+            this.btnMinimizar = new System.Windows.Forms.Button();
             this.panelLogeo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picContrasena)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picUsuario)).BeginInit();
@@ -109,13 +110,21 @@
             this.btn_Ingresar.Click += new System.EventHandler(this.btnIngresar);
             this.btn_Ingresar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassword_KeyPress);
             // 
-            // button1
+            // btnCerrar
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.Control;
-            resources.ApplyResources(this.button1, "button1");
-            this.button1.Name = "button1";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.btnCancelar);
+            this.btnCerrar.BackColor = System.Drawing.SystemColors.Control;
+            resources.ApplyResources(this.btnCerrar, "btnCerrar");
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCancelar);
+            // 
+            // btnMinimizar
+            // 
+            this.btnMinimizar.BackColor = System.Drawing.SystemColors.Control;
+            resources.ApplyResources(this.btnMinimizar, "btnMinimizar");
+            this.btnMinimizar.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnMinimizar.Name = "btnMinimizar";
+            this.btnMinimizar.UseVisualStyleBackColor = false;
             // 
             // frmLogIn
             // 
@@ -123,8 +132,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
             this.ControlBox = false;
+            this.Controls.Add(this.btnMinimizar);
             this.Controls.Add(this.panelLogeo);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnCerrar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmLogIn";
             this.Opacity = 0.95D;
@@ -145,8 +155,9 @@
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.PictureBox picUsuario;
         private System.Windows.Forms.PictureBox picContrasena;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.Panel panelLogeo;
         private System.Windows.Forms.Label lblInfoLogueo;
+        private System.Windows.Forms.Button btnMinimizar;
     }
 }
