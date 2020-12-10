@@ -8,6 +8,7 @@ package pe.edu.pucp.buildup.services;
 import java.awt.Image;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
 import javax.jws.WebService;
@@ -19,8 +20,8 @@ import net.sf.jasperreports.engine.JasperFillManager;
 import net.sf.jasperreports.engine.JasperPrint;
 import net.sf.jasperreports.engine.JasperReport;
 import net.sf.jasperreports.engine.util.JRLoader;
-import pe.edu.pucp.buildup.servlets.ServletProduccionDiario;
-import pe.edu.pucp.buildup.servlets.ServletProduccionMensual;
+import pe.edu.pucp.buildup.servlets.ServletProdDiaria;
+import pe.edu.pucp.buildup.servlets.ServletProdMes;
 import pe.edu.pucp.ta.config.DBManager;
 
 /**
@@ -35,31 +36,27 @@ public class ReportesProduccion {
         byte[] arreglo = null;
         try{
             //Referencia al archivo Jasper
-            JasperReport reporte = (JasperReport)JRLoader.loadObjectFromFile(ServletProduccionDiario.class.getResource("/pe/edu/pucp/buildup/reports/ReporteProduccionDiario.jasper").getFile());
-            
-            
-            //Registro del driver
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            //Creación del objeto Connection
-            Connection con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.password);
+            JasperReport reporteProd = (JasperReport)JRLoader.loadObjectFromFile(
+                    ServletProdDiaria.class.getResource("/pe/edu/pucp/buildup/reports/ReporteProduccionDiario.jasper").getFile());
             
             
             //Creamos un HashMap para enviar los parámetros del reporte
             HashMap hm = new HashMap();
-            hm.put("fecha", fecha);
+            hm.put("FECHA", fecha);
             
             
-            //Población del reporte
-            JasperPrint jp = JasperFillManager.fillReport(reporte, hm, con);
+            //Registramos el Driver
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            //Creamos el objeto Connection
+            Connection con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.password);
+            //Poblamos el reporte
+            JasperPrint jp = JasperFillManager.fillReport(reporteProd, hm, con);
             
-            
-            //Cierre de conexión
+            //Cerrar la conexion
             con.close();
-            
-            
-            //Convertirlo a arreglo bytes
             arreglo = JasperExportManager.exportReportToPdf(jp);
-        }catch(Exception ex){
+        }
+        catch(Exception ex){
             System.out.println(ex.getMessage());
         }
         return arreglo;
@@ -70,7 +67,7 @@ public class ReportesProduccion {
         byte[] arreglo = null;
         try{
             //Referencia al archivo Jasper
-            JasperReport reporte = (JasperReport)JRLoader.loadObjectFromFile(ServletProduccionMensual.class.getResource("/pe/edu/pucp/buildup/reports/ReporteProduccionMensual.jasper").getFile());
+                JasperReport reporte = (JasperReport)JRLoader.loadObjectFromFile(ServletProdMes.class.getResource("/pe/edu/pucp/buildup/reports/ReporteProduccionMes.jasper").getFile());
             
             
             //Registro del driver
@@ -81,7 +78,7 @@ public class ReportesProduccion {
             
             //Creamos un HashMap para enviar los parámetros del reporte
             HashMap hm = new HashMap();
-            hm.put("mes", mes);
+            hm.put("MES_REPORTE", mes);
             
             
             //Población del reporte

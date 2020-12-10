@@ -20,6 +20,14 @@
         <servlet-name>ServletMaquinaria</servlet-name>
         <servlet-class>pe.edu.pucp.buildup.servlets.ServletMaquinaria</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ServletProdMes</servlet-name>
+        <servlet-class>pe.edu.pucp.buildup.servlets.ServletProdMes</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ServletProdDiaria</servlet-name>
+        <servlet-class>pe.edu.pucp.buildup.servlets.ServletProdDiaria</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>TestingServlet</servlet-name>
         <url-pattern>/TestingServlet</url-pattern>
@@ -39,6 +47,14 @@
     <servlet-mapping>
         <servlet-name>ServletMaquinaria</servlet-name>
         <url-pattern>/ServletMaquinaria</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletProdMes</servlet-name>
+        <url-pattern>/ServletProdMes</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletProdDiaria</servlet-name>
+        <url-pattern>/ServletProdDiaria</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

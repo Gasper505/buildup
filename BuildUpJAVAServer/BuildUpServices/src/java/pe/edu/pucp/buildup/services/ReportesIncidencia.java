@@ -18,8 +18,6 @@ import net.sf.jasperreports.engine.JasperPrint;
 import net.sf.jasperreports.engine.JasperReport;
 import net.sf.jasperreports.engine.util.JRLoader;
 import pe.edu.pucp.buildup.servlets.ServletIncidencia;
-import pe.edu.pucp.buildup.servlets.ServletProduccionDiario;
-import pe.edu.pucp.buildup.servlets.ServletProduccionMensual;
 import pe.edu.pucp.ta.config.DBManager;
 
 /**

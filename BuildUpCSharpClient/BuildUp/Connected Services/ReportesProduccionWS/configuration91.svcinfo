@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="UfIKWC8O9GWtm2TQU2S8YQRxcGoXIKyDATRgYUtjAwA=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="7IQuL47k+WGiiL1yVhRQ60InCbIQr5+oInqRC67nzDw=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="ReportesProduccionPortBinding">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="ReportesProduccionPort" contract="ReportesProduccionWS.ReportesProduccion" bindingType="basicHttpBinding" address="http://52.207.108.70:8080/BuildUpServices/ReportesProduccion" bindingConfiguration="ReportesProduccionPortBinding">
+    <endpoint name="ReportesProduccionPort" contract="ReportesProduccionWS.ReportesProduccion" bindingType="basicHttpBinding" address="http://localhost:8080/BuildUpServices/ReportesProduccion" bindingConfiguration="ReportesProduccionPortBinding">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://52.207.108.70:8080/BuildUpServices/ReportesProduccion</serializedValue>
+          <serializedValue>http://localhost:8080/BuildUpServices/ReportesProduccion</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
