@@ -47,12 +47,16 @@
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.btnCancelar = new System.Windows.Forms.ToolStripButton();
             this.btnRegresar = new System.Windows.Forms.ToolStripButton();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.gbDatosInsumo.SuspendLayout();
             this.toolStrip2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // gbDatosInsumo
             // 
+            this.gbDatosInsumo.BackColor = System.Drawing.SystemColors.Control;
+            this.gbDatosInsumo.Controls.Add(this.pictureBox6);
             this.gbDatosInsumo.Controls.Add(this.cboUnidadMedida);
             this.gbDatosInsumo.Controls.Add(this.lblUnidadMedida);
             this.gbDatosInsumo.Controls.Add(this.txtNombreInsumo);
@@ -62,7 +66,7 @@
             this.gbDatosInsumo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbDatosInsumo.Location = new System.Drawing.Point(37, 46);
             this.gbDatosInsumo.Name = "gbDatosInsumo";
-            this.gbDatosInsumo.Size = new System.Drawing.Size(541, 137);
+            this.gbDatosInsumo.Size = new System.Drawing.Size(541, 152);
             this.gbDatosInsumo.TabIndex = 13;
             this.gbDatosInsumo.TabStop = false;
             this.gbDatosInsumo.Text = "Datos del Insumo";
@@ -130,6 +134,7 @@
             // 
             // toolStrip2
             // 
+            this.toolStrip2.BackColor = System.Drawing.Color.Azure;
             this.toolStrip2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.toolStrip2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStrip2.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
@@ -236,11 +241,23 @@
             this.btnRegresar.Text = "Regresar";
             this.btnRegresar.Click += new System.EventHandler(this.btnVolver_Click);
             // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox6.Image = global::BuildUp.Properties.Resources.bup;
+            this.pictureBox6.Location = new System.Drawing.Point(459, 126);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(82, 26);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 48;
+            this.pictureBox6.TabStop = false;
+            // 
             // frmGestionarInsumo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(616, 213);
+            this.BackColor = System.Drawing.Color.SlateGray;
+            this.ClientSize = new System.Drawing.Size(616, 220);
             this.ControlBox = false;
             this.Controls.Add(this.toolStrip2);
             this.Controls.Add(this.gbDatosInsumo);
@@ -253,6 +270,7 @@
             this.gbDatosInsumo.PerformLayout();
             this.toolStrip2.ResumeLayout(false);
             this.toolStrip2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -277,5 +295,6 @@
         private System.Windows.Forms.ToolStripButton btnCancelar;
         private System.Windows.Forms.ToolStripButton btnRegresar;
         private System.Windows.Forms.ComboBox cboUnidadMedida;
+        private System.Windows.Forms.PictureBox pictureBox6;
     }
 }

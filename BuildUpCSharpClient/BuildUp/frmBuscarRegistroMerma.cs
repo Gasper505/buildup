@@ -48,9 +48,9 @@ namespace BuildUp
 
         private void dgvRegistrosMerma_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            RegistroMermaWS.registroMerma data = dgvRegistrosMerma.Rows[e.RowIndex].DataBoundItem as RegistroMermaWS.registroMerma;
-            dgvRegistrosMerma.Rows[e.RowIndex].Cells[2].Value = data.supervisor.nombres + data.supervisor.apellidos;
-            dgvRegistrosMerma.Rows[e.RowIndex].Cells[3].Value = data.lineaProduccion.nombre;
+            /*RegistroMermaWS.registroMerma data = dgvRegistrosMerma.Rows[e.RowIndex].DataBoundItem as RegistroMermaWS.registroMerma;
+            dgvRegistrosMerma.Rows[e.RowIndex].Cells[2].Value = data.supervisor.idPersona;
+            dgvRegistrosMerma.Rows[e.RowIndex].Cells[3].Value = data.lineaProduccion.idLineaProduccion;*/
         }
     }
 }

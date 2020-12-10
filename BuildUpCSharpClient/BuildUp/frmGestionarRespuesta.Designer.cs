@@ -46,12 +46,15 @@
             this.txtIdRespuesta = new System.Windows.Forms.TextBox();
             this.lblNombreMaquinaria = new System.Windows.Forms.Label();
             this.lblIdMaquinaria = new System.Windows.Forms.Label();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.toolStrip2.SuspendLayout();
             this.gbDatosMaquinaria.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip2
             // 
+            this.toolStrip2.BackColor = System.Drawing.Color.Azure;
             this.toolStrip2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStrip2.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -166,6 +169,8 @@
             // 
             // gbDatosMaquinaria
             // 
+            this.gbDatosMaquinaria.BackColor = System.Drawing.SystemColors.Control;
+            this.gbDatosMaquinaria.Controls.Add(this.pictureBox6);
             this.gbDatosMaquinaria.Controls.Add(this.txtTipo);
             this.gbDatosMaquinaria.Controls.Add(this.txtIdRespuesta);
             this.gbDatosMaquinaria.Controls.Add(this.lblNombreMaquinaria);
@@ -173,7 +178,7 @@
             this.gbDatosMaquinaria.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbDatosMaquinaria.Location = new System.Drawing.Point(45, 55);
             this.gbDatosMaquinaria.Name = "gbDatosMaquinaria";
-            this.gbDatosMaquinaria.Size = new System.Drawing.Size(532, 98);
+            this.gbDatosMaquinaria.Size = new System.Drawing.Size(532, 117);
             this.gbDatosMaquinaria.TabIndex = 46;
             this.gbDatosMaquinaria.TabStop = false;
             this.gbDatosMaquinaria.Text = "Datos de la Respuesta";
@@ -214,11 +219,23 @@
             this.lblIdMaquinaria.TabIndex = 5;
             this.lblIdMaquinaria.Text = "ID";
             // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox6.Image = global::BuildUp.Properties.Resources.bup;
+            this.pictureBox6.Location = new System.Drawing.Point(450, 91);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(82, 26);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 47;
+            this.pictureBox6.TabStop = false;
+            // 
             // frmGestionarRespuesta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(620, 184);
+            this.BackColor = System.Drawing.Color.SlateGray;
+            this.ClientSize = new System.Drawing.Size(620, 202);
             this.ControlBox = false;
             this.Controls.Add(this.gbDatosMaquinaria);
             this.Controls.Add(this.toolStrip2);
@@ -232,6 +249,7 @@
             this.toolStrip2.PerformLayout();
             this.gbDatosMaquinaria.ResumeLayout(false);
             this.gbDatosMaquinaria.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -256,5 +274,6 @@
         private System.Windows.Forms.TextBox txtIdRespuesta;
         private System.Windows.Forms.Label lblNombreMaquinaria;
         private System.Windows.Forms.Label lblIdMaquinaria;
+        private System.Windows.Forms.PictureBox pictureBox6;
     }
 }

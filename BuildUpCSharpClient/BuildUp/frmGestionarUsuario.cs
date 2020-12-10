@@ -395,7 +395,7 @@ namespace BuildUp
                 {
                     exclusiveLabel.Visible = true;
                     exclusiveComboBox.Visible = true;
-                    exclusiveComboBox.Text = daoSupervisor.obtenerLineaProduccionSupervisor(usuario.idPersona);
+                    exclusiveComboBox.Text = ((SupervisorWS.lineaProduccion)daoSupervisor.obtenerLineaProduccionSupervisor(usuario.idPersona)).nombre;
                 }
                 if (usuario.rol == "Ingeniero")
                 {
@@ -688,6 +688,7 @@ namespace BuildUp
         {
             this.Hide();
             ActiveForm.Show();
+          
         }
 
         private void cbRol_SelectedIndexChanged(object sender, EventArgs e)

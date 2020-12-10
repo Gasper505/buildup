@@ -48,12 +48,15 @@
             this.txtIdProblema = new System.Windows.Forms.TextBox();
             this.lblTipo = new System.Windows.Forms.Label();
             this.lblIdProblema = new System.Windows.Forms.Label();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.toolStrip2.SuspendLayout();
             this.gbDatosMaquinaria.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip2
             // 
+            this.toolStrip2.BackColor = System.Drawing.Color.Azure;
             this.toolStrip2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStrip2.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -168,6 +171,8 @@
             // 
             // gbDatosMaquinaria
             // 
+            this.gbDatosMaquinaria.BackColor = System.Drawing.SystemColors.Control;
+            this.gbDatosMaquinaria.Controls.Add(this.pictureBox6);
             this.gbDatosMaquinaria.Controls.Add(this.txtNivelImportancia);
             this.gbDatosMaquinaria.Controls.Add(this.lblNivelImportancia);
             this.gbDatosMaquinaria.Controls.Add(this.txtTipo);
@@ -244,10 +249,22 @@
             this.lblIdProblema.TabIndex = 5;
             this.lblIdProblema.Text = "ID";
             // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox6.Image = global::BuildUp.Properties.Resources.bup;
+            this.pictureBox6.Location = new System.Drawing.Point(460, 106);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(82, 26);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 48;
+            this.pictureBox6.TabStop = false;
+            // 
             // frmGestionarProblema
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SlateGray;
             this.ClientSize = new System.Drawing.Size(623, 216);
             this.ControlBox = false;
             this.Controls.Add(this.gbDatosMaquinaria);
@@ -262,6 +279,7 @@
             this.toolStrip2.PerformLayout();
             this.gbDatosMaquinaria.ResumeLayout(false);
             this.gbDatosMaquinaria.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -288,5 +306,6 @@
         private System.Windows.Forms.Label lblTipo;
         private System.Windows.Forms.Label lblIdProblema;
         private System.Windows.Forms.ComboBox txtNivelImportancia;
+        private System.Windows.Forms.PictureBox pictureBox6;
     }
 }

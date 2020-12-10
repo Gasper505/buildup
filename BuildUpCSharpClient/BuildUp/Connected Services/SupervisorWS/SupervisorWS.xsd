@@ -108,7 +108,7 @@
   </xs:complexType>
   <xs:complexType name="obtenerLineaProduccionSupervisorResponse">
     <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="xs:string" />
+      <xs:element minOccurs="0" name="return" type="tns:lineaProduccion" />
     </xs:sequence>
   </xs:complexType>
 </xs:schema>

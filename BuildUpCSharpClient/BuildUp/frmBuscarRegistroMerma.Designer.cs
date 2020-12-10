@@ -29,11 +29,6 @@
         private void InitializeComponent()
         {
             this.dgvRegistrosMerma = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSeleccionar = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
@@ -43,6 +38,9 @@
             this.lblHasta = new System.Windows.Forms.Label();
             this.lblDesde = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRegistrosMerma)).BeginInit();
             this.gbBusqueda.SuspendLayout();
             this.SuspendLayout();
@@ -57,58 +55,16 @@
             this.dgvRegistrosMerma.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
-            this.Column3,
-            this.Column4,
             this.Column5});
-            this.dgvRegistrosMerma.Location = new System.Drawing.Point(34, 183);
+            this.dgvRegistrosMerma.Location = new System.Drawing.Point(199, 183);
             this.dgvRegistrosMerma.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvRegistrosMerma.MultiSelect = false;
             this.dgvRegistrosMerma.Name = "dgvRegistrosMerma";
             this.dgvRegistrosMerma.ReadOnly = true;
             this.dgvRegistrosMerma.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvRegistrosMerma.Size = new System.Drawing.Size(738, 288);
+            this.dgvRegistrosMerma.Size = new System.Drawing.Size(369, 288);
             this.dgvRegistrosMerma.TabIndex = 0;
             this.dgvRegistrosMerma.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvRegistrosMerma_CellFormatting);
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "idRegistroMerma";
-            this.Column1.HeaderText = "ID";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 50;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "cantidad";
-            this.Column2.HeaderText = "Cantidad";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 125;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "nombres";
-            this.Column3.HeaderText = "Supervisor";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 185;
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "nombre";
-            this.Column4.HeaderText = "Linea de Produccion";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 175;
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "fecha";
-            this.Column5.HeaderText = "Fecha";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Width = 150;
             // 
             // label1
             // 
@@ -124,7 +80,7 @@
             // 
             this.btnSeleccionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSeleccionar.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSeleccionar.Location = new System.Drawing.Point(272, 492);
+            this.btnSeleccionar.Location = new System.Drawing.Point(259, 479);
             this.btnSeleccionar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSeleccionar.Name = "btnSeleccionar";
             this.btnSeleccionar.Size = new System.Drawing.Size(262, 41);
@@ -160,7 +116,7 @@
             this.gbBusqueda.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gbBusqueda.Name = "gbBusqueda";
             this.gbBusqueda.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.gbBusqueda.Size = new System.Drawing.Size(737, 149);
+            this.gbBusqueda.Size = new System.Drawing.Size(732, 149);
             this.gbBusqueda.TabIndex = 14;
             this.gbBusqueda.TabStop = false;
             this.gbBusqueda.Text = "Parámetros de Búsqueda";
@@ -214,6 +170,30 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(230, 25);
             this.dateTimePicker1.TabIndex = 14;
             // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "idRegistroMerma";
+            this.Column1.HeaderText = "ID";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 50;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "cantidad";
+            this.Column2.HeaderText = "Cantidad";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 125;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "fecha";
+            this.Column5.HeaderText = "Fecha";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Width = 150;
+            // 
             // frmBuscarRegistroMerma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -249,8 +229,6 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
     }
 }

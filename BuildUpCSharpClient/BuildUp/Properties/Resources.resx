@@ -133,17 +133,11 @@
   <data name="46316" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\46316.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="152533" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\152533.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="boton-agregar-cruzar-circulo_318-9475" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\boton-agregar-cruzar-circulo_318-9475.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="46305" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\46305.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="images" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\images1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icono_incidencia-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icono_incidencia-1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icon-14" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon-14.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -151,14 +145,23 @@
   <data name="e8adc01920d4aa1c-hazel-ice-king-size-bed" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\e8adc01920d4aa1c-hazel-ice-king-size-bed.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="gratis-png-proveedor-de-iconos-de-computadora-entrega" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\gratis-png-proveedor-de-iconos-de-computadora-entrega.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="asa" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\asa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="gratis-png-proveedor-de-iconos-de-computadora-entrega" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gratis-png-proveedor-de-iconos-de-computadora-entrega.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="46305" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\46305.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="vector-document-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\vector-document-icon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icono-usuario_6091-78" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icono-usuario_6091-78.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="152533" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\152533.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="3f4756f5a915c254517d7f0800910ad6-documento-verificado-icono-de-trazo-coloreado-by-vexels" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\3f4756f5a915c254517d7f0800910ad6-documento-verificado-icono-de-trazo-coloreado-by-vexels.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -169,13 +172,13 @@
   <data name="new-file-icon-4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\new-file-icon-4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="images" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="vector-document-icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\vector-document-icon1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icono_incidencia-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icono_incidencia-1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icono-usuario_6091-78" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icono-usuario_6091-78.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="bup" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bup.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -124,6 +124,16 @@ namespace BuildUp.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bup {
+            get {
+                object obj = ResourceManager.GetObject("bup", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap e8adc01920d4aa1c_hazel_ice_king_size_bed {
             get {
                 object obj = ResourceManager.GetObject("e8adc01920d4aa1c-hazel-ice-king-size-bed", resourceCulture);
