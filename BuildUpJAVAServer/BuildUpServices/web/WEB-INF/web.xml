@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="4.0" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd">
+    <listener>
+        <listener-class>com.sun.xml.ws.transport.http.servlet.WSServletContextListener</listener-class>
+    </listener>
     <servlet>
         <servlet-name>TestingServlet</servlet-name>
         <servlet-class>pe.edu.pucp.buildup.servlets.TestingServlet</servlet-class>
@@ -28,6 +31,11 @@
         <servlet-name>ServletProdDiaria</servlet-name>
         <servlet-class>pe.edu.pucp.buildup.servlets.ServletProdDiaria</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ReporteIncidenteconMaquinaria</servlet-name>
+        <servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
     <servlet-mapping>
         <servlet-name>TestingServlet</servlet-name>
         <url-pattern>/TestingServlet</url-pattern>
@@ -55,6 +63,10 @@
     <servlet-mapping>
         <servlet-name>ServletProdDiaria</servlet-name>
         <url-pattern>/ServletProdDiaria</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ReporteIncidenteconMaquinaria</servlet-name>
+        <url-pattern>/ReporteIncidenteconMaquinaria</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
