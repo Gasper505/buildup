@@ -40,7 +40,7 @@
             // 
             this.btnSeleccionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSeleccionar.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSeleccionar.Location = new System.Drawing.Point(153, 346);
+            this.btnSeleccionar.Location = new System.Drawing.Point(113, 341);
             this.btnSeleccionar.Name = "btnSeleccionar";
             this.btnSeleccionar.Size = new System.Drawing.Size(280, 42);
             this.btnSeleccionar.TabIndex = 8;
@@ -64,7 +64,7 @@
             this.dgvProblemas.Name = "dgvProblemas";
             this.dgvProblemas.ReadOnly = true;
             this.dgvProblemas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvProblemas.Size = new System.Drawing.Size(495, 279);
+            this.dgvProblemas.Size = new System.Drawing.Size(413, 279);
             this.dgvProblemas.TabIndex = 7;
             // 
             // IDInsumo
@@ -73,7 +73,7 @@
             this.IDInsumo.HeaderText = "ID Problema";
             this.IDInsumo.Name = "IDInsumo";
             this.IDInsumo.ReadOnly = true;
-            this.IDInsumo.Width = 150;
+            this.IDInsumo.Width = 70;
             // 
             // NombreInsumo
             // 
@@ -96,7 +96,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(586, 409);
+            this.ClientSize = new System.Drawing.Size(506, 409);
             this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.dgvProblemas);
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

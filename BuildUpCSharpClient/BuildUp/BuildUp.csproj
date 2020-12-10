@@ -131,6 +131,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Connected Services\ReporteIncMaqWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\ReportesProduccionWS\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -825,8 +830,8 @@
     <None Include="Connected Services\RegistroMermaWS\BuildUp.RegistroMermaWS.registroMerma.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\RegistroMermaWS\RegistroMermaWS1.wsdl" />
-    <None Include="Connected Services\RegistroMermaWS\RegistroMermaWS1.xsd">
+    <None Include="Connected Services\RegistroMermaWS\RegistroMermaWS.wsdl" />
+    <None Include="Connected Services\RegistroMermaWS\RegistroMermaWS.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\ReporteIncidenciaWS\BuildUp.ReporteIncidenciaWS.generarReporteIncidenciaResponse.datasource">
@@ -834,6 +839,13 @@
     </None>
     <None Include="Connected Services\ReporteIncidenciaWS\ReportesIncidencia.wsdl" />
     <None Include="Connected Services\ReporteIncidenciaWS\ReportesIncidencia.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ReporteIncMaqWS\BuildUp.ReporteIncMaqWS.generarReporteIncidenciaMaquinariaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ReporteIncMaqWS\ReporteIncidenteconMaquinaria.wsdl" />
+    <None Include="Connected Services\ReporteIncMaqWS\ReporteIncidenteconMaquinaria.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\ReportesProduccionWS\BuildUp.ReportesProduccionWS.generarReporteProduccionDiarioResponse.datasource">
@@ -872,6 +884,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\SupervisorWS\BuildUp.SupervisorWS.insertarSupervisorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SupervisorWS\BuildUp.SupervisorWS.lineaProduccion.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\SupervisorWS\BuildUp.SupervisorWS.listarSupervisorResponse.datasource">
@@ -950,6 +965,7 @@
     <WCFMetadataStorage Include="Connected Services\ProveedorWS\" />
     <WCFMetadataStorage Include="Connected Services\RegistroMermaWS\" />
     <WCFMetadataStorage Include="Connected Services\ReporteIncidenciaWS\" />
+    <WCFMetadataStorage Include="Connected Services\ReporteIncMaqWS\" />
     <WCFMetadataStorage Include="Connected Services\ReportesProduccionWS\" />
     <WCFMetadataStorage Include="Connected Services\RespuestaWS\" />
     <WCFMetadataStorage Include="Connected Services\SupervisorWS\" />
@@ -1218,6 +1234,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\bup.PNG" />
+    <None Include="Connected Services\ReporteIncMaqWS\configuration91.svcinfo" />
+    <None Include="Connected Services\ReporteIncMaqWS\configuration.svcinfo" />
+    <None Include="Connected Services\ReporteIncMaqWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Resources\logout.png" />
     <None Include="Connected Services\PlanProduccionWS\configuration91.svcinfo" />
     <None Include="Connected Services\PlanProduccionWS\configuration.svcinfo" />

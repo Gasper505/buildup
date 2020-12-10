@@ -41,7 +41,7 @@ public class RegistroMermaWS {
             @WebParam(name="fechaInicial")Date fechaInicial, @WebParam(name="fechaFin")Date fechaFin) {
         ArrayList<RegistroMerma> registroMermas = new ArrayList<>();
         try{
-            registroMermas = daoRegistroMerma.listarRegistrosMermasPorSupervisorYRangoFechas(nombreSup, fechaInicial, fechaFin);
+            registroMermas = daoRegistroMerma.listarRegistrosMermasPorSupervisorYRangoFechas(nombreSup,new java.sql.Date(fechaInicial.getTime()), new java.sql.Date(fechaFin.getTime()));
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }

@@ -63,6 +63,7 @@
             this.btnRechazarOrden = new System.Windows.Forms.Button();
             this.picCheck = new System.Windows.Forms.PictureBox();
             this.btnAceptarOrden = new System.Windows.Forms.Button();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.gbDatosOrdenInsumos.SuspendLayout();
             this.gbDatosInsumo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -71,6 +72,7 @@
             this.pnlAceptacionOrden.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCheck)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // dtpFechaActual
@@ -112,6 +114,7 @@
             // 
             // gbDatosOrdenInsumos
             // 
+            this.gbDatosOrdenInsumos.BackColor = System.Drawing.SystemColors.Control;
             this.gbDatosOrdenInsumos.Controls.Add(this.lblFechaActual);
             this.gbDatosOrdenInsumos.Controls.Add(this.lblIdOrdenInsumos);
             this.gbDatosOrdenInsumos.Controls.Add(this.txtIdOrdenInsumos);
@@ -126,6 +129,7 @@
             // 
             // gbDatosInsumo
             // 
+            this.gbDatosInsumo.BackColor = System.Drawing.SystemColors.Control;
             this.gbDatosInsumo.Controls.Add(this.numericUpDown1);
             this.gbDatosInsumo.Controls.Add(this.lblCantidad);
             this.gbDatosInsumo.Controls.Add(this.btnBuscarInsumo);
@@ -214,6 +218,7 @@
             // 
             // gbDatosOperario
             // 
+            this.gbDatosOperario.BackColor = System.Drawing.SystemColors.Control;
             this.gbDatosOperario.Controls.Add(this.txtNombresOperario);
             this.gbDatosOperario.Controls.Add(this.txtIdOperario);
             this.gbDatosOperario.Controls.Add(this.lblNombresOperario);
@@ -264,6 +269,7 @@
             // 
             // toolStrip2
             // 
+            this.toolStrip2.BackColor = System.Drawing.Color.Azure;
             this.toolStrip2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStrip2.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -371,14 +377,15 @@
             // 
             // pnlAceptacionOrden
             // 
-            this.pnlAceptacionOrden.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.pnlAceptacionOrden.BackColor = System.Drawing.SystemColors.Control;
+            this.pnlAceptacionOrden.Controls.Add(this.pictureBox6);
             this.pnlAceptacionOrden.Controls.Add(this.pictureBox1);
             this.pnlAceptacionOrden.Controls.Add(this.btnRechazarOrden);
             this.pnlAceptacionOrden.Controls.Add(this.picCheck);
             this.pnlAceptacionOrden.Controls.Add(this.btnAceptarOrden);
             this.pnlAceptacionOrden.Location = new System.Drawing.Point(46, 430);
             this.pnlAceptacionOrden.Name = "pnlAceptacionOrden";
-            this.pnlAceptacionOrden.Size = new System.Drawing.Size(519, 75);
+            this.pnlAceptacionOrden.Size = new System.Drawing.Size(519, 88);
             this.pnlAceptacionOrden.TabIndex = 41;
             this.pnlAceptacionOrden.Visible = false;
             // 
@@ -433,11 +440,22 @@
             this.btnAceptarOrden.UseVisualStyleBackColor = false;
             this.btnAceptarOrden.Click += new System.EventHandler(this.btnAceptarOrden_Click);
             // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox6.Image = global::BuildUp.Properties.Resources.bup;
+            this.pictureBox6.Location = new System.Drawing.Point(437, 62);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(82, 26);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 48;
+            this.pictureBox6.TabStop = false;
+            // 
             // frmGestionarOrdenInsumos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackColor = System.Drawing.Color.SlateGray;
             this.ClientSize = new System.Drawing.Size(611, 530);
             this.ControlBox = false;
             this.Controls.Add(this.pnlAceptacionOrden);
@@ -462,6 +480,7 @@
             this.pnlAceptacionOrden.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCheck)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -502,5 +521,6 @@
         private System.Windows.Forms.ToolStripButton btnCancelar;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnRechazarOrden;
+        private System.Windows.Forms.PictureBox pictureBox6;
     }
 }

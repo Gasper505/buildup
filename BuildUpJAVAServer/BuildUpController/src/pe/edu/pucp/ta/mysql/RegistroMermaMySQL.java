@@ -1,4 +1,4 @@
-
+    
 package pe.edu.pucp.ta.mysql;
 
 import java.sql.CallableStatement;
@@ -108,8 +108,8 @@ public class RegistroMermaMySQL implements RegistroMermaDAO {
             while(rs.next()){
                 RegistroMerma regMerma = new RegistroMerma();
                 regMerma.setIdRegistroMerma(rs.getInt("ID_REGISTRO_MERMA"));
-                regMerma.getLineaProduccion().setIdLineaProduccion(rs.getInt("ID_LINEA_PRODUCCION"));   //
-                regMerma.getMerma().setIdMerma(rs.getInt("ID_MERMA"));                                  //
+                regMerma.getLineaProduccion().setIdLineaProduccion(rs.getInt("ID_LINEA_PRODUCCION"));
+                regMerma.getMerma().setIdMerma(rs.getInt("ID_MERMA"));                                  
                 regMerma.setCantidad(rs.getInt("CANTIDAD"));
                 regMerma.setFecha(rs.getDate("FECHA"));
                 regMerma.setActivo(rs.getBoolean("ACTIVO"));                
@@ -139,7 +139,8 @@ public class RegistroMermaMySQL implements RegistroMermaDAO {
             while(rs.next()){
                 RegistroMerma regMerma = new RegistroMerma();
                 regMerma.setIdRegistroMerma(rs.getInt("ID_REGISTRO_MERMA"));
-                regMerma.getLineaProduccion().setIdLineaProduccion(rs.getInt("ID_LINEA_PRODUCCION"));   //
+                regMerma.getLineaProduccion().setIdLineaProduccion(rs.getInt("ID_LINEA_PRODUCCION"));  
+                regMerma.getSupervisor().setIdPersona(rs.getInt("ID_SUPERVISOR"));
                 regMerma.getMerma().setIdMerma(rs.getInt("ID_MERMA"));                                  //
                 regMerma.setCantidad(rs.getInt("CANTIDAD"));
                 regMerma.setFecha(rs.getDate("FECHA"));

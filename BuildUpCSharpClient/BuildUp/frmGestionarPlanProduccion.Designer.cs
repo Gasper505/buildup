@@ -55,15 +55,18 @@
             this.txtIDPlan = new System.Windows.Forms.TextBox();
             this.lblIDPlan = new System.Windows.Forms.Label();
             this.lblAnho = new System.Windows.Forms.Label();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.toolStrip2.SuspendLayout();
             this.gbLotesSalientes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAsignacion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numNroAproxLadrillos)).BeginInit();
             this.gbDatosOperario.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip2
             // 
+            this.toolStrip2.BackColor = System.Drawing.Color.Azure;
             this.toolStrip2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStrip2.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -171,6 +174,8 @@
             // 
             // gbLotesSalientes
             // 
+            this.gbLotesSalientes.BackColor = System.Drawing.SystemColors.Control;
+            this.gbLotesSalientes.Controls.Add(this.pictureBox6);
             this.gbLotesSalientes.Controls.Add(this.btnRemover);
             this.gbLotesSalientes.Controls.Add(this.btnAgregar);
             this.gbLotesSalientes.Controls.Add(this.dgvAsignacion);
@@ -181,7 +186,7 @@
             this.gbLotesSalientes.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbLotesSalientes.Location = new System.Drawing.Point(41, 157);
             this.gbLotesSalientes.Name = "gbLotesSalientes";
-            this.gbLotesSalientes.Size = new System.Drawing.Size(583, 333);
+            this.gbLotesSalientes.Size = new System.Drawing.Size(583, 353);
             this.gbLotesSalientes.TabIndex = 42;
             this.gbLotesSalientes.TabStop = false;
             this.gbLotesSalientes.Text = "Asignación de Producción";
@@ -280,6 +285,7 @@
             // 
             // gbDatosOperario
             // 
+            this.gbDatosOperario.BackColor = System.Drawing.SystemColors.Control;
             this.gbDatosOperario.Controls.Add(this.txtAnho);
             this.gbDatosOperario.Controls.Add(this.txtIDPlan);
             this.gbDatosOperario.Controls.Add(this.lblIDPlan);
@@ -342,11 +348,23 @@
             this.lblAnho.TabIndex = 21;
             this.lblAnho.Text = "Año";
             // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox6.Image = global::BuildUp.Properties.Resources.bup;
+            this.pictureBox6.Location = new System.Drawing.Point(501, 327);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(82, 26);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 48;
+            this.pictureBox6.TabStop = false;
+            // 
             // frmGestionarPlanProduccion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(669, 522);
+            this.BackColor = System.Drawing.Color.SlateGray;
+            this.ClientSize = new System.Drawing.Size(669, 527);
             this.ControlBox = false;
             this.Controls.Add(this.gbLotesSalientes);
             this.Controls.Add(this.gbDatosOperario);
@@ -364,6 +382,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numNroAproxLadrillos)).EndInit();
             this.gbDatosOperario.ResumeLayout(false);
             this.gbDatosOperario.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -396,5 +415,6 @@
         private System.Windows.Forms.ComboBox txtAnho;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreTipoLadrillo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
+        private System.Windows.Forms.PictureBox pictureBox6;
     }
 }

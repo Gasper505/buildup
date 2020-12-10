@@ -9,6 +9,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import pe.edu.pucp.ta.config.DBManager;
 import pe.edu.pucp.ta.dao.SupervisorDAO;
+import pe.edu.pucp.ta.model.LineaProduccion;
 import pe.edu.pucp.ta.model.Supervisor;
 
 
@@ -137,8 +138,8 @@ public class SupervisorMySQL implements SupervisorDAO{
     }
     
      @Override
-    public String obtener_linea_produccion(int idSup) {
-        String lineaProd = "";
+    public LineaProduccion obtener_linea_produccion(int idSup) {
+        LineaProduccion lineaProd = new LineaProduccion();
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.urlMySQL, 
@@ -148,7 +149,8 @@ public class SupervisorMySQL implements SupervisorDAO{
             cs.setInt("_ID_PERSONA",idSup);
             rs=cs.executeQuery();     
             while(rs.next()){
-                lineaProd = rs.getString("NOMBRE_LINEA_PRODUCCION");
+                lineaProd.setIdLineaProduccion(rs.getInt("ID_LINEA_PRODUCCION"));
+                lineaProd.setNombre(rs.getString("NOMBRE_LINEA_PRODUCCION"));
             }
         }catch(Exception ex){
             System.out.println(ex.getMessage());

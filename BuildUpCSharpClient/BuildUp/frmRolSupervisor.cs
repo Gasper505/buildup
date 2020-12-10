@@ -55,5 +55,10 @@ namespace BuildUp
             frmGestionarRegistroMerma formGestionarRegistroMerma = new frmGestionarRegistroMerma();
             formGestionarRegistroMerma.Show();
         }
+
+        private void pbFoto_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -67,6 +67,9 @@
     <service name="ReportesIncidencia">
       <implementation-class>pe.edu.pucp.buildup.services.ReportesIncidencia</implementation-class>
     </service>
+    <service name="ReporteIncidenteconMaquinaria">
+      <implementation-class>pe.edu.pucp.buildup.services.ReporteIncidenteconMaquinaria</implementation-class>
+    </service>
   </services>
   <clients/>
 </jax-ws>

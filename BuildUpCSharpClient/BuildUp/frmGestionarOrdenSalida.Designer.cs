@@ -63,12 +63,14 @@
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.btnCancelar = new System.Windows.Forms.ToolStripButton();
             this.btnRegresar = new System.Windows.Forms.ToolStripButton();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.numNroAproxLadrillos)).BeginInit();
             this.gbDatosOrden.SuspendLayout();
             this.gbDatosOperario.SuspendLayout();
             this.gbLotesSalientes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLotes)).BeginInit();
             this.toolStrip2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // lblNroLotes
@@ -159,6 +161,7 @@
             // 
             // gbDatosOrden
             // 
+            this.gbDatosOrden.BackColor = System.Drawing.SystemColors.Control;
             this.gbDatosOrden.Controls.Add(this.txtIDOrden);
             this.gbDatosOrden.Controls.Add(this.lblIDOrden);
             this.gbDatosOrden.Controls.Add(this.lblFechaRegistro);
@@ -173,6 +176,7 @@
             // 
             // gbDatosOperario
             // 
+            this.gbDatosOperario.BackColor = System.Drawing.SystemColors.Control;
             this.gbDatosOperario.Controls.Add(this.txtApellidos);
             this.gbDatosOperario.Controls.Add(this.label3);
             this.gbDatosOperario.Controls.Add(this.txtIDOperario);
@@ -233,6 +237,8 @@
             // 
             // gbLotesSalientes
             // 
+            this.gbLotesSalientes.BackColor = System.Drawing.SystemColors.Control;
+            this.gbLotesSalientes.Controls.Add(this.pictureBox6);
             this.gbLotesSalientes.Controls.Add(this.btnRemover);
             this.gbLotesSalientes.Controls.Add(this.btnAgregar);
             this.gbLotesSalientes.Controls.Add(this.dgvLotes);
@@ -243,7 +249,7 @@
             this.gbLotesSalientes.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbLotesSalientes.Location = new System.Drawing.Point(56, 310);
             this.gbLotesSalientes.Name = "gbLotesSalientes";
-            this.gbLotesSalientes.Size = new System.Drawing.Size(593, 318);
+            this.gbLotesSalientes.Size = new System.Drawing.Size(593, 343);
             this.gbLotesSalientes.TabIndex = 38;
             this.gbLotesSalientes.TabStop = false;
             this.gbLotesSalientes.Text = "Lotes Salientes";
@@ -305,6 +311,7 @@
             // 
             // toolStrip2
             // 
+            this.toolStrip2.BackColor = System.Drawing.Color.Azure;
             this.toolStrip2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStrip2.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -410,11 +417,23 @@
             this.btnRegresar.Text = "Regresar";
             this.btnRegresar.Click += new System.EventHandler(this.btnVolver_Click);
             // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox6.Image = global::BuildUp.Properties.Resources.bup;
+            this.pictureBox6.Location = new System.Drawing.Point(511, 317);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(82, 26);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 48;
+            this.pictureBox6.TabStop = false;
+            // 
             // frmGestionarOrdenSalida
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(703, 641);
+            this.BackColor = System.Drawing.Color.SlateGray;
+            this.ClientSize = new System.Drawing.Size(703, 664);
             this.ControlBox = false;
             this.Controls.Add(this.toolStrip2);
             this.Controls.Add(this.gbLotesSalientes);
@@ -435,6 +454,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvLotes)).EndInit();
             this.toolStrip2.ResumeLayout(false);
             this.toolStrip2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -475,5 +495,6 @@
         private System.Windows.Forms.ToolStripButton btnRegresar;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreTipoLadrillo;
         private System.Windows.Forms.DataGridViewTextBoxColumn CantidadEnElLote;
+        private System.Windows.Forms.PictureBox pictureBox6;
     }
 }

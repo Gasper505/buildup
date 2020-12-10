@@ -51,6 +51,5 @@ namespace BuildUp
             frmGestionarOrdenSalida f = new frmGestionarOrdenSalida();
             f.Show();
         }
-
     }
 }

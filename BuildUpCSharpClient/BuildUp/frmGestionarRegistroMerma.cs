@@ -21,6 +21,9 @@ namespace BuildUp
         public frmGestionarRegistroMerma()
         {
             InitializeComponent();
+            ///
+            groupBox2.Hide();
+            ///
             daoRegistroMerma = new RegistroMermaWS.RegistroMermaWSClient();
             registroMerma = new RegistroMermaWS.registroMerma();
             daoSupervisor = new SupervisorWS.SupervisorWSClient();
@@ -98,9 +101,16 @@ namespace BuildUp
 
                 registroMerma.fecha = dtpFechaMerma.Value;
                 registroMerma.cantidad = Int32.Parse(txtCantidad.Text);
+                registroMerma.supervisor.idPersona = frmLogIn.Usuario.idPersona;
                 registroMerma.supervisor.nombres = frmLogIn.Usuario.nombres + frmLogIn.Usuario.apellidos;
-                registroMerma.merma = (RegistroMermaWS.merma)cboTipoMerma.SelectedItem;
-                registroMerma.lineaProduccion.nombre = daoSupervisor.obtenerLineaProduccionSupervisor(frmLogIn.Usuario.idPersona);
+
+                MermaWS.merma m = new MermaWS.merma();
+                m= (MermaWS.merma)cboTipoMerma.SelectedItem;
+
+
+                registroMerma.merma.idMerma = m.idMerma;
+
+                registroMerma.lineaProduccion.idLineaProduccion = ((SupervisorWS.lineaProduccion)daoSupervisor.obtenerLineaProduccionSupervisor(frmLogIn.Usuario.idPersona)).idLineaProduccion;
 
                 int resultado = 0;
                 resultado = daoRegistroMerma.insertarRegistroMerma(registroMerma);
@@ -136,6 +146,8 @@ namespace BuildUp
                 cboTipoMerma.Text = registroMerma.merma.tipo;
                 txtCantidad.Text = registroMerma.cantidad.ToString();
                 dtpFechaMerma.Value = registroMerma.fecha;
+
+
                 txtSupervisor.Text = registroMerma.supervisor.nombres + registroMerma.supervisor.apellidos;
                 txtLineaProduccion.Text = registroMerma.lineaProduccion.nombre;
                 EstablecerEstadoComponentes(Estado.Modificacion);
@@ -157,7 +169,9 @@ namespace BuildUp
                 registroMerma.cantidad = Int32.Parse(txtCantidad.Text);
                 registroMerma.supervisor.nombres = frmLogIn.Usuario.nombres + frmLogIn.Usuario.apellidos;
                 registroMerma.merma = (RegistroMermaWS.merma)cboTipoMerma.SelectedItem;
-                registroMerma.lineaProduccion.nombre = daoSupervisor.obtenerLineaProduccionSupervisor(frmLogIn.Usuario.idPersona);
+
+                
+                registroMerma.lineaProduccion.idLineaProduccion = ((SupervisorWS.lineaProduccion)daoSupervisor.obtenerLineaProduccionSupervisor(frmLogIn.Usuario.idPersona)).idLineaProduccion;
 
                 int resultado = 0;
                 resultado = daoRegistroMerma.actualizarRegistroMerma(registroMerma);
@@ -191,7 +205,7 @@ namespace BuildUp
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             txtSupervisor.Text = frmLogIn.Usuario.nombres + frmLogIn.Usuario.apellidos; //Recordar que el único que tiene acceso a este form es el supervisor
-            txtLineaProduccion.Text = daoSupervisor.obtenerLineaProduccionSupervisor(frmLogIn.Usuario.idPersona);
+            txtLineaProduccion.Text = ((SupervisorWS.lineaProduccion)daoSupervisor.obtenerLineaProduccionSupervisor(frmLogIn.Usuario.idPersona)).nombre;
             EstablecerEstadoComponentes(Estado.Nuevo);
         }
 

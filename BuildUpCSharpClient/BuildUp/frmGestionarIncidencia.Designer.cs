@@ -46,7 +46,6 @@
             this.btnCancelar = new System.Windows.Forms.ToolStripButton();
             this.btnRegresar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.lblNombreMaq = new System.Windows.Forms.Label();
             this.lblNombreSup = new System.Windows.Forms.Label();
             this.lblIDSup = new System.Windows.Forms.Label();
@@ -91,6 +90,11 @@
             this.lblFechaReg = new System.Windows.Forms.Label();
             this.dtpFechaRegistro = new System.Windows.Forms.DateTimePicker();
             this.sfdReporteIncidencia = new System.Windows.Forms.SaveFileDialog();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSplitButton1 = new System.Windows.Forms.ToolStripSplitButton();
+            this.porLíneaDeProducciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.porMaquinariaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip2.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -99,6 +103,7 @@
             this.tabProblema.SuspendLayout();
             this.tabRespuesta.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // label6
@@ -152,6 +157,7 @@
             // 
             // toolStrip2
             // 
+            this.toolStrip2.BackColor = System.Drawing.Color.Azure;
             this.toolStrip2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStrip2.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -166,7 +172,8 @@
             this.btnCancelar,
             this.btnRegresar,
             this.toolStripSeparator1,
-            this.toolStripButton2});
+            this.toolStripButton1,
+            this.toolStripSplitButton1});
             this.toolStrip2.Location = new System.Drawing.Point(0, 0);
             this.toolStrip2.Name = "toolStrip2";
             this.toolStrip2.Size = new System.Drawing.Size(883, 25);
@@ -264,16 +271,6 @@
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
-            // toolStripButton2
-            // 
-            this.toolStripButton2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripButton2.Image = global::BuildUp.Properties.Resources.new_file_icon_4;
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(75, 22);
-            this.toolStripButton2.Text = "Reporte";
-            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click_1);
-            // 
             // lblNombreMaq
             // 
             this.lblNombreMaq.AutoSize = true;
@@ -333,6 +330,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox2.Controls.Add(this.txtProveedor);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.txtIDMaq);
@@ -400,6 +398,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox3.Controls.Add(this.txtApellidosSup);
             this.groupBox3.Controls.Add(this.lblApellidosSup);
             this.groupBox3.Controls.Add(this.lblNombreSup);
@@ -435,6 +434,7 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox4.Controls.Add(this.txtApellidosIng);
             this.groupBox4.Controls.Add(this.lblApellidosIng);
             this.groupBox4.Controls.Add(this.lblNombreIng);
@@ -688,6 +688,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txtID);
             this.groupBox1.Controls.Add(this.lblFechaReg);
@@ -738,14 +739,62 @@
             this.dtpFechaRegistro.Size = new System.Drawing.Size(169, 25);
             this.dtpFechaRegistro.TabIndex = 19;
             // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox6.Image = global::BuildUp.Properties.Resources.bup;
+            this.pictureBox6.Location = new System.Drawing.Point(731, 859);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(82, 26);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 48;
+            this.pictureBox6.TabStop = false;
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripButton1.Image = global::BuildUp.Properties.Resources.new_file_icon_4;
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(75, 22);
+            this.toolStripButton1.Text = "Reporte";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
+            // toolStripSplitButton1
+            // 
+            this.toolStripSplitButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.porLíneaDeProducciónToolStripMenuItem,
+            this.porMaquinariaToolStripMenuItem});
+            this.toolStripSplitButton1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripSplitButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSplitButton1.Image")));
+            this.toolStripSplitButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripSplitButton1.Name = "toolStripSplitButton1";
+            this.toolStripSplitButton1.Size = new System.Drawing.Size(93, 22);
+            this.toolStripSplitButton1.Text = "Reportes";
+            // 
+            // porLíneaDeProducciónToolStripMenuItem
+            // 
+            this.porLíneaDeProducciónToolStripMenuItem.Name = "porLíneaDeProducciónToolStripMenuItem";
+            this.porLíneaDeProducciónToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
+            this.porLíneaDeProducciónToolStripMenuItem.Text = "Por Línea de Producción";
+            this.porLíneaDeProducciónToolStripMenuItem.Click += new System.EventHandler(this.porLíneaDeProducciónToolStripMenuItem_Click);
+            // 
+            // porMaquinariaToolStripMenuItem
+            // 
+            this.porMaquinariaToolStripMenuItem.Name = "porMaquinariaToolStripMenuItem";
+            this.porMaquinariaToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
+            this.porMaquinariaToolStripMenuItem.Text = "Por Maquinaria";
+            this.porMaquinariaToolStripMenuItem.Click += new System.EventHandler(this.porMaquinariaToolStripMenuItem_Click);
+            // 
             // frmGestionarIncidencia
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoScroll = true;
             this.AutoScrollMargin = new System.Drawing.Size(0, 60);
-            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackColor = System.Drawing.Color.SlateGray;
             this.ClientSize = new System.Drawing.Size(900, 637);
             this.ControlBox = false;
+            this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.groupBox4);
@@ -774,6 +823,7 @@
             this.tabRespuesta.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -839,8 +889,12 @@
         private System.Windows.Forms.Label lblFechaReg;
         private System.Windows.Forms.DateTimePicker dtpFechaRegistro;
         private System.Windows.Forms.ToolStripButton btnCancelar;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
         private System.Windows.Forms.SaveFileDialog sfdReporteIncidencia;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripSplitButton toolStripSplitButton1;
+        private System.Windows.Forms.ToolStripMenuItem porLíneaDeProducciónToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem porMaquinariaToolStripMenuItem;
     }
 }

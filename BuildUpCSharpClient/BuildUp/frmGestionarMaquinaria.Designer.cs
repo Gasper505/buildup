@@ -63,14 +63,17 @@
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.btnCancelar = new System.Windows.Forms.ToolStripButton();
             this.btnRegresar = new System.Windows.Forms.ToolStripButton();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.gbDatosMaquinaria.SuspendLayout();
             this.gbDatosLinea.SuspendLayout();
             this.gbDatosProveedor.SuspendLayout();
             this.toolStrip2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // gbDatosMaquinaria
             // 
+            this.gbDatosMaquinaria.BackColor = System.Drawing.SystemColors.Control;
             this.gbDatosMaquinaria.Controls.Add(this.lblFinGarantia);
             this.gbDatosMaquinaria.Controls.Add(this.txtNombre);
             this.gbDatosMaquinaria.Controls.Add(this.txtIdMaquinaria);
@@ -142,6 +145,8 @@
             // 
             // gbDatosLinea
             // 
+            this.gbDatosLinea.BackColor = System.Drawing.SystemColors.Control;
+            this.gbDatosLinea.Controls.Add(this.pictureBox6);
             this.gbDatosLinea.Controls.Add(this.btnBuscarLinea);
             this.gbDatosLinea.Controls.Add(this.txtNombreLinea);
             this.gbDatosLinea.Controls.Add(this.txtIdLinea);
@@ -150,7 +155,7 @@
             this.gbDatosLinea.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbDatosLinea.Location = new System.Drawing.Point(47, 388);
             this.gbDatosLinea.Name = "gbDatosLinea";
-            this.gbDatosLinea.Size = new System.Drawing.Size(545, 120);
+            this.gbDatosLinea.Size = new System.Drawing.Size(545, 138);
             this.gbDatosLinea.TabIndex = 12;
             this.gbDatosLinea.TabStop = false;
             this.gbDatosLinea.Text = "Datos de la Línea de Producción";
@@ -204,6 +209,7 @@
             // 
             // gbDatosProveedor
             // 
+            this.gbDatosProveedor.BackColor = System.Drawing.SystemColors.Control;
             this.gbDatosProveedor.Controls.Add(this.btnBuscarProveedor);
             this.gbDatosProveedor.Controls.Add(this.txtCorreoRep);
             this.gbDatosProveedor.Controls.Add(this.lblCorreoRep);
@@ -306,6 +312,7 @@
             // 
             // toolStrip2
             // 
+            this.toolStrip2.BackColor = System.Drawing.Color.Azure;
             this.toolStrip2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStrip2.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -411,11 +418,23 @@
             this.btnRegresar.Text = "Regresar";
             this.btnRegresar.Click += new System.EventHandler(this.tsbVolver_Click);
             // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox6.Image = global::BuildUp.Properties.Resources.bup;
+            this.pictureBox6.Location = new System.Drawing.Point(463, 112);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(82, 26);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 48;
+            this.pictureBox6.TabStop = false;
+            // 
             // frmGestionarMaquinaria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(637, 538);
+            this.BackColor = System.Drawing.Color.SlateGray;
+            this.ClientSize = new System.Drawing.Size(637, 551);
             this.ControlBox = false;
             this.Controls.Add(this.toolStrip2);
             this.Controls.Add(this.gbDatosMaquinaria);
@@ -436,6 +455,7 @@
             this.gbDatosProveedor.PerformLayout();
             this.toolStrip2.ResumeLayout(false);
             this.toolStrip2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -476,5 +496,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripButton btnCancelar;
         private System.Windows.Forms.ToolStripButton btnRegresar;
+        private System.Windows.Forms.PictureBox pictureBox6;
     }
 }

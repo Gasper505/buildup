@@ -22,6 +22,7 @@ namespace BuildUp
         IncidenteMaquinariaWS.respuesta respuesta;
         IncidenteMaquinariaWS.maquinaria maquinaria;
         ReporteIncidenciaWS.ReportesIncidenciaClient daoRepIncidencia;
+        ReporteIncMaqWS.ReporteIncidenteconMaquinariaClient daoRepIncMaq;
 
         public frmGestionarIncidencia()
         {
@@ -33,6 +34,7 @@ namespace BuildUp
             InitializeComponent();
             EstablecerEstadoComponentes(Estado.Inicial);
             daoRepIncidencia = new ReporteIncidenciaWS.ReportesIncidenciaClient();
+            daoRepIncMaq = new ReporteIncMaqWS.ReporteIncidenteconMaquinariaClient();
             daoIncidenteMaq = new IncidenteMaquinariaWS.IncidenteMaquinariaWSClient();
             incidenteMaq = new IncidenteMaquinariaWS.incidenteMaquinaria();
             ingeniero = new IncidenteMaquinariaWS.ingeniero();
@@ -566,7 +568,7 @@ namespace BuildUp
             }
         }
 
-        private void toolStripButton2_Click_1(object sender, EventArgs e)
+        private void toolStripButton1_Click(object sender, EventArgs e)
         {
             sfdReporteIncidencia.ShowDialog();
             if (sfdReporteIncidencia.FileName != null && sfdReporteIncidencia.FileName != "")
@@ -609,6 +611,29 @@ namespace BuildUp
             }
         }
 
+        private void porLíneaDeProducciónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            sfdReporteIncidencia.ShowDialog();
+            if (sfdReporteIncidencia.FileName != null && sfdReporteIncidencia.FileName != "")
+            {
+                byte[] arreglo = daoRepIncidencia.generarReporteIncidencia();
+                File.WriteAllBytes(sfdReporteIncidencia.FileName + ".pdf", arreglo);
+            }
+            MessageBox.Show("Se ha guardado correctamente", "Mensaje de Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+        }
+
+        private void porMaquinariaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            sfdReporteIncidencia.ShowDialog();
+            if (sfdReporteIncidencia.FileName != null && sfdReporteIncidencia.FileName != "")
+            {
+                byte[] arreglo = daoRepIncMaq.generarReporteIncidenciaMaquinaria();
+                File.WriteAllBytes(sfdReporteIncidencia.FileName + ".pdf", arreglo);
+            }
+            MessageBox.Show("Se ha guardado correctamente", "Mensaje de Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+        }
     }
 }
 
