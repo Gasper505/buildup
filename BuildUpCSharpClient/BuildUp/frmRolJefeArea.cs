@@ -93,5 +93,11 @@ namespace BuildUp
             frmGestionarLineaProduccion f = new frmGestionarLineaProduccion();
             f.Show();
         }
+
+        private void btnReportes_Click(object sender, EventArgs e)
+        {
+            frmReportesProduccionJA f = new frmReportesProduccionJA();
+            f.Show();
+        }
     }
 }

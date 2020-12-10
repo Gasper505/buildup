@@ -1594,7 +1594,7 @@
     <value>2, 44</value>
   </data>
   <data name="panelLogeo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>409, 348</value>
+    <value>408, 348</value>
   </data>
   <data name="panelLogeo.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -2639,7 +2639,7 @@
     <value>9, 18</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>413, 434</value>
+    <value>409, 434</value>
   </data>
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 11.25pt</value>

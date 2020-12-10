@@ -619,7 +619,7 @@ namespace BuildUp
                 byte[] arreglo = daoRepIncidencia.generarReporteIncidencia();
                 File.WriteAllBytes(sfdReporteIncidencia.FileName + ".pdf", arreglo);
             }
-            MessageBox.Show("Se ha guardado correctamente", "Mensaje de Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Se ha guardado correctamente", "Mensaje de Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
 
@@ -631,7 +631,7 @@ namespace BuildUp
                 byte[] arreglo = daoRepIncMaq.generarReporteIncidenciaMaquinaria();
                 File.WriteAllBytes(sfdReporteIncidencia.FileName + ".pdf", arreglo);
             }
-            MessageBox.Show("Se ha guardado correctamente", "Mensaje de Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Se ha guardado correctamente", "Mensaje de Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
     }

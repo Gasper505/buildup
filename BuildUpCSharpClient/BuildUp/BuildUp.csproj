@@ -330,6 +330,12 @@
     <Compile Include="frmLogIn.Designer.cs">
       <DependentUpon>frmLogIn.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmReportesProduccionJA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportesProduccionJA.Designer.cs">
+      <DependentUpon>frmReportesProduccionJA.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmRolAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -464,6 +470,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmGestionarRegistroMerma.resx">
       <DependentUpon>frmGestionarRegistroMerma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportesProduccionJA.resx">
+      <DependentUpon>frmReportesProduccionJA.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmRolAdmin.resx">
       <DependentUpon>frmRolAdmin.cs</DependentUpon>

@@ -695,3 +695,4 @@ D:\Repositorios\lab10\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.csproj.Gener
 D:\Repositorios\lab10\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.csproj.CoreCompileInputs.cache
 D:\Repositorios\lab10\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.exe
 D:\Repositorios\lab10\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.pdb
+C:\GitHubRepos\buildup2\BuildUpCSharpClient\BuildUp\obj\Debug\BuildUp.frmReportesProduccionJA.resources

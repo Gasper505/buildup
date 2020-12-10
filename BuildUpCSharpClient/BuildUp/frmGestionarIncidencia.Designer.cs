@@ -46,6 +46,9 @@
             this.btnCancelar = new System.Windows.Forms.ToolStripButton();
             this.btnRegresar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSplitButton1 = new System.Windows.Forms.ToolStripSplitButton();
+            this.porLíneaDeProducciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.porMaquinariaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblNombreMaq = new System.Windows.Forms.Label();
             this.lblNombreSup = new System.Windows.Forms.Label();
             this.lblIDSup = new System.Windows.Forms.Label();
@@ -91,10 +94,6 @@
             this.dtpFechaRegistro = new System.Windows.Forms.DateTimePicker();
             this.sfdReporteIncidencia = new System.Windows.Forms.SaveFileDialog();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSplitButton1 = new System.Windows.Forms.ToolStripSplitButton();
-            this.porLíneaDeProducciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.porMaquinariaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip2.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -172,7 +171,6 @@
             this.btnCancelar,
             this.btnRegresar,
             this.toolStripSeparator1,
-            this.toolStripButton1,
             this.toolStripSplitButton1});
             this.toolStrip2.Location = new System.Drawing.Point(0, 0);
             this.toolStrip2.Name = "toolStrip2";
@@ -270,6 +268,32 @@
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripSplitButton1
+            // 
+            this.toolStripSplitButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.porLíneaDeProducciónToolStripMenuItem,
+            this.porMaquinariaToolStripMenuItem});
+            this.toolStripSplitButton1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripSplitButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSplitButton1.Image")));
+            this.toolStripSplitButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripSplitButton1.Name = "toolStripSplitButton1";
+            this.toolStripSplitButton1.Size = new System.Drawing.Size(93, 22);
+            this.toolStripSplitButton1.Text = "Reportes";
+            // 
+            // porLíneaDeProducciónToolStripMenuItem
+            // 
+            this.porLíneaDeProducciónToolStripMenuItem.Name = "porLíneaDeProducciónToolStripMenuItem";
+            this.porLíneaDeProducciónToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
+            this.porLíneaDeProducciónToolStripMenuItem.Text = "Por Línea de Producción";
+            this.porLíneaDeProducciónToolStripMenuItem.Click += new System.EventHandler(this.porLíneaDeProducciónToolStripMenuItem_Click);
+            // 
+            // porMaquinariaToolStripMenuItem
+            // 
+            this.porMaquinariaToolStripMenuItem.Name = "porMaquinariaToolStripMenuItem";
+            this.porMaquinariaToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
+            this.porMaquinariaToolStripMenuItem.Text = "Por Maquinaria";
+            this.porMaquinariaToolStripMenuItem.Click += new System.EventHandler(this.porMaquinariaToolStripMenuItem_Click);
             // 
             // lblNombreMaq
             // 
@@ -750,42 +774,6 @@
             this.pictureBox6.TabIndex = 48;
             this.pictureBox6.TabStop = false;
             // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripButton1.Image = global::BuildUp.Properties.Resources.new_file_icon_4;
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(75, 22);
-            this.toolStripButton1.Text = "Reporte";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
-            // 
-            // toolStripSplitButton1
-            // 
-            this.toolStripSplitButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.porLíneaDeProducciónToolStripMenuItem,
-            this.porMaquinariaToolStripMenuItem});
-            this.toolStripSplitButton1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripSplitButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSplitButton1.Image")));
-            this.toolStripSplitButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripSplitButton1.Name = "toolStripSplitButton1";
-            this.toolStripSplitButton1.Size = new System.Drawing.Size(93, 22);
-            this.toolStripSplitButton1.Text = "Reportes";
-            // 
-            // porLíneaDeProducciónToolStripMenuItem
-            // 
-            this.porLíneaDeProducciónToolStripMenuItem.Name = "porLíneaDeProducciónToolStripMenuItem";
-            this.porLíneaDeProducciónToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
-            this.porLíneaDeProducciónToolStripMenuItem.Text = "Por Línea de Producción";
-            this.porLíneaDeProducciónToolStripMenuItem.Click += new System.EventHandler(this.porLíneaDeProducciónToolStripMenuItem_Click);
-            // 
-            // porMaquinariaToolStripMenuItem
-            // 
-            this.porMaquinariaToolStripMenuItem.Name = "porMaquinariaToolStripMenuItem";
-            this.porMaquinariaToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
-            this.porMaquinariaToolStripMenuItem.Text = "Por Maquinaria";
-            this.porMaquinariaToolStripMenuItem.Click += new System.EventHandler(this.porMaquinariaToolStripMenuItem_Click);
-            // 
             // frmGestionarIncidencia
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -892,7 +880,6 @@
         private System.Windows.Forms.SaveFileDialog sfdReporteIncidencia;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.ToolStripSplitButton toolStripSplitButton1;
         private System.Windows.Forms.ToolStripMenuItem porLíneaDeProducciónToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem porMaquinariaToolStripMenuItem;
