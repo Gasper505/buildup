@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jax-ws xmlns="http://www.netbeans.org/ns/jax-ws/1">
   <services>
+    <service name="PlanProduccionWS">
+      <implementation-class>pe.edu.pucp.buildup.services.PlanProduccionWS</implementation-class>
+    </service>
     <service name="IncidenteMaquinariaWS">
       <implementation-class>pe.edu.pucp.buildup.services.IncidenteMaquinariaWS</implementation-class>
     </service>
@@ -15,6 +18,9 @@
     </service>
     <service name="RespuestaWS">
       <implementation-class>pe.edu.pucp.buildup.services.RespuestaWS</implementation-class>
+    </service>
+    <service name="LineaProduccionWS">
+      <implementation-class>pe.edu.pucp.buildup.services.LineaProduccionWS</implementation-class>
     </service>
     <service name="OperarioWS">
       <implementation-class>pe.edu.pucp.buildup.services.OperarioWS</implementation-class>
@@ -49,28 +55,21 @@
     <service name="ProveedorWS">
       <implementation-class>pe.edu.pucp.buildup.services.ProveedorWS</implementation-class>
     </service>
-    <service name="IngenieroWS">
-      <implementation-class>pe.edu.pucp.buildup.services.IngenieroWS</implementation-class>
-    </service>
     <service name="InsumoWS">
       <implementation-class>pe.edu.pucp.buildup.services.InsumoWS</implementation-class>
     </service>
-    <service name="LineaProduccionWS">
-      <implementation-class>pe.edu.pucp.buildup.services.LineaProduccionWS</implementation-class>
-    </service>
-    <service name="PlanProduccionWS">
-      <implementation-class>pe.edu.pucp.buildup.services.PlanProduccionWS</implementation-class>
-    </service>
-    <service name="ReportesIncidencia">
-      <implementation-class>pe.edu.pucp.buildup.services.ReportesIncidencia</implementation-class>
+    <service name="IngenieroWS">
+      <implementation-class>pe.edu.pucp.buildup.services.IngenieroWS</implementation-class>
     </service>
     <service name="ReportesProduccion">
       <implementation-class>pe.edu.pucp.buildup.services.ReportesProduccion</implementation-class>
+    </service>
+    <service name="ReportesIncidencia">
+      <implementation-class>pe.edu.pucp.buildup.services.ReportesIncidencia</implementation-class>
     </service>
     <service name="ReporteIncidenteconMaquinaria">
       <implementation-class>pe.edu.pucp.buildup.services.ReporteIncidenteconMaquinaria</implementation-class>
     </service>
   </services>
   <clients/>
-  <jsr109>false</jsr109>
 </jax-ws>

@@ -17,6 +17,22 @@ namespace BuildUp
     public partial class frmLogIn : Form
     {
 
+        //gasper123
+        //ymCsSLuD
+        //operario
+        //----
+        //anuelbbcita123
+        //cSNT8RLU
+        //jefe area
+        //----
+        //juanlapagol123
+        //OCPKh9vt
+        //ingeniero
+        //-----
+        //juanito123
+        //MVIAo1FJ
+        //supervisor
+
         private UsuarioWS.UsuarioWSClient daoUsuario;
         private static UsuarioWS.usuario usuario;
 

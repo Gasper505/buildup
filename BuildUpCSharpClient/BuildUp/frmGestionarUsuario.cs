@@ -688,7 +688,6 @@ namespace BuildUp
         {
             this.Hide();
             ActiveForm.Show();
-          
         }
 
         private void cbRol_SelectedIndexChanged(object sender, EventArgs e)

@@ -1,73 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app version="4.0" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd">
-    <listener>
-        <listener-class>com.sun.xml.ws.transport.http.servlet.WSServletContextListener</listener-class>
-    </listener>
-    <servlet>
-        <servlet-name>TestingServlet</servlet-name>
-        <servlet-class>pe.edu.pucp.buildup.servlets.TestingServlet</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>ServletProduccionDiario</servlet-name>
-        <servlet-class>pe.edu.pucp.buildup.servlets.ServletProduccionDiario</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>ServletProduccionMensual</servlet-name>
-        <servlet-class>pe.edu.pucp.buildup.servlets.ServletProduccionMensual</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>ServletIncidencia</servlet-name>
-        <servlet-class>pe.edu.pucp.buildup.servlets.ServletIncidencia</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>ServletMaquinaria</servlet-name>
-        <servlet-class>pe.edu.pucp.buildup.servlets.ServletMaquinaria</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>ServletProdMes</servlet-name>
-        <servlet-class>pe.edu.pucp.buildup.servlets.ServletProdMes</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>ServletProdDiaria</servlet-name>
-        <servlet-class>pe.edu.pucp.buildup.servlets.ServletProdDiaria</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>ReporteIncidenteconMaquinaria</servlet-name>
-        <servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
-        <load-on-startup>1</load-on-startup>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>TestingServlet</servlet-name>
-        <url-pattern>/TestingServlet</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>ServletProduccionDiario</servlet-name>
-        <url-pattern>/ServletProduccionDiario</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>ServletProduccionMensual</servlet-name>
-        <url-pattern>/ServletProduccionMensual</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>ServletIncidencia</servlet-name>
-        <url-pattern>/ServletIncidencia</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>ServletMaquinaria</servlet-name>
-        <url-pattern>/ServletMaquinaria</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>ServletProdMes</servlet-name>
-        <url-pattern>/ServletProdMes</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>ServletProdDiaria</servlet-name>
-        <url-pattern>/ServletProdDiaria</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>ReporteIncidenteconMaquinaria</servlet-name>
-        <url-pattern>/ReporteIncidenteconMaquinaria</url-pattern>
-    </servlet-mapping>
+
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+	 version="4.0">
     <session-config>
         <session-timeout>
             30

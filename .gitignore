@@ -50,3 +50,5 @@ hs_err_pid*
 !/BuildUpJAVAServer/BuildUpServices/src/java/pe/edu/pucp/buildup/lib/org.apache.commons.logging_1.2.0.v20180409-1502.jar
 !/BuildUpJAVAServer/BuildUpServices/src/java/pe/edu/pucp/buildup/lib/jasperreports-custom-visualization-6.10.0.jar
 !/BuildUpJAVAServer/BuildUpServices/src/java/pe/edu/pucp/buildup/lib/jasperreports-chart-themes-6.16.0.jar
+/BuildUpJAVAServer/BuildUpServicesBamba/build/
+/BuildUpJAVAServer/BuildUpServicesBamba/dist/
