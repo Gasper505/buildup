@@ -1,0 +1,131 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package pe.edu.pucp.buildup.services;
+
+import java.util.ArrayList;
+import java.util.Date;
+import javax.jws.WebService;
+import javax.jws.WebMethod;
+import javax.jws.WebParam;
+import pe.edu.pucp.ta.dao.IncidenteMaquinariaDAO;
+import pe.edu.pucp.ta.model.IncidenteMaquinaria;
+import pe.edu.pucp.ta.model.Ingeniero;
+import pe.edu.pucp.ta.model.Respuesta;
+import pe.edu.pucp.ta.mysql.IncidenteMaquinariaMySQL;
+
+/**
+ *
+ * @author Giohanny
+ */
+@WebService(serviceName = "IncidenteMaquinariaWS")
+public class IncidenteMaquinariaWS {
+
+    private IncidenteMaquinariaDAO daoIncidenteMaquinaria;
+    public IncidenteMaquinariaWS(){
+        daoIncidenteMaquinaria = new IncidenteMaquinariaMySQL();
+    }
+    @WebMethod(operationName = "listarIncidenteMaquinaria")
+    public ArrayList<IncidenteMaquinaria> listarIncidenteMaquinaria() {
+        ArrayList<IncidenteMaquinaria> incidenteMaquinarias = new ArrayList<>();
+        try{
+            incidenteMaquinarias =daoIncidenteMaquinaria.listar();
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return incidenteMaquinarias;
+    }
+    @WebMethod(operationName = "listarPorRangoFechaIncidenteMaquinaria")
+    public ArrayList<IncidenteMaquinaria> listarPorRangoFechaIncidenteMaquinaria(@WebParam(name="fechaInicio") Date fechaInicio, @WebParam(name="fechaFin") Date fechaFin ) {
+        ArrayList<IncidenteMaquinaria> incidenteMaquinarias = new ArrayList<>();
+        try{
+            incidenteMaquinarias =daoIncidenteMaquinaria.listarPorRangoFecha(new java.sql.Date(fechaInicio.getTime()), new java.sql.Date(fechaFin.getTime()));
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return incidenteMaquinarias;
+    }
+    
+    @WebMethod(operationName = "insertarIncidenteMaquinaria")
+    public int insertarIncidenteMaquinaria(@WebParam(name="incidenteMaquinaria") IncidenteMaquinaria incidenteMaquinaria) {
+        int resultado =0;
+        try{
+            resultado = daoIncidenteMaquinaria.insertar(incidenteMaquinaria);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return resultado;
+    }
+    @WebMethod(operationName = "insertarProblemaIncidenteMaquinaria")
+    public int insertarProblemaIncidenteMaquinaria(@WebParam(name="incidenteMaquinaria") IncidenteMaquinaria incidenteMaquinaria) {
+        int resultado =0;
+        try{
+            resultado = daoIncidenteMaquinaria.insertarProblema(incidenteMaquinaria);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return resultado;
+    }
+    @WebMethod(operationName = "insertarRespuestaIncidenteMaquinaria")
+    public int insertarRespuestaIncidenteMaquinaria(@WebParam(name="incidenteMaquinaria") IncidenteMaquinaria incidenteMaquinaria) {
+        int resultado =0;
+        try{
+            resultado = daoIncidenteMaquinaria.insertarRespuesta(incidenteMaquinaria);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return resultado;
+    }
+    @WebMethod(operationName = "modificarPorIngenieroIncidenteMaquinaria")
+    public int modificarPorIngenieroIncidenteMaquinaria(@WebParam(name = "incidenteMaquinaria") IncidenteMaquinaria incidenteMaquinaria) {
+        int resultado = 0;
+        try{
+            resultado = daoIncidenteMaquinaria.modificarPorIngeniero(incidenteMaquinaria);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return resultado;
+    }
+    @WebMethod(operationName = "modificarPorSupervisorIncidenteMaquinaria")
+    public int modificarPorSupervisorIncidenteMaquinaria(@WebParam(name = "incidenteMaquinaria") IncidenteMaquinaria incidenteMaquinaria) {
+        int resultado = 0;
+        try{
+            resultado = daoIncidenteMaquinaria.modificarPorSupervisor(incidenteMaquinaria);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return resultado;
+    }
+    @WebMethod(operationName = "eliminarIncidenteMaquinaria")
+    public int eliminarIncidenteMaquinaria(@WebParam(name = "idIncidenteMaquinaria") int idIncidenteMaquinaria) {
+        int resultado = 0;
+        try{
+            resultado = daoIncidenteMaquinaria.eliminar(idIncidenteMaquinaria);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return resultado;
+    }
+    @WebMethod(operationName = "obtenerIngenieroIncidenteMaquinaria")
+    public IncidenteMaquinaria obtenerIngenieroIncidenteMaquinaria(@WebParam(name = "incidenteMaquinaria") IncidenteMaquinaria incidenteMaquinaria) {
+        IncidenteMaquinaria inc= new IncidenteMaquinaria();
+        try{
+            inc = daoIncidenteMaquinaria.obtenerIngeniero(incidenteMaquinaria);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return inc;
+    }
+    @WebMethod(operationName = "obtenerRespuestaIncidenteMaquinaria")
+    public IncidenteMaquinaria obtenerRespuestaIncidenteMaquinaria(@WebParam(name = "incidenteMaquinaria") IncidenteMaquinaria incidenteMaquinaria) {
+        IncidenteMaquinaria inc= new IncidenteMaquinaria();
+        try{
+            inc = daoIncidenteMaquinaria.obtenerRespuesta(incidenteMaquinaria);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return inc;
+    }
+}
