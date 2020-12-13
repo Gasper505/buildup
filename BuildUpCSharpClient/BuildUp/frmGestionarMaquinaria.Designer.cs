@@ -63,12 +63,10 @@
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.btnCancelar = new System.Windows.Forms.ToolStripButton();
             this.btnRegresar = new System.Windows.Forms.ToolStripButton();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.gbDatosMaquinaria.SuspendLayout();
             this.gbDatosLinea.SuspendLayout();
             this.gbDatosProveedor.SuspendLayout();
             this.toolStrip2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // gbDatosMaquinaria
@@ -146,7 +144,6 @@
             // gbDatosLinea
             // 
             this.gbDatosLinea.BackColor = System.Drawing.SystemColors.Control;
-            this.gbDatosLinea.Controls.Add(this.pictureBox6);
             this.gbDatosLinea.Controls.Add(this.btnBuscarLinea);
             this.gbDatosLinea.Controls.Add(this.txtNombreLinea);
             this.gbDatosLinea.Controls.Add(this.txtIdLinea);
@@ -162,10 +159,11 @@
             // 
             // btnBuscarLinea
             // 
+            this.btnBuscarLinea.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscarLinea.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscarLinea.Location = new System.Drawing.Point(318, 34);
+            this.btnBuscarLinea.Location = new System.Drawing.Point(318, 33);
             this.btnBuscarLinea.Name = "btnBuscarLinea";
-            this.btnBuscarLinea.Size = new System.Drawing.Size(130, 30);
+            this.btnBuscarLinea.Size = new System.Drawing.Size(130, 32);
             this.btnBuscarLinea.TabIndex = 10;
             this.btnBuscarLinea.Text = "Buscar Línea...";
             this.btnBuscarLinea.UseVisualStyleBackColor = true;
@@ -229,6 +227,7 @@
             // 
             // btnBuscarProveedor
             // 
+            this.btnBuscarProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscarProveedor.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscarProveedor.Location = new System.Drawing.Point(318, 38);
             this.btnBuscarProveedor.Name = "btnBuscarProveedor";
@@ -418,17 +417,6 @@
             this.btnRegresar.Text = "Regresar";
             this.btnRegresar.Click += new System.EventHandler(this.tsbVolver_Click);
             // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox6.Image = global::BuildUp.Properties.Resources.bup;
-            this.pictureBox6.Location = new System.Drawing.Point(463, 112);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(82, 26);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 48;
-            this.pictureBox6.TabStop = false;
-            // 
             // frmGestionarMaquinaria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -455,7 +443,6 @@
             this.gbDatosProveedor.PerformLayout();
             this.toolStrip2.ResumeLayout(false);
             this.toolStrip2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -496,6 +483,5 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripButton btnCancelar;
         private System.Windows.Forms.ToolStripButton btnRegresar;
-        private System.Windows.Forms.PictureBox pictureBox6;
     }
 }

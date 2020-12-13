@@ -56,13 +56,13 @@
             this.Column1,
             this.Column2,
             this.Column5});
-            this.dgvRegistrosMerma.Location = new System.Drawing.Point(199, 183);
+            this.dgvRegistrosMerma.Location = new System.Drawing.Point(195, 183);
             this.dgvRegistrosMerma.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvRegistrosMerma.MultiSelect = false;
             this.dgvRegistrosMerma.Name = "dgvRegistrosMerma";
             this.dgvRegistrosMerma.ReadOnly = true;
             this.dgvRegistrosMerma.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvRegistrosMerma.Size = new System.Drawing.Size(369, 288);
+            this.dgvRegistrosMerma.Size = new System.Drawing.Size(394, 288);
             this.dgvRegistrosMerma.TabIndex = 0;
             this.dgvRegistrosMerma.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvRegistrosMerma_CellFormatting);
             // 
@@ -93,10 +93,10 @@
             // 
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(532, 64);
+            this.btnBuscar.Location = new System.Drawing.Point(521, 64);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(149, 36);
+            this.btnBuscar.Size = new System.Drawing.Size(162, 36);
             this.btnBuscar.TabIndex = 13;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
@@ -192,13 +192,13 @@
             this.Column5.HeaderText = "Fecha";
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
-            this.Column5.Width = 150;
+            this.Column5.Width = 175;
             // 
             // frmBuscarRegistroMerma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(808, 554);
+            this.ClientSize = new System.Drawing.Size(800, 537);
             this.Controls.Add(this.gbBusqueda);
             this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.dgvRegistrosMerma);

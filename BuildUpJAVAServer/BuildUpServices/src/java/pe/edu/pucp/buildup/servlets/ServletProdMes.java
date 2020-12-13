@@ -46,7 +46,9 @@ public class ServletProdMes extends HttpServlet {
             //Creamos un HashMap para enviar los parámetros del reporte
             HashMap hm = new HashMap();
             int mes = 12;
+            int anho = 2020;
             hm.put("MES_REPORTE", mes);
+            hm.put("ANHO_REPORTE", anho);
             
             
             //Registramos el Driver

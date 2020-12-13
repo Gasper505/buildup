@@ -7,6 +7,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 using System.Windows.Forms;
 
 namespace BuildUp
@@ -21,6 +22,14 @@ namespace BuildUp
         {
             daoReportesProduccion = new ReportesProduccionWS.ReportesProduccionClient();
             InitializeComponent();
+            
+            int currentYear = DateTime.Today.Year;
+            for (int i = 2017; i <= currentYear; i++)
+            {
+                ComboBoxItem item = new ComboBoxItem();
+                item.Content = i;
+                cboAnho.Items.Add(item.Content);
+            }
         }
 
         private void btnReporteDiario_Click(object sender, EventArgs e)
@@ -30,8 +39,9 @@ namespace BuildUp
             {
                 byte[] arreglo = daoReportesProduccion.generarReporteProduccionDiario(dtpFecha.Value);
                 File.WriteAllBytes(sfdReportesProduccion.FileName + ".pdf", arreglo);
+                MessageBox.Show("El reporte se ha guardado exitosamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            MessageBox.Show("Se ha guardado correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            
         }
 
         private void btnReporteMensual_Click(object sender, EventArgs e)
@@ -81,10 +91,10 @@ namespace BuildUp
                         break;
                 }
 
-                byte[] arreglo = daoReportesProduccion.generarReporteProduccionMensual(mes);
+                byte[] arreglo = daoReportesProduccion.generarReporteProduccionMensual(mes, Int32.Parse(cboAnho.Text));
                 File.WriteAllBytes(sfdReportesProduccion.FileName + ".pdf", arreglo);
+                MessageBox.Show("El reporte se ha guardado exitosamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            MessageBox.Show("Se ha guardado correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

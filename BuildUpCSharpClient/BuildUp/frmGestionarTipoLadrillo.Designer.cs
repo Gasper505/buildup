@@ -55,20 +55,18 @@
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.btnCancelar = new System.Windows.Forms.ToolStripButton();
             this.btnRegresar = new System.Windows.Forms.ToolStripButton();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.gbDatos.SuspendLayout();
             this.gbMedidas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numAncho)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numAltura)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numLargo)).BeginInit();
             this.toolStrip2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // txtNombre
             // 
             this.txtNombre.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(226, 72);
+            this.txtNombre.Location = new System.Drawing.Point(174, 74);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(193, 25);
             this.txtNombre.TabIndex = 15;
@@ -77,16 +75,16 @@
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(45, 72);
+            this.lblNombre.Location = new System.Drawing.Point(111, 77);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(175, 17);
+            this.lblNombre.Size = new System.Drawing.Size(57, 17);
             this.lblNombre.TabIndex = 12;
-            this.lblNombre.Text = "Nombre del Tipo de Ladrillo";
+            this.lblNombre.Text = "Nombre";
             // 
             // txtIDTipo
             // 
             this.txtIDTipo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIDTipo.Location = new System.Drawing.Point(226, 41);
+            this.txtIDTipo.Location = new System.Drawing.Point(174, 43);
             this.txtIDTipo.Name = "txtIDTipo";
             this.txtIDTipo.Size = new System.Drawing.Size(72, 25);
             this.txtIDTipo.TabIndex = 11;
@@ -95,11 +93,11 @@
             // 
             this.lblIdTipo.AutoSize = true;
             this.lblIdTipo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIdTipo.Location = new System.Drawing.Point(104, 44);
+            this.lblIdTipo.Location = new System.Drawing.Point(148, 46);
             this.lblIdTipo.Name = "lblIdTipo";
-            this.lblIdTipo.Size = new System.Drawing.Size(116, 17);
+            this.lblIdTipo.Size = new System.Drawing.Size(20, 17);
             this.lblIdTipo.TabIndex = 10;
-            this.lblIdTipo.Text = "ID Tipo de Ladrillo";
+            this.lblIdTipo.Text = "ID";
             // 
             // lblLargo
             // 
@@ -164,16 +162,15 @@
             // gbDatos
             // 
             this.gbDatos.BackColor = System.Drawing.SystemColors.Control;
-            this.gbDatos.Controls.Add(this.pictureBox6);
             this.gbDatos.Controls.Add(this.gbMedidas);
             this.gbDatos.Controls.Add(this.txtNombre);
             this.gbDatos.Controls.Add(this.lblNombre);
             this.gbDatos.Controls.Add(this.txtIDTipo);
             this.gbDatos.Controls.Add(this.lblIdTipo);
             this.gbDatos.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbDatos.Location = new System.Drawing.Point(69, 51);
+            this.gbDatos.Location = new System.Drawing.Point(69, 58);
             this.gbDatos.Name = "gbDatos";
-            this.gbDatos.Size = new System.Drawing.Size(466, 289);
+            this.gbDatos.Size = new System.Drawing.Size(466, 293);
             this.gbDatos.TabIndex = 25;
             this.gbDatos.TabStop = false;
             this.gbDatos.Text = "Datos del Tipo de Ladrillo";
@@ -199,28 +196,34 @@
             // 
             // numAncho
             // 
+            this.numAncho.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.numAncho.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numAncho.Location = new System.Drawing.Point(122, 65);
             this.numAncho.Name = "numAncho";
             this.numAncho.Size = new System.Drawing.Size(86, 25);
             this.numAncho.TabIndex = 27;
+            this.numAncho.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // numAltura
             // 
+            this.numAltura.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.numAltura.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numAltura.Location = new System.Drawing.Point(122, 95);
             this.numAltura.Name = "numAltura";
             this.numAltura.Size = new System.Drawing.Size(86, 25);
             this.numAltura.TabIndex = 26;
+            this.numAltura.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // numLargo
             // 
             this.numLargo.BackColor = System.Drawing.SystemColors.Window;
+            this.numLargo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.numLargo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numLargo.Location = new System.Drawing.Point(122, 35);
             this.numLargo.Name = "numLargo";
             this.numLargo.Size = new System.Drawing.Size(86, 25);
             this.numLargo.TabIndex = 25;
+            this.numLargo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // toolStrip2
             // 
@@ -330,17 +333,6 @@
             this.btnRegresar.Text = "Regresar";
             this.btnRegresar.Click += new System.EventHandler(this.btnVolver_Click);
             // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox6.Image = global::BuildUp.Properties.Resources.bup;
-            this.pictureBox6.Location = new System.Drawing.Point(384, 266);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(82, 26);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 46;
-            this.pictureBox6.TabStop = false;
-            // 
             // frmGestionarTipoLadrillo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -366,7 +358,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.numLargo)).EndInit();
             this.toolStrip2.ResumeLayout(false);
             this.toolStrip2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -400,6 +391,5 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripButton btnCancelar;
         private System.Windows.Forms.ToolStripButton btnRegresar;
-        private System.Windows.Forms.PictureBox pictureBox6;
     }
 }

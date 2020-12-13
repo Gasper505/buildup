@@ -62,11 +62,11 @@
             this.btnCancelar = new System.Windows.Forms.ToolStripButton();
             this.btnRegresar = new System.Windows.Forms.ToolStripButton();
             this.gbUsuario = new System.Windows.Forms.GroupBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.exclusiveLabel = new System.Windows.Forms.Label();
             this.exclusiveComboBox = new System.Windows.Forms.ComboBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
             this.toolStrip2.SuspendLayout();
             this.gbUsuario.SuspendLayout();
@@ -212,6 +212,7 @@
             // 
             // cbRol
             // 
+            this.cbRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbRol.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbRol.FormattingEnabled = true;
             this.cbRol.Items.AddRange(new object[] {
@@ -414,6 +415,17 @@
             this.gbUsuario.TabStop = false;
             this.gbUsuario.Text = "Datos del Usuario";
             // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox6.Image = global::BuildUp.Properties.Resources.bup;
+            this.pictureBox6.Location = new System.Drawing.Point(489, 483);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(82, 26);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 45;
+            this.pictureBox6.TabStop = false;
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -448,17 +460,6 @@
             this.exclusiveComboBox.Name = "exclusiveComboBox";
             this.exclusiveComboBox.Size = new System.Drawing.Size(179, 25);
             this.exclusiveComboBox.TabIndex = 24;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox6.Image = global::BuildUp.Properties.Resources.bup;
-            this.pictureBox6.Location = new System.Drawing.Point(489, 483);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(82, 26);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 45;
-            this.pictureBox6.TabStop = false;
             // 
             // frmGestionarUsuario
             // 

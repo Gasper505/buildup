@@ -55,13 +55,11 @@
             this.txtIDPlan = new System.Windows.Forms.TextBox();
             this.lblIDPlan = new System.Windows.Forms.Label();
             this.lblAnho = new System.Windows.Forms.Label();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.toolStrip2.SuspendLayout();
             this.gbLotesSalientes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAsignacion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numNroAproxLadrillos)).BeginInit();
             this.gbDatosOperario.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip2
@@ -175,7 +173,6 @@
             // gbLotesSalientes
             // 
             this.gbLotesSalientes.BackColor = System.Drawing.SystemColors.Control;
-            this.gbLotesSalientes.Controls.Add(this.pictureBox6);
             this.gbLotesSalientes.Controls.Add(this.btnRemover);
             this.gbLotesSalientes.Controls.Add(this.btnAgregar);
             this.gbLotesSalientes.Controls.Add(this.dgvAsignacion);
@@ -186,15 +183,16 @@
             this.gbLotesSalientes.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbLotesSalientes.Location = new System.Drawing.Point(41, 157);
             this.gbLotesSalientes.Name = "gbLotesSalientes";
-            this.gbLotesSalientes.Size = new System.Drawing.Size(583, 353);
+            this.gbLotesSalientes.Size = new System.Drawing.Size(583, 339);
             this.gbLotesSalientes.TabIndex = 42;
             this.gbLotesSalientes.TabStop = false;
             this.gbLotesSalientes.Text = "Asignación de Producción";
             // 
             // btnRemover
             // 
+            this.btnRemover.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemover.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemover.Location = new System.Drawing.Point(504, 64);
+            this.btnRemover.Location = new System.Drawing.Point(471, 61);
             this.btnRemover.Name = "btnRemover";
             this.btnRemover.Size = new System.Drawing.Size(59, 35);
             this.btnRemover.TabIndex = 36;
@@ -204,8 +202,9 @@
             // 
             // btnAgregar
             // 
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.Location = new System.Drawing.Point(439, 64);
+            this.btnAgregar.Location = new System.Drawing.Point(406, 61);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(59, 35);
             this.btnAgregar.TabIndex = 35;
@@ -221,7 +220,7 @@
             this.dgvAsignacion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.NombreTipoLadrillo,
             this.Cantidad});
-            this.dgvAsignacion.Location = new System.Drawing.Point(15, 115);
+            this.dgvAsignacion.Location = new System.Drawing.Point(15, 123);
             this.dgvAsignacion.MultiSelect = false;
             this.dgvAsignacion.Name = "dgvAsignacion";
             this.dgvAsignacion.ReadOnly = true;
@@ -247,9 +246,10 @@
             // 
             // cboNombreTipoLadrillo
             // 
+            this.cboNombreTipoLadrillo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboNombreTipoLadrillo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboNombreTipoLadrillo.FormattingEnabled = true;
-            this.cboNombreTipoLadrillo.Location = new System.Drawing.Point(217, 44);
+            this.cboNombreTipoLadrillo.Location = new System.Drawing.Point(167, 46);
             this.cboNombreTipoLadrillo.Name = "cboNombreTipoLadrillo";
             this.cboNombreTipoLadrillo.Size = new System.Drawing.Size(189, 25);
             this.cboNombreTipoLadrillo.TabIndex = 33;
@@ -258,16 +258,17 @@
             // 
             this.lblNombreTipoLadrillo.AutoSize = true;
             this.lblNombreTipoLadrillo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreTipoLadrillo.Location = new System.Drawing.Point(36, 47);
+            this.lblNombreTipoLadrillo.Location = new System.Drawing.Point(110, 49);
             this.lblNombreTipoLadrillo.Name = "lblNombreTipoLadrillo";
-            this.lblNombreTipoLadrillo.Size = new System.Drawing.Size(175, 17);
+            this.lblNombreTipoLadrillo.Size = new System.Drawing.Size(51, 17);
             this.lblNombreTipoLadrillo.TabIndex = 32;
-            this.lblNombreTipoLadrillo.Text = "Nombre del Tipo de Ladrillo";
+            this.lblNombreTipoLadrillo.Text = "Ladrillo";
             // 
             // numNroAproxLadrillos
             // 
+            this.numNroAproxLadrillos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.numNroAproxLadrillos.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numNroAproxLadrillos.Location = new System.Drawing.Point(217, 75);
+            this.numNroAproxLadrillos.Location = new System.Drawing.Point(167, 77);
             this.numNroAproxLadrillos.Name = "numNroAproxLadrillos";
             this.numNroAproxLadrillos.Size = new System.Drawing.Size(91, 25);
             this.numNroAproxLadrillos.TabIndex = 31;
@@ -277,11 +278,11 @@
             // 
             this.lblNro.AutoSize = true;
             this.lblNro.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNro.Location = new System.Drawing.Point(40, 77);
+            this.lblNro.Location = new System.Drawing.Point(62, 79);
             this.lblNro.Name = "lblNro";
-            this.lblNro.Size = new System.Drawing.Size(171, 17);
+            this.lblNro.Size = new System.Drawing.Size(99, 17);
             this.lblNro.TabIndex = 23;
-            this.lblNro.Text = "N° Aproximado de Ladrillos";
+            this.lblNro.Text = "N° Aproximado";
             // 
             // gbDatosOperario
             // 
@@ -300,6 +301,7 @@
             // 
             // txtAnho
             // 
+            this.txtAnho.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.txtAnho.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAnho.FormattingEnabled = true;
             this.txtAnho.Items.AddRange(new object[] {
@@ -348,17 +350,6 @@
             this.lblAnho.TabIndex = 21;
             this.lblAnho.Text = "Año";
             // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox6.Image = global::BuildUp.Properties.Resources.bup;
-            this.pictureBox6.Location = new System.Drawing.Point(501, 327);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(82, 26);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 48;
-            this.pictureBox6.TabStop = false;
-            // 
             // frmGestionarPlanProduccion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -382,7 +373,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.numNroAproxLadrillos)).EndInit();
             this.gbDatosOperario.ResumeLayout(false);
             this.gbDatosOperario.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -415,6 +405,5 @@
         private System.Windows.Forms.ComboBox txtAnho;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreTipoLadrillo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
-        private System.Windows.Forms.PictureBox pictureBox6;
     }
 }

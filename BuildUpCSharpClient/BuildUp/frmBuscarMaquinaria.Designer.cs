@@ -47,9 +47,9 @@
             // 
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(570, 46);
+            this.btnBuscar.Location = new System.Drawing.Point(544, 49);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(157, 42);
+            this.btnBuscar.Size = new System.Drawing.Size(157, 39);
             this.btnBuscar.TabIndex = 11;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
@@ -59,7 +59,7 @@
             // 
             this.btnSeleccionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSeleccionar.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSeleccionar.Location = new System.Drawing.Point(287, 513);
+            this.btnSeleccionar.Location = new System.Drawing.Point(275, 509);
             this.btnSeleccionar.Name = "btnSeleccionar";
             this.btnSeleccionar.Size = new System.Drawing.Size(262, 42);
             this.btnSeleccionar.TabIndex = 10;
@@ -78,12 +78,12 @@
             this.NombreMaquinaria,
             this.NombreLineaProduccion,
             this.Proveedor});
-            this.dgvMaquinarias.Location = new System.Drawing.Point(41, 160);
+            this.dgvMaquinarias.Location = new System.Drawing.Point(38, 159);
             this.dgvMaquinarias.MultiSelect = false;
             this.dgvMaquinarias.Name = "dgvMaquinarias";
             this.dgvMaquinarias.ReadOnly = true;
             this.dgvMaquinarias.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMaquinarias.Size = new System.Drawing.Size(748, 335);
+            this.dgvMaquinarias.Size = new System.Drawing.Size(727, 335);
             this.dgvMaquinarias.TabIndex = 9;
             this.dgvMaquinarias.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvMaquinarias_CellFormatting);
             // 
@@ -117,9 +117,9 @@
             this.gbParametrosBusqueda.Controls.Add(this.txtBusqNombreMaq);
             this.gbParametrosBusqueda.Controls.Add(this.lblBusqNombreMaq);
             this.gbParametrosBusqueda.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbParametrosBusqueda.Location = new System.Drawing.Point(41, 30);
+            this.gbParametrosBusqueda.Location = new System.Drawing.Point(38, 29);
             this.gbParametrosBusqueda.Name = "gbParametrosBusqueda";
-            this.gbParametrosBusqueda.Size = new System.Drawing.Size(748, 124);
+            this.gbParametrosBusqueda.Size = new System.Drawing.Size(727, 124);
             this.gbParametrosBusqueda.TabIndex = 8;
             this.gbParametrosBusqueda.TabStop = false;
             this.gbParametrosBusqueda.Text = "Parámetros de Búsqueda";
@@ -129,7 +129,7 @@
             this.txtBusqLineaProduccion.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBusqLineaProduccion.Location = new System.Drawing.Point(237, 68);
             this.txtBusqLineaProduccion.Name = "txtBusqLineaProduccion";
-            this.txtBusqLineaProduccion.Size = new System.Drawing.Size(306, 25);
+            this.txtBusqLineaProduccion.Size = new System.Drawing.Size(279, 25);
             this.txtBusqLineaProduccion.TabIndex = 6;
             // 
             // lblBusqLineaProduccion
@@ -147,7 +147,7 @@
             this.txtBusqNombreMaq.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBusqNombreMaq.Location = new System.Drawing.Point(237, 34);
             this.txtBusqNombreMaq.Name = "txtBusqNombreMaq";
-            this.txtBusqNombreMaq.Size = new System.Drawing.Size(306, 25);
+            this.txtBusqNombreMaq.Size = new System.Drawing.Size(279, 25);
             this.txtBusqNombreMaq.TabIndex = 4;
             // 
             // lblBusqNombreMaq
@@ -164,7 +164,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(829, 573);
+            this.ClientSize = new System.Drawing.Size(800, 573);
             this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.dgvMaquinarias);
             this.Controls.Add(this.gbParametrosBusqueda);

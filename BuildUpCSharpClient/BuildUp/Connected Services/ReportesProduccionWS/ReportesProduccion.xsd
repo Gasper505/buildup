@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://services.buildup.pucp.edu.pe/" targetNamespace="http://services.buildup.pucp.edu.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="generarReporteProduccionDiario" type="tns:generarReporteProduccionDiario" />
+  <xs:element name="generarReporteProduccionDiarioResponse" type="tns:generarReporteProduccionDiarioResponse" />
+  <xs:element name="generarReporteProduccionMensual" type="tns:generarReporteProduccionMensual" />
+  <xs:element name="generarReporteProduccionMensualResponse" type="tns:generarReporteProduccionMensualResponse" />
+  <xs:complexType name="generarReporteProduccionDiario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="fecha" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="generarReporteProduccionDiarioResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" nillable="true" type="xs:base64Binary" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="generarReporteProduccionMensual">
+    <xs:sequence>
+      <xs:element name="mes" type="xs:int" />
+      <xs:element name="anho" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="generarReporteProduccionMensualResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" nillable="true" type="xs:base64Binary" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

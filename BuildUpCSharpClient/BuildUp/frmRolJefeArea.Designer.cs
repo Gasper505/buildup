@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRolJefeArea));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnReportes = new System.Windows.Forms.Button();
             this.btnLineaProduccion = new System.Windows.Forms.Button();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.lblNombres = new System.Windows.Forms.Label();
@@ -56,7 +57,6 @@
             this.lblUsername = new System.Windows.Forms.Label();
             this.pbFoto = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.btnReportes = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -100,15 +100,29 @@
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Location = new System.Drawing.Point(0, 98);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(688, 741);
+            this.panel1.Size = new System.Drawing.Size(720, 751);
             this.panel1.TabIndex = 1;
+            // 
+            // btnReportes
+            // 
+            this.btnReportes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReportes.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReportes.Location = new System.Drawing.Point(554, 668);
+            this.btnReportes.Name = "btnReportes";
+            this.btnReportes.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnReportes.Size = new System.Drawing.Size(121, 50);
+            this.btnReportes.TabIndex = 43;
+            this.btnReportes.Text = "Reportes de Producción";
+            this.btnReportes.UseVisualStyleBackColor = true;
+            this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
             // 
             // btnLineaProduccion
             // 
             this.btnLineaProduccion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLineaProduccion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLineaProduccion.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLineaProduccion.Location = new System.Drawing.Point(366, 244);
+            this.btnLineaProduccion.Location = new System.Drawing.Point(384, 250);
             this.btnLineaProduccion.Name = "btnLineaProduccion";
             this.btnLineaProduccion.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnLineaProduccion.Size = new System.Drawing.Size(121, 46);
@@ -122,7 +136,7 @@
             this.pictureBox10.BackColor = System.Drawing.SystemColors.Window;
             this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
-            this.pictureBox10.Location = new System.Drawing.Point(365, 116);
+            this.pictureBox10.Location = new System.Drawing.Point(383, 122);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(122, 122);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -133,7 +147,7 @@
             // 
             this.lblNombres.AutoSize = true;
             this.lblNombres.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombres.Location = new System.Drawing.Point(177, 19);
+            this.lblNombres.Location = new System.Drawing.Point(196, 21);
             this.lblNombres.Name = "lblNombres";
             this.lblNombres.Size = new System.Drawing.Size(140, 30);
             this.lblNombres.TabIndex = 40;
@@ -144,7 +158,7 @@
             this.button9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.Location = new System.Drawing.Point(196, 244);
+            this.button9.Location = new System.Drawing.Point(214, 250);
             this.button9.Name = "button9";
             this.button9.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.button9.Size = new System.Drawing.Size(121, 46);
@@ -158,7 +172,7 @@
             this.button8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(536, 244);
+            this.button8.Location = new System.Drawing.Point(554, 250);
             this.button8.Name = "button8";
             this.button8.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.button8.Size = new System.Drawing.Size(121, 46);
@@ -172,7 +186,7 @@
             this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(366, 453);
+            this.button7.Location = new System.Drawing.Point(384, 459);
             this.button7.Name = "button7";
             this.button7.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.button7.Size = new System.Drawing.Size(121, 50);
@@ -186,7 +200,7 @@
             this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(28, 673);
+            this.button6.Location = new System.Drawing.Point(46, 679);
             this.button6.Name = "button6";
             this.button6.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.button6.Size = new System.Drawing.Size(121, 39);
@@ -200,7 +214,7 @@
             this.pictureBox8.BackColor = System.Drawing.SystemColors.Window;
             this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox8.Image = global::BuildUp.Properties.Resources._46305;
-            this.pictureBox8.Location = new System.Drawing.Point(196, 116);
+            this.pictureBox8.Location = new System.Drawing.Point(214, 122);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(121, 122);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -212,7 +226,7 @@
             this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(196, 673);
+            this.button5.Location = new System.Drawing.Point(214, 679);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(121, 39);
             this.button5.TabIndex = 33;
@@ -225,7 +239,7 @@
             this.pictureBox7.BackColor = System.Drawing.SystemColors.Window;
             this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(196, 545);
+            this.pictureBox7.Location = new System.Drawing.Point(214, 551);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(121, 122);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -237,7 +251,7 @@
             this.pictureBox6.BackColor = System.Drawing.SystemColors.Window;
             this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox6.Image = global::BuildUp.Properties.Resources._46316;
-            this.pictureBox6.Location = new System.Drawing.Point(536, 116);
+            this.pictureBox6.Location = new System.Drawing.Point(554, 122);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(121, 122);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -249,7 +263,7 @@
             this.pictureBox5.BackColor = System.Drawing.SystemColors.Window;
             this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(28, 545);
+            this.pictureBox5.Location = new System.Drawing.Point(46, 551);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(121, 122);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -261,7 +275,7 @@
             this.pictureBox4.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox4.Image = global::BuildUp.Properties.Resources.icono_incidencia_1;
-            this.pictureBox4.Location = new System.Drawing.Point(365, 325);
+            this.pictureBox4.Location = new System.Drawing.Point(383, 331);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(121, 122);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -273,7 +287,7 @@
             this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(196, 453);
+            this.button3.Location = new System.Drawing.Point(214, 459);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(121, 50);
             this.button3.TabIndex = 28;
@@ -286,7 +300,7 @@
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(196, 325);
+            this.pictureBox1.Location = new System.Drawing.Point(214, 331);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(121, 122);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -298,7 +312,7 @@
             this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(28, 453);
+            this.button4.Location = new System.Drawing.Point(46, 459);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(121, 50);
             this.button4.TabIndex = 26;
@@ -311,7 +325,7 @@
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(28, 244);
+            this.button2.Location = new System.Drawing.Point(46, 250);
             this.button2.Name = "button2";
             this.button2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.button2.Size = new System.Drawing.Size(121, 46);
@@ -325,7 +339,7 @@
             this.pictureBox3.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox3.Image = global::BuildUp.Properties.Resources.vector_document_icon1;
-            this.pictureBox3.Location = new System.Drawing.Point(28, 325);
+            this.pictureBox3.Location = new System.Drawing.Point(46, 331);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(121, 122);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -337,7 +351,7 @@
             this.pictureBox2.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.Image = global::BuildUp.Properties.Resources.vector_business_plan_glyph_black_icon;
-            this.pictureBox2.Location = new System.Drawing.Point(29, 116);
+            this.pictureBox2.Location = new System.Drawing.Point(47, 122);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(121, 122);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -349,7 +363,7 @@
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblTitulo.Location = new System.Drawing.Point(23, 19);
+            this.lblTitulo.Location = new System.Drawing.Point(42, 21);
             this.lblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(149, 30);
@@ -360,7 +374,7 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.Ivory;
             this.panel3.Controls.Add(this.label1);
-            this.panel3.Location = new System.Drawing.Point(28, 62);
+            this.panel3.Location = new System.Drawing.Point(47, 64);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(269, 40);
             this.panel3.TabIndex = 10;
@@ -383,9 +397,9 @@
             this.btnCerrarSesión.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrarSesión.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnCerrarSesión.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnCerrarSesión.Location = new System.Drawing.Point(541, 44);
+            this.btnCerrarSesión.Location = new System.Drawing.Point(608, 44);
             this.btnCerrarSesión.Name = "btnCerrarSesión";
-            this.btnCerrarSesión.Size = new System.Drawing.Size(116, 31);
+            this.btnCerrarSesión.Size = new System.Drawing.Size(100, 27);
             this.btnCerrarSesión.TabIndex = 11;
             this.btnCerrarSesión.Text = "Cerrar Sesión ";
             this.btnCerrarSesión.UseVisualStyleBackColor = true;
@@ -396,7 +410,7 @@
             this.lblUsername.AutoSize = true;
             this.lblUsername.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsername.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblUsername.Location = new System.Drawing.Point(541, 24);
+            this.lblUsername.Location = new System.Drawing.Point(608, 24);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(0, 17);
             this.lblUsername.TabIndex = 40;
@@ -405,9 +419,9 @@
             // 
             this.pbFoto.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.pbFoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbFoto.Location = new System.Drawing.Point(460, 7);
+            this.pbFoto.Location = new System.Drawing.Point(522, 7);
             this.pbFoto.Name = "pbFoto";
-            this.pbFoto.Size = new System.Drawing.Size(75, 80);
+            this.pbFoto.Size = new System.Drawing.Size(80, 80);
             this.pbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbFoto.TabIndex = 39;
             this.pbFoto.TabStop = false;
@@ -423,26 +437,12 @@
             this.pictureBox9.TabIndex = 41;
             this.pictureBox9.TabStop = false;
             // 
-            // btnReportes
-            // 
-            this.btnReportes.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReportes.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReportes.Location = new System.Drawing.Point(536, 662);
-            this.btnReportes.Name = "btnReportes";
-            this.btnReportes.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnReportes.Size = new System.Drawing.Size(121, 50);
-            this.btnReportes.TabIndex = 43;
-            this.btnReportes.Text = "Reportes de Producción";
-            this.btnReportes.UseVisualStyleBackColor = true;
-            this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
-            // 
             // frmRolJefeArea
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.ClientSize = new System.Drawing.Size(688, 874);
+            this.ClientSize = new System.Drawing.Size(720, 878);
             this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.lblUsername);
             this.Controls.Add(this.panel1);

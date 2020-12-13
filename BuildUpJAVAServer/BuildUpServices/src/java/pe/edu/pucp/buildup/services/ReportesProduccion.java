@@ -37,7 +37,7 @@ public class ReportesProduccion {
         try{
             //Referencia al archivo Jasper
             JasperReport reporteProd = (JasperReport)JRLoader.loadObjectFromFile(
-                    ServletProdDiaria.class.getResource("/pe/edu/pucp/buildup/reports/ReporteProduccionDiario.jasper").getFile());
+                    ServletProdDiaria.class.getResource("/pe/edu/pucp/buildup/reports/ReporteProduccionDia.jasper").getFile());
             
             
             //Creamos un HashMap para enviar los parámetros del reporte
@@ -50,7 +50,7 @@ public class ReportesProduccion {
             //Creamos el objeto Connection
             Connection con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.password);
             //Poblamos el reporte
-            JasperPrint jp = JasperFillManager.fillReport(reporteProd, hm, con);
+            JasperPrint jp = JasperFillManager.fillReport(reporteProd, null, con);
             
             //Cerrar la conexion
             con.close();
@@ -63,7 +63,7 @@ public class ReportesProduccion {
     }
     
     @WebMethod(operationName = "generarReporteProduccionMensual")
-    public byte[] generarReporteProduccionMensual(@WebParam(name = "mes") int mes) {
+    public byte[] generarReporteProduccionMensual(@WebParam(name = "mes") int mes, @WebParam(name = "anho") int anho) {
         byte[] arreglo = null;
         try{
             //Referencia al archivo Jasper
@@ -79,7 +79,7 @@ public class ReportesProduccion {
             //Creamos un HashMap para enviar los parámetros del reporte
             HashMap hm = new HashMap();
             hm.put("MES_REPORTE", mes);
-            
+            hm.put("ANHO_REPORTE", anho);
             
             //Población del reporte
             JasperPrint jp = JasperFillManager.fillReport(reporte, hm, con);

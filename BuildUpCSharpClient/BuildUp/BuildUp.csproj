@@ -36,6 +36,7 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
@@ -863,8 +864,8 @@
     <None Include="Connected Services\ReportesProduccionWS\BuildUp.ReportesProduccionWS.generarReporteProduccionMensualResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\ReportesProduccionWS\ReportesProduccion1.wsdl" />
-    <None Include="Connected Services\ReportesProduccionWS\ReportesProduccion1.xsd">
+    <None Include="Connected Services\ReportesProduccionWS\ReportesProduccion.wsdl" />
+    <None Include="Connected Services\ReportesProduccionWS\ReportesProduccion.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\RespuestaWS\BuildUp.RespuestaWS.actualizarRespuestaResponse.datasource">

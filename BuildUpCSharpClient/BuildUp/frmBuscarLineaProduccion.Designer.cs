@@ -87,9 +87,9 @@
             // 
             this.btnSeleccionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSeleccionar.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSeleccionar.Location = new System.Drawing.Point(152, 414);
+            this.btnSeleccionar.Location = new System.Drawing.Point(152, 416);
             this.btnSeleccionar.Name = "btnSeleccionar";
-            this.btnSeleccionar.Size = new System.Drawing.Size(262, 42);
+            this.btnSeleccionar.Size = new System.Drawing.Size(258, 40);
             this.btnSeleccionar.TabIndex = 19;
             this.btnSeleccionar.Text = "Seleccionar";
             this.btnSeleccionar.UseVisualStyleBackColor = true;
@@ -115,7 +115,7 @@
             // IDLinea
             // 
             this.IDLinea.DataPropertyName = "idLineaProduccion";
-            this.IDLinea.HeaderText = "ID Linea";
+            this.IDLinea.HeaderText = "ID";
             this.IDLinea.Name = "IDLinea";
             this.IDLinea.ReadOnly = true;
             this.IDLinea.Width = 75;

@@ -58,7 +58,7 @@
             this.Column2,
             this.ApellidoOperario,
             this.Column5});
-            this.dgvOrdenesSalida.Location = new System.Drawing.Point(42, 204);
+            this.dgvOrdenesSalida.Location = new System.Drawing.Point(38, 204);
             this.dgvOrdenesSalida.MultiSelect = false;
             this.dgvOrdenesSalida.Name = "dgvOrdenesSalida";
             this.dgvOrdenesSalida.ReadOnly = true;
@@ -109,7 +109,7 @@
             this.gbParametrosBusqueda.Controls.Add(this.txtNombreOperario);
             this.gbParametrosBusqueda.Controls.Add(this.lblNombreOperario);
             this.gbParametrosBusqueda.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbParametrosBusqueda.Location = new System.Drawing.Point(42, 28);
+            this.gbParametrosBusqueda.Location = new System.Drawing.Point(38, 28);
             this.gbParametrosBusqueda.Name = "gbParametrosBusqueda";
             this.gbParametrosBusqueda.Size = new System.Drawing.Size(665, 170);
             this.gbParametrosBusqueda.TabIndex = 9;
@@ -122,7 +122,7 @@
             this.dtpFechaSup.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFechaSup.Location = new System.Drawing.Point(225, 116);
             this.dtpFechaSup.Name = "dtpFechaSup";
-            this.dtpFechaSup.Size = new System.Drawing.Size(212, 25);
+            this.dtpFechaSup.Size = new System.Drawing.Size(174, 25);
             this.dtpFechaSup.TabIndex = 21;
             this.dtpFechaSup.Value = new System.DateTime(2020, 12, 31, 0, 0, 0, 0);
             // 
@@ -152,7 +152,7 @@
             this.dtpFechaInf.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFechaInf.Location = new System.Drawing.Point(225, 83);
             this.dtpFechaInf.Name = "dtpFechaInf";
-            this.dtpFechaInf.Size = new System.Drawing.Size(212, 25);
+            this.dtpFechaInf.Size = new System.Drawing.Size(174, 25);
             this.dtpFechaInf.TabIndex = 18;
             this.dtpFechaInf.Value = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
             // 
@@ -160,9 +160,9 @@
             // 
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(520, 79);
+            this.btnBuscar.Location = new System.Drawing.Point(497, 79);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(127, 33);
+            this.btnBuscar.Size = new System.Drawing.Size(150, 33);
             this.btnBuscar.TabIndex = 11;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
@@ -173,7 +173,7 @@
             this.txtNombreOperario.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombreOperario.Location = new System.Drawing.Point(225, 47);
             this.txtNombreOperario.Name = "txtNombreOperario";
-            this.txtNombreOperario.Size = new System.Drawing.Size(276, 25);
+            this.txtNombreOperario.Size = new System.Drawing.Size(248, 25);
             this.txtNombreOperario.TabIndex = 4;
             // 
             // lblNombreOperario
@@ -190,9 +190,9 @@
             // 
             this.btnSeleccionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSeleccionar.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSeleccionar.Location = new System.Drawing.Point(243, 506);
+            this.btnSeleccionar.Location = new System.Drawing.Point(242, 513);
             this.btnSeleccionar.Name = "btnSeleccionar";
-            this.btnSeleccionar.Size = new System.Drawing.Size(262, 42);
+            this.btnSeleccionar.Size = new System.Drawing.Size(257, 37);
             this.btnSeleccionar.TabIndex = 11;
             this.btnSeleccionar.Text = "Seleccionar";
             this.btnSeleccionar.UseVisualStyleBackColor = true;
@@ -202,7 +202,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(748, 562);
+            this.ClientSize = new System.Drawing.Size(743, 562);
             this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.gbParametrosBusqueda);
             this.Controls.Add(this.dgvOrdenesSalida);

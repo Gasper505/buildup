@@ -16,18 +16,6 @@ namespace BuildUp.ReportesProduccionWS {
     public interface ReportesProduccion {
         
         // CODEGEN: Generating message contract since message part namespace () does not match the default value (http://services.buildup.pucp.edu.pe/)
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/ReportesProduccion/generarReporteProduccionMe" +
-            "nsualRequest", ReplyAction="http://services.buildup.pucp.edu.pe/ReportesProduccion/generarReporteProduccionMe" +
-            "nsualResponse")]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        BuildUp.ReportesProduccionWS.generarReporteProduccionMensualResponse generarReporteProduccionMensual(BuildUp.ReportesProduccionWS.generarReporteProduccionMensualRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/ReportesProduccion/generarReporteProduccionMe" +
-            "nsualRequest", ReplyAction="http://services.buildup.pucp.edu.pe/ReportesProduccion/generarReporteProduccionMe" +
-            "nsualResponse")]
-        System.Threading.Tasks.Task<BuildUp.ReportesProduccionWS.generarReporteProduccionMensualResponse> generarReporteProduccionMensualAsync(BuildUp.ReportesProduccionWS.generarReporteProduccionMensualRequest request);
-        
-        // CODEGEN: Generating message contract since message part namespace () does not match the default value (http://services.buildup.pucp.edu.pe/)
         [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/ReportesProduccion/generarReporteProduccionDi" +
             "arioRequest", ReplyAction="http://services.buildup.pucp.edu.pe/ReportesProduccion/generarReporteProduccionDi" +
             "arioResponse")]
@@ -38,40 +26,18 @@ namespace BuildUp.ReportesProduccionWS {
             "arioRequest", ReplyAction="http://services.buildup.pucp.edu.pe/ReportesProduccion/generarReporteProduccionDi" +
             "arioResponse")]
         System.Threading.Tasks.Task<BuildUp.ReportesProduccionWS.generarReporteProduccionDiarioResponse> generarReporteProduccionDiarioAsync(BuildUp.ReportesProduccionWS.generarReporteProduccionDiarioRequest request);
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="generarReporteProduccionMensual", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
-    public partial class generarReporteProduccionMensualRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
-        public int mes;
+        // CODEGEN: Generating message contract since message part namespace () does not match the default value (http://services.buildup.pucp.edu.pe/)
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/ReportesProduccion/generarReporteProduccionMe" +
+            "nsualRequest", ReplyAction="http://services.buildup.pucp.edu.pe/ReportesProduccion/generarReporteProduccionMe" +
+            "nsualResponse")]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        BuildUp.ReportesProduccionWS.generarReporteProduccionMensualResponse generarReporteProduccionMensual(BuildUp.ReportesProduccionWS.generarReporteProduccionMensualRequest request);
         
-        public generarReporteProduccionMensualRequest() {
-        }
-        
-        public generarReporteProduccionMensualRequest(int mes) {
-            this.mes = mes;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="generarReporteProduccionMensualResponse", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
-    public partial class generarReporteProduccionMensualResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
-        public byte[] @return;
-        
-        public generarReporteProduccionMensualResponse() {
-        }
-        
-        public generarReporteProduccionMensualResponse(byte[] @return) {
-            this.@return = @return;
-        }
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.buildup.pucp.edu.pe/ReportesProduccion/generarReporteProduccionMe" +
+            "nsualRequest", ReplyAction="http://services.buildup.pucp.edu.pe/ReportesProduccion/generarReporteProduccionMe" +
+            "nsualResponse")]
+        System.Threading.Tasks.Task<BuildUp.ReportesProduccionWS.generarReporteProduccionMensualResponse> generarReporteProduccionMensualAsync(BuildUp.ReportesProduccionWS.generarReporteProduccionMensualRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -108,6 +74,44 @@ namespace BuildUp.ReportesProduccionWS {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="generarReporteProduccionMensual", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
+    public partial class generarReporteProduccionMensualRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
+        public int mes;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=1)]
+        public int anho;
+        
+        public generarReporteProduccionMensualRequest() {
+        }
+        
+        public generarReporteProduccionMensualRequest(int mes, int anho) {
+            this.mes = mes;
+            this.anho = anho;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="generarReporteProduccionMensualResponse", WrapperNamespace="http://services.buildup.pucp.edu.pe/", IsWrapped=true)]
+    public partial class generarReporteProduccionMensualResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
+        public byte[] @return;
+        
+        public generarReporteProduccionMensualResponse() {
+        }
+        
+        public generarReporteProduccionMensualResponse(byte[] @return) {
+            this.@return = @return;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface ReportesProduccionChannel : BuildUp.ReportesProduccionWS.ReportesProduccion, System.ServiceModel.IClientChannel {
     }
@@ -136,29 +140,6 @@ namespace BuildUp.ReportesProduccionWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        BuildUp.ReportesProduccionWS.generarReporteProduccionMensualResponse BuildUp.ReportesProduccionWS.ReportesProduccion.generarReporteProduccionMensual(BuildUp.ReportesProduccionWS.generarReporteProduccionMensualRequest request) {
-            return base.Channel.generarReporteProduccionMensual(request);
-        }
-        
-        public byte[] generarReporteProduccionMensual(int mes) {
-            BuildUp.ReportesProduccionWS.generarReporteProduccionMensualRequest inValue = new BuildUp.ReportesProduccionWS.generarReporteProduccionMensualRequest();
-            inValue.mes = mes;
-            BuildUp.ReportesProduccionWS.generarReporteProduccionMensualResponse retVal = ((BuildUp.ReportesProduccionWS.ReportesProduccion)(this)).generarReporteProduccionMensual(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<BuildUp.ReportesProduccionWS.generarReporteProduccionMensualResponse> BuildUp.ReportesProduccionWS.ReportesProduccion.generarReporteProduccionMensualAsync(BuildUp.ReportesProduccionWS.generarReporteProduccionMensualRequest request) {
-            return base.Channel.generarReporteProduccionMensualAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<BuildUp.ReportesProduccionWS.generarReporteProduccionMensualResponse> generarReporteProduccionMensualAsync(int mes) {
-            BuildUp.ReportesProduccionWS.generarReporteProduccionMensualRequest inValue = new BuildUp.ReportesProduccionWS.generarReporteProduccionMensualRequest();
-            inValue.mes = mes;
-            return ((BuildUp.ReportesProduccionWS.ReportesProduccion)(this)).generarReporteProduccionMensualAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         BuildUp.ReportesProduccionWS.generarReporteProduccionDiarioResponse BuildUp.ReportesProduccionWS.ReportesProduccion.generarReporteProduccionDiario(BuildUp.ReportesProduccionWS.generarReporteProduccionDiarioRequest request) {
             return base.Channel.generarReporteProduccionDiario(request);
         }
@@ -179,6 +160,31 @@ namespace BuildUp.ReportesProduccionWS {
             BuildUp.ReportesProduccionWS.generarReporteProduccionDiarioRequest inValue = new BuildUp.ReportesProduccionWS.generarReporteProduccionDiarioRequest();
             inValue.fecha = fecha;
             return ((BuildUp.ReportesProduccionWS.ReportesProduccion)(this)).generarReporteProduccionDiarioAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        BuildUp.ReportesProduccionWS.generarReporteProduccionMensualResponse BuildUp.ReportesProduccionWS.ReportesProduccion.generarReporteProduccionMensual(BuildUp.ReportesProduccionWS.generarReporteProduccionMensualRequest request) {
+            return base.Channel.generarReporteProduccionMensual(request);
+        }
+        
+        public byte[] generarReporteProduccionMensual(int mes, int anho) {
+            BuildUp.ReportesProduccionWS.generarReporteProduccionMensualRequest inValue = new BuildUp.ReportesProduccionWS.generarReporteProduccionMensualRequest();
+            inValue.mes = mes;
+            inValue.anho = anho;
+            BuildUp.ReportesProduccionWS.generarReporteProduccionMensualResponse retVal = ((BuildUp.ReportesProduccionWS.ReportesProduccion)(this)).generarReporteProduccionMensual(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<BuildUp.ReportesProduccionWS.generarReporteProduccionMensualResponse> BuildUp.ReportesProduccionWS.ReportesProduccion.generarReporteProduccionMensualAsync(BuildUp.ReportesProduccionWS.generarReporteProduccionMensualRequest request) {
+            return base.Channel.generarReporteProduccionMensualAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<BuildUp.ReportesProduccionWS.generarReporteProduccionMensualResponse> generarReporteProduccionMensualAsync(int mes, int anho) {
+            BuildUp.ReportesProduccionWS.generarReporteProduccionMensualRequest inValue = new BuildUp.ReportesProduccionWS.generarReporteProduccionMensualRequest();
+            inValue.mes = mes;
+            inValue.anho = anho;
+            return ((BuildUp.ReportesProduccionWS.ReportesProduccion)(this)).generarReporteProduccionMensualAsync(inValue);
         }
     }
 }

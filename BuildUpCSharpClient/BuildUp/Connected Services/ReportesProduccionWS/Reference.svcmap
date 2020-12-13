@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:8080/BuildUpServices/ReportesProduccion?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://52.207.108.70:8080/BuildUpServices/ReportesProduccion?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="ReportesProduccion1.xsd" MetadataType="Schema" ID="da8c3d53-c70c-44ee-9dcf-ce95cb0d3e2e" SourceId="1" SourceUrl="http://localhost:8080/BuildUpServices/ReportesProduccion?xsd=1" />
-    <MetadataFile FileName="ReportesProduccion1.wsdl" MetadataType="Wsdl" ID="0fffabeb-2afd-4c92-8f7f-e351a9cc2e74" SourceId="1" SourceUrl="http://localhost:8080/BuildUpServices/ReportesProduccion?WSDL" />
+    <MetadataFile FileName="ReportesProduccion.wsdl" MetadataType="Wsdl" ID="ec324835-a3ae-4ad2-8d01-48688aaf80aa" SourceId="1" SourceUrl="http://52.207.108.70:8080/BuildUpServices/ReportesProduccion?WSDL" />
+    <MetadataFile FileName="ReportesProduccion.xsd" MetadataType="Schema" ID="0f2e60b1-9737-4391-bf0e-8dd3678cf73b" SourceId="1" SourceUrl="http://52.207.108.70:8080/BuildUpServices/ReportesProduccion?xsd=1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

@@ -42,10 +42,10 @@ public class ServletProdDiaria extends HttpServlet {
         try{
             //Referencia al archivo Jasper
             JasperReport reporteProd = (JasperReport)JRLoader.loadObjectFromFile(
-                    ServletProdDiaria.class.getResource("/pe/edu/pucp/buildup/reports/ReporteProduccionDiario.jasper").getFile());
+                    ServletProdDiaria.class.getResource("/pe/edu/pucp/buildup/reports/ReporteProduccionDia.jasper").getFile());
             
             
-            //Creamos un HashMap para enviar los parámetros del reporte
+//            Creamos un HashMap para enviar los parámetros del reporte
             HashMap hm = new HashMap();
             SimpleDateFormat formato = new SimpleDateFormat("MM-dd-yyyy");
             Date date = formato.parse("12-02-2012");
@@ -57,7 +57,7 @@ public class ServletProdDiaria extends HttpServlet {
             //Creamos el objeto Connection
             Connection con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.password);
             //Poblamos el reporte
-            JasperPrint jp = JasperFillManager.fillReport(reporteProd, hm, con);
+            JasperPrint jp = JasperFillManager.fillReport(reporteProd, null, con);
             
             //Cerrar la conexion
             con.close();

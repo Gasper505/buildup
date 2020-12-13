@@ -49,16 +49,14 @@
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.btnCancelar = new System.Windows.Forms.ToolStripButton();
             this.btnRegresar = new System.Windows.Forms.ToolStripButton();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.gbDatosProveedor.SuspendLayout();
             this.toolStrip2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // txtCorreo
             // 
             this.txtCorreo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCorreo.Location = new System.Drawing.Point(228, 86);
+            this.txtCorreo.Location = new System.Drawing.Point(222, 94);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(226, 25);
             this.txtCorreo.TabIndex = 15;
@@ -67,7 +65,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(95, 120);
+            this.label4.Location = new System.Drawing.Point(89, 128);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(127, 17);
             this.label4.TabIndex = 14;
@@ -77,7 +75,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(105, 89);
+            this.label3.Location = new System.Drawing.Point(99, 97);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(117, 17);
             this.label3.TabIndex = 13;
@@ -87,7 +85,7 @@
             // 
             this.lblRazonSocial.AutoSize = true;
             this.lblRazonSocial.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRazonSocial.Location = new System.Drawing.Point(140, 58);
+            this.lblRazonSocial.Location = new System.Drawing.Point(134, 66);
             this.lblRazonSocial.Name = "lblRazonSocial";
             this.lblRazonSocial.Size = new System.Drawing.Size(82, 17);
             this.lblRazonSocial.TabIndex = 12;
@@ -96,7 +94,7 @@
             // txtIDProveedor
             // 
             this.txtIDProveedor.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIDProveedor.Location = new System.Drawing.Point(228, 24);
+            this.txtIDProveedor.Location = new System.Drawing.Point(222, 32);
             this.txtIDProveedor.Name = "txtIDProveedor";
             this.txtIDProveedor.Size = new System.Drawing.Size(82, 25);
             this.txtIDProveedor.TabIndex = 11;
@@ -105,7 +103,7 @@
             // 
             this.lblID.AutoSize = true;
             this.lblID.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblID.Location = new System.Drawing.Point(137, 27);
+            this.lblID.Location = new System.Drawing.Point(131, 35);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(85, 17);
             this.lblID.TabIndex = 10;
@@ -114,7 +112,7 @@
             // txtRazonSocial
             // 
             this.txtRazonSocial.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRazonSocial.Location = new System.Drawing.Point(228, 55);
+            this.txtRazonSocial.Location = new System.Drawing.Point(222, 63);
             this.txtRazonSocial.Name = "txtRazonSocial";
             this.txtRazonSocial.Size = new System.Drawing.Size(226, 25);
             this.txtRazonSocial.TabIndex = 16;
@@ -122,7 +120,7 @@
             // txtRepresentante
             // 
             this.txtRepresentante.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRepresentante.Location = new System.Drawing.Point(228, 117);
+            this.txtRepresentante.Location = new System.Drawing.Point(222, 125);
             this.txtRepresentante.Name = "txtRepresentante";
             this.txtRepresentante.Size = new System.Drawing.Size(226, 25);
             this.txtRepresentante.TabIndex = 17;
@@ -130,7 +128,6 @@
             // gbDatosProveedor
             // 
             this.gbDatosProveedor.BackColor = System.Drawing.SystemColors.Control;
-            this.gbDatosProveedor.Controls.Add(this.pictureBox6);
             this.gbDatosProveedor.Controls.Add(this.txtRepresentante);
             this.gbDatosProveedor.Controls.Add(this.txtRazonSocial);
             this.gbDatosProveedor.Controls.Add(this.txtCorreo);
@@ -255,17 +252,6 @@
             this.btnRegresar.Text = "Regresar";
             this.btnRegresar.Click += new System.EventHandler(this.btnVolver_Click);
             // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox6.Image = global::BuildUp.Properties.Resources.bup;
-            this.pictureBox6.Location = new System.Drawing.Point(441, 148);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(82, 26);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 48;
-            this.pictureBox6.TabStop = false;
-            // 
             // frmGestionarProveedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -284,7 +270,6 @@
             this.gbDatosProveedor.PerformLayout();
             this.toolStrip2.ResumeLayout(false);
             this.toolStrip2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -312,6 +297,5 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripButton btnCancelar;
         private System.Windows.Forms.ToolStripButton btnRegresar;
-        private System.Windows.Forms.PictureBox pictureBox6;
     }
 }

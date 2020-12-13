@@ -93,7 +93,6 @@
             this.lblFechaReg = new System.Windows.Forms.Label();
             this.dtpFechaRegistro = new System.Windows.Forms.DateTimePicker();
             this.sfdReporteIncidencia = new System.Windows.Forms.SaveFileDialog();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.toolStrip2.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -102,7 +101,6 @@
             this.tabProblema.SuspendLayout();
             this.tabRespuesta.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // label6
@@ -128,10 +126,11 @@
             // txtIDIng
             // 
             this.txtIDIng.BackColor = System.Drawing.SystemColors.Window;
+            this.txtIDIng.Cursor = System.Windows.Forms.Cursors.Default;
             this.txtIDIng.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIDIng.Location = new System.Drawing.Point(99, 34);
             this.txtIDIng.Name = "txtIDIng";
-            this.txtIDIng.Size = new System.Drawing.Size(94, 25);
+            this.txtIDIng.Size = new System.Drawing.Size(92, 25);
             this.txtIDIng.TabIndex = 13;
             // 
             // tbDescripcionRespuesta
@@ -156,7 +155,7 @@
             // 
             // toolStrip2
             // 
-            this.toolStrip2.BackColor = System.Drawing.Color.Azure;
+            this.toolStrip2.BackColor = System.Drawing.SystemColors.Control;
             this.toolStrip2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStrip2.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -174,7 +173,7 @@
             this.toolStripSplitButton1});
             this.toolStrip2.Location = new System.Drawing.Point(0, 0);
             this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(883, 25);
+            this.toolStrip2.Size = new System.Drawing.Size(866, 25);
             this.toolStrip2.TabIndex = 25;
             this.toolStrip2.Text = "toolStrip2";
             // 
@@ -346,10 +345,11 @@
             // txtIDSup
             // 
             this.txtIDSup.BackColor = System.Drawing.SystemColors.Window;
+            this.txtIDSup.Cursor = System.Windows.Forms.Cursors.Default;
             this.txtIDSup.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIDSup.Location = new System.Drawing.Point(100, 35);
             this.txtIDSup.Name = "txtIDSup";
-            this.txtIDSup.Size = new System.Drawing.Size(102, 25);
+            this.txtIDSup.Size = new System.Drawing.Size(93, 25);
             this.txtIDSup.TabIndex = 21;
             // 
             // groupBox2
@@ -395,18 +395,18 @@
             this.txtIDMaq.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIDMaq.Location = new System.Drawing.Point(315, 35);
             this.txtIDMaq.Name = "txtIDMaq";
-            this.txtIDMaq.Size = new System.Drawing.Size(94, 25);
+            this.txtIDMaq.Size = new System.Drawing.Size(99, 25);
             this.txtIDMaq.TabIndex = 29;
             // 
             // lblIDMaq
             // 
             this.lblIDMaq.AutoSize = true;
             this.lblIDMaq.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIDMaq.Location = new System.Drawing.Point(186, 38);
+            this.lblIDMaq.Location = new System.Drawing.Point(289, 38);
             this.lblIDMaq.Name = "lblIDMaq";
-            this.lblIDMaq.Size = new System.Drawing.Size(123, 17);
+            this.lblIDMaq.Size = new System.Drawing.Size(20, 17);
             this.lblIDMaq.TabIndex = 28;
-            this.lblIDMaq.Text = "ID de la Maquinaria";
+            this.lblIDMaq.Text = "ID";
             // 
             // btnBuscarMaquinaria
             // 
@@ -414,7 +414,7 @@
             this.btnBuscarMaquinaria.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscarMaquinaria.Location = new System.Drawing.Point(429, 32);
             this.btnBuscarMaquinaria.Name = "btnBuscarMaquinaria";
-            this.btnBuscarMaquinaria.Size = new System.Drawing.Size(164, 29);
+            this.btnBuscarMaquinaria.Size = new System.Drawing.Size(164, 28);
             this.btnBuscarMaquinaria.TabIndex = 21;
             this.btnBuscarMaquinaria.Text = "Buscar Maquinaria...";
             this.btnBuscarMaquinaria.UseVisualStyleBackColor = true;
@@ -548,6 +548,7 @@
             // txtNivelImp
             // 
             this.txtNivelImp.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNivelImp.Cursor = System.Windows.Forms.Cursors.Default;
             this.txtNivelImp.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNivelImp.Location = new System.Drawing.Point(270, 236);
             this.txtNivelImp.Name = "txtNivelImp";
@@ -567,6 +568,7 @@
             // txtIDProblema
             // 
             this.txtIDProblema.BackColor = System.Drawing.SystemColors.Window;
+            this.txtIDProblema.Cursor = System.Windows.Forms.Cursors.Default;
             this.txtIDProblema.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIDProblema.Location = new System.Drawing.Point(270, 78);
             this.txtIDProblema.Name = "txtIDProblema";
@@ -647,6 +649,7 @@
             // txtIDResp
             // 
             this.txtIDResp.BackColor = System.Drawing.SystemColors.Window;
+            this.txtIDResp.Cursor = System.Windows.Forms.Cursors.Default;
             this.txtIDResp.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIDResp.Location = new System.Drawing.Point(243, 66);
             this.txtIDResp.Name = "txtIDResp";
@@ -665,13 +668,15 @@
             // 
             // btnBuscarRespuesta
             // 
+            this.btnBuscarRespuesta.BackColor = System.Drawing.SystemColors.Control;
+            this.btnBuscarRespuesta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscarRespuesta.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscarRespuesta.Location = new System.Drawing.Point(350, 61);
             this.btnBuscarRespuesta.Name = "btnBuscarRespuesta";
             this.btnBuscarRespuesta.Size = new System.Drawing.Size(177, 32);
             this.btnBuscarRespuesta.TabIndex = 28;
             this.btnBuscarRespuesta.Text = "Buscar Respuesta...";
-            this.btnBuscarRespuesta.UseVisualStyleBackColor = true;
+            this.btnBuscarRespuesta.UseVisualStyleBackColor = false;
             this.btnBuscarRespuesta.Click += new System.EventHandler(this.btnBuscarRespuesta_Click);
             // 
             // label5
@@ -705,9 +710,10 @@
             // dtpFechaRespuesta
             // 
             this.dtpFechaRespuesta.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFechaRespuesta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFechaRespuesta.Location = new System.Drawing.Point(243, 285);
             this.dtpFechaRespuesta.Name = "dtpFechaRespuesta";
-            this.dtpFechaRespuesta.Size = new System.Drawing.Size(257, 25);
+            this.dtpFechaRespuesta.Size = new System.Drawing.Size(167, 25);
             this.dtpFechaRespuesta.TabIndex = 21;
             // 
             // groupBox1
@@ -741,7 +747,7 @@
             this.txtID.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtID.Location = new System.Drawing.Point(315, 37);
             this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(94, 25);
+            this.txtID.Size = new System.Drawing.Size(99, 25);
             this.txtID.TabIndex = 10;
             // 
             // lblFechaReg
@@ -763,26 +769,14 @@
             this.dtpFechaRegistro.Size = new System.Drawing.Size(169, 25);
             this.dtpFechaRegistro.TabIndex = 19;
             // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox6.Image = global::BuildUp.Properties.Resources.bup;
-            this.pictureBox6.Location = new System.Drawing.Point(731, 859);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(82, 26);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 48;
-            this.pictureBox6.TabStop = false;
-            // 
             // frmGestionarIncidencia
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoScroll = true;
             this.AutoScrollMargin = new System.Drawing.Size(0, 60);
             this.BackColor = System.Drawing.Color.SlateGray;
-            this.ClientSize = new System.Drawing.Size(900, 637);
+            this.ClientSize = new System.Drawing.Size(883, 621);
             this.ControlBox = false;
-            this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.groupBox4);
@@ -811,7 +805,6 @@
             this.tabRespuesta.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -879,7 +872,6 @@
         private System.Windows.Forms.ToolStripButton btnCancelar;
         private System.Windows.Forms.SaveFileDialog sfdReporteIncidencia;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.ToolStripSplitButton toolStripSplitButton1;
         private System.Windows.Forms.ToolStripMenuItem porLíneaDeProducciónToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem porMaquinariaToolStripMenuItem;

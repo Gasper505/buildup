@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 using System.Windows.Forms;
 
 namespace BuildUp
@@ -32,6 +33,15 @@ namespace BuildUp
             cboNombreTipoLadrillo.DataSource = new BindingList<TipoLadrilloWS.tipoLadrillo>(daoTipoLadrillo.listarTiposLadrillo().ToArray());
             cboNombreTipoLadrillo.ValueMember = "idTipoLadrillo";
             cboNombreTipoLadrillo.DisplayMember = "nombre";
+
+            int currentYear = DateTime.Today.Year;
+            for (int i = 2017; i <= currentYear; i++)
+            {
+                ComboBoxItem item = new ComboBoxItem();
+                item.Content = i;
+                txtAnho.Items.Add(item.Content);
+
+            }
 
         }
 
