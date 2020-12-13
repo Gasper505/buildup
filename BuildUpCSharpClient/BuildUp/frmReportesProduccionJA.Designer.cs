@@ -33,14 +33,14 @@
             this.cboMes = new System.Windows.Forms.ComboBox();
             this.btnReporteMensual = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.sfdReportesProduccion = new System.Windows.Forms.SaveFileDialog();
-            this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.sfdReportesProduccion = new System.Windows.Forms.SaveFileDialog();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.cboAnho = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -117,15 +117,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Reporte Diario de Producción";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(39, 50);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 17);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Fecha";
-            // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.SystemColors.ControlLightLight;
@@ -139,6 +130,15 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Parámetros";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(39, 50);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(41, 17);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Fecha";
+            // 
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.SystemColors.ControlLightLight;
@@ -150,7 +150,7 @@
             this.groupBox3.Size = new System.Drawing.Size(543, 184);
             this.groupBox3.TabIndex = 6;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Reporte Anual de Producción";
+            this.groupBox3.Text = "Reporte Mensual de Producción";
             // 
             // groupBox4
             // 
@@ -167,14 +167,15 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Parámetros";
             // 
-            // label2
+            // cboAnho
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(49, 37);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(31, 17);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Año";
+            this.cboAnho.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboAnho.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboAnho.FormattingEnabled = true;
+            this.cboAnho.Location = new System.Drawing.Point(86, 34);
+            this.cboAnho.Name = "cboAnho";
+            this.cboAnho.Size = new System.Drawing.Size(122, 25);
+            this.cboAnho.TabIndex = 6;
             // 
             // label3
             // 
@@ -185,15 +186,14 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Mes";
             // 
-            // cboAnho
+            // label2
             // 
-            this.cboAnho.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboAnho.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboAnho.FormattingEnabled = true;
-            this.cboAnho.Location = new System.Drawing.Point(86, 34);
-            this.cboAnho.Name = "cboAnho";
-            this.cboAnho.Size = new System.Drawing.Size(122, 25);
-            this.cboAnho.TabIndex = 6;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(49, 37);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(31, 17);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Año";
             // 
             // frmReportesProduccionJA
             // 
