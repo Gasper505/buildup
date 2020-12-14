@@ -65,7 +65,7 @@
             this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFecha.Location = new System.Drawing.Point(86, 44);
             this.dtpFecha.Name = "dtpFecha";
-            this.dtpFecha.Size = new System.Drawing.Size(151, 25);
+            this.dtpFecha.Size = new System.Drawing.Size(142, 25);
             this.dtpFecha.TabIndex = 1;
             // 
             // cboMes

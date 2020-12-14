@@ -290,7 +290,7 @@
             this.btnRegresar});
             this.toolStrip2.Location = new System.Drawing.Point(0, 0);
             this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(662, 25);
+            this.toolStrip2.Size = new System.Drawing.Size(652, 25);
             this.toolStrip2.TabIndex = 43;
             this.toolStrip2.Text = "toolStrip2";
             // 
@@ -408,7 +408,7 @@
             this.gbUsuario.Controls.Add(this.dtpNacimiento);
             this.gbUsuario.Controls.Add(this.label4);
             this.gbUsuario.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbUsuario.Location = new System.Drawing.Point(47, 52);
+            this.gbUsuario.Location = new System.Drawing.Point(43, 52);
             this.gbUsuario.Name = "gbUsuario";
             this.gbUsuario.Size = new System.Drawing.Size(571, 509);
             this.gbUsuario.TabIndex = 44;
@@ -466,7 +466,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SlateGray;
-            this.ClientSize = new System.Drawing.Size(662, 588);
+            this.ClientSize = new System.Drawing.Size(652, 591);
             this.ControlBox = false;
             this.Controls.Add(this.gbUsuario);
             this.Controls.Add(this.toolStrip2);

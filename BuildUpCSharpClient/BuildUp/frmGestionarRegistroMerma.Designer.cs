@@ -283,6 +283,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox2.Controls.Add(this.txtSupervisor);
             this.groupBox2.Controls.Add(this.txtLineaProduccion);
             this.groupBox2.Controls.Add(this.label3);

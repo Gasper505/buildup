@@ -6,8 +6,11 @@
   <xs:element name="generarReporteProduccionMensualResponse" type="tns:generarReporteProduccionMensualResponse" />
   <xs:complexType name="generarReporteProduccionDiario">
     <xs:sequence>
-      <xs:element minOccurs="0" name="fecha" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fecha" type="tns:date" />
     </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="date">
+    <xs:sequence />
   </xs:complexType>
   <xs:complexType name="generarReporteProduccionDiarioResponse">
     <xs:sequence>

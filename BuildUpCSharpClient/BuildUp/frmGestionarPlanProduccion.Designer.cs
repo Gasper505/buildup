@@ -168,6 +168,7 @@
             this.btnRegresar.Name = "btnRegresar";
             this.btnRegresar.Size = new System.Drawing.Size(81, 22);
             this.btnRegresar.Text = "Regresar";
+            this.btnRegresar.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
             this.btnRegresar.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // gbLotesSalientes
@@ -389,7 +390,6 @@
         private System.Windows.Forms.ToolStripButton btnEliminar;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripButton btnCancelar;
-        private System.Windows.Forms.ToolStripButton btnRegresar;
         private System.Windows.Forms.GroupBox gbLotesSalientes;
         private System.Windows.Forms.Button btnRemover;
         private System.Windows.Forms.Button btnAgregar;
@@ -405,5 +405,6 @@
         private System.Windows.Forms.ComboBox txtAnho;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreTipoLadrillo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
+        private System.Windows.Forms.ToolStripButton btnRegresar;
     }
 }
