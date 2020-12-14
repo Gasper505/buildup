@@ -42,7 +42,7 @@ public class ReportesProduccion {
             
             //Creamos un HashMap para enviar los parámetros del reporte
             HashMap hm = new HashMap();
-            hm.put("FECHA", fecha);
+            hm.put("FECHA_REPORTE", fecha);
             
             
             //Registramos el Driver
@@ -50,7 +50,7 @@ public class ReportesProduccion {
             //Creamos el objeto Connection
             Connection con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.password);
             //Poblamos el reporte
-            JasperPrint jp = JasperFillManager.fillReport(reporteProd, null, con);
+            JasperPrint jp = JasperFillManager.fillReport(reporteProd, hm, con);
             
             //Cerrar la conexion
             con.close();

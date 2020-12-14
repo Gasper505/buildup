@@ -49,7 +49,7 @@ public class ServletProdDiaria extends HttpServlet {
             HashMap hm = new HashMap();
             SimpleDateFormat formato = new SimpleDateFormat("MM-dd-yyyy");
             Date date = formato.parse("12-02-2012");
-            hm.put("FECHA", date);
+            hm.put("FECHA_REPORTE", date);
             
             
             //Registramos el Driver
@@ -57,7 +57,7 @@ public class ServletProdDiaria extends HttpServlet {
             //Creamos el objeto Connection
             Connection con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.password);
             //Poblamos el reporte
-            JasperPrint jp = JasperFillManager.fillReport(reporteProd, null, con);
+            JasperPrint jp = JasperFillManager.fillReport(reporteProd, hm, con);
             
             //Cerrar la conexion
             con.close();
