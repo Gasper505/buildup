@@ -55,15 +55,19 @@ namespace BuildUp
             OrdenInsumosWS.ordenInsumos data = dgvOrdenes.Rows[e.RowIndex].DataBoundItem as OrdenInsumosWS.ordenInsumos;
             dgvOrdenes.Rows[e.RowIndex].Cells[2].Value = data.operario.nombres + data.operario.apellidos;
             dgvOrdenes.Rows[e.RowIndex].Cells[3].Value = data.insumo.nombre;
-            if (data.estado)
+            if (data.estado==1)
             {
                 dgvOrdenes.Rows[e.RowIndex].Cells[5].Value = "Solicitud Aceptada";
             }
-            else
+            if (data.estado==2)
             {
-                dgvOrdenes.Rows[e.RowIndex].Cells[5].Value = "Solicitud en Espera";
+                dgvOrdenes.Rows[e.RowIndex].Cells[5].Value = "Solicitud Rechazada";
             }
-            
+            if (data.estado == 0)
+            {
+                dgvOrdenes.Rows[e.RowIndex].Cells[5].Value = "Solicitud en espera";
+            }
+
         }
     }
 

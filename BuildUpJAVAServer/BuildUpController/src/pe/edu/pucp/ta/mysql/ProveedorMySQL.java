@@ -24,12 +24,14 @@ public class ProveedorMySQL implements ProveedorDAO{
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con =DriverManager.getConnection(DBManager.urlMySQL, DBManager.user,DBManager.password);
-            String sql = "{call INSERTAR_PROVEEDOR(?,?,?,?)}";
+            String sql = "{call INSERTAR_PROVEEDOR(?,?,?,?,?,?)}";
             cs = con.prepareCall(sql);
             cs.registerOutParameter("_ID_PROVEEDOR", java.sql.Types.INTEGER);
             cs.setString("_RAZON_SOCIAL", proveedor.getRazonSocial());
             cs.setString("_CORREO", proveedor.getCorreo());
             cs.setString("_REPRESENTANTE", proveedor.getRepresentante());
+            cs.setString("_RUC", proveedor.getRuc());
+            cs.setString("_DIRECCION", proveedor.getDireccion());
             
             cs.executeUpdate();
             proveedor.setIdProveedor(cs.getInt("_ID_PROVEEDOR"));
@@ -51,12 +53,14 @@ public class ProveedorMySQL implements ProveedorDAO{
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con =DriverManager.getConnection(DBManager.urlMySQL, DBManager.user,DBManager.password);
-            String sql = "{call ACTUALIZAR_PROVEEDOR(?,?,?,?)}";
+            String sql = "{call ACTUALIZAR_PROVEEDOR(?,?,?,?,?,?)}";
             cs = con.prepareCall(sql);
             cs.setInt("_ID_PROVEEDOR", proveedor.getIdProveedor());
             cs.setString("_RAZON_SOCIAL", proveedor.getRazonSocial());
             cs.setString("_CORREO",proveedor.getCorreo());
             cs.setString("_REPRESENTANTE", proveedor.getRepresentante());
+            cs.setString("_RUC", proveedor.getRuc());
+            cs.setString("_DIRECCION", proveedor.getDireccion());
            
             cs.executeUpdate();
             
@@ -132,6 +136,8 @@ public class ProveedorMySQL implements ProveedorDAO{
                 proveedor.setRazonSocial(rs.getString("RAZON_SOCIAL"));
                 proveedor.setCorreo(rs.getString("CORREO"));
                 proveedor.setRepresentante(rs.getString("REPRESENTANTE"));
+                proveedor.setRuc(rs.getString("RUC"));
+                proveedor.setDireccion(rs.getString("DIRECCION"));
                 proveedor.setActivo(rs.getBoolean("ACTIVO"));
                 proveedores.add(proveedor);
             }

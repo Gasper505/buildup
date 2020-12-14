@@ -41,6 +41,12 @@
   <message name="aceptarOrdenInsumosResponse">
     <part name="parameters" element="tns:aceptarOrdenInsumosResponse" />
   </message>
+  <message name="rechazarOrdenInsumos">
+    <part name="parameters" element="tns:rechazarOrdenInsumos" />
+  </message>
+  <message name="rechazarOrdenInsumosResponse">
+    <part name="parameters" element="tns:rechazarOrdenInsumosResponse" />
+  </message>
   <portType name="OrdenInsumosWS">
     <operation name="listarOrdenInsumos">
       <input wsam:Action="http://services.buildup.pucp.edu.pe/OrdenInsumosWS/listarOrdenInsumosRequest" message="tns:listarOrdenInsumos" />
@@ -65,6 +71,10 @@
     <operation name="aceptarOrdenInsumos">
       <input wsam:Action="http://services.buildup.pucp.edu.pe/OrdenInsumosWS/aceptarOrdenInsumosRequest" message="tns:aceptarOrdenInsumos" />
       <output wsam:Action="http://services.buildup.pucp.edu.pe/OrdenInsumosWS/aceptarOrdenInsumosResponse" message="tns:aceptarOrdenInsumosResponse" />
+    </operation>
+    <operation name="rechazarOrdenInsumos">
+      <input wsam:Action="http://services.buildup.pucp.edu.pe/OrdenInsumosWS/rechazarOrdenInsumosRequest" message="tns:rechazarOrdenInsumos" />
+      <output wsam:Action="http://services.buildup.pucp.edu.pe/OrdenInsumosWS/rechazarOrdenInsumosResponse" message="tns:rechazarOrdenInsumosResponse" />
     </operation>
   </portType>
   <binding name="OrdenInsumosWSPortBinding" type="tns:OrdenInsumosWS">
@@ -115,6 +125,15 @@
       </output>
     </operation>
     <operation name="aceptarOrdenInsumos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="rechazarOrdenInsumos">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

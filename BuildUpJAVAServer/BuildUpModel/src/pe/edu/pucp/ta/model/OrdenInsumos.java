@@ -12,7 +12,7 @@ public class OrdenInsumos {
     private String unidadMedida;
     private Date fecha;
     private boolean activo;
-    private boolean estado;
+    private int estado;
 
     public OrdenInsumos(Operario operario, Insumo insumo, int cantidad, String unidadMedida, Date fecha) {
         this.operario = operario;
@@ -98,11 +98,13 @@ public class OrdenInsumos {
         this.activo = activo;
     }
 
-    public boolean isEstado() {
+    public int getEstado() {
         return estado;
     }
 
-    public void setEstado(boolean estado) {
+    public void setEstado(int estado) {
         this.estado = estado;
     }
+
+    
 }

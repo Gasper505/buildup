@@ -40,8 +40,18 @@ namespace BuildUp
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            BindingList<ProveedorWS.proveedor> provs = new BindingList<ProveedorWS.proveedor>(daoProveedor.listarProveedorPorRazonSocial(txtRazonSocial.Text).ToArray());
-            dgvProveedores.DataSource = provs;
+            try
+            {
+                BindingList<ProveedorWS.proveedor> provs = new BindingList<ProveedorWS.proveedor>(daoProveedor.listarProveedorPorRazonSocial(txtRazonSocial.Text).ToArray());
+                dgvProveedores.DataSource = provs;
+
+            }
+            catch
+            {
+                MessageBox.Show("No se encontraron resultados", "Mensaje aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
         }
+
     }
 }

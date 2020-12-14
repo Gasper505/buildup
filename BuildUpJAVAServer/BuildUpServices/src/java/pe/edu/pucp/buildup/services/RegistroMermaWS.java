@@ -5,7 +5,7 @@
  */
 package pe.edu.pucp.buildup.services;
 
-import java.sql.Date;
+import java.util.Date;
 import java.util.ArrayList;
 import javax.jws.WebService;
 import javax.jws.WebMethod;
@@ -38,7 +38,7 @@ public class RegistroMermaWS {
     
     @WebMethod(operationName = "listarRegistrosMermasPorSupervisorYRangoFechas")
     public ArrayList<RegistroMerma> listarRegistrosMermaPorSupervisorYRangoFechas(@WebParam(name="nombreSup")String nombreSup, 
-            @WebParam(name="fechaInicial")Date fechaInicial, @WebParam(name="fechaFin")Date fechaFin) {
+            @WebParam(name="fechaInicial") Date fechaInicial, @WebParam(name="fechaFin") Date fechaFin) {
         ArrayList<RegistroMerma> registroMermas = new ArrayList<>();
         try{
             registroMermas = daoRegistroMerma.listarRegistrosMermasPorSupervisorYRangoFechas(nombreSup,new java.sql.Date(fechaInicial.getTime()), new java.sql.Date(fechaFin.getTime()));

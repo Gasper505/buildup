@@ -193,7 +193,8 @@ namespace BuildUp
         private void btnVolver_Click(object sender, EventArgs e)
         {
             this.Hide();
-            ActiveForm.Show();
+
+            if (ActiveForm != null) ActiveForm.Show();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

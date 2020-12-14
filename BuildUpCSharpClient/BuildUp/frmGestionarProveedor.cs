@@ -50,6 +50,8 @@ namespace BuildUp
                     txtRazonSocial.Enabled = false;
                     txtCorreo.Enabled = false;
                     txtRepresentante.Enabled = false;
+                    txtRuc.Enabled = false;
+                    txtDireccion.Enabled = false;
 
                     break;
                 case Estado.Nuevo:
@@ -63,6 +65,8 @@ namespace BuildUp
                     txtRazonSocial.Enabled = true;
                     txtCorreo.Enabled = true;
                     txtRepresentante.Enabled = true;
+                    txtRuc.Enabled = true;
+                    txtDireccion.Enabled = true;
                     break;
 
                 case Estado.Modificacion:
@@ -76,6 +80,8 @@ namespace BuildUp
                     txtRazonSocial.Enabled = true;
                     txtCorreo.Enabled = true;
                     txtRepresentante.Enabled = true;
+                    txtRuc.Enabled = true;
+                    txtDireccion.Enabled = true;
                     break;
             }
         }
@@ -83,9 +89,19 @@ namespace BuildUp
         //-----------------------------------------------------------------
         private void btnGuardar_Click_1(object sender, EventArgs e)
         {
+            if (txtRuc.Text == "")
+            {
+                MessageBox.Show("Debe ingresar el RUC del proveedor", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             if (txtRazonSocial.Text == "")
             {
                 MessageBox.Show("Debe escribir la razon social", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (txtDireccion.Text == "")
+            {
+                MessageBox.Show("Debe ingresar la dirección del proveedor", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             if (txtCorreo.Text == "")
@@ -106,6 +122,8 @@ namespace BuildUp
                 proveedor.razonSocial = txtRazonSocial.Text;
                 proveedor.representante = txtRepresentante.Text;
                 proveedor.correo = txtCorreo.Text;
+                proveedor.ruc = txtRuc.Text;
+                proveedor.direccion = txtDireccion.Text;
 
                 int result = daoProveedor.insertarProveedor(proveedor);
                 if (result != 0)
@@ -115,6 +133,8 @@ namespace BuildUp
                     txtRazonSocial.Text = "";
                     txtCorreo.Text = "";
                     txtRepresentante.Text = "";
+                    txtRuc.Text = "";
+                    txtDireccion.Text = "";
                     EstablecerEstadoComponentes(Estado.Inicial);
                 }
                 else
@@ -134,6 +154,8 @@ namespace BuildUp
                 txtRazonSocial.Text = proveedor.razonSocial;
                 txtCorreo.Text = proveedor.correo;
                 txtRepresentante.Text = proveedor.representante;
+                txtRuc.Text = proveedor.ruc;
+                txtDireccion.Text = proveedor.direccion;
                 EstablecerEstadoComponentes(Estado.Modificacion);
             }
 
@@ -146,9 +168,19 @@ namespace BuildUp
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
+            if (txtRuc.Text == "")
+            {
+                MessageBox.Show("Debe ingresar el RUC del proveedor", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             if (txtRazonSocial.Text == "")
             {
                 MessageBox.Show("Debe escribir la razon social", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (txtDireccion.Text == "")
+            {
+                MessageBox.Show("Debe ingresar la dirección del proveedor", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             if (txtCorreo.Text == "")
@@ -161,6 +193,8 @@ namespace BuildUp
                 MessageBox.Show("Debe ingresar el nombre del representante", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+            
+           
 
             DialogResult dr = MessageBox.Show("¿Está seguro que desea actualizar los datos de este Proveedor?", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (dr == DialogResult.Yes)
@@ -169,6 +203,8 @@ namespace BuildUp
                 proveedor.razonSocial = txtRazonSocial.Text;
                 proveedor.representante = txtRepresentante.Text;
                 proveedor.correo = txtCorreo.Text;
+                proveedor.ruc = txtRuc.Text;
+                proveedor.direccion = txtDireccion.Text;
 
                 int result = daoProveedor.actualizarProveedor(proveedor);
                 if (result != 0)
@@ -178,6 +214,8 @@ namespace BuildUp
                     txtRazonSocial.Text = "";
                     txtCorreo.Text = "";
                     txtRepresentante.Text = "";
+                    txtRuc.Text = "";
+                    txtDireccion.Text = "";
                     EstablecerEstadoComponentes(Estado.Inicial);
                 }
                 else
@@ -197,6 +235,8 @@ namespace BuildUp
                 txtRazonSocial.Text = "";
                 txtCorreo.Text = "";
                 txtRepresentante.Text = "";
+                txtRuc.Text = "";
+                txtDireccion.Text = "";
                 EstablecerEstadoComponentes(Estado.Inicial);
             }
         }
@@ -206,7 +246,8 @@ namespace BuildUp
         private void btnVolver_Click(object sender, EventArgs e)
         {
             this.Hide();
-            ActiveForm.Show();
+
+            if (ActiveForm != null) ActiveForm.Show();
         }
 
         private void btnNuevo_Click_1(object sender, EventArgs e)
@@ -223,8 +264,45 @@ namespace BuildUp
                 txtRazonSocial.Text = "";
                 txtCorreo.Text = "";
                 txtRepresentante.Text = "";
+                txtRuc.Text = "";
+                txtDireccion.Text = "";
                 EstablecerEstadoComponentes(Estado.Inicial);
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gbDatosProveedor_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtRepresentante_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -22,9 +22,11 @@
     <xs:sequence>
       <xs:element name="activo" type="xs:boolean" />
       <xs:element minOccurs="0" name="correo" type="xs:string" />
+      <xs:element minOccurs="0" name="direccion" type="xs:string" />
       <xs:element name="idProveedor" type="xs:int" />
       <xs:element minOccurs="0" name="razonSocial" type="xs:string" />
       <xs:element minOccurs="0" name="representante" type="xs:string" />
+      <xs:element minOccurs="0" name="ruc" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarProveedorPorRazonSocial">

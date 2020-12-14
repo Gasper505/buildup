@@ -12,6 +12,8 @@
   <xs:element name="listarOrdenInsumosResponse" type="tns:listarOrdenInsumosResponse" />
   <xs:element name="modificarOrdenInsumos" type="tns:modificarOrdenInsumos" />
   <xs:element name="modificarOrdenInsumosResponse" type="tns:modificarOrdenInsumosResponse" />
+  <xs:element name="rechazarOrdenInsumos" type="tns:rechazarOrdenInsumos" />
+  <xs:element name="rechazarOrdenInsumosResponse" type="tns:rechazarOrdenInsumosResponse" />
   <xs:complexType name="aceptarOrdenInsumos">
     <xs:sequence>
       <xs:element name="idOrdenInsumos" type="xs:int" />
@@ -41,7 +43,7 @@
     <xs:sequence>
       <xs:element name="activo" type="xs:boolean" />
       <xs:element name="cantidad" type="xs:int" />
-      <xs:element name="estado" type="xs:boolean" />
+      <xs:element name="estado" type="xs:int" />
       <xs:element minOccurs="0" name="fecha" type="xs:dateTime" />
       <xs:element name="idOrdenInsumos" type="xs:int" />
       <xs:element minOccurs="0" name="insumo" type="tns:insumo" />
@@ -122,6 +124,16 @@
   <xs:complexType name="listarOrdenInsumosPorRangoFechaResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:ordenInsumos" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="rechazarOrdenInsumos">
+    <xs:sequence>
+      <xs:element name="idOrdenInsumos" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="rechazarOrdenInsumosResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarOrdenInsumos">

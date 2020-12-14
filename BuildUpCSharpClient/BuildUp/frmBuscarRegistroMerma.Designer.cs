@@ -41,6 +41,8 @@
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRegistrosMerma)).BeginInit();
             this.gbBusqueda.SuspendLayout();
             this.SuspendLayout();
@@ -55,14 +57,16 @@
             this.dgvRegistrosMerma.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
-            this.Column5});
-            this.dgvRegistrosMerma.Location = new System.Drawing.Point(195, 183);
+            this.Column5,
+            this.Column3,
+            this.Column4});
+            this.dgvRegistrosMerma.Location = new System.Drawing.Point(56, 183);
             this.dgvRegistrosMerma.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvRegistrosMerma.MultiSelect = false;
             this.dgvRegistrosMerma.Name = "dgvRegistrosMerma";
             this.dgvRegistrosMerma.ReadOnly = true;
             this.dgvRegistrosMerma.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvRegistrosMerma.Size = new System.Drawing.Size(394, 288);
+            this.dgvRegistrosMerma.Size = new System.Drawing.Size(695, 288);
             this.dgvRegistrosMerma.TabIndex = 0;
             this.dgvRegistrosMerma.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvRegistrosMerma_CellFormatting);
             // 
@@ -194,6 +198,20 @@
             this.Column5.ReadOnly = true;
             this.Column5.Width = 175;
             // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Supervisor";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 150;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Linea Producción";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 150;
+            // 
             // frmBuscarRegistroMerma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -230,5 +248,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
     }
 }

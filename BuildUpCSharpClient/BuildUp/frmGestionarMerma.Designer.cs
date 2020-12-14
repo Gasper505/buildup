@@ -41,7 +41,6 @@
             this.btnCancelar = new System.Windows.Forms.ToolStripButton();
             this.btnRegresar = new System.Windows.Forms.ToolStripButton();
             this.gbDatosMaquinaria = new System.Windows.Forms.GroupBox();
-            this.txtTipo = new System.Windows.Forms.ComboBox();
             this.cboUnidadMedida = new System.Windows.Forms.ComboBox();
             this.lblUnidad = new System.Windows.Forms.Label();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
@@ -49,6 +48,7 @@
             this.txtIDMerma = new System.Windows.Forms.TextBox();
             this.lblTipo = new System.Windows.Forms.Label();
             this.lblIDMerma = new System.Windows.Forms.Label();
+            this.txtTipo = new System.Windows.Forms.TextBox();
             this.toolStrip2.SuspendLayout();
             this.gbDatosMaquinaria.SuspendLayout();
             this.SuspendLayout();
@@ -180,19 +180,6 @@
             this.gbDatosMaquinaria.TabStop = false;
             this.gbDatosMaquinaria.Text = "Datos de la Merma";
             // 
-            // txtTipo
-            // 
-            this.txtTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.txtTipo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTipo.FormattingEnabled = true;
-            this.txtTipo.Items.AddRange(new object[] {
-            "<tipo1>",
-            "<tipo2>"});
-            this.txtTipo.Location = new System.Drawing.Point(205, 62);
-            this.txtTipo.Name = "txtTipo";
-            this.txtTipo.Size = new System.Drawing.Size(142, 25);
-            this.txtTipo.TabIndex = 47;
-            // 
             // cboUnidadMedida
             // 
             this.cboUnidadMedida.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -267,6 +254,14 @@
             this.lblIDMerma.TabIndex = 5;
             this.lblIDMerma.Text = "ID";
             // 
+            // txtTipo
+            // 
+            this.txtTipo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTipo.Location = new System.Drawing.Point(205, 62);
+            this.txtTipo.Name = "txtTipo";
+            this.txtTipo.Size = new System.Drawing.Size(142, 25);
+            this.txtTipo.TabIndex = 47;
+            // 
             // frmGestionarMerma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -311,6 +306,6 @@
         private System.Windows.Forms.Label lblTipo;
         private System.Windows.Forms.Label lblIDMerma;
         private System.Windows.Forms.ComboBox cboUnidadMedida;
-        private System.Windows.Forms.ComboBox txtTipo;
+        private System.Windows.Forms.TextBox txtTipo;
     }
 }

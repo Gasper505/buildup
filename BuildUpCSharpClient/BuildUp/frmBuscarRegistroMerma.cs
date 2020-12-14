@@ -41,16 +41,16 @@ namespace BuildUp
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            BindingList<RegistroMermaWS.registroMerma> ordenes = new BindingList<RegistroMermaWS.registroMerma>(daoRegistroMerma.listarRegistroMerma().ToList());
+            BindingList<RegistroMermaWS.registroMerma> ordenes = new BindingList<RegistroMermaWS.registroMerma>(daoRegistroMerma.listarRegistrosMermasPorSupervisorYRangoFechas(txtNombreSup.Text,dateTimePicker1.Value, dateTimePicker2.Value).ToList());
 
             dgvRegistrosMerma.DataSource = ordenes;
         }
 
         private void dgvRegistrosMerma_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            /*RegistroMermaWS.registroMerma data = dgvRegistrosMerma.Rows[e.RowIndex].DataBoundItem as RegistroMermaWS.registroMerma;
-            dgvRegistrosMerma.Rows[e.RowIndex].Cells[2].Value = data.supervisor.idPersona;
-            dgvRegistrosMerma.Rows[e.RowIndex].Cells[3].Value = data.lineaProduccion.idLineaProduccion;*/
+            RegistroMermaWS.registroMerma data = dgvRegistrosMerma.Rows[e.RowIndex].DataBoundItem as RegistroMermaWS.registroMerma;
+            dgvRegistrosMerma.Rows[e.RowIndex].Cells[3].Value = data.supervisor.nombres;
+            dgvRegistrosMerma.Rows[e.RowIndex].Cells[4].Value = data.lineaProduccion.nombre;
         }
     }
 }

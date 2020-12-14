@@ -101,12 +101,13 @@ public class IncidenteMaquinariaMySQL implements IncidenteMaquinariaDAO{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.urlMySQL, 
                     DBManager.user, DBManager.password);
-            String sql = "{call INSERTAR_INCIDENTE_MAQUINARIA_PROBLEMA(?,?,?,?)}";
+            String sql = "{call INSERTAR_INCIDENTE_MAQUINARIA_PROBLEMA(?,?,?,?,?)}";
             cs = con.prepareCall(sql);
             cs.registerOutParameter("_ID_INCIDENTE", java.sql.Types.INTEGER);
             cs.setInt("_ID_MAQUINARIA",incidenteMaquinaria.getMaquinaria().getIdMaquinaria());
             cs.setInt("_ID_SUPERVISOR",incidenteMaquinaria.getSupervisor().getIdPersona());
             cs.setInt("_ID_PROBLEMA",incidenteMaquinaria.getProblema().getIdProblema());
+            cs.setString("_DESCRIPCION_PROBLEMA",incidenteMaquinaria.getDetalleProblema());
             resultado=cs.executeUpdate();
             incidenteMaquinaria.setIdIncidente(cs.getInt("_ID_INCIDENTE"));
             
@@ -146,7 +147,7 @@ public class IncidenteMaquinariaMySQL implements IncidenteMaquinariaDAO{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.urlMySQL, 
                     DBManager.user, DBManager.password);
-            cs=con.prepareCall("{call LISTAR_INCIDENTE_POR_RANGO_FECHAS(?,?)}");
+                cs=con.prepareCall("{call LISTAR_INCIDENTE_POR_RANGO_FECHAS(?,?)}");
             cs.setDate("_FECHA_INICIO", fechaIni);
             cs.setDate("_FECHA_FIN", fechaFin);
             rs = cs.executeQuery();  
@@ -161,6 +162,7 @@ public class IncidenteMaquinariaMySQL implements IncidenteMaquinariaDAO{
                 incidente.getProblema().setIdProblema(rs.getInt("ID_PROBLEMA")); 
                 incidente.getProblema().setTipo(rs.getString("NOMBRE_PROBLEMA"));
                 incidente.getProblema().setNivelImportancia(rs.getInt("NIVEL_IMPORTANCIA_PROBLEMA"));
+                incidente.setDetalleProblema(rs.getString("DESCRIPCION_PROBLEMA"));  
                 incidente.getMaquinaria().setIdMaquinaria(rs.getInt("ID_MAQUINARIA")); 
                 incidente.getMaquinaria().setNombre(rs.getString("NOMBRE_MAQUINARIA"));
                 incidente.getMaquinaria().getProveedor().setRazonSocial(rs.getString("NOMBRE_PROVEEDOR"));
@@ -251,12 +253,13 @@ public class IncidenteMaquinariaMySQL implements IncidenteMaquinariaDAO{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.urlMySQL, 
                     DBManager.user, DBManager.password);
-            String sql = "{call MODIFICAR_INCIDENTE_POR_SUPERVISOR(?,?,?,?)}";
+            String sql = "{call MODIFICAR_INCIDENTE_POR_SUPERVISOR(?,?,?,?,?)}";
             cs = con.prepareCall(sql);
             cs.setInt("_ID_INCIDENTE",incidenteMaquinaria.getIdIncidente());
             cs.setInt("_ID_MAQUINARIA",incidenteMaquinaria.getMaquinaria().getIdMaquinaria());
             cs.setInt("_ID_SUPERVISOR",incidenteMaquinaria.getSupervisor().getIdPersona());
             cs.setInt("_ID_PROBLEMA",incidenteMaquinaria.getProblema().getIdProblema());
+            cs.setString("_DESCRIPCION_PROBLEMA",incidenteMaquinaria.getDetalleProblema());
             resultado=cs.executeUpdate();
         }catch(Exception ex){
             System.out.println(ex.getMessage());

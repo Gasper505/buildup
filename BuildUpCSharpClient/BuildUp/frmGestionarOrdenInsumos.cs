@@ -15,7 +15,7 @@ namespace BuildUp
 
         OrdenInsumosWS.OrdenInsumosWSClient daoOrdenInsumos;
         OrdenInsumosWS.ordenInsumos ordenInsumos;
-        bool estado;
+        int estado;
 
         public frmGestionarOrdenInsumos()
         {
@@ -53,7 +53,7 @@ namespace BuildUp
                     btnBuscar.Enabled = true;
                     btnEliminar.Enabled = false;
                     btnActualizar.Enabled = false;
-                    //txtApellidosOperario.Enabled = false;
+                    txtApellidosOperario.Enabled = false;
                     txtIdOperario.Enabled = false;
                     txtIdInsumo.Enabled = false;
                     txtIdOrdenInsumos.Enabled = false;
@@ -135,7 +135,7 @@ namespace BuildUp
                         numericUpDown1.Enabled = true;
                         btnAceptarOrden.Enabled = true;
                         //btnRechazarOrden.Enabled = true;
-                        if (this.estado)
+                        if (this.estado==1 || this.estado==2)
                         {
                             btnEliminar.Enabled = false;
                             btnActualizar.Enabled = false;
@@ -153,6 +153,7 @@ namespace BuildUp
             EstablecerEstadoComponentes(Estado.Nuevo);
             txtIdOperario.Text = frmLogIn.Usuario.idPersona.ToString();
             txtNombresOperario.Text = frmLogIn.Usuario.nombres.ToString();
+            txtApellidosOperario.Text = frmLogIn.Usuario.apellidos.ToString();
             //txtApellidosOperario.Text = frmLogIn.Usuario.apellidos.ToString();
 
 
@@ -191,6 +192,9 @@ namespace BuildUp
                 txtIdOrdenInsumos.Text = resultado.ToString();
                 if (resultado != 0)
                 {
+                    txtIdOperario.Text = "";
+                    txtNombresOperario.Text = "";
+                    txtApellidosOperario.Text = "";
                     txtIdOrdenInsumos.Text = "";
                     dtpFechaActual.Value = DateTime.Now;
                     txtIdInsumo.Text = "";
@@ -227,7 +231,7 @@ namespace BuildUp
             {
                 txtIdOperario.Text = formBuscarOrdenInsumos.OrdenInsumoSeleccionado.operario.idPersona.ToString();
                 txtNombresOperario.Text = formBuscarOrdenInsumos.OrdenInsumoSeleccionado.operario.nombres.ToString();
-                //txtApellidosOperario.Text = formBuscarOrdenInsumos.OrdenInsumoSeleccionado.operario.apellidos.ToString();
+                txtApellidosOperario.Text = formBuscarOrdenInsumos.OrdenInsumoSeleccionado.operario.apellidos.ToString();
                 txtIdOperario.Text = formBuscarOrdenInsumos.OrdenInsumoSeleccionado.operario.idPersona.ToString();
                 txtIdOrdenInsumos.Text = formBuscarOrdenInsumos.OrdenInsumoSeleccionado.idOrdenInsumos.ToString();
                 dtpFechaActual.Value = formBuscarOrdenInsumos.OrdenInsumoSeleccionado.fecha;
@@ -238,6 +242,17 @@ namespace BuildUp
                 estado = formBuscarOrdenInsumos.OrdenInsumoSeleccionado.estado;
 
                 EstablecerEstadoComponentes(Estado.Modificacion);
+                if (estado == 0)
+                {
+                    btnAceptarOrden.Enabled = true;
+                    btnRechazarOrden.Enabled = true;
+                }
+                else
+                {
+                    btnAceptarOrden.Enabled = false;
+                    btnRechazarOrden.Enabled = false;
+                }
+
             }
             
         }
@@ -247,7 +262,7 @@ namespace BuildUp
             DialogResult dr = MessageBox.Show("Esta acción limpiará todos los campos llenados, echando a perder cualquier trabajo realizado.\n¿Está seguro que desea continuar?", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (dr == DialogResult.Yes)
             {
-                //txtApellidosOperario.Text = "";
+                txtApellidosOperario.Text = "";
                 txtIdOperario.Text = "";
                 txtIdInsumo.Text = "";
                 txtIdOrdenInsumos.Text = "";
@@ -262,7 +277,8 @@ namespace BuildUp
         private void btnVolver_Click(object sender, EventArgs e)
         {
             this.Hide();
-            ActiveForm.Show();
+
+            if (ActiveForm != null) ActiveForm.Show();
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
@@ -285,6 +301,9 @@ namespace BuildUp
                 if (result != 0)
                 {
                     MessageBox.Show("La actualización ha sido exitosa", "Mensaje de Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtIdOperario.Text = "";
+                    txtNombresOperario.Text = "";
+                    txtApellidosOperario.Text = "";
                     txtIdOrdenInsumos.Text = "";
                     dtpFechaActual.Value = DateTime.Now;
                     txtIdInsumo.Text = "";
@@ -314,6 +333,9 @@ namespace BuildUp
                 if (result != 0)
                 {
                     MessageBox.Show("La eliminacion ha sido exitosa", "Mensaje de Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtIdOperario.Text = "";
+                    txtNombresOperario.Text = "";
+                    txtApellidosOperario.Text = "";
                     txtIdOrdenInsumos.Text = "";
                     dtpFechaActual.Value = DateTime.Now;
                     txtIdInsumo.Text = "";
@@ -335,7 +357,7 @@ namespace BuildUp
         {
             if (!(txtIdOrdenInsumos.Text == ""))
             {
-                if (estado)
+                if (estado==1)
                 {
                     MessageBox.Show("La Orden de Insumos ya ha sido aceptada", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
@@ -345,12 +367,13 @@ namespace BuildUp
                     if (dr == DialogResult.Yes)
                     {
                         int result = 0;
-                        result = daoOrdenInsumos.aceptarOrdenInsumos(Int32.Parse(txtIdOrdenInsumos.Text));
+                        result = daoOrdenInsumos.rechazarOrdenInsumos(Int32.Parse(txtIdOrdenInsumos.Text));
                         if (result != 0)
                         {
                             MessageBox.Show("La operacion ha sido exitosa", "Mensaje de Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             txtIdOperario.Text = "";
                             txtNombresOperario.Text = "";
+                            txtApellidosOperario.Text = "";
                             txtIdOrdenInsumos.Text = "";
                             dtpFechaActual.Value = DateTime.Now;
                             txtIdInsumo.Text = "";
@@ -375,7 +398,7 @@ namespace BuildUp
         {
             if (!(txtIdOrdenInsumos.Text == ""))
             {
-                if (estado)
+                if (estado==1)
                 {
                     MessageBox.Show("La Orden de Insumos ya ha sido aceptada", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
@@ -391,6 +414,7 @@ namespace BuildUp
                             MessageBox.Show("La operacion ha sido exitosa", "Mensaje de Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             txtIdOperario.Text = "";
                             txtNombresOperario.Text = "";
+                            txtApellidosOperario.Text = "";
                             txtIdOrdenInsumos.Text = "";
                             dtpFechaActual.Value = DateTime.Now;
                             txtIdInsumo.Text = "";

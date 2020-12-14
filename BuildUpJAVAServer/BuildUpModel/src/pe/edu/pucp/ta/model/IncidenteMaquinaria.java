@@ -12,6 +12,7 @@ public class IncidenteMaquinaria {
     private Ingeniero ingeniero;
     private Problema problema;
     private Respuesta respuesta;
+    private String detalleProblema;
     private String detalle; //descripcion/detalle de la respuesta al incidente
     private Date fechaIncidente;
     private Date fechaAtencion;
@@ -31,6 +32,16 @@ public class IncidenteMaquinaria {
         this.fechaIncidente = fechaInc;
         this.activo = act;
     }
+
+    public String getDetalleProblema() {
+        return detalleProblema;
+    }
+
+    public void setDetalleProblema(String detalleProblema) {
+        this.detalleProblema = detalleProblema;
+    }
+    
+    
     
     public IncidenteMaquinaria(int idIncidente, Maquinaria maquinaria, Supervisor supervisor, Ingeniero ingeniero, Problema problema, Respuesta respuesta, String detalle, Date fechaIncidente, Date fechaAtencion) {
         this.idIncidente = idIncidente;

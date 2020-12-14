@@ -89,4 +89,14 @@ public class OrdenInsumosWS {
         }
         return resultado;
     }
+    @WebMethod(operationName = "rechazarOrdenInsumos")
+    public int rechazarOrdenInsumos(@WebParam(name = "idOrdenInsumos") int idOrdenInsumos) {
+        int resultado = 0;
+        try{
+            resultado = daoOrdenInsumos.rechazar(idOrdenInsumos);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return resultado;
+    }
 }
