@@ -33,17 +33,17 @@
             this.txtContrasena = new System.Windows.Forms.TextBox();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.panelLogeo = new System.Windows.Forms.Panel();
+            this.pbLoading = new System.Windows.Forms.PictureBox();
             this.lblInfoLogueo = new System.Windows.Forms.Label();
             this.picContrasena = new System.Windows.Forms.PictureBox();
             this.picUsuario = new System.Windows.Forms.PictureBox();
             this.btn_Ingresar = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.btnMinimizar = new System.Windows.Forms.Button();
-            this.pbLoading = new System.Windows.Forms.PictureBox();
             this.panelLogeo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLoading)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picContrasena)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picUsuario)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLoading)).BeginInit();
             this.SuspendLayout();
             // 
             // txtUsuario
@@ -80,6 +80,12 @@
             this.panelLogeo.Controls.Add(this.txtUsuario);
             resources.ApplyResources(this.panelLogeo, "panelLogeo");
             this.panelLogeo.Name = "panelLogeo";
+            // 
+            // pbLoading
+            // 
+            resources.ApplyResources(this.pbLoading, "pbLoading");
+            this.pbLoading.Name = "pbLoading";
+            this.pbLoading.TabStop = false;
             // 
             // lblInfoLogueo
             // 
@@ -128,17 +134,11 @@
             this.btnMinimizar.UseVisualStyleBackColor = false;
             this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
             // 
-            // pbLoading
-            // 
-            resources.ApplyResources(this.pbLoading, "pbLoading");
-            this.pbLoading.Name = "pbLoading";
-            this.pbLoading.TabStop = false;
-            // 
             // frmLogIn
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(66)))), ((int)(((byte)(17)))));
+            this.BackColor = System.Drawing.Color.DarkSlateGray;
             this.ControlBox = false;
             this.Controls.Add(this.btnMinimizar);
             this.Controls.Add(this.panelLogeo);
@@ -148,9 +148,9 @@
             this.Opacity = 0.95D;
             this.panelLogeo.ResumeLayout(false);
             this.panelLogeo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLoading)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picContrasena)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picUsuario)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLoading)).EndInit();
             this.ResumeLayout(false);
 
         }

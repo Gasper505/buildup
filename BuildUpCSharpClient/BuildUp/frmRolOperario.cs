@@ -56,5 +56,10 @@ namespace BuildUp
             f.Show();
         }
 
+        private void pbFoto_Click(object sender, EventArgs e)
+        {
+            frmGestionarUsuario formGestionarUsuario = new frmGestionarUsuario();
+            formGestionarUsuario.Show();
+        }
     }
 }

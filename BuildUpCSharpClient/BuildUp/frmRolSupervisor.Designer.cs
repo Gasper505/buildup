@@ -44,6 +44,7 @@
             this.lblUsername = new System.Windows.Forms.Label();
             this.pbFoto = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -51,23 +52,19 @@
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Window;
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.btnAcontecimientoMerma);
+            this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.lblNombres);
-            this.panel1.Controls.Add(this.btnMerma);
-            this.panel1.Controls.Add(this.btnIncidencia);
-            this.panel1.Controls.Add(this.pictureBox3);
-            this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.lblTitulo);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Location = new System.Drawing.Point(0, 105);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(602, 518);
+            this.panel1.Size = new System.Drawing.Size(549, 567);
             this.panel1.TabIndex = 1;
             // 
             // pictureBox1
@@ -75,7 +72,7 @@
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(331, 136);
+            this.pictureBox1.Location = new System.Drawing.Point(237, 26);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(126, 117);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -88,7 +85,7 @@
             this.btnAcontecimientoMerma.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAcontecimientoMerma.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAcontecimientoMerma.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnAcontecimientoMerma.Location = new System.Drawing.Point(331, 264);
+            this.btnAcontecimientoMerma.Location = new System.Drawing.Point(237, 154);
             this.btnAcontecimientoMerma.Name = "btnAcontecimientoMerma";
             this.btnAcontecimientoMerma.Size = new System.Drawing.Size(126, 44);
             this.btnAcontecimientoMerma.TabIndex = 29;
@@ -112,7 +109,7 @@
             this.btnMerma.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMerma.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMerma.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnMerma.Location = new System.Drawing.Point(153, 264);
+            this.btnMerma.Location = new System.Drawing.Point(152, 349);
             this.btnMerma.Name = "btnMerma";
             this.btnMerma.Size = new System.Drawing.Size(126, 44);
             this.btnMerma.TabIndex = 26;
@@ -126,7 +123,7 @@
             this.btnIncidencia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIncidencia.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIncidencia.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnIncidencia.Location = new System.Drawing.Point(239, 455);
+            this.btnIncidencia.Location = new System.Drawing.Point(68, 154);
             this.btnIncidencia.Name = "btnIncidencia";
             this.btnIncidencia.Size = new System.Drawing.Size(126, 44);
             this.btnIncidencia.TabIndex = 24;
@@ -139,7 +136,7 @@
             this.pictureBox3.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox3.Image = global::BuildUp.Properties.Resources.vector_document_icon1;
-            this.pictureBox3.Location = new System.Drawing.Point(153, 136);
+            this.pictureBox3.Location = new System.Drawing.Point(152, 221);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(126, 117);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -151,7 +148,7 @@
             this.pictureBox2.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(239, 327);
+            this.pictureBox2.Location = new System.Drawing.Point(68, 26);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(126, 117);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -197,7 +194,7 @@
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnLogout.Location = new System.Drawing.Point(483, 59);
+            this.btnLogout.Location = new System.Drawing.Point(443, 62);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(93, 28);
             this.btnLogout.TabIndex = 11;
@@ -210,7 +207,7 @@
             this.lblUsername.AutoSize = true;
             this.lblUsername.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsername.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblUsername.Location = new System.Drawing.Point(482, 35);
+            this.lblUsername.Location = new System.Drawing.Point(442, 38);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(0, 17);
             this.lblUsername.TabIndex = 39;
@@ -221,7 +218,7 @@
             this.pbFoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbFoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pbFoto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbFoto.Location = new System.Drawing.Point(394, 9);
+            this.pbFoto.Location = new System.Drawing.Point(354, 12);
             this.pbFoto.Name = "pbFoto";
             this.pbFoto.Size = new System.Drawing.Size(82, 87);
             this.pbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -240,12 +237,26 @@
             this.pictureBox6.TabIndex = 40;
             this.pictureBox6.TabStop = false;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.pictureBox1);
+            this.groupBox1.Controls.Add(this.btnAcontecimientoMerma);
+            this.groupBox1.Controls.Add(this.btnMerma);
+            this.groupBox1.Controls.Add(this.btnIncidencia);
+            this.groupBox1.Controls.Add(this.pictureBox3);
+            this.groupBox1.Controls.Add(this.pictureBox2);
+            this.groupBox1.Location = new System.Drawing.Point(53, 130);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(439, 409);
+            this.groupBox1.TabIndex = 31;
+            this.groupBox1.TabStop = false;
+            // 
             // frmRolSupervisor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.ClientSize = new System.Drawing.Size(600, 656);
+            this.ClientSize = new System.Drawing.Size(550, 697);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.lblUsername);
             this.Controls.Add(this.panel1);
@@ -264,6 +275,7 @@
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -286,5 +298,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

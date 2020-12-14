@@ -379,5 +379,11 @@ namespace BuildUp
                 return;
             }
         }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+                frmReportesProduccionJA f = new frmReportesProduccionJA();
+                f.ShowDialog();
+        }
     }
 }

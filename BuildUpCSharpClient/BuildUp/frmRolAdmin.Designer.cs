@@ -38,23 +38,24 @@
             this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.pbFoto = new System.Windows.Forms.PictureBox();
             this.lblUsername = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panelAdmin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelAdmin
             // 
             this.panelAdmin.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panelAdmin.Controls.Add(this.groupBox1);
             this.panelAdmin.Controls.Add(this.lblNombres);
-            this.panelAdmin.Controls.Add(this.button2);
-            this.panelAdmin.Controls.Add(this.pictureBox2);
             this.panelAdmin.Controls.Add(this.lblTitulo);
             this.panelAdmin.Controls.Add(this.panel3);
             this.panelAdmin.Location = new System.Drawing.Point(2, 111);
             this.panelAdmin.Name = "panelAdmin";
-            this.panelAdmin.Size = new System.Drawing.Size(705, 396);
+            this.panelAdmin.Size = new System.Drawing.Size(705, 385);
             this.panelAdmin.TabIndex = 1;
             // 
             // lblNombres
@@ -72,7 +73,7 @@
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(288, 290);
+            this.button2.Location = new System.Drawing.Point(196, 167);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(140, 48);
             this.button2.TabIndex = 24;
@@ -85,7 +86,7 @@
             this.pictureBox2.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.Image = global::BuildUp.Properties.Resources.icono_usuario_6091_78;
-            this.pictureBox2.Location = new System.Drawing.Point(288, 142);
+            this.pictureBox2.Location = new System.Drawing.Point(196, 19);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(140, 142);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -165,12 +166,22 @@
             this.lblUsername.Size = new System.Drawing.Size(0, 17);
             this.lblUsername.TabIndex = 29;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Controls.Add(this.pictureBox2);
+            this.groupBox1.Location = new System.Drawing.Point(85, 119);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(537, 233);
+            this.groupBox1.TabIndex = 29;
+            this.groupBox1.TabStop = false;
+            // 
             // frmRolAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.ClientSize = new System.Drawing.Size(708, 541);
+            this.ClientSize = new System.Drawing.Size(708, 526);
             this.Controls.Add(this.lblUsername);
             this.Controls.Add(this.panelAdmin);
             this.Controls.Add(this.pbFoto);
@@ -185,6 +196,7 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).EndInit();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -202,5 +214,6 @@
         private System.Windows.Forms.Label lblNombres;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label lblUsername;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

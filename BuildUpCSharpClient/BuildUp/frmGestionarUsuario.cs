@@ -59,6 +59,52 @@ namespace BuildUp
             exclusiveComboBox.ValueMember = "idLineaProduccion";
             exclusiveComboBox.DisplayMember = "nombre";
 
+            if(frmLogIn.Usuario.rol == "Jefe de Área" || frmLogIn.Usuario.rol == "Ingeniero" || frmLogIn.Usuario.rol == "Operario" || frmLogIn.Usuario.rol == "Supervisor")
+            {
+                
+                toolStripComandos.Visible = false;
+                btAgregarFoto.Visible = false;
+                //txtUsername.Visible = false;
+
+                //usuario = formBuscarUsuario.UsuarioSeleccionado;
+
+                MemoryStream ms;
+                if (frmLogIn.Usuario.foto != null)
+                {
+                    ms = new MemoryStream(frmLogIn.Usuario.foto);
+                    if (ms.Length != 0) pbFoto.Image = new Bitmap(ms);
+                }
+
+                txtID.Text = frmLogIn.Usuario.idPersona.ToString();
+                txtNombre.Text = frmLogIn.Usuario.nombres;
+                txtApellidos.Text = frmLogIn.Usuario.apellidos;
+                txtNumero.Text = frmLogIn.Usuario.telefono;
+                txtCorreo.Text = frmLogIn.Usuario.correo;
+                dtpFinContrato.Value = frmLogIn.Usuario.fechaFinContrato;
+                cbRol.Text = frmLogIn.Usuario.rol;
+
+                if (usuario.rol == "Operario")
+                {
+                    exclusiveLabel.Visible = true;
+                    exclusiveComboBox.Visible = true;
+                    exclusiveComboBox.Text = daoOperario.obtenerLineaProduccionOperario(frmLogIn.Usuario.idPersona);
+                }
+                if (usuario.rol == "Supervisor")
+                {
+                    exclusiveLabel.Visible = true;
+                    exclusiveComboBox.Visible = true;
+                    exclusiveComboBox.Text = ((SupervisorWS.lineaProduccion)daoSupervisor.obtenerLineaProduccionSupervisor(frmLogIn.Usuario.idPersona)).nombre;
+                }
+                if (usuario.rol == "Ingeniero")
+                {
+                    exclusiveLabel.Visible = true;
+                    exclusiveComboBox.Visible = true;
+                    exclusiveComboBox.Text = daoIngeniero.obtenerEspecialidadIngeniero(frmLogIn.Usuario.idPersona);
+                }
+
+                txtUsername.Text = frmLogIn.Usuario.username;
+            }
+
         }
 
         //-----------------------------------------------------------------

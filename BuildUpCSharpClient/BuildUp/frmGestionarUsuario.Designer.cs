@@ -50,7 +50,7 @@
             this.btAgregarFoto = new System.Windows.Forms.Button();
             this.pbFoto = new System.Windows.Forms.PictureBox();
             this.ofFoto = new System.Windows.Forms.OpenFileDialog();
-            this.toolStrip2 = new System.Windows.Forms.ToolStrip();
+            this.toolStripComandos = new System.Windows.Forms.ToolStrip();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.btnNuevo = new System.Windows.Forms.ToolStripButton();
             this.btnGuardar = new System.Windows.Forms.ToolStripButton();
@@ -60,14 +60,13 @@
             this.btnEliminar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.btnCancelar = new System.Windows.Forms.ToolStripButton();
-            this.btnRegresar = new System.Windows.Forms.ToolStripButton();
             this.gbUsuario = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.exclusiveLabel = new System.Windows.Forms.Label();
             this.exclusiveComboBox = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
-            this.toolStrip2.SuspendLayout();
+            this.toolStripComandos.SuspendLayout();
             this.gbUsuario.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -270,12 +269,12 @@
             // 
             this.ofFoto.FileName = "openFileDialog1";
             // 
-            // toolStrip2
+            // toolStripComandos
             // 
-            this.toolStrip2.BackColor = System.Drawing.Color.Azure;
-            this.toolStrip2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStrip2.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-            this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripComandos.BackColor = System.Drawing.Color.Azure;
+            this.toolStripComandos.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripComandos.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.toolStripComandos.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripSeparator2,
             this.btnNuevo,
             this.btnGuardar,
@@ -284,13 +283,12 @@
             this.btnActualizar,
             this.btnEliminar,
             this.toolStripSeparator4,
-            this.btnCancelar,
-            this.btnRegresar});
-            this.toolStrip2.Location = new System.Drawing.Point(0, 0);
-            this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(652, 25);
-            this.toolStrip2.TabIndex = 43;
-            this.toolStrip2.Text = "toolStrip2";
+            this.btnCancelar});
+            this.toolStripComandos.Location = new System.Drawing.Point(0, 0);
+            this.toolStripComandos.Name = "toolStripComandos";
+            this.toolStripComandos.Size = new System.Drawing.Size(652, 25);
+            this.toolStripComandos.TabIndex = 43;
+            this.toolStripComandos.Text = "toolStrip2";
             // 
             // toolStripSeparator2
             // 
@@ -367,17 +365,6 @@
             this.btnCancelar.Text = "Limpiar y Cancelar";
             this.btnCancelar.Click += new System.EventHandler(this.btCancelar_Click);
             // 
-            // btnRegresar
-            // 
-            this.btnRegresar.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.btnRegresar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegresar.Image = ((System.Drawing.Image)(resources.GetObject("btnRegresar.Image")));
-            this.btnRegresar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Size = new System.Drawing.Size(81, 22);
-            this.btnRegresar.Text = "Regresar";
-            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
-            // 
             // gbUsuario
             // 
             this.gbUsuario.BackColor = System.Drawing.SystemColors.Control;
@@ -452,9 +439,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SlateGray;
-            this.ClientSize = new System.Drawing.Size(652, 585);
+            this.ClientSize = new System.Drawing.Size(652, 581);
             this.Controls.Add(this.gbUsuario);
-            this.Controls.Add(this.toolStrip2);
+            this.Controls.Add(this.toolStripComandos);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -463,8 +450,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestión de Usuarios";
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).EndInit();
-            this.toolStrip2.ResumeLayout(false);
-            this.toolStrip2.PerformLayout();
+            this.toolStripComandos.ResumeLayout(false);
+            this.toolStripComandos.PerformLayout();
             this.gbUsuario.ResumeLayout(false);
             this.gbUsuario.PerformLayout();
             this.ResumeLayout(false);
@@ -495,7 +482,7 @@
         private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.OpenFileDialog ofFoto;
-        private System.Windows.Forms.ToolStrip toolStrip2;
+        private System.Windows.Forms.ToolStrip toolStripComandos;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripButton btnNuevo;
         private System.Windows.Forms.ToolStripButton btnGuardar;
@@ -505,7 +492,6 @@
         private System.Windows.Forms.ToolStripButton btnEliminar;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripButton btnCancelar;
-        private System.Windows.Forms.ToolStripButton btnRegresar;
         private System.Windows.Forms.GroupBox gbUsuario;
         private System.Windows.Forms.Label exclusiveLabel;
         private System.Windows.Forms.ComboBox exclusiveComboBox;

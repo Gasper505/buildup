@@ -63,7 +63,7 @@
             this.btnEliminar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.btnCancelar = new System.Windows.Forms.ToolStripButton();
-            this.btnRegresar = new System.Windows.Forms.ToolStripButton();
+            this.btnReportesProduccion = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.numNroAproxLadrillos)).BeginInit();
             this.gbDatosOrden.SuspendLayout();
             this.gbDatosOperario.SuspendLayout();
@@ -167,7 +167,7 @@
             this.gbDatosOrden.Controls.Add(this.lblFechaRegistro);
             this.gbDatosOrden.Controls.Add(this.dtpFechaRegistro);
             this.gbDatosOrden.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbDatosOrden.Location = new System.Drawing.Point(56, 45);
+            this.gbDatosOrden.Location = new System.Drawing.Point(60, 45);
             this.gbDatosOrden.Name = "gbDatosOrden";
             this.gbDatosOrden.Size = new System.Drawing.Size(593, 104);
             this.gbDatosOrden.TabIndex = 35;
@@ -184,7 +184,7 @@
             this.gbDatosOperario.Controls.Add(this.txtNombres);
             this.gbDatosOperario.Controls.Add(this.lblNombreOperario);
             this.gbDatosOperario.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbDatosOperario.Location = new System.Drawing.Point(56, 169);
+            this.gbDatosOperario.Location = new System.Drawing.Point(60, 169);
             this.gbDatosOperario.Name = "gbDatosOperario";
             this.gbDatosOperario.Size = new System.Drawing.Size(593, 135);
             this.gbDatosOperario.TabIndex = 36;
@@ -247,7 +247,7 @@
             this.gbLotesSalientes.Controls.Add(this.numNroAproxLadrillos);
             this.gbLotesSalientes.Controls.Add(this.lblNroLotes);
             this.gbLotesSalientes.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbLotesSalientes.Location = new System.Drawing.Point(56, 310);
+            this.gbLotesSalientes.Location = new System.Drawing.Point(60, 310);
             this.gbLotesSalientes.Name = "gbLotesSalientes";
             this.gbLotesSalientes.Size = new System.Drawing.Size(593, 343);
             this.gbLotesSalientes.TabIndex = 38;
@@ -337,10 +337,10 @@
             this.btnEliminar,
             this.toolStripSeparator4,
             this.btnCancelar,
-            this.btnRegresar});
+            this.btnReportesProduccion});
             this.toolStrip2.Location = new System.Drawing.Point(0, 0);
             this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(703, 25);
+            this.toolStrip2.Size = new System.Drawing.Size(714, 25);
             this.toolStrip2.TabIndex = 39;
             this.toolStrip2.Text = "toolStrip2";
             // 
@@ -352,7 +352,7 @@
             // btnNuevo
             // 
             this.btnNuevo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuevo.Image = global::BuildUp.Properties.Resources.new_file_icon_4;
+            this.btnNuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevo.Image")));
             this.btnNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(66, 22);
@@ -419,30 +419,29 @@
             this.btnCancelar.Text = "Limpiar y Cancelar";
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // btnRegresar
+            // btnReportesProduccion
             // 
-            this.btnRegresar.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.btnRegresar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegresar.Image = ((System.Drawing.Image)(resources.GetObject("btnRegresar.Image")));
-            this.btnRegresar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Size = new System.Drawing.Size(81, 22);
-            this.btnRegresar.Text = "Regresar";
-            this.btnRegresar.Click += new System.EventHandler(this.btnVolver_Click);
+            this.btnReportesProduccion.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.btnReportesProduccion.Image = ((System.Drawing.Image)(resources.GetObject("btnReportesProduccion.Image")));
+            this.btnReportesProduccion.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnReportesProduccion.Name = "btnReportesProduccion";
+            this.btnReportesProduccion.Size = new System.Drawing.Size(169, 22);
+            this.btnReportesProduccion.Text = "Reportes de Producción";
+            this.btnReportesProduccion.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // frmGestionarOrdenSalida
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SlateGray;
-            this.ClientSize = new System.Drawing.Size(703, 664);
-            this.ControlBox = false;
+            this.ClientSize = new System.Drawing.Size(714, 664);
             this.Controls.Add(this.toolStrip2);
             this.Controls.Add(this.gbLotesSalientes);
             this.Controls.Add(this.gbDatosOperario);
             this.Controls.Add(this.gbDatosOrden);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "frmGestionarOrdenSalida";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestión de Órdenes de Salida";
@@ -494,9 +493,9 @@
         private System.Windows.Forms.ToolStripButton btnEliminar;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripButton btnCancelar;
-        private System.Windows.Forms.ToolStripButton btnRegresar;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreTipoLadrillo;
         private System.Windows.Forms.DataGridViewTextBoxColumn CantidadEnElLote;
         private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.ToolStripButton btnReportesProduccion;
     }
 }

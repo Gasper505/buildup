@@ -44,7 +44,6 @@
             this.btnEliminar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.btnCancelar = new System.Windows.Forms.ToolStripButton();
-            this.btnRegresar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSplitButton1 = new System.Windows.Forms.ToolStripSplitButton();
             this.porLíneaDeProducciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -170,12 +169,11 @@
             this.btnEliminar,
             this.toolStripSeparator4,
             this.btnCancelar,
-            this.btnRegresar,
             this.toolStripSeparator1,
             this.toolStripSplitButton1});
             this.toolStrip2.Location = new System.Drawing.Point(0, 0);
             this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(866, 25);
+            this.toolStrip2.Size = new System.Drawing.Size(871, 25);
             this.toolStrip2.TabIndex = 25;
             this.toolStrip2.Text = "toolStrip2";
             // 
@@ -187,7 +185,7 @@
             // btnNuevo
             // 
             this.btnNuevo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuevo.Image = global::BuildUp.Properties.Resources.new_file_icon_4;
+            this.btnNuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevo.Image")));
             this.btnNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(66, 22);
@@ -254,17 +252,6 @@
             this.btnCancelar.Text = "Limpiar y Cancelar";
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click_1);
             // 
-            // btnRegresar
-            // 
-            this.btnRegresar.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.btnRegresar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegresar.Image = ((System.Drawing.Image)(resources.GetObject("btnRegresar.Image")));
-            this.btnRegresar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Size = new System.Drawing.Size(81, 22);
-            this.btnRegresar.Text = "Regresar";
-            this.btnRegresar.Click += new System.EventHandler(this.btnVolver_Click);
-            // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
@@ -272,6 +259,7 @@
             // 
             // toolStripSplitButton1
             // 
+            this.toolStripSplitButton1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.toolStripSplitButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.porLíneaDeProducciónToolStripMenuItem,
             this.porMaquinariaToolStripMenuItem});
@@ -279,11 +267,13 @@
             this.toolStripSplitButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSplitButton1.Image")));
             this.toolStripSplitButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripSplitButton1.Name = "toolStripSplitButton1";
-            this.toolStripSplitButton1.Size = new System.Drawing.Size(93, 22);
-            this.toolStripSplitButton1.Text = "Reportes";
+            this.toolStripSplitButton1.Size = new System.Drawing.Size(174, 22);
+            this.toolStripSplitButton1.Text = "Reportes de Incidentes";
+            this.toolStripSplitButton1.ToolTipText = "Reportes";
             // 
             // porLíneaDeProducciónToolStripMenuItem
             // 
+            this.porLíneaDeProducciónToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("porLíneaDeProducciónToolStripMenuItem.Image")));
             this.porLíneaDeProducciónToolStripMenuItem.Name = "porLíneaDeProducciónToolStripMenuItem";
             this.porLíneaDeProducciónToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
             this.porLíneaDeProducciónToolStripMenuItem.Text = "Por Línea de Producción";
@@ -291,6 +281,7 @@
             // 
             // porMaquinariaToolStripMenuItem
             // 
+            this.porMaquinariaToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("porMaquinariaToolStripMenuItem.Image")));
             this.porMaquinariaToolStripMenuItem.Name = "porMaquinariaToolStripMenuItem";
             this.porMaquinariaToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
             this.porMaquinariaToolStripMenuItem.Text = "Por Maquinaria";
@@ -579,7 +570,6 @@
             this.txtNivelImp.Name = "txtNivelImp";
             this.txtNivelImp.Size = new System.Drawing.Size(102, 25);
             this.txtNivelImp.TabIndex = 28;
-            this.txtNivelImp.TextChanged += new System.EventHandler(this.txtNivelImp_TextChanged);
             // 
             // lblImportancia
             // 
@@ -590,7 +580,6 @@
             this.lblImportancia.Size = new System.Drawing.Size(77, 17);
             this.lblImportancia.TabIndex = 27;
             this.lblImportancia.Text = "Importancia";
-            this.lblImportancia.Click += new System.EventHandler(this.lblImportancia_Click);
             // 
             // txtIDProblema
             // 
@@ -624,13 +613,15 @@
             // 
             // btnBuscarProblema
             // 
+            this.btnBuscarProblema.BackColor = System.Drawing.SystemColors.Control;
+            this.btnBuscarProblema.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscarProblema.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscarProblema.Location = new System.Drawing.Point(388, 74);
             this.btnBuscarProblema.Name = "btnBuscarProblema";
             this.btnBuscarProblema.Size = new System.Drawing.Size(168, 30);
             this.btnBuscarProblema.TabIndex = 25;
             this.btnBuscarProblema.Text = "Buscar Problema...";
-            this.btnBuscarProblema.UseVisualStyleBackColor = true;
+            this.btnBuscarProblema.UseVisualStyleBackColor = false;
             this.btnBuscarProblema.Click += new System.EventHandler(this.btnBuscarProblema_Click);
             // 
             // txtProblema
@@ -802,8 +793,7 @@
             this.AutoScroll = true;
             this.AutoScrollMargin = new System.Drawing.Size(0, 60);
             this.BackColor = System.Drawing.Color.SlateGray;
-            this.ClientSize = new System.Drawing.Size(883, 621);
-            this.ControlBox = false;
+            this.ClientSize = new System.Drawing.Size(888, 621);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.groupBox4);
@@ -813,7 +803,6 @@
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "frmGestionarIncidencia";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestión de Incidentes de Maquinarias";
@@ -874,7 +863,6 @@
         private System.Windows.Forms.TextBox txtRespuesta;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker dtpFechaRespuesta;
-        private System.Windows.Forms.ToolStripButton btnRegresar;
         private System.Windows.Forms.Button btnBuscarProblema;
         private System.Windows.Forms.TextBox txtProblema;
         private System.Windows.Forms.Label lblProblema;

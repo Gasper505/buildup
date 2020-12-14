@@ -100,10 +100,10 @@ namespace BuildUp
             f.Show();
         }
 
-        private void btnReportes_Click(object sender, EventArgs e)
+        private void pbFoto_Click(object sender, EventArgs e)
         {
-            frmReportesProduccionJA f = new frmReportesProduccionJA();
-            f.Show();
+            frmGestionarUsuario formGestionarUsuario = new frmGestionarUsuario();
+            formGestionarUsuario.Show();
         }
     }
 }

@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.dgvRespuestas = new System.Windows.Forms.DataGridView();
-            this.btnSeleccionar = new System.Windows.Forms.Button();
             this.IDInsumo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreInsumo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnSeleccionar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRespuestas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,19 +54,6 @@
             this.dgvRespuestas.Size = new System.Drawing.Size(363, 349);
             this.dgvRespuestas.TabIndex = 7;
             // 
-            // btnSeleccionar
-            // 
-            this.btnSeleccionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSeleccionar.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSeleccionar.Location = new System.Drawing.Point(90, 385);
-            this.btnSeleccionar.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.btnSeleccionar.Name = "btnSeleccionar";
-            this.btnSeleccionar.Size = new System.Drawing.Size(251, 43);
-            this.btnSeleccionar.TabIndex = 8;
-            this.btnSeleccionar.Text = "Seleccionar";
-            this.btnSeleccionar.UseVisualStyleBackColor = true;
-            this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
-            // 
             // IDInsumo
             // 
             this.IDInsumo.DataPropertyName = "idRespuesta";
@@ -84,6 +71,19 @@
             this.NombreInsumo.Name = "NombreInsumo";
             this.NombreInsumo.ReadOnly = true;
             // 
+            // btnSeleccionar
+            // 
+            this.btnSeleccionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSeleccionar.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeleccionar.Location = new System.Drawing.Point(90, 385);
+            this.btnSeleccionar.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.btnSeleccionar.Name = "btnSeleccionar";
+            this.btnSeleccionar.Size = new System.Drawing.Size(251, 43);
+            this.btnSeleccionar.TabIndex = 8;
+            this.btnSeleccionar.Text = "Seleccionar";
+            this.btnSeleccionar.UseVisualStyleBackColor = true;
+            this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
+            // 
             // frmBuscarRespuesta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -93,6 +93,7 @@
             this.Controls.Add(this.dgvRespuestas);
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.MaximizeBox = false;
             this.Name = "frmBuscarRespuesta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Búsqueda de Respuestas";

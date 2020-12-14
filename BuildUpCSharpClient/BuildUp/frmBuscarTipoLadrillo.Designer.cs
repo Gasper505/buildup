@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.dgvTiposLadrillo = new System.Windows.Forms.DataGridView();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Largo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ancho = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Altura = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.txtBusqNombreLadrillo = new System.Windows.Forms.TextBox();
             this.btnSeleccionar = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Largo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ancho = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Altura = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTiposLadrillo)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -62,6 +62,35 @@
             this.dgvTiposLadrillo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvTiposLadrillo.Size = new System.Drawing.Size(528, 305);
             this.dgvTiposLadrillo.TabIndex = 0;
+            // 
+            // Nombre
+            // 
+            this.Nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Nombre.DataPropertyName = "nombre";
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            // 
+            // Largo
+            // 
+            this.Largo.DataPropertyName = "largo";
+            this.Largo.HeaderText = "Largo";
+            this.Largo.Name = "Largo";
+            this.Largo.ReadOnly = true;
+            // 
+            // Ancho
+            // 
+            this.Ancho.DataPropertyName = "ancho";
+            this.Ancho.HeaderText = "Ancho";
+            this.Ancho.Name = "Ancho";
+            this.Ancho.ReadOnly = true;
+            // 
+            // Altura
+            // 
+            this.Altura.DataPropertyName = "altura";
+            this.Altura.HeaderText = "Altura";
+            this.Altura.Name = "Altura";
+            this.Altura.ReadOnly = true;
             // 
             // label1
             // 
@@ -123,35 +152,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Parámetros de Búsqueda";
             // 
-            // Nombre
-            // 
-            this.Nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Nombre.DataPropertyName = "nombre";
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            // 
-            // Largo
-            // 
-            this.Largo.DataPropertyName = "largo";
-            this.Largo.HeaderText = "Largo";
-            this.Largo.Name = "Largo";
-            this.Largo.ReadOnly = true;
-            // 
-            // Ancho
-            // 
-            this.Ancho.DataPropertyName = "ancho";
-            this.Ancho.HeaderText = "Ancho";
-            this.Ancho.Name = "Ancho";
-            this.Ancho.ReadOnly = true;
-            // 
-            // Altura
-            // 
-            this.Altura.DataPropertyName = "altura";
-            this.Altura.HeaderText = "Altura";
-            this.Altura.Name = "Altura";
-            this.Altura.ReadOnly = true;
-            // 
             // frmBuscarTipoLadrillo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -163,6 +163,7 @@
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.MaximizeBox = false;
             this.Name = "frmBuscarTipoLadrillo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Búsqueda de Tipos de Ladrillo";
