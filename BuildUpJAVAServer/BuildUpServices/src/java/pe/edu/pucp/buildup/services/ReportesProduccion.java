@@ -39,16 +39,16 @@ public class ReportesProduccion {
             JasperReport reporteProd = (JasperReport)JRLoader.loadObjectFromFile(
                     ServletProdDiaria.class.getResource("/pe/edu/pucp/buildup/reports/ReporteProduccionDia.jasper").getFile());
             
+            //Registramos el Driver
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            //Creamos el objeto Connection
+            Connection con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.password);
+            
             
             //Creamos un HashMap para enviar los parámetros del reporte
             HashMap hm = new HashMap();
             hm.put("FECHA_REPORTE", fecha);
             
-            
-            //Registramos el Driver
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            //Creamos el objeto Connection
-            Connection con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.password);
             //Poblamos el reporte
             JasperPrint jp = JasperFillManager.fillReport(reporteProd, hm, con);
             
