@@ -40,10 +40,19 @@ namespace BuildUp
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            BindingList<IncidenteMaquinariaWS.incidenteMaquinaria> incs = 
-                new BindingList<IncidenteMaquinariaWS.incidenteMaquinaria>(daoIncidente.listarPorRangoFechaIncidenteMaquinaria(dtpDesde.Value, dtpHasta.Value).ToList());
+            try
+            {
+                BindingList<IncidenteMaquinariaWS.incidenteMaquinaria> incs =
+                    new BindingList<IncidenteMaquinariaWS.incidenteMaquinaria>(daoIncidente.listarPorRangoFechaIncidenteMaquinaria(dtpDesde.Value, dtpHasta.Value).ToList());
 
-            dgvIncidentes.DataSource = incs;
+                dgvIncidentes.DataSource = incs;
+
+            }
+            catch
+            {
+                MessageBox.Show("No se encontraron resultados", "Mensaje aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
         }
 
         private void dgvIncidentes_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)

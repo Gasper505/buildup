@@ -175,7 +175,8 @@ namespace BuildUp
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            ActiveForm.Show();
+
+            if (ActiveForm != null) ActiveForm.Show();
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)

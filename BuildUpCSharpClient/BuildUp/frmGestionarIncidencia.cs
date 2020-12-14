@@ -104,6 +104,7 @@ namespace BuildUp
                     txtRespuesta.Enabled = false;
                     tbDescripcionRespuesta.Enabled = false;
                     dtpFechaRespuesta.Enabled = false;
+                    txtDetalleProblema.Enabled = false;
 
                     break;
 
@@ -135,6 +136,7 @@ namespace BuildUp
                         txtApellidosSup.ReadOnly = true;
 
                         btnBuscarProblema.Enabled = true;
+                        txtDetalleProblema.Enabled = true;
                     }
                     
 
@@ -175,6 +177,7 @@ namespace BuildUp
 
                         txtProblema.Enabled = false;
                         btnBuscarProblema.Enabled = true;
+                        txtDetalleProblema.Enabled = true;
                     }
 
 
@@ -208,6 +211,11 @@ namespace BuildUp
                 MessageBox.Show("Debe seleccionar un tipo de problema", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+            if (txtDetalleProblema.Text == "")
+            {
+                MessageBox.Show("Debe ingresar un detalle del problema", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
 
 
@@ -232,6 +240,7 @@ namespace BuildUp
                 incidenteMaq.supervisor = supervisor;
                 incidenteMaq.maquinaria = maquinaria;
                 incidenteMaq.problema = problema;
+                incidenteMaq.detalleProblema = txtDetalleProblema.Text;
 
 
                 int result = daoIncidenteMaq.insertarProblemaIncidenteMaquinaria(incidenteMaq);
@@ -261,6 +270,8 @@ namespace BuildUp
                     txtRespuesta.Text = "";
                     tbDescripcionRespuesta.Text = "";
                     dtpFechaRespuesta.Text = "";
+
+                    txtDetalleProblema.Text = "";
                     EstablecerEstadoComponentes(Estado.Inicial);
                 }
                 else
@@ -295,6 +306,7 @@ namespace BuildUp
             txtRespuesta.Text = "";
             tbDescripcionRespuesta.Text = "";
             dtpFechaRespuesta.Text = "";
+            txtDetalleProblema.Text = "";
 
             frmBuscarIncidencia formBuscarIncidencia = new frmBuscarIncidencia();
             if (formBuscarIncidencia.ShowDialog() == DialogResult.OK)
@@ -315,6 +327,7 @@ namespace BuildUp
                 txtIDProblema.Text = incidenteMaq.problema.idProblema.ToString();
                 txtProblema.Text = incidenteMaq.problema.tipo;
                 txtNivelImp.Text = incidenteMaq.problema.nivelImportancia.ToString();
+                txtDetalleProblema.Text = incidenteMaq.detalleProblema;
 
                 if (incidenteMaq.estado)
                 {
@@ -366,6 +379,11 @@ namespace BuildUp
                     MessageBox.Show("Debe seleccionar un tipo de problema", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
+                if (txtDetalleProblema.Text == "")
+                {
+                    MessageBox.Show("Debe ingresar un detalle del problema", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
             }
             else
             {
@@ -403,6 +421,7 @@ namespace BuildUp
                 incidenteMaq.supervisor = supervisor;
                 incidenteMaq.maquinaria = maquinaria;
                 incidenteMaq.problema = problema;
+                incidenteMaq.detalleProblema = txtDetalleProblema.Text;
 
                 int result = 0;
                 if (frmLogIn.Usuario.rol == "Supervisor")//EL SUPERVISOR - AUN PUEDE MODIFICAR EL PROBLEMA DE LA INCIDENCIA
@@ -452,6 +471,7 @@ namespace BuildUp
                     txtRespuesta.Text = "";
                     tbDescripcionRespuesta.Text = "";
                     dtpFechaRespuesta.Text = "";
+                    txtDetalleProblema.Text = "";
                     EstablecerEstadoComponentes(Estado.Inicial);
                 }
                 else
@@ -491,6 +511,7 @@ namespace BuildUp
                 txtRespuesta.Text = "";
                 tbDescripcionRespuesta.Text = "";
                 dtpFechaRespuesta.Text = "";
+                txtDetalleProblema.Text = "";
                 EstablecerEstadoComponentes(Estado.Inicial);
             }
         }
@@ -500,7 +521,8 @@ namespace BuildUp
         private void btnVolver_Click(object sender, EventArgs e)
         {
             this.Hide();
-            ActiveForm.Show();
+
+            if (ActiveForm != null) ActiveForm.Show();
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -533,6 +555,7 @@ namespace BuildUp
             txtRespuesta.Text = "";
             tbDescripcionRespuesta.Text = "";
             dtpFechaRespuesta.Text = "";
+            txtDetalleProblema.Text = "";
             EstablecerEstadoComponentes(Estado.Inicial);
         }
 
@@ -607,6 +630,7 @@ namespace BuildUp
                 txtRespuesta.Text = "";
                 tbDescripcionRespuesta.Text = "";
                 dtpFechaRespuesta.Text = "";
+                txtDetalleProblema.Text = "";
                 EstablecerEstadoComponentes(Estado.Inicial);
             }
         }
@@ -632,6 +656,16 @@ namespace BuildUp
                 File.WriteAllBytes(sfdReporteIncidencia.FileName + ".pdf", arreglo);
             }
             MessageBox.Show("Se ha guardado correctamente", "Mensaje de Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+        }
+
+        private void lblImportancia_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNivelImp_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

@@ -320,7 +320,8 @@ namespace BuildUp
         private void tsbVolver_Click(object sender, EventArgs e)
         {
             this.Hide();
-            ActiveForm.Show();
+
+            if (ActiveForm != null) ActiveForm.Show();
         }
     }
 }

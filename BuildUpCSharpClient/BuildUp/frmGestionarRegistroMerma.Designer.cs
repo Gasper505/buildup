@@ -36,7 +36,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtIDRegMerma = new System.Windows.Forms.TextBox();
-            this.cboTipoMerma = new System.Windows.Forms.ComboBox();
             this.txtCantidad = new System.Windows.Forms.TextBox();
             this.dtpFechaMerma = new System.Windows.Forms.DateTimePicker();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
@@ -54,6 +53,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtSupervisor = new System.Windows.Forms.TextBox();
             this.txtLineaProduccion = new System.Windows.Forms.TextBox();
+            this.cboTipoMerma = new System.Windows.Forms.ComboBox();
             this.toolStrip2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -126,16 +126,6 @@
             this.txtIDRegMerma.Name = "txtIDRegMerma";
             this.txtIDRegMerma.Size = new System.Drawing.Size(100, 25);
             this.txtIDRegMerma.TabIndex = 7;
-            // 
-            // cboTipoMerma
-            // 
-            this.cboTipoMerma.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboTipoMerma.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboTipoMerma.FormattingEnabled = true;
-            this.cboTipoMerma.Location = new System.Drawing.Point(223, 55);
-            this.cboTipoMerma.Name = "cboTipoMerma";
-            this.cboTipoMerma.Size = new System.Drawing.Size(143, 25);
-            this.cboTipoMerma.TabIndex = 8;
             // 
             // txtCantidad
             // 
@@ -265,9 +255,9 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox1.Controls.Add(this.cboTipoMerma);
             this.groupBox1.Controls.Add(this.dtpFechaMerma);
             this.groupBox1.Controls.Add(this.txtCantidad);
-            this.groupBox1.Controls.Add(this.cboTipoMerma);
             this.groupBox1.Controls.Add(this.txtIDRegMerma);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
@@ -283,6 +273,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox2.Controls.Add(this.txtSupervisor);
             this.groupBox2.Controls.Add(this.txtLineaProduccion);
             this.groupBox2.Controls.Add(this.label3);
@@ -310,6 +301,14 @@
             this.txtLineaProduccion.Name = "txtLineaProduccion";
             this.txtLineaProduccion.Size = new System.Drawing.Size(206, 25);
             this.txtLineaProduccion.TabIndex = 4;
+            // 
+            // cboTipoMerma
+            // 
+            this.cboTipoMerma.FormattingEnabled = true;
+            this.cboTipoMerma.Location = new System.Drawing.Point(223, 55);
+            this.cboTipoMerma.Name = "cboTipoMerma";
+            this.cboTipoMerma.Size = new System.Drawing.Size(234, 25);
+            this.cboTipoMerma.TabIndex = 13;
             // 
             // frmGestionarRegistroMerma
             // 
@@ -345,7 +344,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtIDRegMerma;
-        private System.Windows.Forms.ComboBox cboTipoMerma;
         private System.Windows.Forms.TextBox txtCantidad;
         private System.Windows.Forms.DateTimePicker dtpFechaMerma;
         private System.Windows.Forms.ToolStrip toolStrip2;
@@ -363,5 +361,6 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox txtSupervisor;
         private System.Windows.Forms.TextBox txtLineaProduccion;
+        private System.Windows.Forms.ComboBox cboTipoMerma;
     }
 }

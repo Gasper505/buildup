@@ -165,8 +165,13 @@ namespace BuildUp
         private void btnRegresar_Click(object sender, EventArgs e)
         {
             this.Hide();
-            ActiveForm.Show();
+
+            if (ActiveForm != null) ActiveForm.Show();
         }
 
+        private void toolStrip2_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
     }
 }

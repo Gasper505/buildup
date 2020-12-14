@@ -71,6 +71,8 @@
             this.lblIDIng = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabProblema = new System.Windows.Forms.TabPage();
+            this.txtDetalleProblema = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.txtNivelImp = new System.Windows.Forms.TextBox();
             this.lblImportancia = new System.Windows.Forms.Label();
             this.txtIDProblema = new System.Windows.Forms.TextBox();
@@ -530,6 +532,8 @@
             // tabProblema
             // 
             this.tabProblema.BackColor = System.Drawing.Color.Ivory;
+            this.tabProblema.Controls.Add(this.txtDetalleProblema);
+            this.tabProblema.Controls.Add(this.label9);
             this.tabProblema.Controls.Add(this.txtNivelImp);
             this.tabProblema.Controls.Add(this.lblImportancia);
             this.tabProblema.Controls.Add(this.txtIDProblema);
@@ -545,25 +549,48 @@
             this.tabProblema.TabIndex = 0;
             this.tabProblema.Text = "Problema";
             // 
+            // txtDetalleProblema
+            // 
+            this.txtDetalleProblema.BackColor = System.Drawing.SystemColors.Window;
+            this.txtDetalleProblema.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDetalleProblema.Location = new System.Drawing.Point(270, 157);
+            this.txtDetalleProblema.Multiline = true;
+            this.txtDetalleProblema.Name = "txtDetalleProblema";
+            this.txtDetalleProblema.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtDetalleProblema.Size = new System.Drawing.Size(286, 101);
+            this.txtDetalleProblema.TabIndex = 30;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(112, 160);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(154, 17);
+            this.label9.TabIndex = 29;
+            this.label9.Text = "Detalles y Observaciones";
+            // 
             // txtNivelImp
             // 
             this.txtNivelImp.BackColor = System.Drawing.SystemColors.Window;
             this.txtNivelImp.Cursor = System.Windows.Forms.Cursors.Default;
             this.txtNivelImp.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNivelImp.Location = new System.Drawing.Point(270, 236);
+            this.txtNivelImp.Location = new System.Drawing.Point(270, 275);
             this.txtNivelImp.Name = "txtNivelImp";
             this.txtNivelImp.Size = new System.Drawing.Size(102, 25);
             this.txtNivelImp.TabIndex = 28;
+            this.txtNivelImp.TextChanged += new System.EventHandler(this.txtNivelImp_TextChanged);
             // 
             // lblImportancia
             // 
             this.lblImportancia.AutoSize = true;
             this.lblImportancia.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblImportancia.Location = new System.Drawing.Point(191, 239);
+            this.lblImportancia.Location = new System.Drawing.Point(191, 278);
             this.lblImportancia.Name = "lblImportancia";
             this.lblImportancia.Size = new System.Drawing.Size(77, 17);
             this.lblImportancia.TabIndex = 27;
             this.lblImportancia.Text = "Importancia";
+            this.lblImportancia.Click += new System.EventHandler(this.lblImportancia_Click);
             // 
             // txtIDProblema
             // 
@@ -612,7 +639,7 @@
             this.txtProblema.Location = new System.Drawing.Point(270, 117);
             this.txtProblema.Multiline = true;
             this.txtProblema.Name = "txtProblema";
-            this.txtProblema.Size = new System.Drawing.Size(375, 103);
+            this.txtProblema.Size = new System.Drawing.Size(286, 20);
             this.txtProblema.TabIndex = 24;
             // 
             // lblProblema
@@ -875,5 +902,7 @@
         private System.Windows.Forms.ToolStripSplitButton toolStripSplitButton1;
         private System.Windows.Forms.ToolStripMenuItem porLíneaDeProducciónToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem porMaquinariaToolStripMenuItem;
+        private System.Windows.Forms.TextBox txtDetalleProblema;
+        private System.Windows.Forms.Label label9;
     }
 }

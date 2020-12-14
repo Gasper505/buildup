@@ -15,7 +15,8 @@ namespace BuildUp
             // Arranque
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmReportesProduccionJA());
+            Application.Run(new frmLogIn());
+            //Application.Run(new frmReportesProduccionJA());
         }
     }
 }

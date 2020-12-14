@@ -122,12 +122,9 @@
   <xs:complexType name="listarRegistrosMermasPorSupervisorYRangoFechas">
     <xs:sequence>
       <xs:element minOccurs="0" name="nombreSup" type="xs:string" />
-      <xs:element minOccurs="0" name="fechaInicial" type="tns:date" />
-      <xs:element minOccurs="0" name="fechaFin" type="tns:date" />
+      <xs:element minOccurs="0" name="fechaInicial" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaFin" type="xs:dateTime" />
     </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="date">
-    <xs:sequence />
   </xs:complexType>
   <xs:complexType name="listarRegistrosMermasPorSupervisorYRangoFechasResponse">
     <xs:sequence>
