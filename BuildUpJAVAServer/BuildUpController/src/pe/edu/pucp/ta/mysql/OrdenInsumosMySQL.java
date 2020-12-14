@@ -98,7 +98,7 @@ public class OrdenInsumosMySQL implements OrdenInsumosDAO{
                 orden.setIdInsumo(rs.getInt("ID_INSUMO"));    
                 orden.getInsumo().setNombre(rs.getString("NOMBRE_INSUMO"));
                 orden.setCantidad(rs.getInt("CANTIDAD"));
-                orden.setEstado(rs.getBoolean("ESTADO_ORDEN"));
+                orden.setEstado(rs.getInt("ESTADO_ORDEN"));
                 ordenes.add(orden);
             }
         }catch(Exception ex){
@@ -126,10 +126,11 @@ public class OrdenInsumosMySQL implements OrdenInsumosDAO{
                 orden.setFecha(rs.getDate("FECHA_REGISTRO"));
                 orden.setIdOperario(rs.getInt("ID_OPERARIO"));    
                 orden.getOperario().setNombres(rs.getString("NOMBRE_OPERARIO"));
+                orden.getOperario().setApellidos(rs.getString("APELLIDO_OPERARIO"));
                 orden.setIdInsumo(rs.getInt("ID_INSUMO"));    
                 orden.getInsumo().setNombre(rs.getString("NOMBRE_INSUMO"));
                 orden.setCantidad(rs.getInt("CANTIDAD"));
-                orden.setEstado(rs.getBoolean("ESTADO_ORDEN"));
+                orden.setEstado(rs.getInt("ESTADO_ORDEN"));
                 ordenes.add(orden);
             }
         }catch(Exception ex){
@@ -158,6 +159,27 @@ public class OrdenInsumosMySQL implements OrdenInsumosDAO{
         }
         return resultado; 
     }
+
+    @Override
+    public int rechazar(int idOrdenInsumos) {
+    int resultado=0;
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.password);
+            String sql = "{call RECHAZAR_ORDEN_INSUMOS(?)}";
+            cs = con.prepareCall(sql);
+            cs.setInt("_ID_ORDEN_INSUMOS",idOrdenInsumos);
+            resultado=cs.executeUpdate();   
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }finally{
+            try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());}
+        }
+        return resultado; 
+    }
+    
+    
+    
     
     
 }

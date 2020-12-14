@@ -14,4 +14,5 @@ public interface OrdenInsumosDAO {
     ArrayList<OrdenInsumos> listar();
     ArrayList<OrdenInsumos> listar_por_fecha(Date fechaIni, Date fechaFin);
     int aceptar(int idOrdenInsumos);
+    int rechazar(int idOrdenInsumos);
 }

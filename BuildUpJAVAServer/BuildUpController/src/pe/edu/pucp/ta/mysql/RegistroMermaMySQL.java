@@ -139,12 +139,14 @@ public class RegistroMermaMySQL implements RegistroMermaDAO {
             while(rs.next()){
                 RegistroMerma regMerma = new RegistroMerma();
                 regMerma.setIdRegistroMerma(rs.getInt("ID_REGISTRO_MERMA"));
-                regMerma.getLineaProduccion().setIdLineaProduccion(rs.getInt("ID_LINEA_PRODUCCION"));  
+                regMerma.getLineaProduccion().setIdLineaProduccion(rs.getInt("ID_LINEA_PRODUCCION")); 
+                regMerma.getLineaProduccion().setNombre(rs.getString("NOMBRE_LINEA_PRODUCCION"));
                 regMerma.getSupervisor().setIdPersona(rs.getInt("ID_SUPERVISOR"));
-                regMerma.getMerma().setIdMerma(rs.getInt("ID_MERMA"));                                  //
+                regMerma.getSupervisor().setNombres(rs.getString("NOMBRE_SUPERVISOR"));
+                regMerma.getMerma().setIdMerma(rs.getInt("ID_MERMA"));  
+                regMerma.getMerma().setTipo(rs.getString("TIPO_MERMA"));
                 regMerma.setCantidad(rs.getInt("CANTIDAD"));
-                regMerma.setFecha(rs.getDate("FECHA"));
-                regMerma.setActivo(rs.getBoolean("ACTIVO"));                
+                regMerma.setFecha(rs.getDate("FECHA_REGISTRO"));            
                 registrosMermas.add(regMerma);
             }
         }catch(Exception ex){
