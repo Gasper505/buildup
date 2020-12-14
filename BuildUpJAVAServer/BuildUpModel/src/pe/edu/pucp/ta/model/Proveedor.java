@@ -9,6 +9,8 @@ public class Proveedor {
     private String correo;
     private String representante;
     private boolean activo;
+    private String ruc;
+    private String direccion;
 
     public Proveedor() {
     }
@@ -24,6 +26,22 @@ public class Proveedor {
         this.razonSocial = razonSocial;
         this.correo = correo;
         this.representante = representante;
+    }
+
+    public String getRuc() {
+        return ruc;
+    }
+
+    public void setRuc(String ruc) {
+        this.ruc = ruc;
+    }
+
+    public String getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
     }
 
     public int getIdProveedor() {
