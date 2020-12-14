@@ -41,9 +41,13 @@ namespace BuildUp
 
         private void button1_Click(object sender, EventArgs e)
         {
-            frmLogIn frmLog = new frmLogIn();
-            this.Hide();
-            frmLog.ShowDialog();
+            DialogResult dr = MessageBox.Show("¿Está seguro que desea cerrar su sesión?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (dr == DialogResult.Yes)
+            {
+                frmLogIn frmLog = new frmLogIn();
+                this.Hide();
+                frmLog.ShowDialog();
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)

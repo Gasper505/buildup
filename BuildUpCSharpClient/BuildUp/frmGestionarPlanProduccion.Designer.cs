@@ -302,22 +302,10 @@
             // 
             // txtAnho
             // 
+            this.txtAnho.BackColor = System.Drawing.SystemColors.Window;
             this.txtAnho.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.txtAnho.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAnho.FormattingEnabled = true;
-            this.txtAnho.Items.AddRange(new object[] {
-            "2021",
-            "2020",
-            "2019",
-            "2018",
-            "2017",
-            "2016",
-            "2015",
-            "2014",
-            "2013",
-            "2012",
-            "2011",
-            "2010"});
             this.txtAnho.Location = new System.Drawing.Point(258, 55);
             this.txtAnho.Name = "txtAnho";
             this.txtAnho.Size = new System.Drawing.Size(116, 25);

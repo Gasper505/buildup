@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.dgvTiposLadrillo = new System.Windows.Forms.DataGridView();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Largo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ancho = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Altura = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.txtBusqNombreLadrillo = new System.Windows.Forms.TextBox();
             this.btnSeleccionar = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Largo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ancho = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Altura = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTiposLadrillo)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -54,22 +54,82 @@
             this.Largo,
             this.Ancho,
             this.Altura});
-            this.dgvTiposLadrillo.Location = new System.Drawing.Point(39, 127);
-            this.dgvTiposLadrillo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgvTiposLadrillo.Location = new System.Drawing.Point(35, 141);
+            this.dgvTiposLadrillo.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.dgvTiposLadrillo.MultiSelect = false;
             this.dgvTiposLadrillo.Name = "dgvTiposLadrillo";
             this.dgvTiposLadrillo.ReadOnly = true;
             this.dgvTiposLadrillo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvTiposLadrillo.Size = new System.Drawing.Size(528, 269);
+            this.dgvTiposLadrillo.Size = new System.Drawing.Size(528, 305);
             this.dgvTiposLadrillo.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(20, 51);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(126, 17);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Nombre del Ladrillo";
+            // 
+            // txtBusqNombreLadrillo
+            // 
+            this.txtBusqNombreLadrillo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBusqNombreLadrillo.Location = new System.Drawing.Point(152, 48);
+            this.txtBusqNombreLadrillo.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.txtBusqNombreLadrillo.Name = "txtBusqNombreLadrillo";
+            this.txtBusqNombreLadrillo.Size = new System.Drawing.Size(206, 25);
+            this.txtBusqNombreLadrillo.TabIndex = 4;
+            // 
+            // btnSeleccionar
+            // 
+            this.btnSeleccionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSeleccionar.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeleccionar.Location = new System.Drawing.Point(170, 456);
+            this.btnSeleccionar.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.btnSeleccionar.Name = "btnSeleccionar";
+            this.btnSeleccionar.Size = new System.Drawing.Size(262, 44);
+            this.btnSeleccionar.TabIndex = 11;
+            this.btnSeleccionar.Text = "Seleccionar";
+            this.btnSeleccionar.UseVisualStyleBackColor = true;
+            this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.Location = new System.Drawing.Point(375, 42);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(129, 35);
+            this.btnBuscar.TabIndex = 12;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.btnBuscar);
+            this.groupBox1.Controls.Add(this.txtBusqNombreLadrillo);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(35, 25);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.groupBox1.Size = new System.Drawing.Size(528, 107);
+            this.groupBox1.TabIndex = 13;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Parámetros de Búsqueda";
             // 
             // Nombre
             // 
+            this.Nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Nombre.DataPropertyName = "nombre";
             this.Nombre.HeaderText = "Nombre";
             this.Nombre.Name = "Nombre";
             this.Nombre.ReadOnly = true;
-            this.Nombre.Width = 175;
             // 
             // Largo
             // 
@@ -92,77 +152,17 @@
             this.Altura.Name = "Altura";
             this.Altura.ReadOnly = true;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(20, 45);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(126, 17);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Nombre del Ladrillo";
-            // 
-            // txtBusqNombreLadrillo
-            // 
-            this.txtBusqNombreLadrillo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBusqNombreLadrillo.Location = new System.Drawing.Point(152, 42);
-            this.txtBusqNombreLadrillo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtBusqNombreLadrillo.Name = "txtBusqNombreLadrillo";
-            this.txtBusqNombreLadrillo.Size = new System.Drawing.Size(206, 25);
-            this.txtBusqNombreLadrillo.TabIndex = 4;
-            // 
-            // btnSeleccionar
-            // 
-            this.btnSeleccionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSeleccionar.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSeleccionar.Location = new System.Drawing.Point(170, 417);
-            this.btnSeleccionar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnSeleccionar.Name = "btnSeleccionar";
-            this.btnSeleccionar.Size = new System.Drawing.Size(262, 39);
-            this.btnSeleccionar.TabIndex = 11;
-            this.btnSeleccionar.Text = "Seleccionar";
-            this.btnSeleccionar.UseVisualStyleBackColor = true;
-            this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(375, 37);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(129, 31);
-            this.btnBuscar.TabIndex = 12;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.btnBuscar);
-            this.groupBox1.Controls.Add(this.txtBusqNombreLadrillo);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(39, 25);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox1.Size = new System.Drawing.Size(528, 94);
-            this.groupBox1.TabIndex = 13;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Parámetros de Búsqueda";
-            // 
             // frmBuscarTipoLadrillo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(607, 469);
+            this.ClientSize = new System.Drawing.Size(597, 515);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.dgvTiposLadrillo);
-            this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.Name = "frmBuscarTipoLadrillo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Búsqueda de Tipos de Ladrillo";

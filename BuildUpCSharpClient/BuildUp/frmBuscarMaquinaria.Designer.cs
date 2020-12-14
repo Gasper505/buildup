@@ -31,14 +31,14 @@
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnSeleccionar = new System.Windows.Forms.Button();
             this.dgvMaquinarias = new System.Windows.Forms.DataGridView();
-            this.NombreMaquinaria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreLineaProduccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Proveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbParametrosBusqueda = new System.Windows.Forms.GroupBox();
             this.txtBusqLineaProduccion = new System.Windows.Forms.TextBox();
             this.lblBusqLineaProduccion = new System.Windows.Forms.Label();
             this.txtBusqNombreMaq = new System.Windows.Forms.TextBox();
             this.lblBusqNombreMaq = new System.Windows.Forms.Label();
+            this.NombreMaquinaria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NombreLineaProduccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Proveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMaquinarias)).BeginInit();
             this.gbParametrosBusqueda.SuspendLayout();
             this.SuspendLayout();
@@ -47,9 +47,9 @@
             // 
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(544, 49);
+            this.btnBuscar.Location = new System.Drawing.Point(543, 54);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(157, 39);
+            this.btnBuscar.Size = new System.Drawing.Size(157, 37);
             this.btnBuscar.TabIndex = 11;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
@@ -59,9 +59,9 @@
             // 
             this.btnSeleccionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSeleccionar.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSeleccionar.Location = new System.Drawing.Point(275, 509);
+            this.btnSeleccionar.Location = new System.Drawing.Point(267, 559);
             this.btnSeleccionar.Name = "btnSeleccionar";
-            this.btnSeleccionar.Size = new System.Drawing.Size(262, 42);
+            this.btnSeleccionar.Size = new System.Drawing.Size(262, 43);
             this.btnSeleccionar.TabIndex = 10;
             this.btnSeleccionar.Text = "Seleccionar";
             this.btnSeleccionar.UseVisualStyleBackColor = true;
@@ -78,22 +78,73 @@
             this.NombreMaquinaria,
             this.NombreLineaProduccion,
             this.Proveedor});
-            this.dgvMaquinarias.Location = new System.Drawing.Point(38, 159);
+            this.dgvMaquinarias.Location = new System.Drawing.Point(30, 162);
             this.dgvMaquinarias.MultiSelect = false;
             this.dgvMaquinarias.Name = "dgvMaquinarias";
             this.dgvMaquinarias.ReadOnly = true;
             this.dgvMaquinarias.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMaquinarias.Size = new System.Drawing.Size(727, 335);
+            this.dgvMaquinarias.Size = new System.Drawing.Size(727, 380);
             this.dgvMaquinarias.TabIndex = 9;
             this.dgvMaquinarias.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvMaquinarias_CellFormatting);
             // 
+            // gbParametrosBusqueda
+            // 
+            this.gbParametrosBusqueda.Controls.Add(this.btnBuscar);
+            this.gbParametrosBusqueda.Controls.Add(this.txtBusqLineaProduccion);
+            this.gbParametrosBusqueda.Controls.Add(this.lblBusqLineaProduccion);
+            this.gbParametrosBusqueda.Controls.Add(this.txtBusqNombreMaq);
+            this.gbParametrosBusqueda.Controls.Add(this.lblBusqNombreMaq);
+            this.gbParametrosBusqueda.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbParametrosBusqueda.Location = new System.Drawing.Point(30, 32);
+            this.gbParametrosBusqueda.Name = "gbParametrosBusqueda";
+            this.gbParametrosBusqueda.Size = new System.Drawing.Size(727, 124);
+            this.gbParametrosBusqueda.TabIndex = 8;
+            this.gbParametrosBusqueda.TabStop = false;
+            this.gbParametrosBusqueda.Text = "Parámetros de Búsqueda";
+            // 
+            // txtBusqLineaProduccion
+            // 
+            this.txtBusqLineaProduccion.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBusqLineaProduccion.Location = new System.Drawing.Point(237, 71);
+            this.txtBusqLineaProduccion.Name = "txtBusqLineaProduccion";
+            this.txtBusqLineaProduccion.Size = new System.Drawing.Size(279, 25);
+            this.txtBusqLineaProduccion.TabIndex = 6;
+            // 
+            // lblBusqLineaProduccion
+            // 
+            this.lblBusqLineaProduccion.AutoSize = true;
+            this.lblBusqLineaProduccion.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBusqLineaProduccion.Location = new System.Drawing.Point(19, 74);
+            this.lblBusqLineaProduccion.Name = "lblBusqLineaProduccion";
+            this.lblBusqLineaProduccion.Size = new System.Drawing.Size(212, 17);
+            this.lblBusqLineaProduccion.TabIndex = 5;
+            this.lblBusqLineaProduccion.Text = "Nombre de la Línea de Producción";
+            // 
+            // txtBusqNombreMaq
+            // 
+            this.txtBusqNombreMaq.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBusqNombreMaq.Location = new System.Drawing.Point(237, 40);
+            this.txtBusqNombreMaq.Name = "txtBusqNombreMaq";
+            this.txtBusqNombreMaq.Size = new System.Drawing.Size(279, 25);
+            this.txtBusqNombreMaq.TabIndex = 4;
+            // 
+            // lblBusqNombreMaq
+            // 
+            this.lblBusqNombreMaq.AutoSize = true;
+            this.lblBusqNombreMaq.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBusqNombreMaq.Location = new System.Drawing.Point(71, 43);
+            this.lblBusqNombreMaq.Name = "lblBusqNombreMaq";
+            this.lblBusqNombreMaq.Size = new System.Drawing.Size(160, 17);
+            this.lblBusqNombreMaq.TabIndex = 0;
+            this.lblBusqNombreMaq.Text = "Nombre de la Maquinaria";
+            // 
             // NombreMaquinaria
             // 
+            this.NombreMaquinaria.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.NombreMaquinaria.DataPropertyName = "nombre";
             this.NombreMaquinaria.HeaderText = "Nombre Maquinaria";
             this.NombreMaquinaria.Name = "NombreMaquinaria";
             this.NombreMaquinaria.ReadOnly = true;
-            this.NombreMaquinaria.Width = 240;
             // 
             // NombreLineaProduccion
             // 
@@ -109,66 +160,15 @@
             this.Proveedor.ReadOnly = true;
             this.Proveedor.Width = 185;
             // 
-            // gbParametrosBusqueda
-            // 
-            this.gbParametrosBusqueda.Controls.Add(this.btnBuscar);
-            this.gbParametrosBusqueda.Controls.Add(this.txtBusqLineaProduccion);
-            this.gbParametrosBusqueda.Controls.Add(this.lblBusqLineaProduccion);
-            this.gbParametrosBusqueda.Controls.Add(this.txtBusqNombreMaq);
-            this.gbParametrosBusqueda.Controls.Add(this.lblBusqNombreMaq);
-            this.gbParametrosBusqueda.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbParametrosBusqueda.Location = new System.Drawing.Point(38, 29);
-            this.gbParametrosBusqueda.Name = "gbParametrosBusqueda";
-            this.gbParametrosBusqueda.Size = new System.Drawing.Size(727, 124);
-            this.gbParametrosBusqueda.TabIndex = 8;
-            this.gbParametrosBusqueda.TabStop = false;
-            this.gbParametrosBusqueda.Text = "Parámetros de Búsqueda";
-            // 
-            // txtBusqLineaProduccion
-            // 
-            this.txtBusqLineaProduccion.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBusqLineaProduccion.Location = new System.Drawing.Point(237, 68);
-            this.txtBusqLineaProduccion.Name = "txtBusqLineaProduccion";
-            this.txtBusqLineaProduccion.Size = new System.Drawing.Size(279, 25);
-            this.txtBusqLineaProduccion.TabIndex = 6;
-            // 
-            // lblBusqLineaProduccion
-            // 
-            this.lblBusqLineaProduccion.AutoSize = true;
-            this.lblBusqLineaProduccion.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBusqLineaProduccion.Location = new System.Drawing.Point(19, 71);
-            this.lblBusqLineaProduccion.Name = "lblBusqLineaProduccion";
-            this.lblBusqLineaProduccion.Size = new System.Drawing.Size(212, 17);
-            this.lblBusqLineaProduccion.TabIndex = 5;
-            this.lblBusqLineaProduccion.Text = "Nombre de la Línea de Producción";
-            // 
-            // txtBusqNombreMaq
-            // 
-            this.txtBusqNombreMaq.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBusqNombreMaq.Location = new System.Drawing.Point(237, 34);
-            this.txtBusqNombreMaq.Name = "txtBusqNombreMaq";
-            this.txtBusqNombreMaq.Size = new System.Drawing.Size(279, 25);
-            this.txtBusqNombreMaq.TabIndex = 4;
-            // 
-            // lblBusqNombreMaq
-            // 
-            this.lblBusqNombreMaq.AutoSize = true;
-            this.lblBusqNombreMaq.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBusqNombreMaq.Location = new System.Drawing.Point(71, 37);
-            this.lblBusqNombreMaq.Name = "lblBusqNombreMaq";
-            this.lblBusqNombreMaq.Size = new System.Drawing.Size(160, 17);
-            this.lblBusqNombreMaq.TabIndex = 0;
-            this.lblBusqNombreMaq.Text = "Nombre de la Maquinaria";
-            // 
             // frmBuscarMaquinaria
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 573);
+            this.ClientSize = new System.Drawing.Size(791, 624);
             this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.dgvMaquinarias);
             this.Controls.Add(this.gbParametrosBusqueda);
-            this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "frmBuscarMaquinaria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -39,9 +39,11 @@
             this.btn_Ingresar = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.btnMinimizar = new System.Windows.Forms.Button();
+            this.pbLoading = new System.Windows.Forms.PictureBox();
             this.panelLogeo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picContrasena)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picUsuario)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLoading)).BeginInit();
             this.SuspendLayout();
             // 
             // txtUsuario
@@ -68,6 +70,7 @@
             // panelLogeo
             // 
             this.panelLogeo.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panelLogeo.Controls.Add(this.pbLoading);
             this.panelLogeo.Controls.Add(this.lblInfoLogueo);
             this.panelLogeo.Controls.Add(this.picContrasena);
             this.panelLogeo.Controls.Add(this.picUsuario);
@@ -125,11 +128,17 @@
             this.btnMinimizar.UseVisualStyleBackColor = false;
             this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
             // 
+            // pbLoading
+            // 
+            resources.ApplyResources(this.pbLoading, "pbLoading");
+            this.pbLoading.Name = "pbLoading";
+            this.pbLoading.TabStop = false;
+            // 
             // frmLogIn
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(66)))), ((int)(((byte)(17)))));
             this.ControlBox = false;
             this.Controls.Add(this.btnMinimizar);
             this.Controls.Add(this.panelLogeo);
@@ -141,6 +150,7 @@
             this.panelLogeo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picContrasena)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picUsuario)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLoading)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -157,5 +167,6 @@
         private System.Windows.Forms.Panel panelLogeo;
         private System.Windows.Forms.Label lblInfoLogueo;
         private System.Windows.Forms.Button btnMinimizar;
+        private System.Windows.Forms.PictureBox pbLoading;
     }
 }

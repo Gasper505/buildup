@@ -29,10 +29,6 @@
         private void InitializeComponent()
         {
             this.dgvUsuarios = new System.Windows.Forms.DataGridView();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ApPat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Correo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cargo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbParametrosBusqueda = new System.Windows.Forms.GroupBox();
             this.cboCargo = new System.Windows.Forms.ComboBox();
             this.lblCargo = new System.Windows.Forms.Label();
@@ -44,6 +40,10 @@
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.lblUsername = new System.Windows.Forms.Label();
             this.btnSeleccionar = new System.Windows.Forms.Button();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ApPat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Correo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cargo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
             this.gbParametrosBusqueda.SuspendLayout();
             this.SuspendLayout();
@@ -60,46 +60,14 @@
             this.ApPat,
             this.Correo,
             this.Cargo});
-            this.dgvUsuarios.Location = new System.Drawing.Point(41, 246);
-            this.dgvUsuarios.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgvUsuarios.Location = new System.Drawing.Point(32, 237);
+            this.dgvUsuarios.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.dgvUsuarios.MultiSelect = false;
             this.dgvUsuarios.Name = "dgvUsuarios";
             this.dgvUsuarios.ReadOnly = true;
             this.dgvUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvUsuarios.Size = new System.Drawing.Size(708, 341);
+            this.dgvUsuarios.Size = new System.Drawing.Size(708, 386);
             this.dgvUsuarios.TabIndex = 9;
-            // 
-            // Nombre
-            // 
-            this.Nombre.DataPropertyName = "nombres";
-            this.Nombre.HeaderText = "Nombre(s)";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            this.Nombre.Width = 175;
-            // 
-            // ApPat
-            // 
-            this.ApPat.DataPropertyName = "apellidos";
-            this.ApPat.HeaderText = "Apellidos";
-            this.ApPat.Name = "ApPat";
-            this.ApPat.ReadOnly = true;
-            this.ApPat.Width = 175;
-            // 
-            // Correo
-            // 
-            this.Correo.DataPropertyName = "correo";
-            this.Correo.HeaderText = "Correo";
-            this.Correo.Name = "Correo";
-            this.Correo.ReadOnly = true;
-            this.Correo.Width = 175;
-            // 
-            // Cargo
-            // 
-            this.Cargo.DataPropertyName = "rol";
-            this.Cargo.HeaderText = "Cargo";
-            this.Cargo.Name = "Cargo";
-            this.Cargo.ReadOnly = true;
-            this.Cargo.Width = 140;
             // 
             // gbParametrosBusqueda
             // 
@@ -114,11 +82,11 @@
             this.gbParametrosBusqueda.Controls.Add(this.txtUsername);
             this.gbParametrosBusqueda.Controls.Add(this.lblUsername);
             this.gbParametrosBusqueda.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbParametrosBusqueda.Location = new System.Drawing.Point(41, 27);
-            this.gbParametrosBusqueda.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.gbParametrosBusqueda.Location = new System.Drawing.Point(32, 29);
+            this.gbParametrosBusqueda.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.gbParametrosBusqueda.Name = "gbParametrosBusqueda";
-            this.gbParametrosBusqueda.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.gbParametrosBusqueda.Size = new System.Drawing.Size(708, 194);
+            this.gbParametrosBusqueda.Padding = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.gbParametrosBusqueda.Size = new System.Drawing.Size(708, 198);
             this.gbParametrosBusqueda.TabIndex = 11;
             this.gbParametrosBusqueda.TabStop = false;
             this.gbParametrosBusqueda.Text = "Parámetros de Búsqueda";
@@ -133,8 +101,8 @@
             "Supervisor",
             "Ingeniero",
             "Operario"});
-            this.cboCargo.Location = new System.Drawing.Point(138, 143);
-            this.cboCargo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cboCargo.Location = new System.Drawing.Point(138, 149);
+            this.cboCargo.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.cboCargo.Name = "cboCargo";
             this.cboCargo.Size = new System.Drawing.Size(156, 25);
             this.cboCargo.TabIndex = 15;
@@ -143,7 +111,7 @@
             // 
             this.lblCargo.AutoSize = true;
             this.lblCargo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCargo.Location = new System.Drawing.Point(105, 146);
+            this.lblCargo.Location = new System.Drawing.Point(105, 152);
             this.lblCargo.Name = "lblCargo";
             this.lblCargo.Size = new System.Drawing.Size(27, 17);
             this.lblCargo.TabIndex = 14;
@@ -152,8 +120,8 @@
             // txtApellido
             // 
             this.txtApellido.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApellido.Location = new System.Drawing.Point(138, 108);
-            this.txtApellido.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtApellido.Location = new System.Drawing.Point(138, 114);
+            this.txtApellido.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(306, 25);
             this.txtApellido.TabIndex = 13;
@@ -162,10 +130,10 @@
             // 
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(486, 135);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnBuscar.Location = new System.Drawing.Point(488, 132);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(176, 37);
+            this.btnBuscar.Size = new System.Drawing.Size(176, 42);
             this.btnBuscar.TabIndex = 11;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
@@ -175,7 +143,7 @@
             // 
             this.lblApellidos.AutoSize = true;
             this.lblApellidos.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblApellidos.Location = new System.Drawing.Point(70, 110);
+            this.lblApellidos.Location = new System.Drawing.Point(70, 117);
             this.lblApellidos.Name = "lblApellidos";
             this.lblApellidos.Size = new System.Drawing.Size(62, 17);
             this.lblApellidos.TabIndex = 12;
@@ -184,8 +152,8 @@
             // txtNombre
             // 
             this.txtNombre.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(138, 78);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtNombre.Location = new System.Drawing.Point(138, 79);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(306, 25);
             this.txtNombre.TabIndex = 6;
@@ -194,7 +162,7 @@
             // 
             this.lblNombres.AutoSize = true;
             this.lblNombres.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombres.Location = new System.Drawing.Point(61, 80);
+            this.lblNombres.Location = new System.Drawing.Point(61, 82);
             this.lblNombres.Name = "lblNombres";
             this.lblNombres.Size = new System.Drawing.Size(71, 17);
             this.lblNombres.TabIndex = 5;
@@ -204,7 +172,7 @@
             // 
             this.txtUsername.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.Location = new System.Drawing.Point(138, 44);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(223, 25);
             this.txtUsername.TabIndex = 4;
@@ -223,27 +191,59 @@
             // 
             this.btnSeleccionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSeleccionar.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSeleccionar.Location = new System.Drawing.Point(265, 609);
-            this.btnSeleccionar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnSeleccionar.Location = new System.Drawing.Point(253, 633);
+            this.btnSeleccionar.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnSeleccionar.Name = "btnSeleccionar";
-            this.btnSeleccionar.Size = new System.Drawing.Size(262, 38);
+            this.btnSeleccionar.Size = new System.Drawing.Size(262, 43);
             this.btnSeleccionar.TabIndex = 12;
             this.btnSeleccionar.Text = "Seleccionar";
             this.btnSeleccionar.UseVisualStyleBackColor = true;
             this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
             // 
+            // Nombre
+            // 
+            this.Nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Nombre.DataPropertyName = "nombres";
+            this.Nombre.HeaderText = "Nombre(s)";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            // 
+            // ApPat
+            // 
+            this.ApPat.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ApPat.DataPropertyName = "apellidos";
+            this.ApPat.HeaderText = "Apellidos";
+            this.ApPat.Name = "ApPat";
+            this.ApPat.ReadOnly = true;
+            // 
+            // Correo
+            // 
+            this.Correo.DataPropertyName = "correo";
+            this.Correo.HeaderText = "Correo";
+            this.Correo.Name = "Correo";
+            this.Correo.ReadOnly = true;
+            this.Correo.Width = 175;
+            // 
+            // Cargo
+            // 
+            this.Cargo.DataPropertyName = "rol";
+            this.Cargo.HeaderText = "Cargo";
+            this.Cargo.Name = "Cargo";
+            this.Cargo.ReadOnly = true;
+            this.Cargo.Width = 140;
+            // 
             // frmBuscarUsuario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(795, 664);
+            this.ClientSize = new System.Drawing.Size(773, 690);
             this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.gbParametrosBusqueda);
             this.Controls.Add(this.dgvUsuarios);
-            this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.Name = "frmBuscarUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Búsqueda de Usuarios";

@@ -62,7 +62,6 @@
             this.btnCancelar = new System.Windows.Forms.ToolStripButton();
             this.btnRegresar = new System.Windows.Forms.ToolStripButton();
             this.gbUsuario = new System.Windows.Forms.GroupBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.exclusiveLabel = new System.Windows.Forms.Label();
@@ -70,7 +69,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
             this.toolStrip2.SuspendLayout();
             this.gbUsuario.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -241,7 +239,7 @@
             this.txtID.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtID.Location = new System.Drawing.Point(40, 57);
             this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(105, 25);
+            this.txtID.Size = new System.Drawing.Size(72, 25);
             this.txtID.TabIndex = 23;
             // 
             // btAgregarFoto
@@ -383,7 +381,6 @@
             // gbUsuario
             // 
             this.gbUsuario.BackColor = System.Drawing.SystemColors.Control;
-            this.gbUsuario.Controls.Add(this.pictureBox6);
             this.gbUsuario.Controls.Add(this.label3);
             this.gbUsuario.Controls.Add(this.txtUsername);
             this.gbUsuario.Controls.Add(this.exclusiveLabel);
@@ -410,26 +407,15 @@
             this.gbUsuario.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbUsuario.Location = new System.Drawing.Point(43, 52);
             this.gbUsuario.Name = "gbUsuario";
-            this.gbUsuario.Size = new System.Drawing.Size(571, 509);
+            this.gbUsuario.Size = new System.Drawing.Size(571, 497);
             this.gbUsuario.TabIndex = 44;
             this.gbUsuario.TabStop = false;
             this.gbUsuario.Text = "Datos del Usuario";
             // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox6.Image = global::BuildUp.Properties.Resources.bup;
-            this.pictureBox6.Location = new System.Drawing.Point(489, 483);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(82, 26);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 45;
-            this.pictureBox6.TabStop = false;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(37, 423);
+            this.label3.Location = new System.Drawing.Point(37, 416);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(67, 17);
             this.label3.TabIndex = 27;
@@ -437,9 +423,9 @@
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(40, 443);
+            this.txtUsername.Location = new System.Drawing.Point(40, 436);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(174, 25);
+            this.txtUsername.Size = new System.Drawing.Size(186, 25);
             this.txtUsername.TabIndex = 26;
             // 
             // exclusiveLabel
@@ -466,13 +452,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SlateGray;
-            this.ClientSize = new System.Drawing.Size(652, 591);
-            this.ControlBox = false;
+            this.ClientSize = new System.Drawing.Size(652, 585);
             this.Controls.Add(this.gbUsuario);
             this.Controls.Add(this.toolStrip2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "frmGestionarUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestión de Usuarios";
@@ -481,7 +467,6 @@
             this.toolStrip2.PerformLayout();
             this.gbUsuario.ResumeLayout(false);
             this.gbUsuario.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -526,6 +511,5 @@
         private System.Windows.Forms.ComboBox exclusiveComboBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtUsername;
-        private System.Windows.Forms.PictureBox pictureBox6;
     }
 }

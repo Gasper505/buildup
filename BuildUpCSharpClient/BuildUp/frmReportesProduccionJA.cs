@@ -38,7 +38,11 @@ namespace BuildUp
             if (sfdReportesProduccion.FileName != null && sfdReportesProduccion.FileName != "")
             {
                 byte[] arreglo = daoReportesProduccion.generarReporteProduccionDiario(dtpFecha.Value);
-                File.WriteAllBytes(sfdReportesProduccion.FileName + ".pdf", arreglo);
+                //frmBuscarIncidencia formJefeArea = new frmBuscarIncidencia();
+                //formJefeArea.Show();
+                sfdReportesProduccion.FileName = "ReporteDiarioProduccion.pdf";
+                File.WriteAllBytes(sfdReportesProduccion.FileName, arreglo);
+                //formJefeArea.Hide();
                 MessageBox.Show("El reporte se ha guardado exitosamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             
@@ -92,7 +96,8 @@ namespace BuildUp
                 }
 
                 byte[] arreglo = daoReportesProduccion.generarReporteProduccionMensual(mes, Int32.Parse(cboAnho.Text));
-                File.WriteAllBytes(sfdReportesProduccion.FileName + ".pdf", arreglo);
+                sfdReportesProduccion.FileName = "ReporteMensualProduccion.pdf";
+                File.WriteAllBytes(sfdReportesProduccion.FileName, arreglo);
                 MessageBox.Show("El reporte se ha guardado exitosamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }

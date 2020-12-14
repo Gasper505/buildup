@@ -54,7 +54,7 @@
             this.panelAdmin.Controls.Add(this.panel3);
             this.panelAdmin.Location = new System.Drawing.Point(2, 111);
             this.panelAdmin.Name = "panelAdmin";
-            this.panelAdmin.Size = new System.Drawing.Size(807, 342);
+            this.panelAdmin.Size = new System.Drawing.Size(705, 396);
             this.panelAdmin.TabIndex = 1;
             // 
             // lblNombres
@@ -72,9 +72,9 @@
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(336, 258);
+            this.button2.Location = new System.Drawing.Point(288, 290);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(129, 48);
+            this.button2.Size = new System.Drawing.Size(140, 48);
             this.button2.TabIndex = 24;
             this.button2.Text = "Gestión de Usuarios";
             this.button2.UseVisualStyleBackColor = true;
@@ -85,9 +85,9 @@
             this.pictureBox2.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.Image = global::BuildUp.Properties.Resources.icono_usuario_6091_78;
-            this.pictureBox2.Location = new System.Drawing.Point(336, 110);
+            this.pictureBox2.Location = new System.Drawing.Point(288, 142);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(129, 142);
+            this.pictureBox2.Size = new System.Drawing.Size(140, 142);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 21;
             this.pictureBox2.TabStop = false;
@@ -134,7 +134,7 @@
             this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrarSesion.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrarSesion.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(674, 62);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(574, 62);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.Size = new System.Drawing.Size(115, 31);
             this.btnCerrarSesion.TabIndex = 11;
@@ -146,9 +146,11 @@
             // 
             this.pbFoto.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.pbFoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbFoto.Location = new System.Drawing.Point(590, 12);
+            this.pbFoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbFoto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbFoto.Location = new System.Drawing.Point(481, 12);
             this.pbFoto.Name = "pbFoto";
-            this.pbFoto.Size = new System.Drawing.Size(78, 93);
+            this.pbFoto.Size = new System.Drawing.Size(87, 93);
             this.pbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbFoto.TabIndex = 19;
             this.pbFoto.TabStop = false;
@@ -158,7 +160,7 @@
             this.lblUsername.AutoSize = true;
             this.lblUsername.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsername.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblUsername.Location = new System.Drawing.Point(674, 42);
+            this.lblUsername.Location = new System.Drawing.Point(574, 42);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(0, 17);
             this.lblUsername.TabIndex = 29;
@@ -168,7 +170,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.ClientSize = new System.Drawing.Size(809, 465);
+            this.ClientSize = new System.Drawing.Size(708, 541);
             this.Controls.Add(this.lblUsername);
             this.Controls.Add(this.panelAdmin);
             this.Controls.Add(this.pbFoto);

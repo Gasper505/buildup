@@ -60,13 +60,13 @@
             this.Column5,
             this.Column3,
             this.Column4});
-            this.dgvRegistrosMerma.Location = new System.Drawing.Point(56, 183);
-            this.dgvRegistrosMerma.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgvRegistrosMerma.Location = new System.Drawing.Point(35, 208);
+            this.dgvRegistrosMerma.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.dgvRegistrosMerma.MultiSelect = false;
             this.dgvRegistrosMerma.Name = "dgvRegistrosMerma";
             this.dgvRegistrosMerma.ReadOnly = true;
             this.dgvRegistrosMerma.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvRegistrosMerma.Size = new System.Drawing.Size(695, 288);
+            this.dgvRegistrosMerma.Size = new System.Drawing.Size(730, 326);
             this.dgvRegistrosMerma.TabIndex = 0;
             this.dgvRegistrosMerma.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvRegistrosMerma_CellFormatting);
             // 
@@ -74,7 +74,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(38, 39);
+            this.label1.Location = new System.Drawing.Point(24, 44);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(212, 17);
             this.label1.TabIndex = 1;
@@ -84,10 +84,10 @@
             // 
             this.btnSeleccionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSeleccionar.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSeleccionar.Location = new System.Drawing.Point(259, 479);
-            this.btnSeleccionar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnSeleccionar.Location = new System.Drawing.Point(268, 544);
+            this.btnSeleccionar.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnSeleccionar.Name = "btnSeleccionar";
-            this.btnSeleccionar.Size = new System.Drawing.Size(262, 41);
+            this.btnSeleccionar.Size = new System.Drawing.Size(262, 46);
             this.btnSeleccionar.TabIndex = 12;
             this.btnSeleccionar.Text = "Seleccionar";
             this.btnSeleccionar.UseVisualStyleBackColor = true;
@@ -97,10 +97,10 @@
             // 
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(521, 64);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnBuscar.Location = new System.Drawing.Point(510, 69);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(162, 36);
+            this.btnBuscar.Size = new System.Drawing.Size(174, 41);
             this.btnBuscar.TabIndex = 13;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
@@ -116,11 +116,11 @@
             this.gbBusqueda.Controls.Add(this.btnBuscar);
             this.gbBusqueda.Controls.Add(this.label1);
             this.gbBusqueda.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbBusqueda.Location = new System.Drawing.Point(35, 26);
-            this.gbBusqueda.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.gbBusqueda.Location = new System.Drawing.Point(35, 29);
+            this.gbBusqueda.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.gbBusqueda.Name = "gbBusqueda";
-            this.gbBusqueda.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.gbBusqueda.Size = new System.Drawing.Size(732, 149);
+            this.gbBusqueda.Padding = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.gbBusqueda.Size = new System.Drawing.Size(730, 169);
             this.gbBusqueda.TabIndex = 14;
             this.gbBusqueda.TabStop = false;
             this.gbBusqueda.Text = "Parámetros de Búsqueda";
@@ -128,8 +128,8 @@
             // txtNombreSup
             // 
             this.txtNombreSup.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreSup.Location = new System.Drawing.Point(256, 36);
-            this.txtNombreSup.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtNombreSup.Location = new System.Drawing.Point(242, 41);
+            this.txtNombreSup.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtNombreSup.Name = "txtNombreSup";
             this.txtNombreSup.Size = new System.Drawing.Size(230, 25);
             this.txtNombreSup.TabIndex = 18;
@@ -138,8 +138,8 @@
             // 
             this.dateTimePicker2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(256, 102);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dateTimePicker2.Location = new System.Drawing.Point(242, 111);
+            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(230, 25);
             this.dateTimePicker2.TabIndex = 17;
@@ -148,7 +148,7 @@
             // 
             this.lblHasta.AutoSize = true;
             this.lblHasta.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHasta.Location = new System.Drawing.Point(209, 108);
+            this.lblHasta.Location = new System.Drawing.Point(195, 117);
             this.lblHasta.Name = "lblHasta";
             this.lblHasta.Size = new System.Drawing.Size(41, 17);
             this.lblHasta.TabIndex = 16;
@@ -158,7 +158,7 @@
             // 
             this.lblDesde.AutoSize = true;
             this.lblDesde.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDesde.Location = new System.Drawing.Point(205, 75);
+            this.lblDesde.Location = new System.Drawing.Point(191, 82);
             this.lblDesde.Name = "lblDesde";
             this.lblDesde.Size = new System.Drawing.Size(45, 17);
             this.lblDesde.TabIndex = 15;
@@ -168,8 +168,8 @@
             // 
             this.dateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(256, 69);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dateTimePicker1.Location = new System.Drawing.Point(242, 76);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(230, 25);
             this.dateTimePicker1.TabIndex = 14;
@@ -192,11 +192,11 @@
             // 
             // Column5
             // 
+            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column5.DataPropertyName = "fecha";
             this.Column5.HeaderText = "Fecha";
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
-            this.Column5.Width = 175;
             // 
             // Column3
             // 
@@ -207,22 +207,22 @@
             // 
             // Column4
             // 
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column4.HeaderText = "Linea Producción";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
-            this.Column4.Width = 150;
             // 
             // frmBuscarRegistroMerma
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 537);
+            this.ClientSize = new System.Drawing.Size(800, 602);
             this.Controls.Add(this.gbBusqueda);
             this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.dgvRegistrosMerma);
-            this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.Name = "frmBuscarRegistroMerma";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Búsqueda de Registros de Merma";

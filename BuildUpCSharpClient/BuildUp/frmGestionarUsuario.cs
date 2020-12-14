@@ -32,11 +32,12 @@ namespace BuildUp
         LineaProduccionWS.lineaProduccion lineaP;
         LineaProduccionWS.LineaProduccionWSClient daoLineaP;
 
-
+        
         UsuarioWS.persona usuario;
 
         public frmGestionarUsuario()
         {
+            
             InitializeComponent();
             EstablecerEstadoComponentes(Estado.Inicial);
             daoUsuario = new UsuarioWS.UsuarioWSClient();

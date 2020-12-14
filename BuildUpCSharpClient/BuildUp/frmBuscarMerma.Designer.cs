@@ -47,9 +47,9 @@
             this.groupBox1.Controls.Add(this.txtTipoMerma);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(43, 31);
+            this.groupBox1.Location = new System.Drawing.Point(39, 35);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(511, 90);
+            this.groupBox1.Size = new System.Drawing.Size(511, 102);
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Parámetros de Búsqueda";
@@ -58,9 +58,9 @@
             // 
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(359, 34);
+            this.btnBuscar.Location = new System.Drawing.Point(359, 39);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(132, 33);
+            this.btnBuscar.Size = new System.Drawing.Size(132, 37);
             this.btnBuscar.TabIndex = 12;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
@@ -69,7 +69,7 @@
             // txtTipoMerma
             // 
             this.txtTipoMerma.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTipoMerma.Location = new System.Drawing.Point(132, 40);
+            this.txtTipoMerma.Location = new System.Drawing.Point(132, 45);
             this.txtTipoMerma.Name = "txtTipoMerma";
             this.txtTipoMerma.Size = new System.Drawing.Size(209, 25);
             this.txtTipoMerma.TabIndex = 4;
@@ -78,7 +78,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(27, 43);
+            this.label1.Location = new System.Drawing.Point(27, 49);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(99, 17);
             this.label1.TabIndex = 1;
@@ -88,9 +88,9 @@
             // 
             this.btnSeleccionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSeleccionar.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSeleccionar.Location = new System.Drawing.Point(165, 447);
+            this.btnSeleccionar.Location = new System.Drawing.Point(162, 502);
             this.btnSeleccionar.Name = "btnSeleccionar";
-            this.btnSeleccionar.Size = new System.Drawing.Size(262, 42);
+            this.btnSeleccionar.Size = new System.Drawing.Size(262, 41);
             this.btnSeleccionar.TabIndex = 15;
             this.btnSeleccionar.Text = "Seleccionar";
             this.btnSeleccionar.UseVisualStyleBackColor = true;
@@ -107,12 +107,12 @@
             this.ID,
             this.TipoMerma,
             this.UnidadMedida});
-            this.dgvMermas.Location = new System.Drawing.Point(43, 127);
+            this.dgvMermas.Location = new System.Drawing.Point(39, 143);
             this.dgvMermas.MultiSelect = false;
             this.dgvMermas.Name = "dgvMermas";
             this.dgvMermas.ReadOnly = true;
             this.dgvMermas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMermas.Size = new System.Drawing.Size(511, 303);
+            this.dgvMermas.Size = new System.Drawing.Size(511, 343);
             this.dgvMermas.TabIndex = 14;
             // 
             // ID
@@ -125,11 +125,11 @@
             // 
             // TipoMerma
             // 
+            this.TipoMerma.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.TipoMerma.DataPropertyName = "tipo";
             this.TipoMerma.HeaderText = "Tipo de Merma";
             this.TipoMerma.Name = "TipoMerma";
             this.TipoMerma.ReadOnly = true;
-            this.TipoMerma.Width = 190;
             // 
             // UnidadMedida
             // 
@@ -141,13 +141,13 @@
             // 
             // frmBuscarMerma
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(596, 505);
+            this.ClientSize = new System.Drawing.Size(587, 561);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.dgvMermas);
-            this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmBuscarMerma";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

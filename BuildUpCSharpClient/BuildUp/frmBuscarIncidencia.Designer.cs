@@ -51,9 +51,9 @@
             this.gbBusqueda.Controls.Add(this.dtpDesde);
             this.gbBusqueda.Controls.Add(this.btnBuscar);
             this.gbBusqueda.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbBusqueda.Location = new System.Drawing.Point(33, 29);
+            this.gbBusqueda.Location = new System.Drawing.Point(30, 28);
             this.gbBusqueda.Name = "gbBusqueda";
-            this.gbBusqueda.Size = new System.Drawing.Size(525, 121);
+            this.gbBusqueda.Size = new System.Drawing.Size(525, 120);
             this.gbBusqueda.TabIndex = 17;
             this.gbBusqueda.TabStop = false;
             this.gbBusqueda.Text = "Parámetros de Búsqueda";
@@ -62,7 +62,7 @@
             // 
             this.dtpHasta.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpHasta.Location = new System.Drawing.Point(93, 75);
+            this.dtpHasta.Location = new System.Drawing.Point(94, 68);
             this.dtpHasta.Name = "dtpHasta";
             this.dtpHasta.Size = new System.Drawing.Size(233, 25);
             this.dtpHasta.TabIndex = 17;
@@ -72,7 +72,7 @@
             // 
             this.lblHasta.AutoSize = true;
             this.lblHasta.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHasta.Location = new System.Drawing.Point(46, 76);
+            this.lblHasta.Location = new System.Drawing.Point(47, 73);
             this.lblHasta.Name = "lblHasta";
             this.lblHasta.Size = new System.Drawing.Size(41, 17);
             this.lblHasta.TabIndex = 16;
@@ -82,7 +82,7 @@
             // 
             this.lblDesde.AutoSize = true;
             this.lblDesde.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDesde.Location = new System.Drawing.Point(42, 50);
+            this.lblDesde.Location = new System.Drawing.Point(43, 44);
             this.lblDesde.Name = "lblDesde";
             this.lblDesde.Size = new System.Drawing.Size(45, 17);
             this.lblDesde.TabIndex = 15;
@@ -92,7 +92,7 @@
             // 
             this.dtpDesde.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDesde.Location = new System.Drawing.Point(93, 44);
+            this.dtpDesde.Location = new System.Drawing.Point(94, 37);
             this.dtpDesde.Name = "dtpDesde";
             this.dtpDesde.Size = new System.Drawing.Size(233, 25);
             this.dtpDesde.TabIndex = 14;
@@ -102,9 +102,9 @@
             // 
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(351, 56);
+            this.btnBuscar.Location = new System.Drawing.Point(351, 48);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(138, 37);
+            this.btnBuscar.Size = new System.Drawing.Size(138, 42);
             this.btnBuscar.TabIndex = 13;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
@@ -114,9 +114,9 @@
             // 
             this.btnSeleccionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSeleccionar.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSeleccionar.Location = new System.Drawing.Point(161, 480);
+            this.btnSeleccionar.Location = new System.Drawing.Point(164, 510);
             this.btnSeleccionar.Name = "btnSeleccionar";
-            this.btnSeleccionar.Size = new System.Drawing.Size(262, 42);
+            this.btnSeleccionar.Size = new System.Drawing.Size(262, 48);
             this.btnSeleccionar.TabIndex = 16;
             this.btnSeleccionar.Text = "Seleccionar";
             this.btnSeleccionar.UseVisualStyleBackColor = true;
@@ -127,17 +127,18 @@
             this.dgvIncidentes.AllowUserToAddRows = false;
             this.dgvIncidentes.AllowUserToDeleteRows = false;
             this.dgvIncidentes.BackgroundColor = System.Drawing.SystemColors.Desktop;
+            this.dgvIncidentes.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvIncidentes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvIncidentes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column5,
             this.Column2});
-            this.dgvIncidentes.Location = new System.Drawing.Point(33, 156);
+            this.dgvIncidentes.Location = new System.Drawing.Point(30, 154);
             this.dgvIncidentes.MultiSelect = false;
             this.dgvIncidentes.Name = "dgvIncidentes";
             this.dgvIncidentes.ReadOnly = true;
             this.dgvIncidentes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvIncidentes.Size = new System.Drawing.Size(525, 309);
+            this.dgvIncidentes.Size = new System.Drawing.Size(525, 350);
             this.dgvIncidentes.TabIndex = 15;
             this.dgvIncidentes.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvIncidentes_CellFormatting);
             // 
@@ -151,28 +152,28 @@
             // 
             // Column5
             // 
+            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column5.DataPropertyName = "fechaIncidente";
             this.Column5.HeaderText = "Fecha";
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
-            this.Column5.Width = 170;
             // 
             // Column2
             // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column2.HeaderText = "Estado";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
-            this.Column2.Width = 170;
             // 
             // frmBuscarIncidencia
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(592, 542);
+            this.ClientSize = new System.Drawing.Size(586, 573);
             this.Controls.Add(this.gbBusqueda);
             this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.dgvIncidentes);
-            this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "frmBuscarIncidencia";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

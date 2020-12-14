@@ -23,9 +23,7 @@ namespace BuildUp
             daoProveedor = new ProveedorWS.ProveedorWSClient();
             proveedor = new ProveedorWS.proveedor();
 
-            if (frmLogIn.Usuario.rol == "Ingeniero"
-                || frmLogIn.Usuario.rol == "ingeniero"
-                || frmLogIn.Usuario.rol == "INGENIERO")
+            if (frmLogIn.Usuario.rol == "Ingeniero")
             {
                 btnActualizar.Visible = false;
                 btnNuevo.Visible = false;

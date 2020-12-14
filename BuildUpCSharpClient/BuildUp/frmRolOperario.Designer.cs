@@ -186,6 +186,8 @@
             // 
             this.pbFoto.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.pbFoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pbFoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbFoto.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbFoto.Location = new System.Drawing.Point(269, 8);
             this.pbFoto.Name = "pbFoto";
             this.pbFoto.Size = new System.Drawing.Size(78, 82);

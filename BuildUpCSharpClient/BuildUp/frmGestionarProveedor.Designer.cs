@@ -38,6 +38,10 @@
             this.txtRazonSocial = new System.Windows.Forms.TextBox();
             this.txtRepresentante = new System.Windows.Forms.TextBox();
             this.gbDatosProveedor = new System.Windows.Forms.GroupBox();
+            this.txtDireccion = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtRuc = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.btnNuevo = new System.Windows.Forms.ToolStripButton();
@@ -49,10 +53,6 @@
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.btnCancelar = new System.Windows.Forms.ToolStripButton();
             this.btnRegresar = new System.Windows.Forms.ToolStripButton();
-            this.txtRuc = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtDireccion = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.gbDatosProveedor.SuspendLayout();
             this.toolStrip2.SuspendLayout();
             this.SuspendLayout();
@@ -149,11 +149,51 @@
             this.gbDatosProveedor.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbDatosProveedor.Location = new System.Drawing.Point(39, 52);
             this.gbDatosProveedor.Name = "gbDatosProveedor";
-            this.gbDatosProveedor.Size = new System.Drawing.Size(523, 234);
+            this.gbDatosProveedor.Size = new System.Drawing.Size(523, 240);
             this.gbDatosProveedor.TabIndex = 36;
             this.gbDatosProveedor.TabStop = false;
             this.gbDatosProveedor.Text = "Datos del Proveedor";
             this.gbDatosProveedor.Enter += new System.EventHandler(this.gbDatosProveedor_Enter);
+            // 
+            // txtDireccion
+            // 
+            this.txtDireccion.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDireccion.Location = new System.Drawing.Point(222, 125);
+            this.txtDireccion.Name = "txtDireccion";
+            this.txtDireccion.Size = new System.Drawing.Size(226, 25);
+            this.txtDireccion.TabIndex = 21;
+            this.txtDireccion.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(154, 128);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(62, 17);
+            this.label2.TabIndex = 20;
+            this.label2.Text = "Dirección";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // txtRuc
+            // 
+            this.txtRuc.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRuc.Location = new System.Drawing.Point(222, 63);
+            this.txtRuc.Name = "txtRuc";
+            this.txtRuc.Size = new System.Drawing.Size(183, 25);
+            this.txtRuc.TabIndex = 19;
+            this.txtRuc.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(183, 66);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(33, 17);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "RUC";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // toolStrip2
             // 
@@ -263,52 +303,12 @@
             this.btnRegresar.Text = "Regresar";
             this.btnRegresar.Click += new System.EventHandler(this.btnVolver_Click);
             // 
-            // txtRuc
-            // 
-            this.txtRuc.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRuc.Location = new System.Drawing.Point(222, 63);
-            this.txtRuc.Name = "txtRuc";
-            this.txtRuc.Size = new System.Drawing.Size(226, 25);
-            this.txtRuc.TabIndex = 19;
-            this.txtRuc.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(183, 66);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(33, 17);
-            this.label1.TabIndex = 18;
-            this.label1.Text = "RUC";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // txtDireccion
-            // 
-            this.txtDireccion.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDireccion.Location = new System.Drawing.Point(222, 125);
-            this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(226, 25);
-            this.txtDireccion.TabIndex = 21;
-            this.txtDireccion.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(154, 128);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 17);
-            this.label2.TabIndex = 20;
-            this.label2.Text = "Dirección";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
             // frmGestionarProveedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SlateGray;
-            this.ClientSize = new System.Drawing.Size(605, 313);
+            this.ClientSize = new System.Drawing.Size(605, 320);
             this.ControlBox = false;
             this.Controls.Add(this.toolStrip2);
             this.Controls.Add(this.gbDatosProveedor);

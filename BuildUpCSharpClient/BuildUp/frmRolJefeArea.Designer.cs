@@ -397,7 +397,7 @@
             this.btnCerrarSesión.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrarSesión.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnCerrarSesión.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnCerrarSesión.Location = new System.Drawing.Point(608, 44);
+            this.btnCerrarSesión.Location = new System.Drawing.Point(608, 46);
             this.btnCerrarSesión.Name = "btnCerrarSesión";
             this.btnCerrarSesión.Size = new System.Drawing.Size(100, 27);
             this.btnCerrarSesión.TabIndex = 11;
@@ -410,7 +410,7 @@
             this.lblUsername.AutoSize = true;
             this.lblUsername.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsername.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblUsername.Location = new System.Drawing.Point(608, 24);
+            this.lblUsername.Location = new System.Drawing.Point(608, 26);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(0, 17);
             this.lblUsername.TabIndex = 40;
@@ -419,7 +419,9 @@
             // 
             this.pbFoto.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.pbFoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbFoto.Location = new System.Drawing.Point(522, 7);
+            this.pbFoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbFoto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbFoto.Location = new System.Drawing.Point(522, 9);
             this.pbFoto.Name = "pbFoto";
             this.pbFoto.Size = new System.Drawing.Size(80, 80);
             this.pbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

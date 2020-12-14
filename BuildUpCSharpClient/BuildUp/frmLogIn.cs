@@ -49,6 +49,7 @@ namespace BuildUp
         private void btnIngresar(object sender, EventArgs e)
         {
             lblInfoLogueo.Text = "Autenticando...";
+            pbLoading.Visible = true;
             autenticarUsuario();
         }
 
@@ -65,6 +66,7 @@ namespace BuildUp
 
             if (resultado == 1)
             {
+                pbLoading.Visible = false;
                 switch (usuario.rol)
                 {
                     case "Jefe de Área":
