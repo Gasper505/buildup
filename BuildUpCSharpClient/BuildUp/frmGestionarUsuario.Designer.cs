@@ -271,7 +271,7 @@
             // 
             // toolStripComandos
             // 
-            this.toolStripComandos.BackColor = System.Drawing.Color.Azure;
+            this.toolStripComandos.BackColor = System.Drawing.SystemColors.Control;
             this.toolStripComandos.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripComandos.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStripComandos.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -367,7 +367,7 @@
             // 
             // gbUsuario
             // 
-            this.gbUsuario.BackColor = System.Drawing.SystemColors.Control;
+            this.gbUsuario.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.gbUsuario.Controls.Add(this.label3);
             this.gbUsuario.Controls.Add(this.txtUsername);
             this.gbUsuario.Controls.Add(this.exclusiveLabel);
@@ -438,7 +438,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.SlateGray;
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(652, 581);
             this.Controls.Add(this.gbUsuario);
             this.Controls.Add(this.toolStripComandos);

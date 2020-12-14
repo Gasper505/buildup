@@ -259,7 +259,6 @@
             // 
             // toolStripSplitButton1
             // 
-            this.toolStripSplitButton1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.toolStripSplitButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.porLíneaDeProducciónToolStripMenuItem,
             this.porMaquinariaToolStripMenuItem});

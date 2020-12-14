@@ -38,11 +38,8 @@ namespace BuildUp
             if (sfdReportesProduccion.FileName != null && sfdReportesProduccion.FileName != "")
             {
                 byte[] arreglo = daoReportesProduccion.generarReporteProduccionDiario(dtpFecha.Value);
-                //frmBuscarIncidencia formJefeArea = new frmBuscarIncidencia();
-                //formJefeArea.Show();
-                sfdReportesProduccion.FileName = "ReporteDiarioProduccion.pdf";
-                File.WriteAllBytes(sfdReportesProduccion.FileName, arreglo);
-                //formJefeArea.Hide();
+                //sfdReportesProduccion.FileName = "ReporteDiarioProduccion.pdf";
+                File.WriteAllBytes(sfdReportesProduccion.FileName + ".pdf", arreglo);
                 MessageBox.Show("El reporte se ha guardado exitosamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             
@@ -50,55 +47,63 @@ namespace BuildUp
 
         private void btnReporteMensual_Click(object sender, EventArgs e)
         {
-            sfdReportesProduccion.ShowDialog();
-            if (sfdReportesProduccion.FileName != null && sfdReportesProduccion.FileName != "")
+            if(cboAnho.Text != "" && cboMes.Text != "")
             {
-
-                int mes = 0;
-                switch (cboMes.Text)
+                sfdReportesProduccion.ShowDialog();
+                if (sfdReportesProduccion.FileName != null && sfdReportesProduccion.FileName != "")
                 {
-                    case "Enero":
-                        mes = 1;
-                        break;
-                    case "Febrero":
-                        mes = 2;
-                        break;
-                    case "Marzo":
-                        mes = 3;
-                        break;
-                    case "Abril":
-                        mes = 4;
-                        break;
-                    case "Mayo":
-                        mes = 5;
-                        break;
-                    case "Junio":
-                        mes = 6;
-                        break;
-                    case "Julio":
-                        mes = 7;
-                        break;
-                    case "Agosto":
-                        mes = 8;
-                        break;
-                    case "Setiembre":
-                        mes = 9;
-                        break;
-                    case "Octubre":
-                        mes = 10;
-                        break;
-                    case "Noviembre":
-                        mes = 11;
-                        break;
-                    case "Diciembre":
-                        mes = 12;
-                        break;
-                }
 
-                byte[] arreglo = daoReportesProduccion.generarReporteProduccionMensual(mes, Int32.Parse(cboAnho.Text));
-                sfdReportesProduccion.FileName = "ReporteMensualProduccion.pdf";
-                File.WriteAllBytes(sfdReportesProduccion.FileName, arreglo);
-                MessageBox.Show("El reporte se ha guardado exitosamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    int mes = 0;
+                    switch (cboMes.Text)
+                    {
+                        case "Enero":
+                            mes = 1;
+                            break;
+                        case "Febrero":
+                            mes = 2;
+                            break;
+                        case "Marzo":
+                            mes = 3;
+                            break;
+                        case "Abril":
+                            mes = 4;
+                            break;
+                        case "Mayo":
+                            mes = 5;
+                            break;
+                        case "Junio":
+                            mes = 6;
+                            break;
+                        case "Julio":
+                            mes = 7;
+                            break;
+                        case "Agosto":
+                            mes = 8;
+                            break;
+                        case "Setiembre":
+                            mes = 9;
+                            break;
+                        case "Octubre":
+                            mes = 10;
+                            break;
+                        case "Noviembre":
+                            mes = 11;
+                            break;
+                        case "Diciembre":
+                            mes = 12;
+                            break;
+                    }
+
+                    byte[] arreglo = daoReportesProduccion.generarReporteProduccionMensual(mes, Int32.Parse(cboAnho.Text));
+                    //sfdReportesProduccion.FileName = "ReporteMensualProduccion.pdf";
+                    File.WriteAllBytes(sfdReportesProduccion.FileName + ".pdf", arreglo);
+                    MessageBox.Show("El reporte se ha guardado exitosamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            
+            }
+            else
+            {
+                MessageBox.Show("Debe ingresar los parámetros para generar el reporte", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
