@@ -59,13 +59,14 @@
             this.btnEliminar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.btnCancelar = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.pnlAceptacionOrden = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnRechazarOrden = new System.Windows.Forms.Button();
             this.picCheck = new System.Windows.Forms.PictureBox();
             this.btnAceptarOrden = new System.Windows.Forms.Button();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.gbDatosOrdenInsumos.SuspendLayout();
             this.gbDatosInsumo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -121,7 +122,7 @@
             this.gbDatosOrdenInsumos.Controls.Add(this.txtIdOrdenInsumos);
             this.gbDatosOrdenInsumos.Controls.Add(this.dtpFechaActual);
             this.gbDatosOrdenInsumos.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbDatosOrdenInsumos.Location = new System.Drawing.Point(65, 189);
+            this.gbDatosOrdenInsumos.Location = new System.Drawing.Point(92, 196);
             this.gbDatosOrdenInsumos.Name = "gbDatosOrdenInsumos";
             this.gbDatosOrdenInsumos.Size = new System.Drawing.Size(519, 117);
             this.gbDatosOrdenInsumos.TabIndex = 5;
@@ -139,7 +140,7 @@
             this.gbDatosInsumo.Controls.Add(this.lblNombreInsumo);
             this.gbDatosInsumo.Controls.Add(this.lblIdInsumo);
             this.gbDatosInsumo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbDatosInsumo.Location = new System.Drawing.Point(65, 312);
+            this.gbDatosInsumo.Location = new System.Drawing.Point(92, 319);
             this.gbDatosInsumo.Name = "gbDatosInsumo";
             this.gbDatosInsumo.Size = new System.Drawing.Size(519, 143);
             this.gbDatosInsumo.TabIndex = 6;
@@ -228,7 +229,7 @@
             this.gbDatosOperario.Controls.Add(this.lblNombresOperario);
             this.gbDatosOperario.Controls.Add(this.lblIdOperario);
             this.gbDatosOperario.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbDatosOperario.Location = new System.Drawing.Point(65, 48);
+            this.gbDatosOperario.Location = new System.Drawing.Point(92, 55);
             this.gbDatosOperario.Name = "gbDatosOperario";
             this.gbDatosOperario.Size = new System.Drawing.Size(519, 135);
             this.gbDatosOperario.TabIndex = 10;
@@ -304,10 +305,11 @@
             this.btnEliminar,
             this.toolStripSeparator4,
             this.btnCancelar,
+            this.toolStripSeparator1,
             this.toolStripButton1});
             this.toolStrip2.Location = new System.Drawing.Point(0, 0);
             this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(643, 25);
+            this.toolStrip2.Size = new System.Drawing.Size(703, 25);
             this.toolStrip2.TabIndex = 27;
             this.toolStrip2.Text = "toolStrip2";
             // 
@@ -386,6 +388,15 @@
             this.btnCancelar.Text = "Limpiar y Cancelar";
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(176, 22);
+            this.toolStripButton1.Text = "Reporte de Órd. Insumos";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
             // pnlAceptacionOrden
             // 
             this.pnlAceptacionOrden.BackColor = System.Drawing.SystemColors.Control;
@@ -393,7 +404,7 @@
             this.pnlAceptacionOrden.Controls.Add(this.btnRechazarOrden);
             this.pnlAceptacionOrden.Controls.Add(this.picCheck);
             this.pnlAceptacionOrden.Controls.Add(this.btnAceptarOrden);
-            this.pnlAceptacionOrden.Location = new System.Drawing.Point(65, 461);
+            this.pnlAceptacionOrden.Location = new System.Drawing.Point(92, 468);
             this.pnlAceptacionOrden.Name = "pnlAceptacionOrden";
             this.pnlAceptacionOrden.Size = new System.Drawing.Size(519, 88);
             this.pnlAceptacionOrden.TabIndex = 41;
@@ -450,21 +461,17 @@
             this.btnAceptarOrden.UseVisualStyleBackColor = false;
             this.btnAceptarOrden.Click += new System.EventHandler(this.btnAceptarOrden_Click);
             // 
-            // toolStripButton1
+            // toolStripSeparator1
             // 
-            this.toolStripButton1.Image = global::BuildUp.Properties.Resources._3f4756f5a915c254517d7f0800910ad6_documento_verificado_icono_de_trazo_coloreado_by_vexels;
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(75, 22);
-            this.toolStripButton1.Text = "Reporte";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // frmGestionarOrdenInsumos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SlateGray;
-            this.ClientSize = new System.Drawing.Size(643, 574);
+            this.ClientSize = new System.Drawing.Size(703, 580);
             this.Controls.Add(this.pnlAceptacionOrden);
             this.Controls.Add(this.toolStrip2);
             this.Controls.Add(this.gbDatosOperario);
@@ -531,5 +538,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
     }
 }

@@ -288,9 +288,9 @@
             // 
             this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox6.Image = global::BuildUp.Properties.Resources.bup;
-            this.pictureBox6.Location = new System.Drawing.Point(19, 4);
+            this.pictureBox6.Location = new System.Drawing.Point(57, 37);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(82, 26);
+            this.pictureBox6.Size = new System.Drawing.Size(83, 30);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 39;
             this.pictureBox6.TabStop = false;

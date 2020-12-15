@@ -47,7 +47,6 @@
             this.txtNombres = new System.Windows.Forms.TextBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.gbLotesSalientes = new System.Windows.Forms.GroupBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.btnRemover = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.dgvLotes = new System.Windows.Forms.DataGridView();
@@ -63,12 +62,12 @@
             this.btnEliminar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.btnCancelar = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.btnReportesProduccion = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.numNroAproxLadrillos)).BeginInit();
             this.gbDatosOrden.SuspendLayout();
             this.gbDatosOperario.SuspendLayout();
             this.gbLotesSalientes.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLotes)).BeginInit();
             this.toolStrip2.SuspendLayout();
             this.SuspendLayout();
@@ -184,7 +183,7 @@
             this.gbDatosOperario.Controls.Add(this.txtNombres);
             this.gbDatosOperario.Controls.Add(this.lblNombreOperario);
             this.gbDatosOperario.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbDatosOperario.Location = new System.Drawing.Point(60, 169);
+            this.gbDatosOperario.Location = new System.Drawing.Point(60, 155);
             this.gbDatosOperario.Name = "gbDatosOperario";
             this.gbDatosOperario.Size = new System.Drawing.Size(593, 135);
             this.gbDatosOperario.TabIndex = 36;
@@ -238,7 +237,6 @@
             // gbLotesSalientes
             // 
             this.gbLotesSalientes.BackColor = System.Drawing.SystemColors.Control;
-            this.gbLotesSalientes.Controls.Add(this.pictureBox6);
             this.gbLotesSalientes.Controls.Add(this.btnRemover);
             this.gbLotesSalientes.Controls.Add(this.btnAgregar);
             this.gbLotesSalientes.Controls.Add(this.dgvLotes);
@@ -247,23 +245,12 @@
             this.gbLotesSalientes.Controls.Add(this.numNroAproxLadrillos);
             this.gbLotesSalientes.Controls.Add(this.lblNroLotes);
             this.gbLotesSalientes.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbLotesSalientes.Location = new System.Drawing.Point(60, 310);
+            this.gbLotesSalientes.Location = new System.Drawing.Point(60, 296);
             this.gbLotesSalientes.Name = "gbLotesSalientes";
             this.gbLotesSalientes.Size = new System.Drawing.Size(593, 343);
             this.gbLotesSalientes.TabIndex = 38;
             this.gbLotesSalientes.TabStop = false;
             this.gbLotesSalientes.Text = "Lotes Salientes";
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox6.Image = global::BuildUp.Properties.Resources.bup;
-            this.pictureBox6.Location = new System.Drawing.Point(511, 317);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(82, 26);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 48;
-            this.pictureBox6.TabStop = false;
             // 
             // btnRemover
             // 
@@ -337,6 +324,7 @@
             this.btnEliminar,
             this.toolStripSeparator4,
             this.btnCancelar,
+            this.toolStripSeparator1,
             this.btnReportesProduccion});
             this.toolStrip2.Location = new System.Drawing.Point(0, 0);
             this.toolStrip2.Name = "toolStrip2";
@@ -419,6 +407,11 @@
             this.btnCancelar.Text = "Limpiar y Cancelar";
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
             // btnReportesProduccion
             // 
             this.btnReportesProduccion.Image = ((System.Drawing.Image)(resources.GetObject("btnReportesProduccion.Image")));
@@ -451,7 +444,6 @@
             this.gbDatosOperario.PerformLayout();
             this.gbLotesSalientes.ResumeLayout(false);
             this.gbLotesSalientes.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLotes)).EndInit();
             this.toolStrip2.ResumeLayout(false);
             this.toolStrip2.PerformLayout();
@@ -494,7 +486,7 @@
         private System.Windows.Forms.ToolStripButton btnCancelar;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreTipoLadrillo;
         private System.Windows.Forms.DataGridViewTextBoxColumn CantidadEnElLote;
-        private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.ToolStripButton btnReportesProduccion;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
     }
 }

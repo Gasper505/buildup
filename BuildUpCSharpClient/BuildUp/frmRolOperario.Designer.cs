@@ -211,7 +211,7 @@
             // 
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Image = global::BuildUp.Properties.Resources.bup;
-            this.pictureBox1.Location = new System.Drawing.Point(19, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(51, 35);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(82, 26);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

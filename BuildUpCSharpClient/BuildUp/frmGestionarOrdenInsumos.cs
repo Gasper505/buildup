@@ -446,7 +446,7 @@ namespace BuildUp
                 byte[] arreglo = daoReporteOrdenes.generarReporteOrdenes();
                 File.WriteAllBytes(saveFileDialog1.FileName + ".pdf", arreglo);
 
-                if(arreglo!=null) MessageBox.Show("Se ha guardado correctamente", "Mensaje de Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if(arreglo!=null) MessageBox.Show("El reporte se ha guardado correctamente", "Mensaje de Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
 
