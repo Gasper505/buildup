@@ -451,6 +451,9 @@ namespace BuildUp
                     exclusiveComboBox.Text = daoIngeniero.obtenerEspecialidadIngeniero(usuario.idPersona);
                 }
 
+
+                label3.Hide();
+                txtUsername.Hide();
                 
                 EstablecerEstadoComponentes(Estado.Modificacion);
             }
@@ -691,6 +694,8 @@ namespace BuildUp
 
         private void btAnadir_Click(object sender, EventArgs e)
         {
+            label3.Show();
+            txtUsername.Show();
             EstablecerEstadoComponentes(Estado.Nuevo);
         }
 

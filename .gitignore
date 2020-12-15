@@ -52,3 +52,4 @@ hs_err_pid*
 !/BuildUpJAVAServer/BuildUpServices/src/java/pe/edu/pucp/buildup/lib/jasperreports-chart-themes-6.16.0.jar
 /BuildUpJAVAServer/BuildUpServicesBamba/build/
 /BuildUpJAVAServer/BuildUpServicesBamba/dist/
+!/BuildUpJAVAServer/BuildUpServices/src/java/pe/edu/pucp/buildup/lib/mysql-connector-java-8.0.21.jar

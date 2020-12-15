@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,13 +16,14 @@ namespace BuildUp
 
         OrdenInsumosWS.OrdenInsumosWSClient daoOrdenInsumos;
         OrdenInsumosWS.ordenInsumos ordenInsumos;
+        ReporteOrdenesWS.ReporteOrdenesClient daoReporteOrdenes;
         int estado;
 
         public frmGestionarOrdenInsumos()
         {
             InitializeComponent();
             EstablecerEstadoComponentes(Estado.Inicial);
-
+            daoReporteOrdenes = new ReporteOrdenesWS.ReporteOrdenesClient();
             daoOrdenInsumos = new OrdenInsumosWS.OrdenInsumosWSClient();
             
 
@@ -436,5 +438,18 @@ namespace BuildUp
             
         }
 
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            saveFileDialog1.ShowDialog();
+            if (saveFileDialog1.FileName != null && saveFileDialog1.FileName != "")
+            {
+                byte[] arreglo = daoReporteOrdenes.generarReporteOrdenes();
+                File.WriteAllBytes(saveFileDialog1.FileName + ".pdf", arreglo);
+
+                if(arreglo!=null) MessageBox.Show("Se ha guardado correctamente", "Mensaje de Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+
+        }
     }
 }

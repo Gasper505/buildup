@@ -137,6 +137,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Connected Services\ReporteOrdenesWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\ReportesProduccionWS\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -861,6 +866,13 @@
     <None Include="Connected Services\ReporteIncMaqWS\ReporteIncidenteconMaquinaria.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\ReporteOrdenesWS\BuildUp.ReporteOrdenesWS.generarReporteOrdenesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ReporteOrdenesWS\ReporteOrdenes.wsdl" />
+    <None Include="Connected Services\ReporteOrdenesWS\ReporteOrdenes.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\ReportesProduccionWS\BuildUp.ReportesProduccionWS.generarReporteProduccionDiarioResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -979,6 +991,7 @@
     <WCFMetadataStorage Include="Connected Services\RegistroMermaWS\" />
     <WCFMetadataStorage Include="Connected Services\ReporteIncidenciaWS\" />
     <WCFMetadataStorage Include="Connected Services\ReporteIncMaqWS\" />
+    <WCFMetadataStorage Include="Connected Services\ReporteOrdenesWS\" />
     <WCFMetadataStorage Include="Connected Services\ReportesProduccionWS\" />
     <WCFMetadataStorage Include="Connected Services\RespuestaWS\" />
     <WCFMetadataStorage Include="Connected Services\SupervisorWS\" />
@@ -1251,6 +1264,12 @@
     <None Include="Connected Services\ReporteIncMaqWS\configuration91.svcinfo" />
     <None Include="Connected Services\ReporteIncMaqWS\configuration.svcinfo" />
     <None Include="Connected Services\ReporteIncMaqWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\ReporteOrdenesWS\configuration91.svcinfo" />
+    <None Include="Connected Services\ReporteOrdenesWS\configuration.svcinfo" />
+    <None Include="Connected Services\ReporteOrdenesWS\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
